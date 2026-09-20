@@ -1,6 +1,6 @@
 # Contributing
 
-This repository is in Phase 1. Keep contributions within the foundation until the sponsor approves expansion.
+The Phase 1 foundation was approved on 2026-09-20. Phase 2 concept development is authorised in the agreed sequence; individual definitions remain Draft until reviewed. Respect the later phase boundaries.
 
 1. Identify the concept, relationship or ambiguity ID affected.
 2. Explain the business problem and relevant domain/context.

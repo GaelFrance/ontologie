@@ -14,8 +14,8 @@ Regulatory concepts are contextual and versioned by jurisdiction, regime and eff
 
 ## Iterative delivery
 
-1. **Current:** architecture, concept template, approximately 30–50 concepts, relationships, ambiguities and repository structure. Stop for business review.
-2. After approval: complete and expand Common, Execution, ETD Clearing and OTC Clearing concepts separately.
+1. **Foundation approved on 2026-09-20:** architecture, concept template, 50 concepts, relationships, ambiguities and repository structure. Individual definitions remain Draft.
+2. **Next, authorised:** complete and expand Common, Execution, ETD Clearing and OTC Clearing concepts separately, in that order. Prioritise management revenue and distinguish it from contribution/profitability after costs.
 3. Develop detailed participant, product, lifecycle, fee, account, position, margin, collateral, settlement and regulatory taxonomies.
 4. Demonstrate natural-language resolution and test ambiguity handling.
 5. Only after source schemas are supplied: define and validate physical mappings.

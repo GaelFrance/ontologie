@@ -35,4 +35,4 @@ Concept definitions may be shareable while examples, internal pricing, client na
 
 ## Phase gate
 
-Stop after Phase 1. Request explicit review of architecture, catalogue, relationships and ambiguity register. No domain expansion, detailed taxonomies, resolved query demonstrations or physical mappings until their phase is authorised.
+The sponsor approved the Phase 1 foundation on 2026-09-20; see the [decision record](../governance/phase-1-review.md). Phase 2 may develop the concepts in the agreed order. This does not approve individual definitions, metric formulas, detailed taxonomies, resolved query demonstrations or physical mappings. Preserve subsequent phase gates.

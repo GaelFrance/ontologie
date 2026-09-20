@@ -29,7 +29,7 @@ Common contains reusable meanings. Execution, ETD Clearing and OTC Clearing spec
 
 ## Business context
 
-A context can identify service/domain, observing legal entity, participant roles, contractual relationship, account, CCP/venue, jurisdiction, business date, effective period and accounting/management basis. Require only relevant dimensions. Context cannot silently redefine a concept: materially different meanings need separate concepts.
+A context can identify service/domain, observing legal entity, participant roles, contractual relationship, account, CCP/venue, jurisdiction, business date, effective period and management measurement basis (the current revenue priority). Require only relevant dimensions. Context cannot silently redefine a concept: materially different meanings need separate concepts.
 
 Model a party separately from a role assignment. A role assignment relates a party to a role, counterparties, service, agreement where applicable, and effective period. An entity can hold multiple roles simultaneously. Client is a role; Legal Entity is an entity type.
 

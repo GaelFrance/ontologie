@@ -2,7 +2,7 @@
 
 A governed business foundation for **Listed Derivatives Execution, ETD Clearing and OTC Client Clearing**.
 
-**Stage: Phase 1 — foundation for business review. All concepts are Draft.**
+**Stage: Phase 1 foundation approved on 2026-09-20; ready for Phase 2. Individual concept definitions remain Draft.**
 
 The ontology is independent of any LLM, database, application, API or MCP implementation. Canonical names and repository artefacts are in English. Markdown is the current canonical format; YAML is deferred until the business model is validated.
 
@@ -26,4 +26,6 @@ The ontology is independent of any LLM, database, application, API or MCP implem
 
 ## Approval boundary
 
-Preparing or committing this foundation does not approve its business definitions. Do not expand into Phase 2 until the business sponsor explicitly validates Phase 1. No physical mappings, production data, runnable semantic service or detailed domain expansion are included.
+The sponsor approved the foundation and development sequence; see the [review decision](governance/phase-1-review.md). Phase 2 may develop Common, Execution, ETD Clearing and OTC Clearing in that order. Individual definitions remain Draft.
+
+Revenue modelling now prioritises business performance and client contribution analysis, with revenue distinguished from profitability after costs. Commission and Transaction remain unresolved. No physical mappings, production data, executable metrics or detailed domain expansion are included in this foundation.

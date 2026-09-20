@@ -44,8 +44,8 @@ This catalogue identifies concepts for Phase 1; it does not claim to complete th
 | LD-C0036 | Exchange Fee Charge | Common | Obligation | Charge attributable to an exchange service, with service nature and beneficiary specified. |
 | LD-C0037 | CCP Fee Charge | Common | Obligation | Charge attributable to a CCP service, distinct from margin requirements. |
 | LD-C0038 | Commission | Common | Reference Concept | Contractual remuneration category whose boundaries and overlap with fee types require business validation. |
-| LD-C0039 | Revenue | Common | Measure | Income recognised from an observing entity perspective under an explicit accounting or management basis. |
-| LD-C0040 | Cost | Common | Measure | Expense recognised or cost attributed to an observing entity under an explicit basis. |
+| LD-C0039 | Revenue | Common | Measure | Income attributable to business activity from an observing entity perspective under an explicit management measurement basis; not automatically profit or cash received. |
+| LD-C0040 | Cost | Common | Measure | Cost attributed to an observing entity or activity under an explicit management basis; inclusion in contribution or profitability measures requires a defined cost perimeter. |
 | LD-C0041 | Execution Revenue | Execution | Measure | Revenue attributable to execution services under a defined semantic contract. |
 | LD-C0042 | Clearing Revenue | Common | Measure | Revenue attributable to clearing services under a defined semantic contract. |
 | LD-C0043 | Margin Requirement | Common | Measure | Calculated margin requirement for a defined scope, relationship and point in time, distinct from its call and satisfaction. |
