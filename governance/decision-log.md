@@ -45,4 +45,13 @@ Evidence: sponsor answer in the project conversation, 2026-11-01 (open question 
 |---|---|---|---|
 | 8. Regulatory regime priority | Global scope. Priority 1: Europe (EU: EMIR including EMIR 3, MiFID II/MiFIR, CRR; and UK) and United States (CFTC and SEC). Priority 2: Asia-Pacific regimes, to be scoped. | Regime instances for AG-002 and AG-003 are seeded in this order; US futures and cleared-swaps structures are no longer treated "in general terms" only. | LD-C0063, LD-C0067, LD-C0068 |
 
+## Sponsor decisions — 2026-11-01 (consultations and default date)
+
+Evidence: sponsor answers in the project conversation, 2026-11-01 (open questions 6 and 7).
+
+| Point | Decision | Consequence in the ontology | Affected IDs |
+|---|---|---|---|
+| 9. Consultations and sign-off | Consultations and draft rules are analysed as rule changes, with a mandatory status and a "not yet in force" flag. Readings flagged "interpretation required" are reviewed by Regulatory Affairs and business management first, with Legal and Compliance. Agent outputs are labelled "public-layer reading, not legal advice". | Rule Change carries a lifecycle status (consultation, adopted, in force, withdrawn); the reviewer roles are recorded as governance roles, not people. | LD-C0064, LD-R0053, LD-A0022 |
+| 10. Default meaning of "today" and "current" | The clearing date of the relevant CCP, in that CCP's time zone, stated in every answer. | Date role "clearing date" is the default for operational questions; other date roles must be requested explicitly. Record time stays in the model for later audit needs. | LD-C0015, LD-C0066, LD-A0015, LD-A0023 |
+
 Apart from LD-A0010 (decision 5), these answers do not resolve any ambiguity entry, approve any definition, formula or cost perimeter, or change the deferral of Commission and Transaction.
