@@ -301,7 +301,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Words people use:** “alpha trade” (OTC clearing)
 
-**Note.** One pair of counterparties per trade; clearing, compression and porting create successor trades linked by, never mutating the predecessor. How many trades one execution yields depends on the clearing legal model, allocation and averaging: record lineage, not counts. A bespoke OTC trade carries its own economic terms. UTIs are per regime. [01, 03, 06]
+**Note.** One pair of counterparties per trade; clearing, compression and porting create successor trades linked by a “succeeds” link, never mutating the predecessor. How many trades one execution yields depends on the clearing legal model, allocation and averaging: record lineage, not counts. A bespoke OTC trade carries its own economic terms. UTIs are per regime. [01, 03, 06]
 
 **Before using it, know:** Clearing tier and counterparty view (the open question “The trade (clearing tier)”)
 
@@ -313,7 +313,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Novation](../clearing-give-up-and-acceptance/concepts.md#novation) *transforms* Trade — Preserve predecessor and successor obligations/trades with directional lineage.
 - [Clearing Member Acceptance](../clearing-give-up-and-acceptance/concepts.md#clearing-member-acceptance) *concerns* Trade — Or an allocated quantity of it; designation of a member is not its acceptance.
 - [CCP Interposition](../clearing-give-up-and-acceptance/concepts.md#ccp-interposition) *concerns* Trade — Interposition creates the CCP-facing trades; under novation the predecessor is extinguished.
-- *succeeds* [Trade](#trade) — Generic directional lineage qualified by the deriving event (interposition, allocation, compression, transfer, porting, bilateral novation); remains the novation-specific case. No cardinality asserted.
+- *succeeds* [Trade](#trade) — Generic directional lineage qualified by the deriving event (interposition, allocation, compression, transfer, porting, bilateral novation); a “transforms” link remains the novation-specific case. No cardinality asserted.
 - [Exchange for Related Position](#exchange-for-related-position) *is linked to the trade in the related position which is not a listed trade* Trade
 - [Give-up Line](../clearing-give-up-and-acceptance/concepts.md#give-up-line) *concerns a quantity of* Trade
 - [Clearing Submission](../clearing-give-up-and-acceptance/concepts.md#clearing-submission) *concerns* Trade

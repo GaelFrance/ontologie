@@ -95,7 +95,7 @@ A proposed answer comes from the expert review; it is **not a decision** until t
 
 **To decide:** Pre-clearing (executed) trade versus CCP-facing trade versus member-client trade; which tier, identifier and counterparty view a question uses.
 
-**Proposed answer:** State the tier: pre-clearing trade, CCP-facing trade, member–client trade (principal model). Successor trades are linked by and may carry new identifiers. Confidence high. [03]
+**Proposed answer:** State the tier: pre-clearing trade, CCP-facing trade, member–client trade (principal model). Successor trades are linked by a “succeeds” link and may carry new identifiers. Confidence high. [03]
 
 <sub>reference LD-A0025</sub>
 
@@ -148,8 +148,4 @@ Also touching this domain, answered elsewhere:
 
 These items are in the backlog. **Does a decision you need now depend on one of them?**
 
-- Clearing Submission
-- Position Transfer
 - Execution Method (block, EFRP)
-- Source Record
-- Reconciliation Break

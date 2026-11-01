@@ -216,10 +216,19 @@ class Ctx:
         text = re.sub(r"\s*\((?:see )?(?:LD-C\d{4}(?:,\s*|\s+and\s+|\s*/\s*)?)+\)", paren, text)
         text = re.sub(CID, lambda m: name_or_link(m.group(0)), text)
         text = re.sub(r"LD-A\d{4}", lambda m: f"the open question “{self.amb_term.get(m.group(0), m.group(0))}”", text)
-        text = re.sub(r"\s*\(?LD-R\d{4}\)?", "", text)
+        # A relationship ID in brackets is a reference: drop it. A bare one is part of the
+        # sentence ("linked by LD-R0080"): say which kind of link it is.
+        text = re.sub(r"\s*\(LD-R\d{4}\)", "", text)
+        text = re.sub(r"LD-R\d{4}", lambda m: f"a “{self.rel_words(m.group(0))}” link", text)
         text = re.sub(r"\b(UC-00\d) / (AG-00\d)\b", lambda m: PILOTS[m.group(2)], text)
         text = re.sub(r"\b(?:UC|AG)-00\d\b", lambda m: PILOTS.get(m.group(0), m.group(0)), text)
         return text
+
+    def rel_words(self, rid):
+        for r in self.d["rels"]:
+            if r.get("ID") == rid:
+                return r.get("Relation", "").replace("_", " ")
+        return "recorded"
 
     def summary(self, i, field):
         r = self.d["summary"].get(i, {})

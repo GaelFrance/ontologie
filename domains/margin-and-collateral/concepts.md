@@ -329,7 +329,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 - [Collateral](#collateral) *of asset* Collateral Asset — Quantity of the asset, with market value and value after haircut as of a time.
 - [Collateral Eligibility Schedule](#collateral-eligibility-schedule) *admits* Collateral Asset — Per schedule version, with haircut, limits and validity; eligibility is not commitment.
-- [Collateral Movement](#collateral-movement) *transfers* Collateral Asset — Asset quantities moved; records the resulting change in collateral held.
+- [Collateral Movement](#collateral-movement) *transfers* Collateral Asset — Asset quantities moved; a “changes” link records the resulting change in collateral held.
 - [Collateral Haircut](#collateral-haircut) *applies to* Collateral Asset
 - [Concentration Limit](#concentration-limit) *applies to* Collateral Asset
 
@@ -494,7 +494,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 **Connected to:**
 
 - *changes* [Collateral](#collateral) — A movement transfers asset quantities and thereby changes the collateral held; identify provider, taker, arrangement and quantity. Label changed from moves on 2026-11-01 because Collateral is now a State.
-- *transfers* [Collateral Asset](#collateral-asset) — Asset quantities moved; records the resulting change in collateral held.
+- *transfers* [Collateral Asset](#collateral-asset) — Asset quantities moved; a “changes” link records the resulting change in collateral held.
 - [Settlement or Custody Agent](../parties-and-roles/concepts.md#settlement-or-custody-agent) *evidences* Collateral Movement
 
 <sub>Event · level 1 · Draft · reference LD-C0049 · approved by the Collateral Manager</sub>
