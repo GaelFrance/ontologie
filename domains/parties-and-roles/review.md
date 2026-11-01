@@ -78,7 +78,7 @@ A proposed answer comes from the expert review; it is **not a decision** until t
 
 **To decide:** Specify function, maintaining party, holder, beneficiary and account-to-account relationships.
 
-**Proposed answer:** Three levels: the CCP Account of each clearing service; the member's internal client account; execution-side and give-up references, which are identifiers rather than accounts. Levels are related only by explicit, time-bounded. Segregation regime and regulatory account statuses are separate, time-bounded dimensions. Confidence high. [02, 07, 06]
+**Proposed answer:** Three levels: the CCP Account of each clearing service; the member's internal client account; execution-side and give-up references, which are identifiers rather than accounts. Levels are related only by an explicit, time-bounded mapping. Segregation regime and regulatory account statuses are separate, time-bounded dimensions. Confidence high. [02, 07, 06]
 
 <sub>reference LD-A0007</sub>
 

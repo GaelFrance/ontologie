@@ -63,7 +63,7 @@ A proposed answer comes from the expert review; it is **not a decision** until t
 
 **To decide:** A CCP's clearing service versus the firm's service offering versus a MiFID investment service; also the service mix (execution-only, clearing-only, execute-and-clear).
 
-**Proposed answer:** Two concepts, no common parent for now: a CCP's Clearing Service and a provider's Service Offering, linked by. A MiFID "investment service" is a regulatory category, not either concept. Confidence high. [02, 03, 05, 07, 08]
+**Proposed answer:** Two concepts, no common parent for now: a CCP's Clearing Service and a provider's Service Offering, linked by a “relies on” link. A MiFID "investment service" is a regulatory category, not either concept. Confidence high. [02, 03, 05, 07, 08]
 
 <sub>reference LD-A0020</sub>
 

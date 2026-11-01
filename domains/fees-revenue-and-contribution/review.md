@@ -88,7 +88,7 @@ A proposed answer comes from the expert review; it is **not a decision** until t
 
 **To decide:** Identify debtor, actual payer, beneficiary and recharge treatment.
 
-**Proposed answer:** Under a give-up the client usually owes executing brokerage and the clearing broker often pays it and debits the client: two charges linked by, with debtor, payer and observing entity explicit. "We paid" cannot be answered without the observing entity. Confidence high. Firm decision: which model applies per client or market. [05, 02, 01]
+**Proposed answer:** Under a give-up the client usually owes executing brokerage and the clearing broker often pays it and debits the client: two charges linked by a “recharges” link, with debtor, payer and observing entity explicit. "We paid" cannot be answered without the observing entity. Confidence high. Firm decision: which model applies per client or market. [05, 02, 01]
 
 <sub>reference LD-A0003</sub>
 

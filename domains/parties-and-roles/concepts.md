@@ -173,7 +173,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Words people use:** “EMIR client” (EMIR Art. 2(15)); “MiFID client” (MiFID II Art. 4(1)(9)); “CFTC customer” (US)
 
-**Note.** Sponsor definition unchanged. Linked to a Service Offering through. Client segment is a Participants taxonomy axis. [05, 06]
+**Note.** Sponsor definition unchanged. Linked to a Service Offering through a “within service” link. Client segment is a Participants taxonomy axis. [05, 06]
 
 **Connected to:**
 

@@ -71,7 +71,7 @@ A proposed answer comes from the expert review; it is **not a decision** until t
 
 **To decide:** Identify debtor, actual payer, beneficiary and recharge treatment.
 
-**Proposed answer:** Under a give-up the client usually owes executing brokerage and the clearing broker often pays it and debits the client: two charges linked by, with debtor, payer and observing entity explicit. "We paid" cannot be answered without the observing entity. Confidence high. Firm decision: which model applies per client or market. [05, 02, 01]
+**Proposed answer:** Under a give-up the client usually owes executing brokerage and the clearing broker often pays it and debits the client: two charges linked by a “recharges” link, with debtor, payer and observing entity explicit. "We paid" cannot be answered without the observing entity. Confidence high. Firm decision: which model applies per client or market. [05, 02, 01]
 
 <sub>reference LD-A0003</sub>
 
@@ -79,7 +79,7 @@ A proposed answer comes from the expert review; it is **not a decision** until t
 
 **To decide:** Specify function, maintaining party, holder, beneficiary and account-to-account relationships.
 
-**Proposed answer:** Three levels: the CCP Account of each clearing service; the member's internal client account; execution-side and give-up references, which are identifiers rather than accounts. Levels are related only by explicit, time-bounded. Segregation regime and regulatory account statuses are separate, time-bounded dimensions. Confidence high. [02, 07, 06]
+**Proposed answer:** Three levels: the CCP Account of each clearing service; the member's internal client account; execution-side and give-up references, which are identifiers rather than accounts. Levels are related only by an explicit, time-bounded mapping. Segregation regime and regulatory account statuses are separate, time-bounded dimensions. Confidence high. [02, 07, 06]
 
 <sub>reference LD-A0007</sub>
 
@@ -111,7 +111,7 @@ A proposed answer comes from the expert review; it is **not a decision** until t
 
 **To decide:** A CCP's clearing service versus the firm's service offering versus a MiFID investment service; also the service mix (execution-only, clearing-only, execute-and-clear).
 
-**Proposed answer:** Two concepts, no common parent for now: a CCP's Clearing Service and a provider's Service Offering, linked by. A MiFID "investment service" is a regulatory category, not either concept. Confidence high. [02, 03, 05, 07, 08]
+**Proposed answer:** Two concepts, no common parent for now: a CCP's Clearing Service and a provider's Service Offering, linked by a “relies on” link. A MiFID "investment service" is a regulatory category, not either concept. Confidence high. [02, 03, 05, 07, 08]
 
 <sub>reference LD-A0020</sub>
 
@@ -151,7 +151,7 @@ A proposed answer comes from the expert review; it is **not a decision** until t
 
 **To decide:** Client-facing executing broker versus trading venue member entering the order versus regulatory executing entity in transaction reports versus giving clearing member.
 
-**Proposed answer:** Executing Broker is the client-facing service role; the Trading Venue Member enters the order in its own name; the executing entity of a transaction report is a regulatory reporting role; the giving clearing member is. One party may hold several of these roles; never infer one from another. Confidence high. [01]
+**Proposed answer:** Executing Broker is the client-facing service role; the Trading Venue Member enters the order in its own name; the executing entity of a transaction report is a regulatory reporting role; the giving clearing member is the clearing member that holds the trade before the give-up. One party may hold several of these roles; never infer one from another. Confidence high. [01]
 
 <sub>reference LD-A0035</sub>
 

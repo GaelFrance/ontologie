@@ -107,7 +107,7 @@ A proposed answer comes from the expert review; it is **not a decision** until t
 
 **To decide:** Pre-clearing (executed) trade versus CCP-facing trade versus member-client trade; which tier, identifier and counterparty view a question uses.
 
-**Proposed answer:** State the tier: pre-clearing trade, CCP-facing trade, member–client trade (principal model). Successor trades are linked by and may carry new identifiers. Confidence high. [03]
+**Proposed answer:** State the tier: pre-clearing trade, CCP-facing trade, member–client trade (principal model). Successor trades are linked by a “succeeds” link and may carry new identifiers. Confidence high. [03]
 
 <sub>reference LD-A0025</sub>
 
@@ -131,7 +131,7 @@ A proposed answer comes from the expert review; it is **not a decision** until t
 
 **To decide:** Client-facing executing broker versus trading venue member entering the order versus regulatory executing entity in transaction reports versus giving clearing member.
 
-**Proposed answer:** Executing Broker is the client-facing service role; the Trading Venue Member enters the order in its own name; the executing entity of a transaction report is a regulatory reporting role; the giving clearing member is. One party may hold several of these roles; never infer one from another. Confidence high. [01]
+**Proposed answer:** Executing Broker is the client-facing service role; the Trading Venue Member enters the order in its own name; the executing entity of a transaction report is a regulatory reporting role; the giving clearing member is the clearing member that holds the trade before the give-up. One party may hold several of these roles; never infer one from another. Confidence high. [01]
 
 <sub>reference LD-A0035</sub>
 
