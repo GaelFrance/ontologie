@@ -25,7 +25,6 @@ Standard alignments are "map, do not import" proposals: none has been checked ag
 | LD-C0044 Initial Margin Requirement, LD-C0045 Variation Margin Requirement | LD-C0043 Margin Requirement | Phase 1 proposal |
 | LD-C0055, LD-C0056, LD-C0059, LD-C0071 | LD-C0012 Agreement | 2026-11 review [01, 02, 03, 04, 05] |
 | LD-C0069 CCP Account | LD-C0010 Account | 2026-11 review [02] |
-| LD-C0065 Cut-off | LD-C0063 Rule Provision | 2026-11 review [07, 08] |
 | LD-C0017 Execution, LD-C0023 Clearing Acceptance, LD-C0024 Novation, LD-C0053 Clearing Member Acceptance, LD-C0054 CCP Interposition | LD-C0025 Lifecycle Event | 2026-11 review [08]; Execution is a lifecycle event from the order's perspective |
 | LD-C0075 Natural Person | LD-C0001 | 2026-11 domain review |
 | LD-C0077 Investment Fund | LD-C0001 | 2026-11 domain review |
@@ -703,10 +702,6 @@ Notes clarify use; they do not change the meanings in the catalogue. Review numb
 | LD-C0045 Variation Margin Requirement | Price alignment is a separate flow. Premium-style options carry no VM; futures-style options do. [04, 03] |
 | LD-C0046 Margin Call | A return of excess on request is a Collateral Movement, not a negative call; VM paid out by a CCP is a payment, not a call. [04] |
 | LD-C0048 Collateral Asset | Cash in a given currency is a collateral asset. Eligibility holds only against a version of a Collateral Eligibility Schedule (LD-R0072). [04] |
-| LD-C0128 Standing Allocation Instruction | Depends on the proposed meaning change to Allocation Instruction, awaiting the sponsor's decision. |
-| LD-C0140 Take-up Deadline | Depends on the proposed meaning change to Cut-off, awaiting the sponsor's decision. |
-| LD-C0214 Settlement Deadline | Depends on the proposed meaning change to Cut-off, awaiting the sponsor's decision. |
-| LD-C0215 Firm Cut-off | Depends on the proposed meaning change to Cut-off, awaiting the sponsor's decision. |
 
 ## Priority and alignment
 

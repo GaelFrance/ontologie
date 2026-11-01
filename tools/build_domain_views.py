@@ -27,7 +27,9 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "domains"
 ID = r"LD-[CRA]\d{4}"
 CID = r"LD-C\d{4}"
-MEANING_CHANGED = {"LD-C0003", "LD-C0013", "LD-C0014", "LD-C0022", "LD-C0023", "LD-C0047"}
+MEANING_CHANGED = {"LD-C0003", "LD-C0013", "LD-C0014", "LD-C0022", "LD-C0023", "LD-C0047",
+                   "LD-C0001", "LD-C0005", "LD-C0009", "LD-C0020", "LD-C0026", "LD-C0031", "LD-C0038",
+                   "LD-C0045", "LD-C0059", "LD-C0060", "LD-C0064", "LD-C0065", "LD-C0068", "LD-C0069"}
 CANONICAL_IN_DOMAIN = {"overview.md", "company-questions.md"}
 GENERATED_IN_DOMAIN = {"README.md", "concepts.md", "review.md"}
 EMPTY = (None, "", "—", "-")

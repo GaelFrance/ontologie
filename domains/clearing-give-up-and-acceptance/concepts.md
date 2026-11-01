@@ -411,8 +411,6 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Words people use:** “give-up deadline” (contextual); “claim deadline” (contextual)
 
-**Note.** Depends on the proposed meaning change to Cut-off, awaiting the sponsor's decision.
-
 **Before using it, know:** Clearing service, rulebook version, clearing date and the CCP's time zone.
 
 **Connected to:**

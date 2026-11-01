@@ -137,7 +137,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 *An account that a CCP opens in one clearing service, for a member's own business or for its clients, where the CCP records positions and attributes margin and collateral.*
 
-**Definition.** Account opened by a CCP within a clearing service in a clearing member's name, of a defined type (house; omnibus client, net or gross; individually segregated client; indirect-client variants; other regimes' customer account classes), in which positions, margin and collateral are recorded.
+**Definition.** Account opened by a central counterparty within one clearing service, in the name of a clearing member or, under a sponsored or direct-client model, of the participant admitted in its own name, of a type defined by that service's rules (house; client omnibus, net or gross; individually segregated client; indirect client, basic or gross omnibus; regime-specific customer account classes such as the US futures, foreign futures and cleared swaps customer accounts), to which the CCP attributes positions and, directly or through a linked margin or collateral unit defined by its rules, margin requirements and collateral. — *meaning changed in 2026-11, accepted as Draft*
 
 **Example.** Clearing Broker Y holds at CCP Z a house account, a net omnibus client account and an individually segregated account for Client A.
 
@@ -410,7 +410,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 *What is open in an account on a given day: how many contracts are held long and short, or which cleared swaps are still running.*
 
-**Definition.** Resulting exposure or quantity for a defined scope, aggregation basis and as-of time.
+**Definition.** Open quantity of a listed contract series, or set of open cleared OTC trades, recorded for an identified account (CCP account, CCP position account or internal account) within a clearing service, on a stated basis (long and short kept apart, or net) as of a stated business date and processing cycle, as asserted by an identified source. Exposure, notional totals and valuations are measures derived from a position, not the position itself. — *meaning changed in 2026-11, accepted as Draft*
 
 **Example.** On clearing date D, Client A's account at Clearing Broker Y holds 40 long and 15 short contracts in the June series of Contract K at CCP Z.
 

@@ -10,7 +10,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 *An amount one party owes another for a service, such as an exchange fee or a client clearing fee.*
 
-**Definition.** Obligation of exactly one debtor toward exactly one creditor to pay an amount for a service, arising from a chargeable event or a period under an applicable fee schedule or agreed terms; it carries its amount certainty (estimated or final) and billing stage (accrued, invoiced, disputed, adjusted, settled, written off), and may be paid by a party other than the debtor or collected by a party other than the creditor. Distinct from the revenue it may contribute to and from the cash movement that settles it.
+**Definition.** Obligation of exactly one debtor toward exactly one creditor to pay an amount for a service, arising from a chargeable event or a period under an applicable fee schedule or agreed terms; it carries its amount certainty (estimated or final) and billing stage (accrued, invoiced, disputed, adjusted, settled, written off), and may be paid by a party other than the debtor or collected by a party other than the creditor. Includes late and penalty charges arising from a missed cut-off or a settlement fail. Distinct from the revenue it may contribute to and from the cash movement that settles it. — *meaning changed in 2026-11, accepted as Draft*
 
 **Example.** Client A owes Clearing Broker Y a clearing fee for each lot registered at CCP Z today.
 
@@ -436,7 +436,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 *A loose commercial word for what a broker charges per contract; it must be resolved to a specific fee before use.*
 
-**Definition.** Contractual remuneration category whose boundaries and overlap with fee types require business validation.
+**Definition.** Commercial label for the remuneration a broker charges a client per contract or per trade, quoted per side or per round turn, for execution, clearing or both; not an economic category of its own, so every use must be resolved to the client execution fee, the client clearing fee or a bundled execution and clearing fee. Deferred by the sponsor; resolution stays blocked. — *meaning changed in 2026-11, accepted as Draft*
 
 **Example.** A client asks for 'our commission on Venue V futures': the answer depends on whether execution, clearing or a bundled fee is meant.
 

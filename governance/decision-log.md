@@ -81,3 +81,17 @@ Evidence: sponsor answer in the project conversation, 2026-11-01 (open question 
 | 15. Revenue domain | Revenue is a governance domain with its own owner, who answers the revenue questions. Collateral revenue is a sub-domain owned by the Collateral Manager. | Open questions 9 and 10 are assigned to the Revenue owner (collateral income part of 9 to the Collateral Manager); question 11 to the Collateral Manager with Risk. Defaults stay proposals until they answer. | LD-C0031 to LD-C0042, LD-C0074, LD-A0001, LD-A0002, LD-A0014, LD-A0033 |
 
 Apart from LD-A0010 (decision 5), these answers do not resolve any ambiguity entry, approve any definition, formula or cost perimeter, or change the deferral of Commission and Transaction.
+
+## Sponsor decision — 2026-11-01 (level-2 domain review)
+
+Evidence: sponsor answer in the project conversation, 2026-11-01 ("accept everything, merge and release"), on the points listed in [open questions](open-questions-for-owner.md) (level-2 section) and the [supervision report](reviews/2026-11-level2-domain-review/SUPERVISION.md).
+
+| Point | Decision | Consequence in the ontology | Affected IDs |
+|---|---|---|---|
+| 16. Meaning changes | The 13 proposed meaning changes are accepted as Draft: Party, Broker, Trading Venue, Allocation, Position, Commission, Variation Margin Requirement, Market Access Arrangement, Allocation Instruction, Rule Change, Cut-off, Regulatory Classification, CCP Account. | Definitions replaced in the catalogue; Commission keeps its resolution flag. Settlement Deadline, Firm Cut-off, Take-up Deadline and Standing Allocation Instruction no longer depend on a pending decision. | LD-C0001, LD-C0005, LD-C0009, LD-C0020, LD-C0026, LD-C0038, LD-C0045, LD-C0059, LD-C0060, LD-C0064, LD-C0065, LD-C0068, LD-C0069 |
+| 17. Cut-off | A cut-off is set by a rule provision or by a term of an agreement; it is no longer a kind of Rule Provision. Only rule-set cut-offs follow the rule change lifecycle. | Specialisation removed; new relationship "set by". | LD-C0065, LD-C0063, LD-C0012 |
+| 18. Third-party execution | Third-party execution also covers an executing broker that is a venue member but chooses not to use its own membership for that business (extends decision 3). | Third-Party Execution Arrangement and Third-party Executing Member widened. | LD-C0113, LD-C0130 |
+| 19. Backlog triggers | Triggers waived: Identifier Scheme, Source Record, Activity Volume, Clearing Submission, Change Notice, Regulatory Obligation, Default Fund Contribution and Cash Collateral Interest are promoted now. | Concepts kept as Draft. | — |
+| 20. Late and penalty charges | Fee Charge includes late and penalty charges arising from a missed cut-off or a settlement fail. | Fee Charge definition widened; no separate concept. | LD-C0031 |
+| 21. OTC execution on venues | OTC derivatives executed on MTFs, OTFs and swap execution facilities are out of scope for the listed pilot and planned as a later extension of the execution domain. | Scope note on the execution page. | — |
+| 22. Questions for the firm | Merged company questions are answered in joint sessions with the roles named. | Joint questions kept as written. | — |

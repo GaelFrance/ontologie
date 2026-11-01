@@ -1,5 +1,11 @@
 # Change log
 
+## Release v0.2.0 — 2026-11-01
+
+First tagged release: Phase 2 foundation with level 2 and readable domain folders (222 concepts, all Draft). Includes the entries below for 2026-11-01.
+
+- Sponsor accepted all points of the level-2 review (decisions 16 to 22): the 13 meaning changes are applied as Draft (Party, Broker, Trading Venue, Allocation, Allocation Instruction, Position, Commission, Variation Margin Requirement, Market Access Arrangement, Rule Change, Cut-off, Regulatory Classification, CCP Account); Cut-off is set by a rule provision or an agreement term; third-party execution also covers a member not using its own membership; backlog triggers waived; Fee Charge includes late and penalty charges; OTC execution on venues is out of scope for the listed pilot.
+
 ## 2026-11-01 — Level 2 and readable domain folders
 
 - **Ten domain experts** (one per review domain, each with its own expert skill in `.claude/skills/`) reviewed their domain, proposed level-2 concepts, plain-language summaries and questions for the firm; every expert cross-checked the other nine domains; a supervisor arbitrated ([report](governance/reviews/2026-11-level2-domain-review/SUPERVISION.md)). AI work is evidence, not approval: everything stays Draft.

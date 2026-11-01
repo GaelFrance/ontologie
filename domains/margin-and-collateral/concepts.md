@@ -213,7 +213,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 *Margin that reflects the change in value of positions at current prices, settled daily or held as collateral.*
 
-**Definition.** Amount payable or receivable reflecting the change in value of positions since the previous margin cycle, with direction stated from the observing party; under settled-to-market treatment it gives rise to a Settlement Obligation, under collateralised-to-market treatment to collateral that must be returned as exposure changes.
+**Definition.** Margin requirement reflecting the current market value of positions, owed by the party the value has moved against: under settled-to-market treatment, the change in value since the previous margin cycle, paid outright as a settlement of the exposure rather than posted as collateral; under collateralised-to-market treatment, the cumulative mark-to-market exposure, covered by collateral that is returned as the exposure falls. For listed contracts positions are valued at the daily settlement price. Direction is stated from the observing party. Price alignment is a separate amount and never part of variation margin. — *meaning changed in 2026-11, accepted as Draft*
 
 **Example.** Client A's long futures lost value today, so Client A owes variation margin, which Clearing Broker Y pays on to CCP Z.
 

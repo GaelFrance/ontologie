@@ -21,7 +21,9 @@ Only questions that the business owner or internal sources can answer are listed
 
 Repository visibility is no longer an open question: the `ontologie` repository is private. Its content is still kept free of firm-specific facts and internal jargon so that it remains usable as public-zone input by the hub.
 
-## Level-2 domain review (2026-11-01): decisions for the sponsor
+## Level-2 domain review (2026-11-01): decided
+
+**Decided 2026-11-01: all accepted** (see [decision log](decision-log.md), decisions 16 to 22). The table is kept as the record of what was proposed.
 
 The ten domain experts and the supervisor ([report](reviews/2026-11-level2-domain-review/SUPERVISION.md)) proposed 13 changes of meaning to foundation concepts. They are **not applied**: the current definition stays until the sponsor decides. Clarifications that keep the meaning were applied as Draft (see the [change log](../CHANGELOG.md)).
 

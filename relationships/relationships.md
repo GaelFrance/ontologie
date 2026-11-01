@@ -609,3 +609,4 @@ Structure links (part of, step in, state of) and plain connections proposed by t
 | LD-R0590 | LD-C0222 | changes_or_ends | LD-C0018 | — |
 | LD-R0591 | LD-C0222 | may_change | LD-C0026 | — |
 | LD-R0592 | LD-C0222 | may_raise | LD-C0030 | — |
+| LD-R0593 | LD-C0065 | set_by | LD-C0063 / LD-C0012 | A cut-off is set by a rule provision or by a term of an agreement (sponsor decision 2026-11-01); only rule-set cut-offs follow the rule change lifecycle. |

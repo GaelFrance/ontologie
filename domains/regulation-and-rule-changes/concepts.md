@@ -42,7 +42,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Part of:** [Regulatory Regime](#regulatory-regime)
 
-**Breaks down into:** [Cut-off](../post-trade-operations/concepts.md#cut-off) (kind of), [Offering Eligibility Criterion](../service-offering-and-market-access/concepts.md#offering-eligibility-criterion) (kind of), [Access Requirement](../service-offering-and-market-access/concepts.md#access-requirement) (kind of), [Clearing Limit](../clearing-give-up-and-acceptance/concepts.md#clearing-limit) (kind of), [Rulebook](#rulebook) (kind of), [Regulatory Relief](#regulatory-relief) (kind of), [Equivalence Decision](#equivalence-decision) (kind of)
+**Breaks down into:** [Offering Eligibility Criterion](../service-offering-and-market-access/concepts.md#offering-eligibility-criterion) (kind of), [Access Requirement](../service-offering-and-market-access/concepts.md#access-requirement) (kind of), [Clearing Limit](../clearing-give-up-and-acceptance/concepts.md#clearing-limit) (kind of), [Rulebook](#rulebook) (kind of), [Regulatory Relief](#regulatory-relief) (kind of), [Equivalence Decision](#equivalence-decision) (kind of)
 
 **Connected to:**
 
@@ -256,7 +256,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 *A change to a rule or to a published specification, followed from proposal or consultation until it applies, with its status and its dates.*
 
-**Definition.** Proposal, adoption, amendment, withdrawal or replacement of a rule provision or of another published versioned specification (fee schedule, contract specification, business calendar, margin methodology, eligibility schedule), with a status and role-qualified dates; the trigger object of change-impact analysis.
+**Definition.** Proposed or adopted change to one rule provision, or to another published, versioned specification (fee schedule, contract specification, business calendar, cut-off set by a rule, margin methodology, margin parameter set announced by notice, collateral eligibility schedule, clearing eligibility schedule, access requirement), by which it is created, amended, replaced or withdrawn. It is followed from proposal to application, with a lifecycle status (proposed or in consultation, adopted, approved or self-certified where the issuer's supervisor must act, in force, applicable, superseded, withdrawn) and dates qualified by their role (publication, consultation close, adoption, entry into force, application, phase-in, end of transition, and the date the firm recorded it). Contract terms agreed with a client, routine parameter publications under an unchanged method, and new series listed under an unchanged contract specification are not rule changes; nor is a change of one party's regulatory classification. One published notice can announce several rule changes, and one rule change can be announced in several notices. Type: Process (proposed). — *meaning changed in 2026-11, accepted as Draft*
 
 **Example.** CCP Z proposes to move its give-up take-up deadline thirty minutes earlier; the change is adopted, approved by its supervisor and applies from a stated clearing date.
 
@@ -414,7 +414,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 *A status that a regime gives to someone or something for a period, such as 'financial counterparty above the clearing threshold' or 'recognised third-country CCP'.*
 
-**Definition.** Time-bounded status of a legal entity, role assignment, account, trading venue, CCP or clearing service under a named regulatory regime, with its basis (self-assessment, notification, authority decision, calculation), asserting source and evidence; "unknown" is a value, never a default.
+**Definition.** Time-bounded status that a named regulatory regime gives to a legal entity (or a branch where the regime says so), a role assignment, an account, a trading venue or venue segment, a CCP or clearing service, an instrument, contract specification or product family, or a trade, with its basis (authority decision or registration, notification, calculation, self-assessment, representation by the counterparty), the source that asserts it and the evidence; valid time and record time are both kept, and 'unknown' is a value, never a default. — *meaning changed in 2026-11, accepted as Draft*
 
 **Example.** Client A represents that it is a financial counterparty above the clearing threshold for interest rate derivatives under EU EMIR from a stated date.
 

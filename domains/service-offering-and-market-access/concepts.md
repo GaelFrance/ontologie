@@ -89,7 +89,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 *The route by which someone gets into one venue or one clearing house: as a member, through another member, as a client, or under a sponsored model, with its status and dates.*
 
-**Definition.** Arrangement, documented by one or more agreements, by which a party can execute on a trading venue or clear in a clearing service, with an access model (direct membership by category, through a third-party member, direct electronic access, client clearing, indirect clearing, sponsored or direct-client model), any intermediary, a status and an effective period.
+**Definition.** Access relationship by which one party can execute on one trading venue or venue segment, or clear in one clearing service, under one access model (execution: own venue membership by category, through a third-party executing member, or direct electronic access as direct market access or sponsored access; clearing: own clearing membership by category, as a non-clearing member through a general clearing member, client clearing, indirect clearing, or sponsored clearing or a direct-client model), naming the intermediary through which the party reaches the venue or clearing service; where clearing passes through a chain, each link is a separate arrangement and the chain is recorded in order. It records the role it confers, a status (only a live arrangement can be relied on) and an effective period, and is documented by one or more agreements, which are separate objects and may serve several arrangements. Execution access and clearing access are always separate arrangements. — *meaning changed in 2026-11, accepted as Draft*
 
 **Example.** Broker B reaches Venue V through Member M, a third-party executing member there, because Broker B is not a venue member; the route is live from a given date.
 
@@ -144,7 +144,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 *A broker reaches a venue where it is not a member by passing orders to a broker that is.*
 
-**Definition.** Market access arrangement by which a party that is not a member of a trading venue has orders executed there by a Third-party Executing Member acting under an agreement with it; brokerage owed to that member is executing brokerage paid.
+**Definition.** Market access arrangement by which a party that is not a member of a trading venue, or is a member but chooses not to use its membership for that business, has orders executed there by a Third-party Executing Member acting under an agreement with it; brokerage owed to that member is executing brokerage paid.
 
 **Example.** Broker B sends Client A's orders for Venue V to Member M, a third-party executing member on Venue V, because Broker B is not a member there.
 

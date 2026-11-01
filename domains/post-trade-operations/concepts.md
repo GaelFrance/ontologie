@@ -215,13 +215,11 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 *The latest time a step can be done, with the calendar it is read against, what happens if it is missed, and who set it.*
 
-**Definition.** Rule provision setting the time by which a process step must be completed, expressed as a local time relative to a business date of a named business calendar, with the consequence of missing it (rejection, lapse, late handling, charge) and the authority that sets it.
+**Definition.** Rule fixing the latest time by which a stated process step must be completed, set by a rule provision (regulation, CCP or venue rulebook, payment system rule, firm procedure) or by a term of an agreement, the source kind being recorded on each cut-off; expressed either as a local time on a business date of a named business calendar, read against the relevant processing window, or as a period after a stated triggering event; it states the consequence of missing it (rejection, lapse, late handling, charge, default procedure) and the authority that sets it. Only cut-offs set by a rule provision follow the Rule Change lifecycle. Versioned; on a given day it resolves to one exact time, which can move with early closes or extended trading hours. — *meaning changed in 2026-11, accepted as Draft*
 
 **Example.** CCP Z's deadline for taking up give-ups is a stated local time on the clearing date; a line not taken up by then lapses and stays with the giving member.
 
 **Not to be confused with.** Business Calendar: the calendar says which days count; the cut-off says the latest time on such a day and the consequence of missing it.
-
-**Kind of:** [Rule Provision](../regulation-and-rule-changes/concepts.md#rule-provision)
 
 **Breaks down into:** [Take-up Deadline](../clearing-give-up-and-acceptance/concepts.md#take-up-deadline) (kind of), [Settlement Deadline](#settlement-deadline) (kind of), [Firm Cut-off](#firm-cut-off) (kind of)
 
@@ -238,6 +236,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Margin Call Terms](../margin-and-collateral/concepts.md#margin-call-terms) *names the deadline as* Cut-off
 - [Exercise Instruction](#exercise-instruction) *must arrive before* Cut-off
 - [Delivery Notice](#delivery-notice) *must arrive before* Cut-off
+- *set by* [Rule Provision](../regulation-and-rule-changes/concepts.md#rule-provision), [Agreement](../clearing-services-and-accounts/concepts.md#agreement) — A cut-off is set by a rule provision or by a term of an agreement (sponsor decision 2026-11-01); only rule-set cut-offs follow the rule change lifecycle.
 
 **Open questions on its meaning:** “Business date” (open, answer proposed) — see the [review sheet](review.md).
 
@@ -258,8 +257,6 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 **Values (draft list):** CCP payment deadline (per cycle); payment system closing time; client payment deadline; delivery deadline
 
 **Words people use:** “payment deadline”; “settlement cut-off”
-
-**Note.** Depends on the proposed meaning change to Cut-off, awaiting the sponsor's decision.
 
 **Before using it, know:** Calendar, time zone, currency, cycle, the authority that sets it, the consequence.
 
@@ -285,8 +282,6 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 **Kind of:** [Cut-off](#cut-off)
 
 **Words people use:** “client cut-off”; “internal deadline”
-
-**Note.** Depends on the proposed meaning change to Cut-off, awaiting the sponsor's decision.
 
 **Before using it, know:** Which market cut-off it protects, who it binds, calendar and time zone, consequence.
 

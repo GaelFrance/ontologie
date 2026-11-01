@@ -228,7 +228,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 *An organised marketplace, such as an exchange or a multilateral trading facility, where many participants' buying and selling interests meet under the venue's rules.*
 
-**Definition.** Organised trading facility or framework, distinguished from its legal operator and reporting facilities.
+**Definition.** Multilateral trading system or facility, operated under its own rules by an identified market operator, in which multiple third-party buying and selling interests meet, or privately negotiated trades are registered under its rules, so that contracts result; identified by a market identifier code and possibly divided into segments. Includes regulated markets, MTFs, OTFs, designated contract markets and swap execution facilities. Distinct from its operator, from a central counterparty, from a systematic internaliser or single-dealer platform, and from trade reporting services. — *meaning changed in 2026-11, accepted as Draft*
 
 **Example.** Venue V, a regulated market operated by Operator O, with an equity derivatives segment and a commodity derivatives segment.
 

@@ -10,7 +10,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 *Anyone who can act or hold rights in a business relationship: a person, a company, a branch or a fund.*
 
-**Definition.** Identifiable actor that can participate in a business relationship.
+**Definition.** Person or organisation that can be identified and can act, or hold rights and obligations, in a business relationship: a natural person, a legal entity, or a unit without its own legal personality that is named separately in agreements or records (for example a branch or an investment fund). The firm's internal teams, desks and systems are not parties. — *meaning changed in 2026-11, accepted as Draft*
 
 **Example.** Fund F, its investment manager M, Clearing Broker Y and CCP Z are all parties.
 
@@ -276,7 +276,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 *A firm that executes orders or clears trades for its clients as a service.*
 
-**Definition.** Role of a party that acts on behalf of others to execute orders and/or to clear or carry their trades under an identified agreement.
+**Definition.** Role of a party that provides execution of orders, or clearing or carrying of trades and positions, as a service to clients under an identified agreement, whether it acts as agent or as principal toward them. Executing Broker and Clearing Broker are its kinds. — *meaning changed in 2026-11, accepted as Draft*
 
 **Example.** Executing Broker X executes Client A's order on Venue V; Clearing Broker Y clears the resulting trade.
 

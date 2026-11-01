@@ -413,7 +413,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 *The client's instruction saying which accounts, and which clearing brokers, should receive which part of the executed quantity.*
 
-**Definition.** Instruction, given before or after execution by a client or its investment manager, specifying how an executed or average-priced quantity is split across target accounts and, where relevant, clearing brokers; versioned and amendable until the applicable cut-off.
+**Definition.** Instruction, given by a client or by a party authorised to act for it (such as its investment manager), specifying how an executed or average-priced quantity is split across target accounts and, where relevant, the receiving clearing brokers. It may be standing (agreed in advance for a defined scope of activity), given with the order before execution, or given after execution; it is versioned and can be amended until the applicable cut-off. — *meaning changed in 2026-11, accepted as Draft*
 
 **Example.** Investment Manager M tells Executing Broker X to put 100 lots in Fund F1's account and 200 lots in Fund F2's account cleared by Clearing Broker Y.
 
@@ -448,8 +448,6 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Words people use:** “standing instruction, SSI-style allocation” (desk usage, ambiguous with settlement instructions); “default allocation” (any)
 
-**Note.** Depends on the proposed meaning change to Allocation Instruction, awaiting the sponsor's decision.
-
 **Before using it, know:** Scope, effective period and who may override it; the version in force at the execution time.
 
 **Connected to:**
@@ -463,7 +461,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 *The actual split of executed quantity across the target accounts, one line per account.*
 
-**Definition.** Assignment of a quantity or amount to target beneficiaries or accounts; instruction and completed event are later specialisations.
+**Definition.** Process by which an executed or average-priced quantity is assigned to one or more target accounts, in allocation lines, following an allocation instruction or a standing rule. An allocation to an account carried by a clearing member other than the executing side's clearing member (whether the trade is registered first to that member or designated to the receiving member in advance) starts a give-up; otherwise it is internal. Allocation distributes quantity; averaging, which may come before it, sets the price. — *meaning changed in 2026-11, accepted as Draft*
 
 **Example.** Executing Broker X books 100 lots to Fund F1's account cleared in-house and 200 lots to Fund F2's account at Clearing Broker Y, which starts a give-up.
 
@@ -574,7 +572,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 *A venue member that another broker uses to reach a venue where it is not a member.*
 
-**Definition.** Role of a trading venue member that enters orders on the venue for an executing broker that is not a member of that venue, under an agreement between them and a Third-party Execution Arrangement; the executing broker remains responsible to its client and owes the member brokerage (brokerage paid, distinct from executing brokerage received). The wider case of a member that chooses not to use its own membership is a sponsor decision.
+**Definition.** Role of a trading venue member that enters orders on the venue for an executing broker that is not a member of that venue, or that is a member but chooses not to use its own membership for that business, under an agreement between them and a Third-party Execution Arrangement; the executing broker remains responsible to its client and owes the member brokerage (brokerage paid, distinct from executing brokerage received).
 
 **Example.** Executing Broker X is not a member of Venue T, so it routes Client A's child orders to Member W, which enters them on Venue T.
 
