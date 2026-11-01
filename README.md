@@ -6,11 +6,16 @@ A governed business foundation for **Listed Derivatives Execution, ETD Clearing 
 
 The ontology is independent of any LLM, database, application, API or MCP implementation. Canonical names and repository artefacts are in English. Markdown is the canonical format, written for business readers. Any machine-readable form (JSON or YAML) is generated automatically from the Markdown and is never edited or reviewed by hand (sponsor decision, 2026-11-01).
 
+## Start here: review by domain
+
+**[One page per business domain](domains/README.md)**: parties and roles; instruments, venues and calendars; service offering and market access; execution; clearing give-up and acceptance; clearing services and accounts; margin and collateral; fees and revenue; regulation; post-trade operations. Each concept has exactly one domain whose owner approves it, and may be shown on other pages for comment. Each page gives the questions for each reviewer role, the definitions with a verdict column, open ambiguities with proposed answers, decisions taken and the backlog items the domain may need. Give each reviewer the page of their domain; start with the wave 1 pages.
+
+
 ## Review the foundation
 
 1. [Scope and phase boundaries](docs/scope.md)
 2. [Architecture and modelling choices](docs/architecture.md)
-3. [Concept catalogue (74 concepts)](ontology/foundation.md) and [concept annotations](ontology/concept-annotations.md) (aliases, specialisations, required context, French labels)
+3. [Concept catalogue (74 concepts)](ontology/foundation.md) and [concept annotations](ontology/concept-annotations.md) (aliases, specialisations, required context)
 4. [Relationships](relationships/relationships.md)
 5. [Taxonomy design](taxonomies/README.md)
 6. [Ambiguities, affected concepts and proposed answers](governance/ambiguity-register.md)

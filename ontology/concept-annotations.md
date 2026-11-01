@@ -2,7 +2,7 @@
 
 Status: Draft. Companion to the [concept catalogue](foundation.md), which stays the single index of IDs and definitions.
 
-This page holds per-concept data that does not fit the catalogue's five-column table: specialisations, aliases, resolution flags, usage notes, required context, French labels, priorities and standard alignments. It is kept separate because the agent hub currently parses the catalogue table by cell position. When detailed concept fiches are written (template fields `parents`, `aliases`, `required_context`, `label_fr`, `alignments`, `resolution`), the content below moves into them and this page is retired.
+This page holds per-concept data that does not fit the catalogue's five-column table: specialisations, aliases, resolution flags, usage notes, required context, priorities and standard alignments. It is kept separate because the agent hub currently parses the catalogue table by cell position. When detailed concept fiches are written (template fields `parents`, `aliases`, `required_context`, `label_fr`, `alignments`, `resolution`), the content below moves into them and this page is retired.
 
 Standard alignments are "map, do not import" proposals: none has been checked against the published specification, so all are **to verify**, and no IRI or URL is asserted.
 
@@ -133,83 +133,83 @@ Notes clarify use; they do not change the meanings in the catalogue. Review numb
 | LD-C0046 Margin Call | A return of excess on request is a Collateral Movement, not a negative call; VM paid out by a CCP is a payment, not a call. [04] |
 | LD-C0048 Collateral Asset | Cash in a given currency is a collateral asset. Eligibility holds only against a version of a Collateral Eligibility Schedule (LD-R0072). [04] |
 
-## Labels, priority and alignment
+## Priority and alignment
 
-French labels are optional secondary labels; English remains canonical (sponsor decision, 2026-11-01). Priority is given for concepts added by the 2026-11 review.
+English names are the only labels (French labels removed by sponsor decision, 2026-11-01). Priority is given for concepts added by the 2026-11 review.
 
-| Concept | French label (proposed) | Priority | Source reviews | Standard alignment (to verify) |
-|---|---|---|---|---|
-| LD-C0001 Party | Partie | Phase 1 | — | FIBO party concepts |
-| LD-C0002 Legal Entity | Entité juridique | Phase 1 | — | ISO 17442 LEI |
-| LD-C0003 Party Role | Rôle de partie | Phase 1 | — | FIBO party-in-role; CDM party role |
-| LD-C0004 Client | Client | Phase 1 | — | EMIR Art. 2(15); MiFID II Art. 4(1)(9) |
-| LD-C0005 Broker | Courtier | Phase 1 | — | — |
-| LD-C0006 Executing Broker | Courtier exécutant | Phase 1 | — | — |
-| LD-C0007 Clearing Member | Membre compensateur | Phase 1 | — | CCP rulebooks |
-| LD-C0008 Central Counterparty | Contrepartie centrale | Phase 1 | — | EMIR Art. 2(1) |
-| LD-C0009 Trading Venue | Plateforme de négociation | Phase 1 | — | ISO 10383 MIC |
-| LD-C0010 Account | Compte | Phase 1 | — | — |
-| LD-C0011 Segregation Model | Modèle de ségrégation | Phase 1 | — | EMIR Art. 39 |
-| LD-C0012 Agreement | Convention | Phase 1 | — | — |
-| LD-C0013 Product Family | Famille de produits | Phase 1 | — | ISO 10962 CFI; ISO 4914 UPI; ISDA OTC taxonomy |
-| LD-C0014 Instrument | Instrument | Phase 1 | — | ISO 6166 ISIN |
-| LD-C0015 Business Date | Date métier | Phase 1 | — | — |
-| LD-C0016 Order | Ordre | Phase 1 | — | FIX order messages |
-| LD-C0017 Execution | Exécution | Phase 1 | — | FIX execution report |
-| LD-C0018 Trade | Opération (trade) | Phase 1 | — | CDM trade; ISO 23897 UTI |
-| LD-C0019 Transaction | Transaction | Phase 1 | — | — |
-| LD-C0020 Allocation | Allocation | Phase 1 | — | — |
-| LD-C0021 Average Price Group | Groupe de prix moyen | Phase 1 | — | — |
-| LD-C0022 Give-up / Take-up Process | Processus de give-up / take-up | Phase 1 | — | — |
-| LD-C0023 Clearing Acceptance | Acceptation en compensation par la CCP | Phase 1 | — | — |
-| LD-C0024 Novation | Novation | Phase 1 | — | — |
-| LD-C0025 Lifecycle Event | Événement de cycle de vie | Phase 1 | — | CDM business events |
-| LD-C0026 Position | Position | Phase 1 | — | — |
-| LD-C0027 Portfolio | Portefeuille | Phase 1 | — | — |
-| LD-C0028 Settlement Obligation | Obligation de règlement | Phase 1 | — | — |
-| LD-C0029 Cash Movement | Mouvement d'espèces | Phase 1 | — | — |
-| LD-C0030 Operational Exception | Exception opérationnelle | Phase 1 | — | — |
-| LD-C0031 Fee Charge | Frais facturable | Phase 1 | — | — |
-| LD-C0032 Fee Schedule | Barème de frais | Phase 1 | — | — |
-| LD-C0033 Client Execution Fee | Frais d'exécution client | Phase 1 | — | — |
-| LD-C0034 Client Clearing Fee | Frais de compensation client | Phase 1 | — | — |
-| LD-C0035 Executing Broker Brokerage Charge | Courtage du courtier exécutant | Phase 1 | — | — |
-| LD-C0036 Exchange Fee Charge | Frais de marché | Phase 1 | — | — |
-| LD-C0037 CCP Fee Charge | Frais de CCP | Phase 1 | — | — |
-| LD-C0038 Commission | Commission | Phase 1 | — | — |
-| LD-C0039 Revenue | Revenu | Phase 1 | — | — |
-| LD-C0040 Cost | Coût | Phase 1 | — | — |
-| LD-C0041 Execution Revenue | Revenu d'exécution | Phase 1 | — | — |
-| LD-C0042 Clearing Revenue | Revenu de compensation | Phase 1 | — | — |
-| LD-C0043 Margin Requirement | Exigence de marge | Phase 1 | — | PFMI Principle 6 |
-| LD-C0044 Initial Margin Requirement | Exigence de marge initiale | Phase 1 | — | EMIR Art. 41 |
-| LD-C0045 Variation Margin Requirement | Exigence de marge de variation | Phase 1 | — | — |
-| LD-C0046 Margin Call | Appel de marge | Phase 1 | — | — |
-| LD-C0047 Collateral | Garantie constituée | Phase 1 | — | Directive 2002/47/EC |
-| LD-C0048 Collateral Asset | Actif de garantie | Phase 1 | — | — |
-| LD-C0049 Collateral Movement | Mouvement de garantie | Phase 1 | — | — |
-| LD-C0050 Reconciliation | Rapprochement | Phase 1 | — | — |
-| LD-C0051 Clearing Service | Service de compensation | P1 | 02, 03, 04, 05, 06, 07, 08 | CCP rulebooks; EMIR Art. 14 and 15 (authorisation and its extension) |
-| LD-C0052 Service Offering | Offre de service | P1 | 05, 08 | FIBO products and services |
-| LD-C0053 Clearing Member Acceptance | Acceptation par le membre compensateur | P1 | 01, 02, 03, 05, 08 | FIXML allocation and claim flows; FpML clearing status; MiFIR Art. 29(2) and Delegated Regulation (EU) 2017/582; CFTC 1.73 and 1.74 |
-| LD-C0054 CCP Interposition | Interposition de la CCP | P1 | 02, 03, 06, 08 | PFMI Principle 1; CDM and FpML clearing events |
-| LD-C0055 Give-up Agreement | Convention de give-up | P1 | 01, 02, 08 | FIA International Uniform Brokerage Execution Services ("Give-Up") Agreement; a revised FIA standard was in public comment in 2026, version to verify |
-| LD-C0056 Client Clearing Agreement | Convention de compensation client | P1 | 03, 02, 06, 08 | ISDA/FIA client cleared OTC derivatives addendum; FCM customer agreements (titles to verify) |
-| LD-C0057 Clearing Broker | Courtier compensateur | P1 | 02, 05, 01, 08 | — (FCM is a contextual US alias) |
-| LD-C0058 Trading Venue Member | Membre de plateforme de négociation | P1 | 01 | MiFID II "member or participant" (Art. 53 for regulated markets); FIX party roles |
-| LD-C0059 Market Access Arrangement | Dispositif d'accès au marché | P1 | 05, 02, 03, 06, 01 | EMIR Art. 4(3); MiFIR Art. 30; Delegated Regulations (EU) 2017/2154 and 2017/2155; MiFID II Art. 4(1)(41); PFMI Principle 19 |
-| LD-C0060 Allocation Instruction | Instruction d'allocation | P1 | 01, 02 | FIX allocation instruction and allocation report messages; CFTC 1.35 bunched orders |
-| LD-C0061 Order Handling Channel | Canal de traitement des ordres | P1 (sponsor decision 2026-11-01) | 01, 05 | MiFID II Art. 4(1)(39), 4(1)(41), 17(5); Delegated Regulation (EU) 2017/589; FIX handling-instruction fields |
-| LD-C0062 Contract Specification | Spécification de contrat | P1 | 07, 08, 01, 05 | FIX security definition; venue contract specifications |
-| LD-C0063 Rule Provision | Disposition de règle | P1 | 06, 05, 08, 02 | ELI for EU acts |
-| LD-C0064 Rule Change | Changement de règle | P1 | 06, 08, 02, 05 | CFTC Part 40 rule submissions (instances) |
-| LD-C0065 Cut-off | Heure limite | P1 | 07, 08 | CCP and venue deadlines (instances) |
-| LD-C0066 Business Calendar | Calendrier d'activité | P1 | 07 | Venue, CCP and payment-system calendars (instances) |
-| LD-C0067 Regulatory Regime | Régime réglementaire | P1 | 06, 05, 08 | ISO 3166 for jurisdictions |
-| LD-C0068 Regulatory Classification | Classification réglementaire | P1 | 06 | EMIR Art. 2(8) and (9), 10, 25; CRR Art. 4(1)(88) |
-| LD-C0069 CCP Account | Compte CCP | P1 | 02, 07, 04 | EMIR Art. 39; CFTC customer account classes |
-| LD-C0070 Margin Methodology | Méthodologie de marge | P1 | 04, 05 | PFMI Principle 6; EMIR Art. 41; Delegated Regulation (EU) 153/2013; CFTC 39.13 |
-| LD-C0071 Collateral Arrangement | Convention de garantie financière | P1 | 04, 08 | Directive 2002/47/EC; MiFID II Art. 16(10); ISDA credit support documentation as bilateral analogue; CDM collateral |
-| LD-C0072 Collateral Eligibility Schedule | Barème d'éligibilité des garanties | P1 | 04 | EMIR Art. 46; Delegated Regulation (EU) 153/2013 annexes; CDM eligible collateral |
-| LD-C0073 Commercial Group | Groupe commercial | P1 | 05, 06 | Contrast with public legal-entity relationship data |
-| LD-C0074 Contribution | Contribution | P1 (management revenue priority) | 05, 04, 06 | — |
+| Concept | Priority | Source reviews | Standard alignment (to verify) |
+|---|---|---|---|
+| LD-C0001 Party | Phase 1 | — | FIBO party concepts |
+| LD-C0002 Legal Entity | Phase 1 | — | ISO 17442 LEI |
+| LD-C0003 Party Role | Phase 1 | — | FIBO party-in-role; CDM party role |
+| LD-C0004 Client | Phase 1 | — | EMIR Art. 2(15); MiFID II Art. 4(1)(9) |
+| LD-C0005 Broker | Phase 1 | — | — |
+| LD-C0006 Executing Broker | Phase 1 | — | — |
+| LD-C0007 Clearing Member | Phase 1 | — | CCP rulebooks |
+| LD-C0008 Central Counterparty | Phase 1 | — | EMIR Art. 2(1) |
+| LD-C0009 Trading Venue | Phase 1 | — | ISO 10383 MIC |
+| LD-C0010 Account | Phase 1 | — | — |
+| LD-C0011 Segregation Model | Phase 1 | — | EMIR Art. 39 |
+| LD-C0012 Agreement | Phase 1 | — | — |
+| LD-C0013 Product Family | Phase 1 | — | ISO 10962 CFI; ISO 4914 UPI; ISDA OTC taxonomy |
+| LD-C0014 Instrument | Phase 1 | — | ISO 6166 ISIN |
+| LD-C0015 Business Date | Phase 1 | — | — |
+| LD-C0016 Order | Phase 1 | — | FIX order messages |
+| LD-C0017 Execution | Phase 1 | — | FIX execution report |
+| LD-C0018 Trade | Phase 1 | — | CDM trade; ISO 23897 UTI |
+| LD-C0019 Transaction | Phase 1 | — | — |
+| LD-C0020 Allocation | Phase 1 | — | — |
+| LD-C0021 Average Price Group | Phase 1 | — | — |
+| LD-C0022 Give-up / Take-up Process | Phase 1 | — | — |
+| LD-C0023 Clearing Acceptance | Phase 1 | — | — |
+| LD-C0024 Novation | Phase 1 | — | — |
+| LD-C0025 Lifecycle Event | Phase 1 | — | CDM business events |
+| LD-C0026 Position | Phase 1 | — | — |
+| LD-C0027 Portfolio | Phase 1 | — | — |
+| LD-C0028 Settlement Obligation | Phase 1 | — | — |
+| LD-C0029 Cash Movement | Phase 1 | — | — |
+| LD-C0030 Operational Exception | Phase 1 | — | — |
+| LD-C0031 Fee Charge | Phase 1 | — | — |
+| LD-C0032 Fee Schedule | Phase 1 | — | — |
+| LD-C0033 Client Execution Fee | Phase 1 | — | — |
+| LD-C0034 Client Clearing Fee | Phase 1 | — | — |
+| LD-C0035 Executing Broker Brokerage Charge | Phase 1 | — | — |
+| LD-C0036 Exchange Fee Charge | Phase 1 | — | — |
+| LD-C0037 CCP Fee Charge | Phase 1 | — | — |
+| LD-C0038 Commission | Phase 1 | — | — |
+| LD-C0039 Revenue | Phase 1 | — | — |
+| LD-C0040 Cost | Phase 1 | — | — |
+| LD-C0041 Execution Revenue | Phase 1 | — | — |
+| LD-C0042 Clearing Revenue | Phase 1 | — | — |
+| LD-C0043 Margin Requirement | Phase 1 | — | PFMI Principle 6 |
+| LD-C0044 Initial Margin Requirement | Phase 1 | — | EMIR Art. 41 |
+| LD-C0045 Variation Margin Requirement | Phase 1 | — | — |
+| LD-C0046 Margin Call | Phase 1 | — | — |
+| LD-C0047 Collateral | Phase 1 | — | Directive 2002/47/EC |
+| LD-C0048 Collateral Asset | Phase 1 | — | — |
+| LD-C0049 Collateral Movement | Phase 1 | — | — |
+| LD-C0050 Reconciliation | Phase 1 | — | — |
+| LD-C0051 Clearing Service | P1 | 02, 03, 04, 05, 06, 07, 08 | CCP rulebooks; EMIR Art. 14 and 15 (authorisation and its extension) |
+| LD-C0052 Service Offering | P1 | 05, 08 | FIBO products and services |
+| LD-C0053 Clearing Member Acceptance | P1 | 01, 02, 03, 05, 08 | FIXML allocation and claim flows; FpML clearing status; MiFIR Art. 29(2) and Delegated Regulation (EU) 2017/582; CFTC 1.73 and 1.74 |
+| LD-C0054 CCP Interposition | P1 | 02, 03, 06, 08 | PFMI Principle 1; CDM and FpML clearing events |
+| LD-C0055 Give-up Agreement | P1 | 01, 02, 08 | FIA International Uniform Brokerage Execution Services ("Give-Up") Agreement; a revised FIA standard was in public comment in 2026, version to verify |
+| LD-C0056 Client Clearing Agreement | P1 | 03, 02, 06, 08 | ISDA/FIA client cleared OTC derivatives addendum; FCM customer agreements (titles to verify) |
+| LD-C0057 Clearing Broker | P1 | 02, 05, 01, 08 | — (FCM is a contextual US alias) |
+| LD-C0058 Trading Venue Member | P1 | 01 | MiFID II "member or participant" (Art. 53 for regulated markets); FIX party roles |
+| LD-C0059 Market Access Arrangement | P1 | 05, 02, 03, 06, 01 | EMIR Art. 4(3); MiFIR Art. 30; Delegated Regulations (EU) 2017/2154 and 2017/2155; MiFID II Art. 4(1)(41); PFMI Principle 19 |
+| LD-C0060 Allocation Instruction | P1 | 01, 02 | FIX allocation instruction and allocation report messages; CFTC 1.35 bunched orders |
+| LD-C0061 Order Handling Channel | P1 (sponsor decision 2026-11-01) | 01, 05 | MiFID II Art. 4(1)(39), 4(1)(41), 17(5); Delegated Regulation (EU) 2017/589; FIX handling-instruction fields |
+| LD-C0062 Contract Specification | P1 | 07, 08, 01, 05 | FIX security definition; venue contract specifications |
+| LD-C0063 Rule Provision | P1 | 06, 05, 08, 02 | ELI for EU acts |
+| LD-C0064 Rule Change | P1 | 06, 08, 02, 05 | CFTC Part 40 rule submissions (instances) |
+| LD-C0065 Cut-off | P1 | 07, 08 | CCP and venue deadlines (instances) |
+| LD-C0066 Business Calendar | P1 | 07 | Venue, CCP and payment-system calendars (instances) |
+| LD-C0067 Regulatory Regime | P1 | 06, 05, 08 | ISO 3166 for jurisdictions |
+| LD-C0068 Regulatory Classification | P1 | 06 | EMIR Art. 2(8) and (9), 10, 25; CRR Art. 4(1)(88) |
+| LD-C0069 CCP Account | P1 | 02, 07, 04 | EMIR Art. 39; CFTC customer account classes |
+| LD-C0070 Margin Methodology | P1 | 04, 05 | PFMI Principle 6; EMIR Art. 41; Delegated Regulation (EU) 153/2013; CFTC 39.13 |
+| LD-C0071 Collateral Arrangement | P1 | 04, 08 | Directive 2002/47/EC; MiFID II Art. 16(10); ISDA credit support documentation as bilateral analogue; CDM collateral |
+| LD-C0072 Collateral Eligibility Schedule | P1 | 04 | EMIR Art. 46; Delegated Regulation (EU) 153/2013 annexes; CDM eligible collateral |
+| LD-C0073 Commercial Group | P1 | 05, 06 | Contrast with public legal-entity relationship data |
+| LD-C0074 Contribution | P1 (management revenue priority) | 05, 04, 06 | — |

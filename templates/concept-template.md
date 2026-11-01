@@ -12,7 +12,6 @@ Replace guidance with content. Use `To validate — question` or `Not applicable
 | Owning domain / applicable domains | Stewardship versus reuse. |
 | Subdomain | Business capability or family. |
 | Concept type | Choose an explicit proposed type. |
-| French label (`label_fr`) | Optional secondary label; English remains canonical. |
 | Synonyms / alternative terminology (`aliases`) | Mark exact, contextual or ambiguous; include scope and language. |
 | Common abbreviations | Expansion and scope. |
 | Related concepts | Concept IDs and nature of relatedness. |
