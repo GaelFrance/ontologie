@@ -148,8 +148,4 @@ Also touching this domain, answered elsewhere:
 
 These items are in the backlog. **Does a decision you need now depend on one of them?**
 
-- Clearing Submission
-- Position Transfer
 - Execution Method (block, EFRP)
-- Source Record
-- Reconciliation Break

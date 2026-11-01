@@ -156,7 +156,4 @@ Also touching this domain, answered elsewhere:
 
 These items are in the backlog. **Does a decision you need now depend on one of them?**
 
-- Fee Rebate
-- Activity Volume
-- Cash Collateral Interest
 - rebate, discount and waiver

@@ -148,8 +148,5 @@ Also touching this domain, answered elsewhere:
 
 These items are in the backlog. **Does a decision you need now depend on one of them?**
 
-- Source Record
-- Reconciliation Break
-- Expiry, Exercise and Assignment
 - unwind, termination and amendment
 - trade identifiers

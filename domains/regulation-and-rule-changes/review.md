@@ -14,7 +14,7 @@
 - **Regulatory Affairs:** Take one CCP circular, one exchange notice and one consultation (EU, UK, US). Can each be recorded as one or more rule changes, with a status and dates, against the provision or published specification it changes?
 - **Legal and Compliance:** Are regulatory classifications (qualifying CCP, FCM, client category) attached to the right entity, role, account or service, with a basis and a validity period?
 - **Listed Execution product owner:** Do venue rule changes (block thresholds, EFRP rules, direct electronic access and algorithm controls) fit the rule change concept?
-- **OTC Clearing product owner:** Should the clearing obligation be promoted from the backlog now?
+- **OTC Clearing product owner:** Does Regulatory Obligation describe the clearing obligation well enough: counterparty classes, product scope, phase-in dates and exemptions?
 - **Everyone:** for each concept in section 1, is the definition **correct**, **complete** and **worded the way your teams use it**? Write *OK*, *Change* (say what) or *Unsure*. Is a concept your area relies on **missing**, or one **unnecessary**? The [concept cards](concepts.md) give examples.
 - **Everyone:** for each open question in section 3, do you **agree with the proposed answer**? If not, what is the rule in practice?
 - How *our* firm works goes in the [questions for our firm](company-questions.md), never in the definitions. Mention internal terms or system names only in your reply, never in this repository.
@@ -133,7 +133,5 @@ Also touching this domain, answered elsewhere:
 
 These items are in the backlog. **Does a decision you need now depend on one of them?**
 
-- Regulatory Obligation (including the clearing obligation)
-- Change Notice
 - Regulatory Report
 - fact versus interpretation

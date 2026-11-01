@@ -122,10 +122,3 @@ Also touching this domain, answered elsewhere:
 | **9. Consultations and sign-off** — Consultations and draft rules are analysed as rule changes, with a mandatory status and a "not yet in force" flag. Readings flagged "interpretation required" are reviewed by Regulatory Affairs and business management first, with Legal and Compliance. Agent outputs are labelled "public-layer reading, not legal advice". | Rule Change carries a lifecycle status (consultation, adopted, in force, withdrawn); the reviewer roles are recorded as governance roles, not people. |
 | **10. Default meaning of "today" and "current"** — The clearing date of the relevant CCP, in that CCP's time zone, stated in every answer. | Date role "clearing date" is the default for operational questions; other date roles must be requested explicitly. Record time stays in the model for later audit needs. |
 | **16. Meaning changes** — The 13 proposed meaning changes are accepted as Draft: Party, Broker, Trading Venue, Allocation, Position, Commission, Variation Margin Requirement, Market Access Arrangement, Allocation Instruction, Rule Change, Cut-off, Regulatory Classification, CCP Account. | Definitions replaced in the catalogue; Commission keeps its resolution flag. Settlement Deadline, Firm Cut-off, Take-up Deadline and Standing Allocation Instruction no longer depend on a pending decision. |
-
-## 5. Not yet in the catalogue
-
-These items are in the backlog. **Does a decision you need now depend on one of them?**
-
-- Identifier Scheme
-- listed strategies and their legs

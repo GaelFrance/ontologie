@@ -180,8 +180,4 @@ Also touching this domain, answered elsewhere:
 
 These items are in the backlog. **Does a decision you need now depend on one of them?**
 
-- Porting
-- Position Transfer
 - Portfolio Compression
-- Default Fund Contribution
-- clearing tier (indirect clearing)
