@@ -4,6 +4,7 @@
 
 - New `governance/review-domains.md`: eight business review domains with owner role, reviewer roles, concept IDs and the question put to reviewers. Every concept belongs to at least one domain.
 - New generated pages in `domains/` (one per domain plus an index) built by `tools/build_domain_views.py` from the catalogue, relationships, ambiguity register, annotations and decision log. `--check` fails when a page is stale or a concept has no domain. No definition changed.
+- French labels removed from concept annotations, the concept template and the domain pages (sponsor request, 2026-11-01).
 
 ## 2026-11-01 — Expert review arbitration and sponsor answers
 

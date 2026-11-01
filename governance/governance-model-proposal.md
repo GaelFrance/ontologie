@@ -72,7 +72,7 @@ R = does the work, A = accountable (one per line), C = consulted, I = informed.
 | Change type | Business review | Approval |
 |---|---|---|
 | Typo, link, formatting | None | Ontology Lead |
-| New alias, French label, example | Subject reviewer informed | Ontology Lead |
+| New alias, example | Subject reviewer informed | Ontology Lead |
 | New concept or relationship | Subject reviewers | Domain owner |
 | Meaning change or retype | Subject reviewers + affected agent owners | Domain owner, sponsor if cross-module |
 | Ambiguity decision | Subject reviewers | Domain owner, or sponsor for scope |

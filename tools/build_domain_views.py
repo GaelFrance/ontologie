@@ -79,10 +79,7 @@ def load():
     ann = read("ontology/concept-annotations.md")
     labels, notes, context, aliases = {}, {}, {}, []
     for head, rows in tables(ann):
-        if "French label (proposed)" in head:
-            for r in rows:
-                labels[r["Concept"].split()[0]] = r["French label (proposed)"]
-        elif head[:2] == ["Concept", "Note"]:
+        if head[:2] == ["Concept", "Note"]:
             for r in rows:
                 notes[r["Concept"].split()[0]] = r["Note"]
         elif "Required context" in head:
@@ -115,8 +112,7 @@ def render(d, concepts, rels, amb_rows, answers, labels, notes, context, aliases
         "",
         "> **En bref (FR)** — Cette page rassemble tout ce qu'un relecteur de ce domaine doit lire : "
         "les définitions, les liens entre concepts, les ambiguïtés ouvertes avec la réponse proposée, "
-        "et les décisions déjà prises. Les définitions sont en anglais (langue de référence) ; le libellé "
-        "français est indiqué quand il existe. Le relecteur répond en langage courant, par écrit ou en réunion.",
+        "et les décisions déjà prises. Les définitions sont en anglais (langue de référence). Le relecteur répond en langage courant, par écrit ou en réunion.",
         "",
         f"**Owner role:** {d['Owner role']}  ",
         f"**Reviewer roles:** {d['Reviewer roles']}  ",
@@ -132,13 +128,13 @@ def render(d, concepts, rels, amb_rows, answers, labels, notes, context, aliases
         "",
         "## Concepts",
         "",
-        "| ID | Name | French label | Type | Definition |",
-        "|---|---|---|---|---|",
+        "| ID | Name | Type | Definition |",
+        "|---|---|---|---|",
     ]
     for i in ids:
         c = concepts[i]
         flag = " ⚠️ *meaning changed 2026-11, accepted as Draft*" if i in MEANING_CHANGED else ""
-        out.append(f"| {i} | **{c['Canonical English name']}** | {labels.get(i, '')} | "
+        out.append(f"| {i} | **{c['Canonical English name']}** | "
                    f"{c['Proposed type']} | {c['Working business definition']}{flag} |")
     extra = [i for i in ids if i in notes or i in context]
     if extra:
@@ -178,7 +174,7 @@ def render(d, concepts, rels, amb_rows, answers, labels, notes, context, aliases
             "- Definitions: [`ontology/foundation.md`](../ontology/foundation.md)",
             "- Relationships: [`relationships/relationships.md`](../relationships/relationships.md)",
             "- Ambiguities and proposed answers: [`governance/ambiguity-register.md`](../governance/ambiguity-register.md)",
-            "- Notes, aliases, French labels: [`ontology/concept-annotations.md`](../ontology/concept-annotations.md)",
+            "- Notes and aliases: [`ontology/concept-annotations.md`](../ontology/concept-annotations.md)",
             "- Decisions: [`governance/decision-log.md`](../governance/decision-log.md)",
             "- This domain's scope: [`governance/review-domains.md`](../governance/review-domains.md)", ""]
     return "\n".join(out)

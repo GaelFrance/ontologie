@@ -16,7 +16,7 @@ The ontology is independent of any LLM, database, application, API or MCP implem
 
 1. [Scope and phase boundaries](docs/scope.md)
 2. [Architecture and modelling choices](docs/architecture.md)
-3. [Concept catalogue (74 concepts)](ontology/foundation.md) and [concept annotations](ontology/concept-annotations.md) (aliases, specialisations, required context, French labels)
+3. [Concept catalogue (74 concepts)](ontology/foundation.md) and [concept annotations](ontology/concept-annotations.md) (aliases, specialisations, required context)
 4. [Relationships](relationships/relationships.md)
 5. [Taxonomy design](taxonomies/README.md)
 6. [Ambiguities, affected concepts and proposed answers](governance/ambiguity-register.md)
