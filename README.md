@@ -1,42 +1,55 @@
 # Derivatives Business Ontology
 
-A governed business foundation for **Listed Derivatives Execution, ETD Clearing and OTC Client Clearing**.
+The shared business vocabulary for **listed derivatives execution, ETD clearing and OTC client clearing**: what each business word means, how the ideas connect, and which questions are still open. People use it to agree on meanings; AI agents use it to answer questions without guessing.
 
-**Stage: Phase 1 foundation approved on 2026-09-20; Phase 2 in progress after the 2026-11 expert review. Individual concept definitions remain Draft.**
+**Stage:** Phase 2 in progress. 222 concepts in ten business domains (74 foundation concepts and 148 more detailed ones added in the November 2026 domain review). Every definition is **Draft** until its domain owner approves it.
 
-The ontology is independent of any LLM, database, application, API or MCP implementation. Canonical names and repository artefacts are in English. Markdown is the canonical format, written for business readers. Any machine-readable form (JSON or YAML) is generated automatically from the Markdown and is never edited or reviewed by hand (sponsor decision, 2026-11-01).
+## Start here
 
-## Start here: review by domain
+| If you want to… | Go to |
+|---|---|
+| Understand a business area | **[Domains](domains/README.md)**: one folder per area, starting with an overview in plain words |
+| Look up a word | **[Glossary](glossary.md)**: every concept A to Z, plus the informal words people use |
+| Review definitions as an owner or reviewer | The **review sheet** in your domain's folder |
+| Explain how our firm works | The **questions for our firm** in each domain's folder (answers stay outside this repository) |
+| See what was decided | [Decision log](governance/decision-log.md) and [open questions for the sponsor](governance/open-questions-for-owner.md) |
 
-**[One page per business domain](domains/README.md)**: parties and roles; instruments, venues and calendars; service offering and market access; execution; clearing give-up and acceptance; clearing services and accounts; margin and collateral; fees and revenue; regulation; post-trade operations. Each concept has exactly one domain whose owner approves it, and may be shown on other pages for comment. Each page gives the questions for each reviewer role, the definitions with a verdict column, open ambiguities with proposed answers, decisions taken and the backlog items the domain may need. Give each reviewer the page of their domain; start with the wave 1 pages.
+## The ten domains
 
+| Domain | In one line |
+|---|---|
+| [Parties, roles, clients and accounts](domains/parties-and-roles/README.md) | Who is involved, in which role, toward whom, and in which account |
+| [Instruments, venues and calendars](domains/instruments-venues-and-calendars/README.md) | What is traded, where, and on which dates |
+| [Service offering and market access](domains/service-offering-and-market-access/README.md) | What we sell and how clients reach venues and clearing houses |
+| [Listed derivatives execution](domains/execution/README.md) | From the client's order to the allocated trade |
+| [Clearing: give-up and acceptance](domains/clearing-give-up-and-acceptance/README.md) | Handing a trade to the clearing broker and the clearing house accepting it |
+| [Clearing: services, accounts and client clearing](domains/clearing-services-and-accounts/README.md) | Clearing services, memberships, client clearing models, accounts and positions |
+| [Margin and collateral](domains/margin-and-collateral/README.md) | What must be posted, called and held, at the clearing house and with clients |
+| [Fees, revenue and contribution](domains/fees-revenue-and-contribution/README.md) | What we charge, what we pay away and what a client brings in |
+| [Regulation and rule changes](domains/regulation-and-rule-changes/README.md) | Rules, regimes and the changes announced by regulators, venues and clearing houses |
+| [Post-trade operations](domains/post-trade-operations/README.md) | Lifecycle events, settlement, deadlines, reconciliations and breaks |
 
-## Review the foundation
+Each domain folder holds the same four pages: **overview** (plain words), **concepts** (one card per concept with a definition, an example and what not to confuse it with), **review sheet** (what each reviewer is asked) and **questions for our firm**.
 
-1. [Scope and phase boundaries](docs/scope.md)
-2. [Architecture and modelling choices](docs/architecture.md)
-3. [Concept catalogue (74 concepts)](ontology/foundation.md) and [concept annotations](ontology/concept-annotations.md) (aliases, specialisations, required context)
-4. [Relationships](relationships/relationships.md)
-5. [Taxonomy design](taxonomies/README.md)
-6. [Ambiguities, affected concepts and proposed answers](governance/ambiguity-register.md)
-7. [Open questions for the business owner](governance/open-questions-for-owner.md)
-8. [Concept template](templates/concept-template.md)
-9. [Exact repository structure](docs/repository-structure.md)
+## How it is organised
 
-## Decisions and reviews
+- **`domains/`** is what people read. The overview and the questions for our firm are written by hand; the concept cards, review sheets, domain pages and the glossary are generated from the registers by `tools/build_domain_views.py`, so they always agree.
+- **`ontology/`, `relationships/`, `governance/`** hold the registers: the catalogue of concepts, their annotations, the connections between them, the open questions on meaning and the decisions. They are the single source of truth and are maintained by the Ontology Lead; reviewers do not need to open them. See [ontology/README.md](ontology/README.md).
+- **`.claude/skills/`** holds one expert skill per domain, used by AI agents that review or use this ontology.
+- **`docs/`** explains the principles, scope, modelling rules and governance.
 
-- [Phase 1 sponsor review](governance/phase-1-review.md) and [decision log](governance/decision-log.md) (sponsor answers of 2026-11-01)
-- [2026-11 expert review and arbitration](governance/reviews/2026-11-expert-review/ARBITRATION.md)
+Concept references such as *LD-C0022* exist so that tools and agents can point to a concept without ambiguity. Human pages show names first and keep references in small print.
 
-## Maintenance
+## Rules that always apply
 
-- [Principles](docs/principles.md), [modelling guidelines](docs/modelling-guidelines.md) and [governance](docs/governance.md)
-- [Contribution process](CONTRIBUTING.md) and [change history](CHANGELOG.md)
-- [Semantic contracts](semantic-layer/README.md) and [future mapping methodology](mappings/README.md)
-- [Questions the ontology must eventually support](examples/natural-language-queries.md)
+- **Business meanings only.** No firm-specific facts, client names, internal system names or data. How our firm works is captured through the questions for our firm, and the answers live in the internal workspace.
+- **Phase gates.** Phase 2 (concepts) is authorised. Metric formulas, detailed taxonomies, links to source systems and worked question-to-answer demonstrations come in later phases.
+- **Markdown is the reference.** Machine-readable exports are generated, never edited by hand. English only.
+- **Governance.** Domain owners approve meanings in their domain; the sponsor arbitrates across domains; the Ontology Lead maintains the registers. See the [governance model](governance/governance-model-proposal.md).
 
-## Approval boundary
+## More
 
-The sponsor approved the foundation and development sequence; see the [review decision](governance/phase-1-review.md). Phase 2 may develop Common, Execution, ETD Clearing and OTC Clearing in that order. Individual definitions remain Draft.
-
-Revenue modelling now prioritises business performance and client contribution analysis, with revenue distinguished from contribution and profitability after costs; revenue is attributed per service (sponsor decision 2026-11-01). Commission and Transaction remain unresolved. No physical mappings, production data, executable metrics or detailed domain expansion are included in this foundation.
+- [Scope](docs/scope.md), [architecture](docs/architecture.md), [principles](docs/principles.md), [modelling guidelines](docs/modelling-guidelines.md), [governance](docs/governance.md)
+- Reviews: [2026-11 expert review](governance/reviews/2026-11-expert-review/ARBITRATION.md), [classification review](governance/reviews/2026-11-classification-review/ARBITRATION.md), [level-2 domain review](governance/reviews/2026-11-level2-domain-review/SUPERVISION.md)
+- [Taxonomy design](taxonomies/README.md), [questions the ontology must eventually support](examples/natural-language-queries.md), [future mapping method](mappings/README.md)
+- [How to contribute](CONTRIBUTING.md) and [change history](CHANGELOG.md)
