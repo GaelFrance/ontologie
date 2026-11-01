@@ -1,5 +1,10 @@
 # Change log
 
+## 2026-11-01 — Review by domain
+
+- New `governance/review-domains.md`: eight business review domains with owner role, reviewer roles, concept IDs and the question put to reviewers. Every concept belongs to at least one domain.
+- New generated pages in `domains/` (one per domain plus an index) built by `tools/build_domain_views.py` from the catalogue, relationships, ambiguity register, annotations and decision log. `--check` fails when a page is stale or a concept has no domain. No definition changed.
+
 ## 2026-11-01 — Expert review arbitration and sponsor answers
 
 Evidence: eight specialist reviews and their [arbitration](governance/reviews/2026-11-expert-review/ARBITRATION.md); sponsor answers recorded in the [decision log](governance/decision-log.md). Everything remains Draft; only LD-A0010 is decided.

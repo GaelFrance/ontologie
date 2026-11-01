@@ -6,6 +6,12 @@ A governed business foundation for **Listed Derivatives Execution, ETD Clearing 
 
 The ontology is independent of any LLM, database, application, API or MCP implementation. Canonical names and repository artefacts are in English. Markdown is the canonical format, written for business readers. Any machine-readable form (JSON or YAML) is generated automatically from the Markdown and is never edited or reviewed by hand (sponsor decision, 2026-11-01).
 
+## Start here: review by domain
+
+**[One page per business domain](domains/README.md)**: parties and roles, products and reference data, execution, clearing, margin and collateral, fees and revenue, regulation, post-trade operations. Each page gathers the definitions, connections, open ambiguities with proposed answers, decisions taken, and what the reviewer is asked. Give each reviewer the page of their domain.
+
+> **En bref (FR)** — Pour relire l'ontologie, commencer par le dossier [`domains/`](domains/README.md) : une page par domaine métier, avec les définitions et ce qu'il faut vérifier.
+
 ## Review the foundation
 
 1. [Scope and phase boundaries](docs/scope.md)

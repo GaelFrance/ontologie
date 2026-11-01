@@ -64,7 +64,7 @@ R = does the work, A = accountable (one per line), C = consulted, I = informed.
 ## 5. Workflow
 
 1. **Propose.** Anyone (including an AI agent) opens a change with affected IDs, rationale and sources. The Ontology Lead checks structure and runs the automatic checks.
-2. **Review pack.** For each batch the Ontology Lead produces a readable pack: concept, old and new wording, why, examples, questions. Reviewers can answer in the pack, by e-mail or in a meeting; GitHub is optional.
+2. **Review pack.** The [domain pages](../domains/README.md) are the standing review packs, regenerated with `tools/build_domain_views.py`. For each batch the Ontology Lead produces a readable pack: concept, old and new wording, why, examples, questions. Reviewers can answer in the pack, by e-mail or in a meeting; GitHub is optional.
 3. **Reviewed.** Subject reviewers give comments within 10 business days. The Ontology Lead records findings; status becomes Reviewed with remaining conditions.
 4. **Approved.** The domain owner approves (or the sponsor, across modules). Record approver role, date and evidence in the decision log.
 5. **Release.** Quarterly, or ad hoc for regulatory urgency: tag a version, publish the change log, move the hub's ontology pin, re-run evaluation sets.
