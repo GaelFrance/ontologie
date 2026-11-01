@@ -18,7 +18,7 @@ Status: Proposal for sponsor decision (requested 2026-11-01). Roles only; no per
 | **Sponsor / arbiter** | Scope, priorities, phase gates, cross-domain conflicts, final say when owners disagree | Head of Product Development, execution & clearing | 1 h / month + escalations |
 | **Ontology board** | Monthly review of open questions, conflicts and the release plan | Sponsor, domain owners, Ontology Lead; others by agenda | 45 min / month |
 | **Ontology Lead** | IDs, consistency, change log, releases, checks, turning comments into changes, preparing review packs | Data architect or business analyst with modelling skills | 1–2 days / week in Phase 2 |
-| **Domain owner** (one per module) | Approves meanings in their module | Product owner of the module | 2 h / month |
+| **Domain owner** (one per module or cross-cutting domain) | Approves meanings in their domain | Product owner of the module; for the Revenue domain, the Revenue owner | 2 h / month |
 | **Subject reviewer** | Reviews concepts touching their subject; recommends, does not approve | Expert from the functions below | On request, per review pack |
 | **Agent owner** (one per pilot agent) | States what the agent must answer; validates evaluation questions and expected answers | Business user of the agent | 2 h / month |
 
@@ -34,8 +34,10 @@ Ordered by need for the pilot agents. Wave 1 is required before any definition c
 | 4 | Regulatory Affairs | Regimes, rule changes, consultations, regulatory classifications | LD-C0063, LD-C0064, LD-C0067, LD-C0068 | 1 |
 | 5 | Legal | Legal effect of clearing, interposition, client clearing models, agreements | LD-C0024, LD-C0054, LD-C0012 | 1 |
 | 6 | Listed Execution product owner (domain owner) | Orders, executions, handling channel, average pricing, venue access | LD-C0016, LD-C0017, LD-C0021, LD-C0061 | 2 |
-| 7 | Business Finance / Product Control | Fees, management revenue, contribution, pass-through | LD-C0031 to LD-C0042, LD-C0074 | 2 |
-| 8 | Margin & Collateral (Risk or Collateral Management) | Margin, collateral, default fund, segregation | LD-C0043 to LD-C0049, LD-C0011 | 2 |
+| 7 | **Revenue domain owner** (domain owner, sponsor decision 2026-11-01) | Management revenue, fees, pricing form, pass-through, charge basis, contribution after costs; answers open questions 9 and 10 | LD-C0031 to LD-C0042, LD-C0074 | 2 |
+| 7a | Collateral Manager, as owner of the **collateral revenue** sub-domain | Interest margin on client cash, price alignment, fees on non-cash collateral, and whether they count in clearing revenue | LD-C0042, LD-C0047, LD-C0048 | 2 |
+| 7b | Business Finance / Product Control (subject reviewer) | Consistency with management reporting | LD-C0039 to LD-C0042, LD-C0074 | 2 |
+| 8 | Margin & Collateral (Collateral Manager, with Risk) | Margin, collateral, default fund, segregation; answers open question 11 | LD-C0043 to LD-C0049, LD-C0011 | 2 |
 | 9 | Compliance | Best execution, reporting, client classification, conduct | Regulatory concepts, LD-C0004 | 2 |
 | 10 | OTC Clearing product owner (domain owner) | OTC submission, CCP registration, porting, compression | OTC concepts, LD-C0014, LD-C0018 | 3 |
 | 11 | Reference & Client Data | Identifiers, instruments, accounts, client hierarchies | LD-C0002, LD-C0010, LD-C0014, LD-C0062 | 3 |

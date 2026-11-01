@@ -72,4 +72,12 @@ Evidence: sponsor choice in the project conversation, 2026-11-01.
 |---|---|---|---|
 | 14. Ontology Lead | The role previously called "semantic steward" is named **Ontology Lead**. The sponsor holds it during Phase 2, in addition to arbitration; the two should be separated once the board operates. | Governance documents renamed; the Ontology Lead prepares changes, review packs and releases but does not approve meanings. | All |
 
+## Sponsor decision — 2026-11-01 (Revenue domain)
+
+Evidence: sponsor answer in the project conversation, 2026-11-01 (open question 9).
+
+| Point | Decision | Consequence in the ontology | Affected IDs |
+|---|---|---|---|
+| 15. Revenue domain | Revenue is a governance domain with its own owner, who answers the revenue questions. Collateral revenue is a sub-domain owned by the Collateral Manager. | Open questions 9 and 10 are assigned to the Revenue owner (collateral income part of 9 to the Collateral Manager); question 11 to the Collateral Manager with Risk. Defaults stay proposals until they answer. | LD-C0031 to LD-C0042, LD-C0074, LD-A0001, LD-A0002, LD-A0014, LD-A0033 |
+
 Apart from LD-A0010 (decision 5), these answers do not resolve any ambiguity entry, approve any definition, formula or cost perimeter, or change the deferral of Commission and Transaction.
