@@ -13,4 +13,12 @@ Evidence: sponsor answer in the project conversation, 2026-11-01, in reply to th
 | 3. Third-party execution | In scope: executions routed through another venue member where the firm is not a member. Memberships are never inferred. | Trading Venue Member (LD-C0058) kept distinct from Executing Broker (LD-C0006); third-party access is an access model of LD-C0059. | LD-C0006, LD-C0058, LD-C0059, LD-A0035 |
 | 4. Average pricing | Both venue or CCP average-price facilities and broker-side averaging are in scope. The treatment of rounding residuals is not known by the sponsor. | LD-C0021 qualifier "averaging performed by" takes both values. Residuals remain an open question for Finance and Operations; proposed default: separately identifiable amounts. | LD-C0021 |
 
-These answers do not resolve any ambiguity entry, approve any definition, formula or cost perimeter, or change the deferral of Commission and Transaction.
+## Sponsor decision — 2026-11-01 (give-up completion)
+
+Evidence: sponsor accepted the suggested default for open question 1 ("ok défaut") in the project conversation, 2026-11-01.
+
+| Point | Decision | Consequence in the ontology | Affected IDs |
+|---|---|---|---|
+| 5. Give-up completion and authoritative record | A give-up is complete when the full allocated quantity is registered to the receiving clearing member's CCP account, per the CCP record. Partial take-ups are reported separately. Member acceptance and CCP registration times are both kept. When internal and CCP records disagree, the CCP record is authoritative for completion and the discrepancy is reported as a break, never silently resolved. | LD-A0010 decided for the default answer of AG-004; the definitions of LD-C0022, LD-C0023 and LD-C0053 remain Draft. | LD-C0022, LD-C0023, LD-C0053, LD-A0010, LD-A0034 |
+
+Apart from LD-A0010 (decision 5), these answers do not resolve any ambiguity entry, approve any definition, formula or cost perimeter, or change the deferral of Commission and Transaction.
