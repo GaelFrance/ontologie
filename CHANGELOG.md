@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-- Review sheets: removed from "Not yet in the catalogue" the items that level 2 added as concepts (for example Clearing Submission, Position Transfer, Reconciliation Break, Listed Strategy, Indirect Clearing Arrangement, Expiry, Exercise and Assignment); the clearing-obligation question for the OTC Clearing product owner now points to Regulatory Obligation. Domain pages no longer drop a relationship reference that is part of a sentence ("linked by ..."): they name the kind of link; two ambiguity-register sentences reworded so they read without the reference. No meaning changed.
+- Review sheets: the margin page no longer asks whether to promote concepts that level 2 already added; removed from "Not yet in the catalogue" the items that level 2 added as concepts (for example Clearing Submission, Position Transfer, Reconciliation Break, Listed Strategy, Indirect Clearing Arrangement, Expiry, Exercise and Assignment); the clearing-obligation question for the OTC Clearing product owner now points to Regulatory Obligation. Domain pages no longer drop a relationship reference that is part of a sentence ("linked by ..."): they name the kind of link; two ambiguity-register sentences reworded so they read without the reference. No meaning changed.
 
 ## Release v0.2.0 — 2026-11-01
 

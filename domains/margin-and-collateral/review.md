@@ -15,7 +15,7 @@
 - **Risk:** Are the methodology and the eligibility schedule versioned the way CCP circulars change them?
 - **ETD and OTC Clearing product owners:** Is the variation margin treatment (settled-to-market or collateralised-to-market) recorded per clearing service and account type? Do positions and collateral port as separate legs?
 - **ETD post-trade operations lead:** Which margin call deadlines must an operations agent know?
-- **All:** Should Default Fund Contribution, Margin Excess or Shortfall, or Cash Collateral Interest be promoted now?
+- **All:** Default Fund Contribution, Margin Excess or Shortfall and Cash Collateral Interest are now concepts: do their definitions fit how your teams use these words?
 - **Everyone:** for each concept in section 1, is the definition **correct**, **complete** and **worded the way your teams use it**? Write *OK*, *Change* (say what) or *Unsure*. Is a concept your area relies on **missing**, or one **unnecessary**? The [concept cards](concepts.md) give examples.
 - **Everyone:** for each open question in section 3, do you **agree with the proposed answer**? If not, what is the rule in practice?
 - How *our* firm works goes in the [questions for our firm](company-questions.md), never in the definitions. Mention internal terms or system names only in your reply, never in this repository.

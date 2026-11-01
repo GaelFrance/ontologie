@@ -80,7 +80,7 @@ Each reviewer reads only the lines for their role. The generic checks (is each d
 | margin-and-collateral | Risk | Are the methodology and the eligibility schedule versioned the way CCP circulars change them? |
 | margin-and-collateral | ETD and OTC Clearing product owners | Is the variation margin treatment (settled-to-market or collateralised-to-market) recorded per clearing service and account type? Do positions and collateral port as separate legs? |
 | margin-and-collateral | ETD post-trade operations lead | Which margin call deadlines must an operations agent know? |
-| margin-and-collateral | All | Should Default Fund Contribution, Margin Excess or Shortfall, or Cash Collateral Interest be promoted now? |
+| margin-and-collateral | All | Default Fund Contribution, Margin Excess or Shortfall and Cash Collateral Interest are now concepts: do their definitions fit how your teams use these words? |
 | fees-revenue-and-contribution | Revenue domain owner | Can these concepts answer "what does this client or commercial group bring us, per service and per channel" without mixing fees charged, pass-through venue and CCP fees, brokerage paid, cash received and revenue? Answer open questions 9 (pricing form, gross or net pass-through, charge basis) and 10 (first cost perimeter). |
 | fees-revenue-and-contribution | Collateral Manager | Is collateral income (interest on client cash, price alignment, non-cash collateral fees) a separate revenue stream, and does it count in clearing revenue? |
 | fees-revenue-and-contribution | Business Finance | Are the meanings consistent with management reporting? With Operations: how are average-pricing residuals treated (open question 4)? |
