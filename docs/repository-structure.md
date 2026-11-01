@@ -1,6 +1,6 @@
 # Repository structure
 
-This is the exact Markdown-first structure, updated after the 2026-11 expert review. Empty future schemas, metric implementations and YAML taxonomy files are deliberately deferred.
+This is the exact Markdown-first structure, updated after the 2026-11 expert review. Empty future schemas and metric implementations are deliberately deferred; machine-readable exports are generated from the Markdown, not stored as canonical files.
 
 ```text
 .github/pull_request_template.md

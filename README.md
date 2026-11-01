@@ -4,7 +4,7 @@ A governed business foundation for **Listed Derivatives Execution, ETD Clearing 
 
 **Stage: Phase 1 foundation approved on 2026-09-20; Phase 2 in progress after the 2026-11 expert review. Individual concept definitions remain Draft.**
 
-The ontology is independent of any LLM, database, application, API or MCP implementation. Canonical names and repository artefacts are in English. Markdown is the current canonical format; YAML is deferred until the business model is validated.
+The ontology is independent of any LLM, database, application, API or MCP implementation. Canonical names and repository artefacts are in English. Markdown is the canonical format, written for business readers. Any machine-readable form (JSON or YAML) is generated automatically from the Markdown and is never edited or reviewed by hand (sponsor decision, 2026-11-01).
 
 ## Review the foundation
 

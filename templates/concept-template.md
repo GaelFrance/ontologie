@@ -1,6 +1,6 @@
 # Concept template
 
-Template only. Full concept completion is Phase 2 work. Field names and the key names in backticks are fixed so that a later YAML migration can map them one to one.
+Template only. Full concept completion is Phase 2 work. Field names and the key names in backticks are fixed so that tooling can generate a machine-readable export from the Markdown; the Markdown remains canonical.
 
 Replace guidance with content. Use `To validate — question` or `Not applicable — reason` explicitly.
 
@@ -12,7 +12,7 @@ Replace guidance with content. Use `To validate — question` or `Not applicable
 | Owning domain / applicable domains | Stewardship versus reuse. |
 | Subdomain | Business capability or family. |
 | Concept type | Choose an explicit proposed type. |
-| French label (`label_fr`) | Secondary label; English remains canonical. |
+| French label (`label_fr`) | Optional secondary label; English remains canonical. |
 | Synonyms / alternative terminology (`aliases`) | Mark exact, contextual or ambiguous; include scope and language. |
 | Common abbreviations | Expansion and scope. |
 | Related concepts | Concept IDs and nature of relatedness. |

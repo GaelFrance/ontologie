@@ -135,7 +135,7 @@ Notes clarify use; they do not change the meanings in the catalogue. Review numb
 
 ## Labels, priority and alignment
 
-French labels are proposed secondary labels; English remains canonical (open question on making them mandatory). Priority is given for concepts added by the 2026-11 review.
+French labels are optional secondary labels; English remains canonical (sponsor decision, 2026-11-01). Priority is given for concepts added by the 2026-11 review.
 
 | Concept | French label (proposed) | Priority | Source reviews | Standard alignment (to verify) |
 |---|---|---|---|---|

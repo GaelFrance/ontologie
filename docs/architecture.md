@@ -37,7 +37,7 @@ Trading Venue is distinct from its legal operator. CCP and Clearing Member are r
 
 ## Formats
 
-Markdown is canonical during foundation review. Stable IDs and consistent tables/templates make migration possible without claiming that free text is already executable logic. If YAML is later approved, introduce schemas and validators, preserve IDs, and generate human-readable concept pages from that single source. Do not maintain two independent canonical definitions.
+Markdown is canonical during foundation review. Stable IDs and consistent tables/templates make migration possible without claiming that free text is already executable logic. Sponsor decision (2026-11-01): Markdown stays canonical because business reviewers must be able to read it; machine-readable exports (JSON or YAML) for agents and checks are generated from the Markdown by tooling and are never a second source of truth. Do not maintain two independent canonical definitions.
 
 SKOS/OWL exports may be evaluated later; no graph database or ontology runtime is selected now.
 
