@@ -7,7 +7,8 @@ Sources (canonical, never edited by this script):
 Output (generated, do not edit by hand): domains/README.md and domains/<page>.md
 
 Usage: python3 tools/build_domain_views.py [--check]
-  --check  exit 1 if the generated pages are out of date or a concept has no domain.
+  --check  exit 1 if the generated pages are out of date, or if a concept does not have
+           exactly one primary domain.
 """
 import re
 import sys
@@ -45,13 +46,15 @@ def tables(text):
 
 
 def expand(spec):
+    """Expand 'LD-C0001, LD-C0003 to LD-C0005' into an ordered list of IDs."""
     ids = []
-    for part in re.split(r",\s*", spec):
-        m = re.match(r"(LD-C)(\d{4}) to LD-C(\d{4})$", part.strip())
+    for part in re.split(r",\s*", spec or ""):
+        part = part.strip()
+        m = re.match(r"LD-C(\d{4}) to LD-C(\d{4})$", part)
         if m:
-            ids += [f"LD-C{n:04d}" for n in range(int(m.group(2)), int(m.group(3)) + 1)]
-        elif re.match(r"^LD-C\d{4}$", part.strip()):
-            ids.append(part.strip())
+            ids += [f"LD-C{n:04d}" for n in range(int(m.group(1)), int(m.group(2)) + 1)]
+        elif re.match(r"^LD-C\d{4}$", part):
+            ids.append(part)
     return ids
 
 
@@ -60,115 +63,162 @@ def read(path):
 
 
 def load():
-    concepts = {}
+    data = {"concepts": {}, "rels": [], "amb": [], "answers": {}, "notes": {}, "context": {},
+            "aliases": [], "decisions": [], "domains": [], "content": {}, "questions": {}}
     for head, rows in tables(read("ontology/foundation.md")):
         if "Working business definition" in head:
             for r in rows:
-                concepts[r["ID"]] = r
-    rels = []
+                data["concepts"][r["ID"]] = r
     for head, rows in tables(read("relationships/relationships.md")):
         if "Relation" in head:
-            rels += rows
-    amb, amb_rows = read("governance/ambiguity-register.md"), []
+            data["rels"] += rows
+    amb = read("governance/ambiguity-register.md")
     for head, rows in tables(amb):
         if "Affected IDs" in head:
-            amb_rows += rows
-    answers = {}
+            data["amb"] += rows
     for m in re.finditer(r"^### (LD-A\d{4})[^\n]*\n(.*?)(?=^### |\Z)", amb, re.M | re.S):
-        answers[m.group(1)] = " ".join(m.group(2).split())
-    ann = read("ontology/concept-annotations.md")
-    labels, notes, context, aliases = {}, {}, {}, []
-    for head, rows in tables(ann):
+        data["answers"][m.group(1)] = " ".join(m.group(2).split())
+    for head, rows in tables(read("ontology/concept-annotations.md")):
         if head[:2] == ["Concept", "Note"]:
             for r in rows:
-                notes[r["Concept"].split()[0]] = r["Note"]
+                data["notes"][r["Concept"].split()[0]] = r["Note"]
         elif "Required context" in head:
             for r in rows:
-                context[r["Concept"].split()[0]] = r["Required context"]
+                data["context"][r["Concept"].split()[0]] = r["Required context"]
         elif "Resolves to" in head:
-            aliases += rows
-    decisions = []
+            data["aliases"] += rows
     for head, rows in tables(read("governance/decision-log.md")):
         if "Affected IDs" in head:
-            decisions += rows
-    domains = []
+            data["decisions"] += rows
     for head, rows in tables(read("governance/review-domains.md")):
-        if "Concept IDs" in head:
+        if "Primary concepts" in head:
             for r in rows:
-                r["ids"] = expand(r["Concept IDs"])
-                domains.append(r)
-    return concepts, rels, amb_rows, answers, labels, notes, context, aliases, decisions, domains
+                r["primary"] = expand(r["Primary concepts"])
+                r["shown"] = expand(r.get("Also shown", ""))
+                data["domains"].append(r)
+        elif "Sequence" in head:
+            for r in rows:
+                data["content"][r["Page"]] = r
+        elif "Question" in head and "Role" in head:
+            for r in rows:
+                data["questions"].setdefault(r["Page"], []).append(r)
+    return data
 
 
-def render(d, concepts, rels, amb_rows, answers, labels, notes, context, aliases, decisions):
-    ids = [i for i in d["ids"] if i in concepts]
-    idset = set(ids)
+def concept_ids(text):
+    return set(re.findall(r"LD-C\d{4}", text or ""))
+
+
+def value(text):
+    return "" if text in (None, "", "—") else text
+
+
+def render(d, data, owner_of, pages_by_id):
+    concepts = data["concepts"]
+    primary = [i for i in d["primary"] if i in concepts]
+    shown = [i for i in d["shown"] if i in concepts]
+    pset, allset = set(primary), set(primary) | set(shown)
+    content = data["content"].get(d["Page"], {})
     name = lambda i: f"{i} {concepts[i]['Canonical English name']}" if i in concepts else i
+    link = lambda p: f"[{p['Domain']}]({p['Page']}.md)"
     out = [
         f"# {d['Domain']}",
         "",
         "> Generated by `tools/build_domain_views.py` from the catalogue and registers. "
-        "Do not edit this page: propose changes to the source files (see the end of the page).",
+        "Do not edit this page: propose changes to the source files listed at the end. "
+        "Reviewers answer in plain language, in writing or in a meeting; GitHub is optional.",
         "",
-        "> **En bref (FR)** — Cette page rassemble tout ce qu'un relecteur de ce domaine doit lire : "
-        "les définitions, les liens entre concepts, les ambiguïtés ouvertes avec la réponse proposée, "
-        "et les décisions déjà prises. Les définitions sont en anglais (langue de référence). Le relecteur répond en langage courant, par écrit ou en réunion.",
-        "",
-        f"**Owner role:** {d['Owner role']}  ",
+        f"**Owner role (approves the concepts in section 1):** {d['Owner role']}  ",
         f"**Reviewer roles:** {d['Reviewer roles']}  ",
-        f"**Concepts:** {len(ids)}, all Draft",
-        "",
-        "## What you are asked to review",
-        "",
-        f"1. {d['What the reviewer is asked']}",
-        "2. For each concept below: is the definition **correct**, **complete** and **worded the way your teams use it**? Mark each one *OK*, *Change* (say what) or *Unsure*.",
-        "3. Is a concept your area relies on **missing**? Is any concept **unnecessary**?",
-        "4. For each open ambiguity: do you **agree with the proposed answer**? If not, what is the rule in practice?",
-        "5. Mention internal terms or system names only in your reply to the Ontology Lead, never in this repository.",
-        "",
-        "## Concepts",
-        "",
-        "| ID | Name | Type | Definition |",
-        "|---|---|---|---|",
+        f"**Review wave:** {d['Wave']}  ",
+        f"**Concepts:** {len(primary)} to approve, {len(shown)} shown for context, all Draft  ",
     ]
-    for i in ids:
+    if value(content.get("Why it matters")):
+        out.append(f"**Why it matters:** {content['Why it matters']}")
+    if value(content.get("Scope note")):
+        out += ["", f"**Scope:** {content['Scope note']}"]
+    if value(content.get("Sequence")):
+        out += ["", "**How it flows (generic):** " + content["Sequence"]]
+    out += ["", "## What you are asked to review", ""]
+    for q in data["questions"].get(d["Page"], []):
+        out.append(f"- **{q['Role']}:** {q['Question']}")
+    out += [
+        "- **Everyone:** for each concept in section 1, is the definition **correct**, **complete** and "
+        "**worded the way your teams use it**? Write *OK*, *Change* (say what) or *Unsure* in the last column. "
+        "Is a concept your area relies on **missing**, or one **unnecessary**?",
+        "- **Everyone:** for each ambiguity in section 3, do you **agree with the proposed answer**? "
+        "If not, what is the rule in practice?",
+        "- Mention internal terms or system names only in your reply to the Ontology Lead, never in this repository.",
+        "",
+        "## 1. Concepts you approve",
+        "",
+        "| ID | Name | Type | Definition | Your verdict |",
+        "|---|---|---|---|---|",
+    ]
+    for i in primary:
         c = concepts[i]
         flag = " ⚠️ *meaning changed 2026-11, accepted as Draft*" if i in MEANING_CHANGED else ""
         out.append(f"| {i} | **{c['Canonical English name']}** | "
-                   f"{c['Proposed type']} | {c['Working business definition']}{flag} |")
-    extra = [i for i in ids if i in notes or i in context]
+                   f"{c['Proposed type']} | {c['Working business definition']}{flag} | |")
+    if shown:
+        out += ["", "## 2. Concepts owned elsewhere: check them from your angle", "",
+                "Comments on these go to the owner of the page shown.", "",
+                "| ID | Name | Approved on | Definition | Your comment |", "|---|---|---|---|---|"]
+        for i in shown:
+            c = concepts[i]
+            owner = owner_of.get(i)
+            out.append(f"| {i} | **{c['Canonical English name']}** | {link(owner) if owner else '—'} | "
+                       f"{c['Working business definition']} | |")
+    extra = [i for i in primary if i in data["notes"] or i in data["context"]]
     if extra:
-        out += ["", "## Usage notes and required context", ""]
+        out += ["", "### Usage notes and required context", ""]
         for i in extra:
             out.append(f"- **{name(i)}**")
-            if i in notes:
-                out.append(f"  - Note: {notes[i]}")
-            if i in context:
-                out.append(f"  - An agent must know: {context[i]}")
-    al = [a for a in aliases if set(re.findall(ID, a.get("Resolves to", ""))) & idset]
+            if i in data["notes"]:
+                out.append(f"  - Note: {data['notes'][i]}")
+            if i in data["context"]:
+                out.append(f"  - An agent must know: {data['context'][i]}")
+    al = [a for a in data["aliases"] if set(re.findall(ID, a.get("Resolves to", ""))) & pset]
     if al:
-        out += ["", "## Words people use (aliases)", "", "| Word | Kind | Scope | Means |", "|---|---|---|---|"]
+        out += ["", "### Words people use (aliases)", "", "| Word | Kind | Scope | Means |", "|---|---|---|---|"]
         for a in al:
             out.append(f"| {a['Alias']} | {a['Kind']} | {a['Scope']} | {a['Resolves to']} |")
-    rl = [r for r in rels if r.get("Source concept") in idset or r.get("Target concept") in idset]
+    full = [a for a in data["amb"] if concept_ids(a.get("Affected IDs")) & pset]
+    brief = [a for a in data["amb"] if a not in full and concept_ids(a.get("Affected IDs")) & allset]
+    if full or brief:
+        out += ["", "## 3. Ambiguities and proposed answers", "",
+                "A proposed answer comes from the expert review; it is **not a decision** until the owner confirms it.", ""]
+        for a in full:
+            out += [f"### {a['ID']} — {a['Term / issue']} ({a['Status']})", "",
+                    f"**To decide:** {a['Required distinction or decision']}", "",
+                    f"**Proposed answer:** {data['answers'].get(a['ID'], '—')}", ""]
+        if brief:
+            out += ["Also touching this page, answered on another page:", ""]
+            for a in brief:
+                where = {pages_by_id[i]["Page"]: pages_by_id[i]
+                         for i in concept_ids(a.get("Affected IDs")) if i in pages_by_id}
+                where = [where[k] for k in sorted(where)]
+                out.append(f"- {a['ID']} — {a['Term / issue']} ({a['Status']}): see "
+                           + ", ".join(link(p) for p in where))
+            out.append("")
+    keys = pset | {a["ID"] for a in full}
+    dc = [x for x in data["decisions"] if set(re.findall(ID, x.get("Affected IDs", ""))) & keys]
+    if dc:
+        out += ["## 4. Decisions already taken", "", "| Decision | Consequence |", "|---|---|"]
+        for x in dc:
+            out.append(f"| **{x['Point']}** — {x['Decision']} | {x['Consequence in the ontology']} |")
+        out.append("")
+    rl = [r for r in data["rels"] if r.get("Source concept") in pset or r.get("Target concept") in pset]
     if rl:
-        out += ["", "## How these concepts connect", "", "| ID | From | Relation | To | Conditions |", "|---|---|---|---|---|"]
+        out += ["## 5. How these concepts connect", "", "| ID | From | Relation | To | Conditions |", "|---|---|---|---|---|"]
         for r in rl:
             out.append(f"| {r['ID']} | {name(r['Source concept'])} | {r['Relation']} | "
                        f"{name(r['Target concept'])} | {r['Meaning and conditions']} |")
-    am = [a for a in amb_rows if set(re.findall(r"LD-C\d{4}", a.get("Affected IDs", ""))) & idset]
-    if am:
-        out += ["", "## Ambiguities and proposed answers", "",
-                "A proposed answer comes from the expert review; it is **not a decision** until the owner confirms it.", ""]
-        for a in am:
-            out += [f"### {a['ID']} — {a['Term / issue']} ({a['Status']})", "",
-                    f"**To decide:** {a['Required distinction or decision']}", "",
-                    f"**Proposed answer:** {answers.get(a['ID'], '—')}", ""]
-    dc = [x for x in decisions if set(re.findall(ID, x.get("Affected IDs", ""))) & (idset | {a["ID"] for a in am})]
-    if dc:
-        out += ["## Decisions already taken", "", "| Decision | Consequence |", "|---|---|"]
-        for x in dc:
-            out.append(f"| **{x['Point']}** — {x['Decision']} | {x['Consequence in the ontology']} |")
+        out.append("")
+    if value(content.get("Not yet in the catalogue")):
+        out += ["## 6. Not yet in the catalogue", "",
+                "These items are in the backlog. **Does a decision you need now depend on one of them?** If so, say which.", ""]
+        out += [f"- {b.strip()}" for b in content["Not yet in the catalogue"].split(";")]
         out.append("")
     out += ["## Where the source lives", "",
             "- Definitions: [`ontology/foundation.md`](../ontology/foundation.md)",
@@ -176,44 +226,70 @@ def render(d, concepts, rels, amb_rows, answers, labels, notes, context, aliases
             "- Ambiguities and proposed answers: [`governance/ambiguity-register.md`](../governance/ambiguity-register.md)",
             "- Notes and aliases: [`ontology/concept-annotations.md`](../ontology/concept-annotations.md)",
             "- Decisions: [`governance/decision-log.md`](../governance/decision-log.md)",
-            "- This domain's scope: [`governance/review-domains.md`](../governance/review-domains.md)", ""]
+            "- This domain's scope and questions: [`governance/review-domains.md`](../governance/review-domains.md)", ""]
     return "\n".join(out)
 
 
 def main():
-    concepts, rels, amb_rows, answers, labels, notes, context, aliases, decisions, domains = load()
-    covered = set().union(*(set(d["ids"]) for d in domains))
-    missing = sorted(set(concepts) - covered)
-    unknown = sorted(covered - set(concepts))
+    data = load()
+    concepts, domains = data["concepts"], data["domains"]
+    errors, owner_of, count = [], {}, {}
+    for d in domains:
+        for i in d["primary"]:
+            count[i] = count.get(i, 0) + 1
+            owner_of[i] = d
+        both = set(d["primary"]) & set(d["shown"])
+        if both:
+            errors.append(f"{d['Page']}: both primary and also shown: {', '.join(sorted(both))}")
+    missing = sorted(set(concepts) - set(count))
+    multiple = sorted(i for i, n in count.items() if n > 1)
+    used = set(count).union(*(set(d["shown"]) for d in domains))
+    unknown = sorted(used - set(concepts))
+    page_names = {d["Page"] for d in domains}
+    for p in sorted((set(data["content"]) | set(data["questions"])) - page_names):
+        errors.append(f"page content or questions for an unknown page: {p}")
+    if missing:
+        errors.append(f"concepts without a primary domain: {', '.join(missing)}")
+    if multiple:
+        errors.append(f"concepts with more than one primary domain: {', '.join(multiple)}")
+    if unknown:
+        errors.append(f"domain IDs not in the catalogue: {', '.join(unknown)}")
     pages = {}
     index = ["# Review by domain", "",
              "> Generated by `tools/build_domain_views.py`. Do not edit by hand.", "",
-             "> **En bref (FR)** — Un dossier par domaine métier. Chaque page contient les définitions à relire, "
-             "les liens entre concepts, les ambiguïtés ouvertes avec la réponse proposée et les décisions déjà prises. "
-             "Donne à chaque relecteur la page de son domaine.", "",
-             "| Domain | Owner role | Reviewer roles | Concepts | Ambiguities |", "|---|---|---|---|---|"]
+             "One page per business domain. Each page lists the concepts its owner approves, the concepts owned "
+             "elsewhere that it should check from its angle, the questions for each reviewer role, the open "
+             "ambiguities with their proposed answers, the decisions already taken and the backlog items it may need. "
+             "Give each reviewer the page of their domain.", "",
+             "Start with the wave 1 pages: they serve the first pilot agents (give-up and clearing acceptance, "
+             "change impact).", "",
+             "| Domain | Wave | Owner role | Reviewer roles | Concepts to approve | Also shown | Ambiguities to answer |",
+             "|---|---|---|---|---|---|---|"]
     for d in domains:
-        ids = set(d["ids"])
-        n_amb = sum(1 for a in amb_rows if set(re.findall(r"LD-C\d{4}", a.get("Affected IDs", ""))) & ids)
-        pages[f"{d['Page']}.md"] = render(d, concepts, rels, amb_rows, answers, labels, notes, context, aliases, decisions)
-        index.append(f"| [{d['Domain']}]({d['Page']}.md) | {d['Owner role']} | {d['Reviewer roles']} | {len(ids)} | {n_amb} |")
-    index += ["", f"Every concept of the catalogue ({len(concepts)}) belongs to at least one domain."
-              if not missing else f"Concepts without a domain: {', '.join(missing)}", ""]
+        pset = set(d["primary"])
+        n_amb = sum(1 for a in data["amb"] if concept_ids(a.get("Affected IDs")) & pset)
+        pages[f"{d['Page']}.md"] = render(d, data, owner_of, owner_of)
+        index.append(f"| [{d['Domain']}]({d['Page']}.md) | {d['Wave']} | {d['Owner role']} | {d['Reviewer roles']} | "
+                     f"{len(d['primary'])} | {len(d['shown'])} | {n_amb} |")
+    index += ["", f"Each of the {len(concepts)} concepts of the catalogue has exactly one primary domain, whose owner approves it."
+              if not (missing or multiple) else "Some concepts do not have exactly one primary domain; see the check output.", ""]
     pages["README.md"] = "\n".join(index)
-    errors = []
-    if missing:
-        errors.append(f"concepts without a domain: {', '.join(missing)}")
-    if unknown:
-        errors.append(f"domain IDs not in the catalogue: {', '.join(unknown)}")
     if "--check" in sys.argv:
         for f, text in pages.items():
             p = OUT / f
             if not p.exists() or p.read_text(encoding="utf-8") != text:
                 errors.append(f"domains/{f} is out of date; run tools/build_domain_views.py")
+        expected = set(pages)
+        for p in OUT.glob("*.md"):
+            if p.name not in expected:
+                errors.append(f"domains/{p.name} is no longer generated; delete it")
         for e in errors:
             print("ERROR", e)
         sys.exit(1 if errors else 0)
     OUT.mkdir(exist_ok=True)
+    for p in OUT.glob("*.md"):
+        if p.name not in pages:
+            p.unlink()
     for f, text in pages.items():
         (OUT / f).write_text(text, encoding="utf-8")
     for e in errors:

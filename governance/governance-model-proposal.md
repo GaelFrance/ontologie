@@ -34,6 +34,7 @@ Ordered by need for the pilot agents. Wave 1 is required before any definition c
 | 4 | Regulatory Affairs | Regimes, rule changes, consultations, regulatory classifications | LD-C0063, LD-C0064, LD-C0067, LD-C0068 | 1 |
 | 5 | Legal | Legal effect of clearing, interposition, client clearing models, agreements | LD-C0024, LD-C0054, LD-C0012 | 1 |
 | 6 | Listed Execution product owner (domain owner) | Orders, executions, handling channel, average pricing, venue access | LD-C0016, LD-C0017, LD-C0021, LD-C0061 | 2 |
+| 6a | Product development lead (sponsor or delegate; domain owner) | Service offering and market access: what the firm sells and how clients reach venues and CCPs | LD-C0052, LD-C0059 | 2 |
 | 7 | **Revenue domain owner** (domain owner, sponsor decision 2026-11-01) | Management revenue, fees, pricing form, pass-through, charge basis, contribution after costs; answers open questions 9 and 10 | LD-C0031 to LD-C0042, LD-C0074 | 2 |
 | 7a | Collateral Manager, as owner of the **collateral revenue** sub-domain | Interest margin on client cash, price alignment, fees on non-cash collateral, and whether they count in clearing revenue | LD-C0042, LD-C0047, LD-C0048 | 2 |
 | 7b | Business Finance / Product Control (subject reviewer) | Consistency with management reporting | LD-C0039 to LD-C0042, LD-C0074 | 2 |
@@ -55,7 +56,7 @@ R = does the work, A = accountable (one per line), C = consulted, I = informed.
 | Propose a concept or change | I | I | R | C | C | C |
 | Technical checks (IDs, links, hub check) | | | A/R | | | |
 | Review a meaning | I | | R | C | R | C |
-| Approve a meaning in one module | I | I | C | A | C | I |
+| Approve a meaning in its primary domain | I | I | C | A | C | I |
 | Approve a cross-module meaning or conflict | A | R | C | C | C | I |
 | Decide an ambiguity | A for scope, else domain owner | C | R | A/R | C | C |
 | Validate evaluation questions and expected answers | I | | C | C | C | A/R |
@@ -64,7 +65,7 @@ R = does the work, A = accountable (one per line), C = consulted, I = informed.
 ## 5. Workflow
 
 1. **Propose.** Anyone (including an AI agent) opens a change with affected IDs, rationale and sources. The Ontology Lead checks structure and runs the automatic checks.
-2. **Review pack.** The [domain pages](../domains/README.md) are the standing review packs, regenerated with `tools/build_domain_views.py`. For each batch the Ontology Lead produces a readable pack: concept, old and new wording, why, examples, questions. Reviewers can answer in the pack, by e-mail or in a meeting; GitHub is optional.
+2. **Review pack.** The [domain pages](../domains/README.md) are the standing review packs, regenerated with `tools/build_domain_views.py` from [`review-domains.md`](review-domains.md). Each concept has one primary domain whose owner approves it; a meaning change to a concept shown on other pages needs comments from those pages' owners. For each batch the Ontology Lead produces a readable pack: concept, old and new wording, why, examples, questions. Reviewers can answer in the pack, by e-mail or in a meeting; GitHub is optional.
 3. **Reviewed.** Subject reviewers give comments within 10 business days. The Ontology Lead records findings; status becomes Reviewed with remaining conditions.
 4. **Approved.** The domain owner approves (or the sponsor, across modules). Record approver role, date and evidence in the decision log.
 5. **Release.** Quarterly, or ad hoc for regulatory urgency: tag a version, publish the change log, move the hub's ontology pin, re-run evaluation sets.

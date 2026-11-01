@@ -8,9 +8,8 @@ The ontology is independent of any LLM, database, application, API or MCP implem
 
 ## Start here: review by domain
 
-**[One page per business domain](domains/README.md)**: parties and roles, products and reference data, execution, clearing, margin and collateral, fees and revenue, regulation, post-trade operations. Each page gathers the definitions, connections, open ambiguities with proposed answers, decisions taken, and what the reviewer is asked. Give each reviewer the page of their domain.
+**[One page per business domain](domains/README.md)**: parties and roles; instruments, venues and calendars; service offering and market access; execution; clearing give-up and acceptance; clearing services and accounts; margin and collateral; fees and revenue; regulation; post-trade operations. Each concept has exactly one domain whose owner approves it, and may be shown on other pages for comment. Each page gives the questions for each reviewer role, the definitions with a verdict column, open ambiguities with proposed answers, decisions taken and the backlog items the domain may need. Give each reviewer the page of their domain; start with the wave 1 pages.
 
-> **En bref (FR)** — Pour relire l'ontologie, commencer par le dossier [`domains/`](domains/README.md) : une page par domaine métier, avec les définitions et ce qu'il faut vérifier.
 
 ## Review the foundation
 
