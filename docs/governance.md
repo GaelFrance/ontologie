@@ -33,6 +33,10 @@ Use a focused branch and reviewable change when a base branch exists. Include ch
 
 Concept definitions may be shareable while examples, internal pricing, client names, positions and source mappings are restricted. Use synthetic examples. Establish repository visibility and access policy before introducing confidential material. A sensitivity annotation is metadata, not enforcement of source-system permissions.
 
+## Decisions and open questions
+
+Record business-owner decisions in the [decision log](../governance/decision-log.md) with date and evidence; keep questions that only the owner can answer in [open questions](../governance/open-questions-for-owner.md). An ambiguity entry may carry a proposed answer, but stays Open until a recorded decision resolves it.
+
 ## Phase gate
 
 The sponsor approved the Phase 1 foundation on 2026-09-20; see the [decision record](../governance/phase-1-review.md). Phase 2 may develop the concepts in the agreed order. This does not approve individual definitions, metric formulas, detailed taxonomies, resolved query demonstrations or physical mappings. Preserve subsequent phase gates.
