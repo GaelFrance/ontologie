@@ -13,7 +13,7 @@ Status: Draft
 | Fees, revenue, costs and recognition | Finance with relevant Product owner |
 | Margin, collateral and risk aggregation | Risk / Collateral subject-matter owner |
 | Legal effect and regulatory applicability | Legal / Compliance |
-| IDs, consistency, traceability and release process | Semantic / Data steward |
+| IDs, consistency, traceability and release process | Ontology Lead |
 
 These are suggested responsibilities, not assigned people or completed approvals.
 
@@ -32,6 +32,14 @@ Use a focused branch and reviewable change when a base branch exists. Include ch
 ## Sensitivity
 
 Concept definitions may be shareable while examples, internal pricing, client names, positions and source mappings are restricted. Use synthetic examples. Establish repository visibility and access policy before introducing confidential material. A sensitivity annotation is metadata, not enforcement of source-system permissions.
+
+## Decisions and open questions
+
+Record business-owner decisions in the [decision log](../governance/decision-log.md) with date and evidence; keep questions that only the owner can answer in [open questions](../governance/open-questions-for-owner.md). An ambiguity entry may carry a proposed answer, but stays Open until a recorded decision resolves it.
+
+## Proposed operating model
+
+A governance model with bodies, a reviewer list, a RACI and the review workflow is proposed in [governance model proposal](../governance/governance-model-proposal.md), pending sponsor decision.
 
 ## Phase gate
 

@@ -31,16 +31,16 @@ Common contains reusable meanings. Execution, ETD Clearing and OTC Clearing spec
 
 A context can identify service/domain, observing legal entity, participant roles, contractual relationship, account, CCP/venue, jurisdiction, business date, effective period and management measurement basis (the current revenue priority). Require only relevant dimensions. Context cannot silently redefine a concept: materially different meanings need separate concepts.
 
-Model a party separately from a role assignment. A role assignment relates a party to a role, counterparties, service, agreement where applicable, and effective period. An entity can hold multiple roles simultaneously. Client is a role; Legal Entity is an entity type.
+Model a party separately from a role assignment. Party Role (LD-C0003) is the role assignment (party-in-role): it relates a party to a role kind, counterparties, a service (Clearing Service or Service Offering), an agreement where applicable, and an effective period; role kinds such as Client or Clearing Member are its specialisations. An entity can hold multiple roles simultaneously. Client is a role; Legal Entity is an entity type. Entity-level regulatory statuses attach to the legal entity, relationship-level statuses to the role assignment, never to a commercial group.
 
-Trading Venue is distinct from its legal operator. CCP and Clearing Member are roles in a defined service. An account's owner, operator, beneficiary and reporting attribution must not be inferred from its label.
+Trading Venue is distinct from its legal operator. CCP and Clearing Member are roles in a defined Clearing Service, which is distinct from the Service Offering a provider sells to clients. An account's owner, operator, beneficiary and reporting attribution must not be inferred from its label.
 
 ## Formats
 
-Markdown is canonical during foundation review. Stable IDs and consistent tables/templates make migration possible without claiming that free text is already executable logic. If YAML is later approved, introduce schemas and validators, preserve IDs, and generate human-readable concept pages from that single source. Do not maintain two independent canonical definitions.
+Markdown is canonical during foundation review. Stable IDs and consistent tables/templates make migration possible without claiming that free text is already executable logic. Sponsor decision (2026-11-01): Markdown stays canonical because business reviewers must be able to read it; machine-readable exports (JSON or YAML) for agents and checks are generated from the Markdown by tooling and are never a second source of truth. Do not maintain two independent canonical definitions.
 
 SKOS/OWL exports may be evaluated later; no graph database or ontology runtime is selected now.
 
 ## Reference values
 
-Currencies, units, date roles and calendars require governed reference policies. They are not additional fully defined concepts in this 50-item catalogue. Currency of charge, payment, collateral and reporting must be distinguished. Business dates require a date role and relevant calendar/time-zone conventions.
+Currencies, units and date roles require governed reference policies and remain vocabularies, not concepts. Business Calendar became a concept (LD-C0066) in the 2026-11 review because circulars change calendars and cut-offs are expressed against them; individual calendars are instances. Currency of charge, payment, collateral and reporting must be distinguished. Business dates require a date role and relevant calendar/time-zone conventions.

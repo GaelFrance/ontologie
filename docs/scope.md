@@ -20,4 +20,4 @@ Regulatory concepts are contextual and versioned by jurisdiction, regime and eff
 4. Demonstrate natural-language resolution and test ambiguity handling.
 5. Only after source schemas are supplied: define and validate physical mappings.
 
-The 50-concept catalogue is a prioritised foundation, not a completeness claim. Routing, strategies, compression, portability, default funds, reporting and detailed lifecycle events remain planned scope.
+The catalogue (50 foundation concepts plus 24 added by the 2026-11 expert review) is a prioritised foundation, not a completeness claim. Routing, strategies, compression, porting, default funds, reporting and detailed lifecycle events remain planned scope; see the [review backlog](../governance/reviews/2026-11-expert-review/ARBITRATION.md#6-backlog).

@@ -16,6 +16,8 @@ Evidence: the business sponsor explicitly responded to the seven review points i
 | 6. Relationships | General approach approved | Refine constraints by context; no universal fill-to-trade cardinality is approved. |
 | 7. Governance | Proposed approach approved | Sponsor arbitrates Business/Product scope; Operations, Finance, Risk and Legal review relevant subjects. Individual reviewers remain to be assigned. |
 
+Later sponsor answers are recorded in the [decision log](decision-log.md).
+
 ## Remaining boundaries
 
 All individual concept definitions remain Draft until specifically reviewed and approved. The approval permits Phase 2 development; it does not approve detailed taxonomies, metric formulas, query-resolution demonstrations or physical mappings.
