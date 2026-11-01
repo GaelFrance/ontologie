@@ -21,4 +21,12 @@ Evidence: sponsor accepted the suggested default for open question 1 ("ok défau
 |---|---|---|---|
 | 5. Give-up completion and authoritative record | A give-up is complete when the full allocated quantity is registered to the receiving clearing member's CCP account, per the CCP record. Partial take-ups are reported separately. Member acceptance and CCP registration times are both kept. When internal and CCP records disagree, the CCP record is authoritative for completion and the discrepancy is reported as a break, never silently resolved. | LD-A0010 decided for the default answer of AG-004; the definitions of LD-C0022, LD-C0023 and LD-C0053 remain Draft. | LD-C0022, LD-C0023, LD-C0053, LD-A0010, LD-A0034 |
 
+## Sponsor decision — 2026-11-01 (meaning changes kept as Draft)
+
+Evidence: sponsor answered "ok" in the project conversation, 2026-11-01, after an explanation of each change (open question 2).
+
+| Point | Decision | Consequence in the ontology | Affected IDs |
+|---|---|---|---|
+| 6. Meaning changes and clarifications from the expert review | Accepted as Draft: Instrument narrowed to standardised specifications; give-up as attribution at or after CCP registration; Clearing Acceptance as the CCP side with member take-up separate; Collateral as a State (title transfer or security interest); Party Role as the role assignment; Product relabelled Product Family. | The changes stay in the catalogue as Draft. This accepts the direction of the changes, not a Reviewed or Approved status for the definitions. | LD-C0003, LD-C0013, LD-C0014, LD-C0022, LD-C0023, LD-C0047 |
+
 Apart from LD-A0010 (decision 5), these answers do not resolve any ambiguity entry, approve any definition, formula or cost perimeter, or change the deferral of Commission and Transaction.
