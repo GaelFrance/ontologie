@@ -32,7 +32,7 @@ Replace guidance with content. Use `To validate — question` or `Not applicable
 | Counterexamples / exclusions | What the concept does not mean. |
 | Ambiguities | Open distinctions and register IDs. |
 | Sensitivity / governance | Definition sensitivity and underlying-data considerations. |
-| Suggested owner / steward | Roles until people are assigned. |
+| Suggested owner / Ontology Lead | Roles until people are assigned. |
 | Status | Draft / Reviewed / Approved. |
 | Standard alignments (`alignments`) | Standard, module and concept with match kind (exact, close, broad, narrow, related); `verified: false` until checked; no IRI from memory. |
 | Competency questions served | Evaluation or competency question IDs. |

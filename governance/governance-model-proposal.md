@@ -4,8 +4,8 @@ Status: Proposal for sponsor decision (requested 2026-11-01). Roles only; no per
 
 ## 1. Principles
 
-1. **The business owns meaning.** Each concept has one accountable domain owner; tooling, stewards and AI agents never approve a meaning.
-2. **Review in plain language.** Reviewers read Markdown pages or an exported document, and comment in words. The semantic steward turns comments into changes. Nobody is asked to read YAML, JSON or Git diffs.
+1. **The business owns meaning.** Each concept has one accountable domain owner; tooling, the Ontology Lead and AI agents never approve a meaning.
+2. **Review in plain language.** Reviewers read Markdown pages or an exported document, and comment in words. The Ontology Lead turns comments into changes. Nobody is asked to read YAML, JSON or Git diffs.
 3. **Light by default, strict on meaning.** Typos and links need no business review; a new concept, a meaning change or a decided ambiguity always does.
 4. **Silence is not approval.** A missed deadline escalates to the sponsor; it never counts as consent.
 5. **Public layer only.** The repository holds industry meanings. Firm-specific facts (offered services, legal models, clients, prices, systems) live in an internal layer under the bank's own controls.
@@ -16,8 +16,8 @@ Status: Proposal for sponsor decision (requested 2026-11-01). Roles only; no per
 | Role | Accountable for | Typical profile | Time needed |
 |---|---|---|---|
 | **Sponsor / arbiter** | Scope, priorities, phase gates, cross-domain conflicts, final say when owners disagree | Head of Product Development, execution & clearing | 1 h / month + escalations |
-| **Ontology board** | Monthly review of open questions, conflicts and the release plan | Sponsor, domain owners, steward; others by agenda | 45 min / month |
-| **Semantic steward** | IDs, consistency, change log, releases, checks, turning comments into changes, preparing review packs | Data architect or business analyst with modelling skills | 1–2 days / week in Phase 2 |
+| **Ontology board** | Monthly review of open questions, conflicts and the release plan | Sponsor, domain owners, Ontology Lead; others by agenda | 45 min / month |
+| **Ontology Lead** | IDs, consistency, change log, releases, checks, turning comments into changes, preparing review packs | Data architect or business analyst with modelling skills | 1–2 days / week in Phase 2 |
 | **Domain owner** (one per module) | Approves meanings in their module | Product owner of the module | 2 h / month |
 | **Subject reviewer** | Reviews concepts touching their subject; recommends, does not approve | Expert from the functions below | On request, per review pack |
 | **Agent owner** (one per pilot agent) | States what the agent must answer; validates evaluation questions and expected answers | Business user of the agent | 2 h / month |
@@ -28,7 +28,7 @@ Ordered by need for the pilot agents. Wave 1 is required before any definition c
 
 | # | Reviewer role | Subjects | Concepts (examples) | Wave |
 |---|---|---|---|---|
-| 1 | Semantic steward | All: structure, IDs, consistency | All | 1 |
+| 1 | Ontology Lead | All: structure, IDs, consistency | All | 1 |
 | 2 | ETD Clearing product owner (domain owner) | Give-up/take-up, clearing acceptance, CCP accounts, positions | LD-C0022, LD-C0023, LD-C0053, LD-C0026 | 1 |
 | 3 | ETD post-trade operations lead | Give-up workflows, cut-offs, reconciliations, breaks | LD-C0030, LD-C0050, LD-C0065 | 1 |
 | 4 | Regulatory Affairs | Regimes, rule changes, consultations, regulatory classifications | LD-C0063, LD-C0064, LD-C0067, LD-C0068 | 1 |
@@ -48,7 +48,7 @@ Business management takes part with Regulatory Affairs, Legal and Compliance in 
 
 R = does the work, A = accountable (one per line), C = consulted, I = informed.
 
-| Activity | Sponsor | Board | Steward | Domain owner | Subject reviewers | Agent owners |
+| Activity | Sponsor | Board | Ontology Lead | Domain owner | Subject reviewers | Agent owners |
 |---|---|---|---|---|---|---|
 | Propose a concept or change | I | I | R | C | C | C |
 | Technical checks (IDs, links, hub check) | | | A/R | | | |
@@ -61,29 +61,29 @@ R = does the work, A = accountable (one per line), C = consulted, I = informed.
 
 ## 5. Workflow
 
-1. **Propose.** Anyone (including an AI agent) opens a change with affected IDs, rationale and sources. The steward checks structure and runs the automatic checks.
-2. **Review pack.** For each batch the steward produces a readable pack: concept, old and new wording, why, examples, questions. Reviewers can answer in the pack, by e-mail or in a meeting; GitHub is optional.
-3. **Reviewed.** Subject reviewers give comments within 10 business days. The steward records findings; status becomes Reviewed with remaining conditions.
+1. **Propose.** Anyone (including an AI agent) opens a change with affected IDs, rationale and sources. The Ontology Lead checks structure and runs the automatic checks.
+2. **Review pack.** For each batch the Ontology Lead produces a readable pack: concept, old and new wording, why, examples, questions. Reviewers can answer in the pack, by e-mail or in a meeting; GitHub is optional.
+3. **Reviewed.** Subject reviewers give comments within 10 business days. The Ontology Lead records findings; status becomes Reviewed with remaining conditions.
 4. **Approved.** The domain owner approves (or the sponsor, across modules). Record approver role, date and evidence in the decision log.
 5. **Release.** Quarterly, or ad hoc for regulatory urgency: tag a version, publish the change log, move the hub's ontology pin, re-run evaluation sets.
 
 | Change type | Business review | Approval |
 |---|---|---|
-| Typo, link, formatting | None | Steward |
-| New alias, French label, example | Subject reviewer informed | Steward |
+| Typo, link, formatting | None | Ontology Lead |
+| New alias, French label, example | Subject reviewer informed | Ontology Lead |
 | New concept or relationship | Subject reviewers | Domain owner |
 | Meaning change or retype | Subject reviewers + affected agent owners | Domain owner, sponsor if cross-module |
 | Ambiguity decision | Subject reviewers | Domain owner, or sponsor for scope |
-| Deprecation | Agent owners | Domain owner + steward |
+| Deprecation | Agent owners | Domain owner + Ontology Lead |
 
 ## 6. Cadence and escalation
 
 - Monthly board (45 minutes): open questions, conflicts, release content.
-- Review deadline: 10 business days; after that the steward escalates to the sponsor, who decides or extends.
+- Review deadline: 10 business days; after that the Ontology Lead escalates to the sponsor, who decides or extends.
 - Disagreement between two domain owners goes to the board; if unresolved, the sponsor decides and the decision log records it.
 
 ## 7. Immediate next steps
 
 1. Sponsor names wave 1 reviewers (rows 1–5 and the agent owners for AG-004 and AG-002).
-2. Steward prepares the first review pack: the AG-004 core (give-up, clearing acceptance, CCP interposition, clearing service, cut-off) and the six meaning changes accepted as Draft on 2026-11-01.
+2. Ontology Lead prepares the first review pack: the AG-004 core (give-up, clearing acceptance, CCP interposition, clearing service, cut-off) and the six meaning changes accepted as Draft on 2026-11-01.
 3. First board session to fix the release cadence and confirm this model.

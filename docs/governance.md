@@ -13,7 +13,7 @@ Status: Draft
 | Fees, revenue, costs and recognition | Finance with relevant Product owner |
 | Margin, collateral and risk aggregation | Risk / Collateral subject-matter owner |
 | Legal effect and regulatory applicability | Legal / Compliance |
-| IDs, consistency, traceability and release process | Semantic / Data steward |
+| IDs, consistency, traceability and release process | Ontology Lead |
 
 These are suggested responsibilities, not assigned people or completed approvals.
 
