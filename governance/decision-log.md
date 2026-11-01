@@ -29,4 +29,12 @@ Evidence: sponsor answered "ok" in the project conversation, 2026-11-01, after a
 |---|---|---|---|
 | 6. Meaning changes and clarifications from the expert review | Accepted as Draft: Instrument narrowed to standardised specifications; give-up as attribution at or after CCP registration; Clearing Acceptance as the CCP side with member take-up separate; Collateral as a State (title transfer or security interest); Party Role as the role assignment; Product relabelled Product Family. | The changes stay in the catalogue as Draft. This accepts the direction of the changes, not a Reviewed or Approved status for the definitions. | LD-C0003, LD-C0013, LD-C0014, LD-C0022, LD-C0023, LD-C0047 |
 
+## Sponsor decision — 2026-11-01 (reference clearing services)
+
+Evidence: sponsor answer in the project conversation, 2026-11-01 (open question 3).
+
+| Point | Decision | Consequence in the ontology | Affected IDs |
+|---|---|---|---|
+| 7. Reference clearing services for rulebook evidence | Five public CCPs seed the evidence for AG-004: Eurex Clearing, ICE Clear Europe, LCH (SwapClear service), CME Clearing and Euronext Clearing. | These become the first Clearing Service instances whose public rulebooks are cited for interposition mechanism and moment, give-up deadlines and cut-offs. Instances and rulebook facts belong to the hub's evidence layer, not to the concept catalogue; each fact must cite the public rule and its version. | LD-C0051, LD-C0054, LD-C0065, LD-A0009, LD-A0017 |
+
 Apart from LD-A0010 (decision 5), these answers do not resolve any ambiguity entry, approve any definition, formula or cost perimeter, or change the deferral of Commission and Transaction.
