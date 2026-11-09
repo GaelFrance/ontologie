@@ -10,6 +10,7 @@ This domain describes what is charged for executing and clearing listed and OTC 
 | [Concepts](concepts.md) | 28 concepts, each with a definition, an example and what not to confuse it with |
 | [Review sheet](review.md) | What each reviewer is asked, open questions on meaning, decisions already taken |
 | [Questions for our firm](company-questions.md) | 24 questions that capture how our firm works in this domain |
+| [Questions for the experts (Excel)](questions-for-experts.xlsx) | The same questions as an interview workbook; fill in a copy kept inside the firm, never the file here |
 
 **Owner:** Revenue domain owner  
 **Reviewers:** Collateral Manager (collateral revenue); Business Finance; Listed Execution product owner; ETD Clearing product owner; OTC Clearing product owner  

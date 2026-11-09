@@ -33,7 +33,7 @@ Each domain folder holds the same four pages: **overview** (plain words), **conc
 
 ## How it is organised
 
-- **`domains/`** is what people read. The overview and the questions for our firm are written by hand; the concept cards, review sheets, domain pages and the glossary are generated from the registers by `tools/build_domain_views.py`, so they always agree.
+- **`domains/`** is what people read. The overview and the questions for our firm are written by hand; the concept cards, review sheets, domain pages and the glossary are generated from the registers by `tools/build_domain_views.py`, so they always agree. Each domain also has `questions-for-experts.xlsx`, an interview workbook built by `tools/build_question_workbooks.py`: it stays blank here, and answers are written in a copy kept inside the firm.
 - **`ontology/`, `relationships/`, `governance/`** hold the registers: the catalogue of concepts, their annotations, the connections between them, the open questions on meaning and the decisions. They are the single source of truth and are maintained by the Ontology Lead; reviewers do not need to open them. See [ontology/README.md](ontology/README.md).
 - **`.claude/skills/`** holds one expert skill per domain, used by AI agents that review or use this ontology.
 - **`docs/`** explains the principles, scope, modelling rules and governance.

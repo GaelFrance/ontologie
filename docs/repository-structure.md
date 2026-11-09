@@ -14,6 +14,7 @@ domains/<domain>/overview.md                hand-written introduction
 domains/<domain>/concepts.md                generated concept cards
 domains/<domain>/review.md                  generated review sheet
 domains/<domain>/company-questions.md       hand-written questions for the firm
+domains/<domain>/questions-for-experts.xlsx the same questions as a blank interview workbook
 docs/architecture.md
 docs/governance.md
 docs/modelling-guidelines.md
@@ -42,6 +43,7 @@ semantic-layer/README.md
 taxonomies/README.md
 templates/concept-template.md
 tools/build_domain_views.py                 builds domains/ and glossary.md from the registers
+tools/build_question_workbooks.py           builds each domain's questions-for-experts.xlsx (needs openpyxl)
 ```
 
 Concept cards are generated per domain (`domains/<domain>/concepts.md`) from the registers; there are no hand-written per-concept files, so a meaning is written once. `ontology/foundation.md` stays the single index of IDs because the agent hub reads it. If a later YAML migration is approved, retain IDs, add schemas and validation, and generate readable documentation from the canonical data. Mappings remain methodology and templates until actual schemas are provided.
