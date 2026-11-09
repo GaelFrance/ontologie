@@ -28,7 +28,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 *The day a contract series ends and every open position in it is closed out.*
 
-**Definition.** Lifecycle event at which a listed series, or an OTC contract, reaches the end of its life on the expiry date set by its contract specification or terms: trading has stopped, and open positions are closed by final settlement (futures), or exercised or abandoned (options), so that no position remains afterwards.
+**Definition.** Lifecycle event at which a listed series, or an OTC contract, reaches the end of its life on the expiry date set by its contract specification or terms: trading has stopped, and open positions are closed by final settlement (futures), or exercised or abandoned (options), so that no position in the expiring series remains afterwards. Exercise can create a position in the underlying (for example a futures position), and settlement or delivery obligations created at expiry can remain open after it.
 
 **Example.** The March series of a futures contract at Venue V expires; Client A's remaining positions go to final settlement.
 

@@ -144,3 +144,4 @@ These items are in the backlog. **Does a decision you need now depend on one of 
 
 - Trading capacity
 - governed vocabulary of membership categories
+- client lifecycle case: admission, periodic review, restriction and exit of a client relationship, with the service entitlements it grants (external review M01, outside the pilot scope)

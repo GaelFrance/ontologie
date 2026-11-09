@@ -102,9 +102,25 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Revenue domain owner
 <sub>question q13</sub>
 
+### 13. For clearing-only clients, by which channel should clearing revenue be reported: the channel through which the trade was originally executed (often unknown to the clearer), the channel through which you receive the give-in, or no channel?
+
+- **Why it matters:** Revenue by channel is decided for execution revenue only; clearing revenue needs its own axis, and an unknown channel must stay unknown rather than be guessed.
+- **How to answer:** One choice per reporting level; how an unknown channel is shown.
+- **Concepts affected:** Clearing Revenue, Order Handling Channel, Management Reporting Basis
+- **Who answers:** Revenue domain owner with Business Finance
+<sub>question q28</sub>
+
+### 14. Where collateral revenue is included in clearing revenue, which reports show both figures, and how is the same revenue prevented from being added twice?
+
+- **Why it matters:** The reporting basis now forbids adding a measure to another that already includes it; agents need to know which reports include which.
+- **How to answer:** List of reports; for each, whether collateral revenue is inside clearing revenue, separate, or both.
+- **Concepts affected:** Clearing Revenue, Collateral Revenue, Management Reporting Basis
+- **Who answers:** Revenue domain owner with the Collateral Manager
+<sub>question q29</sub>
+
 ## Priority 2: needed before go-live
 
-### 13. Are CCP membership fees, default fund contributions, the cost of posting house margin, connectivity and market data costs attributed to clients, services, venues or CCPs for management reporting, or kept central? (Answered by the Revenue domain owner with the Collateral Manager.)
+### 15. Are CCP membership fees, default fund contributions, the cost of posting house margin, connectivity and market data costs attributed to clients, services, venues or CCPs for management reporting, or kept central? (Answered by the Revenue domain owner with the Collateral Manager.)
 
 - **Why it matters:** Decides whether these categories can ever enter a cost perimeter and at which level.
 - **How to answer:** Per category: attributed (to what) or central.
@@ -113,7 +129,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Joint question:** also covers what Margin and collateral needed to ask.
 <sub>question q14</sub>
 
-### 14. In which venue or CCP incentive programmes does the firm take part (as member or market maker)? Are the rebates netted against exchange fees, passed on to clients, or kept?
+### 16. In which venue or CCP incentive programmes does the firm take part (as member or market maker)? Are the rebates netted against exchange fees, passed on to clients, or kept?
 
 - **Why it matters:** Decides rebate presentation and whether a rebate is revenue, a cost reduction or a pass-through.
 - **How to answer:** Programme types (no names needed) and treatment per type: netted, passed on, kept.
@@ -121,7 +137,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Listed Execution product owner
 <sub>question q15</sub>
 
-### 15. Which client discounts, volume tiers, minimum fees, caps, waivers and client rebates do you use, and are they recorded as a reduced rate, a separate credit or a later adjustment?
+### 17. Which client discounts, volume tiers, minimum fees, caps, waivers and client rebates do you use, and are they recorded as a reduced rate, a separate credit or a later adjustment?
 
 - **Why it matters:** Separates discount, rebate, waiver and adjustment as recorded, so that agents do not mix them.
 - **How to answer:** List of mechanisms used and how each is recorded.
@@ -129,7 +145,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Revenue domain owner
 <sub>question q16</sub>
 
-### 16. How are clients billed: fees debited daily on the statement, monthly invoices, or both? In which currency, and which fees are invoiced rather than debited?
+### 18. How are clients billed: fees debited daily on the statement, monthly invoices, or both? In which currency, and which fees are invoiced rather than debited?
 
 - **Why it matters:** Sets the billing stages and the fee invoice values an operations or revenue agent will meet.
 - **How to answer:** Per service: billing method, frequency, currency rule.
@@ -137,7 +153,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** ETD post-trade operations lead
 <sub>question q17</sub>
 
-### 17. How do you receive and check bills from venues, CCPs and other brokers: which bills combine several creditors or service natures, and who decomposes them?
+### 19. How do you receive and check bills from venues, CCPs and other brokers: which bills combine several creditors or service natures, and who decomposes them?
 
 - **Why it matters:** Bundled bills must be decomposed by service nature and creditor before exchange or CCP fees can be reported.
 - **How to answer:** For each bill type: issuer kind, creditors included, service natures included, who decomposes.
@@ -145,7 +161,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Business Finance
 <sub>question q18</sub>
 
-### 18. For OTC client clearing, which fee structures do you use: per-ticket registration, periodic maintenance on open trades or notional, fixed annual packages, minimum fees? Do CCP tariff choices affect client pricing?
+### 20. For OTC client clearing, which fee structures do you use: per-ticket registration, periodic maintenance on open trades or notional, fixed annual packages, minimum fees? Do CCP tariff choices affect client pricing?
 
 - **Why it matters:** Checks that client clearing fee and CCP fee cover OTC structures as well as per-lot listed fees.
 - **How to answer:** List of structures used; link to CCP tariff choice yes or no.
@@ -153,7 +169,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** OTC Clearing product owner
 <sub>question q19</sub>
 
-### 19. For which events and services do you charge clients your own fee, beyond passing on venue, CCP and regulatory fees: give-up, give-in, position transfer, exercise, delivery, late or failed steps (including passing on CCP late give-up fees and late payment interest), exception handling, strategies versus legs, holding non-cash collateral or recharging CCP collateral fees?
+### 21. For which events and services do you charge clients your own fee, beyond passing on venue, CCP and regulatory fees: give-up, give-in, position transfer, exercise, delivery, late or failed steps (including passing on CCP late give-up fees and late payment interest), exception handling, strategies versus legs, holding non-cash collateral or recharging CCP collateral fees?
 
 - **Why it matters:** Sets the chargeable events of client fees beyond execution and clearing per lot.
 - **How to answer:** List of events charged by the firm; per event: own fee, pass-through, or both.
@@ -162,7 +178,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Joint question:** also covers what Margin and collateral, Post-trade operations needed to ask.
 <sub>question q20</sub>
 
-### 20. When an average price is rounded, what happens to the residual (kept by the firm, passed to the client, settled as a cash adjustment, or avoided by carrying more decimals), and is it shown in management revenue, and where? (Answered by Business Finance with the ETD post-trade operations lead.)
+### 22. When an average price is rounded, what happens to the residual (kept by the firm, passed to the client, settled as a cash adjustment, or avoided by carrying more decimals), and is it shown in management revenue, and where? (Answered by Business Finance with the ETD post-trade operations lead.)
 
 - **Why it matters:** Open question 4: residuals must not be mixed with fees; their treatment decides whether they appear in revenue.
 - **How to answer:** One of: firm revenue or cost; client; reported separately; not tracked.
@@ -171,7 +187,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Joint question:** also covers what Listed derivatives execution needed to ask.
 <sub>question q21</sub>
 
-### 21. In which unit and counting basis is volume reported to management (contract sides or round turns; single or double counted; executed or cleared)?
+### 23. In which unit and counting basis is volume reported to management (contract sides or round turns; single or double counted; executed or cleared)?
 
 - **Why it matters:** Ensures volume-tiered rates and volume figures are read in the same unit.
 - **How to answer:** Unit, counting basis and stage per report.
@@ -179,7 +195,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Revenue domain owner
 <sub>question q23</sub>
 
-### 22. Which reporting currency and conversion rule are used for management revenue and cost (daily rate, month-end rate, budget rate)?
+### 24. Which reporting currency and conversion rule are used for management revenue and cost (daily rate, month-end rate, budget rate)?
 
 - **Why it matters:** Currency is mandatory context; a mixed-currency total is refused without a rule.
 - **How to answer:** Reporting currency per level; conversion rule.
@@ -187,10 +203,10 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Business Finance
 <sub>question q24</sub>
 
-### 23. Do you share client fees with introducers or other parties, or split revenue internally between desks, regions or entities (for example revenue sharing or sales credits), and is the share shown as cost, as reduced revenue, or not at all?
+### 25. Do you share client fees with introducers or other parties, or split revenue internally between desks, regions or entities (for example revenue sharing or sales credits), and is the share shown as cost, as reduced revenue, or not at all?
 
 <sub>question q26</sub>
 
-### 24. Do your clearing charges differ by segregation level or account kind (omnibus, individually segregated, indirect), and where are those prices stated?
+### 26. Do your clearing charges differ by segregation level or account kind (omnibus, individually segregated, indirect), and where are those prices stated?
 
 <sub>question q27</sub>

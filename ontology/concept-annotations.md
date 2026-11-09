@@ -1233,7 +1233,7 @@ Draft value lists carried by a concept (detailed taxonomies remain Phase 3 work)
 | LD-C0190 Regulatory Obligation | clearing; trading on a venue (derivatives trading obligation); active account at an EU CCP; transaction and trade reporting; offer of client segregation and disclosure of its protection and cost; fair and transparent commercial terms for clearing services; position limits and position reporting; best execution; controls on direct electronic access and algorithmic trading; client information duties; risk mitigation for uncleared trades (out of current scope) |
 | LD-C0192 Regulated Product Class | clearing obligation class; trading obligation class; active account category; US future, swap or security-based swap; security futures product (US); traded on a trading venue (EU) |
 | LD-C0194 Rulebook | rules; procedures; clearing conditions; trading conditions; contract terms; default management rules; fee rules |
-| LD-C0195 Regulatory Relief | exemption; no-action relief; transitional measure; supervisory forbearance; deferral; exemptive order |
+| LD-C0195 Regulatory Relief | form: exemption; no-action relief; transitional measure; supervisory forbearance; deferral; exemptive order · legal effect: exemption; deferral; non-enforcement position |
 | LD-C0196 Equivalence Decision | equivalence; comparability determination; substituted compliance; time-limited equivalence |
 | LD-C0197 Change Notice | consultation paper; final report or draft technical standard; published legal act; circular or market notice; clearing advisory; rule filing or self-certification; official guidance or Q&A; press release (low evidence) |
 | LD-C0198 Consultation | open; closed; feedback published; withdrawn |
@@ -1262,5 +1262,5 @@ Draft value lists carried by a concept (detailed taxonomies remain Phase 3 work)
 | LD-C0226 Option Premium | premium-style (paid upfront); futures-style (no upfront premium) |
 | LD-C0227 Client Statement | daily; monthly; other periodic |
 | LD-C0228 Trade Confirmation | per execution; per allocation; end-of-day summary |
-| LD-C0229 Position Limit | position limit; accountability level; reportable level; spot month; single month; all months combined |
+| LD-C0229 Position Limit | level kind: limit; accountability level; reportable level · period: spot month; single month; all months combined |
 | LD-C0230 Position Valuation | settlement price; CCP net present value; other stated valuation |

@@ -9,7 +9,7 @@ Many clients execute listed futures and options with one broker and clear them w
 | [Overview](overview.md) | The domain in plain words: what it covers, how it works, what to keep apart |
 | [Concepts](concepts.md) | 18 concepts, each with a definition, an example and what not to confuse it with |
 | [Review sheet](review.md) | What each reviewer is asked, open questions on meaning, decisions already taken |
-| [Questions for our firm](company-questions.md) | 17 questions that capture how our firm works in this domain |
+| [Questions for our firm](company-questions.md) | 20 questions that capture how our firm works in this domain |
 | [Questions for the experts (Excel)](questions-for-experts.xlsx) | The same questions as an interview workbook; fill in a copy kept inside the firm, never the file here |
 
 **Owner:** ETD Clearing product owner  

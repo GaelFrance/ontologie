@@ -180,5 +180,10 @@ Also touching this domain, answered elsewhere:
 
 These items are in the backlog. **Does a decision you need now depend on one of them?**
 
-- Portfolio Compression
-- client funds requirement (segregated and secured amounts, client money, residual interest)
+- Portfolio Compression (P2)
+- client funds requirement (segregated and secured amounts, client money, residual interest
+- external review M03)
+- porting as a default-management step, porting unit and portability assessment (P2, LD-A0026
+- external review C01)
+- default management case: hedging, auction and loss allocation after a default (external review M04)
+- client credit risk assessment and limit utilisation (external review M02)

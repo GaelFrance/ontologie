@@ -160,9 +160,17 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** ETD post-trade operations lead
 <sub>question q26</sub>
 
+### 20. After an expiry, which items do you keep open and track: delivery obligations, positions created by exercise, final settlement payments; and when is expiry processing considered finished?
+
+- **Why it matters:** Expiry ends the series but can leave obligations and new positions open; agents must not report an expired position as fully closed while items remain.
+- **How to answer:** Per product type: open items after expiry and the closing criterion.
+- **Concepts affected:** Expiry, Final Settlement, Exercise
+- **Who answers:** ETD post-trade operations lead
+<sub>question q28</sub>
+
 ## Priority 3: later
 
-### 20. For cleared OTC trades, which lifecycle events and payments does your operations team handle (resets, coupon payments, partial terminations, compression), and are they in the first pilot scope?
+### 21. For cleared OTC trades, which lifecycle events and payments does your operations team handle (resets, coupon payments, partial terminations, compression), and are they in the first pilot scope?
 
 - **Why it matters:** Decides whether OTC lifecycle values of Trade Amendment and OTC settlement obligations are needed now.
 - **How to answer:** List of events with yes or no for the pilot.
@@ -170,7 +178,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** OTC Clearing product owner
 <sub>question q25</sub>
 
-### 21. For premium-style options, when is the premium settled with clients and with the CCP, and is it netted with variation margin and fees in one payment?
+### 22. For premium-style options, when is the premium settled with clients and with the CCP, and is it netted with variation margin and fees in one payment?
 
 - **Why it matters:** Tells an agent when a premium becomes a settlement obligation and how it appears in payments.
 - **How to answer:** Settlement day per CCP; netting yes or no.

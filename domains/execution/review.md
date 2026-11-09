@@ -173,7 +173,6 @@ These items are in the backlog. **Does a decision you need now depend on one of 
 - Execution Method (block, EFRP)
 - order parent and child
 - trading capacity
-- Fee Rebate
-- Activity Volume
 - Regulatory Report
-- Identifier Scheme
+- OTC execution on MTFs, OTFs and swap execution facilities (decision 21, later extension)
+- execution quality assessment and market conduct alert (external review M12)
