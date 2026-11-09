@@ -337,6 +337,9 @@ def render_readme(ctx, dom):
     out.append("| [Review sheet](review.md) | What each reviewer is asked, open questions on meaning, decisions already taken |")
     if n_q:
         out.append(f"| [Questions for our firm](company-questions.md) | {n_q} questions that capture how our firm works in this domain |")
+    if (ROOT / "domains" / page / "questions-for-experts.xlsx").exists():
+        out.append("| [Questions for the experts (Excel)](questions-for-experts.xlsx) | The same questions as an interview workbook; "
+                   "fill in a copy kept inside the firm, never the file here |")
     out += ["", f"**Owner:** {dom['Owner role']}  ", f"**Reviewers:** {dom['Reviewer roles']}  ",
             f"**Review wave:** {dom['Wave']}", ""]
     if content.get("Why it matters") not in EMPTY:

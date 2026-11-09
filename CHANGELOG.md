@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Each domain folder has `questions-for-experts.xlsx`: an interview workbook with the questions for our firm (with priority, why it matters, how to answer, who answers), the questions put to each reviewer role and the open meanings to confirm, plus answer, status and follow-up columns and a calculated summary. Built by `tools/build_question_workbooks.py` and linked from each domain page. The files stay blank: answers are firm-specific and are written in a copy kept inside the firm.
 - Review sheets: the margin page no longer asks whether to promote concepts that level 2 already added; removed from "Not yet in the catalogue" the items that level 2 added as concepts (for example Clearing Submission, Position Transfer, Reconciliation Break, Listed Strategy, Indirect Clearing Arrangement, Expiry, Exercise and Assignment); the clearing-obligation question for the OTC Clearing product owner now points to Regulatory Obligation. Domain pages no longer drop a relationship reference that is part of a sentence ("linked by ..."): they name the kind of link; two ambiguity-register sentences reworded so they read without the reference. No meaning changed.
 
 ## Release v0.2.0 — 2026-11-01

@@ -10,6 +10,7 @@ This domain describes how a client's order to buy or sell listed futures and opt
 | [Concepts](concepts.md) | 24 concepts, each with a definition, an example and what not to confuse it with |
 | [Review sheet](review.md) | What each reviewer is asked, open questions on meaning, decisions already taken |
 | [Questions for our firm](company-questions.md) | 15 questions that capture how our firm works in this domain |
+| [Questions for the experts (Excel)](questions-for-experts.xlsx) | The same questions as an interview workbook; fill in a copy kept inside the firm, never the file here |
 
 **Owner:** Listed Execution product owner  
 **Reviewers:** ETD post-trade operations lead; Compliance; ETD Clearing product owner; Revenue domain owner  
