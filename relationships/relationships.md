@@ -524,7 +524,7 @@ Structure links (part of, step in, state of) and plain connections proposed by t
 | LD-R0505 | LD-C0194 | governs | LD-C0051 | — |
 | LD-R0506 | LD-C0194 | governs | LD-C0009 | — |
 | LD-R0507 | LD-C0194 | is_changed_after | LD-C0199 | — |
-| LD-R0508 | LD-C0195 | removes_or_defers | LD-C0190 | — |
+| LD-R0508 | LD-C0195 | relieves | LD-C0190 | The legal effect (exemption, deferral or non-enforcement position) is stated on the relief; a non-enforcement position does not remove the obligation. Label changed 2026-11-09 (was removes_or_defers). |
 | LD-R0509 | LD-C0195 | is_issued_by | LD-C0203 | — |
 | LD-R0510 | LD-C0195 | can_depend_on | LD-C0068 | — |
 | LD-R0511 | LD-C0196 | relates_two | LD-C0067 | — |

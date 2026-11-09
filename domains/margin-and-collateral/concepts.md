@@ -216,7 +216,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 *A demand to deliver margin by a deadline, for the part of the requirement not already covered.*
 
-**Definition.** Demand issued by a margin taker to a margin provider, from a scheduled end-of-day, scheduled intraday or ad hoc margin run, for an amount due by a stated deadline in a stated calendar and time zone, to cover the part of one or more margin requirements not covered by collateral already held after haircuts, subject to thresholds, minimum transfer amount and rounding. One call may combine several requirements and currencies, and a CCP may collect it by direct debit.
+**Definition.** Demand issued by a margin taker to a margin provider, from a scheduled end-of-day, scheduled intraday or ad hoc margin run, for an amount due by a stated deadline in a stated calendar and time zone, to cover the part of one or more margin requirements not covered by collateral already held after haircuts, subject to thresholds, minimum transfer amount and rounding. One call may combine several requirements and currencies, and a CCP may collect it by direct debit. Which collateral can cover a requirement depends on its type and on the agreement or CCP rules: variation margin is usually settled in cash, so securities eligible only for initial margin do not cover it.
 
 **Example.** CCP Z calls Clearing Broker Y for cash by the morning deadline after the overnight run.
 
@@ -730,7 +730,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 *What a position is worth at a point in time, and who valued it with which price.*
 
-**Definition.** Value of a position of an identified account at an as-of time and in a currency, with its valuation party, price source and method: for listed contracts, the settlement price applied to quantity and contract multiplier; for cleared OTC trades, the net present value from the CCP's valuation, or from another stated party where the client agreement or the firm's own books use one. It underlies variation margin requirements, open trade equity and account equity. A valuation is a measure derived from a position, not the position itself.
+**Definition.** Value of a position of an identified account at an as-of time and in a currency, with its valuation party, price source and method: for listed contracts, the settlement price applied to quantity and contract multiplier; for cleared OTC trades, the net present value from the CCP's valuation, or from another stated party where the client agreement or the firm's own books use one. Its change between valuation times, and its difference from the value at the trade price, underlie variation margin requirements, open trade equity and account equity; for listed contracts the valuation itself is a market value of the position, never by itself a profit, loss or margin amount. A valuation is a measure derived from a position, not the position itself.
 
 **Example.** Client A's futures are valued at tonight's settlement price; its cleared swap with CCP Z is valued at the CCP's net present value.
 

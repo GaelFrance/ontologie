@@ -94,7 +94,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 *An official statement that a rule will not be enforced, or does not apply, for some firms or products, usually for a time and on conditions.*
 
-**Definition.** Rule provision issued by an authority or its staff that removes, defers or modifies the effect of another provision for named parties or a defined class, often for a limited period and on conditions: exemption, no-action relief, transitional measure, supervisory forbearance statement or deferral. It never amends the provision it relieves.
+**Definition.** Rule provision issued by an authority or its staff that removes, defers or modifies the effect of another provision for named parties or a defined class, often for a limited period and on conditions: exemption, no-action relief, transitional measure, supervisory forbearance statement or deferral. Its legal effect is recorded separately from its form: exemption (the provision does not apply to the beneficiaries), deferral (its application is postponed) or non-enforcement position (an authority or its staff states it will not take or recommend enforcement action; the provision still applies, as with a staff no-action letter). It never amends the provision it relieves.
 
 **Example.** Regulator R's staff states it will not recommend enforcement of a reporting requirement against swap dealers for a stated period while systems are updated.
 
@@ -102,7 +102,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Kind of:** [Rule Provision](#rule-provision)
 
-**Values (draft list):** exemption; no-action relief; transitional measure; supervisory forbearance; deferral; exemptive order
+**Values (draft list):** form: exemption; no-action relief; transitional measure; supervisory forbearance; deferral; exemptive order · legal effect: exemption; deferral; non-enforcement position
 
 **Words people use:** “no-action letter” (US, contextual); “forbearance” (contextual); “temporary relief”
 
@@ -110,7 +110,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Connected to:**
 
-- *removes or defers* [Regulatory Obligation](#regulatory-obligation)
+- *relieves* [Regulatory Obligation](#regulatory-obligation) — The legal effect (exemption, deferral or non-enforcement position) is stated on the relief; a non-enforcement position does not remove the obligation. Label changed 2026-11-09 (was removes_or_defers).
 - *is issued by* [Regulatory Authority](#regulatory-authority)
 - *can depend on* [Regulatory Classification](#regulatory-classification)
 
@@ -528,13 +528,13 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 *A cap, set by a regulator or a venue, on how many contracts one holder may hold, or a level above which it is watched or reported.*
 
-**Definition.** Maximum position, or a position level that triggers scrutiny (accountability level) or reporting (reportable level), in a commodity derivative or other listed contract, set by a regulator or by a trading venue under its rules for the positions held or controlled by one person or group, aggregated across accounts and firms as the rule states, for a stated period (spot month, single month or all months) and net or by side, with the exemptions the rule allows (for example bona fide hedging). It applies to the holder of the positions; monitoring it for clients is a firm duty recorded in the internal layer. Distinct from a Clearing Limit, which a clearing member sets for its own credit and risk control.
+**Definition.** Maximum position, or a position level that triggers scrutiny (accountability level) or reporting (reportable level), in a commodity derivative or other listed contract, set by a regulator or by a trading venue under its rules for the positions held or controlled by one person or group, aggregated across accounts and firms as the rule states, for a stated period (spot month, single month or all months) and net or by side, with the exemptions the rule allows (for example bona fide hedging). Each level states its kind: a limit (exceeding it is a breach), an accountability level (exceeding it lets the venue ask for information or require action, but is not in itself a breach) or a reportable level (reaching it triggers reporting); the consequence follows the kind and the rule, never the amount alone. It applies to the holder of the positions; monitoring it for clients is a firm duty recorded in the internal layer. Distinct from a Clearing Limit, which a clearing member sets for its own credit and risk control.
 
 **Example.** Fund F approaches the spot-month limit on a commodity future at Exchange X and must reduce its position before expiry.
 
 **Not to be confused with.** Clearing Limit: set by the clearing broker for its own credit risk, not by a regulator or venue.
 
-**Values (draft list):** position limit; accountability level; reportable level; spot month; single month; all months combined
+**Values (draft list):** level kind: limit; accountability level; reportable level · period: spot month; single month; all months combined
 
 **Words people use:** “accountability level, reportable level” (US exchanges and regulators)
 

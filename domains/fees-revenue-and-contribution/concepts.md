@@ -546,7 +546,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 *The agreed rules that say how revenue figures are put together.*
 
-**Definition.** Approved, versioned set of rules under which management revenue, cost and contribution are reported: observing entity, attribution rule (per service to the contractual client, roll-up to commercial group, intra-group elimination), period and date role, reporting currency and conversion rule, gross or net presentation of pass-through charges and rebates, split rule for bundled fees, and the income streams included.
+**Definition.** Approved, versioned set of rules under which management revenue, cost and contribution are reported: observing entity, attribution rule (per service to the contractual client, roll-up to commercial group, intra-group elimination), period and date role, reporting currency and conversion rule, gross or net presentation of pass-through charges and rebates, split rule for bundled fees, and the income streams included. Each economic component is counted once: where one measure includes another (for example clearing revenue including collateral revenue when the Collateral Manager so decides), the basis states it and the two are never added together for the same scope.
 
 **Example.** Revenue reported per contracting entity, by CCP clearing date, in euro, with exchange fees shown net and collateral income shown separately.
 
