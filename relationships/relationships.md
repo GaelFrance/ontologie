@@ -65,7 +65,7 @@ These are logical relation proposals, not database foreign keys. Source/target a
 | LD-R0057 | LD-C0065 | applies_to | LD-C0020 / LD-C0022 / LD-C0023 / LD-C0046 / LD-C0028 | A step of the process or obligation concerned; versioned by supersession. |
 | LD-R0058 | LD-C0065 | relative_to | LD-C0066 | Deadline in local time against the named calendar's business date. |
 | LD-R0059 | LD-C0015 | resolved_against | LD-C0066 | Together with a date-role value and time zone; both mandatory in operational queries. |
-| LD-R0060 | LD-C0068 | classifies | LD-C0002 / LD-C0003 / LD-C0010 / LD-C0009 / LD-C0008 / LD-C0051 | Entity-level statuses attach to the legal entity, relationship-level statuses to the role assignment; never to the Client role generically or to a commercial group. |
+| LD-R0060 | LD-C0068 | classifies | LD-C0002 / LD-C0003 / LD-C0010 / LD-C0009 / LD-C0008 / LD-C0051 / LD-C0014 / LD-C0062 / LD-C0013 / LD-C0018 | Entity-level statuses attach to the legal entity, relationship-level statuses to the role assignment; never to the Client role generically or to a commercial group. A status the regime gives to a pair of counterparties (for example an intragroup exemption) attaches to both legal entities together, for the regime, product class and period, and is never read as a status of either one alone. Targets aligned with the definition 2026-11-09. |
 | LD-R0061 | LD-C0068 | under | LD-C0067 | Record regime, asset class where relevant, basis, effective period and evidence; valid time and record time both kept. |
 | LD-R0062 | LD-C0069 | held_in_name_of | LD-C0007 | The clearing member in whose name the CCP opens the account. |
 | LD-R0063 | LD-C0069 | within | LD-C0051 | Account types and their margining basis are defined per clearing service. |
@@ -159,7 +159,7 @@ Structure links (part of, step in, state of) and plain connections proposed by t
 | LD-R0140 | LD-C0094 | can_have_its_own_fee_schedule | LD-C0032 | — |
 | LD-R0141 | LD-C0094 | can_carry_its_own_regulatory_classification | LD-C0068 | — |
 | LD-R0142 | LD-C0094 | can_have_its_own_calendar_or_sessions | LD-C0066 | — |
-| LD-R0143 | LD-C0095 | is_made_of | LD-C0095 | — |
+| LD-R0143 | LD-C0095 | has_leg | LD-C0014 | Each leg states its instrument, ratio and side. Corrected 2026-11-09 (was a strategy made of strategies). |
 | LD-R0144 | LD-C0095 | is_executed_as_one_execution_per_leg | LD-C0017 | — |
 | LD-R0145 | LD-C0095 | results_in_positions_in_its_legs | LD-C0026 | — |
 | LD-R0146 | LD-C0095 | may_be_charged_per_leg_or_per_strategy_by_venue_rule | LD-C0036 | — |
@@ -179,7 +179,7 @@ Structure links (part of, step in, state of) and plain connections proposed by t
 | LD-R0160 | LD-C0099 | changes_or_creates | LD-C0014 | — |
 | LD-R0161 | LD-C0099 | is_triggered_by_an_event_on | LD-C0097 | — |
 | LD-R0162 | LD-C0099 | changes_the_terms_of_positions_in | LD-C0026 | — |
-| LD-R0163 | LD-C0099 | is_announced_by_a_notice_not_itself_a_rule_change | LD-C0064 | — |
+| LD-R0163 | LD-C0099 | is_announced_by | LD-C0197 | A market notice or clearing advisory announces the adjustment; the adjustment is not itself a rule change. Corrected 2026-11-09 (target was Rule Change). |
 | LD-R0164 | LD-C0100 | part_of | LD-C0051 | Level-2 structure (2026-11 domain review). |
 | LD-R0165 | LD-C0100 | maps_one_or_more_of | LD-C0062 | — |
 | LD-R0166 | LD-C0100 | is_the_contract_in_which_positions_are_held | LD-C0026 | — |
@@ -399,7 +399,7 @@ Structure links (part of, step in, state of) and plain connections proposed by t
 | LD-R0380 | LD-C0160 | is_changed_by_a_rule_change | LD-C0064 | — |
 | LD-R0381 | LD-C0160 | is_published_for_a_clearing_service | LD-C0051 | — |
 | LD-R0382 | LD-C0160 | is_applied_in_a_margin_run | LD-C0161 | — |
-| LD-R0383 | LD-C0161 | step_in | LD-C0043 | Level-2 structure (2026-11 domain review). |
+| LD-R0383 | LD-C0161 | determines | LD-C0043 | A margin run states margin requirements as of its run time. Corrected 2026-11-09 (was step_in: a run is not a step of a measure). |
 | LD-R0384 | LD-C0161 | applies | LD-C0070 | — |
 | LD-R0385 | LD-C0161 | uses | LD-C0160 | — |
 | LD-R0386 | LD-C0161 | may_lead_to | LD-C0046 | — |
@@ -430,7 +430,7 @@ Structure links (part of, step in, state of) and plain connections proposed by t
 | LD-R0411 | LD-C0169 | step_in | LD-C0049 | Level-2 structure (2026-11 domain review). |
 | LD-R0412 | LD-C0169 | is_made_under | LD-C0071 | — |
 | LD-R0413 | LD-C0169 | may_respond_to | LD-C0046 | — |
-| LD-R0414 | LD-C0170 | part_of | LD-C0045 | Level-2 structure (2026-11 domain review). |
+| LD-R0414 | LD-C0170 | offsets_funding_effect_of | LD-C0045 | Never part of the variation margin amount; owed as a separate obligation even when paid together with it. Corrected 2026-11-09 (was part_of). |
 | LD-R0415 | LD-C0170 | gives_rise_to | LD-C0028 | — |
 | LD-R0416 | LD-C0170 | counts_in_only_if_the_management_reporting_basis_says_so | LD-C0187 | — |
 | LD-R0417 | LD-C0171 | part_of | LD-C0071 | Level-2 structure (2026-11 domain review). |
@@ -494,8 +494,8 @@ Structure links (part of, step in, state of) and plain connections proposed by t
 | LD-R0475 | LD-C0187 | is_built_in_part_from | LD-C0171 | — |
 | LD-R0476 | LD-C0187 | is_defined_by | LD-C0188 | — |
 | LD-R0477 | LD-C0188 | part_of | LD-C0039 | Level-2 structure (2026-11 domain review). |
-| LD-R0478 | LD-C0188 | is_measured_under | LD-C0040 | — |
-| LD-R0479 | LD-C0188 | is_measured_under | LD-C0074 | — |
+| LD-R0478 | LD-C0040 | is_measured_under | LD-C0188 | Corrected 2026-11-09 (direction was reversed). |
+| LD-R0479 | LD-C0074 | is_measured_under | LD-C0188 | Corrected 2026-11-09 (direction was reversed). |
 | LD-R0480 | LD-C0188 | rolls_revenue_up_to | LD-C0073 | — |
 | LD-R0481 | LD-C0188 | sets_the_date_role_of | LD-C0015 | — |
 | LD-R0482 | LD-C0189 | part_of | LD-C0074 | Level-2 structure (2026-11 domain review). |
@@ -530,7 +530,7 @@ Structure links (part of, step in, state of) and plain connections proposed by t
 | LD-R0511 | LD-C0196 | relates_two | LD-C0067 | — |
 | LD-R0512 | LD-C0196 | is_a_condition_of | LD-C0202 | — |
 | LD-R0513 | LD-C0196 | can_change_the_treatment_of_trades_on | LD-C0009 | — |
-| LD-R0514 | LD-C0197 | part_of | LD-C0064 | Level-2 structure (2026-11 domain review). |
+| LD-R0514 | LD-C0197 | announces | LD-C0064 | One notice can announce several rule changes and one change several notices. Corrected 2026-11-09 (was part_of). |
 | LD-R0515 | LD-C0198 | step_in | LD-C0064 | Level-2 structure (2026-11 domain review). |
 | LD-R0516 | LD-C0198 | is_opened_by | LD-C0197 | — |
 | LD-R0517 | LD-C0198 | closes_on_a | LD-C0015 | — |
@@ -569,7 +569,7 @@ Structure links (part of, step in, state of) and plain connections proposed by t
 | LD-R0550 | LD-C0208 | compares | LD-C0026 | — |
 | LD-R0551 | LD-C0208 | is_keyed_by | LD-C0069 | — |
 | LD-R0552 | LD-C0208 | produces | LD-C0207 | — |
-| LD-R0553 | LD-C0209 | part_of | LD-C0030 | Level-2 structure (2026-11 domain review). |
+| LD-R0553 | LD-C0209 | handles | LD-C0030 | One case can handle several exceptions. Corrected 2026-11-09 (was part_of). |
 | LD-R0554 | LD-C0209 | may_concern | LD-C0207 | — |
 | LD-R0555 | LD-C0209 | may_concern | LD-C0022 | — |
 | LD-R0556 | LD-C0210 | state_of | LD-C0028 | Level-2 structure (2026-11 domain review). |

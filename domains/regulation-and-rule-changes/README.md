@@ -34,13 +34,13 @@ Derivatives execution and clearing run on rules written by others: regulators wr
     - **[Phase-in Step](concepts.md#phase-in-step)** — One of the dates at which a new rule starts to apply to one group of firms or products.
   - **[Regulated Product Class](concepts.md#regulated-product-class)** — A legally defined group of derivatives that a rule refers to, such as 'euro fixed-to-floating interest rate swaps from 28 days to 50 years'.
 - **[Rule Change](concepts.md#rule-change)** — A change to a rule or to a published specification, followed from proposal or consultation until it applies, with its status and its dates.
-  - **[Change Notice](concepts.md#change-notice)** — The circular, notice or publication through which a change is announced.
   - **[Consultation](concepts.md#consultation)** — The period during which a regulator or CCP asks the market to comment on a proposed rule.
   - **[Rule Change Approval](concepts.md#rule-change-approval)** — The regulator's sign-off of a CCP's or exchange's rule change, or the CCP's own certification where that is how the regime works.
   - **[Change Impact Assessment](concepts.md#change-impact-assessment)** — The firm's written view of what a rule change touches and what it will do about it.
     - **[Regulatory Interpretation](concepts.md#regulatory-interpretation)** — Someone's written reading of what a rule means, kept separate from the rule itself.
 - **[Regulatory Classification](concepts.md#regulatory-classification)** — A status that a regime gives to someone or something for a period, such as 'financial counterparty above the clearing threshold' or 'recognised third-country CCP'.
   - **[Regulatory Authorisation](concepts.md#regulatory-authorisation)** — An official licence or registration that lets a firm, CCP or venue do a stated activity in a jurisdiction.
+- **[Change Notice](concepts.md#change-notice)** — The circular, notice or publication through which a change is announced.
 - **[Regulatory Authority](concepts.md#regulatory-authority)** — A public body that makes or enforces financial rules, such as a market supervisor or a central bank.
 - **[Regulatory Reporting Role](concepts.md#regulatory-reporting-role)** — The party a regulation names as responsible for a given report on a trade.
 - **[Position Limit](concepts.md#position-limit)** — A cap, set by a regulator or a venue, on how many contracts one holder may hold, or a level above which it is watched or reported.

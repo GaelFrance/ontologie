@@ -26,11 +26,11 @@ ETD: [Allocation Instruction](../execution/concepts.md#allocation-instruction) �
 
 - **[Give-up Agreement](concepts.md#give-up-agreement)** — The signed agreement that lets a client trade with one broker and clear with another, and says who pays and who is responsible if the clearing broker does not take the trade.
 - **[Give-up / Take-up Process](concepts.md#give-up--take-up-process)** — The hand-over of an executed listed trade, in whole or in part, from the clearing member that holds it to the clearing member that will clear it for the client; give-in is the same hand-over seen by the receiver.
-  - **[Give-up Designated in Advance](concepts.md#give-up-designated-in-advance)** — A give-up where the clearing broker is named up front and the CCP books the trade straight to it.
-  - **[Give-up after First Registration](concepts.md#give-up-after-first-registration)** — A give-up where the trade first lands with the executing side's clearing member and is handed over afterwards.
   - **[Clearing Member Acceptance](concepts.md#clearing-member-acceptance)** — The receiving clearing member's yes or no (or partial yes) to taking clearing responsibility for a trade, whether by an explicit take-up, automatically within a limit, or by consenting to an OTC clearing submission.
     - **[Take-up](concepts.md#take-up)** — The receiving clearing member saying 'yes, I take this give-up line' (or part of it, or no).
     - **[Submission Acceptance](concepts.md#submission-acceptance)** — The OTC clearing broker's yes or no to clearing a swap that has been sent for clearing.
+  - **[Give-up Designated in Advance](concepts.md#give-up-designated-in-advance)** — A give-up where the clearing broker is named up front and the CCP books the trade straight to it.
+  - **[Give-up after First Registration](concepts.md#give-up-after-first-registration)** — A give-up where the trade first lands with the executing side's clearing member and is handed over afterwards.
   - **[Give-up Line](concepts.md#give-up-line)** — One request to hand a stated quantity of a trade to one other clearing member's account; give-up progress is tracked line by line.
   - **[Give-up Registration](concepts.md#give-up-registration)** — The moment the CCP actually books the given-up quantity into the receiving member's account; this is what makes a give-up complete.
 - **[Clearing Acceptance](concepts.md#clearing-acceptance)** — The CCP accepting a trade into one of its clearing services and registering it in a clearing member's account.

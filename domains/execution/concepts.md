@@ -29,7 +29,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Fill” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Instruction · level 1 · Draft · reference LD-C0016 · approved by the Listed Execution product owner</sub>
+<sub>Instruction · level 1 · Draft · reference LD-C0016 · accountable owner: the Listed Execution product owner (not yet approved)</sub>
 
 ### Client Order
 
@@ -55,7 +55,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is worked through* [Child Order](#child-order)
 - *is filled by* [Client Execution](#client-execution)
 
-<sub>Instruction · level 2 · Draft · reference LD-C0117 · approved by the Listed Execution product owner</sub>
+<sub>Instruction · level 2 · Draft · reference LD-C0117 · accountable owner: the Listed Execution product owner (not yet approved)</sub>
 
 ### Child Order
 
@@ -81,7 +81,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is filled by* [Venue Execution](#venue-execution)
 - *may be routed through* [Third-party Executing Member](#third-party-executing-member)
 
-<sub>Instruction · level 2 · Draft · reference LD-C0118 · approved by the Listed Execution product owner</sub>
+<sub>Instruction · level 2 · Draft · reference LD-C0118 · accountable owner: the Listed Execution product owner (not yet approved)</sub>
 
 ### Pre-trade Control Check
 
@@ -106,7 +106,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *may apply* [Clearing Limit](../clearing-give-up-and-acceptance/concepts.md#clearing-limit)
 - *requires for direct market access or sponsored access orders a live* [Direct Electronic Access Arrangement](../service-offering-and-market-access/concepts.md#direct-electronic-access-arrangement)
 
-<sub>Event · level 2 · Draft · reference LD-C0119 · approved by the Listed Execution product owner</sub>
+<sub>Event · level 2 · Draft · reference LD-C0119 · accountable owner: the Listed Execution product owner (not yet approved)</sub>
 
 ### Order Handling Channel
 
@@ -125,7 +125,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Direct Electronic Access Arrangement](../service-offering-and-market-access/concepts.md#direct-electronic-access-arrangement) *is the standing permission behind orders on the channels direct market access and sponsored access* Order Handling Channel
 - [Client Order](#client-order) *has at each point in time a* Order Handling Channel
 
-<sub>Reference Concept · level 1 · Draft · reference LD-C0061 · approved by the Listed Execution product owner</sub>
+<sub>Reference Concept · level 1 · Draft · reference LD-C0061 · accountable owner: the Listed Execution product owner (not yet approved)</sub>
 
 ### Execution
 
@@ -157,7 +157,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Trade, transaction and execution” (open, answer proposed); “Fill” (open, answer proposed); “Volume” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Event · level 1 · Draft · reference LD-C0017 · approved by the Listed Execution product owner</sub>
+<sub>Event · level 1 · Draft · reference LD-C0017 · accountable owner: the Listed Execution product owner (not yet approved)</sub>
 
 ### Venue Execution
 
@@ -184,7 +184,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Client Execution](#client-execution) *reflects one or more* Venue Execution
 - [Strategy Leg Execution](#strategy-leg-execution) *is produced with* Venue Execution
 
-<sub>Event · level 2 · Draft · reference LD-C0120 · approved by the Listed Execution product owner</sub>
+<sub>Event · level 2 · Draft · reference LD-C0120 · accountable owner: the Listed Execution product owner (not yet approved)</sub>
 
 ### Client Execution
 
@@ -211,7 +211,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is split by* [Allocation](#allocation)
 - [Trade Confirmation](#trade-confirmation) *confirms* Client Execution — One execution, or the allocations made from it.
 
-<sub>Event · level 2 · Draft · reference LD-C0121 · approved by the Listed Execution product owner</sub>
+<sub>Event · level 2 · Draft · reference LD-C0121 · accountable owner: the Listed Execution product owner (not yet approved)</sub>
 
 ### Block Trade
 
@@ -236,7 +236,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is governed by* [Rule Provision](../regulation-and-rule-changes/concepts.md#rule-provision)
 - *can be given up like any other execution* [Give-up / Take-up Process](../clearing-give-up-and-acceptance/concepts.md#give-up--take-up-process)
 
-<sub>Event · level 2 · Draft · reference LD-C0122 · approved by the Listed Execution product owner</sub>
+<sub>Event · level 2 · Draft · reference LD-C0122 · accountable owner: the Listed Execution product owner (not yet approved)</sub>
 
 ### Exchange for Related Position
 
@@ -262,7 +262,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is governed by* [Rule Provision](../regulation-and-rule-changes/concepts.md#rule-provision)
 - *is linked to the trade in the related position which is not a listed trade* [Trade](#trade)
 
-<sub>Event · level 2 · Draft · reference LD-C0123 · approved by the Listed Execution product owner</sub>
+<sub>Event · level 2 · Draft · reference LD-C0123 · accountable owner: the Listed Execution product owner (not yet approved)</sub>
 
 ### Strategy Leg Execution
 
@@ -286,13 +286,13 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is in the leg* [Instrument](../instruments-venues-and-calendars/concepts.md#instrument)
 - *is usually allocated per leg by* [Allocation](#allocation)
 
-<sub>Event · level 2 · Draft · reference LD-C0124 · approved by the Listed Execution product owner</sub>
+<sub>Event · level 2 · Draft · reference LD-C0124 · accountable owner: the Listed Execution product owner (not yet approved)</sub>
 
 ### Trade
 
 *The agreed deal between two counterparties on a derivative contract, with its terms; later steps such as clearing create new linked trades rather than changing it.*
 
-**Definition.** Agreement between one pair of counterparties on a derivative contract with stated economic terms (instrument or bespoke terms, direction, quantity, price and trade date), resulting from one or more executions or from a later deriving event such as CCP interposition, allocation or transfer. A trade is distinct from the records that represent it; clearing, compression and porting create successor trades linked to it rather than changing it. Which clearing tier is meant (pre-clearing, CCP-facing or member-client) must be stated.
+**Definition.** Agreement between one pair of counterparties on a derivative contract with stated economic terms (instrument or bespoke terms, direction, quantity, price and trade date), resulting from one or more executions or from a later deriving event such as CCP interposition, allocation or transfer. A trade is distinct from the records that represent it; clearing and porting create successor trades linked to it rather than changing it, and compression ends or reduces trades and creates zero or more successor trades. Which clearing tier is meant (pre-clearing, CCP-facing or member-client) must be stated.
 
 **Example.** After Client A's fills, the executed trade between Executing Broker X and the selling member exists; at CCP Z it is replaced by trades facing the CCP.
 
@@ -325,7 +325,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Trade, transaction and execution” (open, answer proposed); “Product, instrument and OTC contract” (open, answer proposed); “The trade (clearing tier)” (open, answer proposed); “OTC and listed” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Agreement · level 1 · Draft · reference LD-C0018 · approved by the Listed Execution product owner</sub>
+<sub>Agreement · level 1 · Draft · reference LD-C0018 · accountable owner: the Listed Execution product owner (not yet approved)</sub>
 
 ### Executed Trade
 
@@ -350,7 +350,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is succeeded by under the principal model* [Client Back-to-Back Trade](../clearing-services-and-accounts/concepts.md#client-back-to-back-trade)
 - *may be given up through* [Give-up / Take-up Process](../clearing-give-up-and-acceptance/concepts.md#give-up--take-up-process)
 
-<sub>Agreement · level 2 · Draft · reference LD-C0126 · approved by the Listed Execution product owner</sub>
+<sub>Agreement · level 2 · Draft · reference LD-C0126 · accountable owner: the Listed Execution product owner (not yet approved)</sub>
 
 ### Transaction
 
@@ -366,7 +366,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Trade, transaction and execution” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Event · level 1 · Draft · reference LD-C0019 · approved by the Listed Execution product owner</sub>
+<sub>Event · level 1 · Draft · reference LD-C0019 · accountable owner: the Listed Execution product owner (not yet approved)</sub>
 
 ### Average Price Group
 
@@ -387,7 +387,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *groups* [Execution](#execution), [Trade](#trade) — Eligibility, weighting, rounding and resulting records depend on context.
 - [Client Execution](#client-execution) *may be priced through* Average Price Group
 
-<sub>Entity · level 1 · Draft · reference LD-C0021 · approved by the Listed Execution product owner</sub>
+<sub>Entity · level 1 · Draft · reference LD-C0021 · accountable owner: the Listed Execution product owner (not yet approved)</sub>
 
 ### Average Price Residual
 
@@ -409,7 +409,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 - *may give rise to a settlement obligation settled by a cash movement* [Settlement Obligation](../post-trade-operations/concepts.md#settlement-obligation)
 
-<sub>Measure · level 2 · Draft · reference LD-C0127 · approved by the Listed Execution product owner</sub>
+<sub>Measure · level 2 · Draft · reference LD-C0127 · accountable owner: the Listed Execution product owner (not yet approved)</sub>
 
 ### Allocation Instruction
 
@@ -434,7 +434,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Successful give-up” (decided 2026-11-01 (sponsor; see decision log)) — see the [review sheet](review.md).
 
-<sub>Instruction · level 1 · Draft · reference LD-C0060 · approved by the Listed Execution product owner</sub>
+<sub>Instruction · level 1 · Draft · reference LD-C0060 · accountable owner: the Listed Execution product owner (not yet approved)</sub>
 
 ### Standing Allocation Instruction
 
@@ -457,7 +457,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is often agreed alongside* [Give-up Agreement](../clearing-give-up-and-acceptance/concepts.md#give-up-agreement)
 - *drives* [Allocation](#allocation)
 
-<sub>Instruction · level 2 · Draft · reference LD-C0128 · approved by the Listed Execution product owner</sub>
+<sub>Instruction · level 2 · Draft · reference LD-C0128 · accountable owner: the Listed Execution product owner (not yet approved)</sub>
 
 ### Allocation
 
@@ -486,7 +486,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Fill” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Process · level 1 · Draft · reference LD-C0020 · approved by the Listed Execution product owner</sub>
+<sub>Process · level 1 · Draft · reference LD-C0020 · accountable owner: the Listed Execution product owner (not yet approved)</sub>
 
 ### Allocation Line
 
@@ -512,7 +512,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *gives rise to when routed to another clearing member* [Give-up Line](../clearing-give-up-and-acceptance/concepts.md#give-up-line)
 - *must be completed by* [Cut-off](../post-trade-operations/concepts.md#cut-off)
 
-<sub>Entity · level 2 · Draft · reference LD-C0129 · approved by the Listed Execution product owner</sub>
+<sub>Entity · level 2 · Draft · reference LD-C0129 · accountable owner: the Listed Execution product owner (not yet approved)</sub>
 
 ### Executing Broker
 
@@ -539,7 +539,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Executing broker, firm, entity” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Role · level 1 · Draft · reference LD-C0006 · approved by the Listed Execution product owner</sub>
+<sub>Role · level 1 · Draft · reference LD-C0006 · accountable owner: the Listed Execution product owner (not yet approved)</sub>
 
 ### Trading Venue Member
 
@@ -568,7 +568,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Executing broker, firm, entity” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Role · level 1 · Draft · reference LD-C0058 · approved by the Listed Execution product owner</sub>
+<sub>Role · level 1 · Draft · reference LD-C0058 · accountable owner: the Listed Execution product owner (not yet approved)</sub>
 
 ### Third-party Executing Member
 
@@ -594,7 +594,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is the intermediary of* [Third-Party Execution Arrangement](../service-offering-and-market-access/concepts.md#third-party-execution-arrangement)
 - *is owed* [Executing Broker Brokerage Charge](../fees-revenue-and-contribution/concepts.md#executing-broker-brokerage-charge)
 
-<sub>Role · level 2 · Draft · reference LD-C0130 · approved by the Listed Execution product owner</sub>
+<sub>Role · level 2 · Draft · reference LD-C0130 · accountable owner: the Listed Execution product owner (not yet approved)</sub>
 
 ### Execution Correction
 
@@ -620,7 +620,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is governed by the venue s error trade rules in* [Rule Provision](../regulation-and-rule-changes/concepts.md#rule-provision)
 - *may raise* [Operational Exception](../post-trade-operations/concepts.md#operational-exception)
 
-<sub>Event · level 2 · Draft · reference LD-C0125 · approved by the Listed Execution product owner</sub>
+<sub>Event · level 2 · Draft · reference LD-C0125 · accountable owner: the Listed Execution product owner (not yet approved)</sub>
 
 ### Trade Confirmation
 
@@ -643,4 +643,4 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *confirms* [Client Execution](#client-execution) — One execution, or the allocations made from it.
 - *is issued by* [Broker](../parties-and-roles/concepts.md#broker)
 
-<sub>Entity · level 2 · Draft · reference LD-C0228 · approved by the Listed Execution product owner</sub>
+<sub>Entity · level 2 · Draft · reference LD-C0228 · accountable owner: the Listed Execution product owner (not yet approved)</sub>

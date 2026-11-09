@@ -29,11 +29,9 @@ When a derivatives trade is cleared, the central counterparty (CCP) guarantees i
   - **[Client Margin Uplift](concepts.md#client-margin-uplift)** — The extra margin a clearing broker asks from a client on top of what the CCP requires.
 - **[Margin Requirement](concepts.md#margin-requirement)** — How much margin one party must provide to another, for an account, at a given time.
   - **[Initial Margin Requirement](concepts.md#initial-margin-requirement)** — Margin held to cover the loss of closing out a defaulter's positions over a few days.
-  - **[Margin Run](concepts.md#margin-run)** — One calculation of margin at a point in time, which produces the requirement figures.
+  - **[Variation Margin Requirement](concepts.md#variation-margin-requirement)** — Margin that reflects the change in value of positions at current prices, settled daily or held as collateral.
   - **[Margin Requirement Component](concepts.md#margin-requirement-component)** — One of the pieces a margin requirement is broken into on a CCP or client statement.
   - **[Margin Excess or Shortfall](concepts.md#margin-excess-or-shortfall)** — How much more, or less, collateral is held than is required.
-- **[Variation Margin Requirement](concepts.md#variation-margin-requirement)** — Margin that reflects the change in value of positions at current prices, settled daily or held as collateral.
-  - **[Price Alignment Amount](concepts.md#price-alignment-amount)** — A small interest-like payment that goes with variation margin on cleared swaps but is not part of it.
 - **[Margin Call](concepts.md#margin-call)** — A demand to deliver margin by a deadline, for the part of the requirement not already covered.
 - **[Collateral](concepts.md#collateral)** — Cash or securities actually held by one party from another to cover margin.
 - **[Collateral Asset](concepts.md#collateral-asset)** — Something that could be used as collateral, such as cash in a currency or a bond.
@@ -47,6 +45,8 @@ When a derivatives trade is cleared, the central counterparty (CCP) guarantees i
   - **[Collateral Instruction](concepts.md#collateral-instruction)** — A request to deliver, return or swap collateral, before anything has moved.
 - **[Portfolio](concepts.md#portfolio)** — A named group of positions or other items gathered for a purpose.
   - **[Margin Portfolio](concepts.md#margin-portfolio)** — The group of positions whose risks are offset against each other when margin is calculated.
+- **[Margin Run](concepts.md#margin-run)** — One calculation of margin at a point in time, which produces the requirement figures.
+- **[Price Alignment Amount](concepts.md#price-alignment-amount)** — A small interest-like payment that goes with variation margin on cleared swaps but is not part of it.
 - **[Default Fund Contribution](concepts.md#default-fund-contribution)** — A clearing member's share of the CCP's shared pool for covering another member's default.
 - **[Margin Provider](concepts.md#margin-provider)** — The party that has to give margin.
 - **[Margin Taker](concepts.md#margin-taker)** — The party that requires margin and calls for it.

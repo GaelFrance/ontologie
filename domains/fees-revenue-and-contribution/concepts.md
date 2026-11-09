@@ -4,7 +4,7 @@
 
 Concepts are grouped by family: a broad concept first, then the kinds or parts it breaks down into.
 
-**Contents:** [Fee Charge](#fee-charge) · [Client Execution Fee](#client-execution-fee) · [Pass-through Charge](#pass-through-charge) · [Bundled Execution and Clearing Fee](#bundled-execution-and-clearing-fee) · [Regulatory Transaction Fee](#regulatory-transaction-fee) · [Fee Rebate](#fee-rebate) · [Fee Adjustment](#fee-adjustment) · [Fee Invoice](#fee-invoice) · [Fee Schedule](#fee-schedule) · [Published Fee Schedule](#published-fee-schedule) · [Client Pricing Terms](#client-pricing-terms) · [Fee Rate](#fee-rate) · [Fee Incentive Programme](#fee-incentive-programme) · [Client Clearing Fee](#client-clearing-fee) · [Executing Broker Brokerage Charge](#executing-broker-brokerage-charge) · [Exchange Fee Charge](#exchange-fee-charge) · [CCP Fee Charge](#ccp-fee-charge) · [Commission](#commission) · [Revenue](#revenue) · [Execution Revenue](#execution-revenue) · [Collateral Revenue](#collateral-revenue) · [Management Reporting Basis](#management-reporting-basis) · [Cost](#cost) · [Clearing Revenue](#clearing-revenue) · [Contribution](#contribution) · [Cost Perimeter](#cost-perimeter) · [Fee Collector](#fee-collector) · [Activity Volume](#activity-volume)
+**Contents:** [Fee Charge](#fee-charge) · [Client Execution Fee](#client-execution-fee) · [CCP Fee Charge](#ccp-fee-charge) · [Pass-through Charge](#pass-through-charge) · [Bundled Execution and Clearing Fee](#bundled-execution-and-clearing-fee) · [Regulatory Transaction Fee](#regulatory-transaction-fee) · [Fee Rebate](#fee-rebate) · [Fee Adjustment](#fee-adjustment) · [Fee Invoice](#fee-invoice) · [Fee Schedule](#fee-schedule) · [Published Fee Schedule](#published-fee-schedule) · [Client Pricing Terms](#client-pricing-terms) · [Fee Rate](#fee-rate) · [Fee Incentive Programme](#fee-incentive-programme) · [Client Clearing Fee](#client-clearing-fee) · [Executing Broker Brokerage Charge](#executing-broker-brokerage-charge) · [Exchange Fee Charge](#exchange-fee-charge) · [Commission](#commission) · [Revenue](#revenue) · [Execution Revenue](#execution-revenue) · [Clearing Revenue](#clearing-revenue) · [Collateral Revenue](#collateral-revenue) · [Management Reporting Basis](#management-reporting-basis) · [Cost](#cost) · [Contribution](#contribution) · [Cost Perimeter](#cost-perimeter) · [Fee Collector](#fee-collector) · [Activity Volume](#activity-volume)
 
 ### Fee Charge
 
@@ -16,7 +16,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Not to be confused with.** Revenue: a charge is what is owed on one event; revenue is a management total built from many charges under a stated basis.
 
-**Breaks down into:** [Client Execution Fee](#client-execution-fee) (kind of), [Pass-through Charge](#pass-through-charge) (kind of), [Bundled Execution and Clearing Fee](#bundled-execution-and-clearing-fee) (kind of), [Regulatory Transaction Fee](#regulatory-transaction-fee) (kind of), [Fee Rebate](#fee-rebate) (kind of), [Fee Adjustment](#fee-adjustment) (step in), [Fee Invoice](#fee-invoice) (step in)
+**Breaks down into:** [Client Execution Fee](#client-execution-fee) (kind of), [CCP Fee Charge](#ccp-fee-charge) (kind of), [Pass-through Charge](#pass-through-charge) (kind of), [Bundled Execution and Clearing Fee](#bundled-execution-and-clearing-fee) (kind of), [Regulatory Transaction Fee](#regulatory-transaction-fee) (kind of), [Fee Rebate](#fee-rebate) (kind of), [Fee Adjustment](#fee-adjustment) (step in), [Fee Invoice](#fee-invoice) (step in)
 
 **Note.** Facets: amount certainty (estimated, final) and billing stage (accrued, invoiced, disputed, adjusted, settled, written off). Proposed definitional cardinality: exactly one debtor and one creditor. [05, 08]
 
@@ -34,7 +34,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Execution fee” (open, answer proposed); “Fee, revenue and cash received” (open, narrowed 2026-09-20, answer proposed); “Brokerage paid” (open, answer proposed); “Fee Charge and Commission types” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Obligation · level 1 · Draft · reference LD-C0031 · approved by the Revenue domain owner</sub>
+<sub>Obligation · level 1 · Draft · reference LD-C0031 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Client Execution Fee
 
@@ -58,7 +58,29 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Execution fee” (open, answer proposed); “Commission” (open, deferred by sponsor, answer proposed); “Fee Charge and Commission types” (open, answer proposed); “Volume” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Obligation · level 1 · Draft · reference LD-C0033 · approved by the Revenue domain owner</sub>
+<sub>Obligation · level 1 · Draft · reference LD-C0033 · accountable owner: the Revenue domain owner (not yet approved)</sub>
+
+### CCP Fee Charge
+
+*A fee charged by a clearing house to its clearing members for clearing and related services.*
+
+**Definition.** Fee charge whose creditor is a central counterparty, for a service of one of its clearing services (clearing or registration of trades, OTC maintenance, exercise, assignment or delivery, account and position services, holding of non-cash collateral, membership), owed by a clearing member or other participant under the CCP's fee schedule. Distinct from margin, default fund contributions, interest on cash collateral and any client charge passing it on.
+
+**Example.** CCP Z charges Clearing Broker Y a registration fee per OTC trade and a fee for holding bonds as collateral.
+
+**Not to be confused with.** Margin or default fund contribution: these are collateral the member provides, not fees.
+
+**Kind of:** [Fee Charge](#fee-charge)
+
+**Note.** Distinct from default-fund contributions and from interest on cash collateral; charges for holding non-cash collateral are CCP fee charges with service nature "collateral". [04, 05]
+
+**Connected to:**
+
+- [Pass-through Charge](#pass-through-charge) *may pass on* CCP Fee Charge
+
+**Open questions on its meaning:** “Exchange fees” (open, answer proposed); “Fee Charge and Commission types” (open, answer proposed) — see the [review sheet](review.md).
+
+<sub>Obligation · level 1 · Draft · reference LD-C0037 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Pass-through Charge
 
@@ -86,7 +108,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *may pass on* [Regulatory Transaction Fee](#regulatory-transaction-fee)
 - *is shown gross or net according to* [Management Reporting Basis](#management-reporting-basis)
 
-<sub>Obligation · level 2 · Draft · reference LD-C0179 · approved by the Revenue domain owner</sub>
+<sub>Obligation · level 2 · Draft · reference LD-C0179 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Bundled Execution and Clearing Fee
 
@@ -110,7 +132,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is a candidate reading of* [Commission](#commission)
 - *is split according to* [Management Reporting Basis](#management-reporting-basis)
 
-<sub>Obligation · level 2 · Draft · reference LD-C0180 · approved by the Revenue domain owner</sub>
+<sub>Obligation · level 2 · Draft · reference LD-C0180 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Regulatory Transaction Fee
 
@@ -133,7 +155,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Pass-through Charge](#pass-through-charge) *may pass on* Regulatory Transaction Fee
 - *is owed to including a self regulatory organisation* [Regulatory Authority](../regulation-and-rule-changes/concepts.md#regulatory-authority)
 
-<sub>Obligation · level 2 · Draft · reference LD-C0181 · approved by the Revenue domain owner</sub>
+<sub>Obligation · level 2 · Draft · reference LD-C0181 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Fee Rebate
 
@@ -159,7 +181,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is settled by* [Cash Movement](../post-trade-operations/concepts.md#cash-movement)
 - *is netted or shown gross according to* [Management Reporting Basis](#management-reporting-basis)
 
-<sub>Obligation · level 2 · Draft · reference LD-C0182 · approved by the Revenue domain owner</sub>
+<sub>Obligation · level 2 · Draft · reference LD-C0182 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Fee Adjustment
 
@@ -184,7 +206,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *may be shown on* [Fee Invoice](#fee-invoice)
 - *may resolve* [Operational Exception](../post-trade-operations/concepts.md#operational-exception)
 
-<sub>Event · level 2 · Draft · reference LD-C0183 · approved by the Revenue domain owner</sub>
+<sub>Event · level 2 · Draft · reference LD-C0183 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Fee Invoice
 
@@ -212,7 +234,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is settled by* [Cash Movement](../post-trade-operations/concepts.md#cash-movement)
 - *is checked by a fee reconciliation* [Reconciliation](../post-trade-operations/concepts.md#reconciliation)
 
-<sub>Instruction · level 2 · Draft · reference LD-C0184 · approved by the Revenue domain owner</sub>
+<sub>Instruction · level 2 · Draft · reference LD-C0184 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Fee Schedule
 
@@ -237,7 +259,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Exchange fees” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Reference Concept · level 1 · Draft · reference LD-C0032 · approved by the Revenue domain owner</sub>
+<sub>Reference Concept · level 1 · Draft · reference LD-C0032 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Published Fee Schedule
 
@@ -266,7 +288,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *applies to* [Contract Specification](../instruments-venues-and-calendars/concepts.md#contract-specification)
 - *is published alongside* [Rule Provision](../regulation-and-rule-changes/concepts.md#rule-provision)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0175 · approved by the Revenue domain owner</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0175 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Client Pricing Terms
 
@@ -294,7 +316,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *may be agreed at the level of* [Commercial Group](../parties-and-roles/concepts.md#commercial-group)
 - *may set brokerage terms together with* [Give-up Agreement](../clearing-give-up-and-acceptance/concepts.md#give-up-agreement)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0176 · approved by the Revenue domain owner</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0176 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Fee Rate
 
@@ -321,7 +343,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *may be tiered by* [Activity Volume](#activity-volume)
 - *may be changed by* [Rule Change](../regulation-and-rule-changes/concepts.md#rule-change)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0177 · approved by the Revenue domain owner</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0177 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Fee Incentive Programme
 
@@ -348,7 +370,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is introduced or changed by* [Rule Change](../regulation-and-rule-changes/concepts.md#rule-change)
 - [Activity Volume](#activity-volume) *may decide eligibility under* Fee Incentive Programme
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0178 · approved by the Revenue domain owner</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0178 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Client Clearing Fee
 
@@ -362,7 +384,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Commission” (open, deferred by sponsor, answer proposed); “Fee Charge and Commission types” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Obligation · level 1 · Draft · reference LD-C0034 · approved by the Revenue domain owner</sub>
+<sub>Obligation · level 1 · Draft · reference LD-C0034 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Executing Broker Brokerage Charge
 
@@ -386,7 +408,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Execution fee” (open, answer proposed); “Brokerage paid” (open, answer proposed); “Fee Charge and Commission types” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Obligation · level 1 · Draft · reference LD-C0035 · approved by the Revenue domain owner</sub>
+<sub>Obligation · level 1 · Draft · reference LD-C0035 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Exchange Fee Charge
 
@@ -410,27 +432,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Execution fee” (open, answer proposed); “Exchange fees” (open, answer proposed); “Fee Charge and Commission types” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Obligation · level 1 · Draft · reference LD-C0036 · approved by the Revenue domain owner</sub>
-
-### CCP Fee Charge
-
-*A fee charged by a clearing house to its clearing members for clearing and related services.*
-
-**Definition.** Fee charge whose creditor is a central counterparty, for a service of one of its clearing services (clearing or registration of trades, OTC maintenance, exercise, assignment or delivery, account and position services, holding of non-cash collateral, membership), owed by a clearing member or other participant under the CCP's fee schedule. Distinct from margin, default fund contributions, interest on cash collateral and any client charge passing it on.
-
-**Example.** CCP Z charges Clearing Broker Y a registration fee per OTC trade and a fee for holding bonds as collateral.
-
-**Not to be confused with.** Margin or default fund contribution: these are collateral the member provides, not fees.
-
-**Note.** Distinct from default-fund contributions and from interest on cash collateral; charges for holding non-cash collateral are CCP fee charges with service nature "collateral". [04, 05]
-
-**Connected to:**
-
-- [Pass-through Charge](#pass-through-charge) *may pass on* CCP Fee Charge
-
-**Open questions on its meaning:** “Exchange fees” (open, answer proposed); “Fee Charge and Commission types” (open, answer proposed) — see the [review sheet](review.md).
-
-<sub>Obligation · level 1 · Draft · reference LD-C0037 · approved by the Revenue domain owner</sub>
+<sub>Obligation · level 1 · Draft · reference LD-C0036 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Commission
 
@@ -450,7 +452,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Commission” (open, deferred by sponsor, answer proposed); “Fee Charge and Commission types” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Reference Concept · level 1 · Draft · reference LD-C0038 · approved by the Revenue domain owner</sub>
+<sub>Reference Concept · level 1 · Draft · reference LD-C0038 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Revenue
 
@@ -462,7 +464,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Not to be confused with.** Cash received: revenue can be reported before or without the money arriving.
 
-**Breaks down into:** [Execution Revenue](#execution-revenue) (kind of), [Collateral Revenue](#collateral-revenue) (kind of), [Management Reporting Basis](#management-reporting-basis) (part of)
+**Breaks down into:** [Execution Revenue](#execution-revenue) (kind of), [Clearing Revenue](#clearing-revenue) (kind of), [Collateral Revenue](#collateral-revenue) (kind of), [Management Reporting Basis](#management-reporting-basis) (part of)
 
 **Before using it, know:** Observing entity, attribution target, management basis, period, currency, gross or net of pass-through, service mix; for Execution Revenue also order handling channel (sponsor decision 2026-11-01)
 
@@ -474,7 +476,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Fee, revenue and cash received” (open, narrowed 2026-09-20, answer proposed); “Revenue by client” (open, narrowed 2026-09-20 and 2026-11-01, answer proposed); “Volume” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Measure · level 1 · Draft · reference LD-C0039 · approved by the Revenue domain owner</sub>
+<sub>Measure · level 1 · Draft · reference LD-C0039 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Execution Revenue
 
@@ -492,7 +494,27 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Revenue by client” (open, narrowed 2026-09-20 and 2026-11-01, answer proposed) — see the [review sheet](review.md).
 
-<sub>Measure · level 1 · Draft · reference LD-C0041 · approved by the Revenue domain owner</sub>
+<sub>Measure · level 1 · Draft · reference LD-C0041 · accountable owner: the Revenue domain owner (not yet approved)</sub>
+
+### Clearing Revenue
+
+*What the business earns from clearing trades, per client and per clearing service.*
+
+**Definition.** Revenue an observing entity earns from clearing services, attributed to the Service Offering (and its service kind) under which the client is served, to the contractual client of the clearing relationship, and also per Clearing Service of the CCP; it includes client clearing fees, with CCP charges passed on shown gross or net as the management reporting basis states. Collateral income is a separate stream whose inclusion is decided by the Collateral Manager and is never implicit.
+
+**Example.** Clearing revenue from Client A at CCP Z's listed derivatives service, excluding interest on its cash collateral.
+
+**Not to be confused with.** Collateral Revenue: income from client collateral, a separate stream with its own owner.
+
+**Kind of:** [Revenue](#revenue)
+
+**Note.** Inclusion of collateral income (interest on client cash, price alignment pass-through) is undecided and never implicit. [04, 05]
+
+**Before using it, know:** Observing entity, attribution target, management basis, period, currency, gross or net of pass-through, service mix; for Execution Revenue also order handling channel (sponsor decision 2026-11-01)
+
+**Open questions on its meaning:** “Revenue by client” (open, narrowed 2026-09-20 and 2026-11-01, answer proposed) — see the [review sheet](review.md).
+
+<sub>Measure · level 1 · Draft · reference LD-C0042 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Collateral Revenue
 
@@ -518,7 +540,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is built in part from* [Cash Collateral Interest](../margin-and-collateral/concepts.md#cash-collateral-interest)
 - *is defined by* [Management Reporting Basis](#management-reporting-basis)
 
-<sub>Measure · level 2 · Draft · reference LD-C0187 · approved by the Revenue domain owner</sub>
+<sub>Measure · level 2 · Draft · reference LD-C0187 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Management Reporting Basis
 
@@ -544,13 +566,13 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Bundled Execution and Clearing Fee](#bundled-execution-and-clearing-fee) *is split according to* Management Reporting Basis
 - [Fee Rebate](#fee-rebate) *is netted or shown gross according to* Management Reporting Basis
 - [Collateral Revenue](#collateral-revenue) *is defined by* Management Reporting Basis
-- *is measured under* [Cost](#cost)
-- *is measured under* [Contribution](#contribution)
+- [Cost](#cost) *is measured under* Management Reporting Basis — Corrected 2026-11-09 (direction was reversed).
+- [Contribution](#contribution) *is measured under* Management Reporting Basis — Corrected 2026-11-09 (direction was reversed).
 - *rolls revenue up to* [Commercial Group](../parties-and-roles/concepts.md#commercial-group)
 - *sets the date role of* [Business Date](../instruments-venues-and-calendars/concepts.md#business-date)
 - [Cost Perimeter](#cost-perimeter) *is versioned with* Management Reporting Basis
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0188 · approved by the Revenue domain owner</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0188 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Cost
 
@@ -568,38 +590,20 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 - [Connectivity Route](../service-offering-and-market-access/concepts.md#connectivity-route) *generates cost of category connectivity and market data* Cost
 - [Default Fund Contribution](../margin-and-collateral/concepts.md#default-fund-contribution) *gives rise to a funding cost in* Cost
-- [Management Reporting Basis](#management-reporting-basis) *is measured under* Cost
+- *is measured under* [Management Reporting Basis](#management-reporting-basis) — Corrected 2026-11-09 (direction was reversed).
 - [Cost Perimeter](#cost-perimeter) *selects categories of* Cost
 
-<sub>Measure · level 1 · Draft · reference LD-C0040 · approved by the Revenue domain owner</sub>
-
-### Clearing Revenue
-
-*What the business earns from clearing trades, per client and per clearing service.*
-
-**Definition.** Revenue an observing entity earns from clearing services, attributed to the Service Offering (and its service kind) under which the client is served, to the contractual client of the clearing relationship, and also per Clearing Service of the CCP; it includes client clearing fees, with CCP charges passed on shown gross or net as the management reporting basis states. Collateral income is a separate stream whose inclusion is decided by the Collateral Manager and is never implicit.
-
-**Example.** Clearing revenue from Client A at CCP Z's listed derivatives service, excluding interest on its cash collateral.
-
-**Not to be confused with.** Collateral Revenue: income from client collateral, a separate stream with its own owner.
-
-**Note.** Inclusion of collateral income (interest on client cash, price alignment pass-through) is undecided and never implicit. [04, 05]
-
-**Before using it, know:** Observing entity, attribution target, management basis, period, currency, gross or net of pass-through, service mix; for Execution Revenue also order handling channel (sponsor decision 2026-11-01)
-
-**Open questions on its meaning:** “Revenue by client” (open, narrowed 2026-09-20 and 2026-11-01, answer proposed) — see the [review sheet](review.md).
-
-<sub>Measure · level 1 · Draft · reference LD-C0042 · approved by the Revenue domain owner</sub>
+<sub>Measure · level 1 · Draft · reference LD-C0040 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Contribution
 
-*What a client, service or venue brings in after deducting the direct costs an approved list includes.*
+*What a client, service or venue brings in after deducting the costs an approved list includes.*
 
 **Definition.** Management revenue attributable to a target (client relationship, commercial group, service offering, venue or clearing service) less the costs within an explicitly approved cost perimeter, for a stated observing entity, period and currency; no formula or default cost perimeter is approved.
 
 **Example.** Client A's revenue less the venue and CCP fees the firm absorbed for it, for one quarter in euro.
 
-**Not to be confused with.** Profitability: deducts more, such as shared costs, funding and capital, and is not modelled yet.
+**Not to be confused with.** Revenue: before any cost. Which costs are deducted is set by the cost perimeter named with each contribution, never by the word contribution alone.
 
 **Breaks down into:** [Cost Perimeter](#cost-perimeter) (part of)
 
@@ -608,11 +612,11 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 **Connected to:**
 
 - *derived from* [Revenue](#revenue), [Cost](#cost) — Only under an approved semantic contract and cost perimeter; no formula approved.
-- [Management Reporting Basis](#management-reporting-basis) *is measured under* Contribution
+- *is measured under* [Management Reporting Basis](#management-reporting-basis) — Corrected 2026-11-09 (direction was reversed).
 
 **Open questions on its meaning:** “Fee, revenue and cash received” (open, narrowed 2026-09-20, answer proposed); “Revenue by client” (open, narrowed 2026-09-20 and 2026-11-01, answer proposed) — see the [review sheet](review.md).
 
-<sub>Measure · level 1 · Draft · reference LD-C0074 · approved by the Revenue domain owner</sub>
+<sub>Measure · level 1 · Draft · reference LD-C0074 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Cost Perimeter
 
@@ -637,7 +641,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *selects categories of* [Cost](#cost)
 - *is versioned with* [Management Reporting Basis](#management-reporting-basis)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0189 · approved by the Revenue domain owner</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0189 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Fee Collector
 
@@ -660,7 +664,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *collects on behalf of the creditor* [Fee Charge](#fee-charge)
 - *may issue* [Fee Invoice](#fee-invoice)
 
-<sub>Role · level 2 · Draft · reference LD-C0185 · approved by the Revenue domain owner</sub>
+<sub>Role · level 2 · Draft · reference LD-C0185 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Activity Volume
 
@@ -685,4 +689,4 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *counts* [Execution](../execution/concepts.md#execution)
 - *counts* [Clearing Acceptance](../clearing-give-up-and-acceptance/concepts.md#clearing-acceptance)
 
-<sub>Measure · level 1 · Draft · reference LD-C0186 · approved by the Revenue domain owner</sub>
+<sub>Measure · level 1 · Draft · reference LD-C0186 · accountable owner: the Revenue domain owner (not yet approved)</sub>

@@ -4,7 +4,7 @@
 
 Concepts are grouped by family: a broad concept first, then the kinds or parts it breaks down into.
 
-**Contents:** [Give-up Agreement](#give-up-agreement) · [Give-up / Take-up Process](#give-up--take-up-process) · [Give-up Designated in Advance](#give-up-designated-in-advance) · [Give-up after First Registration](#give-up-after-first-registration) · [Clearing Member Acceptance](#clearing-member-acceptance) · [Take-up](#take-up) · [Submission Acceptance](#submission-acceptance) · [Give-up Line](#give-up-line) · [Give-up Registration](#give-up-registration) · [Clearing Acceptance](#clearing-acceptance) · [CCP Interposition](#ccp-interposition) · [Novation](#novation) · [Giving Clearing Member](#giving-clearing-member) · [Receiving Clearing Member](#receiving-clearing-member) · [Clearing Limit](#clearing-limit) · [Take-up Deadline](#take-up-deadline) · [Clearing Submission](#clearing-submission) · [Execution Agreement for Cleared Trades](#execution-agreement-for-cleared-trades)
+**Contents:** [Give-up Agreement](#give-up-agreement) · [Give-up / Take-up Process](#give-up--take-up-process) · [Clearing Member Acceptance](#clearing-member-acceptance) · [Take-up](#take-up) · [Submission Acceptance](#submission-acceptance) · [Give-up Designated in Advance](#give-up-designated-in-advance) · [Give-up after First Registration](#give-up-after-first-registration) · [Give-up Line](#give-up-line) · [Give-up Registration](#give-up-registration) · [Clearing Acceptance](#clearing-acceptance) · [CCP Interposition](#ccp-interposition) · [Novation](#novation) · [Giving Clearing Member](#giving-clearing-member) · [Receiving Clearing Member](#receiving-clearing-member) · [Clearing Limit](#clearing-limit) · [Take-up Deadline](#take-up-deadline) · [Clearing Submission](#clearing-submission) · [Execution Agreement for Cleared Trades](#execution-agreement-for-cleared-trades)
 
 ### Give-up Agreement
 
@@ -28,7 +28,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Execution Agreement for Cleared Trades](#execution-agreement-for-cleared-trades) *is the otc counterpart of* Give-up Agreement
 - [Client Pricing Terms](../fees-revenue-and-contribution/concepts.md#client-pricing-terms) *may set brokerage terms together with* Give-up Agreement
 
-<sub>Agreement · level 1 · Draft · reference LD-C0055 · approved by the ETD Clearing product owner</sub>
+<sub>Agreement · level 1 · Draft · reference LD-C0055 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 
 ### Give-up / Take-up Process
 
@@ -40,7 +40,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Not to be confused with.** Position Transfer: a transfer moves open positions between accounts later, under transfer rules; a give-up attributes a newly executed trade.
 
-**Breaks down into:** [Give-up Designated in Advance](#give-up-designated-in-advance) (kind of), [Give-up after First Registration](#give-up-after-first-registration) (kind of), [Clearing Member Acceptance](#clearing-member-acceptance) (part of), [Give-up Line](#give-up-line) (part of), [Give-up Registration](#give-up-registration) (step in)
+**Breaks down into:** [Clearing Member Acceptance](#clearing-member-acceptance) (part of), [Give-up Designated in Advance](#give-up-designated-in-advance) (kind of), [Give-up after First Registration](#give-up-after-first-registration) (kind of), [Give-up Line](#give-up-line) (part of), [Give-up Registration](#give-up-registration) (step in)
 
 **Words people use:** “give-in” (Listed give-up, receiving side's view); “give-up (OTC or FX)” (OTC and FX prime brokerage)
 
@@ -64,54 +64,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Successful give-up” (decided 2026-11-01 (sponsor; see decision log)); “Give-up, transfer, porting” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Process · level 1 · Draft · reference LD-C0022 · approved by the ETD Clearing product owner</sub>
-
-### Give-up Designated in Advance
-
-*A give-up where the clearing broker is named up front and the CCP books the trade straight to it.*
-
-**Definition.** Kind of Give-up / Take-up Process in which the receiving clearing member is designated before or at execution (on the order or through a standing arrangement) and accepts, so that the CCP registers the trade directly in the receiving member's account and the giving side never carries it. Where it exists depends on each clearing service's rules (to verify per CCP).
-
-**Example.** Client A's order on Venue V names Clearing Broker Y; Y has pre-approved Client A within a limit, so CCP Z registers the fill directly in Y's account.
-
-**Not to be confused with.** Give-up after Registration: there the executing side's clearing member holds the trade first and hands it over later.
-
-**Kind of:** [Give-up / Take-up Process](#give-up--take-up-process)
-
-**Words people use:** “give-up at registration” (former working name); “CMTA” (US listed options usage, to verify)
-
-**Before using it, know:** Clearing service and its rules on designation; whether the designation was accepted before registration.
-
-**Connected to:**
-
-- *usually relies on* [Clearing Limit](#clearing-limit)
-- *coincides with* [Clearing Acceptance](#clearing-acceptance)
-
-<sub>Process · level 2 · Draft · reference LD-C0132 · approved by the ETD Clearing product owner</sub>
-
-### Give-up after First Registration
-
-*A give-up where the trade first lands with the executing side's clearing member and is handed over afterwards.*
-
-**Definition.** Kind of Give-up / Take-up Process in which the CCP first registers the trade to the executing side's clearing member, which carries it, with its margin, fees and default exposure, until the receiving member takes it up and the CCP records the accepted quantity in the receiving member's account. Where it applies depends on each clearing service's rules (to verify per CCP).
-
-**Example.** CCP Z registers Client A's fill in the account of Executing Broker X's clearing member at matching; Clearing Broker Y takes it up two hours later.
-
-**Not to be confused with.** Position Transfer: a transfer moves open positions after the give-up window, under different rules and often for a fee.
-
-**Kind of:** [Give-up / Take-up Process](#give-up--take-up-process)
-
-**Words people use:** “give-up after registration” (former working name)
-
-**Before using it, know:** Clearing service, clearing date, deadline and its consequence; who carries margin while the line is pending.
-
-**Connected to:**
-
-- *is carried meanwhile by* [Giving Clearing Member](#giving-clearing-member)
-- *must finish before* [Take-up Deadline](#take-up-deadline)
-- *ends with* [Give-up Registration](#give-up-registration)
-
-<sub>Process · level 2 · Draft · reference LD-C0133 · approved by the ETD Clearing product owner</sub>
+<sub>Process · level 1 · Draft · reference LD-C0022 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 
 ### Clearing Member Acceptance
 
@@ -123,7 +76,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Not to be confused with.** Clearing Acceptance: that is the CCP accepting or registering the trade; the member's decision can come before it or at the same moment.
 
-**Part of:** [Give-up / Take-up Process](#give-up--take-up-process)
+**Kind of:** [Lifecycle Event](../post-trade-operations/concepts.md#lifecycle-event) · **Part of:** [Give-up / Take-up Process](#give-up--take-up-process)
 
 **Breaks down into:** [Take-up](#take-up) (kind of), [Submission Acceptance](#submission-acceptance) (kind of)
 
@@ -138,7 +91,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Cleared” (open, answer proposed); “Successful give-up” (decided 2026-11-01 (sponsor; see decision log)); “Novation and acceptance” (open, answer proposed); “Break, exception, reject, fail” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Event · level 1 · Draft · reference LD-C0053 · approved by the ETD Clearing product owner</sub>
+<sub>Event · level 1 · Draft · reference LD-C0053 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 
 ### Take-up
 
@@ -164,7 +117,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *may be applied automatically within* [Clearing Limit](#clearing-limit)
 - *is checked against* [Give-up Agreement](#give-up-agreement)
 
-<sub>Event · level 2 · Draft · reference LD-C0136 · approved by the ETD Clearing product owner</sub>
+<sub>Event · level 2 · Draft · reference LD-C0136 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 
 ### Submission Acceptance
 
@@ -190,7 +143,54 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *applies* [Clearing Limit](#clearing-limit)
 - *precedes* [Clearing Acceptance](#clearing-acceptance)
 
-<sub>Event · level 2 · Draft · reference LD-C0137 · approved by the ETD Clearing product owner</sub>
+<sub>Event · level 2 · Draft · reference LD-C0137 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
+
+### Give-up Designated in Advance
+
+*A give-up where the clearing broker is named up front and the CCP books the trade straight to it.*
+
+**Definition.** Kind of Give-up / Take-up Process in which the receiving clearing member is designated before or at execution (on the order or through a standing arrangement) and accepts, so that the CCP registers the trade directly in the receiving member's account and the giving side never carries it. Where it exists depends on each clearing service's rules (to verify per CCP).
+
+**Example.** Client A's order on Venue V names Clearing Broker Y; Y has pre-approved Client A within a limit, so CCP Z registers the fill directly in Y's account.
+
+**Not to be confused with.** Give-up after Registration: there the executing side's clearing member holds the trade first and hands it over later.
+
+**Kind of:** [Give-up / Take-up Process](#give-up--take-up-process)
+
+**Words people use:** “give-up at registration” (former working name); “CMTA” (US listed options usage, to verify)
+
+**Before using it, know:** Clearing service and its rules on designation; whether the designation was accepted before registration.
+
+**Connected to:**
+
+- *usually relies on* [Clearing Limit](#clearing-limit)
+- *coincides with* [Clearing Acceptance](#clearing-acceptance)
+
+<sub>Process · level 2 · Draft · reference LD-C0132 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
+
+### Give-up after First Registration
+
+*A give-up where the trade first lands with the executing side's clearing member and is handed over afterwards.*
+
+**Definition.** Kind of Give-up / Take-up Process in which the CCP first registers the trade to the executing side's clearing member, which carries it, with its margin, fees and default exposure, until the receiving member takes it up and the CCP records the accepted quantity in the receiving member's account. Where it applies depends on each clearing service's rules (to verify per CCP).
+
+**Example.** CCP Z registers Client A's fill in the account of Executing Broker X's clearing member at matching; Clearing Broker Y takes it up two hours later.
+
+**Not to be confused with.** Position Transfer: a transfer moves open positions after the give-up window, under different rules and often for a fee.
+
+**Kind of:** [Give-up / Take-up Process](#give-up--take-up-process)
+
+**Words people use:** “give-up after registration” (former working name)
+
+**Before using it, know:** Clearing service, clearing date, deadline and its consequence; who carries margin while the line is pending.
+
+**Connected to:**
+
+- *is carried meanwhile by* [Giving Clearing Member](#giving-clearing-member)
+- *must finish before* [Take-up Deadline](#take-up-deadline)
+- *ends with* [Give-up Registration](#give-up-registration)
+
+<sub>Process · level 2 · Draft · reference LD-C0133 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 
 ### Give-up Line
 
@@ -220,7 +220,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is completed by* [Give-up Registration](#give-up-registration)
 - [Take-up](#take-up) *answers* Give-up Line
 
-<sub>Instruction · level 2 · Draft · reference LD-C0131 · approved by the ETD Clearing product owner</sub>
+<sub>Instruction · level 2 · Draft · reference LD-C0131 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 
 ### Give-up Registration
 
@@ -245,7 +245,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *records the quantity in* [CCP Account](../clearing-services-and-accounts/concepts.md#ccp-account)
 - *changes* [Position](../clearing-services-and-accounts/concepts.md#position)
 
-<sub>Event · level 2 · Draft · reference LD-C0139 · approved by the ETD Clearing product owner</sub>
+<sub>Event · level 2 · Draft · reference LD-C0139 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 
 ### Clearing Acceptance
 
@@ -256,6 +256,8 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 **Example.** CCP Z registers the trade matched on Venue V in the house account of Executing Broker X's clearing member.
 
 **Not to be confused with.** CCP Interposition: registration is the evidence; interposition is the legal moment the CCP becomes counterparty, which the rulebook fixes and may come earlier.
+
+**Kind of:** [Lifecycle Event](../post-trade-operations/concepts.md#lifecycle-event)
 
 **Words people use:** “registration” (CCP side of clearing)
 
@@ -273,7 +275,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Cleared” (open, answer proposed); “Successful give-up” (decided 2026-11-01 (sponsor; see decision log)); “Novation and acceptance” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Event · level 1 · Draft · reference LD-C0023 · approved by the ETD Clearing product owner</sub>
+<sub>Event · level 1 · Draft · reference LD-C0023 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 
 ### CCP Interposition
 
@@ -284,6 +286,8 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 **Example.** Under CCP Z's rules the CCP becomes counterparty when the trade is matched on Venue V, before any give-up happens.
 
 **Not to be confused with.** Clearing Acceptance: the CCP's acceptance or registration message is evidence of interposition, not the interposition itself.
+
+**Kind of:** [Lifecycle Event](../post-trade-operations/concepts.md#lifecycle-event)
 
 **Words people use:** “cleared” (Any clearing service); “open offer” (Clearing)
 
@@ -297,7 +301,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Cleared” (open, answer proposed); “Novation and acceptance” (open, answer proposed); “The trade (clearing tier)” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Event · level 1 · Draft · reference LD-C0054 · approved by the ETD Clearing product owner</sub>
+<sub>Event · level 1 · Draft · reference LD-C0054 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 
 ### Novation
 
@@ -309,6 +313,8 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Not to be confused with.** Open offer: under open offer the CCP is counterparty from the start, so no earlier contract is replaced.
 
+**Kind of:** [Lifecycle Event](../post-trade-operations/concepts.md#lifecycle-event)
+
 **Note.** Generic legal concept: one possible mechanism of CCP interposition, and also used for bilateral step-in and step-out outside clearing. Never infer novation from "cleared" or "ported". [02, 03, 06]
 
 **Connected to:**
@@ -318,7 +324,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Cleared” (open, answer proposed); “Novation and acceptance” (open, answer proposed); “Give-up, transfer, porting” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Event · level 1 · Draft · reference LD-C0024 · approved by the ETD Clearing product owner</sub>
+<sub>Event · level 1 · Draft · reference LD-C0024 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 
 ### Giving Clearing Member
 
@@ -343,7 +349,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *gives up in* [Give-up / Take-up Process](#give-up--take-up-process)
 - *holds the trade in until take up* [CCP Account](../clearing-services-and-accounts/concepts.md#ccp-account)
 
-<sub>Role · level 2 · Draft · reference LD-C0134 · approved by the ETD Clearing product owner</sub>
+<sub>Role · level 2 · Draft · reference LD-C0134 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 
 ### Receiving Clearing Member
 
@@ -368,7 +374,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *decides* [Clearing Member Acceptance](#clearing-member-acceptance)
 - *receives the trade in* [CCP Account](../clearing-services-and-accounts/concepts.md#ccp-account)
 
-<sub>Role · level 2 · Draft · reference LD-C0135 · approved by the ETD Clearing product owner</sub>
+<sub>Role · level 2 · Draft · reference LD-C0135 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 
 ### Clearing Limit
 
@@ -379,8 +385,6 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 **Example.** Clearing Broker Y lets Executing Broker X give up Client A's trades in one futures contract up to a set number of lots per day.
 
 **Not to be confused with.** Margin Requirement: the amount of margin owed on positions already held; a clearing limit caps what is accepted for clearing.
-
-**Kind of:** [Rule Provision](../regulation-and-rule-changes/concepts.md#rule-provision)
 
 **Words people use:** “clearing member credit limit” (contextual)
 
@@ -396,7 +400,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is applied in* [Submission Acceptance](#submission-acceptance)
 - [Position Limit](../regulation-and-rule-changes/concepts.md#position-limit) *is distinct from* Clearing Limit
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0138 · approved by the ETD Clearing product owner</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0138 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 
 ### Take-up Deadline
 
@@ -420,7 +424,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *applies to* [Give-up / Take-up Process](#give-up--take-up-process)
 - *is set against* [Business Calendar](../instruments-venues-and-calendars/concepts.md#business-calendar)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0140 · approved by the ETD Clearing product owner</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0140 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 
 ### Clearing Submission
 
@@ -446,7 +450,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *leads to* [Clearing Acceptance](#clearing-acceptance)
 - [Execution Agreement for Cleared Trades](#execution-agreement-for-cleared-trades) *governs* Clearing Submission
 
-<sub>Instruction · level 1 · Draft · reference LD-C0141 · approved by the ETD Clearing product owner</sub>
+<sub>Instruction · level 1 · Draft · reference LD-C0141 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 
 ### Execution Agreement for Cleared Trades
 
@@ -470,4 +474,4 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is the otc counterpart of* [Give-up Agreement](#give-up-agreement)
 - *works alongside* [Client Clearing Agreement](../clearing-services-and-accounts/concepts.md#client-clearing-agreement)
 
-<sub>Agreement · level 2 · Draft · reference LD-C0142 · approved by the ETD Clearing product owner</sub>
+<sub>Agreement · level 2 · Draft · reference LD-C0142 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>

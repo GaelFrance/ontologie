@@ -24,7 +24,7 @@
 
 ## B
 
-- **[Back-up Clearing Member](domains/clearing-services-and-accounts/concepts.md#back-up-clearing-member)** — A second clearing member ready to take over a client's positions if its usual clearing member fails. *(Clearing: services, accounts and client clearing)*
+- **[Back-up Clearing Member](domains/clearing-services-and-accounts/concepts.md#back-up-clearing-member)** — A clearing member a client names in advance, or that agrees at the time of a default, to receive the client's positions if its usual clearing member fails; being named does not by itself commit it. *(Clearing: services, accounts and client clearing)*
 - **[Block Trade](domains/execution/concepts.md#block-trade)** — A large trade agreed privately between two parties and then registered on the venue under special rules. *(Listed derivatives execution)*
 - **[Branch](domains/parties-and-roles/concepts.md#branch)** — An office of a company in another place that acts for the company but is not a separate company. *(Parties, roles, clients and accounts)*
 - **[Broker](domains/parties-and-roles/concepts.md#broker)** — A firm that executes orders or clears trades for its clients as a service. *(Parties, roles, clients and accounts)*
@@ -89,7 +89,7 @@
 - **[Contract Adjustment](domains/instruments-venues-and-calendars/concepts.md#contract-adjustment)** — A change a venue makes to existing contracts because something happened to the underlying, such as a share split or special dividend. *(Instruments, venues and calendars)*
 - **[Contract Specification](domains/instruments-venues-and-calendars/concepts.md#contract-specification)** — The rulebook page of one listed contract: underlying, size, tick, expiry months, settlement method and trading hours, from which all its series are created. *(Instruments, venues and calendars)*
 - **[Contracting Entity](domains/parties-and-roles/concepts.md#contracting-entity)** — Which of a provider's legal entities has the contract with the client for a given service. *(Parties, roles, clients and accounts)*
-- **[Contribution](domains/fees-revenue-and-contribution/concepts.md#contribution)** — What a client, service or venue brings in after deducting the direct costs an approved list includes. *(Fees, revenue and contribution)*
+- **[Contribution](domains/fees-revenue-and-contribution/concepts.md#contribution)** — What a client, service or venue brings in after deducting the costs an approved list includes. *(Fees, revenue and contribution)*
 - **[Cost](domains/fees-revenue-and-contribution/concepts.md#cost)** — What the business spends to deliver its services, measured under stated management rules. *(Fees, revenue and contribution)*
 - **[Cost Perimeter](domains/fees-revenue-and-contribution/concepts.md#cost-perimeter)** — The agreed list of costs that are deducted to get contribution. *(Fees, revenue and contribution)*
 - **[Counterparty Regulatory Status](domains/parties-and-roles/concepts.md#counterparty-regulatory-status)** — The regulatory status a company has in its own right, which decides rules such as whether it must clear. *(Parties, roles, clients and accounts)*

@@ -36,8 +36,8 @@ Once a derivative trade is executed, a central counterparty (CCP) steps in betwe
   - **[CCP Position Account](concepts.md#ccp-position-account)** — A sub-account at the CCP where positions are kept apart inside a larger account.
 - **[Segregation Model](concepts.md#segregation-model)** — The rules that say how a client's positions and assets are kept apart from the clearing member's and from other clients'.
 - **[Agreement](concepts.md#agreement)** — Any arrangement that creates rights and duties between parties, whether signed or accepted by joining published rules.
-- **[Client Clearing Agreement](concepts.md#client-clearing-agreement)** — The contract between a client and its clearing broker that sets how the client is cleared: legal model, segregation, margin, collateral, limits, fees and what happens on default.
-  - **[Segregation Election](concepts.md#segregation-election)** — The client's recorded choice of how its positions and collateral are segregated at a given CCP.
+  - **[Client Clearing Agreement](concepts.md#client-clearing-agreement)** — The contract between a client and its clearing broker that sets how the client is cleared: legal model, segregation, margin, collateral, limits, fees and what happens on default.
+    - **[Segregation Election](concepts.md#segregation-election)** — The client's recorded choice of how its positions and collateral are segregated at a given CCP.
 - **[Position](concepts.md#position)** — What is open in an account on a given day: how many contracts are held long and short, or which cleared swaps are still running.
   - **[Listed Position](concepts.md#listed-position)** — How many contracts of a listed future or option series are open, long and short, in one account on one day.
   - **[Cleared OTC Position](concepts.md#cleared-otc-position)** — The cleared swaps still running in one account on one day.
@@ -46,7 +46,7 @@ Once a derivative trade is executed, a central counterparty (CCP) steps in betwe
 - **[Position Transfer](concepts.md#position-transfer)** — Moving open positions from one CCP account to another on request, for example when a client changes clearing broker.
 - **[Clearing Member Default](concepts.md#clearing-member-default)** — The CCP formally declares that a member has failed, which starts the default procedures.
   - **[Porting](concepts.md#porting)** — Moving clients' positions and collateral from a failed clearing member to a back-up member, or closing them out if that fails.
-- **[Back-up Clearing Member](concepts.md#back-up-clearing-member)** — A second clearing member ready to take over a client's positions if its usual clearing member fails.
+- **[Back-up Clearing Member](concepts.md#back-up-clearing-member)** — A clearing member a client names in advance, or that agrees at the time of a default, to receive the client's positions if its usual clearing member fails; being named does not by itself commit it.
 - **[Sponsoring Clearing Member](concepts.md#sponsoring-clearing-member)** — A clearing member that stands behind a client admitted directly to a CCP under a sponsored model.
 - **[Position Adjustment](concepts.md#position-adjustment)** — A permitted correction or close-out of a position at the CCP that does not involve a new trade.
 - **[Client Default](concepts.md#client-default)** — When a clearing broker declares its own client in default and takes action on that client's positions.

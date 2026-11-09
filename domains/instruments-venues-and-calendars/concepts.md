@@ -29,7 +29,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Product, instrument and OTC contract” (open, answer proposed); “Product” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Reference Concept · level 1 · Draft · reference LD-C0013 · approved by the Reference & Client Data</sub>
+<sub>Reference Concept · level 1 · Draft · reference LD-C0013 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Contract Specification
 
@@ -61,7 +61,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Product, instrument and OTC contract” (open, answer proposed); “Product” (open, answer proposed); “Eligible, mandatory, offered, covered” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Reference Concept · level 1 · Draft · reference LD-C0062 · approved by the Reference & Client Data</sub>
+<sub>Reference Concept · level 1 · Draft · reference LD-C0062 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Underlying
 
@@ -88,7 +88,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *corporate events on it can trigger* [Contract Adjustment](#contract-adjustment)
 - *its market s holidays can close a contract* [Business Calendar](#business-calendar)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0097 · approved by the Reference & Client Data</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0097 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Key-Date Rule
 
@@ -115,7 +115,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *gives each series its key dates* [Instrument](#instrument)
 - *is changed by and a calendar change can move its results* [Rule Change](../regulation-and-rule-changes/concepts.md#rule-change)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0098 · approved by the Reference & Client Data</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0098 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Instrument
 
@@ -136,6 +136,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 **Connected to:**
 
 - *listed under* [Contract Specification](#contract-specification) — Listed instruments only; one specification version effective at listing.
+- [Listed Strategy](#listed-strategy) *has leg* Instrument — Each leg states its instrument, ratio and side. Corrected 2026-11-09 (was a strategy made of strategies).
 - [Underlying](#underlying) *can itself be option on a future* Instrument
 - [Key-Date Rule](#key-date-rule) *gives each series its key dates* Instrument
 - [Contract Adjustment](#contract-adjustment) *changes or creates* Instrument
@@ -145,7 +146,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Product, instrument and OTC contract” (open, answer proposed); “Product” (open, answer proposed); “OTC and listed” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Entity · level 1 · Draft · reference LD-C0014 · approved by the Reference & Client Data</sub>
+<sub>Entity · level 1 · Draft · reference LD-C0014 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Listed Strategy
 
@@ -167,12 +168,12 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Connected to:**
 
-- *is made of* [Listed Strategy](#listed-strategy)
+- *has leg* [Instrument](#instrument) — Each leg states its instrument, ratio and side. Corrected 2026-11-09 (was a strategy made of strategies).
 - *is executed as one execution per leg* [Execution](../execution/concepts.md#execution)
 - *results in positions in its legs* [Position](../clearing-services-and-accounts/concepts.md#position)
 - *may be charged per leg or per strategy by venue rule* [Exchange Fee Charge](../fees-revenue-and-contribution/concepts.md#exchange-fee-charge)
 
-<sub>Entity · level 2 · Draft · reference LD-C0095 · approved by the Reference & Client Data</sub>
+<sub>Entity · level 2 · Draft · reference LD-C0095 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Flexible Series
 
@@ -196,7 +197,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *may have its own eligibility in* [Clearing Service](../clearing-services-and-accounts/concepts.md#clearing-service)
 - *may have its own fees under* [Fee Schedule](../fees-revenue-and-contribution/concepts.md#fee-schedule)
 
-<sub>Entity · level 2 · Draft · reference LD-C0096 · approved by the Reference & Client Data</sub>
+<sub>Entity · level 2 · Draft · reference LD-C0096 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Settlement Price
 
@@ -223,7 +224,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is used in its final kind by* [Final Settlement](../post-trade-operations/concepts.md#final-settlement)
 - [Position Valuation](../margin-and-collateral/concepts.md#position-valuation) *uses* Settlement Price — Listed positions; cleared OTC positions are valued by the CCP's own valuation, not by a settlement price.
 
-<sub>Measure · level 2 · Draft · reference LD-C0103 · approved by the Reference & Client Data</sub>
+<sub>Measure · level 2 · Draft · reference LD-C0103 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Trading Venue
 
@@ -261,7 +262,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “OTC and listed” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Entity · level 1 · Draft · reference LD-C0009 · approved by the Reference & Client Data</sub>
+<sub>Entity · level 1 · Draft · reference LD-C0009 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Trading Venue Segment
 
@@ -286,7 +287,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *can carry its own regulatory classification* [Regulatory Classification](../regulation-and-rule-changes/concepts.md#regulatory-classification)
 - *can have its own calendar or sessions* [Business Calendar](#business-calendar)
 
-<sub>Entity · level 2 · Draft · reference LD-C0094 · approved by the Reference & Client Data</sub>
+<sub>Entity · level 2 · Draft · reference LD-C0094 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Business Date
 
@@ -310,7 +311,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Business date” (open, answer proposed); “Dates of a rule change” (open, answer proposed); “Current, as of, as known at” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Reference Concept · level 1 · Draft · reference LD-C0015 · approved by the Reference & Client Data</sub>
+<sub>Reference Concept · level 1 · Draft · reference LD-C0015 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Business Calendar
 
@@ -336,7 +337,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Business date” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Reference Concept · level 1 · Draft · reference LD-C0066 · approved by the Reference & Client Data</sub>
+<sub>Reference Concept · level 1 · Draft · reference LD-C0066 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Trading Session
 
@@ -363,7 +364,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *positions cut offs relative to* [Cut-off](../post-trade-operations/concepts.md#cut-off)
 - *is changed by hours extensions* [Rule Change](../regulation-and-rule-changes/concepts.md#rule-change)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0102 · approved by the Reference & Client Data</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0102 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Processing Window
 
@@ -388,7 +389,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *dates* [Margin Run](../margin-and-collateral/concepts.md#margin-run)
 - *dates* [Position](../clearing-services-and-accounts/concepts.md#position)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0104 · approved by the Reference & Client Data</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0104 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Identifier Scheme
 
@@ -412,7 +413,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *identifies through lei* [Legal Entity](../parties-and-roles/concepts.md#legal-entity)
 - *provides matching keys for* [Source Record](../post-trade-operations/concepts.md#source-record)
 
-<sub>Reference Concept · level 1 · Draft · reference LD-C0093 · approved by the Reference & Client Data</sub>
+<sub>Reference Concept · level 1 · Draft · reference LD-C0093 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Contract Adjustment
 
@@ -437,9 +438,9 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *changes or creates* [Instrument](#instrument)
 - *is triggered by an event on* [Underlying](#underlying)
 - *changes the terms of positions in* [Position](../clearing-services-and-accounts/concepts.md#position)
-- *is announced by a notice not itself a rule change* [Rule Change](../regulation-and-rule-changes/concepts.md#rule-change)
+- *is announced by* [Change Notice](../regulation-and-rule-changes/concepts.md#change-notice) — A market notice or clearing advisory announces the adjustment; the adjustment is not itself a rule change. Corrected 2026-11-09 (target was Rule Change).
 
-<sub>Event · level 2 · Draft · reference LD-C0099 · approved by the Reference & Client Data</sub>
+<sub>Event · level 2 · Draft · reference LD-C0099 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Clearing Contract
 
@@ -465,7 +466,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is listed in* [Clearing Eligibility Schedule](#clearing-eligibility-schedule)
 - [Settlement Price](#settlement-price) *may be published per series of* Clearing Contract
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0100 · approved by the Reference & Client Data</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0100 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Clearing Eligibility Schedule
 
@@ -491,4 +492,4 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is changed by* [Rule Change](../regulation-and-rule-changes/concepts.md#rule-change)
 - *is relied on by never equal to* [Service Offering](../service-offering-and-market-access/concepts.md#service-offering)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0101 · approved by the Reference & Client Data</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0101 · accountable owner: the Reference & Client Data (not yet approved)</sub>
