@@ -95,3 +95,12 @@ Evidence: sponsor answer in the project conversation, 2026-11-01 ("accept everyt
 | 20. Late and penalty charges | Fee Charge includes late and penalty charges arising from a missed cut-off or a settlement fail. | Fee Charge definition widened; no separate concept. | LD-C0031 |
 | 21. OTC execution on venues | OTC derivatives executed on MTFs, OTFs and swap execution facilities are out of scope for the listed pilot and planned as a later extension of the execution domain. | Scope note on the execution page. | — |
 | 22. Questions for the firm | Merged company questions are answered in joint sessions with the roles named. | Joint questions kept as written. | — |
+
+## Sponsor decision — 2026-11-09 (missing concepts)
+
+Evidence: sponsor answer in the project conversation, 2026-11-09, approving the proposal to add Open Trade Equity and the alias MED and to add other missing concepts of the same importance.
+
+| Point | Decision | Consequence in the ontology | Affected IDs |
+|---|---|---|---|
+| 23. Statement measures | "Margin excess or deficit" (MED) is an alias of Margin Excess or Shortfall; Open Trade Equity, Account Cash Balance, Account Equity and Position Valuation are added to the margin domain. | Concepts added as Draft with summaries, required context and links; firm questions added on how equity is built and which valuation clients see. | LD-C0166, LD-C0223, LD-C0224, LD-C0225, LD-C0230 |
+| 24. Other missing concepts | Option Premium and Client Statement (post-trade), Trade Confirmation (execution) and Position Limit (regulation) are added. "Maintenance margin" stays a call trigger level in Margin Call Terms, as proposed for LD-A0027; a client funds requirement stays in the backlog. | Concepts added as Draft; alias rows for maintenance margin and monthly statement; backlog item and firm question on client funds. | LD-C0165, LD-C0226, LD-C0227, LD-C0228, LD-C0229 |

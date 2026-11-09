@@ -221,6 +221,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *may be published per series of* [Clearing Contract](#clearing-contract)
 - *values listed positions for* [Variation Margin Requirement](../margin-and-collateral/concepts.md#variation-margin-requirement)
 - *is used in its final kind by* [Final Settlement](../post-trade-operations/concepts.md#final-settlement)
+- [Position Valuation](../margin-and-collateral/concepts.md#position-valuation) *uses* Settlement Price — Listed positions; cleared OTC positions are valued by the CCP's own valuation, not by a settlement price.
 
 <sub>Measure · level 2 · Draft · reference LD-C0103 · approved by the Reference & Client Data</sub>
 

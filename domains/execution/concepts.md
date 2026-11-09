@@ -4,7 +4,7 @@
 
 Concepts are grouped by family: a broad concept first, then the kinds or parts it breaks down into.
 
-**Contents:** [Order](#order) · [Client Order](#client-order) · [Child Order](#child-order) · [Pre-trade Control Check](#pre-trade-control-check) · [Order Handling Channel](#order-handling-channel) · [Execution](#execution) · [Venue Execution](#venue-execution) · [Client Execution](#client-execution) · [Block Trade](#block-trade) · [Exchange for Related Position](#exchange-for-related-position) · [Strategy Leg Execution](#strategy-leg-execution) · [Trade](#trade) · [Executed Trade](#executed-trade) · [Transaction](#transaction) · [Average Price Group](#average-price-group) · [Average Price Residual](#average-price-residual) · [Allocation Instruction](#allocation-instruction) · [Standing Allocation Instruction](#standing-allocation-instruction) · [Allocation](#allocation) · [Allocation Line](#allocation-line) · [Executing Broker](#executing-broker) · [Trading Venue Member](#trading-venue-member) · [Third-party Executing Member](#third-party-executing-member) · [Execution Correction](#execution-correction)
+**Contents:** [Order](#order) · [Client Order](#client-order) · [Child Order](#child-order) · [Pre-trade Control Check](#pre-trade-control-check) · [Order Handling Channel](#order-handling-channel) · [Execution](#execution) · [Venue Execution](#venue-execution) · [Client Execution](#client-execution) · [Block Trade](#block-trade) · [Exchange for Related Position](#exchange-for-related-position) · [Strategy Leg Execution](#strategy-leg-execution) · [Trade](#trade) · [Executed Trade](#executed-trade) · [Transaction](#transaction) · [Average Price Group](#average-price-group) · [Average Price Residual](#average-price-residual) · [Allocation Instruction](#allocation-instruction) · [Standing Allocation Instruction](#standing-allocation-instruction) · [Allocation](#allocation) · [Allocation Line](#allocation-line) · [Executing Broker](#executing-broker) · [Trading Venue Member](#trading-venue-member) · [Third-party Executing Member](#third-party-executing-member) · [Execution Correction](#execution-correction) · [Trade Confirmation](#trade-confirmation)
 
 ### Order
 
@@ -209,6 +209,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *may be priced through* [Average Price Group](#average-price-group)
 - *is the basis of* [Client Execution Fee](../fees-revenue-and-contribution/concepts.md#client-execution-fee)
 - *is split by* [Allocation](#allocation)
+- [Trade Confirmation](#trade-confirmation) *confirms* Client Execution — One execution, or the allocations made from it.
 
 <sub>Event · level 2 · Draft · reference LD-C0121 · approved by the Listed Execution product owner</sub>
 
@@ -320,6 +321,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Clearing Obligation](../regulation-and-rule-changes/concepts.md#clearing-obligation) *applies to* Trade
 - [Source Record](../post-trade-operations/concepts.md#source-record) *represents for example* Trade
 - [Trade Amendment](../post-trade-operations/concepts.md#trade-amendment) *changes or ends* Trade
+- [Option Premium](../post-trade-operations/concepts.md#option-premium) *is owed on* Trade — The option trade.
 
 **Open questions on its meaning:** “Trade, transaction and execution” (open, answer proposed); “Product, instrument and OTC contract” (open, answer proposed); “The trade (clearing tier)” (open, answer proposed); “OTC and listed” (open, answer proposed) — see the [review sheet](review.md).
 
@@ -619,3 +621,26 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *may raise* [Operational Exception](../post-trade-operations/concepts.md#operational-exception)
 
 <sub>Event · level 2 · Draft · reference LD-C0125 · approved by the Listed Execution product owner</sub>
+
+### Trade Confirmation
+
+*The message that confirms to a client what was executed for it, at what price and cost.*
+
+**Definition.** Notice sent by an executing broker, or by a clearing broker for trades it clears, to a client confirming the details of one client execution, or of the allocations made from it: contract, side, quantity, price or average price, trade date, account, venue where required, and the fees and commissions charged, within the time and with the content that the applicable rules and the client agreement require (to verify per regime). It confirms what has been executed; it does not register the trade for clearing. Confirmation between the parties of a cleared OTC trade is outside this concept.
+
+**Example.** After Client A's order is filled on Exchange X, Broker B sends it a confirmation with quantity, average price and commission.
+
+**Not to be confused with.** Client Statement: the confirmation covers one execution or allocation; the statement covers the account for a day or a month.
+
+**Values (draft list):** per execution; per allocation; end-of-day summary
+
+**Words people use:** “confirmation, confirm” (broker to client, listed)
+
+**Before using it, know:** Issuer, client, execution or allocation confirmed, regime.
+
+**Connected to:**
+
+- *confirms* [Client Execution](#client-execution) — One execution, or the allocations made from it.
+- *is issued by* [Broker](../parties-and-roles/concepts.md#broker)
+
+<sub>Entity · level 2 · Draft · reference LD-C0228 · approved by the Listed Execution product owner</sub>

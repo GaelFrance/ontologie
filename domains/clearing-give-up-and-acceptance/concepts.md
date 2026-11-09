@@ -394,6 +394,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *may be applied by* [Pre-trade Control Check](../execution/concepts.md#pre-trade-control-check)
 - *is applied in* [Take-up](#take-up)
 - *is applied in* [Submission Acceptance](#submission-acceptance)
+- [Position Limit](../regulation-and-rule-changes/concepts.md#position-limit) *is distinct from* Clearing Limit
 
 <sub>Reference Concept · level 2 · Draft · reference LD-C0138 · approved by the ETD Clearing product owner</sub>
 

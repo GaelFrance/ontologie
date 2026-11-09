@@ -610,3 +610,20 @@ Structure links (part of, step in, state of) and plain connections proposed by t
 | LD-R0591 | LD-C0222 | may_change | LD-C0026 | — |
 | LD-R0592 | LD-C0222 | may_raise | LD-C0030 | — |
 | LD-R0593 | LD-C0065 | set_by | LD-C0063 / LD-C0012 | A cut-off is set by a rule provision or by a term of an agreement (sponsor decision 2026-11-01); only rule-set cut-offs follow the rule change lifecycle. |
+| LD-R0594 | LD-C0223 | part_of | LD-C0225 | With the cash balance, gives total equity. |
+| LD-R0595 | LD-C0224 | part_of | LD-C0225 | — |
+| LD-R0596 | LD-C0166 | may_be_stated_against | LD-C0225 | Where the client agreement margins on account equity (mainly US futures), account equity is the held side compared with the requirement. |
+| LD-R0597 | LD-C0223 | is_derived_from | LD-C0230 | Listed futures and futures-style options. |
+| LD-R0598 | LD-C0230 | values | LD-C0026 | — |
+| LD-R0599 | LD-C0230 | uses | LD-C0103 | Listed positions; cleared OTC positions are valued by the CCP's own valuation, not by a settlement price. |
+| LD-R0600 | LD-C0045 | is_based_on | LD-C0230 | — |
+| LD-R0601 | LD-C0226 | gives_rise_to | LD-C0028 | Premium-style options; futures-style options carry no upfront premium. |
+| LD-R0602 | LD-C0226 | is_owed_on | LD-C0018 | The option trade. |
+| LD-R0603 | LD-C0205 | has_as_a_kind | LD-C0227 | — |
+| LD-R0604 | LD-C0227 | is_issued_by | LD-C0005 | Clearing or executing broker, to its client. |
+| LD-R0605 | LD-C0227 | states | LD-C0225 | Also states the cash balance, open trade equity, margin requirement and excess or shortfall. |
+| LD-R0606 | LD-C0228 | confirms | LD-C0121 | One execution, or the allocations made from it. |
+| LD-R0607 | LD-C0228 | is_issued_by | LD-C0005 | — |
+| LD-R0608 | LD-C0229 | set_by | LD-C0063 | A regulator's or a venue's rule. |
+| LD-R0609 | LD-C0229 | applies_to | LD-C0026 | Positions aggregated by holder or controller across accounts and firms, as the rule states. |
+| LD-R0610 | LD-C0229 | is_distinct_from | LD-C0138 | — |

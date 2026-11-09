@@ -106,3 +106,11 @@ These questions capture how **our firm** works in this domain, so the ontology c
 ### 13. Under which events do you treat a client as in default toward you, and which remedies (close-out, transfer, hedge) do you use, per regime and client clearing legal model? (Answered by Legal with credit risk.)
 
 <sub>question q22</sub>
+
+### 14. How are client money and segregated funds held and checked per regime (for example US segregated and secured amounts, UK client money), and do you add your own funds as a buffer?
+
+- **Why it matters:** Decides whether the ontology needs a client funds requirement concept (now in 'Not yet in the catalogue').
+- **How to answer:** Regimes concerned; daily check yes or no; buffer of own funds yes or no.
+- **Concepts affected:** Segregation Model, Client Account
+- **Who answers:** ETD Clearing product owner with Legal and the Collateral Manager
+<sub>question q23</sub>

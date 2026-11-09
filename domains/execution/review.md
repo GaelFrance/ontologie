@@ -5,7 +5,7 @@
 **Owner (approves the concepts in section 1):** Listed Execution product owner  
 **Reviewers:** ETD post-trade operations lead; Compliance; ETD Clearing product owner; Revenue domain owner  
 **Review wave:** 2  
-**Concepts:** 24 to approve, 13 shown for context, all Draft
+**Concepts:** 25 to approve, 13 shown for context, all Draft
 
 **Scope:** The page ends where clearing takes over. Trade: review the pre-clearing tier only (the open question “The trade (clearing tier)”). Market Access Arrangement: access to venues only. Give-up: review the giving side only. OTC derivatives traded on swap execution facilities, MTFs and OTFs are out of scope for the listed pilot and planned as a later extension of this page (decision 21).
 
@@ -16,6 +16,7 @@
 - **ETD Clearing product owner:** Is the rule "an allocation to an account carried by another clearing member starts a give-up, otherwise it is internal" right in both directions? What does the giving side still own until take-up or lapse?
 - **Compliance:** Is the line between a direct electronic access permission (an access model) and the channel of a given order clear?
 - **Revenue domain owner:** Can the client execution fee, executing brokerage (received as executing broker, or paid as clearing broker and recharged) and the venue fee be separated by creditor and charge basis (per side, round turn, ticket)? With Finance and Operations: how are average-pricing residuals treated (open question 4)?
+- **Listed Execution product owner:** Trade Confirmation is new: does it describe the confirmations clients receive?
 - **Everyone:** for each concept in section 1, is the definition **correct**, **complete** and **worded the way your teams use it**? Write *OK*, *Change* (say what) or *Unsure*. Is a concept your area relies on **missing**, or one **unnecessary**? The [concept cards](concepts.md) give examples.
 - **Everyone:** for each open question in section 3, do you **agree with the proposed answer**? If not, what is the rule in practice?
 - How *our* firm works goes in the [questions for our firm](company-questions.md), never in the definitions. Mention internal terms or system names only in your reply, never in this repository.
@@ -48,6 +49,7 @@
 | **[Standing Allocation Instruction](concepts.md#standing-allocation-instruction)** *(level 2)* | Allocation instruction agreed in advance with a client for a defined scope of activity (such as contract, account or strategy), with an effective period, applied to executions in that scope unless replaced by a specific instruction. Its place as a kind of Allocation Instruction depends on the sponsor accepting the widened Allocation Instruction definition. | |
 | **[Allocation Line](concepts.md#allocation-line)** *(level 2)* | One part of an allocation that assigns a stated quantity, at a stated price, from an identified execution or average price group to one target account, with its route (internal, or give-up to a named clearing member). An allocation line routed to another clearing member gives rise to exactly one give-up line, whose status is tracked on the give-up page. The allocation line's own status covers allocation states only. When the target account is carried by another clearing member, it is designated by an Account Identifier (give-up reference). | |
 | **[Third-party Executing Member](concepts.md#third-party-executing-member)** *(level 2)* | Role of a trading venue member that enters orders on the venue for an executing broker that is not a member of that venue, or that is a member but chooses not to use its own membership for that business, under an agreement between them and a Third-party Execution Arrangement; the executing broker remains responsible to its client and owes the member brokerage (brokerage paid, distinct from executing brokerage received). | |
+| **[Trade Confirmation](concepts.md#trade-confirmation)** *(level 2)* | Notice sent by an executing broker, or by a clearing broker for trades it clears, to a client confirming the details of one client execution, or of the allocations made from it: contract, side, quantity, price or average price, trade date, account, venue where required, and the fees and commissions charged, within the time and with the content that the applicable rules and the client agreement require (to verify per regime). It confirms what has been executed; it does not register the trade for clearing. Confirmation between the parties of a cleared OTC trade is outside this concept. | |
 
 ## 2. Concepts owned elsewhere: check them from your angle
 
@@ -162,6 +164,7 @@ Also touching this domain, answered elsewhere:
 | **15. Revenue domain** — Revenue is a governance domain with its own owner, who answers the revenue questions. Collateral revenue is a sub-domain owned by the Collateral Manager. | Open questions 9 and 10 are assigned to the Revenue owner (collateral income part of 9 to the Collateral Manager); question 11 to the Collateral Manager with Risk. Defaults stay proposals until they answer. |
 | **16. Meaning changes** — The 13 proposed meaning changes are accepted as Draft: Party, Broker, Trading Venue, Allocation, Position, Commission, Variation Margin Requirement, Market Access Arrangement, Allocation Instruction, Rule Change, Cut-off, Regulatory Classification, CCP Account. | Definitions replaced in the catalogue; Commission keeps its resolution flag. Settlement Deadline, Firm Cut-off, Take-up Deadline and Standing Allocation Instruction no longer depend on a pending decision. |
 | **18. Third-party execution** — Third-party execution also covers an executing broker that is a venue member but chooses not to use its own membership for that business (extends decision 3). | Third-Party Execution Arrangement and Third-party Executing Member widened. |
+| **24. Other missing concepts** — Option Premium and Client Statement (post-trade), Trade Confirmation (execution) and Position Limit (regulation) are added. "Maintenance margin" stays a call trigger level in Margin Call Terms, as proposed for the open question “Margin and initial margin”; a client funds requirement stays in the backlog. | Concepts added as Draft; alias rows for maintenance margin and monthly statement; backlog item and firm question on client funds. |
 
 ## 5. Not yet in the catalogue
 

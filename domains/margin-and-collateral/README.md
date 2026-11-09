@@ -7,9 +7,9 @@ When a derivatives trade is cleared, the central counterparty (CCP) guarantees i
 | Read | What you will find |
 |---|---|
 | [Overview](overview.md) | The domain in plain words: what it covers, how it works, what to keep apart |
-| [Concepts](concepts.md) | 26 concepts, each with a definition, an example and what not to confuse it with |
+| [Concepts](concepts.md) | 30 concepts, each with a definition, an example and what not to confuse it with |
 | [Review sheet](review.md) | What each reviewer is asked, open questions on meaning, decisions already taken |
-| [Questions for our firm](company-questions.md) | 21 questions that capture how our firm works in this domain |
+| [Questions for our firm](company-questions.md) | 24 questions that capture how our firm works in this domain |
 | [Questions for the experts (Excel)](questions-for-experts.xlsx) | The same questions as an interview workbook; fill in a copy kept inside the firm, never the file here |
 
 **Owner:** Collateral Manager  
@@ -50,5 +50,9 @@ When a derivatives trade is cleared, the central counterparty (CCP) guarantees i
 - **[Default Fund Contribution](concepts.md#default-fund-contribution)** — A clearing member's share of the CCP's shared pool for covering another member's default.
 - **[Margin Provider](concepts.md#margin-provider)** — The party that has to give margin.
 - **[Margin Taker](concepts.md#margin-taker)** — The party that requires margin and calls for it.
+- **[Account Equity](concepts.md#account-equity)** — What an account is worth on a statement: its cash plus the value of its open positions.
+  - **[Open Trade Equity](concepts.md#open-trade-equity)** — The paper gain or loss on open futures: what the positions are worth today against the price they were traded at.
+  - **[Account Cash Balance](concepts.md#account-cash-balance)** — The cash recorded in an account: deposits, withdrawals, realised results, premiums, fees and interest.
+- **[Position Valuation](concepts.md#position-valuation)** — What a position is worth at a point in time, and who valued it with which price.
 
 Also relevant here, owned by another domain: [Clearing Service](../clearing-services-and-accounts/concepts.md#clearing-service), [CCP Account](../clearing-services-and-accounts/concepts.md#ccp-account), [Segregation Model](../clearing-services-and-accounts/concepts.md#segregation-model), [Client Clearing Agreement](../clearing-services-and-accounts/concepts.md#client-clearing-agreement), [Position](../clearing-services-and-accounts/concepts.md#position), [Account](../parties-and-roles/concepts.md#account), [Settlement Obligation](../post-trade-operations/concepts.md#settlement-obligation), [Cash Movement](../post-trade-operations/concepts.md#cash-movement).

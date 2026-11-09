@@ -4,7 +4,7 @@
 
 Concepts are grouped by family: a broad concept first, then the kinds or parts it breaks down into.
 
-**Contents:** [Lifecycle Event](#lifecycle-event) · [Expiry](#expiry) · [Exercise](#exercise) · [Exercise Instruction](#exercise-instruction) · [Assignment](#assignment) · [Final Settlement](#final-settlement) · [Delivery Notice](#delivery-notice) · [Trade Amendment](#trade-amendment) · [Cut-off](#cut-off) · [Settlement Deadline](#settlement-deadline) · [Firm Cut-off](#firm-cut-off) · [Settlement Obligation](#settlement-obligation) · [Netted Settlement Obligation](#netted-settlement-obligation) · [Settlement Fail](#settlement-fail) · [Payment Instruction](#payment-instruction) · [Cash Movement](#cash-movement) · [Operational Exception](#operational-exception) · [Exception Case](#exception-case) · [Reconciliation](#reconciliation) · [Position Reconciliation](#position-reconciliation) · [Reconciliation Break](#reconciliation-break) · [Source Record](#source-record) · [CCP Report](#ccp-report) · [Settlement Account](#settlement-account)
+**Contents:** [Lifecycle Event](#lifecycle-event) · [Expiry](#expiry) · [Exercise](#exercise) · [Exercise Instruction](#exercise-instruction) · [Assignment](#assignment) · [Final Settlement](#final-settlement) · [Delivery Notice](#delivery-notice) · [Trade Amendment](#trade-amendment) · [Cut-off](#cut-off) · [Settlement Deadline](#settlement-deadline) · [Firm Cut-off](#firm-cut-off) · [Settlement Obligation](#settlement-obligation) · [Netted Settlement Obligation](#netted-settlement-obligation) · [Settlement Fail](#settlement-fail) · [Payment Instruction](#payment-instruction) · [Cash Movement](#cash-movement) · [Operational Exception](#operational-exception) · [Exception Case](#exception-case) · [Reconciliation](#reconciliation) · [Position Reconciliation](#position-reconciliation) · [Reconciliation Break](#reconciliation-break) · [Source Record](#source-record) · [CCP Report](#ccp-report) · [Client Statement](#client-statement) · [Settlement Account](#settlement-account) · [Option Premium](#option-premium)
 
 ### Lifecycle Event
 
@@ -318,6 +318,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Settlement Deadline](#settlement-deadline) *applies to* Settlement Obligation
 - [Exercise](#exercise) *creates* Settlement Obligation
 - [Assignment](#assignment) *creates* Settlement Obligation
+- [Option Premium](#option-premium) *gives rise to* Settlement Obligation — Premium-style options; futures-style options carry no upfront premium.
 
 **Open questions on its meaning:** “Fee, revenue and cash received” (open, narrowed 2026-09-20, answer proposed); “Variation margin” (open, answer proposed); “Break, exception, reject, fail” (open, answer proposed) — see the [review sheet](review.md).
 
@@ -557,7 +558,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Not to be confused with.** Business object (Trade, Position): the object exists once; each source holds its own record of it.
 
-**Breaks down into:** [CCP Report](#ccp-report) (kind of)
+**Breaks down into:** [CCP Report](#ccp-report) (kind of), [Client Statement](#client-statement) (kind of)
 
 **Values (draft list):** firm books (by function: front office, middle office, clearing back office); CCP report; venue report; executing broker statement; clearing broker statement; settlement bank or payment system statement; client record or instruction
 
@@ -573,6 +574,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *represents for example* [Position](../clearing-services-and-accounts/concepts.md#position)
 - *has as a kind* [CCP Report](#ccp-report)
 - [Reconciliation Break](#reconciliation-break) *concerns two or more* Source Record
+- *has as a kind* [Client Statement](#client-statement)
 
 <sub>Entity · level 1 · Draft · reference LD-C0205 · approved by the ETD post-trade operations lead</sub>
 
@@ -606,6 +608,32 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 <sub>Entity · level 2 · Draft · reference LD-C0206 · approved by the ETD post-trade operations lead</sub>
 
+### Client Statement
+
+*The daily or monthly report a broker sends a client on its accounts.*
+
+**Definition.** Source record issued by a clearing broker or executing broker to a client for one or more of the client's accounts and a business date or period (daily, monthly), stating as the broker has recorded them the trades and executions, positions, cash balance, open trade equity and account equity, margin requirement and excess or shortfall, fees, commissions and cash movements. Its minimum content and frequency are set partly by regulation (to verify per regime) and by the client agreement. It is the broker's record toward the client, not the CCP's record (CCP Report), and not a demand for payment (Fee Invoice).
+
+**Example.** Each morning Client A receives from Clearing Broker Y a statement of yesterday's trades, positions, cash, equity and margin excess.
+
+**Not to be confused with.** CCP Report: what the CCP reports to its member; the client statement is what the broker reports to its client.
+
+**Kind of:** [Source Record](#source-record)
+
+**Values (draft list):** daily; monthly; other periodic
+
+**Words people use:** “monthly statement” (client usage); “daily statement” (broker to client)
+
+**Before using it, know:** Issuer, client, accounts covered, business date or period.
+
+**Connected to:**
+
+- [Source Record](#source-record) *has as a kind* Client Statement
+- *is issued by* [Broker](../parties-and-roles/concepts.md#broker) — Clearing or executing broker, to its client.
+- *states* [Account Equity](../margin-and-collateral/concepts.md#account-equity) — Also states the cash balance, open trade equity, margin requirement and excess or shortfall.
+
+<sub>Entity · level 2 · Draft · reference LD-C0227 · approved by the ETD post-trade operations lead</sub>
+
 ### Settlement Account
 
 *The bank or delivery account a party uses to pay or receive what it owes.*
@@ -632,3 +660,26 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is named in* [Payment Instruction](#payment-instruction)
 
 <sub>Entity · level 2 · Draft · reference LD-C0213 · approved by the ETD post-trade operations lead</sub>
+
+### Option Premium
+
+*The price paid for an option, by the buyer to the seller.*
+
+**Definition.** Amount the buyer of an option pays the seller for it: the trade price times quantity and contract multiplier. For premium-style listed options it is paid in full on the settlement of the trade, through the CCP and down each clearing tier, giving rise to settlement obligations; for futures-style options no premium is paid upfront and the option's value moves through variation margin instead. For OTC options the premium amount and payment date are terms of the trade. Premium paid or received is posted to the account's cash balance.
+
+**Example.** Client A buys options on Exchange X; the premium is paid the next day through CCP Z and debited from its cash balance.
+
+**Not to be confused with.** Option value: the premium is paid once at the trade price; the option's value then changes every day.
+
+**Values (draft list):** premium-style (paid upfront); futures-style (no upfront premium)
+
+**Words people use:** “premium” (options)
+
+**Before using it, know:** Premium-style or futures-style option; payer and payee view; clearing tier.
+
+**Connected to:**
+
+- *gives rise to* [Settlement Obligation](#settlement-obligation) — Premium-style options; futures-style options carry no upfront premium.
+- *is owed on* [Trade](../execution/concepts.md#trade) — The option trade.
+
+<sub>Obligation · level 2 · Draft · reference LD-C0226 · approved by the ETD post-trade operations lead</sub>

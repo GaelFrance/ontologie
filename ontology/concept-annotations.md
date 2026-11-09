@@ -116,6 +116,7 @@ Standard alignments are "map, do not import" proposals: none has been checked ag
 | LD-C0219 Assignment | LD-C0025 | 2026-11 domain review |
 | LD-C0220 Final Settlement | LD-C0025 | 2026-11 domain review |
 | LD-C0222 Trade Amendment | LD-C0025 | 2026-11 domain review |
+| LD-C0227 Client Statement | LD-C0205 | 2026-11 gap review |
 
 Not asserted: a common "Service" parent for LD-C0051 and LD-C0052 (see LD-A0020); a parent for LD-C0038 Commission (deferred by the sponsor).
 
@@ -400,7 +401,7 @@ Kinds: **exact** (same meaning everywhere in scope), **contextual** (same meanin
 | waiver | contextual | contextual | LD-C0183 |
 | fee correction | contextual | any | LD-C0183 |
 | bill | contextual | any | LD-C0184 |
-| monthly statement | contextual | contextual, client usage | LD-C0184 |
+| monthly statement | ambiguous | client usage | LD-C0227 (account statement) or LD-C0184 (fee invoice) |
 | billing agent | contextual | any | LD-C0185 |
 | collecting organisation | contextual | repository usage | LD-C0185 |
 | volume | contextual | ambiguous | LD-C0186 |
@@ -499,6 +500,19 @@ Kinds: **exact** (same meaning everywhere in scope), **contextual** (same meanin
 | unwind | contextual | OTC | LD-C0222 |
 | termination | contextual | OTC | LD-C0222 |
 | trade correction | contextual | contextual | LD-C0222 |
+| MED, margin excess or deficit | contextual | US futures statements | LD-C0166 |
+| OTE | exact | — | LD-C0223 |
+| unrealised P&L | ambiguous | Any | LD-C0223 or LD-C0230; ask whether futures on a statement or a valuation |
+| ledger balance, cash balance | contextual | account statements | LD-C0224 |
+| total equity | contextual | US futures statements | LD-C0225 |
+| net liquidating value, NLV, net liq | contextual | statements with options | LD-C0225 |
+| premium | contextual | options | LD-C0226 |
+| daily statement | contextual | broker to client | LD-C0227 |
+| confirmation, confirm | contextual | broker to client, listed | LD-C0228 |
+| accountability level, reportable level | contextual | US exchanges and regulators | LD-C0229 |
+| maintenance margin, maintenance level | contextual | US futures | Call trigger level in LD-C0165, not a requirement type (LD-A0027) |
+| mark-to-market, MTM | ambiguous | Any | LD-C0230 (the value) or LD-C0045 (the margin it drives) |
+| NPV | contextual | cleared OTC | LD-C0230 |
 
 ## Required context
 
@@ -660,6 +674,14 @@ Agents must obtain or state these before answering; a missing item leads to a cl
 | LD-C0220 Final Settlement | Series, settlement method, final settlement price source, tier. |
 | LD-C0221 Delivery Notice | Contract, notice period dates by role (first notice day), tier. |
 | LD-C0222 Trade Amendment | Clearing tier of the trade, whether a successor trade is created, which source records the change. |
+| LD-C0223 Open Trade Equity | Account and maintaining party, as-of time, valuation price used, currency, the issuer's convention for daily settled variation margin. |
+| LD-C0224 Account Cash Balance | Account and maintaining party, currency, as-of time, which amounts the issuer posts to cash. |
+| LD-C0225 Account Equity | Account and maintaining party, as-of time, currency basis, which measure (total equity or net liquidating value), whether securities collateral is counted. |
+| LD-C0226 Option Premium | Premium-style or futures-style option; payer and payee view; clearing tier. |
+| LD-C0227 Client Statement | Issuer, client, accounts covered, business date or period. |
+| LD-C0228 Trade Confirmation | Issuer, client, execution or allocation confirmed, regime. |
+| LD-C0229 Position Limit | Regime or venue, contract, limit kind (limit, accountability or reportable level), period, aggregation basis, exemptions. |
+| LD-C0230 Position Valuation | Account, as-of time, currency, valuation party, price source and method. |
 
 ## Usage notes on existing concepts
 
@@ -702,6 +724,8 @@ Notes clarify use; they do not change the meanings in the catalogue. Review numb
 | LD-C0045 Variation Margin Requirement | Price alignment is a separate flow. Premium-style options carry no VM; futures-style options do. [04, 03] |
 | LD-C0046 Margin Call | A return of excess on request is a Collateral Movement, not a negative call; VM paid out by a CCP is a payment, not a call. [04] |
 | LD-C0048 Collateral Asset | Cash in a given currency is a collateral asset. Eligibility holds only against a version of a Collateral Eligibility Schedule (LD-R0072). [04] |
+| LD-C0166 Margin Excess or Shortfall | On US futures statements it is called margin excess or deficit (MED); where the agreement margins on account equity, the held side is Account Equity (LD-C0225). |
+| LD-C0165 Margin Call Terms | 'Maintenance margin' is the lower of two call trigger levels in these terms (mainly US futures), not a separate requirement (LD-A0027). |
 
 ## Priority and alignment
 
@@ -888,6 +912,14 @@ English names are the only labels (French labels removed by sponsor decision, 20
 | LD-C0220 Final Settlement | — | 2026-11 domain review | PFMI principle 10 (physical deliveries); to verify. |
 | LD-C0221 Delivery Notice | — | 2026-11 domain review | Venue contract specifications and CCP delivery procedures (instances); to verify. |
 | LD-C0222 Trade Amendment | — | 2026-11 domain review | ISDA CDM business events (quantity change, termination); to verify. |
+| LD-C0223 Open Trade Equity | — | 2026-11 gap review | US futures commission merchant statements; to verify. |
+| LD-C0224 Account Cash Balance | — | 2026-11 gap review | — |
+| LD-C0225 Account Equity | — | 2026-11 gap review | US futures commission merchant statements; to verify. |
+| LD-C0226 Option Premium | — | 2026-11 gap review | ISDA CDM premium payment; to verify. |
+| LD-C0227 Client Statement | — | 2026-11 gap review | CFTC Rule 1.33; MiFID II client reporting (Delegated Regulation (EU) 2017/565); to verify. |
+| LD-C0228 Trade Confirmation | — | 2026-11 gap review | CFTC Rule 1.33; MiFID II confirmation of execution (Delegated Regulation (EU) 2017/565); to verify. |
+| LD-C0229 Position Limit | — | 2026-11 gap review | MiFID II Art. 57; CFTC Part 150; exchange accountability levels; to verify. |
+| LD-C0230 Position Valuation | — | 2026-11 gap review | EMIR valuation reporting; to verify. |
 
 ## Plain-language summaries
 
@@ -1117,6 +1149,14 @@ One sentence for a newcomer, a synthetic example and the nearest concept people 
 | LD-C0220 Final Settlement | Closing an expiring position for good, either by paying the difference in cash or by delivering the underlying. | Client A's remaining long futures in the expiring series are cash settled against the final settlement price published by Venue V. | Variation margin: daily settlement while the position is open; final settlement closes it at the end. |
 | LD-C0221 Delivery Notice | The notice that starts the physical delivery of a futures contract. | Client B, short a physically delivered commodity future at CCP Z, gives notice of intention to deliver through Clearing Broker Y on a notice day. | Exercise Instruction: exercise is an option holder's right; a delivery notice starts the delivery of a future. |
 | LD-C0222 Trade Amendment | A change to, or early ending of, a trade that already exists, recorded as a new event that points to the original. | Clearing Broker Y corrects the client reference on a registered trade at CCP Z; a cleared swap of Client A is partially terminated, reducing its notional. | Execution Correction: corrects a venue execution before clearing; a trade amendment acts on the registered trade. |
+| LD-C0223 Open Trade Equity | The paper gain or loss on open futures: what the positions are worth today against the price they were traded at. | Client A bought 10 futures at 100; tonight's settlement price is 103, so its statement at Clearing Broker Y shows a positive open trade equity. | Variation Margin Requirement: the cash that moves each day at the CCP; open trade equity is how the statement shows the unrealised result. |
+| LD-C0224 Account Cash Balance | The cash recorded in an account: deposits, withdrawals, realised results, premiums, fees and interest. | Client A's cash balance at Clearing Broker Y falls when it pays an option premium and rises when it closes a futures position at a gain. | Collateral: the cash held as security; the cash balance is the account's record, which also includes realised results and fees. |
+| LD-C0225 Account Equity | What an account is worth on a statement: its cash plus the value of its open positions. | Client A has a cash balance and a positive open trade equity; together they give its total equity, compared with the margin requirement. | Margin Excess or Shortfall: the equity is what the account holds; the excess or shortfall compares it with what is required. |
+| LD-C0226 Option Premium | The price paid for an option, by the buyer to the seller. | Client A buys options on Exchange X; the premium is paid the next day through CCP Z and debited from its cash balance. | Option value: the premium is paid once at the trade price; the option's value then changes every day. |
+| LD-C0227 Client Statement | The daily or monthly report a broker sends a client on its accounts. | Each morning Client A receives from Clearing Broker Y a statement of yesterday's trades, positions, cash, equity and margin excess. | CCP Report: what the CCP reports to its member; the client statement is what the broker reports to its client. |
+| LD-C0228 Trade Confirmation | The message that confirms to a client what was executed for it, at what price and cost. | After Client A's order is filled on Exchange X, Broker B sends it a confirmation with quantity, average price and commission. | Client Statement: the confirmation covers one execution or allocation; the statement covers the account for a day or a month. |
+| LD-C0229 Position Limit | A cap, set by a regulator or a venue, on how many contracts one holder may hold, or a level above which it is watched or reported. | Fund F approaches the spot-month limit on a commodity future at Exchange X and must reduce its position before expiry. | Clearing Limit: set by the clearing broker for its own credit risk, not by a regulator or venue. |
+| LD-C0230 Position Valuation | What a position is worth at a point in time, and who valued it with which price. | Client A's futures are valued at tonight's settlement price; its cleared swap with CCP Z is valued at the CCP's net present value. | Position: the open quantity or set of trades; the valuation is a number derived from it. |
 
 ## Values
 
@@ -1219,3 +1259,9 @@ Draft value lists carried by a concept (detailed taxonomies remain Phase 3 work)
 | LD-C0220 Final Settlement | cash settlement; physical delivery |
 | LD-C0221 Delivery Notice | notice of intention to deliver; delivery allocation to longs |
 | LD-C0222 Trade Amendment | non-economic correction; economic change; partial termination; full termination (unwind) |
+| LD-C0225 Account Equity | total equity; net liquidating value; with or without securities collateral |
+| LD-C0226 Option Premium | premium-style (paid upfront); futures-style (no upfront premium) |
+| LD-C0227 Client Statement | daily; monthly; other periodic |
+| LD-C0228 Trade Confirmation | per execution; per allocation; end-of-day summary |
+| LD-C0229 Position Limit | position limit; accountability level; reportable level; spot month; single month; all months combined |
+| LD-C0230 Position Valuation | settlement price; CCP net present value; other stated valuation |

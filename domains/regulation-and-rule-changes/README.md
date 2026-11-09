@@ -7,9 +7,9 @@ Derivatives execution and clearing run on rules written by others: regulators wr
 | Read | What you will find |
 |---|---|
 | [Overview](overview.md) | The domain in plain words: what it covers, how it works, what to keep apart |
-| [Concepts](concepts.md) | 19 concepts, each with a definition, an example and what not to confuse it with |
+| [Concepts](concepts.md) | 20 concepts, each with a definition, an example and what not to confuse it with |
 | [Review sheet](review.md) | What each reviewer is asked, open questions on meaning, decisions already taken |
-| [Questions for our firm](company-questions.md) | 24 questions that capture how our firm works in this domain |
+| [Questions for our firm](company-questions.md) | 25 questions that capture how our firm works in this domain |
 | [Questions for the experts (Excel)](questions-for-experts.xlsx) | The same questions as an interview workbook; fill in a copy kept inside the firm, never the file here |
 
 **Owner:** Regulatory Affairs  
@@ -43,5 +43,6 @@ Derivatives execution and clearing run on rules written by others: regulators wr
   - **[Regulatory Authorisation](concepts.md#regulatory-authorisation)** — An official licence or registration that lets a firm, CCP or venue do a stated activity in a jurisdiction.
 - **[Regulatory Authority](concepts.md#regulatory-authority)** — A public body that makes or enforces financial rules, such as a market supervisor or a central bank.
 - **[Regulatory Reporting Role](concepts.md#regulatory-reporting-role)** — The party a regulation names as responsible for a given report on a trade.
+- **[Position Limit](concepts.md#position-limit)** — A cap, set by a regulator or a venue, on how many contracts one holder may hold, or a level above which it is watched or reported.
 
 Also relevant here, owned by another domain: [Fee Schedule](../fees-revenue-and-contribution/concepts.md#fee-schedule), [Contract Specification](../instruments-venues-and-calendars/concepts.md#contract-specification), [Business Calendar](../instruments-venues-and-calendars/concepts.md#business-calendar), [Cut-off](../post-trade-operations/concepts.md#cut-off), [Margin Methodology](../margin-and-collateral/concepts.md#margin-methodology), [Collateral Eligibility Schedule](../margin-and-collateral/concepts.md#collateral-eligibility-schedule), [Clearing Service](../clearing-services-and-accounts/concepts.md#clearing-service), [Segregation Model](../clearing-services-and-accounts/concepts.md#segregation-model), [Novation](../clearing-give-up-and-acceptance/concepts.md#novation), [CCP Interposition](../clearing-give-up-and-acceptance/concepts.md#ccp-interposition).

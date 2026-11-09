@@ -2,7 +2,7 @@
 
 The shared business vocabulary for **listed derivatives execution, ETD clearing and OTC client clearing**: what each business word means, how the ideas connect, and which questions are still open. People use it to agree on meanings; AI agents use it to answer questions without guessing.
 
-**Stage:** Phase 2 in progress. 222 concepts in ten business domains (74 foundation concepts and 148 more detailed ones added in the November 2026 domain review). Every definition is **Draft** until its domain owner approves it.
+**Stage:** Phase 2 in progress. 230 concepts in ten business domains (74 foundation concepts and 156 more detailed ones added in the November 2026 domain review). Every definition is **Draft** until its domain owner approves it.
 
 ## Start here
 

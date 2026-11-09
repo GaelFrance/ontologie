@@ -200,7 +200,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Values (draft list):** form: invoice; client statement (periodic statement listing charges)
 
-**Words people use:** “bill” (any); “monthly statement” (contextual, client usage)
+**Words people use:** “bill” (any); “monthly statement” (client usage)
 
 **Before using it, know:** Issuer, debtor, billing period, currency, due date; the creditor of each line.
 
