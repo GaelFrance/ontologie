@@ -309,7 +309,7 @@ Structure links (part of, step in, state of) and plain connections proposed by t
 | LD-R0290 | LD-C0133 | ends_with | LD-C0139 | — |
 | LD-R0291 | LD-C0134 | clears_for | LD-C0006 | — |
 | LD-R0292 | LD-C0134 | gives_up_in | LD-C0022 | — |
-| LD-R0293 | LD-C0134 | holds_the_trade_in_until_take_up | LD-C0069 | — |
+| LD-R0293 | LD-C0134 | holds_the_trade_in_until_registration_to_the_receiving_member | LD-C0069 | Per quantity: the giving member keeps each quantity in its CCP account until the CCP records it in the receiving member's account; a take-up decision alone does not move it. Corrected 2026-11-09 (was until take-up). |
 | LD-R0294 | LD-C0135 | acts_for | LD-C0057 | — |
 | LD-R0295 | LD-C0135 | decides | LD-C0053 | — |
 | LD-R0296 | LD-C0135 | receives_the_trade_in | LD-C0069 | — |

@@ -34,7 +34,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 *The hand-over of an executed listed trade, in whole or in part, from the clearing member that holds it to the clearing member that will clear it for the client; give-in is the same hand-over seen by the receiver.*
 
-**Definition.** Process by which all or part of an executed listed-derivative trade, including a trade registered on a venue after private negotiation and leg executions of a listed strategy, is attributed for clearing from the clearing member to which it was first registered or would be registered (the giving clearing member) to a receiving clearing member, through one give-up line per allocation line routed to another clearing member, and that member's acceptance or rejection. Depending on the clearing service it is designated in advance, so that the CCP registers the trade straight to the receiving member, or happens after first registration to the giving member. Each give-up line ends accepted in full, accepted in part, rejected, lapsed, cancelled or reversed; a give-up is complete when the full quantity is registered to the receiving member's CCP account per the CCP record. Give-in is the same process seen by the receiving side. Instructions, acceptance decisions, registrations and legal effects remain distinct. — *meaning changed in 2026-11, accepted as Draft*
+**Definition.** Process by which all or part of an executed listed-derivative trade, including a trade registered on a venue after private negotiation and leg executions of a listed strategy, is attributed for clearing from the clearing member to which it was first registered or would be registered (the giving clearing member) to a receiving clearing member, through one give-up line per allocation line routed to another clearing member, and that member's acceptance or rejection. Depending on the clearing service it is designated in advance, so that the CCP registers the trade straight to the receiving member, or happens after first registration to the giving member. Each give-up line records the receiving member's decision (accepted in full, accepted in part, rejected, or lapsed when no decision is made by the deadline) apart from its registration in the CCP record, and can be cancelled or reversed; a give-up is complete when the full quantity is registered to the receiving member's CCP account per the CCP record, and a decision to accept does not by itself complete it. Give-in is the same process seen by the receiving side. Instructions, acceptance decisions, registrations and legal effects remain distinct. — *meaning changed in 2026-11, accepted as Draft*
 
 **Example.** Executing Broker X fills 100 futures for Client A on Venue V; X's clearing member gives them up to Clearing Broker Y, which takes them up before the deadline.
 
@@ -196,7 +196,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 *One request to hand a stated quantity of a trade to one other clearing member's account; give-up progress is tracked line by line.*
 
-**Definition.** Part of a Give-up / Take-up Process: the request, made by or for the giving clearing member through the CCP or a give-up facility, to attribute a stated quantity of an identified trade, at a stated price, to a named receiving clearing member and account (usually through a give-up reference). One give-up line arises from one allocation line routed to another clearing member, or from a designation made before execution. It is the unit at which give-up status, member acceptance and registration are recorded. Its status takes the harmonised values below, is asserted by a named source record with the source's native status kept beside it, and is never set by inference; the line is complete only when its full quantity is recorded in the receiving member's CCP account, as the CCP record shows.
+**Definition.** Part of a Give-up / Take-up Process: the request, made by or for the giving clearing member through the CCP or a give-up facility, to attribute a stated quantity of an identified trade, at a stated price, to a named receiving clearing member and account (usually through a give-up reference). One give-up line arises from one allocation line routed to another clearing member, or from a designation made before execution. It is the unit at which give-up status, member acceptance and registration are recorded. It carries two statuses that are never merged: the receiving member's decision (from its take-up or automatic acceptance) and the registration status (from the CCP record); and three quantities: the line quantity, the quantity registered to the receiving member's account and the remaining quantity (line quantity less registered quantity). Each status takes the harmonised values below, is asserted by a named source record with the source's native status kept beside it, and is never set by inference; an accepted line is never read as registered. The registered quantity is counted over the CCP's registration records that are valid at the as-of time, net of reversals and corrections, so that a corrected record is not counted twice. The line is complete only when its registered quantity equals its full quantity, as the CCP record shows; until a quantity is registered to the receiving member it stays with the giving member.
 
 **Example.** Client A's 100 lots are allocated 60 to Clearing Broker Y and 40 to Clearing Broker W: the giving member sends two give-up lines.
 
@@ -204,11 +204,11 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Part of:** [Give-up / Take-up Process](#give-up--take-up-process)
 
-**Values (draft list):** status: pending; accepted in full; accepted in part; rejected; lapsed (not taken up by the deadline; the quantity stays with the giving member); cancelled; reversed; unknown
+**Values (draft list):** receiver decision: pending; accepted in full; accepted in part; rejected; lapsed (not taken up by the deadline; the quantity stays with the giving member); unknown (no record, which is not pending) · registration status (CCP record): not registered; registered in part; registered in full (complete); reversed; unknown · line event: cancelled (withdrawn by the giving side before registration) · remaining quantity disposition: stays with the giving member; new give-up line; under investigation as a break
 
 **Words people use:** “give-up instruction” (listed, giving side); “allocation” (CCP or give-up facility screens, contextual); “alleged give-in” (receiving side, contextual)
 
-**Before using it, know:** Clearing service and clearing date; which side the firm is on (giving or receiving); whether the status comes from the CCP record or an internal record.
+**Before using it, know:** Clearing service and clearing date; which side the firm is on (giving or receiving); for each status, whether it comes from the CCP record or an internal record; line, registered and remaining quantities at the as-of time.
 
 **Connected to:**
 
@@ -347,7 +347,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Give-up after First Registration](#give-up-after-first-registration) *is carried meanwhile by* Giving Clearing Member
 - *clears for* [Executing Broker](../execution/concepts.md#executing-broker)
 - *gives up in* [Give-up / Take-up Process](#give-up--take-up-process)
-- *holds the trade in until take up* [CCP Account](../clearing-services-and-accounts/concepts.md#ccp-account)
+- *holds the trade in until registration to the receiving member* [CCP Account](../clearing-services-and-accounts/concepts.md#ccp-account) — Per quantity: the giving member keeps each quantity in its CCP account until the CCP records it in the receiving member's account; a take-up decision alone does not move it. Corrected 2026-11-09 (was until take-up).
 
 <sub>Role · level 2 · Draft · reference LD-C0134 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 

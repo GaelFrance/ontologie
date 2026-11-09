@@ -581,7 +581,7 @@ Agents must obtain or state these before answering; a missing item leads to a cl
 | LD-C0128 Standing Allocation Instruction | Scope, effective period and who may override it; the version in force at the execution time. |
 | LD-C0129 Allocation Line | Source execution or average price group, target account and its clearing member, route and status, and the version of the instruction applied. |
 | LD-C0130 Third-party Executing Member | Venue, membership category and effective period; never inferred from execution activity. |
-| LD-C0131 Give-up Line | Clearing service and clearing date; which side the firm is on (giving or receiving); whether the status comes from the CCP record or an internal record. |
+| LD-C0131 Give-up Line | Clearing service and clearing date; which side the firm is on (giving or receiving); for each status, whether it comes from the CCP record or an internal record; line, registered and remaining quantities at the as-of time. |
 | LD-C0132 Give-up Designated in Advance | Clearing service and its rules on designation; whether the designation was accepted before registration. |
 | LD-C0133 Give-up after First Registration | Clearing service, clearing date, deadline and its consequence; who carries margin while the line is pending. |
 | LD-C0134 Giving Clearing Member | Clearing service; whether the give-up happens at or after registration; whether the executing broker is itself a clearing member. |
@@ -1190,7 +1190,7 @@ Draft value lists carried by a concept (detailed taxonomies remain Phase 3 work)
 | LD-C0123 Exchange for Related Position | exchange for physical; exchange for swap; exchange of options for options; other venue-defined related-position types |
 | LD-C0125 Execution Correction | cancellation (bust); price adjustment; quantity correction; correction of non-economic details |
 | LD-C0129 Allocation Line | route: internal; give-up; allocation status: pending; booked; amended; cancelled |
-| LD-C0131 Give-up Line | status: pending; accepted in full; accepted in part; rejected; lapsed (not taken up by the deadline; the quantity stays with the giving member); cancelled; reversed; unknown |
+| LD-C0131 Give-up Line | receiver decision: pending; accepted in full; accepted in part; rejected; lapsed (not taken up by the deadline; the quantity stays with the giving member); unknown (no record, which is not pending) · registration status (CCP record): not registered; registered in part; registered in full (complete); reversed; unknown · line event: cancelled (withdrawn by the giving side before registration) · remaining quantity disposition: stays with the giving member; new give-up line; under investigation as a break |
 | LD-C0136 Take-up | outcome: accepted in full; accepted in part; rejected; non-acceptance reason (seed values for Phase 3): unknown account or give-up reference; no give-up agreement; clearing limit exceeded; product not covered; price or quantity mismatch; submitted after the deadline (only when actively rejected for lateness) |
 | LD-C0137 Submission Acceptance | outcome: accepted; rejected; non-acceptance reason (seed values for Phase 3): clearing limit exceeded; product not eligible; missing or invalid account; no execution agreement for cleared trades |
 | LD-C0141 Clearing Submission | new trade; after allocation of a block; backload of an existing bilateral trade; resubmission after rejection |

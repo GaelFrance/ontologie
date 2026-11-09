@@ -156,7 +156,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Intra-group Client](../parties-and-roles/concepts.md#intra-group-client) *may be recorded in house or client accounts of* CCP Account
 - [Client Account](../parties-and-roles/concepts.md#client-account) *is mapped to* CCP Account
 - [Sponsored Clearing Arrangement](../service-offering-and-market-access/concepts.md#sponsored-clearing-arrangement) *may open in the participant s name a* CCP Account
-- [Giving Clearing Member](../clearing-give-up-and-acceptance/concepts.md#giving-clearing-member) *holds the trade in until take up* CCP Account
+- [Giving Clearing Member](../clearing-give-up-and-acceptance/concepts.md#giving-clearing-member) *holds the trade in until registration to the receiving member* CCP Account — Per quantity: the giving member keeps each quantity in its CCP account until the CCP records it in the receiving member's account; a take-up decision alone does not move it. Corrected 2026-11-09 (was until take-up).
 - [Receiving Clearing Member](../clearing-give-up-and-acceptance/concepts.md#receiving-clearing-member) *receives the trade in* CCP Account
 - [Give-up Registration](../clearing-give-up-and-acceptance/concepts.md#give-up-registration) *records the quantity in* CCP Account
 - [CCP-facing Trade](#ccp-facing-trade) *is recorded in* CCP Account
