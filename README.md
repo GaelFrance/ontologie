@@ -33,23 +33,32 @@ Each domain folder holds the same four pages: **overview** (plain words), **conc
 
 ## How it is organised
 
-- **`domains/`** is what people read. The overview and the questions for our firm are written by hand; the concept cards, review sheets, domain pages and the glossary are generated from the registers by `tools/build_domain_views.py`, so they always agree. Each domain also has `questions-for-experts.xlsx`, an interview workbook built by `tools/build_question_workbooks.py`: it stays blank here, and answers are written in a copy kept inside the firm.
-- **`ontology/`, `relationships/`, `governance/`** hold the registers: the catalogue of concepts, their annotations, the connections between them, the open questions on meaning and the decisions. They are the single source of truth and are maintained by the Ontology Lead; reviewers do not need to open them. See [ontology/README.md](ontology/README.md).
-- **`.claude/skills/`** holds one expert skill per domain, used by AI agents that review or use this ontology.
-- **`docs/`** explains the principles, scope, modelling rules and governance.
+```text
+domains/<domain>/     what people read: overview and questions for our firm (hand-written);
+                      domain page, concept cards and review sheet (generated);
+                      questions-for-experts.xlsx (blank interview workbook, generated)
+glossary.md           every concept A to Z (generated)
+ontology/             the registers: foundation.md (catalogue, one row per concept)
+                      and concept-annotations.md (aliases, summaries, context, values)
+relationships/        relationships.md: how concepts connect
+governance/           ambiguity register, review domains (owners, reviewers, backlog),
+                      decision log, open questions, governance model proposal
+docs/                 architecture, scope and principles; modelling guidelines;
+                      governance and contributing
+tools/                build_domain_views.py and build_question_workbooks.py
+.claude/skills/       one expert skill per domain, for AI agents
+```
 
-Concept references such as *LD-C0022* exist so that tools and agents can point to a concept without ambiguity. Human pages show names first and keep references in small print.
+The registers are the single source of truth, maintained by the Ontology Lead; reviewers do not need to open them. Everything generated is rebuilt by `python3 tools/build_domain_views.py` and `python3 tools/build_question_workbooks.py` (needs openpyxl); `build_domain_views.py --check` fails when a page is stale or a concept has no domain. References such as *LD-C0022* (concepts), *LD-R* (relationships) and *LD-A* (ambiguities) are permanent and never reused; human pages show names first. The agent hub reads `ontology/foundation.md`, `ontology/concept-annotations.md`, `relationships/relationships.md` and `governance/ambiguity-register.md`, so their table layouts must not change without checking it.
 
 ## Rules that always apply
 
 - **Business meanings only.** No firm-specific facts, client names, internal system names or data. How our firm works is captured through the questions for our firm, and the answers live in the internal workspace.
 - **Phase gates.** Phase 2 (concepts) is authorised. Metric formulas, detailed taxonomies, links to source systems and worked question-to-answer demonstrations come in later phases.
 - **Markdown is the reference.** Machine-readable exports are generated, never edited by hand. English only.
-- **Governance.** Domain owners approve meanings in their domain; the sponsor arbitrates across domains; the Ontology Lead maintains the registers. See the [governance model](governance/governance-model-proposal.md).
+- **Governance.** Domain owners approve meanings in their domain; the sponsor arbitrates across domains; the Ontology Lead maintains the registers. Nothing is approved yet: every definition is Draft.
 
 ## More
 
-- [Scope](docs/scope.md), [architecture](docs/architecture.md), [principles](docs/principles.md), [modelling guidelines](docs/modelling-guidelines.md), [governance](docs/governance.md)
-- Reviews: [2026-11 expert review](governance/reviews/2026-11-expert-review/ARBITRATION.md), [classification review](governance/reviews/2026-11-classification-review/ARBITRATION.md), [level-2 domain review](governance/reviews/2026-11-level2-domain-review/SUPERVISION.md)
-- [Taxonomy design](taxonomies/README.md), [questions the ontology must eventually support](examples/natural-language-queries.md), [future mapping method](mappings/README.md)
-- [How to contribute](CONTRIBUTING.md) and [change history](CHANGELOG.md)
+- [Architecture, scope and principles](docs/architecture.md), [modelling guidelines](docs/modelling-guidelines.md), [governance and contributing](docs/governance.md)
+- [Change log](CHANGELOG.md). Earlier review reports (2026-11 expert, classification and level-2 reviews) are in the repository history; their outcomes are in the registers and the decision log.

@@ -19,6 +19,7 @@ Usage: python3 tools/build_domain_views.py [--check]
   --check  exit 1 if a generated file is out of date, or if a concept does not have
            exactly one primary domain.
 """
+import posixpath
 import re
 import sys
 from pathlib import Path
@@ -82,9 +83,29 @@ def expand(spec):
     return ids
 
 
+ROOT_MARK = "@@ROOT@@/"
+
+
 def read(path):
+    """Read a repository file. Relative links in register text are made root-based
+    (with ROOT_MARK) so that build() can re-anchor them for each generated page."""
     p = ROOT / path
-    return p.read_text(encoding="utf-8") if p.exists() else ""
+    text = p.read_text(encoding="utf-8") if p.exists() else ""
+    if path.startswith("domains/"):
+        return text
+    base = posixpath.dirname(path)
+
+    def anchor(m):
+        target = m.group(1)
+        if re.match(r"^(https?:|mailto:|#)", target):
+            return m.group(0)
+        return "](" + ROOT_MARK + posixpath.normpath(posixpath.join(base, target))
+    return re.sub(r"\]\(([^)\s]+)", anchor, text)
+
+
+def unmark(text, path):
+    """Replace ROOT_MARK with the relative prefix from the generated file at path."""
+    return text.replace(ROOT_MARK, "../" * path.count("/"))
 
 
 def first_id(text):
@@ -520,6 +541,7 @@ def build():
         files[f"domains/{p}/README.md"] = render_readme(ctx, dom)
         files[f"domains/{p}/concepts.md"] = render_concepts(ctx, dom)
         files[f"domains/{p}/review.md"] = render_review(ctx, dom)
+    files = {f: unmark(text, f) for f, text in files.items()}
     return files, errors, data
 
 

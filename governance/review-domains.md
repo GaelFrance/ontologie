@@ -1,6 +1,6 @@
 # Review domains
 
-Status: Draft, proposed 2026-11-01, refined the same day after the [classification review](reviews/2026-11-classification-review/ARBITRATION.md) and extended with the level-2 concepts of the [domain review](reviews/2026-11-level2-domain-review/SUPERVISION.md). This file is the single place that groups concepts into business domains for review. The pages in [`domains/`](../domains/README.md) are generated from it and from the catalogue; edit these tables, not the generated pages.
+Status: Draft, proposed 2026-11-01, refined the same day after the classification review and extended with the level-2 concepts of the domain review. This file is the single place that groups concepts into business domains for review. The pages in [`domains/`](../domains/README.md) are generated from it and from the catalogue; edit these tables, not the generated pages.
 
 ## Rules
 
