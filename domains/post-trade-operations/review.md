@@ -5,7 +5,7 @@
 **Owner (approves the concepts in section 1):** ETD post-trade operations lead  
 **Reviewers:** Reference & Client Data; ETD Clearing product owner; Collateral Manager; OTC Clearing product owner  
 **Review wave:** 1  
-**Concepts:** 24 to approve, 13 shown for context, all Draft
+**Concepts:** 26 to approve, 13 shown for context, all Draft
 
 ## What you are asked to review
 
@@ -13,6 +13,7 @@
 - **ETD Clearing product owner:** For a give-up line and a CCP position, which states and timestamps (member acceptance, CCP registration) must an operator see? Is position reconciliation per CCP account and clearing date?
 - **Collateral Manager:** Which margin and collateral events must operations track?
 - **All:** Which of expiry, exercise and assignment, position transfer or OTC compression must an operations agent know now?
+- **ETD post-trade operations lead:** Client Statement and Option Premium are new: do they describe the statements you send and how premiums are settled?
 - **Everyone:** for each concept in section 1, is the definition **correct**, **complete** and **worded the way your teams use it**? Write *OK*, *Change* (say what) or *Unsure*. Is a concept your area relies on **missing**, or one **unnecessary**? The [concept cards](concepts.md) give examples.
 - **Everyone:** for each open question in section 3, do you **agree with the proposed answer**? If not, what is the rule in practice?
 - How *our* firm works goes in the [questions for our firm](company-questions.md), never in the definitions. Mention internal terms or system names only in your reply, never in this repository.
@@ -45,6 +46,8 @@
 | **[Final Settlement](concepts.md#final-settlement)** *(level 2)* | Lifecycle event that closes an expiring futures position, or an exercised or assigned option position, by cash settlement against a final settlement price or by physical delivery of the underlying, creating the settlement obligations concerned. Cash or physical settlement is a term of the contract specification. | |
 | **[Delivery Notice](concepts.md#delivery-notice)** *(level 2)* | Notice, for a physically delivered futures contract, by which a short position holder declares its intention to deliver (and, where the rules require, a long holder states its readiness or preferences), within the notice period set by the contract specification, after which the CCP allocates the delivery to long positions. | |
 | **[Trade Amendment](concepts.md#trade-amendment)** *(level 2)* | Lifecycle event that changes or ends a trade registered for clearing, made under the clearing service's rules or by agreement of the parties, referring to the original, which is kept: change of economic terms where allowed (mainly OTC), partial termination, full termination (unwind), or correction of a non-economic attribute that does not move the trade at the CCP (for example internal client account or client reference). For a CCP-facing trade, an economic change or termination ends or reduces the trade and creates a linked successor; only a non-economic correction is recorded against the same trade. A move of positions to another CCP account or clearing member is a Position Transfer or a give-up step, not an amendment; a correction from the venue's error-trade rules or the broker's client-facing correction is an Execution Correction. | |
+| **[Option Premium](concepts.md#option-premium)** *(level 2)* | Amount the buyer of an option pays the seller for it: the trade price times quantity and contract multiplier. For premium-style listed options it is paid in full on the settlement of the trade, through the CCP and down each clearing tier, giving rise to settlement obligations; for futures-style options no premium is paid upfront and the option's value moves through variation margin instead. For OTC options the premium amount and payment date are terms of the trade. Premium paid or received is posted to the account's cash balance. | |
+| **[Client Statement](concepts.md#client-statement)** *(level 2)* | Source record issued by a clearing broker or executing broker to a client for one or more of the client's accounts and a business date or period (daily, monthly), stating as the broker has recorded them the trades and executions, positions, cash balance, open trade equity and account equity, margin requirement and excess or shortfall, fees, commissions and cash movements. Its minimum content and frequency are set partly by regulation (to verify per regime) and by the client agreement. It is the broker's record toward the client, not the CCP's record (CCP Report), and not a demand for payment (Fee Invoice). | |
 
 ## 2. Concepts owned elsewhere: check them from your angle
 
@@ -143,6 +146,7 @@ Also touching this domain, answered elsewhere:
 | **15. Revenue domain** — Revenue is a governance domain with its own owner, who answers the revenue questions. Collateral revenue is a sub-domain owned by the Collateral Manager. | Open questions 9 and 10 are assigned to the Revenue owner (collateral income part of 9 to the Collateral Manager); question 11 to the Collateral Manager with Risk. Defaults stay proposals until they answer. |
 | **16. Meaning changes** — The 13 proposed meaning changes are accepted as Draft: Party, Broker, Trading Venue, Allocation, Position, Commission, Variation Margin Requirement, Market Access Arrangement, Allocation Instruction, Rule Change, Cut-off, Regulatory Classification, CCP Account. | Definitions replaced in the catalogue; Commission keeps its resolution flag. Settlement Deadline, Firm Cut-off, Take-up Deadline and Standing Allocation Instruction no longer depend on a pending decision. |
 | **17. Cut-off** — A cut-off is set by a rule provision or by a term of an agreement; it is no longer a kind of Rule Provision. Only rule-set cut-offs follow the rule change lifecycle. | Specialisation removed; new relationship "set by". |
+| **24. Other missing concepts** — Option Premium and Client Statement (post-trade), Trade Confirmation (execution) and Position Limit (regulation) are added. "Maintenance margin" stays a call trigger level in Margin Call Terms, as proposed for the open question “Margin and initial margin”; a client funds requirement stays in the backlog. | Concepts added as Draft; alias rows for maintenance margin and monthly statement; backlog item and firm question on client funds. |
 
 ## 5. Not yet in the catalogue
 

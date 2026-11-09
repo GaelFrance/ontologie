@@ -181,3 +181,4 @@ Also touching this domain, answered elsewhere:
 These items are in the backlog. **Does a decision you need now depend on one of them?**
 
 - Portfolio Compression
+- client funds requirement (segregated and secured amounts, client money, residual interest)

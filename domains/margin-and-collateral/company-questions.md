@@ -156,9 +156,25 @@ These questions capture how **our firm** works in this domain, so the ontology c
 
 <sub>question q24</sub>
 
+### 20. On client statements, how is account equity built: is variation margin settled each day shown in the cash balance or kept in open trade equity, and which components (cash, open trade equity, option value, securities) count toward the margin excess or deficit?
+
+- **Why it matters:** Sets what an agent adds up when it explains an excess or deficit, and what 'equity' means on a statement.
+- **How to answer:** Statement layout per regime (US, EU and UK); components counted toward the excess; whether open trade equity can be withdrawn.
+- **Concepts affected:** Open Trade Equity, Account Cash Balance, Account Equity, Margin Excess or Shortfall
+- **Who answers:** Collateral Manager with the ETD post-trade operations lead
+<sub>question q25</sub>
+
+### 21. Do you apply a maintenance level below the initial margin requirement for some clients or regimes (for example US futures), and when equity falls below it, does the call restore the initial level?
+
+- **Why it matters:** Confirms the proposed answer on 'margin' and 'initial margin' (two call trigger levels of one requirement) and the trigger an agent must know.
+- **How to answer:** Regimes and client types concerned; trigger level; level restored by the call.
+- **Concepts affected:** Margin Call Terms, Margin Requirement, Account Equity
+- **Who answers:** Collateral Manager with Risk
+<sub>question q26</sub>
+
 ## Priority 3: later
 
-### 20. Do you hold client and CCP collateral through custodians, settlement systems or triparty agents, by category, and is a pledge recorded as a movement between accounts?
+### 22. Do you hold client and CCP collateral through custodians, settlement systems or triparty agents, by category, and is a pledge recorded as a movement between accounts?
 
 - **Why it matters:** Decides how Collateral Movement and Collateral Instruction are recorded for pledged assets.
 - **How to answer:** Categories of holding location per tier (no provider names in the repository); pledge recorded as movement yes or no.
@@ -166,10 +182,18 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Collateral Manager with Operations
 <sub>question q21</sub>
 
-### 21. For physically delivered futures, do you call clients for delivery margin around expiry, and from when?
+### 23. For physically delivered futures, do you call clients for delivery margin around expiry, and from when?
 
 - **Why it matters:** Confirms whether delivery margin is a component used at the client tier.
 - **How to answer:** Yes or no per product family; start point relative to expiry.
 - **Concepts affected:** Margin Requirement Component
 - **Who answers:** ETD Clearing product owner
 <sub>question q23</sub>
+
+### 24. For cleared OTC positions, which valuation do you show clients: the CCP's or your own, and how do you explain a difference?
+
+- **Why it matters:** Tells an agent which valuation party to state when a client asks what a position is worth.
+- **How to answer:** Valuation party per product; how differences are reported.
+- **Concepts affected:** Position Valuation, Variation Margin Requirement
+- **Who answers:** OTC Clearing product owner with the Collateral Manager
+<sub>question q27</sub>

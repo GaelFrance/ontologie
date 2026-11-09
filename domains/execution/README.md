@@ -7,9 +7,9 @@ This domain describes how a client's order to buy or sell listed futures and opt
 | Read | What you will find |
 |---|---|
 | [Overview](overview.md) | The domain in plain words: what it covers, how it works, what to keep apart |
-| [Concepts](concepts.md) | 24 concepts, each with a definition, an example and what not to confuse it with |
+| [Concepts](concepts.md) | 25 concepts, each with a definition, an example and what not to confuse it with |
 | [Review sheet](review.md) | What each reviewer is asked, open questions on meaning, decisions already taken |
-| [Questions for our firm](company-questions.md) | 15 questions that capture how our firm works in this domain |
+| [Questions for our firm](company-questions.md) | 16 questions that capture how our firm works in this domain |
 | [Questions for the experts (Excel)](questions-for-experts.xlsx) | The same questions as an interview workbook; fill in a copy kept inside the firm, never the file here |
 
 **Owner:** Listed Execution product owner  
@@ -48,5 +48,6 @@ This domain describes how a client's order to buy or sell listed futures and opt
 - **[Trading Venue Member](concepts.md#trading-venue-member)** — A firm admitted under a venue's rules to enter orders and register trades there in its own name.
   - **[Third-party Executing Member](concepts.md#third-party-executing-member)** — A venue member that another broker uses to reach a venue where it is not a member.
 - **[Execution Correction](concepts.md#execution-correction)** — A later fix or cancellation of a fill, recorded as a new event that points back to the original.
+- **[Trade Confirmation](concepts.md#trade-confirmation)** — The message that confirms to a client what was executed for it, at what price and cost.
 
 Also relevant here, owned by another domain: [Client](../parties-and-roles/concepts.md#client), [Trading Venue](../instruments-venues-and-calendars/concepts.md#trading-venue), [Instrument](../instruments-venues-and-calendars/concepts.md#instrument), [Contract Specification](../instruments-venues-and-calendars/concepts.md#contract-specification), [Market Access Arrangement](../service-offering-and-market-access/concepts.md#market-access-arrangement), [Service Offering](../service-offering-and-market-access/concepts.md#service-offering), [Cut-off](../post-trade-operations/concepts.md#cut-off), [Give-up / Take-up Process](../clearing-give-up-and-acceptance/concepts.md#give-up--take-up-process), [Give-up Agreement](../clearing-give-up-and-acceptance/concepts.md#give-up-agreement), [Client Execution Fee](../fees-revenue-and-contribution/concepts.md#client-execution-fee), [Executing Broker Brokerage Charge](../fees-revenue-and-contribution/concepts.md#executing-broker-brokerage-charge), [Exchange Fee Charge](../fees-revenue-and-contribution/concepts.md#exchange-fee-charge), [Execution Revenue](../fees-revenue-and-contribution/concepts.md#execution-revenue).

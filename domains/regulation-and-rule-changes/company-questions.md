@@ -173,9 +173,17 @@ These questions capture how **our firm** works in this domain, so the ontology c
 
 <sub>question q25</sub>
 
+### 22. Which position limit, accountability and position reporting regimes do you monitor, for clients and for the house (EU, UK, US regulators and venues), and who monitors them?
+
+- **Why it matters:** Scopes the position limits an agent may be asked about and the owner of the monitoring.
+- **How to answer:** List of regimes and venues; client or house; monitoring function.
+- **Concepts affected:** Position Limit, Regulatory Obligation, Position
+- **Who answers:** Compliance with Regulatory Affairs
+<sub>question q26</sub>
+
 ## Priority 3: later
 
-### 22. Should prudential consequences of a change (qualifying CCP status, default fund and CCP exposure treatment, leverage) be part of change impact, and who owns that view?
+### 23. Should prudential consequences of a change (qualifying CCP status, default fund and CCP exposure treatment, leverage) be part of change impact, and who owns that view?
 
 - **Why it matters:** Decides whether capital impact is an impact type and whether qualifying status must be tracked here.
 - **How to answer:** Yes or no; owner role.
@@ -183,7 +191,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Business management with Finance
 <sub>question q22</sub>
 
-### 23. Under which reporting regimes does the firm report listed and OTC derivatives activity, and does it offer delegated reporting to clients?
+### 24. Under which reporting regimes does the firm report listed and OTC derivatives activity, and does it offer delegated reporting to clients?
 
 - **Why it matters:** Decides when Regulatory Report should leave the backlog and which reporting obligations to seed.
 - **How to answer:** Tick list of regimes; yes or no on delegated reporting.
@@ -191,7 +199,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Compliance (regulatory reporting)
 <sub>question q23</sub>
 
-### 24. Must the team handle official publications in languages other than English, and which version is authoritative for the firm?
+### 25. Must the team handle official publications in languages other than English, and which version is authoritative for the firm?
 
 - **Why it matters:** Affects Change Notice language and the evidence an agent cites.
 - **How to answer:** List of languages; authoritative-language rule.

@@ -14,6 +14,7 @@ import datetime
 import os
 import re
 import sys
+import zipfile
 
 from openpyxl import Workbook
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
@@ -226,7 +227,21 @@ def build(ctx, dom):
     wb.active = 0
     path = os.path.join(ROOT, "domains", page, FILE)
     wb.save(path)
+    freeze(path)
     return path, len(fq), len(rq), len(mq)
+
+
+def freeze(path):
+    """openpyxl stamps the save time; rewrite it, and the zip dates, so an unchanged workbook is byte-identical."""
+    with zipfile.ZipFile(path) as z:
+        parts = [(i, z.read(i.filename)) for i in z.infolist()]
+    stamp = STAMP.strftime("%Y-%m-%dT%H:%M:%SZ")
+    with zipfile.ZipFile(path, "w", zipfile.ZIP_DEFLATED) as z:
+        for info, data in parts:
+            if info.filename == "docProps/core.xml":
+                data = re.sub(rb"(<dcterms:modified[^>]*>)[^<]*", rb"\g<1>" + stamp.encode(), data)
+            info.date_time = STAMP.timetuple()[:6]
+            z.writestr(info, data)
 
 
 def main():

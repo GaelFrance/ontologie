@@ -9,6 +9,8 @@
 - **[Access Onboarding](domains/service-offering-and-market-access/concepts.md#access-onboarding)** — The steps the firm, or a client, goes through to get a new route into a venue or clearing house. *(Service offering and market access)*
 - **[Access Requirement](domains/service-offering-and-market-access/concepts.md#access-requirement)** — A condition a venue, clearing house or regulator sets before someone can use a given route in. *(Service offering and market access)*
 - **[Account](domains/parties-and-roles/concepts.md#account)** — A place in someone's books where a holder's trades, positions, cash or charges are recorded for a stated purpose. *(Parties, roles, clients and accounts)*
+- **[Account Cash Balance](domains/margin-and-collateral/concepts.md#account-cash-balance)** — The cash recorded in an account: deposits, withdrawals, realised results, premiums, fees and interest. *(Margin and collateral)*
+- **[Account Equity](domains/margin-and-collateral/concepts.md#account-equity)** — What an account is worth on a statement: its cash plus the value of its open positions. *(Margin and collateral)*
 - **[Account Identifier](domains/parties-and-roles/concepts.md#account-identifier)** — A code that points to an account, unique only in the books of whoever issued it. *(Parties, roles, clients and accounts)*
 - **[Activity Volume](domains/fees-revenue-and-contribution/concepts.md#activity-volume)** — How much was traded or cleared, in a stated unit and counting rule. *(Fees, revenue and contribution)*
 - **[Agreement](domains/clearing-services-and-accounts/concepts.md#agreement)** — Any arrangement that creates rights and duties between parties, whether signed or accepted by joining published rules. *(Clearing: services, accounts and client clearing)*
@@ -70,6 +72,7 @@
 - **[Client Order](domains/execution/concepts.md#client-order)** — The order as the client gave it to the broker, before the broker splits or routes it. *(Listed derivatives execution)*
 - **[Client Pricing Terms](domains/fees-revenue-and-contribution/concepts.md#client-pricing-terms)** — The prices a broker has agreed with one client for its services. *(Fees, revenue and contribution)*
 - **[Client Regulatory Category](domains/parties-and-roles/concepts.md#client-regulatory-category)** — How a provider has categorised a client under conduct rules, for example professional client or eligible counterparty. *(Parties, roles, clients and accounts)*
+- **[Client Statement](domains/post-trade-operations/concepts.md#client-statement)** — The daily or monthly report a broker sends a client on its accounts. *(Post-trade operations)*
 - **[Collateral](domains/margin-and-collateral/concepts.md#collateral)** — Cash or securities actually held by one party from another to cover margin. *(Margin and collateral)*
 - **[Collateral Arrangement](domains/margin-and-collateral/concepts.md#collateral-arrangement)** — The legal terms under which collateral is given, valued, paid interest and returned. *(Margin and collateral)*
 - **[Collateral Asset](domains/margin-and-collateral/concepts.md#collateral-asset)** — Something that could be used as collateral, such as cash in a currency or a bond. *(Margin and collateral)*
@@ -197,7 +200,9 @@
 
 - **[Offering Coverage Line](domains/service-offering-and-market-access/concepts.md#offering-coverage-line)** — One line of 'where and for what' a service is available, and which access route makes it possible. *(Service offering and market access)*
 - **[Offering Eligibility Criterion](domains/service-offering-and-market-access/concepts.md#offering-eligibility-criterion)** — A rule the firm applies to decide which clients can get a service. *(Service offering and market access)*
+- **[Open Trade Equity](domains/margin-and-collateral/concepts.md#open-trade-equity)** — The paper gain or loss on open futures: what the positions are worth today against the price they were traded at. *(Margin and collateral)*
 - **[Operational Exception](domains/post-trade-operations/concepts.md#operational-exception)** — A problem someone must act on, because something expected did not happen or a rule was not met. *(Post-trade operations)*
+- **[Option Premium](domains/post-trade-operations/concepts.md#option-premium)** — The price paid for an option, by the buyer to the seller. *(Post-trade operations)*
 - **[Order](domains/execution/concepts.md#order)** — A request to buy or sell a quantity of a listed contract, under conditions such as a price limit or how long it stays valid. *(Listed derivatives execution)*
 - **[Order Handling Channel](domains/execution/concepts.md#order-handling-channel)** — How one order was worked and reached the venue: by a person at the broker, by the broker's algorithm, by the client through the broker's systems, or by the client directly under the broker's membership. *(Listed derivatives execution)*
 
@@ -213,8 +218,10 @@
 - **[Porting](domains/clearing-services-and-accounts/concepts.md#porting)** — Moving clients' positions and collateral from a failed clearing member to a back-up member, or closing them out if that fails. *(Clearing: services, accounts and client clearing)*
 - **[Position](domains/clearing-services-and-accounts/concepts.md#position)** — What is open in an account on a given day: how many contracts are held long and short, or which cleared swaps are still running. *(Clearing: services, accounts and client clearing)*
 - **[Position Adjustment](domains/clearing-services-and-accounts/concepts.md#position-adjustment)** — A permitted correction or close-out of a position at the CCP that does not involve a new trade. *(Clearing: services, accounts and client clearing)*
+- **[Position Limit](domains/regulation-and-rule-changes/concepts.md#position-limit)** — A cap, set by a regulator or a venue, on how many contracts one holder may hold, or a level above which it is watched or reported. *(Regulation and rule changes)*
 - **[Position Reconciliation](domains/post-trade-operations/concepts.md#position-reconciliation)** — Checking that the positions in our books match the CCP's (or the client's) for each account and series on a clearing date. *(Post-trade operations)*
 - **[Position Transfer](domains/clearing-services-and-accounts/concepts.md#position-transfer)** — Moving open positions from one CCP account to another on request, for example when a client changes clearing broker. *(Clearing: services, accounts and client clearing)*
+- **[Position Valuation](domains/margin-and-collateral/concepts.md#position-valuation)** — What a position is worth at a point in time, and who valued it with which price. *(Margin and collateral)*
 - **[Pre-trade Control Check](domains/execution/concepts.md#pre-trade-control-check)** — An automatic check that stops an order going to the market if it breaks a limit. *(Listed derivatives execution)*
 - **[Price Alignment Amount](domains/margin-and-collateral/concepts.md#price-alignment-amount)** — A small interest-like payment that goes with variation margin on cleared swaps but is not part of it. *(Margin and collateral)*
 - **[Processing Window](domains/instruments-venues-and-calendars/concepts.md#processing-window)** — A named stretch of a clearing day when a CCP or payment system accepts a given step. *(Instruments, venues and calendars)*
@@ -270,6 +277,7 @@
 - **[Third-Party Execution Arrangement](domains/service-offering-and-market-access/concepts.md#third-party-execution-arrangement)** — A broker reaches a venue where it is not a member by passing orders to a broker that is. *(Service offering and market access)*
 - **[Trade](domains/execution/concepts.md#trade)** — The agreed deal between two counterparties on a derivative contract, with its terms; later steps such as clearing create new linked trades rather than changing it. *(Listed derivatives execution)*
 - **[Trade Amendment](domains/post-trade-operations/concepts.md#trade-amendment)** — A change to, or early ending of, a trade that already exists, recorded as a new event that points to the original. *(Post-trade operations)*
+- **[Trade Confirmation](domains/execution/concepts.md#trade-confirmation)** — The message that confirms to a client what was executed for it, at what price and cost. *(Listed derivatives execution)*
 - **[Trading Session](domains/instruments-venues-and-calendars/concepts.md#trading-session)** — A part of the trading day, such as the opening auction, continuous trading or an evening session, with its hours and the trade date it counts towards. *(Instruments, venues and calendars)*
 - **[Trading Venue](domains/instruments-venues-and-calendars/concepts.md#trading-venue)** — An organised marketplace, such as an exchange or a multilateral trading facility, where many participants' buying and selling interests meet under the venue's rules. *(Instruments, venues and calendars)*
 - **[Trading Venue Member](domains/execution/concepts.md#trading-venue-member)** — A firm admitted under a venue's rules to enter orders and register trades there in its own name. *(Listed derivatives execution)*
@@ -294,6 +302,7 @@ Informal words and abbreviations, and the concept they point to.
 - “account code” (any) → [Account Identifier](domains/parties-and-roles/concepts.md#account-identifier)
 - “account manager” (US allocation usage) → [Investment Manager](domains/parties-and-roles/concepts.md#investment-manager)
 - “account type election” (any) → [Segregation Election](domains/clearing-services-and-accounts/concepts.md#segregation-election)
+- “accountability level, reportable level” (US exchanges and regulators) → [Position Limit](domains/regulation-and-rule-changes/concepts.md#position-limit)
 - “admission criteria” (CCP and venue usage) → [Access Requirement](domains/service-offering-and-market-access/concepts.md#access-requirement)
 - “affiliate” (CCP rulebook usage, ambiguous) → [Parent Entity](domains/parties-and-roles/concepts.md#parent-entity)
 - “affiliate client” (any) → [Intra-group Client](domains/parties-and-roles/concepts.md#intra-group-client)
@@ -377,6 +386,7 @@ Informal words and abbreviations, and the concept they point to.
 - “competent authority” (EU usage, contextual) → [Regulatory Authority](domains/regulation-and-rule-changes/concepts.md#regulatory-authority)
 - “compliance date” (US usage, contextual) → [Phase-in Step](domains/regulation-and-rule-changes/concepts.md#phase-in-step)
 - “concentration cap” (any) → [Concentration Limit](domains/margin-and-collateral/concepts.md#concentration-limit)
+- “confirmation, confirm” (broker to client, listed) → [Trade Confirmation](domains/execution/concepts.md#trade-confirmation)
 - “connectivity” (Any) → [Connectivity Route](domains/service-offering-and-market-access/concepts.md#connectivity-route)
 - “consent” (OTC clearing, contextual) → [Submission Acceptance](domains/clearing-give-up-and-acceptance/concepts.md#submission-acceptance)
 - “consultation paper” (the document) → [Consultation](domains/regulation-and-rule-changes/concepts.md#consultation)
@@ -392,6 +402,7 @@ Informal words and abbreviations, and the concept they point to.
 - “customer account” (US usage, ambiguous with the US account class) → [Client Account](domains/parties-and-roles/concepts.md#client-account)
 - “customer segregated origin” (US) → [Client Omnibus Account](domains/clearing-services-and-accounts/concepts.md#client-omnibus-account)
 - “daily settlement” (CCP, contextual) → [Netted Settlement Obligation](domains/post-trade-operations/concepts.md#netted-settlement-obligation)
+- “daily statement” (broker to client) → [Client Statement](domains/post-trade-operations/concepts.md#client-statement)
 - “DCO” (US) → [Central Counterparty](domains/clearing-services-and-accounts/concepts.md#central-counterparty), [Regulatory Classification](domains/regulation-and-rule-changes/concepts.md#regulatory-classification)
 - “DCO” (US, contextual) → [Regulatory Authorisation](domains/regulation-and-rule-changes/concepts.md#regulatory-authorisation)
 - “DEA” (EU) → [Direct Electronic Access Arrangement](domains/service-offering-and-market-access/concepts.md#direct-electronic-access-arrangement)
@@ -478,6 +489,7 @@ Informal words and abbreviations, and the concept they point to.
 - “ISA” (EU usage) → [Individually Segregated Client Account](domains/clearing-services-and-accounts/concepts.md#individually-segregated-client-account)
 - “last trading day rule” → [Key-Date Rule](domains/instruments-venues-and-calendars/concepts.md#key-date-rule)
 - “late payment” (contextual) → [Settlement Fail](domains/post-trade-operations/concepts.md#settlement-fail)
+- “ledger balance, cash balance” (account statements) → [Account Cash Balance](domains/margin-and-collateral/concepts.md#account-cash-balance)
 - “leg fill” (desk usage) → [Strategy Leg Execution](domains/execution/concepts.md#strategy-leg-execution)
 - “legal view” (contextual) → [Regulatory Interpretation](domains/regulation-and-rule-changes/concepts.md#regulatory-interpretation)
 - “licence” → [Regulatory Authorisation](domains/regulation-and-rule-changes/concepts.md#regulatory-authorisation)
@@ -486,6 +498,7 @@ Informal words and abbreviations, and the concept they point to.
 - “lots” (listed usage, contextual) → [Activity Volume](domains/fees-revenue-and-contribution/concepts.md#activity-volume)
 - “LP programme” (venue usage) → [Fee Incentive Programme](domains/fees-revenue-and-contribution/concepts.md#fee-incentive-programme)
 - “LP rebate” (venue usage) → [Fee Rebate](domains/fees-revenue-and-contribution/concepts.md#fee-rebate)
+- “maintenance margin, maintenance level” (US futures) → [Margin Call Terms](domains/margin-and-collateral/concepts.md#margin-call-terms)
 - “management basis” (repository usage) → [Management Reporting Basis](domains/fees-revenue-and-contribution/concepts.md#management-reporting-basis)
 - “mandate” (US usage, contextual) → [Regulatory Obligation](domains/regulation-and-rule-changes/concepts.md#regulatory-obligation)
 - “mandatory clearing” (contextual) → [Clearing Obligation](domains/regulation-and-rule-changes/concepts.md#clearing-obligation)
@@ -499,6 +512,7 @@ Informal words and abbreviations, and the concept they point to.
 - “margin surplus” (contextual) → [Margin Excess or Shortfall](domains/margin-and-collateral/concepts.md#margin-excess-or-shortfall)
 - “margin terms” (contextual, client agreements) → [Margin Call Terms](domains/margin-and-collateral/concepts.md#margin-call-terms)
 - “margin unit” (contextual) → [Margin Portfolio](domains/margin-and-collateral/concepts.md#margin-portfolio)
+- “mark-to-market, MTM” (Any) → [Position Valuation](domains/margin-and-collateral/concepts.md#position-valuation), [Variation Margin Requirement](domains/margin-and-collateral/concepts.md#variation-margin-requirement)
 - “market coverage” (Any) → [Offering Coverage Line](domains/service-offering-and-market-access/concepts.md#offering-coverage-line)
 - “market notice” (contextual) → [Change Notice](domains/regulation-and-rule-changes/concepts.md#change-notice)
 - “market onboarding” (UC-002 usage) → [Access Onboarding](domains/service-offering-and-market-access/concepts.md#access-onboarding)
@@ -507,6 +521,7 @@ Informal words and abbreviations, and the concept they point to.
 - “market-making scheme” (MiFID II usage, to verify) → [Fee Incentive Programme](domains/fees-revenue-and-contribution/concepts.md#fee-incentive-programme)
 - “matched trade” (venue usage) → [Executed Trade](domains/execution/concepts.md#executed-trade)
 - “maturity” (OTC, contextual) → [Expiry](domains/post-trade-operations/concepts.md#expiry)
+- “MED, margin excess or deficit” (US futures statements) → [Margin Excess or Shortfall](domains/margin-and-collateral/concepts.md#margin-excess-or-shortfall)
 - “member notice” → [Change Notice](domains/regulation-and-rule-changes/concepts.md#change-notice)
 - “member-client trade” (ambiguity register term) → [Client Back-to-Back Trade](domains/clearing-services-and-accounts/concepts.md#client-back-to-back-trade)
 - “membership agreement” (Any) → [Access Agreement](domains/service-offering-and-market-access/concepts.md#access-agreement)
@@ -517,7 +532,7 @@ Informal words and abbreviations, and the concept they point to.
 - “mirror trade” → [Client Back-to-Back Trade](domains/clearing-services-and-accounts/concepts.md#client-back-to-back-trade)
 - “mismatch” → [Reconciliation Break](domains/post-trade-operations/concepts.md#reconciliation-break)
 - “mnemonic” (listed markets usage) → [Account Identifier](domains/parties-and-roles/concepts.md#account-identifier)
-- “monthly statement” (contextual, client usage) → [Fee Invoice](domains/fees-revenue-and-contribution/concepts.md#fee-invoice)
+- “monthly statement” (client usage) → [Client Statement](domains/post-trade-operations/concepts.md#client-statement), [Fee Invoice](domains/fees-revenue-and-contribution/concepts.md#fee-invoice)
 - “multi-leg instrument” (FIX) → [Listed Strategy](domains/instruments-venues-and-calendars/concepts.md#listed-strategy)
 - “naked access” (informal, avoid) → [Direct Electronic Access Arrangement](domains/service-offering-and-market-access/concepts.md#direct-electronic-access-arrangement)
 - “NCM” (listed markets) → [Non-Clearing Member](domains/parties-and-roles/concepts.md#non-clearing-member)
@@ -526,12 +541,14 @@ Informal words and abbreviations, and the concept they point to.
 - “NCM-GCM relationship” (listed markets) → [Non-Clearing Member Arrangement](domains/service-offering-and-market-access/concepts.md#non-clearing-member-arrangement)
 - “negotiated large trade” (any) → [Block Trade](domains/execution/concepts.md#block-trade)
 - “net cash call” → [Netted Settlement Obligation](domains/post-trade-operations/concepts.md#netted-settlement-obligation)
+- “net liquidating value, NLV, net liq” (statements with options) → [Account Equity](domains/margin-and-collateral/concepts.md#account-equity)
 - “net settlement amount” → [Netted Settlement Obligation](domains/post-trade-operations/concepts.md#netted-settlement-obligation)
 - “NII on client cash” (finance usage, contextual) → [Collateral Revenue](domains/fees-revenue-and-contribution/concepts.md#collateral-revenue)
 - “no-action letter” (US, contextual) → [Regulatory Relief](domains/regulation-and-rule-changes/concepts.md#regulatory-relief)
 - “non-clearing member” (Listed markets) → [Trading Venue Member](domains/execution/concepts.md#trading-venue-member), [Clearing Member](domains/clearing-services-and-accounts/concepts.md#clearing-member)
 - “nostro” (contextual, firm's own cash account) → [Settlement Account](domains/post-trade-operations/concepts.md#settlement-account)
 - “notice of intention” → [Delivery Notice](domains/post-trade-operations/concepts.md#delivery-notice)
+- “NPV” (cleared OTC) → [Position Valuation](domains/margin-and-collateral/concepts.md#position-valuation)
 - “off-book trade” (EU venue usage, ambiguous) → [Block Trade](domains/execution/concepts.md#block-trade)
 - “omnibus” (Any) → See the open question “Omnibus, house and client”
 - “omnibus” (ambiguous; see the open question on omnibus, house and client) → [Client Omnibus Account](domains/clearing-services-and-accounts/concepts.md#client-omnibus-account)
@@ -542,6 +559,7 @@ Informal words and abbreviations, and the concept they point to.
 - “order originator” (execution usage, ambiguous) → [Authorised Representative](domains/parties-and-roles/concepts.md#authorised-representative)
 - “order routing to another broker” (Any) → [Third-Party Execution Arrangement](domains/service-offering-and-market-access/concepts.md#third-party-execution-arrangement)
 - “OSA, omnibus segregated account” (EU usage) → [Client Omnibus Account](domains/clearing-services-and-accounts/concepts.md#client-omnibus-account)
+- “OTE” → [Open Trade Equity](domains/margin-and-collateral/concepts.md#open-trade-equity)
 - “own account” (EU) → [House Account](domains/clearing-services-and-accounts/concepts.md#house-account)
 - “ownership group” (any, for the set of entities under one ultimate parent) → [Parent Entity](domains/parties-and-roles/concepts.md#parent-entity)
 - “PAA” (OTC clearing) → [Price Alignment Amount](domains/margin-and-collateral/concepts.md#price-alignment-amount)
@@ -558,6 +576,7 @@ Informal words and abbreviations, and the concept they point to.
 - “position rec” → [Position Reconciliation](domains/post-trade-operations/concepts.md#position-reconciliation)
 - “position-keeping account” (any) → [CCP Position Account](domains/clearing-services-and-accounts/concepts.md#ccp-position-account)
 - “pre-clearing trade” (any) → [Executed Trade](domains/execution/concepts.md#executed-trade)
+- “premium” (options) → [Option Premium](domains/post-trade-operations/concepts.md#option-premium)
 - “price list” (venue and CCP usage) → [Published Fee Schedule](domains/fees-revenue-and-contribution/concepts.md#published-fee-schedule)
 - “price point” (any) → [Fee Rate](domains/fees-revenue-and-contribution/concepts.md#fee-rate)
 - “pricing schedule” (any) → [Client Pricing Terms](domains/fees-revenue-and-contribution/concepts.md#client-pricing-terms)
@@ -633,6 +652,7 @@ Informal words and abbreviations, and the concept they point to.
 - “third-party execution” (sponsor usage) → [Third-Party Execution Arrangement](domains/service-offering-and-market-access/concepts.md#third-party-execution-arrangement)
 - “ticket” → [Exception Case](domains/post-trade-operations/concepts.md#exception-case)
 - “tickets” (OTC usage, contextual) → [Activity Volume](domains/fees-revenue-and-contribution/concepts.md#activity-volume)
+- “total equity” (US futures statements) → [Account Equity](domains/margin-and-collateral/concepts.md#account-equity)
 - “trade bust, busted trade” (venue usage) → [Execution Correction](domains/execution/concepts.md#execution-correction)
 - “trade correction” (contextual) → [Trade Amendment](domains/post-trade-operations/concepts.md#trade-amendment)
 - “trading hours” → [Trading Session](domains/instruments-venues-and-calendars/concepts.md#trading-session)
@@ -647,6 +667,7 @@ Informal words and abbreviations, and the concept they point to.
 - “underlier” → [Underlying](domains/instruments-venues-and-calendars/concepts.md#underlying)
 - “underlying client” (omnibus usage) → [Economic Beneficiary](domains/parties-and-roles/concepts.md#economic-beneficiary)
 - “unmatched item” (contextual) → [Reconciliation Break](domains/post-trade-operations/concepts.md#reconciliation-break)
+- “unrealised P&L” (Any) → [Open Trade Equity](domains/margin-and-collateral/concepts.md#open-trade-equity), [Position Valuation](domains/margin-and-collateral/concepts.md#position-valuation)
 - “unwind” (OTC) → [Trade Amendment](domains/post-trade-operations/concepts.md#trade-amendment)
 - “valuation percentage” (contextual, bilateral documentation) → [Collateral Haircut](domains/margin-and-collateral/concepts.md#collateral-haircut)
 - “venue order, market order” (when sent to a venue; 'market order' is ambiguous with the order type) → [Child Order](domains/execution/concepts.md#child-order)

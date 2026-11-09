@@ -107,9 +107,17 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Listed Execution product owner
 <sub>question q21</sub>
 
+### 13. Which trade confirmations do you send clients for listed executions (per execution, per allocation, end-of-day summary), and under which regime's timing?
+
+- **Why it matters:** Tells an agent what a client has already been told about an execution, and when.
+- **How to answer:** Confirmation types per client group; timing rule per regime.
+- **Concepts affected:** Trade Confirmation, Client Execution, Allocation
+- **Who answers:** Listed Execution product owner with the ETD post-trade operations lead
+<sub>question q23</sub>
+
 ## Priority 3: later
 
-### 13. For exchanges for related positions, does the firm also provide the related position (cash bond, OTC swap, OTC option), and from which business?
+### 14. For exchanges for related positions, does the firm also provide the related position (cash bond, OTC swap, OTC option), and from which business?
 
 - **Why it matters:** Decides whether the related leg must be linked to another domain's trade and which owner reviews it.
 - **How to answer:** Per related-position type: provided by the firm yes or no, business that provides it (generic).
@@ -117,7 +125,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Listed Execution product owner
 <sub>question q08</sub>
 
-### 14. Do you cross or match client orders against each other or against the firm on a venue (cross or committed orders), and how are those executions recorded?
+### 15. Do you cross or match client orders against each other or against the firm on a venue (cross or committed orders), and how are those executions recorded?
 
 - **Why it matters:** Decides whether the cross value of execution method is needed and how capacity is shown on each side.
 - **How to answer:** Yes or no per venue; capacity on each side; method name used.
@@ -125,7 +133,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Listed Execution product owner with Compliance
 <sub>question q20</sub>
 
-### 15. Which order statuses must be shown to clients or operations, and do you use any status beyond working, partly filled, filled, cancelled, rejected and expired?
+### 16. Which order statuses must be shown to clients or operations, and do you use any status beyond working, partly filled, filled, cancelled, rejected and expired?
 
 - **Why it matters:** Sets the values of order status that the operations agent must recognise.
 - **How to answer:** List of status names with a one-line meaning each.

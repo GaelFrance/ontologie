@@ -5,7 +5,7 @@
 **Owner (approves the concepts in section 1):** Regulatory Affairs  
 **Reviewers:** Legal; Compliance; business management; Listed Execution product owner; OTC Clearing product owner  
 **Review wave:** 1  
-**Concepts:** 19 to approve, 10 shown for context, all Draft
+**Concepts:** 20 to approve, 10 shown for context, all Draft
 
 **Scope:** Readings marked "interpretation required" are signed off by Regulatory Affairs and business management, with Legal and Compliance (decision 9).
 
@@ -15,6 +15,7 @@
 - **Legal and Compliance:** Are regulatory classifications (qualifying CCP, FCM, client category) attached to the right entity, role, account or service, with a basis and a validity period?
 - **Listed Execution product owner:** Do venue rule changes (block thresholds, EFRP rules, direct electronic access and algorithm controls) fit the rule change concept?
 - **OTC Clearing product owner:** Does Regulatory Obligation describe the clearing obligation well enough: counterparty classes, product scope, phase-in dates and exemptions?
+- **Compliance:** Position Limit is new: does it cover limits, accountability levels and reportable levels as you monitor them?
 - **Everyone:** for each concept in section 1, is the definition **correct**, **complete** and **worded the way your teams use it**? Write *OK*, *Change* (say what) or *Unsure*. Is a concept your area relies on **missing**, or one **unnecessary**? The [concept cards](concepts.md) give examples.
 - **Everyone:** for each open question in section 3, do you **agree with the proposed answer**? If not, what is the rule in practice?
 - How *our* firm works goes in the [questions for our firm](company-questions.md), never in the definitions. Mention internal terms or system names only in your reply, never in this repository.
@@ -42,6 +43,7 @@
 | **[Regulatory Authorisation](concepts.md#regulatory-authorisation)** *(level 2)* | Regulatory classification of a legal entity (or of a branch where the regime says so) recording that an authority has authorised, registered, recognised, designated or exempted it to carry out a stated activity under a regime, with its scope, conditions, effective period and current standing (granted, conditional, suspended, withdrawn, applied for). | |
 | **[Regulatory Authority](concepts.md#regulatory-authority)** *(level 2)* | Role of a public body that, under a regime, adopts rules, supervises, authorises or registers parties, grants relief or decides equivalence, within a stated remit (jurisdiction, sector, type of entity); includes legislators, supervisory authorities, central banks acting as supervisors and supranational authorities. Standard setters whose principles are not binding are recorded as issuers of guidance only. | |
 | **[Regulatory Reporting Role](concepts.md#regulatory-reporting-role)** *(level 2)* | Role that a regime assigns to a party for one report type on an identified execution or trade: for example the executing entity of a transaction report, the reporting counterparty, or the entity responsible for reporting (to verify per regime). It is never inferred from the Executing Broker, Trading Venue Member or Giving Clearing Member roles. The report object itself stays in the backlog. | |
+| **[Position Limit](concepts.md#position-limit)** *(level 2)* | Maximum position, or a position level that triggers scrutiny (accountability level) or reporting (reportable level), in a commodity derivative or other listed contract, set by a regulator or by a trading venue under its rules for the positions held or controlled by one person or group, aggregated across accounts and firms as the rule states, for a stated period (spot month, single month or all months) and net or by side, with the exemptions the rule allows (for example bona fide hedging). It applies to the holder of the positions; monitoring it for clients is a firm duty recorded in the internal layer. Distinct from a Clearing Limit, which a clearing member sets for its own credit and risk control. | |
 
 ## 2. Concepts owned elsewhere: check them from your angle
 
@@ -128,6 +130,7 @@ Also touching this domain, answered elsewhere:
 | **10. Default meaning of "today" and "current"** — The clearing date of the relevant CCP, in that CCP's time zone, stated in every answer. | Date role "clearing date" is the default for operational questions; other date roles must be requested explicitly. Record time stays in the model for later audit needs. |
 | **16. Meaning changes** — The 13 proposed meaning changes are accepted as Draft: Party, Broker, Trading Venue, Allocation, Position, Commission, Variation Margin Requirement, Market Access Arrangement, Allocation Instruction, Rule Change, Cut-off, Regulatory Classification, CCP Account. | Definitions replaced in the catalogue; Commission keeps its resolution flag. Settlement Deadline, Firm Cut-off, Take-up Deadline and Standing Allocation Instruction no longer depend on a pending decision. |
 | **17. Cut-off** — A cut-off is set by a rule provision or by a term of an agreement; it is no longer a kind of Rule Provision. Only rule-set cut-offs follow the rule change lifecycle. | Specialisation removed; new relationship "set by". |
+| **24. Other missing concepts** — Option Premium and Client Statement (post-trade), Trade Confirmation (execution) and Position Limit (regulation) are added. "Maintenance margin" stays a call trigger level in Margin Call Terms, as proposed for the open question “Margin and initial margin”; a client funds requirement stays in the backlog. | Concepts added as Draft; alias rows for maintenance margin and monthly statement; backlog item and firm question on client funds. |
 
 ## 5. Not yet in the catalogue
 

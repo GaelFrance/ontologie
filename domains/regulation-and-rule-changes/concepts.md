@@ -4,7 +4,7 @@
 
 Concepts are grouped by family: a broad concept first, then the kinds or parts it breaks down into.
 
-**Contents:** [Regulatory Regime](#regulatory-regime) · [Rule Provision](#rule-provision) · [Rulebook](#rulebook) · [Regulatory Relief](#regulatory-relief) · [Equivalence Decision](#equivalence-decision) · [Regulatory Obligation](#regulatory-obligation) · [Clearing Obligation](#clearing-obligation) · [Phase-in Step](#phase-in-step) · [Regulated Product Class](#regulated-product-class) · [Rule Change](#rule-change) · [Change Notice](#change-notice) · [Consultation](#consultation) · [Rule Change Approval](#rule-change-approval) · [Change Impact Assessment](#change-impact-assessment) · [Regulatory Interpretation](#regulatory-interpretation) · [Regulatory Classification](#regulatory-classification) · [Regulatory Authorisation](#regulatory-authorisation) · [Regulatory Authority](#regulatory-authority) · [Regulatory Reporting Role](#regulatory-reporting-role)
+**Contents:** [Regulatory Regime](#regulatory-regime) · [Rule Provision](#rule-provision) · [Rulebook](#rulebook) · [Regulatory Relief](#regulatory-relief) · [Equivalence Decision](#equivalence-decision) · [Regulatory Obligation](#regulatory-obligation) · [Clearing Obligation](#clearing-obligation) · [Phase-in Step](#phase-in-step) · [Regulated Product Class](#regulated-product-class) · [Rule Change](#rule-change) · [Change Notice](#change-notice) · [Consultation](#consultation) · [Rule Change Approval](#rule-change-approval) · [Change Impact Assessment](#change-impact-assessment) · [Regulatory Interpretation](#regulatory-interpretation) · [Regulatory Classification](#regulatory-classification) · [Regulatory Authorisation](#regulatory-authorisation) · [Regulatory Authority](#regulatory-authority) · [Regulatory Reporting Role](#regulatory-reporting-role) · [Position Limit](#position-limit)
 
 ### Regulatory Regime
 
@@ -56,6 +56,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Regulated Product Class](#regulated-product-class) *is defined in* Rule Provision
 - [Regulatory Interpretation](#regulatory-interpretation) *is a reading of* Rule Provision
 - [Regulatory Authority](#regulatory-authority) *issues* Rule Provision
+- [Position Limit](#position-limit) *set by* Rule Provision — A regulator's or a venue's rule.
 
 **Open questions on its meaning:** “Dates of a rule change” (open, answer proposed) — see the [review sheet](review.md).
 
@@ -522,3 +523,27 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is relied on by delegated reporting* [Service Component](../service-offering-and-market-access/concepts.md#service-component)
 
 <sub>Role · level 2 · Draft · reference LD-C0204 · approved by the Regulatory Affairs</sub>
+
+### Position Limit
+
+*A cap, set by a regulator or a venue, on how many contracts one holder may hold, or a level above which it is watched or reported.*
+
+**Definition.** Maximum position, or a position level that triggers scrutiny (accountability level) or reporting (reportable level), in a commodity derivative or other listed contract, set by a regulator or by a trading venue under its rules for the positions held or controlled by one person or group, aggregated across accounts and firms as the rule states, for a stated period (spot month, single month or all months) and net or by side, with the exemptions the rule allows (for example bona fide hedging). It applies to the holder of the positions; monitoring it for clients is a firm duty recorded in the internal layer. Distinct from a Clearing Limit, which a clearing member sets for its own credit and risk control.
+
+**Example.** Fund F approaches the spot-month limit on a commodity future at Exchange X and must reduce its position before expiry.
+
+**Not to be confused with.** Clearing Limit: set by the clearing broker for its own credit risk, not by a regulator or venue.
+
+**Values (draft list):** position limit; accountability level; reportable level; spot month; single month; all months combined
+
+**Words people use:** “accountability level, reportable level” (US exchanges and regulators)
+
+**Before using it, know:** Regime or venue, contract, limit kind (limit, accountability or reportable level), period, aggregation basis, exemptions.
+
+**Connected to:**
+
+- *set by* [Rule Provision](#rule-provision) — A regulator's or a venue's rule.
+- *applies to* [Position](../clearing-services-and-accounts/concepts.md#position) — Positions aggregated by holder or controller across accounts and firms, as the rule states.
+- *is distinct from* [Clearing Limit](../clearing-give-up-and-acceptance/concepts.md#clearing-limit)
+
+<sub>Reference Concept · level 2 · Draft · reference LD-C0229 · approved by the Regulatory Affairs</sub>

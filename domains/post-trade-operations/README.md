@@ -7,9 +7,9 @@ Post-trade operations is everything that happens to a trade after it is done and
 | Read | What you will find |
 |---|---|
 | [Overview](overview.md) | The domain in plain words: what it covers, how it works, what to keep apart |
-| [Concepts](concepts.md) | 24 concepts, each with a definition, an example and what not to confuse it with |
+| [Concepts](concepts.md) | 26 concepts, each with a definition, an example and what not to confuse it with |
 | [Review sheet](review.md) | What each reviewer is asked, open questions on meaning, decisions already taken |
-| [Questions for our firm](company-questions.md) | 19 questions that capture how our firm works in this domain |
+| [Questions for our firm](company-questions.md) | 21 questions that capture how our firm works in this domain |
 | [Questions for the experts (Excel)](questions-for-experts.xlsx) | The same questions as an interview workbook; fill in a copy kept inside the firm, never the file here |
 
 **Owner:** ETD post-trade operations lead  
@@ -47,6 +47,8 @@ Post-trade operations is everything that happens to a trade after it is done and
   - **[Reconciliation Break](concepts.md#reconciliation-break)** — A mismatch between two records that should agree.
 - **[Source Record](concepts.md#source-record)** — One source's version of a trade, position or amount, with its own references and status.
   - **[CCP Report](concepts.md#ccp-report)** — The daily (or intraday) statement a CCP sends a clearing member about its trades, positions, margin and payments.
+  - **[Client Statement](concepts.md#client-statement)** — The daily or monthly report a broker sends a client on its accounts.
 - **[Settlement Account](concepts.md#settlement-account)** — The bank or delivery account a party uses to pay or receive what it owes.
+- **[Option Premium](concepts.md#option-premium)** — The price paid for an option, by the buyer to the seller.
 
 Also relevant here, owned by another domain: [Business Date](../instruments-venues-and-calendars/concepts.md#business-date), [Business Calendar](../instruments-venues-and-calendars/concepts.md#business-calendar), [Trade](../execution/concepts.md#trade), [Allocation](../execution/concepts.md#allocation), [Allocation Instruction](../execution/concepts.md#allocation-instruction), [Give-up / Take-up Process](../clearing-give-up-and-acceptance/concepts.md#give-up--take-up-process), [Clearing Member Acceptance](../clearing-give-up-and-acceptance/concepts.md#clearing-member-acceptance), [Clearing Acceptance](../clearing-give-up-and-acceptance/concepts.md#clearing-acceptance), [CCP Account](../clearing-services-and-accounts/concepts.md#ccp-account), [Position](../clearing-services-and-accounts/concepts.md#position), [Margin Call](../margin-and-collateral/concepts.md#margin-call), [Collateral Movement](../margin-and-collateral/concepts.md#collateral-movement), [Account](../parties-and-roles/concepts.md#account).

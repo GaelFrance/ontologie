@@ -286,6 +286,11 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Breaks down into:** [Executing Broker](../execution/concepts.md#executing-broker) (kind of), [Clearing Broker](../clearing-services-and-accounts/concepts.md#clearing-broker) (kind of)
 
+**Connected to:**
+
+- [Client Statement](../post-trade-operations/concepts.md#client-statement) *is issued by* Broker — Clearing or executing broker, to its client.
+- [Trade Confirmation](../execution/concepts.md#trade-confirmation) *is issued by* Broker
+
 **Open questions on its meaning:** “Clearing broker, clearing member, FCM” (open, answer proposed) — see the [review sheet](review.md).
 
 <sub>Role · level 1 · Draft · reference LD-C0005 · approved by the Reference & Client Data</sub>

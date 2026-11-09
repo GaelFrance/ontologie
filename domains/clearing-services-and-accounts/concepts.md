@@ -441,6 +441,8 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Exercise](../post-trade-operations/concepts.md#exercise) *reduces the long* Position
 - [Assignment](../post-trade-operations/concepts.md#assignment) *reduces the short* Position
 - [Trade Amendment](../post-trade-operations/concepts.md#trade-amendment) *may change* Position
+- [Position Valuation](../margin-and-collateral/concepts.md#position-valuation) *values* Position
+- [Position Limit](../regulation-and-rule-changes/concepts.md#position-limit) *applies to* Position — Positions aggregated by holder or controller across accounts and firms, as the rule states.
 
 **Open questions on its meaning:** “Position” (open, answer proposed); “Current, as of, as known at” (open, answer proposed) — see the [review sheet](review.md).
 

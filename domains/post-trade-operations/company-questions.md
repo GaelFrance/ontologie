@@ -152,12 +152,28 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Joint question:** also covers what Listed derivatives execution needed to ask.
 <sub>question q18</sub>
 
+### 19. Which statements do you send clients (daily, monthly, per regime and entity), and which figures do clients rely on most: positions, cash, equity, excess or deficit, fees?
+
+- **Why it matters:** Defines the client statement an agent can cite and the figures it must reconcile with.
+- **How to answer:** List of statements with frequency and regime; main figures used by clients.
+- **Concepts affected:** Client Statement, Account Equity, Fee Invoice
+- **Who answers:** ETD post-trade operations lead
+<sub>question q26</sub>
+
 ## Priority 3: later
 
-### 19. For cleared OTC trades, which lifecycle events and payments does your operations team handle (resets, coupon payments, partial terminations, compression), and are they in the first pilot scope?
+### 20. For cleared OTC trades, which lifecycle events and payments does your operations team handle (resets, coupon payments, partial terminations, compression), and are they in the first pilot scope?
 
 - **Why it matters:** Decides whether OTC lifecycle values of Trade Amendment and OTC settlement obligations are needed now.
 - **How to answer:** List of events with yes or no for the pilot.
 - **Concepts affected:** Trade Amendment, Settlement Obligation, Lifecycle Event
 - **Who answers:** OTC Clearing product owner
 <sub>question q25</sub>
+
+### 21. For premium-style options, when is the premium settled with clients and with the CCP, and is it netted with variation margin and fees in one payment?
+
+- **Why it matters:** Tells an agent when a premium becomes a settlement obligation and how it appears in payments.
+- **How to answer:** Settlement day per CCP; netting yes or no.
+- **Concepts affected:** Option Premium, Settlement Obligation
+- **Who answers:** ETD post-trade operations lead
+<sub>question q27</sub>

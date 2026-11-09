@@ -9,12 +9,12 @@ The ontology is organised in ten business domains. Each domain has a folder with
 | [Parties, roles, clients and accounts](parties-and-roles/README.md) | Reference & Client Data | 3 | 25 |
 | [Instruments, venues and calendars](instruments-venues-and-calendars/README.md) | Reference & Client Data | 3 | 18 |
 | [Service offering and market access](service-offering-and-market-access/README.md) | Product development lead (sponsor or delegate) | 2 | 14 |
-| [Listed derivatives execution](execution/README.md) | Listed Execution product owner | 2 | 24 |
+| [Listed derivatives execution](execution/README.md) | Listed Execution product owner | 2 | 25 |
 | [Clearing: give-up and acceptance](clearing-give-up-and-acceptance/README.md) | ETD Clearing product owner | 1 | 18 |
 | [Clearing: services, accounts and client clearing](clearing-services-and-accounts/README.md) | ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) | 1 | 26 |
-| [Margin and collateral](margin-and-collateral/README.md) | Collateral Manager | 2 | 26 |
+| [Margin and collateral](margin-and-collateral/README.md) | Collateral Manager | 2 | 30 |
 | [Fees, revenue and contribution](fees-revenue-and-contribution/README.md) | Revenue domain owner | 2 | 28 |
-| [Regulation and rule changes](regulation-and-rule-changes/README.md) | Regulatory Affairs | 1 | 19 |
-| [Post-trade operations](post-trade-operations/README.md) | ETD post-trade operations lead | 1 | 24 |
+| [Regulation and rule changes](regulation-and-rule-changes/README.md) | Regulatory Affairs | 1 | 20 |
+| [Post-trade operations](post-trade-operations/README.md) | ETD post-trade operations lead | 1 | 26 |
 
-Each of the 222 concepts belongs to exactly one domain, whose owner approves it. A concept can also appear on other domains' review sheets for comment. The [glossary](../glossary.md) lists every concept A to Z.
+Each of the 230 concepts belongs to exactly one domain, whose owner approves it. A concept can also appear on other domains' review sheets for comment. The [glossary](../glossary.md) lists every concept A to Z.

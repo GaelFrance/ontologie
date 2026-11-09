@@ -4,7 +4,7 @@
 
 Concepts are grouped by family: a broad concept first, then the kinds or parts it breaks down into.
 
-**Contents:** [Margin Methodology](#margin-methodology) · [Margin Parameter Set](#margin-parameter-set) · [Client Margin Uplift](#client-margin-uplift) · [Margin Requirement](#margin-requirement) · [Initial Margin Requirement](#initial-margin-requirement) · [Margin Run](#margin-run) · [Margin Requirement Component](#margin-requirement-component) · [Margin Excess or Shortfall](#margin-excess-or-shortfall) · [Variation Margin Requirement](#variation-margin-requirement) · [Price Alignment Amount](#price-alignment-amount) · [Margin Call](#margin-call) · [Collateral](#collateral) · [Collateral Asset](#collateral-asset) · [Collateral Eligibility Schedule](#collateral-eligibility-schedule) · [Collateral Haircut](#collateral-haircut) · [Concentration Limit](#concentration-limit) · [Collateral Arrangement](#collateral-arrangement) · [Margin Call Terms](#margin-call-terms) · [Cash Collateral Interest](#cash-collateral-interest) · [Collateral Movement](#collateral-movement) · [Collateral Instruction](#collateral-instruction) · [Portfolio](#portfolio) · [Margin Portfolio](#margin-portfolio) · [Default Fund Contribution](#default-fund-contribution) · [Margin Provider](#margin-provider) · [Margin Taker](#margin-taker)
+**Contents:** [Margin Methodology](#margin-methodology) · [Margin Parameter Set](#margin-parameter-set) · [Client Margin Uplift](#client-margin-uplift) · [Margin Requirement](#margin-requirement) · [Initial Margin Requirement](#initial-margin-requirement) · [Margin Run](#margin-run) · [Margin Requirement Component](#margin-requirement-component) · [Margin Excess or Shortfall](#margin-excess-or-shortfall) · [Variation Margin Requirement](#variation-margin-requirement) · [Price Alignment Amount](#price-alignment-amount) · [Margin Call](#margin-call) · [Collateral](#collateral) · [Collateral Asset](#collateral-asset) · [Collateral Eligibility Schedule](#collateral-eligibility-schedule) · [Collateral Haircut](#collateral-haircut) · [Concentration Limit](#concentration-limit) · [Collateral Arrangement](#collateral-arrangement) · [Margin Call Terms](#margin-call-terms) · [Cash Collateral Interest](#cash-collateral-interest) · [Collateral Movement](#collateral-movement) · [Collateral Instruction](#collateral-instruction) · [Portfolio](#portfolio) · [Margin Portfolio](#margin-portfolio) · [Default Fund Contribution](#default-fund-contribution) · [Margin Provider](#margin-provider) · [Margin Taker](#margin-taker) · [Account Equity](#account-equity) · [Open Trade Equity](#open-trade-equity) · [Account Cash Balance](#account-cash-balance) · [Position Valuation](#position-valuation)
 
 ### Margin Methodology
 
@@ -197,7 +197,9 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Values (draft list):** excess; shortfall; fully covered
 
-**Words people use:** “excess” (contextual); “deficit” (contextual, US futures); “margin surplus” (contextual)
+**Words people use:** “excess” (contextual); “deficit” (contextual, US futures); “margin surplus” (contextual); “MED, margin excess or deficit” (US futures statements)
+
+**Note.** On US futures statements it is called margin excess or deficit (MED); where the agreement margins on account equity, the held side is [Account Equity](#account-equity).
 
 **Before using it, know:** Tier, account, as-of time, currency basis, where the excess is held.
 
@@ -206,6 +208,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *compares* [Collateral](#collateral)
 - *may give rise to* [Margin Call](#margin-call)
 - *may be held at* [CCP Account](../clearing-services-and-accounts/concepts.md#ccp-account)
+- *may be stated against* [Account Equity](#account-equity) — Where the client agreement margins on account equity (mainly US futures), account equity is the held side compared with the requirement.
 
 <sub>Measure · level 2 · Draft · reference LD-C0166 · approved by the Collateral Manager</sub>
 
@@ -221,12 +224,15 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Breaks down into:** [Price Alignment Amount](#price-alignment-amount) (part of)
 
+**Words people use:** “mark-to-market, MTM” (Any)
+
 **Note.** Price alignment is a separate flow. Premium-style options carry no VM; futures-style options do. [04, 03]
 
 **Connected to:**
 
 - *gives rise to* [Settlement Obligation](../post-trade-operations/concepts.md#settlement-obligation) — Under settled-to-market treatment; under collateralised-to-market treatment VM is demanded by a margin call and met with collateral. Treatment is a versioned fact per clearing service and account type (the open question “Variation margin”).
 - [Settlement Price](../instruments-venues-and-calendars/concepts.md#settlement-price) *values listed positions for* Variation Margin Requirement
+- *is based on* [Position Valuation](#position-valuation)
 
 **Open questions on its meaning:** “Margin required” (open, answer proposed); “Variation margin” (open, answer proposed) — see the [review sheet](review.md).
 
@@ -441,7 +447,9 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Values (draft list):** call frequency and run types; deadline: a Settlement Deadline (a kind of Cut-off) with calendar, time zone and consequence; threshold; minimum transfer amount; rounding; dispute process
 
-**Words people use:** “call parameters” (contextual); “margin terms” (contextual, client agreements)
+**Words people use:** “call parameters” (contextual); “margin terms” (contextual, client agreements); “maintenance margin, maintenance level” (US futures)
+
+**Note.** 'Maintenance margin' is the lower of two call trigger levels in these terms (mainly US futures), not a separate requirement (the open question “Margin and initial margin”).
 
 **Before using it, know:** Tier, arrangement or rulebook version, clearing service, client or client group.
 
@@ -650,3 +658,93 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *issues* [Margin Call](#margin-call)
 
 <sub>Role · level 2 · Draft · reference LD-C0174 · approved by the Collateral Manager</sub>
+
+### Account Equity
+
+*What an account is worth on a statement: its cash plus the value of its open positions.*
+
+**Definition.** Value of an identified account at an as-of time and in a currency basis, as stated by its maintaining party: the cash balance plus open trade equity (total equity) and, where the account holds premium-style options, plus the market value of long options less that of short options (net liquidating value). Which components are included, whether securities collateral is counted (at its value after haircuts) and the names used follow the statement issuer and the client agreement. Where the agreement margins on account equity (mainly US futures), it is the held side compared with the margin requirement to state the Margin Excess or Shortfall.
+
+**Example.** Client A has a cash balance and a positive open trade equity; together they give its total equity, compared with the margin requirement.
+
+**Not to be confused with.** Margin Excess or Shortfall: the equity is what the account holds; the excess or shortfall compares it with what is required.
+
+**Breaks down into:** [Open Trade Equity](#open-trade-equity) (part of), [Account Cash Balance](#account-cash-balance) (part of)
+
+**Values (draft list):** total equity; net liquidating value; with or without securities collateral
+
+**Words people use:** “total equity” (US futures statements); “net liquidating value, NLV, net liq” (statements with options)
+
+**Before using it, know:** Account and maintaining party, as-of time, currency basis, which measure (total equity or net liquidating value), whether securities collateral is counted.
+
+**Connected to:**
+
+- [Margin Excess or Shortfall](#margin-excess-or-shortfall) *may be stated against* Account Equity — Where the client agreement margins on account equity (mainly US futures), account equity is the held side compared with the requirement.
+- [Client Statement](../post-trade-operations/concepts.md#client-statement) *states* Account Equity — Also states the cash balance, open trade equity, margin requirement and excess or shortfall.
+
+<sub>Measure · level 2 · Draft · reference LD-C0225 · approved by the Collateral Manager</sub>
+
+### Open Trade Equity
+
+*The paper gain or loss on open futures: what the positions are worth today against the price they were traded at.*
+
+**Definition.** Unrealised gain or loss on the open futures and futures-style option positions of an identified account, measured from the trade price to the current settlement price (or another stated valuation price) times quantity and contract multiplier, as stated by the account's maintaining party for an as-of time and currency. It is a component of Account Equity on a clearing broker's statement and becomes realised, moving to the cash balance, when the position is closed. Whether variation margin already settled each day is presented in open trade equity or posted to the cash balance, and whether open trade equity can be withdrawn or used to cover a requirement, are conventions of the statement issuer and the client agreement (to verify per firm and regime). Premium-style options are not in open trade equity: their value is reported as option market value.
+
+**Example.** Client A bought 10 futures at 100; tonight's settlement price is 103, so its statement at Clearing Broker Y shows a positive open trade equity.
+
+**Not to be confused with.** Variation Margin Requirement: the cash that moves each day at the CCP; open trade equity is how the statement shows the unrealised result.
+
+**Part of:** [Account Equity](#account-equity)
+
+**Words people use:** “OTE”; “unrealised P&L” (Any)
+
+**Before using it, know:** Account and maintaining party, as-of time, valuation price used, currency, the issuer's convention for daily settled variation margin.
+
+**Connected to:**
+
+- *is derived from* [Position Valuation](#position-valuation) — Listed futures and futures-style options.
+
+<sub>Measure · level 2 · Draft · reference LD-C0223 · approved by the Collateral Manager</sub>
+
+### Account Cash Balance
+
+*The cash recorded in an account: deposits, withdrawals, realised results, premiums, fees and interest.*
+
+**Definition.** Cash recorded in an identified account, by currency, as of a stated time, on the books of the account's maintaining party (clearing broker, CCP or the observing firm): deposits and withdrawals, realised gains and losses, option premiums paid or received, fees, commissions, interest and other posted cash amounts. Also called ledger balance. It excludes the unrealised value of open positions (Open Trade Equity, option market value). The cash itself, where it secures a requirement, is [Collateral](#collateral); the balance is the account's record of it.
+
+**Example.** Client A's cash balance at Clearing Broker Y falls when it pays an option premium and rises when it closes a futures position at a gain.
+
+**Not to be confused with.** Collateral: the cash held as security; the cash balance is the account's record, which also includes realised results and fees.
+
+**Part of:** [Account Equity](#account-equity)
+
+**Words people use:** “ledger balance, cash balance” (account statements)
+
+**Before using it, know:** Account and maintaining party, currency, as-of time, which amounts the issuer posts to cash.
+
+<sub>Measure · level 2 · Draft · reference LD-C0224 · approved by the Collateral Manager</sub>
+
+### Position Valuation
+
+*What a position is worth at a point in time, and who valued it with which price.*
+
+**Definition.** Value of a position of an identified account at an as-of time and in a currency, with its valuation party, price source and method: for listed contracts, the settlement price applied to quantity and contract multiplier; for cleared OTC trades, the net present value from the CCP's valuation, or from another stated party where the client agreement or the firm's own books use one. It underlies variation margin requirements, open trade equity and account equity. A valuation is a measure derived from a position, not the position itself.
+
+**Example.** Client A's futures are valued at tonight's settlement price; its cleared swap with CCP Z is valued at the CCP's net present value.
+
+**Not to be confused with.** Position: the open quantity or set of trades; the valuation is a number derived from it.
+
+**Values (draft list):** settlement price; CCP net present value; other stated valuation
+
+**Words people use:** “unrealised P&L” (Any); “mark-to-market, MTM” (Any); “NPV” (cleared OTC)
+
+**Before using it, know:** Account, as-of time, currency, valuation party, price source and method.
+
+**Connected to:**
+
+- [Open Trade Equity](#open-trade-equity) *is derived from* Position Valuation — Listed futures and futures-style options.
+- *values* [Position](../clearing-services-and-accounts/concepts.md#position)
+- *uses* [Settlement Price](../instruments-venues-and-calendars/concepts.md#settlement-price) — Listed positions; cleared OTC positions are valued by the CCP's own valuation, not by a settlement price.
+- [Variation Margin Requirement](#variation-margin-requirement) *is based on* Position Valuation
+
+<sub>Measure · level 2 · Draft · reference LD-C0230 · approved by the Collateral Manager</sub>
