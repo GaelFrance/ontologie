@@ -13,4 +13,4 @@ The initial modelling proposal and scope derive from the business sponsor's requ
 
 The public regulatory and industry references used by the 2026-11 expert review, and which of them were checked, are listed in the [arbitration record](reviews/2026-11-expert-review/ARBITRATION.md#5-claims-verified-and-to-verify); none is yet a source-level validation.
 
-For future adopted rules, record exact document/version, section, source date, access date, jurisdiction/service, supported claim and reviewer. These preliminary links do not constitute a completed source-level validation of all 50 definitions.
+For future adopted rules, record exact document/version, section, source date, access date, jurisdiction/service, supported claim and reviewer. These preliminary links do not constitute a source-level validation of any definition in the catalogue.

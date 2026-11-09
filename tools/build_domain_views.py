@@ -122,10 +122,10 @@ def load():
             d["aliases"] += rows
         elif head[:2] == ["Child", "Parent"]:
             for r in rows:
-                child = first_id(r["Child"])
                 link = r.get("Link", "kind of") or "kind of"
-                for p in re.findall(CID, r["Parent"]):
-                    d["parents"].setdefault(child, []).append((p, link))
+                for child in re.findall(CID, r["Child"]):
+                    for p in re.findall(CID, r["Parent"]):
+                        d["parents"].setdefault(child, []).append((p, link))
         elif "In short" in head:
             for r in rows:
                 d["summary"][first_id(r["Concept"])] = r
@@ -295,7 +295,7 @@ def concept_card(ctx, i, page):
     owner = ctx.owner.get(i)
     level = c.get("Level", "1")
     out += [f"<sub>{c['Proposed type']} · level {level} · Draft · reference {i}"
-            + (f" · approved by the {owner['Owner role']}" if owner else "") + "</sub>", ""]
+            + (f" · accountable owner: the {owner['Owner role']} (not yet approved)" if owner else "") + "</sub>", ""]
     return out
 
 

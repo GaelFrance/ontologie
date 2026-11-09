@@ -4,7 +4,7 @@
 
 Concepts are grouped by family: a broad concept first, then the kinds or parts it breaks down into.
 
-**Contents:** [Regulatory Regime](#regulatory-regime) · [Rule Provision](#rule-provision) · [Rulebook](#rulebook) · [Regulatory Relief](#regulatory-relief) · [Equivalence Decision](#equivalence-decision) · [Regulatory Obligation](#regulatory-obligation) · [Clearing Obligation](#clearing-obligation) · [Phase-in Step](#phase-in-step) · [Regulated Product Class](#regulated-product-class) · [Rule Change](#rule-change) · [Change Notice](#change-notice) · [Consultation](#consultation) · [Rule Change Approval](#rule-change-approval) · [Change Impact Assessment](#change-impact-assessment) · [Regulatory Interpretation](#regulatory-interpretation) · [Regulatory Classification](#regulatory-classification) · [Regulatory Authorisation](#regulatory-authorisation) · [Regulatory Authority](#regulatory-authority) · [Regulatory Reporting Role](#regulatory-reporting-role) · [Position Limit](#position-limit)
+**Contents:** [Regulatory Regime](#regulatory-regime) · [Rule Provision](#rule-provision) · [Rulebook](#rulebook) · [Regulatory Relief](#regulatory-relief) · [Equivalence Decision](#equivalence-decision) · [Regulatory Obligation](#regulatory-obligation) · [Clearing Obligation](#clearing-obligation) · [Phase-in Step](#phase-in-step) · [Regulated Product Class](#regulated-product-class) · [Rule Change](#rule-change) · [Consultation](#consultation) · [Rule Change Approval](#rule-change-approval) · [Change Impact Assessment](#change-impact-assessment) · [Regulatory Interpretation](#regulatory-interpretation) · [Regulatory Classification](#regulatory-classification) · [Regulatory Authorisation](#regulatory-authorisation) · [Change Notice](#change-notice) · [Regulatory Authority](#regulatory-authority) · [Regulatory Reporting Role](#regulatory-reporting-role) · [Position Limit](#position-limit)
 
 ### Regulatory Regime
 
@@ -28,7 +28,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Regulatory Authorisation](#regulatory-authorisation) *is granted under* Regulatory Regime
 - [Regulatory Authority](#regulatory-authority) *adopts or supervises* Regulatory Regime
 
-<sub>Reference Concept · level 1 · Draft · reference LD-C0067 · approved by the Regulatory Affairs</sub>
+<sub>Reference Concept · level 1 · Draft · reference LD-C0067 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Rule Provision
 
@@ -42,7 +42,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Part of:** [Regulatory Regime](#regulatory-regime)
 
-**Breaks down into:** [Offering Eligibility Criterion](../service-offering-and-market-access/concepts.md#offering-eligibility-criterion) (kind of), [Access Requirement](../service-offering-and-market-access/concepts.md#access-requirement) (kind of), [Clearing Limit](../clearing-give-up-and-acceptance/concepts.md#clearing-limit) (kind of), [Rulebook](#rulebook) (kind of), [Regulatory Relief](#regulatory-relief) (kind of), [Equivalence Decision](#equivalence-decision) (kind of)
+**Breaks down into:** [Offering Eligibility Criterion](../service-offering-and-market-access/concepts.md#offering-eligibility-criterion) (kind of), [Access Requirement](../service-offering-and-market-access/concepts.md#access-requirement) (kind of), [Rulebook](#rulebook) (kind of), [Regulatory Relief](#regulatory-relief) (kind of), [Equivalence Decision](#equivalence-decision) (kind of)
 
 **Connected to:**
 
@@ -60,7 +60,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Dates of a rule change” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Reference Concept · level 1 · Draft · reference LD-C0063 · approved by the Regulatory Affairs</sub>
+<sub>Reference Concept · level 1 · Draft · reference LD-C0063 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Rulebook
 
@@ -88,7 +88,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *governs* [Trading Venue](../instruments-venues-and-calendars/concepts.md#trading-venue)
 - *is changed after* [Rule Change Approval](#rule-change-approval)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0194 · approved by the Regulatory Affairs</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0194 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Regulatory Relief
 
@@ -114,7 +114,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is issued by* [Regulatory Authority](#regulatory-authority)
 - *can depend on* [Regulatory Classification](#regulatory-classification)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0195 · approved by the Regulatory Affairs</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0195 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Equivalence Decision
 
@@ -140,7 +140,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is a condition of* [Regulatory Authorisation](#regulatory-authorisation)
 - *can change the treatment of trades on* [Trading Venue](../instruments-venues-and-calendars/concepts.md#trading-venue)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0196 · approved by the Regulatory Affairs</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0196 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Regulatory Obligation
 
@@ -173,7 +173,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *can be relieved by* [Regulatory Relief](#regulatory-relief)
 - [Regulatory Reporting Role](#regulatory-reporting-role) *is defined by* Regulatory Obligation
 
-<sub>Reference Concept · level 1 · Draft · reference LD-C0190 · approved by the Regulatory Affairs</sub>
+<sub>Reference Concept · level 1 · Draft · reference LD-C0190 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Clearing Obligation
 
@@ -199,7 +199,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *applies to* [Trade](../execution/concepts.md#trade)
 - *applies through* [Phase-in Step](#phase-in-step)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0191 · approved by the Regulatory Affairs</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0191 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Phase-in Step
 
@@ -223,7 +223,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Clearing Obligation](#clearing-obligation) *applies through* Phase-in Step
 - *can also stage* [Rule Change](#rule-change)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0193 · approved by the Regulatory Affairs</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0193 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Regulated Product Class
 
@@ -251,19 +251,19 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is the value of product level* [Regulatory Classification](#regulatory-classification)
 - *sets the product scope of* [Regulatory Obligation](#regulatory-obligation)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0192 · approved by the Regulatory Affairs</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0192 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Rule Change
 
 *A change to a rule or to a published specification, followed from proposal or consultation until it applies, with its status and its dates.*
 
-**Definition.** Proposed or adopted change to one rule provision, or to another published, versioned specification (fee schedule, contract specification, business calendar, cut-off set by a rule, margin methodology, margin parameter set announced by notice, collateral eligibility schedule, clearing eligibility schedule, access requirement), by which it is created, amended, replaced or withdrawn. It is followed from proposal to application, with a lifecycle status (proposed or in consultation, adopted, approved or self-certified where the issuer's supervisor must act, in force, applicable, superseded, withdrawn) and dates qualified by their role (publication, consultation close, adoption, entry into force, application, phase-in, end of transition, and the date the firm recorded it). Contract terms agreed with a client, routine parameter publications under an unchanged method, and new series listed under an unchanged contract specification are not rule changes; nor is a change of one party's regulatory classification. One published notice can announce several rule changes, and one rule change can be announced in several notices. Type: Process (proposed). — *meaning changed in 2026-11, accepted as Draft*
+**Definition.** Proposed or adopted change to one rule provision, or to another published, versioned specification (fee schedule, contract specification, business calendar, cut-off set by a rule, margin methodology, margin parameter set announced by notice, collateral eligibility schedule, clearing eligibility schedule, access requirement), by which it is created, amended, replaced or withdrawn. It is followed from proposal to application, with a lifecycle status (proposed or in consultation, adopted, approved or self-certified where the issuer's supervisor must act, in force, applicable, superseded, withdrawn) and dates qualified by their role (publication, consultation close, adoption, entry into force, application, phase-in, end of transition, and the date the firm recorded it). Contract terms agreed with a client, routine parameter publications under an unchanged method, and new series listed under an unchanged contract specification are not rule changes; nor is a change of one party's regulatory classification. One published notice can announce several rule changes, and one rule change can be announced in several notices. — *meaning changed in 2026-11, accepted as Draft*
 
 **Example.** CCP Z proposes to move its give-up take-up deadline thirty minutes earlier; the change is adopted, approved by its supervisor and applies from a stated clearing date.
 
 **Not to be confused with.** Change Notice: the circular or publication that announces one or more changes; and a change in a client's or CCP's regulatory status, which is a new classification, not a rule change.
 
-**Breaks down into:** [Change Notice](#change-notice) (part of), [Consultation](#consultation) (step in), [Rule Change Approval](#rule-change-approval) (step in), [Change Impact Assessment](#change-impact-assessment) (step in)
+**Breaks down into:** [Consultation](#consultation) (step in), [Rule Change Approval](#rule-change-approval) (step in), [Change Impact Assessment](#change-impact-assessment) (step in)
 
 **Words people use:** “circular, market notice” (Change impact)
 
@@ -272,7 +272,6 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *changes* [Rule Provision](#rule-provision), [Fee Schedule](../fees-revenue-and-contribution/concepts.md#fee-schedule), [Contract Specification](../instruments-venues-and-calendars/concepts.md#contract-specification), [Business Calendar](../instruments-venues-and-calendars/concepts.md#business-calendar), [Margin Methodology](../margin-and-collateral/concepts.md#margin-methodology), [Collateral Eligibility Schedule](../margin-and-collateral/concepts.md#collateral-eligibility-schedule) — Change type new, amend, withdraw or propose; dates qualified by date role (the open question “Dates of a rule change”).
 - *affects* [Clearing Service](../clearing-services-and-accounts/concepts.md#clearing-service), [Trading Venue](../instruments-venues-and-calendars/concepts.md#trading-venue), [CCP Account](../clearing-services-and-accounts/concepts.md#ccp-account), [Segregation Model](../clearing-services-and-accounts/concepts.md#segregation-model), [Give-up / Take-up Process](../clearing-give-up-and-acceptance/concepts.md#give-up--take-up-process), [Clearing Acceptance](../clearing-give-up-and-acceptance/concepts.md#clearing-acceptance), [Margin Requirement](../margin-and-collateral/concepts.md#margin-requirement), [Collateral](../margin-and-collateral/concepts.md#collateral) — Instance-level impact target, declared as this explicit union; n-ary qualifiers: impact type, affected role, confidence, interpretation required. Tagging a notice with a concept ID is an annotation, not this relation.
 - [Key-Date Rule](../instruments-venues-and-calendars/concepts.md#key-date-rule) *is changed by and a calendar change can move its results* Rule Change
-- [Contract Adjustment](../instruments-venues-and-calendars/concepts.md#contract-adjustment) *is announced by a notice not itself a rule change* Rule Change
 - [Clearing Eligibility Schedule](../instruments-venues-and-calendars/concepts.md#clearing-eligibility-schedule) *is changed by* Rule Change
 - [Trading Session](../instruments-venues-and-calendars/concepts.md#trading-session) *is changed by hours extensions* Rule Change
 - [Margin Parameter Set](../margin-and-collateral/concepts.md#margin-parameter-set) *is changed by a rule change* Rule Change
@@ -281,34 +280,11 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Fee Rate](../fees-revenue-and-contribution/concepts.md#fee-rate) *may be changed by* Rule Change
 - [Fee Incentive Programme](../fees-revenue-and-contribution/concepts.md#fee-incentive-programme) *is introduced or changed by* Rule Change
 - [Phase-in Step](#phase-in-step) *can also stage* Rule Change
+- [Change Notice](#change-notice) *announces* Rule Change — One notice can announce several rule changes and one change several notices. Corrected 2026-11-09 (was part_of).
 
 **Open questions on its meaning:** “Dates of a rule change” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Event · level 1 · Draft · reference LD-C0064 · approved by the Regulatory Affairs</sub>
-
-### Change Notice
-
-*The circular, notice or publication through which a change is announced.*
-
-**Definition.** Published document by a regulator, CCP, venue operator or industry body that announces, proposes or explains one or more rule changes: consultation paper, final report, published legal act, circular, market notice, clearing advisory, rule filing or self-certification, official guidance or Q&A, with its issuer, reference, publication date and language. It is evidence of rule changes, not the change itself; one notice can announce several changes and one change can appear in several notices.
-
-**Example.** CCP Z's circular announces three changes at once: a new haircut table from one date, a new cut-off from another, and a fee change still subject to approval.
-
-**Not to be confused with.** Rule Change: the change it announces, which has its own status and dates; one circular is often several changes.
-
-**Part of:** [Rule Change](#rule-change)
-
-**Values (draft list):** consultation paper; final report or draft technical standard; published legal act; circular or market notice; clearing advisory; rule filing or self-certification; official guidance or Q&A; press release (low evidence)
-
-**Words people use:** “circular” (contextual); “market notice” (contextual); “member notice”; “special executive report” (one exchange group's usage)
-
-**Before using it, know:** Issuer, reference, publication date and time zone, version (a notice can be corrected), language, which rule changes it announces.
-
-**Connected to:**
-
-- [Consultation](#consultation) *is opened by* Change Notice
-
-<sub>Entity · level 1 · Draft · reference LD-C0197 · approved by the Regulatory Affairs</sub>
+<sub>Event · level 1 · Draft · reference LD-C0064 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Consultation
 
@@ -333,13 +309,13 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is opened by* [Change Notice](#change-notice)
 - *closes on a* [Business Date](../instruments-venues-and-calendars/concepts.md#business-date)
 
-<sub>Process · level 2 · Draft · reference LD-C0198 · approved by the Regulatory Affairs</sub>
+<sub>Process · level 2 · Draft · reference LD-C0198 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Rule Change Approval
 
 *The regulator's sign-off of a CCP's or exchange's rule change, or the CCP's own certification where that is how the regime works.*
 
-**Definition.** Step in which the supervisor of a CCP or venue approves, does not object to, validates, stays or rejects a change to that infrastructure's rulebook, margin model or fees, or in which the infrastructure self-certifies the change where its regime allows; until it occurs, the change is announced but not yet adopted.
+**Definition.** Step in which the supervisor of a CCP or venue approves, does not object to, validates, stays or rejects a change to that infrastructure's rulebook, margin model or fees, or in which the infrastructure self-certifies the change where its regime allows. Adoption by the issuer, this approval or self-certification, entry into force and application are distinct steps whose order depends on the regime; a change that needs approval cannot enter into force before it.
 
 **Example.** CCP Z announces a margin model change 'subject to regulatory approval'; the approval comes two weeks later and the change applies from the next clearing date.
 
@@ -358,7 +334,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is decided by* [Regulatory Authority](#regulatory-authority)
 - *concerns a change to* [Rulebook](#rulebook)
 
-<sub>Event · level 2 · Draft · reference LD-C0199 · approved by the Regulatory Affairs</sub>
+<sub>Event · level 2 · Draft · reference LD-C0199 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Change Impact Assessment
 
@@ -384,7 +360,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 - *uses* [Regulatory Interpretation](#regulatory-interpretation)
 
-<sub>Process · level 2 · Draft · reference LD-C0200 · approved by the Regulatory Affairs</sub>
+<sub>Process · level 2 · Draft · reference LD-C0200 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Regulatory Interpretation
 
@@ -409,13 +385,13 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Change Impact Assessment](#change-impact-assessment) *uses* Regulatory Interpretation
 - *is a reading of* [Rule Provision](#rule-provision)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0201 · approved by the Regulatory Affairs</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0201 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Regulatory Classification
 
 *A status that a regime gives to someone or something for a period, such as 'financial counterparty above the clearing threshold' or 'recognised third-country CCP'.*
 
-**Definition.** Time-bounded status that a named regulatory regime gives to a legal entity (or a branch where the regime says so), a role assignment, an account, a trading venue or venue segment, a CCP or clearing service, an instrument, contract specification or product family, or a trade, with its basis (authority decision or registration, notification, calculation, self-assessment, representation by the counterparty), the source that asserts it and the evidence; valid time and record time are both kept, and 'unknown' is a value, never a default. — *meaning changed in 2026-11, accepted as Draft*
+**Definition.** Time-bounded status that a named regulatory regime gives to a legal entity (or a branch where the regime says so), a role assignment, an account, a trading venue or venue segment, a CCP or clearing service, an instrument, contract specification or product family, a trade, or a pair of legal entities where the regime gives the status to the pair (for example an intragroup exemption), with its basis (authority decision or registration, notification, calculation, self-assessment, representation by the counterparty), the source that asserts it and the evidence; valid time and record time are both kept, and 'unknown' is a value, never a default. — *meaning changed in 2026-11, accepted as Draft*
 
 **Example.** Client A represents that it is a financial counterparty above the clearing threshold for interest rate derivatives under EU EMIR from a stated date.
 
@@ -429,7 +405,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Connected to:**
 
-- *classifies* [Legal Entity](../parties-and-roles/concepts.md#legal-entity), [Party Role](../parties-and-roles/concepts.md#party-role), [Account](../parties-and-roles/concepts.md#account), [Trading Venue](../instruments-venues-and-calendars/concepts.md#trading-venue), [Central Counterparty](../clearing-services-and-accounts/concepts.md#central-counterparty), [Clearing Service](../clearing-services-and-accounts/concepts.md#clearing-service) — Entity-level statuses attach to the legal entity, relationship-level statuses to the role assignment; never to the Client role generically or to a commercial group.
+- *classifies* [Legal Entity](../parties-and-roles/concepts.md#legal-entity), [Party Role](../parties-and-roles/concepts.md#party-role), [Account](../parties-and-roles/concepts.md#account), [Trading Venue](../instruments-venues-and-calendars/concepts.md#trading-venue), [Central Counterparty](../clearing-services-and-accounts/concepts.md#central-counterparty), [Clearing Service](../clearing-services-and-accounts/concepts.md#clearing-service), [Instrument](../instruments-venues-and-calendars/concepts.md#instrument), [Contract Specification](../instruments-venues-and-calendars/concepts.md#contract-specification), [Product Family](../instruments-venues-and-calendars/concepts.md#product-family), [Trade](../execution/concepts.md#trade) — Entity-level statuses attach to the legal entity, relationship-level statuses to the role assignment; never to the Client role generically or to a commercial group. A status the regime gives to a pair of counterparties (for example an intragroup exemption) attaches to both legal entities together, for the regime, product class and period, and is never read as a status of either one alone. Targets aligned with the definition 2026-11-09.
 - *under* [Regulatory Regime](#regulatory-regime) — Record regime, asset class where relevant, basis, effective period and evidence; valid time and record time both kept.
 - [Trading Venue Segment](../instruments-venues-and-calendars/concepts.md#trading-venue-segment) *can carry its own regulatory classification* Regulatory Classification
 - [Offering Eligibility Criterion](../service-offering-and-market-access/concepts.md#offering-eligibility-criterion) *may require a stated value of* Regulatory Classification
@@ -440,7 +416,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Clearing broker, clearing member, FCM” (open, answer proposed); “Current, as of, as known at” (open, answer proposed); “Group” (open, answer proposed); “OTC and listed” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>State · level 1 · Draft · reference LD-C0068 · approved by the Regulatory Affairs</sub>
+<sub>State · level 1 · Draft · reference LD-C0068 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Regulatory Authorisation
 
@@ -454,7 +430,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Kind of:** [Regulatory Classification](#regulatory-classification)
 
-**Values (draft list):** CCP authorisation; third-country CCP recognition (with tier where applicable); derivatives clearing organisation registration or exemption; futures commission merchant registration; swap dealer registration; designated contract market or swap execution facility designation; regulated market, MTF or OTF authorisation; investment firm or bank authorisation; qualifying CCP status (for capital treatment)
+**Values (draft list):** CCP authorisation; third-country CCP recognition (with tier where applicable); derivatives clearing organisation registration or exemption; futures commission merchant registration; swap dealer registration; designated contract market or swap execution facility designation; regulated market, MTF or OTF authorisation; investment firm or bank authorisation
 
 **Words people use:** “FCM” (US, contextual); “DCO” (US, contextual); “licence”; “registration”; “recognition”
 
@@ -469,13 +445,37 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *can be limited to* [Clearing Service](../clearing-services-and-accounts/concepts.md#clearing-service)
 - *can depend on* [Equivalence Decision](#equivalence-decision)
 
-<sub>State · level 2 · Draft · reference LD-C0202 · approved by the Regulatory Affairs</sub>
+<sub>State · level 2 · Draft · reference LD-C0202 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
+
+### Change Notice
+
+*The circular, notice or publication through which a change is announced.*
+
+**Definition.** Published document by a regulator, CCP, venue operator or industry body that announces, proposes or explains one or more rule changes: consultation paper, final report, published legal act, circular, market notice, clearing advisory, rule filing or self-certification, official guidance or Q&A, with its issuer, reference, publication date and language. It is evidence of rule changes, not the change itself; one notice can announce several changes and one change can appear in several notices.
+
+**Example.** CCP Z's circular announces three changes at once: a new haircut table from one date, a new cut-off from another, and a fee change still subject to approval.
+
+**Not to be confused with.** Rule Change: the change it announces, which has its own status and dates; one circular is often several changes.
+
+**Values (draft list):** consultation paper; final report or draft technical standard; published legal act; circular or market notice; clearing advisory; rule filing or self-certification; official guidance or Q&A; press release (low evidence)
+
+**Words people use:** “circular” (contextual); “market notice” (contextual); “member notice”; “special executive report” (one exchange group's usage)
+
+**Before using it, know:** Issuer, reference, publication date and time zone, version (a notice can be corrected), language, which rule changes it announces.
+
+**Connected to:**
+
+- [Contract Adjustment](../instruments-venues-and-calendars/concepts.md#contract-adjustment) *is announced by* Change Notice — A market notice or clearing advisory announces the adjustment; the adjustment is not itself a rule change. Corrected 2026-11-09 (target was Rule Change).
+- *announces* [Rule Change](#rule-change) — One notice can announce several rule changes and one change several notices. Corrected 2026-11-09 (was part_of).
+- [Consultation](#consultation) *is opened by* Change Notice
+
+<sub>Entity · level 1 · Draft · reference LD-C0197 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Regulatory Authority
 
 *A public body that makes or enforces financial rules, such as a market supervisor or a central bank.*
 
-**Definition.** Role of a public body that, under a regime, adopts rules, supervises, authorises or registers parties, grants relief or decides equivalence, within a stated remit (jurisdiction, sector, type of entity); includes legislators, supervisory authorities, central banks acting as supervisors and supranational authorities. Standard setters whose principles are not binding are recorded as issuers of guidance only.
+**Definition.** Role of a public body, or of a self-regulatory organisation exercising powers that a regime delegates to it, that, under a regime, adopts rules, supervises, authorises or registers parties, grants relief or decides equivalence, within a stated remit (jurisdiction, sector, type of entity); includes legislators, supervisory authorities, central banks acting as supervisors and supranational authorities. Standard setters whose principles are not binding are recorded as issuers of guidance only.
 
 **Example.** Regulator R supervises CCP Z, approves its rule changes and publishes guidance on the clearing obligation.
 
@@ -498,7 +498,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *grants* [Regulatory Authorisation](#regulatory-authorisation)
 - *decides* [Rule Change Approval](#rule-change-approval)
 
-<sub>Role · level 2 · Draft · reference LD-C0203 · approved by the Regulatory Affairs</sub>
+<sub>Role · level 2 · Draft · reference LD-C0203 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Regulatory Reporting Role
 
@@ -522,7 +522,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is held on* [Execution](../execution/concepts.md#execution)
 - *is relied on by delegated reporting* [Service Component](../service-offering-and-market-access/concepts.md#service-component)
 
-<sub>Role · level 2 · Draft · reference LD-C0204 · approved by the Regulatory Affairs</sub>
+<sub>Role · level 2 · Draft · reference LD-C0204 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Position Limit
 
@@ -546,4 +546,4 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *applies to* [Position](../clearing-services-and-accounts/concepts.md#position) — Positions aggregated by holder or controller across accounts and firms, as the rule states.
 - *is distinct from* [Clearing Limit](../clearing-give-up-and-acceptance/concepts.md#clearing-limit)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0229 · approved by the Regulatory Affairs</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0229 · accountable owner: the Regulatory Affairs (not yet approved)</sub>

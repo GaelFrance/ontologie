@@ -32,7 +32,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Service” (open, answer proposed); “Product” (open, answer proposed); “Eligible, mandatory, offered, covered” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Entity · level 1 · Draft · reference LD-C0052 · approved by the Product development lead (sponsor or delegate)</sub>
+<sub>Entity · level 1 · Draft · reference LD-C0052 · accountable owner: the Product development lead (sponsor or delegate) (not yet approved)</sub>
 
 ### Service Component
 
@@ -57,7 +57,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is priced by for the firm s own client charges* [Fee Rate](../fees-revenue-and-contribution/concepts.md#fee-rate)
 - [Regulatory Reporting Role](../regulation-and-rule-changes/concepts.md#regulatory-reporting-role) *is relied on by delegated reporting* Service Component
 
-<sub>Entity · level 2 · Draft · reference LD-C0105 · approved by the Product development lead (sponsor or delegate)</sub>
+<sub>Entity · level 2 · Draft · reference LD-C0105 · accountable owner: the Product development lead (sponsor or delegate) (not yet approved)</sub>
 
 ### Offering Coverage Line
 
@@ -83,7 +83,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *states its product scope by* [Contract Specification](../instruments-venues-and-calendars/concepts.md#contract-specification)
 - *is available through* [Order Handling Channel](../execution/concepts.md#order-handling-channel)
 
-<sub>Entity · level 2 · Draft · reference LD-C0106 · approved by the Product development lead (sponsor or delegate)</sub>
+<sub>Entity · level 2 · Draft · reference LD-C0106 · accountable owner: the Product development lead (sponsor or delegate) (not yet approved)</sub>
 
 ### Market Access Arrangement
 
@@ -94,6 +94,8 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 **Example.** Broker B reaches Venue V through Member M, a third-party executing member there, because Broker B is not a venue member; the route is live from a given date.
 
 **Not to be confused with.** Trading Venue Member or Clearing Member: those are the roles a route can give; the route is the relationship and paperwork that gives them.
+
+**Kind of:** [Agreement](../clearing-services-and-accounts/concepts.md#agreement)
 
 **Breaks down into:** [Direct Electronic Access Arrangement](#direct-electronic-access-arrangement) (kind of), [Third-Party Execution Arrangement](#third-party-execution-arrangement) (kind of), [Non-Clearing Member Arrangement](#non-clearing-member-arrangement) (kind of), [Sponsored Clearing Arrangement](#sponsored-clearing-arrangement) (kind of), [Indirect Clearing Arrangement](#indirect-clearing-arrangement) (kind of), [Access Onboarding](#access-onboarding) (step in), [Connectivity Route](#connectivity-route) (part of)
 
@@ -111,7 +113,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Eligible, mandatory, offered, covered” (open, answer proposed); “Client clearing model” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Agreement · level 1 · Draft · reference LD-C0059 · approved by the Product development lead (sponsor or delegate)</sub>
+<sub>Agreement · level 1 · Draft · reference LD-C0059 · accountable owner: the Product development lead (sponsor or delegate) (not yet approved)</sub>
 
 ### Direct Electronic Access Arrangement
 
@@ -138,7 +140,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is subject to controls set as* [Access Requirement](#access-requirement)
 - [Pre-trade Control Check](../execution/concepts.md#pre-trade-control-check) *requires for direct market access or sponsored access orders a live* Direct Electronic Access Arrangement
 
-<sub>Agreement · level 2 · Draft · reference LD-C0112 · approved by the Product development lead (sponsor or delegate)</sub>
+<sub>Agreement · level 2 · Draft · reference LD-C0112 · accountable owner: the Product development lead (sponsor or delegate) (not yet approved)</sub>
 
 ### Third-Party Execution Arrangement
 
@@ -163,7 +165,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *gives rise to brokerage owed to the intermediary* [Executing Broker Brokerage Charge](../fees-revenue-and-contribution/concepts.md#executing-broker-brokerage-charge)
 - [Third-party Executing Member](../execution/concepts.md#third-party-executing-member) *is the intermediary of* Third-Party Execution Arrangement
 
-<sub>Agreement · level 2 · Draft · reference LD-C0113 · approved by the Product development lead (sponsor or delegate)</sub>
+<sub>Agreement · level 2 · Draft · reference LD-C0113 · accountable owner: the Product development lead (sponsor or delegate) (not yet approved)</sub>
 
 ### Non-Clearing Member Arrangement
 
@@ -187,7 +189,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is intermediated by the general clearing member role of* [Clearing Member](../clearing-services-and-accounts/concepts.md#clearing-member)
 - *confers* [Non-Clearing Member](../parties-and-roles/concepts.md#non-clearing-member)
 
-<sub>Agreement · level 2 · Draft · reference LD-C0114 · approved by the Product development lead (sponsor or delegate)</sub>
+<sub>Agreement · level 2 · Draft · reference LD-C0114 · accountable owner: the Product development lead (sponsor or delegate) (not yet approved)</sub>
 
 ### Sponsored Clearing Arrangement
 
@@ -215,7 +217,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is intermediated by the sponsoring* [Clearing Member](../clearing-services-and-accounts/concepts.md#clearing-member)
 - [Sponsoring Clearing Member](../clearing-services-and-accounts/concepts.md#sponsoring-clearing-member) *acts under* Sponsored Clearing Arrangement
 
-<sub>Agreement · level 2 · Draft · reference LD-C0115 · approved by the Product development lead (sponsor or delegate)</sub>
+<sub>Agreement · level 2 · Draft · reference LD-C0115 · accountable owner: the Product development lead (sponsor or delegate) (not yet approved)</sub>
 
 ### Indirect Clearing Arrangement
 
@@ -240,7 +242,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is documented at each link by a* [Client Clearing Agreement](../clearing-services-and-accounts/concepts.md#client-clearing-agreement)
 - *offers account options governed by* [Segregation Model](../clearing-services-and-accounts/concepts.md#segregation-model)
 
-<sub>Agreement · level 2 · Draft · reference LD-C0116 · approved by the Product development lead (sponsor or delegate)</sub>
+<sub>Agreement · level 2 · Draft · reference LD-C0116 · accountable owner: the Product development lead (sponsor or delegate) (not yet approved)</sub>
 
 ### Access Onboarding
 
@@ -265,7 +267,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *must satisfy* [Access Requirement](#access-requirement)
 - *sets up* [Connectivity Route](#connectivity-route)
 
-<sub>Process · level 2 · Draft · reference LD-C0109 · approved by the Product development lead (sponsor or delegate)</sub>
+<sub>Process · level 2 · Draft · reference LD-C0109 · accountable owner: the Product development lead (sponsor or delegate) (not yet approved)</sub>
 
 ### Connectivity Route
 
@@ -290,7 +292,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Access Onboarding](#access-onboarding) *sets up* Connectivity Route
 - *generates cost of category connectivity and market data* [Cost](../fees-revenue-and-contribution/concepts.md#cost)
 
-<sub>Entity · level 2 · Draft · reference LD-C0111 · approved by the Product development lead (sponsor or delegate)</sub>
+<sub>Entity · level 2 · Draft · reference LD-C0111 · accountable owner: the Product development lead (sponsor or delegate) (not yet approved)</sub>
 
 ### Offering Eligibility Criterion
 
@@ -314,7 +316,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is tested against* [Client](../parties-and-roles/concepts.md#client)
 - *may require a stated value of* [Regulatory Classification](../regulation-and-rule-changes/concepts.md#regulatory-classification)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0107 · approved by the Product development lead (sponsor or delegate)</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0107 · accountable owner: the Product development lead (sponsor or delegate) (not yet approved)</sub>
 
 ### Access Agreement
 
@@ -340,7 +342,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is distinct from* [Give-up Agreement](../clearing-give-up-and-acceptance/concepts.md#give-up-agreement)
 - *is distinct from* [Client Clearing Agreement](../clearing-services-and-accounts/concepts.md#client-clearing-agreement)
 
-<sub>Agreement · level 2 · Draft · reference LD-C0108 · approved by the Product development lead (sponsor or delegate)</sub>
+<sub>Agreement · level 2 · Draft · reference LD-C0108 · accountable owner: the Product development lead (sponsor or delegate) (not yet approved)</sub>
 
 ### Access Requirement
 
@@ -369,4 +371,4 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *may require* [Default Fund Contribution](../margin-and-collateral/concepts.md#default-fund-contribution)
 - [Direct Electronic Access Arrangement](#direct-electronic-access-arrangement) *is subject to controls set as* Access Requirement
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0110 · approved by the Product development lead (sponsor or delegate)</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0110 · accountable owner: the Product development lead (sponsor or delegate) (not yet approved)</sub>

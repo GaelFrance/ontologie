@@ -41,13 +41,13 @@ Post-trade operations is everything that happens to a trade after it is done and
   - **[Payment Instruction](concepts.md#payment-instruction)** — The order given to a bank or system to make a payment.
 - **[Cash Movement](concepts.md#cash-movement)** — Money that actually moved from one account to another, with the evidence that says so.
 - **[Operational Exception](concepts.md#operational-exception)** — A problem someone must act on, because something expected did not happen or a rule was not met.
-  - **[Exception Case](concepts.md#exception-case)** — The ticket that tracks who is fixing an exception, what was done and when it was closed.
 - **[Reconciliation](concepts.md#reconciliation)** — Checking, for a given date, that two sources tell the same story about the same trades, positions or amounts, and listing where they do not.
   - **[Position Reconciliation](concepts.md#position-reconciliation)** — Checking that the positions in our books match the CCP's (or the client's) for each account and series on a clearing date.
   - **[Reconciliation Break](concepts.md#reconciliation-break)** — A mismatch between two records that should agree.
 - **[Source Record](concepts.md#source-record)** — One source's version of a trade, position or amount, with its own references and status.
   - **[CCP Report](concepts.md#ccp-report)** — The daily (or intraday) statement a CCP sends a clearing member about its trades, positions, margin and payments.
   - **[Client Statement](concepts.md#client-statement)** — The daily or monthly report a broker sends a client on its accounts.
+- **[Exception Case](concepts.md#exception-case)** — The ticket that tracks who is fixing an exception, what was done and when it was closed.
 - **[Settlement Account](concepts.md#settlement-account)** — The bank or delivery account a party uses to pay or receive what it owes.
 - **[Option Premium](concepts.md#option-premium)** — The price paid for an option, by the buyer to the seller.
 

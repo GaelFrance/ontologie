@@ -4,7 +4,7 @@
 
 Concepts are grouped by family: a broad concept first, then the kinds or parts it breaks down into.
 
-**Contents:** [Margin Methodology](#margin-methodology) · [Margin Parameter Set](#margin-parameter-set) · [Client Margin Uplift](#client-margin-uplift) · [Margin Requirement](#margin-requirement) · [Initial Margin Requirement](#initial-margin-requirement) · [Margin Run](#margin-run) · [Margin Requirement Component](#margin-requirement-component) · [Margin Excess or Shortfall](#margin-excess-or-shortfall) · [Variation Margin Requirement](#variation-margin-requirement) · [Price Alignment Amount](#price-alignment-amount) · [Margin Call](#margin-call) · [Collateral](#collateral) · [Collateral Asset](#collateral-asset) · [Collateral Eligibility Schedule](#collateral-eligibility-schedule) · [Collateral Haircut](#collateral-haircut) · [Concentration Limit](#concentration-limit) · [Collateral Arrangement](#collateral-arrangement) · [Margin Call Terms](#margin-call-terms) · [Cash Collateral Interest](#cash-collateral-interest) · [Collateral Movement](#collateral-movement) · [Collateral Instruction](#collateral-instruction) · [Portfolio](#portfolio) · [Margin Portfolio](#margin-portfolio) · [Default Fund Contribution](#default-fund-contribution) · [Margin Provider](#margin-provider) · [Margin Taker](#margin-taker) · [Account Equity](#account-equity) · [Open Trade Equity](#open-trade-equity) · [Account Cash Balance](#account-cash-balance) · [Position Valuation](#position-valuation)
+**Contents:** [Margin Methodology](#margin-methodology) · [Margin Parameter Set](#margin-parameter-set) · [Client Margin Uplift](#client-margin-uplift) · [Margin Requirement](#margin-requirement) · [Initial Margin Requirement](#initial-margin-requirement) · [Variation Margin Requirement](#variation-margin-requirement) · [Margin Requirement Component](#margin-requirement-component) · [Margin Excess or Shortfall](#margin-excess-or-shortfall) · [Margin Call](#margin-call) · [Collateral](#collateral) · [Collateral Asset](#collateral-asset) · [Collateral Eligibility Schedule](#collateral-eligibility-schedule) · [Collateral Haircut](#collateral-haircut) · [Concentration Limit](#concentration-limit) · [Collateral Arrangement](#collateral-arrangement) · [Margin Call Terms](#margin-call-terms) · [Cash Collateral Interest](#cash-collateral-interest) · [Collateral Movement](#collateral-movement) · [Collateral Instruction](#collateral-instruction) · [Portfolio](#portfolio) · [Margin Portfolio](#margin-portfolio) · [Margin Run](#margin-run) · [Price Alignment Amount](#price-alignment-amount) · [Default Fund Contribution](#default-fund-contribution) · [Margin Provider](#margin-provider) · [Margin Taker](#margin-taker) · [Account Equity](#account-equity) · [Open Trade Equity](#open-trade-equity) · [Account Cash Balance](#account-cash-balance) · [Position Valuation](#position-valuation)
 
 ### Margin Methodology
 
@@ -27,7 +27,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Margin required” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Reference Concept · level 1 · Draft · reference LD-C0070 · approved by the Collateral Manager</sub>
+<sub>Reference Concept · level 1 · Draft · reference LD-C0070 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Margin Parameter Set
 
@@ -53,7 +53,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is published for a clearing service* [Clearing Service](../clearing-services-and-accounts/concepts.md#clearing-service)
 - *is applied in a margin run* [Margin Run](#margin-run)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0160 · approved by the Collateral Manager</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0160 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Client Margin Uplift
 
@@ -78,19 +78,19 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is agreed or notified under* [Client Clearing Agreement](../clearing-services-and-accounts/concepts.md#client-clearing-agreement)
 - *applies to* [Client](../parties-and-roles/concepts.md#client)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0163 · approved by the Collateral Manager</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0163 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Margin Requirement
 
 *How much margin one party must provide to another, for an account, at a given time.*
 
-**Definition.** Amount of margin that a margin provider must provide to a margin taker for an identified account or risk scope, stated by tier, component, run and as-of time, and currency basis, and determined under an identified margin methodology or contractual rule. For variation margin the provider is whichever party the value has moved against. It is an amount owed in principle, distinct from the margin call that demands it and the collateral that covers it.
+**Definition.** Amount of margin that a margin provider must provide to a margin taker for an identified account or risk scope, stated by tier, component, run and as-of time, and currency basis, and determined under an identified margin methodology or contractual rule. For variation margin the amount is paid by whichever party the value has moved against, which can be the margin taker (for example a CCP paying a clearing member); the provider and taker roles stay those set by the clearing tier. It is an amount owed in principle, distinct from the margin call that demands it and the collateral that covers it.
 
 **Example.** At end of day CCP Z requires Clearing Broker Y to hold an amount of initial margin on its client omnibus account.
 
 **Not to be confused with.** Collateral: the requirement is what is owed; collateral is what is actually held.
 
-**Breaks down into:** [Initial Margin Requirement](#initial-margin-requirement) (kind of), [Margin Run](#margin-run) (step in), [Margin Requirement Component](#margin-requirement-component) (part of), [Margin Excess or Shortfall](#margin-excess-or-shortfall) (state of)
+**Breaks down into:** [Initial Margin Requirement](#initial-margin-requirement) (kind of), [Variation Margin Requirement](#variation-margin-requirement) (kind of), [Margin Requirement Component](#margin-requirement-component) (part of), [Margin Excess or Shortfall](#margin-excess-or-shortfall) (state of)
 
 **Words people use:** “margin held, margin posted” (Any)
 
@@ -102,12 +102,13 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Margin Call](#margin-call) *requests satisfaction of* Margin Requirement — Requirement, demand and remaining shortfall are different objects; the called amount derives from the requirement less collateral already held after haircut, adjusted for minimum transfer amount and rounding.
 - *determined under* [Margin Methodology](#margin-methodology) — One methodology version per calculation run; a member-client methodology may replicate the CCP's.
 - [Collateral](#collateral) *covers* Margin Requirement — Same provider-taker pair, account, as-of time and currency basis; the difference is the excess or shortfall.
+- [Margin Run](#margin-run) *determines* Margin Requirement — A margin run states margin requirements as of its run time. Corrected 2026-11-09 (was step_in: a run is not a step of a measure).
 - [Margin Portfolio](#margin-portfolio) *is the scope of* Margin Requirement
 - [Margin Provider](#margin-provider) *owes* Margin Requirement
 
 **Open questions on its meaning:** “Margin required” (open, answer proposed); “Margin and initial margin” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Measure · level 1 · Draft · reference LD-C0043 · approved by the Collateral Manager</sub>
+<sub>Measure · level 1 · Draft · reference LD-C0043 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Initial Margin Requirement
 
@@ -129,35 +130,34 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Margin required” (open, answer proposed); “Margin and initial margin” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Measure · level 1 · Draft · reference LD-C0044 · approved by the Collateral Manager</sub>
+<sub>Measure · level 1 · Draft · reference LD-C0044 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
-### Margin Run
+### Variation Margin Requirement
 
-*One calculation of margin at a point in time, which produces the requirement figures.*
+*Margin that reflects the change in value of positions at current prices, settled daily or held as collateral.*
 
-**Definition.** Dated calculation by a margin taker that applies a methodology version and parameter set to the positions of one or more accounts at an as-of time, producing margin requirements by account, component and currency; of a run type (scheduled end-of-day, scheduled intraday or ad hoc). A run may or may not lead to a margin call.
+**Definition.** Margin requirement reflecting the current market value of positions, owed by the party the value has moved against: under settled-to-market treatment, the change in value since the previous margin cycle, paid outright as a settlement of the exposure rather than posted as collateral; under collateralised-to-market treatment, the cumulative mark-to-market exposure, covered by collateral that is returned as the exposure falls. For listed contracts positions are valued at the daily settlement price. Direction is stated from the observing party. Price alignment is a separate amount and never part of variation margin. — *meaning changed in 2026-11, accepted as Draft*
 
-**Example.** CCP Z's midday run recalculates Clearing Broker Y's requirement on current prices; no call follows because the increase is below the threshold.
+**Example.** Client A's long futures lost value today, so Client A owes variation margin, which Clearing Broker Y pays on to CCP Z.
 
-**Not to be confused with.** Intraday Margin Call: an intraday run is a calculation; a call is a demand that only some runs trigger.
+**Not to be confused with.** Price Alignment Amount: a small interest adjustment paid alongside variation margin, never part of it.
 
-**Step in:** [Margin Requirement](#margin-requirement)
+**Kind of:** [Margin Requirement](#margin-requirement)
 
-**Values (draft list):** scheduled end-of-day; scheduled intraday; ad hoc
+**Words people use:** “mark-to-market, MTM” (Any)
 
-**Words people use:** “margin cycle” (contextual); “margin calculation” (contextual)
-
-**Before using it, know:** Margin taker, run type, as-of time, time zone, methodology and parameter versions.
+**Note.** Price alignment is a separate flow. Premium-style options carry no VM; futures-style options do. [04, 03]
 
 **Connected to:**
 
-- [Processing Window](../instruments-venues-and-calendars/concepts.md#processing-window) *dates* Margin Run
-- *applies* [Margin Methodology](#margin-methodology)
-- *uses* [Margin Parameter Set](#margin-parameter-set)
-- *may lead to* [Margin Call](#margin-call)
-- *is calculated over* [Margin Portfolio](#margin-portfolio)
+- *gives rise to* [Settlement Obligation](../post-trade-operations/concepts.md#settlement-obligation) — Under settled-to-market treatment; under collateralised-to-market treatment VM is demanded by a margin call and met with collateral. Treatment is a versioned fact per clearing service and account type (the open question “Variation margin”).
+- [Settlement Price](../instruments-venues-and-calendars/concepts.md#settlement-price) *values listed positions for* Variation Margin Requirement
+- [Price Alignment Amount](#price-alignment-amount) *offsets funding effect of* Variation Margin Requirement — Never part of the variation margin amount; owed as a separate obligation even when paid together with it. Corrected 2026-11-09 (was part_of).
+- *is based on* [Position Valuation](#position-valuation)
 
-<sub>Event · level 2 · Draft · reference LD-C0161 · approved by the Collateral Manager</sub>
+**Open questions on its meaning:** “Margin required” (open, answer proposed); “Variation margin” (open, answer proposed) — see the [review sheet](review.md).
+
+<sub>Measure · level 1 · Draft · reference LD-C0045 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Margin Requirement Component
 
@@ -181,7 +181,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 - *breaks down* [Initial Margin Requirement](#initial-margin-requirement)
 
-<sub>Measure · level 2 · Draft · reference LD-C0162 · approved by the Collateral Manager</sub>
+<sub>Measure · level 2 · Draft · reference LD-C0162 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Margin Excess or Shortfall
 
@@ -210,58 +210,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *may be held at* [CCP Account](../clearing-services-and-accounts/concepts.md#ccp-account)
 - *may be stated against* [Account Equity](#account-equity) — Where the client agreement margins on account equity (mainly US futures), account equity is the held side compared with the requirement.
 
-<sub>Measure · level 2 · Draft · reference LD-C0166 · approved by the Collateral Manager</sub>
-
-### Variation Margin Requirement
-
-*Margin that reflects the change in value of positions at current prices, settled daily or held as collateral.*
-
-**Definition.** Margin requirement reflecting the current market value of positions, owed by the party the value has moved against: under settled-to-market treatment, the change in value since the previous margin cycle, paid outright as a settlement of the exposure rather than posted as collateral; under collateralised-to-market treatment, the cumulative mark-to-market exposure, covered by collateral that is returned as the exposure falls. For listed contracts positions are valued at the daily settlement price. Direction is stated from the observing party. Price alignment is a separate amount and never part of variation margin. — *meaning changed in 2026-11, accepted as Draft*
-
-**Example.** Client A's long futures lost value today, so Client A owes variation margin, which Clearing Broker Y pays on to CCP Z.
-
-**Not to be confused with.** Price Alignment Amount: a small interest adjustment paid alongside variation margin, never part of it.
-
-**Breaks down into:** [Price Alignment Amount](#price-alignment-amount) (part of)
-
-**Words people use:** “mark-to-market, MTM” (Any)
-
-**Note.** Price alignment is a separate flow. Premium-style options carry no VM; futures-style options do. [04, 03]
-
-**Connected to:**
-
-- *gives rise to* [Settlement Obligation](../post-trade-operations/concepts.md#settlement-obligation) — Under settled-to-market treatment; under collateralised-to-market treatment VM is demanded by a margin call and met with collateral. Treatment is a versioned fact per clearing service and account type (the open question “Variation margin”).
-- [Settlement Price](../instruments-venues-and-calendars/concepts.md#settlement-price) *values listed positions for* Variation Margin Requirement
-- *is based on* [Position Valuation](#position-valuation)
-
-**Open questions on its meaning:** “Margin required” (open, answer proposed); “Variation margin” (open, answer proposed) — see the [review sheet](review.md).
-
-<sub>Measure · level 1 · Draft · reference LD-C0045 · approved by the Collateral Manager</sub>
-
-### Price Alignment Amount
-
-*A small interest-like payment that goes with variation margin on cleared swaps but is not part of it.*
-
-**Definition.** Amount owed under a clearing service's rules between a CCP and a clearing member, and passed on or not to clients, that offsets the interest effect of variation margin so that cleared prices match uncleared ones: under collateralised-to-market treatment it is interest on cumulative variation margin collateral; under settled-to-market treatment it accompanies the daily settlement. It gives rise to a Settlement Obligation with purpose 'price alignment' and is never part of the variation margin amount itself.
-
-**Example.** CCP Z pays Clearing Broker Y a price alignment amount on its swap account with the daily settlement; Clearing Broker Y passes it to Client A.
-
-**Not to be confused with.** Cash Collateral Interest: price alignment relates to variation margin; cash collateral interest remunerates cash held as initial margin.
-
-**Part of:** [Variation Margin Requirement](#variation-margin-requirement)
-
-**Values (draft list):** price alignment interest (collateralised-to-market); price alignment amount (settled-to-market)
-
-**Words people use:** “PAI” (OTC clearing); “PAA” (OTC clearing)
-
-**Before using it, know:** Tier, clearing service, account, variation margin treatment, currency and period.
-
-**Connected to:**
-
-- *gives rise to* [Settlement Obligation](../post-trade-operations/concepts.md#settlement-obligation)
-- *counts in only if the management reporting basis says so* [Collateral Revenue](../fees-revenue-and-contribution/concepts.md#collateral-revenue)
-
-<sub>Obligation · level 2 · Draft · reference LD-C0170 · approved by the Collateral Manager</sub>
+<sub>Measure · level 2 · Draft · reference LD-C0166 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Margin Call
 
@@ -285,7 +234,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Margin Taker](#margin-taker) *issues* Margin Call
 - [Settlement Deadline](../post-trade-operations/concepts.md#settlement-deadline) *is set for the obligation created by* Margin Call
 
-<sub>Instruction · level 1 · Draft · reference LD-C0046 · approved by the Collateral Manager</sub>
+<sub>Instruction · level 1 · Draft · reference LD-C0046 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Collateral
 
@@ -317,7 +266,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Variation margin” (open, answer proposed); “Margin and initial margin” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>State · level 1 · Draft · reference LD-C0047 · approved by the Collateral Manager</sub>
+<sub>State · level 1 · Draft · reference LD-C0047 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Collateral Asset
 
@@ -339,7 +288,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Collateral Haircut](#collateral-haircut) *applies to* Collateral Asset
 - [Concentration Limit](#concentration-limit) *applies to* Collateral Asset
 
-<sub>Entity · level 1 · Draft · reference LD-C0048 · approved by the Collateral Manager</sub>
+<sub>Entity · level 1 · Draft · reference LD-C0048 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Collateral Eligibility Schedule
 
@@ -358,7 +307,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *admits* [Collateral Asset](#collateral-asset) — Per schedule version, with haircut, limits and validity; eligibility is not commitment.
 - [Collateral Arrangement](#collateral-arrangement) *references* Collateral Eligibility Schedule — The eligibility schedule version applicable under the arrangement.
 
-<sub>Reference Concept · level 1 · Draft · reference LD-C0072 · approved by the Collateral Manager</sub>
+<sub>Reference Concept · level 1 · Draft · reference LD-C0072 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Collateral Haircut
 
@@ -384,7 +333,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *gives the value after haircut of* [Collateral](#collateral)
 - *is changed by* [Rule Change](../regulation-and-rule-changes/concepts.md#rule-change)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0167 · approved by the Collateral Manager</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0167 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Concentration Limit
 
@@ -409,7 +358,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *applies to* [Collateral Asset](#collateral-asset)
 - *limits the value of* [Collateral](#collateral)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0168 · approved by the Collateral Manager</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0168 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Collateral Arrangement
 
@@ -421,6 +370,8 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Not to be confused with.** Client Clearing Agreement: the wider agreement that may contain the collateral terms.
 
+**Kind of:** [Agreement](../clearing-services-and-accounts/concepts.md#agreement)
+
 **Breaks down into:** [Margin Call Terms](#margin-call-terms) (part of), [Cash Collateral Interest](#cash-collateral-interest) (part of)
 
 **Connected to:**
@@ -431,7 +382,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Variation margin” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Agreement · level 1 · Draft · reference LD-C0071 · approved by the Collateral Manager</sub>
+<sub>Agreement · level 1 · Draft · reference LD-C0071 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Margin Call Terms
 
@@ -459,7 +410,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *names the deadline as* [Cut-off](../post-trade-operations/concepts.md#cut-off)
 - *governs* [Margin Call](#margin-call)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0165 · approved by the Collateral Manager</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0165 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Cash Collateral Interest
 
@@ -485,7 +436,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *gives rise to* [Settlement Obligation](../post-trade-operations/concepts.md#settlement-obligation)
 - *feeds* [Collateral Revenue](../fees-revenue-and-contribution/concepts.md#collateral-revenue)
 
-<sub>Obligation · level 2 · Draft · reference LD-C0171 · approved by the Collateral Manager</sub>
+<sub>Obligation · level 2 · Draft · reference LD-C0171 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Collateral Movement
 
@@ -505,7 +456,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *transfers* [Collateral Asset](#collateral-asset) — Asset quantities moved; a “changes” link records the resulting change in collateral held.
 - [Settlement or Custody Agent](../parties-and-roles/concepts.md#settlement-or-custody-agent) *evidences* Collateral Movement
 
-<sub>Event · level 1 · Draft · reference LD-C0049 · approved by the Collateral Manager</sub>
+<sub>Event · level 1 · Draft · reference LD-C0049 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Collateral Instruction
 
@@ -531,7 +482,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *may respond to* [Margin Call](#margin-call)
 - [Payment Instruction](../post-trade-operations/concepts.md#payment-instruction) *carries out for cash collateral* Collateral Instruction
 
-<sub>Instruction · level 2 · Draft · reference LD-C0169 · approved by the Collateral Manager</sub>
+<sub>Instruction · level 2 · Draft · reference LD-C0169 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Portfolio
 
@@ -550,7 +501,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Position](../clearing-services-and-accounts/concepts.md#position) *included in* Portfolio — Membership is purpose-specific and time-bound.
 - [Cleared OTC Position](../clearing-services-and-accounts/concepts.md#cleared-otc-position) *may be included in a margin portfolio* Portfolio
 
-<sub>Entity · level 1 · Draft · reference LD-C0027 · approved by the Collateral Manager</sub>
+<sub>Entity · level 1 · Draft · reference LD-C0027 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Margin Portfolio
 
@@ -577,7 +528,58 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *contains* [Position](../clearing-services-and-accounts/concepts.md#position)
 - *is the scope of* [Margin Requirement](#margin-requirement)
 
-<sub>Entity · level 2 · Draft · reference LD-C0164 · approved by the Collateral Manager</sub>
+<sub>Entity · level 2 · Draft · reference LD-C0164 · accountable owner: the Collateral Manager (not yet approved)</sub>
+
+### Margin Run
+
+*One calculation of margin at a point in time, which produces the requirement figures.*
+
+**Definition.** Dated calculation by a margin taker that applies a methodology version and parameter set to the positions of one or more accounts at an as-of time, producing margin requirements by account, component and currency; of a run type (scheduled end-of-day, scheduled intraday or ad hoc). A run may or may not lead to a margin call.
+
+**Example.** CCP Z's midday run recalculates Clearing Broker Y's requirement on current prices; no call follows because the increase is below the threshold.
+
+**Not to be confused with.** Intraday Margin Call: an intraday run is a calculation; a call is a demand that only some runs trigger.
+
+**Values (draft list):** scheduled end-of-day; scheduled intraday; ad hoc
+
+**Words people use:** “margin cycle” (contextual); “margin calculation” (contextual)
+
+**Before using it, know:** Margin taker, run type, as-of time, time zone, methodology and parameter versions.
+
+**Connected to:**
+
+- [Processing Window](../instruments-venues-and-calendars/concepts.md#processing-window) *dates* Margin Run
+- *determines* [Margin Requirement](#margin-requirement) — A margin run states margin requirements as of its run time. Corrected 2026-11-09 (was step_in: a run is not a step of a measure).
+- *applies* [Margin Methodology](#margin-methodology)
+- *uses* [Margin Parameter Set](#margin-parameter-set)
+- *may lead to* [Margin Call](#margin-call)
+- *is calculated over* [Margin Portfolio](#margin-portfolio)
+
+<sub>Event · level 2 · Draft · reference LD-C0161 · accountable owner: the Collateral Manager (not yet approved)</sub>
+
+### Price Alignment Amount
+
+*A small interest-like payment that goes with variation margin on cleared swaps but is not part of it.*
+
+**Definition.** Amount owed under a clearing service's rules between a CCP and a clearing member, and passed on or not to clients, that offsets the interest effect of variation margin so that cleared prices match uncleared ones: under collateralised-to-market treatment it is interest on cumulative variation margin collateral; under settled-to-market treatment it accompanies the daily settlement. It gives rise to a Settlement Obligation with purpose 'price alignment' and is never part of the variation margin amount itself.
+
+**Example.** CCP Z pays Clearing Broker Y a price alignment amount on its swap account with the daily settlement; Clearing Broker Y passes it to Client A.
+
+**Not to be confused with.** Cash Collateral Interest: price alignment relates to variation margin; cash collateral interest remunerates cash held as initial margin.
+
+**Values (draft list):** price alignment interest (collateralised-to-market); price alignment amount (settled-to-market)
+
+**Words people use:** “PAI” (OTC clearing); “PAA” (OTC clearing)
+
+**Before using it, know:** Tier, clearing service, account, variation margin treatment, currency and period.
+
+**Connected to:**
+
+- *offsets funding effect of* [Variation Margin Requirement](#variation-margin-requirement) — Never part of the variation margin amount; owed as a separate obligation even when paid together with it. Corrected 2026-11-09 (was part_of).
+- *gives rise to* [Settlement Obligation](../post-trade-operations/concepts.md#settlement-obligation)
+- *counts in only if the management reporting basis says so* [Collateral Revenue](../fees-revenue-and-contribution/concepts.md#collateral-revenue)
+
+<sub>Obligation · level 2 · Draft · reference LD-C0170 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Default Fund Contribution
 
@@ -606,13 +608,13 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is covered by* [Collateral](#collateral)
 - *gives rise to a funding cost in* [Cost](../fees-revenue-and-contribution/concepts.md#cost)
 
-<sub>Obligation · level 1 · Draft · reference LD-C0172 · approved by the Collateral Manager</sub>
+<sub>Obligation · level 1 · Draft · reference LD-C0172 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Margin Provider
 
 *The party that has to give margin.*
 
-**Definition.** Role of a party that must provide margin to a margin taker for an account at a tier, determined by the clearing roles of the two parties at that tier, never set independently: a clearing member toward a CCP, a participant admitted in its own name toward a CCP (directly or through its sponsor), a client toward its clearing broker, or an indirect client toward its client. Whether the account is house or client comes from the CCP account kind, not from this role. Usually the same party as the collateral provider under the collateral arrangement, except where a third party pledges assets.
+**Definition.** Role of a party that must provide margin to a margin taker for an account at a tier, determined by the clearing roles of the two parties at that tier, never set independently: a clearing member toward a CCP, a participant admitted in its own name toward a CCP (directly or through its sponsor), a client toward its clearing broker, or an indirect client toward its client. Whether the account is house or client comes from the CCP account kind, not from this role. Usually the same party as the collateral provider under the collateral arrangement, except where a third party pledges assets. The direction of each variation margin payment follows the movement of value and does not change the role.
 
 **Example.** Clearing Broker Y is the margin provider toward CCP Z and the margin taker toward Client A.
 
@@ -631,7 +633,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *owes* [Margin Requirement](#margin-requirement)
 - *faces* [Margin Taker](#margin-taker)
 
-<sub>Role · level 2 · Draft · reference LD-C0173 · approved by the Collateral Manager</sub>
+<sub>Role · level 2 · Draft · reference LD-C0173 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Margin Taker
 
@@ -657,7 +659,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *applies* [Margin Methodology](#margin-methodology)
 - *issues* [Margin Call](#margin-call)
 
-<sub>Role · level 2 · Draft · reference LD-C0174 · approved by the Collateral Manager</sub>
+<sub>Role · level 2 · Draft · reference LD-C0174 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Account Equity
 
@@ -682,7 +684,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Margin Excess or Shortfall](#margin-excess-or-shortfall) *may be stated against* Account Equity — Where the client agreement margins on account equity (mainly US futures), account equity is the held side compared with the requirement.
 - [Client Statement](../post-trade-operations/concepts.md#client-statement) *states* Account Equity — Also states the cash balance, open trade equity, margin requirement and excess or shortfall.
 
-<sub>Measure · level 2 · Draft · reference LD-C0225 · approved by the Collateral Manager</sub>
+<sub>Measure · level 2 · Draft · reference LD-C0225 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Open Trade Equity
 
@@ -704,7 +706,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 - *is derived from* [Position Valuation](#position-valuation) — Listed futures and futures-style options.
 
-<sub>Measure · level 2 · Draft · reference LD-C0223 · approved by the Collateral Manager</sub>
+<sub>Measure · level 2 · Draft · reference LD-C0223 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Account Cash Balance
 
@@ -722,7 +724,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Before using it, know:** Account and maintaining party, currency, as-of time, which amounts the issuer posts to cash.
 
-<sub>Measure · level 2 · Draft · reference LD-C0224 · approved by the Collateral Manager</sub>
+<sub>Measure · level 2 · Draft · reference LD-C0224 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Position Valuation
 
@@ -747,4 +749,4 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *uses* [Settlement Price](../instruments-venues-and-calendars/concepts.md#settlement-price) — Listed positions; cleared OTC positions are valued by the CCP's own valuation, not by a settlement price.
 - [Variation Margin Requirement](#variation-margin-requirement) *is based on* Position Valuation
 
-<sub>Measure · level 2 · Draft · reference LD-C0230 · approved by the Collateral Manager</sub>
+<sub>Measure · level 2 · Draft · reference LD-C0230 · accountable owner: the Collateral Manager (not yet approved)</sub>

@@ -28,7 +28,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Account Identifier](#account-identifier) *is issued by* Party
 - [Rulebook](../regulation-and-rule-changes/concepts.md#rulebook) *is issued by* Party
 
-<sub>Entity · level 1 · Draft · reference LD-C0001 · approved by the Reference & Client Data</sub>
+<sub>Entity · level 1 · Draft · reference LD-C0001 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Legal Entity
 
@@ -58,7 +58,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Client” (open, narrowed 2026-09-20, answer proposed); “Group” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Entity · level 1 · Draft · reference LD-C0002 · approved by the Reference & Client Data</sub>
+<sub>Entity · level 1 · Draft · reference LD-C0002 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Branch
 
@@ -80,7 +80,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 - *may bring the business under a further* [Regulatory Regime](../regulation-and-rule-changes/concepts.md#regulatory-regime)
 
-<sub>Entity · level 2 · Draft · reference LD-C0076 · approved by the Reference & Client Data</sub>
+<sub>Entity · level 2 · Draft · reference LD-C0076 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Natural Person
 
@@ -103,7 +103,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *can hold the role of* [Authorised Representative](#authorised-representative)
 - *can hold the role of* [Client](#client)
 
-<sub>Entity · level 2 · Draft · reference LD-C0075 · approved by the Reference & Client Data</sub>
+<sub>Entity · level 2 · Draft · reference LD-C0075 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Investment Fund
 
@@ -128,7 +128,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is managed by* [Investment Manager](#investment-manager)
 - *usually holds the role of* [Client](#client)
 
-<sub>Entity · level 2 · Draft · reference LD-C0077 · approved by the Reference & Client Data</sub>
+<sub>Entity · level 2 · Draft · reference LD-C0077 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Party Role
 
@@ -155,7 +155,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Client” (open, narrowed 2026-09-20, answer proposed) — see the [review sheet](review.md).
 
-<sub>Role · level 1 · Draft · reference LD-C0003 · approved by the Reference & Client Data</sub>
+<sub>Role · level 1 · Draft · reference LD-C0003 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Client
 
@@ -195,7 +195,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Client” (open, narrowed 2026-09-20, answer proposed); “Revenue by client” (open, narrowed 2026-09-20 and 2026-11-01, answer proposed) — see the [review sheet](review.md).
 
-<sub>Role · level 1 · Draft · reference LD-C0004 · approved by the Reference & Client Data</sub>
+<sub>Role · level 1 · Draft · reference LD-C0004 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Indirect Client
 
@@ -221,7 +221,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *reaches clearing through* [Market Access Arrangement](../service-offering-and-market-access/concepts.md#market-access-arrangement)
 - [Indirect Clearing Arrangement](../service-offering-and-market-access/concepts.md#indirect-clearing-arrangement) *confers* Indirect Client
 
-<sub>Role · level 2 · Draft · reference LD-C0081 · approved by the Reference & Client Data</sub>
+<sub>Role · level 2 · Draft · reference LD-C0081 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Intra-group Client
 
@@ -245,7 +245,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *may be recorded in house or client accounts of* [CCP Account](../clearing-services-and-accounts/concepts.md#ccp-account)
 - *is flagged for elimination in* [Revenue](../fees-revenue-and-contribution/concepts.md#revenue)
 
-<sub>Role · level 2 · Draft · reference LD-C0085 · approved by the Reference & Client Data</sub>
+<sub>Role · level 2 · Draft · reference LD-C0085 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Non-Clearing Member
 
@@ -270,7 +270,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is conferred by* [Market Access Arrangement](../service-offering-and-market-access/concepts.md#market-access-arrangement)
 - [Non-Clearing Member Arrangement](../service-offering-and-market-access/concepts.md#non-clearing-member-arrangement) *confers* Non-Clearing Member
 
-<sub>Role · level 2 · Draft · reference LD-C0086 · approved by the Reference & Client Data</sub>
+<sub>Role · level 2 · Draft · reference LD-C0086 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Broker
 
@@ -293,7 +293,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Clearing broker, clearing member, FCM” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Role · level 1 · Draft · reference LD-C0005 · approved by the Reference & Client Data</sub>
+<sub>Role · level 1 · Draft · reference LD-C0005 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Authorised Representative
 
@@ -322,7 +322,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *sends* [Order](../execution/concepts.md#order)
 - *gives* [Allocation Instruction](../execution/concepts.md#allocation-instruction)
 
-<sub>Role · level 2 · Draft · reference LD-C0078 · approved by the Reference & Client Data</sub>
+<sub>Role · level 2 · Draft · reference LD-C0078 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Investment Manager
 
@@ -346,7 +346,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *gives* [Allocation Instruction](../execution/concepts.md#allocation-instruction)
 - *often anchors* [Commercial Group](#commercial-group)
 
-<sub>Role · level 2 · Draft · reference LD-C0079 · approved by the Reference & Client Data</sub>
+<sub>Role · level 2 · Draft · reference LD-C0079 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Economic Beneficiary
 
@@ -369,7 +369,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *bears the result of positions in* [Account](#account)
 - *is often an* [Indirect Client](#indirect-client)
 
-<sub>Role · level 2 · Draft · reference LD-C0080 · approved by the Reference & Client Data</sub>
+<sub>Role · level 2 · Draft · reference LD-C0080 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Parent Entity
 
@@ -395,7 +395,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *may inform but never defines* [Commercial Group](#commercial-group)
 - *decides whether a client is* [Intra-group Client](#intra-group-client)
 
-<sub>Role · level 2 · Draft · reference LD-C0083 · approved by the Reference & Client Data</sub>
+<sub>Role · level 2 · Draft · reference LD-C0083 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Contracting Entity
 
@@ -421,7 +421,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is the observing entity for* [Revenue](../fees-revenue-and-contribution/concepts.md#revenue)
 - [Client Regulatory Category](#client-regulatory-category) *is assigned by* Contracting Entity
 
-<sub>Role · level 2 · Draft · reference LD-C0084 · approved by the Reference & Client Data</sub>
+<sub>Role · level 2 · Draft · reference LD-C0084 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Sponsored Clearing Participant
 
@@ -445,7 +445,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is admitted under* [Sponsored Clearing Arrangement](../service-offering-and-market-access/concepts.md#sponsored-clearing-arrangement)
 - *normally also holds toward its sponsor* [Client](#client)
 
-<sub>Role · level 2 · Draft · reference LD-C0087 · approved by the Reference & Client Data</sub>
+<sub>Role · level 2 · Draft · reference LD-C0087 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Market Operator
 
@@ -467,7 +467,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *issues* [Rulebook](../regulation-and-rule-changes/concepts.md#rulebook)
 - *issues* [Published Fee Schedule](../fees-revenue-and-contribution/concepts.md#published-fee-schedule)
 
-<sub>Role · level 2 · Draft · reference LD-C0091 · approved by the Reference & Client Data</sub>
+<sub>Role · level 2 · Draft · reference LD-C0091 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Settlement or Custody Agent
 
@@ -491,7 +491,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *evidences* [Collateral Movement](../margin-and-collateral/concepts.md#collateral-movement)
 - *evidences* [Cash Movement](../post-trade-operations/concepts.md#cash-movement)
 
-<sub>Role · level 2 · Draft · reference LD-C0092 · approved by the Reference & Client Data</sub>
+<sub>Role · level 2 · Draft · reference LD-C0092 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Commercial Group
 
@@ -513,7 +513,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Client” (open, narrowed 2026-09-20, answer proposed); “Revenue by client” (open, narrowed 2026-09-20 and 2026-11-01, answer proposed); “Group” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Entity · level 1 · Draft · reference LD-C0073 · approved by the Reference & Client Data</sub>
+<sub>Entity · level 1 · Draft · reference LD-C0073 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Account
 
@@ -542,7 +542,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Account” (open, answer proposed); “Position” (open, answer proposed); “Omnibus, house and client” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Entity · level 1 · Draft · reference LD-C0010 · approved by the Reference & Client Data</sub>
+<sub>Entity · level 1 · Draft · reference LD-C0010 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Client Account
 
@@ -569,7 +569,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is targeted by* [Allocation](../execution/concepts.md#allocation)
 - *records* [Position](../clearing-services-and-accounts/concepts.md#position)
 
-<sub>Entity · level 2 · Draft · reference LD-C0090 · approved by the Reference & Client Data</sub>
+<sub>Entity · level 2 · Draft · reference LD-C0090 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Account Identifier
 
@@ -595,7 +595,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is issued by* [Party](#party)
 - [Identifier Scheme](../instruments-venues-and-calendars/concepts.md#identifier-scheme) *is the scheme of* Account Identifier
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0082 · approved by the Reference & Client Data</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0082 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Client Regulatory Category
 
@@ -621,7 +621,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is assigned by* [Contracting Entity](#contracting-entity)
 - *is defined under* [Regulatory Regime](../regulation-and-rule-changes/concepts.md#regulatory-regime)
 
-<sub>State · level 2 · Draft · reference LD-C0088 · approved by the Reference & Client Data</sub>
+<sub>State · level 2 · Draft · reference LD-C0088 · accountable owner: the Reference & Client Data (not yet approved)</sub>
 
 ### Counterparty Regulatory Status
 
@@ -646,4 +646,4 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *classifies* [Legal Entity](#legal-entity)
 - *is defined under* [Regulatory Regime](../regulation-and-rule-changes/concepts.md#regulatory-regime)
 
-<sub>State · level 2 · Draft · reference LD-C0089 · approved by the Reference & Client Data</sub>
+<sub>State · level 2 · Draft · reference LD-C0089 · accountable owner: the Reference & Client Data (not yet approved)</sub>

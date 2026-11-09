@@ -26,6 +26,7 @@ This domain describes what is charged for executing and clearing listed and OTC 
 
 - **[Fee Charge](concepts.md#fee-charge)** — An amount one party owes another for a service, such as an exchange fee or a client clearing fee.
   - **[Client Execution Fee](concepts.md#client-execution-fee)** — What a client pays its broker for executing its orders.
+  - **[CCP Fee Charge](concepts.md#ccp-fee-charge)** — A fee charged by a clearing house to its clearing members for clearing and related services.
   - **[Pass-through Charge](concepts.md#pass-through-charge)** — A third-party fee that the broker recharges to its client.
   - **[Bundled Execution and Clearing Fee](concepts.md#bundled-execution-and-clearing-fee)** — One combined price for executing and clearing the same trades.
   - **[Regulatory Transaction Fee](concepts.md#regulatory-transaction-fee)** — A per-trade fee levied by a regulator or industry body, not by the venue or the CCP.
@@ -40,15 +41,14 @@ This domain describes what is charged for executing and clearing listed and OTC 
 - **[Client Clearing Fee](concepts.md#client-clearing-fee)** — What a client pays its clearing broker for clearing its trades, listed or OTC.
 - **[Executing Broker Brokerage Charge](concepts.md#executing-broker-brokerage-charge)** — What an executing broker is owed for executing trades that are cleared elsewhere, often paid by the clearing broker and recharged to the client.
 - **[Exchange Fee Charge](concepts.md#exchange-fee-charge)** — A fee charged by the venue operator, for trading or related services such as market data or connectivity.
-- **[CCP Fee Charge](concepts.md#ccp-fee-charge)** — A fee charged by a clearing house to its clearing members for clearing and related services.
 - **[Commission](concepts.md#commission)** — A loose commercial word for what a broker charges per contract; it must be resolved to a specific fee before use.
 - **[Revenue](concepts.md#revenue)** — What the business earns over a period, measured under stated management rules.
   - **[Execution Revenue](concepts.md#execution-revenue)** — What the business earns from executing orders, per client and per handling channel.
+  - **[Clearing Revenue](concepts.md#clearing-revenue)** — What the business earns from clearing trades, per client and per clearing service.
   - **[Collateral Revenue](concepts.md#collateral-revenue)** — What the business earns from holding clients' collateral, reported separately from clearing fees.
   - **[Management Reporting Basis](concepts.md#management-reporting-basis)** — The agreed rules that say how revenue figures are put together.
 - **[Cost](concepts.md#cost)** — What the business spends to deliver its services, measured under stated management rules.
-- **[Clearing Revenue](concepts.md#clearing-revenue)** — What the business earns from clearing trades, per client and per clearing service.
-- **[Contribution](concepts.md#contribution)** — What a client, service or venue brings in after deducting the direct costs an approved list includes.
+- **[Contribution](concepts.md#contribution)** — What a client, service or venue brings in after deducting the costs an approved list includes.
   - **[Cost Perimeter](concepts.md#cost-perimeter)** — The agreed list of costs that are deducted to get contribution.
 - **[Fee Collector](concepts.md#fee-collector)** — A party that collects a fee for someone else.
 - **[Activity Volume](concepts.md#activity-volume)** — How much was traded or cleared, in a stated unit and counting rule.
