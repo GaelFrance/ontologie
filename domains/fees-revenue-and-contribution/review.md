@@ -157,3 +157,4 @@ Also touching this domain, answered elsewhere:
 These items are in the backlog. **Does a decision you need now depend on one of them?**
 
 - rebate, discount and waiver
+- profitability after funding, capital and shared costs, with prudential exposure and capital cost attribution (external review M10)

@@ -172,9 +172,17 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Collateral Manager with Risk
 <sub>question q26</sub>
 
+### 22. At each CCP and in your client agreements, which collateral is accepted for variation margin as opposed to initial margin (cash only, which currencies, any securities)?
+
+- **Why it matters:** Securities eligible only for initial margin do not cover variation margin; agents must not treat a margin call as covered by ineligible assets.
+- **How to answer:** Per CCP and per client agreement type: eligible assets for variation margin and for initial margin.
+- **Concepts affected:** Margin Call, Collateral Eligibility Schedule, Variation Margin Requirement
+- **Who answers:** Collateral Manager
+<sub>question q28</sub>
+
 ## Priority 3: later
 
-### 22. Do you hold client and CCP collateral through custodians, settlement systems or triparty agents, by category, and is a pledge recorded as a movement between accounts?
+### 23. Do you hold client and CCP collateral through custodians, settlement systems or triparty agents, by category, and is a pledge recorded as a movement between accounts?
 
 - **Why it matters:** Decides how Collateral Movement and Collateral Instruction are recorded for pledged assets.
 - **How to answer:** Categories of holding location per tier (no provider names in the repository); pledge recorded as movement yes or no.
@@ -182,7 +190,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Collateral Manager with Operations
 <sub>question q21</sub>
 
-### 23. For physically delivered futures, do you call clients for delivery margin around expiry, and from when?
+### 24. For physically delivered futures, do you call clients for delivery margin around expiry, and from when?
 
 - **Why it matters:** Confirms whether delivery margin is a component used at the client tier.
 - **How to answer:** Yes or no per product family; start point relative to expiry.
@@ -190,7 +198,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** ETD Clearing product owner
 <sub>question q23</sub>
 
-### 24. For cleared OTC positions, which valuation do you show clients: the CCP's or your own, and how do you explain a difference?
+### 25. For cleared OTC positions, which valuation do you show clients: the CCP's or your own, and how do you explain a difference?
 
 - **Why it matters:** Tells an agent which valuation party to state when a client asks what a position is worth.
 - **How to answer:** Valuation party per product; how differences are reported.

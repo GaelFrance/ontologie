@@ -114,3 +114,19 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Concepts affected:** Segregation Model, Client Account
 - **Who answers:** ETD Clearing product owner with Legal and the Collateral Manager
 <sub>question q23</sub>
+
+### 15. Does any client clear the same clearing service through more than one clearing broker at the same time (for example split by account or product), or is it always one clearing broker per service and period?
+
+- **Why it matters:** The ontology currently allows at most one clearing member per clearing broker, service and period; this tells whether that rule must be relaxed.
+- **How to answer:** Yes or no per client segment; if yes, how the split is made (account, product, period).
+- **Concepts affected:** Clearing Broker, Market Access Arrangement
+- **Who answers:** Clearing product owner
+<sub>question q24</sub>
+
+### 16. For clients that name a back-up clearing member, is the back-up's acceptance documented in advance, or is it only a designation?
+
+- **Why it matters:** A designation does not commit the back-up member; agents must not conclude that porting will succeed from a designation alone.
+- **How to answer:** Per CCP and client segment: designation only, pre-agreed acceptance, or both; where it is recorded.
+- **Concepts affected:** Back-up Clearing Member, Porting
+- **Who answers:** Clearing product owner with Legal
+<sub>question q25</sub>

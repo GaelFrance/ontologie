@@ -181,9 +181,25 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Compliance with Regulatory Affairs
 <sub>question q26</sub>
 
+### 23. Which exemptions, no-action letters or transitional reliefs does your firm currently rely on, and for each, is its effect an exemption, a deferral or only a non-enforcement position?
+
+- **Why it matters:** A no-action letter does not remove the obligation; agents must state the legal effect of each relief before concluding that a duty does not apply.
+- **How to answer:** List kept internally: relief, regime, effect, expiry date; no client names.
+- **Concepts affected:** Regulatory Relief, Regulatory Obligation
+- **Who answers:** Regulatory Affairs with Legal
+<sub>question q27</sub>
+
+### 24. For which contracts does your firm monitor client positions against position limits, accountability levels and reportable levels, and what action follows when each kind of level is crossed?
+
+- **Why it matters:** The consequence of crossing a level depends on its kind (breach, scrutiny or reporting), never on the amount alone.
+- **How to answer:** Per regime or venue: levels monitored and the action for each kind.
+- **Concepts affected:** Position Limit
+- **Who answers:** Compliance
+<sub>question q28</sub>
+
 ## Priority 3: later
 
-### 23. Should prudential consequences of a change (qualifying CCP status, default fund and CCP exposure treatment, leverage) be part of change impact, and who owns that view?
+### 25. Should prudential consequences of a change (qualifying CCP status, default fund and CCP exposure treatment, leverage) be part of change impact, and who owns that view?
 
 - **Why it matters:** Decides whether capital impact is an impact type and whether qualifying status must be tracked here.
 - **How to answer:** Yes or no; owner role.
@@ -191,7 +207,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Business management with Finance
 <sub>question q22</sub>
 
-### 24. Under which reporting regimes does the firm report listed and OTC derivatives activity, and does it offer delegated reporting to clients?
+### 26. Under which reporting regimes does the firm report listed and OTC derivatives activity, and does it offer delegated reporting to clients?
 
 - **Why it matters:** Decides when Regulatory Report should leave the backlog and which reporting obligations to seed.
 - **How to answer:** Tick list of regimes; yes or no on delegated reporting.
@@ -199,7 +215,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Compliance (regulatory reporting)
 <sub>question q23</sub>
 
-### 25. Must the team handle official publications in languages other than English, and which version is authoritative for the firm?
+### 27. Must the team handle official publications in languages other than English, and which version is authoritative for the firm?
 
 - **Why it matters:** Affects Change Notice language and the evidence an agent cites.
 - **How to answer:** List of languages; authoritative-language rule.

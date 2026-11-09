@@ -154,3 +154,5 @@ These items are in the backlog. **Does a decision you need now depend on one of 
 
 - unwind, termination and amendment
 - trade identifiers
+- contractual cashflow schedule for OTC trades: calculation periods, fixings, coupons (external review M06)
+- service incident affecting several exception cases (external review M11)

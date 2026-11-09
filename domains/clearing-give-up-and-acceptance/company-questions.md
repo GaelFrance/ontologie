@@ -37,7 +37,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Joint question:** also covers what Service offering and market access needed to ask.
 <sub>question q06</sub>
 
-### 5. Which give-up statuses do your teams use day to day, and how do they map to: pending, accepted in full, accepted in part, rejected, lapsed, cancelled, reversed, unknown?
+### 5. Which give-up statuses do your teams use day to day, and how do they map to the receiving member's decision (pending, accepted in full, accepted in part, rejected, lapsed, unknown) and to the CCP registration status (not registered, registered in part, registered in full, reversed), plus cancelled?
 
 - **Why it matters:** Builds the mapping from native statuses to the harmonised values, kept in the internal layer.
 - **How to answer:** Two-column table: your status name, harmonised value (or 'no equivalent').
@@ -53,9 +53,33 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Legal
 <sub>question q20</sub>
 
+### 7. When a give-up line has been taken up but the CCP has not yet registered it, how long does that gap usually last at each CCP, and do your internal records show the line as accepted or as complete meanwhile?
+
+- **Why it matters:** The ontology keeps the receiving member's decision and the CCP registration as two statuses (decision 5); agents must know when they diverge and which one internal screens show.
+- **How to answer:** Per CCP: usual delay between take-up and registration; status shown internally during that gap.
+- **Concepts affected:** Give-up Line, Take-up, Give-up Registration
+- **Who answers:** ETD post-trade operations lead
+<sub>question q23</sub>
+
+### 8. When a CCP reverses or corrects a give-up registration, how does your firm learn of it, and which record is then treated as current?
+
+- **Why it matters:** The registered quantity counts only valid CCP records, net of reversals and corrections; agents must not count a corrected registration twice.
+- **How to answer:** Per CCP: how reversals and corrections reach you; which record wins; how often it happens.
+- **Concepts affected:** Give-up Line, Give-up Registration
+- **Who answers:** ETD post-trade operations lead
+<sub>question q24</sub>
+
+### 9. When only part of a give-up line is taken up, what happens to the remaining quantity: does it stay with the giving member, is a new line sent, or is it handled as a break?
+
+- **Why it matters:** Fixes the values of the remaining-quantity disposition on the give-up line.
+- **How to answer:** Per CCP or per giving side: the usual handling and who decides it.
+- **Concepts affected:** Give-up Line, Giving Clearing Member
+- **Who answers:** ETD post-trade operations lead
+<sub>question q25</sub>
+
 ## Priority 2: needed before go-live
 
-### 7. Does your firm ever accept only part of a give-up line, and under what conditions?
+### 10. Does your firm ever accept only part of a give-up line, and under what conditions?
 
 - **Why it matters:** Decides whether 'accepted in part' is a live value for the firm and how partial completion is reported.
 - **How to answer:** Yes or no per CCP; typical conditions.
@@ -63,7 +87,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** ETD post-trade operations lead
 <sub>question q09</sub>
 
-### 8. Which reasons does your firm record when it rejects a give-in or a clearing submission, and are they standardised across markets?
+### 11. Which reasons does your firm record when it rejects a give-in or a clearing submission, and are they standardised across markets?
 
 - **Why it matters:** Seeds the firm's mapping to the Give-up Rejection Reason values and supports failure analysis.
 - **How to answer:** List of reasons in use; whether one list or per market.
@@ -71,7 +95,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** ETD post-trade operations lead
 <sub>question q10</sub>
 
-### 9. As giving side, when a give-up is rejected or lapses, what does your firm normally do: re-submit, late give-up, position transfer, close-out with cost recovery, or keep the position for the client?
+### 12. As giving side, when a give-up is rejected or lapses, what does your firm normally do: re-submit, late give-up, position transfer, close-out with cost recovery, or keep the position for the client?
 
 - **Why it matters:** Describes the firm's resolution paths after failure, which an evaluation question asks about, without putting firm practice in definitions.
 - **How to answer:** Ranked list of paths with the role that decides.
@@ -79,7 +103,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** ETD Clearing product owner
 <sub>question q12</sub>
 
-### 10. As receiving side, what does your firm do with a give-in it cannot accept by the deadline: reject explicitly, let it lapse, or take it up and correct later?
+### 13. As receiving side, what does your firm do with a give-in it cannot accept by the deadline: reject explicitly, let it lapse, or take it up and correct later?
 
 - **Why it matters:** Tells agents whether a lapse at the firm is a choice or an accident, and how status should be read.
 - **How to answer:** Choice per situation (no agreement, limit breach, unknown account).
@@ -87,7 +111,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** ETD post-trade operations lead
 <sub>question q13</sub>
 
-### 11. Does your firm sign give-up agreements on the industry standard form, on bespoke terms, or both, and are they managed on an electronic agreement platform?
+### 14. Does your firm sign give-up agreements on the industry standard form, on bespoke terms, or both, and are they managed on an electronic agreement platform?
 
 - **Why it matters:** Tells whether Give-up Agreement terms can be read from a standard template and how agreement coverage can be checked.
 - **How to answer:** Share standard versus bespoke; platform used (yes or no, no names needed).
@@ -95,7 +119,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Legal
 <sub>question q14</sub>
 
-### 12. Do your give-up agreements usually set acceptance limits, and do they say who bears a trade the clearing broker does not take up?
+### 15. Do your give-up agreements usually set acceptance limits, and do they say who bears a trade the clearing broker does not take up?
 
 - **Why it matters:** Checks the proposed clarification that the agreement permits but does not oblige acceptance, and how responsibility is allocated.
 - **How to answer:** Yes, no or varies, for each of: limits, responsibility for trades not taken up.
@@ -103,7 +127,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Legal
 <sub>question q15</sub>
 
-### 13. When trades are average-priced, are give-ups made at the average price through a venue or CCP facility, and does this vary by CCP? (Who performs the averaging is asked in the execution questions.)
+### 16. When trades are average-priced, are give-ups made at the average price through a venue or CCP facility, and does this vary by CCP? (Who performs the averaging is asked in the execution questions.)
 
 - **Why it matters:** Tells agents which records a give-up concerns when averaging is involved (an evaluation question).
 - **How to answer:** Per CCP: facility, broker, both.
@@ -111,7 +135,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** ETD post-trade operations lead
 <sub>question q16</sub>
 
-### 14. For OTC trades cleared at LCH SwapClear or other OTC CCPs, does your firm act as clearing broker, executing dealer, or both, and how is its consent to a clearing submission given?
+### 17. For OTC trades cleared at LCH SwapClear or other OTC CCPs, does your firm act as clearing broker, executing dealer, or both, and how is its consent to a clearing submission given?
 
 - **Why it matters:** Fixes the OTC roles the ontology must support and the values of Submission Acceptance.
 - **How to answer:** Per CCP: roles; consent manual, automatic within limit, or mixed.
@@ -119,7 +143,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** OTC Clearing product owner
 <sub>question q18</sub>
 
-### 15. Under the principal-to-principal model, does your firm keep the client back-to-back trade as its own record with its own identifier, separate from the CCP-facing trade?
+### 18. Under the principal-to-principal model, does your firm keep the client back-to-back trade as its own record with its own identifier, separate from the CCP-facing trade?
 
 - **Why it matters:** Decides whether agents can answer questions at the member-client tier or only at the CCP-facing tier.
 - **How to answer:** Yes or no per regime; how the two are linked.
@@ -127,7 +151,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** OTC Clearing product owner
 <sub>question q21</sub>
 
-### 16. In markets where you clear through another clearing member, do you still accept give-ins or clearing submissions as clearing broker for your clients?
+### 19. In markets where you clear through another clearing member, do you still accept give-ins or clearing submissions as clearing broker for your clients?
 
 - **Why it matters:** Tells whether the receiving clearing member and the clearing broker can differ for the firm, which affects who decides acceptance.
 - **How to answer:** Per market: yes or no; the receiving member's relationship to the firm.
@@ -137,7 +161,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 
 ## Priority 3: later
 
-### 17. Does your firm also perform OTC or FX prime-brokerage 'give-ups', and are they handled by the same teams or systems as listed give-ups?
+### 20. Does your firm also perform OTC or FX prime-brokerage 'give-ups', and are they handled by the same teams or systems as listed give-ups?
 
 - **Why it matters:** Prevents agents from mixing prime-brokerage give-up with the listed process; decides whether a separate concept is needed later.
 - **How to answer:** Yes or no; same team or different team.

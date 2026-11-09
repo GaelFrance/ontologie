@@ -123,3 +123,4 @@ Also touching this domain, answered elsewhere:
 These items are in the backlog. **Does a decision you need now depend on one of them?**
 
 - margin components
+- funding requirement: liquidity need by entity, currency and date from CCP calls and client receipts (external review M09)
