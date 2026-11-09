@@ -46,7 +46,7 @@ On resolution, retain the original issue and add decision, affected concept IDs,
 
 ## Proposed answers pending owner decision
 
-From the [2026-11 expert review](reviews/2026-11-expert-review/ARBITRATION.md); review numbers in brackets. Public references marked "to verify" must be checked against the current text before adoption. "Firm decision" names what only the business can settle; see [open questions](open-questions-for-owner.md).
+From the 2026-11 expert review; review numbers in brackets. Public references marked "to verify" must be checked against the current text before adoption. "Firm decision" names what only the business can settle; see [open questions](open-questions-for-owner.md).
 
 ### LD-A0001 Execution fee
 Three charges, separated by creditor and service: the client execution charge (LD-C0033); executing brokerage on given-up executions (LD-C0035); the venue transaction fee (LD-C0036), whose debtor is set by venue or CCP rules. "Execution fee" is an ambiguous alias of all three. Confidence high. Firm decision: all-in versus fees-plus client pricing. [01, 05]

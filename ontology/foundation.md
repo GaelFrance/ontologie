@@ -2,9 +2,9 @@
 
 Status: Draft for all entries (LD-C0001 to LD-C0230). Type assignments and definitions are proposals.
 
-This catalogue is the single index of concept IDs: one row per ID, including later additions and any future deprecations. It does not claim to complete the [full concept template](../templates/concept-template.md). IDs are stable across future renaming, relocation and format migration. Common means shared stewardship, not exclusive domain use.
+This catalogue is the single index of concept IDs: one row per ID, including later additions and any future deprecations. It does not claim to complete the full concept record described in the [modelling guidelines](../docs/modelling-guidelines.md#authoring). IDs are stable across future renaming, relocation and format migration. Common means shared stewardship, not exclusive domain use.
 
-Definitions changed by the 2026-11 expert review are listed with their rationale in the [change log](../CHANGELOG.md) and the [arbitration record](../governance/reviews/2026-11-expert-review/ARBITRATION.md). Aliases, specialisations, usage notes, French labels and standard alignments are kept in [concept annotations](concept-annotations.md) so that this table keeps its five-column layout.
+Definitions changed by the 2026-11 expert review are listed with their rationale in the [change log](../CHANGELOG.md). Aliases, specialisations, usage notes, French labels and standard alignments are kept in [concept annotations](concept-annotations.md) so that this table keeps its five-column layout.
 
 ## Phase 1 foundation (LD-C0001 to LD-C0050)
 
@@ -63,7 +63,7 @@ Definitions changed by the 2026-11 expert review are listed with their rationale
 
 ## Additions from the 2026-11 expert review (LD-C0051 to LD-C0074)
 
-All Draft and priority P1 for the pilot use cases (change impact, market onboarding, give-up and clearing acceptance) or the management revenue priority. Source reviews and decisions: [arbitration record](../governance/reviews/2026-11-expert-review/ARBITRATION.md).
+All Draft and priority P1 for the pilot use cases (change impact, market onboarding, give-up and clearing acceptance) or the management revenue priority. Decisions: [decision log](../governance/decision-log.md).
 
 | ID | Canonical English name | Owning module | Proposed type | Working business definition |
 |---|---|---|---|---|
@@ -112,11 +112,11 @@ Do not infer that these categories are mutually exclusive or that fee categories
 
 The absence of domain-owned ETD/OTC entries here does not exclude those domains: they initially reuse shared clearing concepts. Domain-specific acceptance, lifecycle and legal rules require later specialisation.
 
-Currencies, units and date roles are required reference vocabularies; Business Calendar (LD-C0066) is now a concept because circulars change calendars and cut-offs are expressed against them. Compression, porting, position transfer, default fund, expiry, exercise, assignment, reporting, connectivity and clearing submission remain in the roadmap; their status is tracked in the [review backlog](../governance/reviews/2026-11-expert-review/ARBITRATION.md#6-backlog). No additional concept IDs are implied by this list.
+Currencies, units and date roles are required reference vocabularies; Business Calendar (LD-C0066) is now a concept because circulars change calendars and cut-offs are expressed against them. Compression, porting, position transfer, default fund, expiry, exercise, assignment, reporting, connectivity and clearing submission remain in the roadmap; several have since been added as level-2 concepts, and what is still missing is tracked per domain in [review domains](../governance/review-domains.md) ("Not yet in the catalogue"). No additional concept IDs are implied by this list.
 
 ## Level 2 (2026-11 domain review)
 
-Concepts one level below the foundation, proposed by the ten domain experts and consolidated by the supervisor on 2026-11-01 ([report](../governance/reviews/2026-11-level2-domain-review/SUPERVISION.md)). Level 1 marks a missing foundation-level concept added by that review. All Draft.
+Concepts one level below the foundation, proposed by the ten domain experts and consolidated by the supervisor on 2026-11-01. Level 1 marks a missing foundation-level concept added by that review. All Draft.
 
 | ID | Canonical English name | Owning module | Proposed type | Working business definition | Level | Domain |
 |---|---|---|---|---|---|---|

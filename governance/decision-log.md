@@ -1,10 +1,24 @@
 # Decision log
 
-Status: Record of business-owner decisions after the [Phase 1 review](phase-1-review.md). A decision narrows scope or modelling direction; it does not approve individual concept definitions, which remain Draft.
+Status: Record of business-owner decisions. A decision narrows scope or modelling direction; it does not approve individual concept definitions, which remain Draft. The detailed review reports behind these decisions were removed on 2026-11-09 and remain in the repository history.
+
+## Sponsor decision — 2026-09-20 (Phase 1 review)
+
+Evidence: the sponsor answered the seven review points in the project conversation. This approves the architecture and development direction, not individual definitions.
+
+| Point | Decision | Consequence |
+|---|---|---|
+| 1. Scope and architecture | Approved | Shared core plus Listed Execution, ETD Clearing and OTC Clearing modules. |
+| 2. Foundation and sequence | Approved | The first 50 concepts are a provisional foundation; develop Common, Execution, ETD Clearing, then OTC Clearing. |
+| 3. Client | Approved | Start with the contractual service-recipient role; distinguish legal entity, commercial group and beneficial owner. |
+| 4. Revenue perspective | Management focus | Prioritise what the activity earns and what a client brings; accounting revenue is not the current priority. Revenue and contribution after costs stay distinct. |
+| 5. Commission and Transaction | Deferred | Both stay Draft; firm-specific meanings unresolved. |
+| 6. Relationships | Approach approved | Constraints refined by context; no universal fill-to-trade cardinality. |
+| 7. Governance | Approach approved | Sponsor arbitrates; Operations, Finance, Risk and Legal review their subjects. |
 
 ## Sponsor answers — 2026-11-01
 
-Evidence: sponsor answer in the project conversation, 2026-11-01, in reply to the execution reviewer's owner questions in the [2026-11 expert review](reviews/2026-11-expert-review/01-execution.md) (section 7, questions 1, 3, 4 and 8).
+Evidence: sponsor answer in the project conversation, 2026-11-01, in reply to the execution reviewer's owner questions in the 2026-11 expert review (execution review, questions 1, 3, 4 and 8).
 
 | Point | Decision | Consequence in the ontology | Affected IDs |
 |---|---|---|---|
@@ -84,7 +98,7 @@ Apart from LD-A0010 (decision 5), these answers do not resolve any ambiguity ent
 
 ## Sponsor decision — 2026-11-01 (level-2 domain review)
 
-Evidence: sponsor answer in the project conversation, 2026-11-01 ("accept everything, merge and release"), on the points listed in [open questions](open-questions-for-owner.md) (level-2 section) and the [supervision report](reviews/2026-11-level2-domain-review/SUPERVISION.md).
+Evidence: sponsor answer in the project conversation, 2026-11-01 ("accept everything, merge and release"), on the points listed in [open questions](open-questions-for-owner.md) (level-2 section) and the level-2 supervision report.
 
 | Point | Decision | Consequence in the ontology | Affected IDs |
 |---|---|---|---|

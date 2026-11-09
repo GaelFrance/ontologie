@@ -55,6 +55,47 @@ Record debtor, creditor and service for a charge. Record payer/payee for a cash 
 
 ## Authoring
 
-Use the [concept template](../templates/concept-template.md). Preserve all fields; write `Not applicable — reason` or `To validate — question` rather than silently omitting unresolved information. The catalogue deliberately contains short definitions only; full template completion belongs to Phase 2.
+The catalogue deliberately holds short definitions; the other facts about a concept live in the annotations and are shown on the generated concept cards. A complete concept record covers these fields (key names in backticks are fixed for tooling): ID; canonical English name; business definition; owning and applicable domains; concept type; aliases (`aliases`, marked exact, contextual or ambiguous with scope); abbreviations; parents (`parents`, justified is_a); identity criteria and identifier schemes (`identity`); temporal pattern (`temporal_pattern`); required context (`required_context`); resolution (`resolution`); relationships; business rules; calculation (or Not applicable; never invented); unit and currency; sign convention and observing party; examples (synthetic) and counterexamples; ambiguities; sensitivity; owner; status; standard alignments (`alignments`, `verified: false` until checked); competency questions served; sources and decisions; version and effective period; validation questions. Write `Not applicable — reason` or `To validate — question` rather than silently omitting a field.
 
 Keep the registers machine-readable: one row per ID in the catalogue, no `|` inside a table cell, new columns appended only after checking how the hub reader parses that table, and temporary IDs (`NEW-…`) never in a register. Relationship endpoints use concept IDs only; a union of targets is written `LD-Cnnnn / LD-Cnnnn` and is an explicit declared range. Tagging a document with a concept ID is an annotation, not an instance relationship.
+
+## Classification axes
+
+Detailed taxonomies are Phase 3 work. Use several axes rather than one artificial tree; separate is_a specialisations from contextual categories and overlapping facets; assume no disjointness or exhaustiveness without review. Cleared is not exchange-traded, and regulatory "OTC" is not off-venue (LD-A0032). High-touch or low-touch describes a handling channel, not an asset class or venue. A charge's classification does not decide its accounting recognition. Named markets, entities and currencies are instances, not subclasses.
+
+| Taxonomy | Proposed axes |
+|---|---|
+| Participants | Party type; service role; contractual role; membership category; client segment |
+| Products | Asset class; derivative family; contractual form; trading mode; clearing eligibility; regulatory product class |
+| Orders, executions, trades | Instruction type; order handling channel (LD-C0061); execution method; trading capacity; order type; time in force; strategy; event; lifecycle state; clearing tier |
+| Fees | Service; service nature; chargeable event; debtor; creditor; collector; beneficiary; tariff basis; pass-through treatment; amount certainty; billing stage; recurrence; incentive programme |
+| Accounts | Function; maintaining party; holder; recording level; CCP account type; segregation regime |
+| Positions | Scope; gross or net; direction; status; as-of basis |
+| Margin | Type; component; tier (provider and taker); risk scope; run type; VM treatment; margining basis; calculation and call frequency |
+| Collateral | Asset class; currency; cash or non-cash; legal form; eligibility; valuation basis; mobilisation state |
+| Settlement | Cash or physical; obligation; method; due date; status |
+| Post-trade lifecycle | Event; transition; economic effect; legal effect; interposition mechanism |
+| Regulatory | Jurisdiction; regime; obligation; responsible role; attachment level; classification basis; date role |
+| Access | Access model; scope (venue or clearing service); intermediary; status |
+| Costs | Cost category |
+
+Draft seed values (vocabulary values, not concepts, no IDs); value lists carried by a single concept are in the [concept annotations](../ontology/concept-annotations.md#values).
+
+| Vocabulary | Seed values |
+|---|---|
+| Order handling channel (values of LD-C0061) | care; broker algorithm; direct market access; sponsored access |
+| Execution method | matching on a venue (order book or request for quote); registration on a venue of a privately negotiated trade (block trade, exchange for related position, other venue-defined types); bilateral off-venue |
+| Trading capacity | agency; principal; riskless principal (alignment with transaction-reporting capacity values to verify) |
+| Clearing tier | pre-clearing; CCP–member house; CCP–member client account; member–client; client–indirect client; uncleared bilateral |
+| Interposition mechanism | novation; open offer; other |
+| Access model | direct membership (by category); through a third-party member; direct electronic access; client clearing; indirect clearing; sponsored or direct-client model |
+| Client clearing legal model | principal-to-principal; agency or guarantee; indirect chain |
+| Margin component | base initial margin; add-ons; premium or net liquidation value margin; variation margin |
+| Run type | scheduled end-of-day; scheduled intraday; ad hoc |
+| VM treatment | settled-to-market; collateralised-to-market; not applicable |
+| Collateral legal form | title transfer; security interest |
+| Fee chargeable event | execution; give-up; transfer; exercise or assignment; delivery; OTC registration or maintenance; compression; porting; periodic |
+| Fee amount certainty and billing stage | estimated, final; accrued, invoiced, disputed, adjusted, settled, written off |
+| Cost category | non-recharged venue and CCP fees; third-party brokerage; third-party clearing; connectivity and market data; funding and collateral; allocated shared cost |
+| Regulatory attachment level | legal entity; role assignment; account; trade or report; CCP, venue or clearing service |
+| Date role | trade date; CCP clearing date; value date; booking date; reporting date; last trading day; expiry; exercise deadline; first notice day; final settlement day; delivery day; publication; entry into force; application; phase-in; end of transition; as-of date |

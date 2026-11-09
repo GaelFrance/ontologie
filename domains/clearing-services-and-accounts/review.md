@@ -119,7 +119,7 @@ A proposed answer comes from the expert review; it is **not a decision** until t
 
 **To decide:** Valid time versus record time: valid now and latest non-superseded record, valid at a business date, or known by a timestamp.
 
-**Proposed answer:** Current = valid now and latest non-superseded record from the stated source; as of D = valid at business date D; as known at T = only records received by T. Every answer states source, as-of date and freshness. See the time convention in [modelling guidelines](../docs/modelling-guidelines.md). Confidence high. Firm decision: whether "as known at" history is needed. [07, 08, 06]
+**Proposed answer:** Current = valid now and latest non-superseded record from the stated source; as of D = valid at business date D; as known at T = only records received by T. Every answer states source, as-of date and freshness. See the time convention in [modelling guidelines](../../docs/modelling-guidelines.md). Confidence high. Firm decision: whether "as known at" history is needed. [07, 08, 06]
 
 <sub>reference LD-A0023</sub>
 

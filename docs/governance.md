@@ -1,46 +1,30 @@
-# Governance
+# Governance and contributing
 
 Status: Draft
 
-## Proposed responsibilities
+## Who decides
 
-| Responsibility | Suggested role |
-|---|---|
-| Scope and phase approval | Business / Product sponsor |
-| Execution meanings | Execution Product owner with Operations |
-| ETD Clearing meanings | ETD Clearing Product owner with Operations |
-| OTC Clearing meanings | OTC Clearing Product owner with Operations |
-| Fees, revenue, costs and recognition | Finance with relevant Product owner |
-| Margin, collateral and risk aggregation | Risk / Collateral subject-matter owner |
-| Legal effect and regulatory applicability | Legal / Compliance |
-| IDs, consistency, traceability and release process | Ontology Lead |
-
-These are suggested responsibilities, not assigned people or completed approvals.
+Domain owners approve meanings in their domain; the sponsor arbitrates across domains; the Ontology Lead maintains IDs, consistency, traceability and releases. Owners and reviewers per domain are in [review domains](../governance/review-domains.md); the full operating model (bodies, reviewer list, RACI, workflow) is in the [governance model proposal](../governance/governance-model-proposal.md), pending sponsor decision. Decisions are recorded with date and evidence in the [decision log](../governance/decision-log.md); questions only the business can answer are in [open questions](../governance/open-questions-for-owner.md). An ambiguity entry may carry a proposed answer but stays Open until a recorded decision resolves it.
 
 ## Review status
 
-- **Draft:** proposal, including unresolved issues.
-- **Reviewed:** designated reviewers have assessed the proposal; record findings and remaining conditions.
-- **Approved:** accountable business owner explicitly accepts the definition and scope; record approver, date and decision evidence.
+- **Draft:** proposal, including unresolved issues. Every concept is Draft today.
+- **Reviewed:** designated reviewers have assessed it; findings and remaining conditions recorded.
+- **Approved:** the accountable owner explicitly accepts the definition and scope; approver, date and evidence recorded.
 
-Technical checks, a Git commit or sponsor approval to create files do not constitute semantic approval. Deprecation is separate from review status and must identify replacements where relevant.
+A passing check, a Git commit or AI review work never constitutes semantic approval. Deprecation is separate from review status and names the replacement where relevant.
 
-## Changes and releases
+## Making a change
 
-Use a focused branch and reviewable change when a base branch exists. Include changed IDs, rationale, affected concepts, compatibility implications and business review needs. Do not silently change a meaning or reuse an identifier. Preserve published versions; breaking semantic changes require an explicit migration note. Establish formal version numbering when the first approved release is made.
+1. Name the concept, relationship or ambiguity ID affected, and the business problem and context.
+2. Check for an existing shared concept before adding one.
+3. Keep IDs stable: never reuse or renumber one. Do not silently change a meaning; a breaking change needs a migration note.
+4. Record sources and unresolved questions; do not invent approval.
+5. Edit the registers, then run `python3 tools/build_domain_views.py` (and `--check`) and, if firm questions changed, `python3 tools/build_question_workbooks.py`.
+6. Record the change in the [change log](../CHANGELOG.md) and get review from the relevant owner and the Ontology Lead.
 
-## Sensitivity
+Keep register tables parseable: no `|` inside a cell, no temporary `NEW-` IDs, columns appended only after checking the hub reader (see the [modelling guidelines](modelling-guidelines.md#authoring)).
 
-Concept definitions may be shareable while examples, internal pricing, client names, positions and source mappings are restricted. Use synthetic examples. Establish repository visibility and access policy before introducing confidential material. A sensitivity annotation is metadata, not enforcement of source-system permissions.
+## Content rules
 
-## Decisions and open questions
-
-Record business-owner decisions in the [decision log](../governance/decision-log.md) with date and evidence; keep questions that only the owner can answer in [open questions](../governance/open-questions-for-owner.md). An ambiguity entry may carry a proposed answer, but stays Open until a recorded decision resolves it.
-
-## Proposed operating model
-
-A governance model with bodies, a reviewer list, a RACI and the review workflow is proposed in [governance model proposal](../governance/governance-model-proposal.md), pending sponsor decision.
-
-## Phase gate
-
-The sponsor approved the Phase 1 foundation on 2026-09-20; see the [decision record](../governance/phase-1-review.md). Phase 2 may develop the concepts in the agreed order. This does not approve individual definitions, metric formulas, detailed taxonomies, resolved query demonstrations or physical mappings. Preserve subsequent phase gates.
+English only. Business meanings only: no firm-specific facts, client names, internal system names, internal pricing, positions or source mappings; examples are synthetic. Answers to the questions for our firm stay in a copy kept inside the firm. A sensitivity annotation is metadata, not enforcement of source-system permissions.
