@@ -11,7 +11,7 @@ The shared business vocabulary for **listed derivatives execution, ETD clearing 
 | Understand a business area | **[Domains](domains/README.md)**: one folder per area, starting with an overview in plain words |
 | Look up a word | **[Glossary](glossary.md)**: every concept A to Z, plus the informal words people use |
 | Review definitions as an owner or reviewer | The **review sheet** in your domain's folder |
-| Explain how our firm works | The **questions for our firm** in each domain's folder (answers stay outside this repository) |
+| Explain how our firm works | The **questions for our firm** in each domain's folder (answers are recorded in the domain's expert workbook) |
 | See what was decided | [Decision log](governance/decision-log.md) and [open questions for the sponsor](governance/open-questions-for-owner.md) |
 
 ## The ten domains
@@ -53,7 +53,7 @@ The registers are the single source of truth, maintained by the Ontology Lead; r
 
 ## Rules that always apply
 
-- **Business meanings only.** No firm-specific facts, client names, internal system names or data. How our firm works is captured through the questions for our firm, and the answers live in the internal workspace.
+- **Business meanings only.** No firm-specific facts, client names, internal system names or data. How our firm works is captured through the questions for our firm, and the answers are recorded in each domain's expert workbook; definitions stay generic.
 - **Phase gates.** Phase 2 (concepts) is authorised. Metric formulas, detailed taxonomies, links to source systems and worked question-to-answer demonstrations come in later phases.
 - **Markdown is the reference.** Machine-readable exports are generated, never edited by hand. English only.
 - **Governance.** Domain owners approve meanings in their domain; the sponsor arbitrates across domains; the Ontology Lead maintains the registers. Nothing is approved yet: every definition is Draft.

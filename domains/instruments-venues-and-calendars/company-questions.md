@@ -1,6 +1,6 @@
 # Instruments, venues and calendars: questions for our firm
 
-These questions capture how **our firm** works in this domain, so the ontology can be tailored to it. The answers are firm-specific: record them in the internal workspace, **never in this repository**. Ask them in a meeting with the people named; several questions are shared with other domains and are best answered in a joint session.
+These questions capture how **our firm** works in this domain, so the ontology can be tailored to it. Record the answers in this domain's [expert workbook](questions-for-experts.xlsx) in this repository; the Ontology Lead turns them into changes, and definitions stay generic. Ask them in a meeting with the people named; several questions are shared with other domains and are best answered in a joint session.
 
 ## Priority 1: needed for the pilot agents
 
@@ -130,8 +130,8 @@ These questions capture how **our firm** works in this domain, so the ontology c
 
 ### 16. What do your teams mean when they say 'product', 'contract', 'instrument' and 'exchange' in day-to-day work? Give a typical sentence for each from sales, operations and finance.
 
-- **Why it matters:** Captures firm usage of ambiguous words so that agents ask the right clarifying question; answers stay in the internal layer.
-- **How to answer:** Short sentences per team, internal terms allowed in the internal reply only.
+- **Why it matters:** Captures firm usage of ambiguous words so that agents ask the right clarifying question; answers are recorded with the other answers.
+- **How to answer:** Short sentences per team, internal terms allowed.
 - **Concepts affected:** Product Family, Contract Specification, Instrument, Trading Venue
 - **Who answers:** Reference & Client Data lead
 <sub>question q22</sub>

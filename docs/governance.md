@@ -23,8 +23,10 @@ A passing check, a Git commit or AI review work never constitutes semantic appro
 5. Edit the registers, then run `python3 tools/build_domain_views.py` (and `--check`) and, if firm questions changed, `python3 tools/build_question_workbooks.py`.
 6. Record the change in the [change log](../CHANGELOG.md) and get review from the relevant owner and the Ontology Lead.
 
+A pull request states the business change (problem, affected IDs, intended meanings), its scope and evidence (domain or context, sources, unresolved questions, compatibility) and confirms: IDs and local references checked; no unintended concept duplication or alias equivalence; no invented source mapping; phase boundary respected; required reviewers and approval status identified. A checked list does not by itself approve business meanings.
+
 Keep register tables parseable: no `|` inside a cell, no temporary `NEW-` IDs, columns appended only after checking the tools that parse the registers (see the [modelling guidelines](modelling-guidelines.md#authoring)).
 
 ## Content rules
 
-English only. Business meanings only: no firm-specific facts, client names, internal system names, internal pricing, positions or source mappings; examples are synthetic. Answers to the questions for our firm stay in a copy kept inside the firm. A sensitivity annotation is metadata, not enforcement of source-system permissions.
+English only. Business meanings only: no firm-specific facts, client names, internal system names, internal pricing, positions or source mappings; examples are synthetic. Answers to the questions for our firm are recorded in each domain's expert workbook in this repository; they inform the definitions, which stay generic. A sensitivity annotation is metadata, not enforcement of source-system permissions.

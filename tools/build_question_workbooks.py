@@ -5,8 +5,8 @@ domain pages: the questions for our firm (company-questions.md), the questions
 put to each reviewer role and the open questions on meaning
 (governance/review-domains.md, governance/ambiguity-register.md).
 
-The workbooks in the repository stay blank. Answers are firm-specific: they are
-written in a copy kept inside the firm and never committed.
+Answers are recorded in the workbooks in this repository. Regenerating a workbook
+rebuilds it blank, so carry recorded answers over before running this script.
 
 Usage: python3 tools/build_question_workbooks.py   (needs openpyxl)
 """
@@ -152,8 +152,8 @@ def build(ctx, dom):
     section("How to use this workbook")
     line("Purpose", "Ask the domain's experts how our firm works, so the ontology can be tailored to it. "
          "Start with priority 1: those answers are needed for the pilot agents.")
-    line("Keep it inside the firm", "This file in the repository stays blank. Save a copy inside the firm before "
-         "filling it in. Answers are firm-specific: they go to the internal records, never into the repository.")
+    line("Where answers go", "Answers are recorded in this file, in the repository. The Ontology Lead turns them "
+         "into changes; definitions stay generic.")
     line("Yellow cells", "Only the yellow cells are filled in. Everything else comes from the ontology.")
     line("Sheet 1", "Questions for our firm: answer, set a status, note any follow-up.")
     line("Sheet 2", "Questions put to each role during the review: notes from the session.")
@@ -167,7 +167,7 @@ def build(ctx, dom):
 
     # 1 Questions for our firm
     ws1 = wb.create_sheet("1 Questions for our firm")
-    title(ws1, "1. Questions for our firm", "Fill in a copy kept inside the firm, never the file in the repository.")
+    title(ws1, "1. Questions for our firm", "Answers are recorded in this file.")
     header(ws1, 4, [("#", 5), ("Priority", 8), ("Question", 55), ("Why it matters", 40), ("How to answer", 35),
                     ("Concepts affected", 25), ("Who answers", 22), ("Shared with other domains", 25),
                     ("Answer", 50), ("Status", 13), ("Follow-up", 30), ("Ref", 8)])
