@@ -6,6 +6,16 @@ Status: Draft
 
 Domain owners approve meanings in their domain; the sponsor arbitrates across domains; the Ontology Lead maintains IDs, consistency, traceability and releases. Owners and reviewers per domain are in [review domains](../governance/review-domains.md); the full operating model (bodies, reviewer list, RACI, workflow) is in the [governance model proposal](../governance/governance-model-proposal.md), pending sponsor decision. Decisions are recorded with date and evidence in the [decision log](../governance/decision-log.md); questions only the business can answer are in [open questions](../governance/open-questions-for-owner.md). An ambiguity entry may carry a proposed answer but stays Open until a recorded decision resolves it.
 
+## Who merges
+
+The repository has one main branch; every change reaches it through a pull request, after `python3 tools/build_domain_views.py --check` passes. `python3 tools/pr_scope.py` says who may merge a branch:
+
+- **Within one domain** (its workbook, its hand-written pages, concepts whose primary domain it is, their relationships and annotations): the **domain owner** approves and merges. If a concept changed is also shown in other domains, their owners comment first.
+- **Across domains**: each owner concerned approves; the **Ontology Lead** merges.
+- **Ontology Lead only**: tools, agent setup (`AGENTS.md`, `.agents/`, `.opencode/`, `.roo*`), documentation, the domain classification (`governance/review-domains.md`, so every new concept), the decision log and the list of owners and experts.
+
+Merging a pull request accepts a Draft proposal into the ontology; it does not approve a meaning. Approval is recorded separately, as described below. If two branches took the same new ID, the branch merged second renumbers its own new IDs.
+
 ## Review status
 
 - **Draft:** proposal, including unresolved issues. Every concept is Draft today.

@@ -46,7 +46,8 @@ governance/           ambiguity register, review domains (owners, reviewers, bac
 docs/                 architecture, scope and principles; modelling guidelines;
                       governance and contributing
 tools/                build_domain_views.py, build_question_workbooks.py, read_answers.py,
-                      merge_answers.py, setup_computer.py, next_ids.py
+                      merge_answers.py, pr_scope.py, setup_computer.py,
+                      next_ids.py
 .agents/skills/       one expert skill per domain, for AI agents
 AGENTS.md             rules and procedures for AI coding agents (OpenCode, Roo Code);
                       see docs/working-with-ai-agents.md

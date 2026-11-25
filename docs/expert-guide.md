@@ -2,7 +2,7 @@
 
 Status: Draft, 2026-11-25
 
-You are one of the two or three experts of a business domain. You can ask the ontology questions, answer the questions for our firm in your domain's workbook, and propose changes to your domain. Nothing you write approves a meaning: the Ontology Lead turns answers and proposals into changes, and the domain owner approves them.
+You are one of the two or three experts of a business domain. You can ask the ontology questions, answer the questions for our firm in your domain's workbook, and propose changes to your domain. Your **domain owner** reviews and merges your pull requests when they stay within your domain; changes that touch other domains also need those owners and go to the Ontology Lead. Nothing you write approves a meaning.
 
 ## 1. Set up your computer (once, about 30 minutes)
 
@@ -48,7 +48,7 @@ Your domain's workbook is `domains/<your domain>/questions-for-experts.xlsx`. It
    git pull origin main
    git push -u origin answers-<your initials>-<date>
    ```
-4. **Open a pull request** in the repository service for the Ontology Lead.
+4. **Open a pull request** in the repository service, with your domain owner as reviewer. The owner merges it.
 
 ### If Git reports a conflict on the workbook
 
@@ -65,7 +65,7 @@ On a new branch (`git checkout -b proposal-<topic>`):
 
 - `/review-domain <your domain>` for an expert review of the domain, or `/read-answers <your domain>` to see what the answers suggest changing.
 - `/apply-change …` with the change you propose. Change only concepts of your own domain; for others, write a comment in the pull request.
-- `/check`, then commit, push and open a pull request. The Ontology Lead reviews and merges.
+- `/check`, then commit, push and run `python3 tools/pr_scope.py`: it says whether your domain owner can merge or the Ontology Lead must. Open the pull request with that reviewer.
 
 ## 5. Good to know
 

@@ -12,7 +12,8 @@ This page explains how to maintain this repository with an AI coding agent: **Op
 | `.agents/skills/<domain>-expert/SKILL.md` | OpenCode, Roo Code | One expert per domain: scope, distinctions, venue and regime differences, pitfalls, review checklist |
 | `.opencode/agents/` | OpenCode | Three reviewers that run in their own context: `domain-reviewer`, `cross-checker`, `review-supervisor` |
 | `.opencode/commands/` | OpenCode | Ready-made tasks, typed as `/name` (table below) |
-| `.roomodes`, `.roo/rules/` | Roo Code | Three modes, "Ontology Lead", "Domain expert" and "Domain reviewer", and a rule that points to `AGENTS.md` |
+| `.roomodes`, `.roo/rules/`, `.roo/commands/` | Roo Code | Three modes ("Ontology Lead", "Domain expert", "Domain reviewer"), a rule that points to `AGENTS.md`, and the same slash commands as OpenCode, each switching to the right mode |
+| `tools/pr_scope.py` | Both | Before a merge: which domains a branch touches and who may merge it |
 | `tools/next_ids.py` | Both | Prints the next free concept, relationship and ambiguity IDs, so the agent never guesses one |
 | `tools/read_answers.py` | Both | Turns a domain's Excel workbook into a page the agent can read |
 | `tools/merge_answers.py`, `tools/setup_computer.py` | Git | Merge two versions of a shared workbook answer by answer; register that merge once per computer |
@@ -65,15 +66,31 @@ Review notes are written to `.review-notes/`, which is not committed. Decisions 
 
 Then review the diff yourself, commit on a branch and open the pull request in the firm's repository service. The agent should never push to the main branch.
 
+Roo Code has the same slash commands (`/ask`, `/review-domain`, `/cross-review`, `/apply-change`, `/read-answers`, `/prepare-answers`, `/check`, `/scope`); type the arguments after the command, as in OpenCode. Each command switches to the right mode by itself.
+
+## OpenCode or Roo Code?
+
+Both use the same model, the same rules (`AGENTS.md`), the same expert skills and the same tools, so the content they produce should be equivalent; the model matters far more than the tool. The differences are in daily use:
+
+| | OpenCode | Roo Code |
+|---|---|---|
+| Where | Terminal | VS Code side panel |
+| Best for | The Ontology Lead and anyone at ease with a terminal | Domain experts and owners: files, diffs and Git in one window, each edit shown for approval |
+| Cross-review | Reviewer subagents, each in its own context | The Orchestrator hands each domain to a subtask in the "Domain reviewer" mode |
+| Limiting what the agent may edit | By instructions in `AGENTS.md` | Also enforced per mode: the reviewer mode can only write review notes |
+| Cost in context | Lighter system prompt | Heavier system prompt; with a small context window, keep tasks shorter |
+
+A team can mix both: nothing in the repository depends on which one a person uses.
+
 ## Working with several experts
 
-Each domain has two or three experts, each on their own computer; their guide is [the guide for domain experts](expert-guide.md). As Ontology Lead:
+Each domain has one owner and two or three experts, each on their own computer; the experts' guide is [the guide for domain experts](expert-guide.md). Domain owners merge what stays within their domain, so the Ontology Lead is not a bottleneck (rules in [who merges](governance.md#who-merges)). As Ontology Lead:
 
-1. **Protect the main branch** in the repository service: changes only through pull requests, and only you can merge. Give the experts write access so they can push their own branches.
-2. **List the experts** in [`governance/experts.md`](../governance/experts.md) (initials, domain, role). Add the experts of a domain as reviewers of pull requests on that domain.
+1. **Protect the main branch** in the repository service: changes only through pull requests, at least one approval, and merge allowed for the domain owners and you. Give the experts write access so they can push their own branches. The service cannot check which domain a pull request touches, so owners run `python3 tools/pr_scope.py` (or `/scope` in OpenCode) before merging: it says whether they may merge or must pass the pull request to you.
+2. **List owners and experts** in [`governance/experts.md`](../governance/experts.md). Add the owner of each domain as default reviewer of pull requests on it.
 3. **Give each expert** the repository address, the Qwen settings and the expert guide. Each one runs `python3 tools/setup_computer.py` once after cloning, and so do you: it lets Git merge the shared workbooks answer by answer. The repository service's own merge button cannot do that, so a pull request on a workbook that changed meanwhile shows a conflict; the expert then runs `git pull origin main` on their branch, which merges the answers locally, and pushes again.
-4. **Merge answer pull requests quickly**, so that experts keep working on the latest workbook. Before merging, `/read-answers <domain>` on the branch shows what changed, answers without initials and cells marked CONFLICT.
-5. **Turn answers into changes** yourself: `/read-answers <domain>`, then `/apply-change` for what you accept.
+4. **Owners merge answer pull requests quickly**, so that experts keep working on the latest workbook. Before merging, `/read-answers <domain>` on the branch shows what changed, answers without initials and cells marked CONFLICT.
+5. **Owners turn answers into changes** in their domain: `/read-answers <domain>`, then `/apply-change` for what they accept; changes that cross domains come to you.
 
 ## Getting good results from a smaller model
 
