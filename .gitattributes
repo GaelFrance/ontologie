@@ -1,0 +1,4 @@
+# Expert workbooks are shared by the experts of a domain. Git cannot merge Excel
+# files, so they are merged answer by answer by tools/merge_answers.py once the
+# merge driver is registered on the computer (see docs/expert-guide.md).
+domains/*/questions-for-experts.xlsx binary merge=expert-answers

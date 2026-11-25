@@ -12,8 +12,10 @@ This page explains how to maintain this repository with an AI coding agent: **Op
 | `.agents/skills/<domain>-expert/SKILL.md` | OpenCode, Roo Code | One expert per domain: scope, distinctions, venue and regime differences, pitfalls, review checklist |
 | `.opencode/agents/` | OpenCode | Three reviewers that run in their own context: `domain-reviewer`, `cross-checker`, `review-supervisor` |
 | `.opencode/commands/` | OpenCode | Ready-made tasks, typed as `/name` (table below) |
-| `.roomodes`, `.roo/rules/` | Roo Code | Two modes, "Ontology Lead" and "Domain reviewer", and a rule that points to `AGENTS.md` |
+| `.roomodes`, `.roo/rules/` | Roo Code | Three modes, "Ontology Lead", "Domain expert" and "Domain reviewer", and a rule that points to `AGENTS.md` |
 | `tools/next_ids.py` | Both | Prints the next free concept, relationship and ambiguity IDs, so the agent never guesses one |
+| `tools/read_answers.py` | Both | Turns a domain's Excel workbook into a page the agent can read |
+| `tools/merge_answers.py`, `tools/setup_computer.py` | Git | Merge two versions of a shared workbook answer by answer; register that merge once per computer |
 
 Review notes are written to `.review-notes/`, which is not committed. Decisions go into the registers and the decision log once a person has taken them.
 
@@ -57,9 +59,21 @@ Review notes are written to `.review-notes/`, which is not committed. Decisions 
 | Cross-review (expert per domain, cross-check, supervisor) | `/cross-review execution clearing-give-up-and-acceptance` or `/cross-review all` | "Orchestrator" mode: "Cross-review execution and clearing-give-up-and-acceptance following AGENTS.md", which hands each domain to the "Domain reviewer" mode |
 | Apply what you decided | `/apply-change items 1, 3 and 4 of .review-notes/2026-11-26-decisions.md` | "Ontology Lead" mode, same sentence |
 | Add questions for the firm | `/new-firm-questions margin-and-collateral intraday calls` | "Ontology Lead" mode |
+| Read the experts' answers and see what they change | `/read-answers execution` | "Ontology Lead" mode: "Read the execution answers following AGENTS.md" |
+| Help an expert prepare answers (the expert types them in Excel) | `/prepare-answers execution questions 3 and 5` | "Domain expert" mode |
 | Rebuild and check | `/check` | "Ontology Lead" mode: "Run the checks" |
 
 Then review the diff yourself, commit on a branch and open the pull request in the firm's repository service. The agent should never push to the main branch.
+
+## Working with several experts
+
+Each domain has two or three experts, each on their own computer; their guide is [the guide for domain experts](expert-guide.md). As Ontology Lead:
+
+1. **Protect the main branch** in the repository service: changes only through pull requests, and only you can merge. Give the experts write access so they can push their own branches.
+2. **List the experts** in [`governance/experts.md`](../governance/experts.md) (initials, domain, role). Add the experts of a domain as reviewers of pull requests on that domain.
+3. **Give each expert** the repository address, the Qwen settings and the expert guide. Each one runs `python3 tools/setup_computer.py` once after cloning, and so do you: it lets Git merge the shared workbooks answer by answer. The repository service's own merge button cannot do that, so a pull request on a workbook that changed meanwhile shows a conflict; the expert then runs `git pull origin main` on their branch, which merges the answers locally, and pushes again.
+4. **Merge answer pull requests quickly**, so that experts keep working on the latest workbook. Before merging, `/read-answers <domain>` on the branch shows what changed, answers without initials and cells marked CONFLICT.
+5. **Turn answers into changes** yourself: `/read-answers <domain>`, then `/apply-change` for what you accept.
 
 ## Getting good results from a smaller model
 

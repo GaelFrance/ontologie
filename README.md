@@ -11,7 +11,7 @@ The shared business vocabulary for **listed derivatives execution, ETD clearing 
 | Understand a business area | **[Domains](domains/README.md)**: one folder per area, starting with an overview in plain words |
 | Look up a word | **[Glossary](glossary.md)**: every concept A to Z, plus the informal words people use |
 | Review definitions as an owner or reviewer | The **review sheet** in your domain's folder |
-| Explain how our firm works | The **questions for our firm** in each domain's folder (answers are recorded in the domain's expert workbook) |
+| Explain how our firm works | The **questions for our firm** in each domain's folder (answers are recorded in the domain's expert workbook; see the [guide for domain experts](docs/expert-guide.md)) |
 | See what was decided | [Decision log](governance/decision-log.md) and [open questions for the sponsor](governance/open-questions-for-owner.md) |
 
 ## The ten domains
@@ -45,7 +45,8 @@ governance/           ambiguity register, review domains (owners, reviewers, bac
                       decision log, open questions, governance model proposal
 docs/                 architecture, scope and principles; modelling guidelines;
                       governance and contributing
-tools/                build_domain_views.py, build_question_workbooks.py, next_ids.py
+tools/                build_domain_views.py, build_question_workbooks.py, read_answers.py,
+                      merge_answers.py, setup_computer.py, next_ids.py
 .agents/skills/       one expert skill per domain, for AI agents
 AGENTS.md             rules and procedures for AI coding agents (OpenCode, Roo Code);
                       see docs/working-with-ai-agents.md
