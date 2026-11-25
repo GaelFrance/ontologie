@@ -23,7 +23,7 @@ A passing check, a Git commit or AI review work never constitutes semantic appro
 5. Edit the registers, then run `python3 tools/build_domain_views.py` (and `--check`) and, if firm questions changed, `python3 tools/build_question_workbooks.py`.
 6. Record the change in the [change log](../CHANGELOG.md) and get review from the relevant owner and the Ontology Lead.
 
-Keep register tables parseable: no `|` inside a cell, no temporary `NEW-` IDs, columns appended only after checking the hub reader (see the [modelling guidelines](modelling-guidelines.md#authoring)).
+Keep register tables parseable: no `|` inside a cell, no temporary `NEW-` IDs, columns appended only after checking the tools that parse the registers (see the [modelling guidelines](modelling-guidelines.md#authoring)).
 
 ## Content rules
 

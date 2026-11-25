@@ -35,12 +35,6 @@ CANONICAL_IN_DOMAIN = {"overview.md", "company-questions.md"}
 GENERATED_IN_DOMAIN = {"README.md", "concepts.md", "review.md"}
 EMPTY = (None, "", "—", "-")
 STRUCTURE = {"part_of", "step_in", "state_of"}
-PILOTS = {"UC-001": "the change-impact use case", "UC-002": "the market-onboarding use case",
-          "UC-003": "the give-up use case", "UC-004": "the management-revenue use case",
-          "UC-005": "the strategic-intelligence use case", "UC-006": "the operational-status use case",
-          "AG-001": "the intelligence publisher agent", "AG-002": "the change-impact agent",
-          "AG-003": "the onboarding agent", "AG-004": "the give-up and clearing acceptance agent",
-          "AG-005": "the business-performance agent", "AG-006": "the operations agent"}
 
 
 # --------------------------------------------------------------------------- reading
@@ -241,8 +235,6 @@ class Ctx:
         # sentence ("linked by LD-R0080"): say which kind of link it is.
         text = re.sub(r"\s*\(LD-R\d{4}\)", "", text)
         text = re.sub(r"LD-R\d{4}", lambda m: f"a “{self.rel_words(m.group(0))}” link", text)
-        text = re.sub(r"\b(UC-00\d) / (AG-00\d)\b", lambda m: PILOTS[m.group(2)], text)
-        text = re.sub(r"\b(?:UC|AG)-00\d\b", lambda m: PILOTS.get(m.group(0), m.group(0)), text)
         return text
 
     def rel_words(self, rid):
