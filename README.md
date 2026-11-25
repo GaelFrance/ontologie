@@ -11,8 +11,10 @@ The shared business vocabulary for **listed derivatives execution, ETD clearing 
 | Understand a business area | **[Domains](domains/README.md)**: one folder per area, starting with an overview in plain words |
 | Look up a word | **[Glossary](glossary.md)**: every concept A to Z, plus the informal words people use |
 | Review definitions as an owner or reviewer | The **review sheet** in your domain's folder |
-| Explain how our firm works | The **questions for our firm** in each domain's folder (answers are recorded in the domain's expert workbook; see the [guide for domain experts](docs/expert-guide.md)) |
+| Explain how our firm works | The **questions for our firm** in each domain's folder (answers are recorded in the domain's expert workbook; see the [contributor guide](docs/contributor-guide.md)) |
 | See what was decided | [Decision log](governance/decision-log.md) and [open questions for the sponsor](governance/open-questions-for-owner.md) |
+| Contribute as an owner or expert | **[Contributor guide](docs/contributor-guide.md)**: what each role does, in OpenCode or VS Code with Roo Code |
+| Maintain the repository | [Architecture and maintenance guide](docs/maintenance-guide.md) and the [weekly reports](reports/weekly/) |
 
 ## The ten domains
 
@@ -46,8 +48,9 @@ governance/           ambiguity register, review domains (owners, reviewers, bac
 docs/                 architecture, scope and principles; modelling guidelines;
                       governance and contributing
 tools/                build_domain_views.py, build_question_workbooks.py, read_answers.py,
-                      merge_answers.py, pr_scope.py, setup_computer.py,
-                      next_ids.py
+                      merge_answers.py, pr_scope.py, weekly_report.py,
+                      setup_computer.py, next_ids.py
+reports/weekly/       weekly reports of the changes merged
 .agents/skills/       one expert skill per domain, for AI agents
 AGENTS.md             rules and procedures for AI coding agents (OpenCode, Roo Code);
                       see docs/working-with-ai-agents.md
@@ -65,4 +68,5 @@ The registers are the single source of truth, maintained by the Ontology Lead; r
 ## More
 
 - [Architecture, scope and principles](docs/architecture.md), [modelling guidelines](docs/modelling-guidelines.md), [governance and contributing](docs/governance.md)
+- [Contributor guide](docs/contributor-guide.md), [architecture and maintenance guide](docs/maintenance-guide.md), [working with AI agents](docs/working-with-ai-agents.md)
 - [Change log](CHANGELOG.md). Earlier review reports (2026-11 expert, classification and level-2 reviews) are in the repository history; their outcomes are in the registers and the decision log.

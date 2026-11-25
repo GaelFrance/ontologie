@@ -5,12 +5,14 @@ Compares the current branch with the main branch and lists:
 - the domains touched: through their folder, or through concept IDs on changed
   lines of the registers (the concept's primary domain; domains where it is
   "also shown" are listed for comment);
-- the files only the Ontology Lead changes (tools, agent setup, domain
-  classification, decision log, list of experts and owners, documentation).
+- shared files (tools, agent setup, domain classification, decision log, list
+  of owners and experts, documentation).
 
-Rule (docs/governance.md): if exactly one domain is touched and no Ontology Lead
-file, that domain's owner may merge; otherwise every listed owner approves and
-the Ontology Lead merges.
+Rule (docs/governance.md, "Who merges"): domain owners merge. If one domain is
+touched, its owner approves and merges; if several are, each owner concerned
+approves first and then any of them merges. Shared files (tools, agent setup,
+classification, documentation) are flagged so the weekly report shows them to
+the Ontology Lead.
 
 Usage: python3 tools/pr_scope.py [BASE]    BASE defaults to origin/main, then main
 """
@@ -53,21 +55,24 @@ def base_ref(argv):
     raise SystemExit("No base branch found; pass it, for example: python3 tools/pr_scope.py main")
 
 
-def main(argv):
-    os.chdir(ROOT)
-    base = base_ref(argv)
-    since = git("merge-base", base, "HEAD").strip()
-    files = [f for f in git("diff", "--name-only", since).splitlines() if f]
-    data = bdv.load()
-    primary, shown = {}, {}
-    owner = {}
+def domain_maps(data):
+    primary, shown, owner = {}, {}, {}
     for dom in data["domains"]:
         owner[dom["Page"]] = dom["Owner role"]
         for c in dom["primary"]:
             primary[c] = dom["Page"]
         for c in dom["shown"]:
             shown.setdefault(c, set()).add(dom["Page"])
+    return primary, shown, owner
 
+
+def classify(since, until=None, data=None):
+    """Sort the changes between two commits by domain.
+
+    Returns (files, touched {domain: set of where}, comment {domain}, lead [files], unknown [notes])."""
+    span = [since] + ([until] if until else [])
+    files = [f for f in git("diff", "--name-only", *span).splitlines() if f]
+    primary, shown, _ = domain_maps(data or bdv.load())
     touched, comment, lead, unknown = {}, set(), [], []
     for f in files:
         if f in ANYONE or GENERATED.match(f):
@@ -80,9 +85,8 @@ def main(argv):
             touched.setdefault(m.group(1), set()).add(f)
             continue
         if f in REGISTERS:
-            diff = git("diff", "--unified=0", since, "--", f)
             ids = set()
-            for line in diff.splitlines():
+            for line in git("diff", "--unified=0", *span, "--", f).splitlines():
                 if line[:1] in "+-" and not line.startswith(("+++", "---")):
                     ids |= set(re.findall(bdv.CID, line))
             for c in sorted(ids):
@@ -90,10 +94,19 @@ def main(argv):
                     touched.setdefault(primary[c], set()).add(f"{f} ({c})")
                     comment |= shown.get(c, set())
                 else:
-                    unknown.append(f"{f} ({c} has no primary domain yet)")
+                    unknown.append(f"{f} ({c}: new concept, no primary domain yet)")
             continue
         lead.append(f)
+    return files, touched, comment - set(touched), lead, unknown
 
+
+def main(argv):
+    os.chdir(ROOT)
+    base = base_ref(argv)
+    since = git("merge-base", base, "HEAD").strip()
+    data = bdv.load()
+    _, _, owner = domain_maps(data)
+    files, touched, comment, lead, unknown = classify(since, data=data)
     dup = duplicate_ids()
     print(f"Changes on this branch since {base}: {len(files)} file(s)\n")
     if dup:
@@ -105,23 +118,25 @@ def main(argv):
         print(f"Domain {page} (owner: {owner.get(page, 'unknown')}):")
         for w in sorted(where):
             print(f"  {w}")
-    comment -= set(touched)
     if comment:
         print("\nAlso shown in, owners to comment: " + ", ".join(sorted(comment)))
-    if lead or unknown:
-        print("\nOntology Lead files or decisions:")
-        for f in lead + unknown:
+    if unknown:
+        print("\nNew concepts (each needs a primary domain in governance/review-domains.md):")
+        for f in unknown:
+            print(f"  {f}")
+    if lead:
+        print("\nShared files (tools, agent setup, classification, documentation):")
+        for f in lead:
             print(f"  {f}")
     print()
-    if len(touched) == 1 and not lead and not unknown:
-        page = next(iter(touched))
-        extra = " after the owners listed for comment have commented" if comment else ""
-        print(f"Verdict: the owner of {page} may approve and merge{extra}.")
-    elif not touched and not lead and not unknown:
-        print("Verdict: only the change log changed; any domain owner may merge.")
+    if len(touched) <= 1 and not comment:
+        who = f"the owner of {next(iter(touched))}" if touched else "any domain owner"
+        print(f"Verdict: {who} may approve and merge.")
     else:
-        names = ", ".join(sorted(touched)) or "none"
-        print(f"Verdict: owners of {names} approve; the Ontology Lead merges.")
+        names = sorted(set(touched) | comment)
+        print(f"Verdict: the owners of {', '.join(names)} approve; then any of them merges.")
+    if lead:
+        print("Shared files changed: say so in the pull request; the weekly report lists them for the Ontology Lead.")
     return 1 if dup else 0
 
 

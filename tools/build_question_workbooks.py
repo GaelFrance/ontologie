@@ -15,7 +15,7 @@ answer by hand, or pass --force to drop it.
 Several experts share one workbook per domain and write their initials in the
 "Answered by" and "Expert" columns. Git cannot merge Excel files, so
 tools/merge_answers.py merges two versions answer by answer (see
-docs/expert-guide.md), and tools/read_answers.py turns a workbook into a page
+docs/contributor-guide.md), and tools/read_answers.py turns a workbook into a page
 that AI agents can read.
 
 Usage: python3 tools/build_question_workbooks.py [--force]   (needs openpyxl)
@@ -220,7 +220,7 @@ def build(ctx, dom, force=False):
     line("Several experts", "The two or three experts of the domain share this file. Write your initials in "
          "'Answered by' (sheet 1) or 'Expert' (sheet 3). If you disagree with an answer already there, add yours "
          "after it, starting with your initials, rather than replacing it. Get the latest version just before "
-         "you start and send yours back as soon as you finish (see the guide for domain experts).")
+         "you start and send yours back as soon as you finish (see the contributor guide).")
     line("Sheet 1", "Questions for our firm: answer, set a status, note any follow-up, add your initials.")
     line("Sheet 2", "Questions put to each role during the review: notes from the session.")
     line("Sheet 3", "Words with several meanings: does the expert agree with the proposed answer? If not, what is the rule in practice? Add your initials.")
