@@ -1,6 +1,6 @@
 # Post-trade operations: questions for our firm
 
-These questions capture how **our firm** works in this domain, so the ontology can be tailored to it. The answers are firm-specific: record them in the internal workspace, **never in this repository**. Ask them in a meeting with the people named; several questions are shared with other domains and are best answered in a joint session.
+These questions capture how **our firm** works in this domain, so the ontology can be tailored to it. Record the answers in this domain's [expert workbook](questions-for-experts.xlsx) in this repository; the Ontology Lead turns them into changes, and definitions stay generic. Ask them in a meeting with the people named; several questions are shared with other domains and are best answered in a joint session.
 
 ## Priority 1: needed for the pilot agents
 
