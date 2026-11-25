@@ -20,7 +20,7 @@ A passing check, a Git commit or AI review work never constitutes semantic appro
 2. Check for an existing shared concept before adding one.
 3. Keep IDs stable: never reuse or renumber one. Do not silently change a meaning; a breaking change needs a migration note.
 4. Record sources and unresolved questions; do not invent approval.
-5. Edit the registers, then run `python3 tools/build_domain_views.py` (and `--check`) and, if firm questions changed, `python3 tools/build_question_workbooks.py`.
+5. Edit the registers, then run `python3 tools/build_domain_views.py` (and `--check`) and, if firm questions changed, `python3 tools/build_question_workbooks.py` (it keeps the answers already entered). AI agents follow the same steps, written out in [`AGENTS.md`](../AGENTS.md); see [working with AI agents](working-with-ai-agents.md).
 6. Record the change in the [change log](../CHANGELOG.md) and get review from the relevant owner and the Ontology Lead.
 
 A pull request states the business change (problem, affected IDs, intended meanings), its scope and evidence (domain or context, sources, unresolved questions, compatibility) and confirms: IDs and local references checked; no unintended concept duplication or alias equivalence; no invented source mapping; phase boundary respected; required reviewers and approval status identified. A checked list does not by itself approve business meanings.

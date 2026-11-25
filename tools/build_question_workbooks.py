@@ -6,9 +6,13 @@ put to each reviewer role and the open questions on meaning
 (governance/review-domains.md, governance/ambiguity-register.md).
 
 Answers are recorded in the workbooks in this repository. Regenerating a workbook
-rebuilds it blank, so carry recorded answers over before running this script.
+carries over what experts entered (answer, status, follow-up, session notes,
+expert's view and comment), matched by question reference, or by question text
+when a question has no reference. If an entered answer no longer matches any
+question, the script stops and writes nothing, so no answer is lost; move that
+answer by hand, or pass --force to drop it.
 
-Usage: python3 tools/build_question_workbooks.py   (needs openpyxl)
+Usage: python3 tools/build_question_workbooks.py [--force]   (needs openpyxl)
 """
 import datetime
 import os
@@ -16,7 +20,7 @@ import re
 import sys
 import zipfile
 
-from openpyxl import Workbook
+from openpyxl import Workbook, load_workbook
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter
 from openpyxl.worksheet.datavalidation import DataValidation
@@ -90,6 +94,48 @@ def dropdown(ws, options, col, first, last, prompt):
     dv.add(f"{col}{first}:{col}{last}")
 
 
+# Sheet title -> (columns forming the key, input columns carried over), 1-based.
+CARRY = {
+    "1 Questions for our firm": ((12, 3), (9, 10, 11)),
+    "2 Questions by role": ((2, 3), (4,)),
+    "3 Meaning to confirm": ((7,), (5, 6)),
+}
+
+
+def row_key(sheet, vals):
+    """Key of a row: the reference when there is one, otherwise the other key columns."""
+    cols = CARRY[sheet][0]
+    first = vals[cols[0] - 1]
+    if first and sheet != "2 Questions by role":
+        return (str(first).strip(),)
+    return tuple(str(vals[c - 1] or "").strip() for c in cols)
+
+
+def previous_entries(path):
+    """Values experts entered in an existing workbook: {sheet: {key: {col: value}}}."""
+    found = {}
+    if not os.path.exists(path):
+        return found
+    wb = load_workbook(path)
+    for sheet, (_, inputs) in CARRY.items():
+        if sheet not in wb.sheetnames:
+            continue
+        for row in wb[sheet].iter_rows(min_row=5, values_only=True):
+            vals = list(row) + [None] * 12
+            entered = {c: vals[c - 1] for c in inputs if vals[c - 1] not in (None, "")}
+            if entered:
+                found.setdefault(sheet, {})[row_key(sheet, vals)] = entered
+    return found
+
+
+def carry_over(sheet, rows, old):
+    """Put previously entered values back into the new rows; remove them from old."""
+    for vals in rows:
+        entered = old.get(sheet, {}).pop(row_key(sheet, vals), None)
+        for col, value in (entered or {}).items():
+            vals[col - 1] = value
+
+
 def firm_questions(page):
     text = bdv.read(f"domains/{page}/company-questions.md")
     prio, out = None, []
@@ -110,8 +156,10 @@ def firm_questions(page):
     return out
 
 
-def build(ctx, dom):
+def build(ctx, dom, force=False):
     page = dom["Page"]
+    path = os.path.join(ROOT, "domains", page, FILE)
+    old = previous_entries(path)
     pset = {i for i in dom["primary"] if i in ctx.c}
     wb = Workbook()
     wb.properties.creator = "tools/build_question_workbooks.py"
@@ -172,6 +220,7 @@ def build(ctx, dom):
                     ("Concepts affected", 25), ("Who answers", 22), ("Shared with other domains", 25),
                     ("Answer", 50), ("Status", 13), ("Follow-up", 30), ("Ref", 8)])
     fq = firm_questions(page)
+    carry_over("1 Questions for our firm", fq, old)
     last1 = max(5, table(ws1, 5, fq, {9, 10, 11}, ref_col=12))
     dropdown(ws1, ["Not asked", "Answered", "Partly answered", "Follow-up needed", "Not applicable"], "J", 5, last1,
              "Where this question stands.")
@@ -184,6 +233,7 @@ def build(ctx, dom):
     header(ws2, 4, [("#", 5), ("Role", 28), ("Question", 90), ("Notes from the session", 60)])
     rq = [[n, q["Role"], plain(ctx.human(q["Question"])), None]
           for n, q in enumerate(ctx.d["questions"].get(page, []), 1)]
+    carry_over("2 Questions by role", rq, old)
     table(ws2, 5, rq, {4}, ref_col=None)
     ws2.freeze_panes = "C5"
 
@@ -197,6 +247,13 @@ def build(ctx, dom):
     mq = [[n, a["Term / issue"], plain(ctx.human(a["Required distinction or decision"])),
            plain(ctx.human(ctx.d["answers"].get(a["ID"], ""))), None, None, a["ID"]]
           for n, a in enumerate(open_q, 1)]
+    carry_over("3 Meaning to confirm", mq, old)
+    lost = [(sheet, key) for sheet, rows in old.items() for key in rows]
+    if lost and not force:
+        for sheet, key in lost:
+            print(f"domains/{page}/{FILE}: answer in '{sheet}' for {' / '.join(key)} matches no current question",
+                  file=sys.stderr)
+        raise SystemExit(f"Stopped: domains/{page}/{FILE} not rewritten (see above; --force drops these answers).")
     last3 = max(5, table(ws3, 5, mq, {5, 6}, ref_col=7))
     dropdown(ws3, ["Agree", "Disagree", "Unsure"], "E", 5, last3, "Does the expert agree with the proposed answer?")
     ws3.freeze_panes = "C5"
@@ -225,7 +282,6 @@ def build(ctx, dom):
             c.font, c.border, c.alignment = font(), BOX, WRAP
 
     wb.active = 0
-    path = os.path.join(ROOT, "domains", page, FILE)
     wb.save(path)
     freeze(path)
     return path, len(fq), len(rq), len(mq)
@@ -246,10 +302,11 @@ def freeze(path):
 
 def main():
     os.chdir(ROOT)
+    force = "--force" in sys.argv[1:]
     ctx = bdv.Ctx(bdv.load())
     total = 0
     for dom in ctx.d["domains"]:
-        path, nf, nr, nm = build(ctx, dom)
+        path, nf, nr, nm = build(ctx, dom, force)
         total += nf
         print(f"{os.path.relpath(path, ROOT)}: {nf} firm questions, {nr} role questions, {nm} meanings to confirm")
     print(f"{total} firm questions in total")

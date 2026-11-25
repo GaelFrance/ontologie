@@ -45,11 +45,13 @@ governance/           ambiguity register, review domains (owners, reviewers, bac
                       decision log, open questions, governance model proposal
 docs/                 architecture, scope and principles; modelling guidelines;
                       governance and contributing
-tools/                build_domain_views.py and build_question_workbooks.py
-.claude/skills/       one expert skill per domain, for AI agents
+tools/                build_domain_views.py, build_question_workbooks.py, next_ids.py
+.agents/skills/       one expert skill per domain, for AI agents
+AGENTS.md             rules and procedures for AI coding agents (OpenCode, Roo Code);
+                      see docs/working-with-ai-agents.md
 ```
 
-The registers are the single source of truth, maintained by the Ontology Lead; reviewers do not need to open them. Everything generated is rebuilt by `python3 tools/build_domain_views.py` and `python3 tools/build_question_workbooks.py` (needs openpyxl); `build_domain_views.py --check` fails when a page is stale or a concept has no domain. References such as *LD-C0022* (concepts), *LD-R* (relationships) and *LD-A* (ambiguities) are permanent and never reused; human pages show names first. Downstream tools read the tables in `ontology/foundation.md`, `ontology/concept-annotations.md`, `relationships/relationships.md` and `governance/ambiguity-register.md`, so their layouts should stay stable.
+The registers are the single source of truth, maintained by the Ontology Lead; reviewers do not need to open them. Everything generated is rebuilt by `python3 tools/build_domain_views.py` and `python3 tools/build_question_workbooks.py` (needs openpyxl; it keeps the answers already entered); `build_domain_views.py --check` fails when a page is stale or a concept has no domain. References such as *LD-C0022* (concepts), *LD-R* (relationships) and *LD-A* (ambiguities) are permanent and never reused; human pages show names first. Downstream tools read the tables in `ontology/foundation.md`, `ontology/concept-annotations.md`, `relationships/relationships.md` and `governance/ambiguity-register.md`, so their layouts should stay stable.
 
 ## Rules that always apply
 

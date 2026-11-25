@@ -1,2 +1,5 @@
 __pycache__/
 *.pyc
+
+# Working notes written by AI review agents (not committed)
+.review-notes/
