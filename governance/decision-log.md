@@ -33,7 +33,7 @@ Evidence: sponsor accepted the suggested default for open question 1 ("ok défau
 
 | Point | Decision | Consequence in the ontology | Affected IDs |
 |---|---|---|---|
-| 5. Give-up completion and authoritative record | A give-up is complete when the full allocated quantity is registered to the receiving clearing member's CCP account, per the CCP record. Partial take-ups are reported separately. Member acceptance and CCP registration times are both kept. When internal and CCP records disagree, the CCP record is authoritative for completion and the discrepancy is reported as a break, never silently resolved. | LD-A0010 decided for the default answer of AG-004; the definitions of LD-C0022, LD-C0023 and LD-C0053 remain Draft. | LD-C0022, LD-C0023, LD-C0053, LD-A0010, LD-A0034 |
+| 5. Give-up completion and authoritative record | A give-up is complete when the full allocated quantity is registered to the receiving clearing member's CCP account, per the CCP record. Partial take-ups are reported separately. Member acceptance and CCP registration times are both kept. When internal and CCP records disagree, the CCP record is authoritative for completion and the discrepancy is reported as a break, never silently resolved. | LD-A0010 decided for the default answer of the give-up and clearing acceptance agent; the definitions of LD-C0022, LD-C0023 and LD-C0053 remain Draft. | LD-C0022, LD-C0023, LD-C0053, LD-A0010, LD-A0034 |
 
 ## Sponsor decision — 2026-11-01 (meaning changes kept as Draft)
 
@@ -49,7 +49,7 @@ Evidence: sponsor answer in the project conversation, 2026-11-01 (open question 
 
 | Point | Decision | Consequence in the ontology | Affected IDs |
 |---|---|---|---|
-| 7. Reference clearing services for rulebook evidence | Five public CCPs seed the evidence for AG-004: Eurex Clearing, ICE Clear Europe, LCH (SwapClear service), CME Clearing and Euronext Clearing. | These become the first Clearing Service instances whose public rulebooks are cited for interposition mechanism and moment, give-up deadlines and cut-offs. Instances and rulebook facts belong to the hub's evidence layer, not to the concept catalogue; each fact must cite the public rule and its version. | LD-C0051, LD-C0054, LD-C0065, LD-A0009, LD-A0017 |
+| 7. Reference clearing services for rulebook evidence | Five public CCPs seed the evidence for the give-up and clearing acceptance agent: Eurex Clearing, ICE Clear Europe, LCH (SwapClear service), CME Clearing and Euronext Clearing. | These become the first Clearing Service instances whose public rulebooks are cited for interposition mechanism and moment, give-up deadlines and cut-offs. Instances and rulebook facts belong to an evidence layer outside the ontology, not to the concept catalogue; each fact must cite the public rule and its version. | LD-C0051, LD-C0054, LD-C0065, LD-A0009, LD-A0017 |
 
 ## Sponsor decision — 2026-11-01 (regulatory regime priority)
 
@@ -57,7 +57,7 @@ Evidence: sponsor answer in the project conversation, 2026-11-01 (open question 
 
 | Point | Decision | Consequence in the ontology | Affected IDs |
 |---|---|---|---|
-| 8. Regulatory regime priority | Global scope. Priority 1: Europe (EU: EMIR including EMIR 3, MiFID II/MiFIR, CRR; and UK) and United States (CFTC and SEC). Priority 2: Asia-Pacific regimes, to be scoped. | Regime instances for AG-002 and AG-003 are seeded in this order; US futures and cleared-swaps structures are no longer treated "in general terms" only. | LD-C0063, LD-C0067, LD-C0068 |
+| 8. Regulatory regime priority | Global scope. Priority 1: Europe (EU: EMIR including EMIR 3, MiFID II/MiFIR, CRR; and UK) and United States (CFTC and SEC). Priority 2: Asia-Pacific regimes, to be scoped. | Regime instances for the change-impact and onboarding agents are seeded in this order; US futures and cleared-swaps structures are no longer treated "in general terms" only. | LD-C0063, LD-C0067, LD-C0068 |
 
 ## Sponsor decisions — 2026-11-01 (consultations and default date)
 

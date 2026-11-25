@@ -79,7 +79,7 @@ Markdown is canonical (sponsor decision, 2026-11-01) because business reviewers 
 
 **Physical mappings.** Start only with real schemas: source ownership, schema version and permitted access; target concept IDs and context; grain, keys, cardinality and temporal semantics; fields, transformations, code translations, units and sign conversion; tests of completeness, duplicates, reconciliation, reversals and lineage; gaps, owner review and effective dates. A shared field name is not evidence of shared meaning.
 
-**Competency questions** the ontology must eventually support, or answer with the missing context: execution revenue by client; brokerage paid to executing brokers; clearing fees charged to a client; exchange fees last month; top clients by revenue; trades not successfully given up; margin required for a client; a client's cleared positions at a CCP. They must distinguish revenue from fees and cash, fees paid from pass-through charges, contractual clients from commercial groups, complete from partial give-ups, CCP–member from member–client margin, and gross from net positions. The evaluation question sets live in the agent hub.
+**Competency questions** the ontology must eventually support, or answer with the missing context: execution revenue by client; brokerage paid to executing brokers; clearing fees charged to a client; exchange fees last month; top clients by revenue; trades not successfully given up; margin required for a client; a client's cleared positions at a CCP. They must distinguish revenue from fees and cash, fees paid from pass-through charges, contractual clients from commercial groups, complete from partial give-ups, CCP–member from member–client margin, and gross from net positions.
 
 ## Background sources
 

@@ -515,7 +515,7 @@ Informal words and abbreviations, and the concept they point to.
 - “mark-to-market, MTM” (Any) → [Position Valuation](domains/margin-and-collateral/concepts.md#position-valuation), [Variation Margin Requirement](domains/margin-and-collateral/concepts.md#variation-margin-requirement)
 - “market coverage” (Any) → [Offering Coverage Line](domains/service-offering-and-market-access/concepts.md#offering-coverage-line)
 - “market notice” (contextual) → [Change Notice](domains/regulation-and-rule-changes/concepts.md#change-notice)
-- “market onboarding” (UC-002 usage) → [Access Onboarding](domains/service-offering-and-market-access/concepts.md#access-onboarding)
+- “market onboarding” (market-onboarding usage) → [Access Onboarding](domains/service-offering-and-market-access/concepts.md#access-onboarding)
 - “market operator” (MiFID II) → [Legal Entity](domains/parties-and-roles/concepts.md#legal-entity)
 - “market segment” → [Trading Venue Segment](domains/instruments-venues-and-calendars/concepts.md#trading-venue-segment)
 - “market-making scheme” (MiFID II usage, to verify) → [Fee Incentive Programme](domains/fees-revenue-and-contribution/concepts.md#fee-incentive-programme)

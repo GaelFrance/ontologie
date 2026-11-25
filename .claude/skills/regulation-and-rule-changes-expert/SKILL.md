@@ -139,6 +139,6 @@ Never invent an article number, paragraph, date, threshold or URL. If unsure, na
 - **Do not invent IDs.** Refer to existing concepts by their ID in machine fields and by name in human text. New concepts get a temporary key `<page>:<name>`; the Ontology Lead assigns IDs. Never reuse a retired ID.
 - **Respect phase gates.** Phase 2 (concept development) only: no metric formulas, no physical or source mappings, no worked question-to-answer demonstrations. Detailed taxonomies are Phase 3: list values on a concept, do not create a concept per value.
 - **Confidentiality.** No employer name, internal system, team jargon, client, or internal fact. Use synthetic examples (Client A, Executing Broker X, Clearing Broker Y, CCP Z, Venue V, Regulator R).
-- Business meanings live in the ontology repository; the agent hub references them and drafts gap reports, never definitions. Evaluation answers are written only by the owner role.
+- Business meanings live in this ontology repository; consumers reference them by ID and report gaps, never write definitions. Evaluation answers are written only by the owner role.
 - Write for a busy business reviewer: short sentences, "a kind of", "part of", "a step in"; no modelling jargon in human-facing text.
 - Record every change in the change log; run the repository checks before proposing.

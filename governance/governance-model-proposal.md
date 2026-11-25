@@ -24,7 +24,7 @@ Status: Proposal for sponsor decision (requested 2026-11-01). Roles only; no per
 
 ## 3. Reviewer list to name
 
-Ordered by need for the pilot agents. Wave 1 is required before any definition can move from Draft to Reviewed for AG-004 (give-up and clearing acceptance) and AG-002 (change impact).
+Ordered by need for the pilot agents. Wave 1 is required before any definition can move from Draft to Reviewed for the give-up and clearing acceptance agent and the change-impact agent.
 
 | # | Reviewer role | Subjects | Concepts (examples) | Wave |
 |---|---|---|---|---|
@@ -42,7 +42,7 @@ Ordered by need for the pilot agents. Wave 1 is required before any definition c
 | 9 | Compliance | Best execution, reporting, client classification, conduct | Regulatory concepts, LD-C0004 | 2 |
 | 10 | OTC Clearing product owner (domain owner) | OTC submission, CCP registration, porting, compression | OTC concepts, LD-C0014, LD-C0018 | 3 |
 | 11 | Reference & Client Data | Identifiers, instruments, accounts, client hierarchies | LD-C0002, LD-C0010, LD-C0014, LD-C0062 | 3 |
-| 12 | Agent owners (AG-004, AG-002, then AG-003, AG-005) | Evaluation questions, expected answers, usefulness | Hub use cases | 1 for AG-004 and AG-002 |
+| 12 | Agent owners (give-up and change-impact agents, then onboarding and business-performance agents) | Evaluation questions, expected answers, usefulness | Pilot use cases | 1 for the give-up and change-impact agents |
 | 13 | Information Security / Data Protection (consulted) | Confidentiality, public/internal boundary, repository access | Governance, sensitivity rules | Once, before the first release |
 
 Business management takes part with Regulatory Affairs, Legal and Compliance in reviewing consultations and readings marked "interpretation required" (decision 9 of the [decision log](decision-log.md)).
@@ -54,7 +54,7 @@ R = does the work, A = accountable (one per line), C = consulted, I = informed.
 | Activity | Sponsor | Board | Ontology Lead | Domain owner | Subject reviewers | Agent owners |
 |---|---|---|---|---|---|---|
 | Propose a concept or change | I | I | R | C | C | C |
-| Technical checks (IDs, links, hub check) | | | A/R | | | |
+| Technical checks (IDs, links, generated pages) | | | A/R | | | |
 | Review a meaning | I | | R | C | R | C |
 | Approve a meaning in its primary domain | I | I | C | A | C | I |
 | Approve a cross-module meaning or conflict | A | R | C | C | C | I |
@@ -68,7 +68,7 @@ R = does the work, A = accountable (one per line), C = consulted, I = informed.
 2. **Review pack.** The [domain pages](../domains/README.md) are the standing review packs, regenerated with `tools/build_domain_views.py` from [`review-domains.md`](review-domains.md). Each concept has one primary domain whose owner approves it; a meaning change to a concept shown on other pages needs comments from those pages' owners. For each batch the Ontology Lead produces a readable pack: concept, old and new wording, why, examples, questions. Reviewers can answer in the pack, by e-mail or in a meeting; GitHub is optional.
 3. **Reviewed.** Subject reviewers give comments within 10 business days. The Ontology Lead records findings; status becomes Reviewed with remaining conditions.
 4. **Approved.** The domain owner approves (or the sponsor, across modules). Record approver role, date and evidence in the decision log.
-5. **Release.** Quarterly, or ad hoc for regulatory urgency: tag a version, publish the change log, move the hub's ontology pin, re-run evaluation sets.
+5. **Release.** Quarterly, or ad hoc for regulatory urgency: tag a version, publish the change log, tell the consuming agents so they can move to the new version and re-run their evaluation sets.
 
 | Change type | Business review | Approval |
 |---|---|---|
@@ -87,6 +87,6 @@ R = does the work, A = accountable (one per line), C = consulted, I = informed.
 
 ## 7. Immediate next steps
 
-1. Sponsor names wave 1 reviewers (rows 1–5 and the agent owners for AG-004 and AG-002).
-2. Ontology Lead prepares the first review pack: the AG-004 core (give-up, clearing acceptance, CCP interposition, clearing service, cut-off) and the six meaning changes accepted as Draft on 2026-11-01.
+1. Sponsor names wave 1 reviewers (rows 1–5 and the agent owners for the give-up and change-impact agents).
+2. Ontology Lead prepares the first review pack: the give-up agent core (give-up, clearing acceptance, CCP interposition, clearing service, cut-off) and the six meaning changes accepted as Draft on 2026-11-01.
 3. First board session to fix the release cadence and confirm this model.

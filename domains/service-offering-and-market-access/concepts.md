@@ -258,7 +258,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Values (draft list):** application; due diligence; legal documentation; requirements met; connectivity and conformance testing; static and account set-up; go-live; withdrawn
 
-**Words people use:** “membership application” (Any); “market onboarding” (UC-002 usage)
+**Words people use:** “membership application” (Any); “market onboarding” (market-onboarding usage)
 
 **Before using it, know:** Holder, target venue or clearing service, access model and category.
 

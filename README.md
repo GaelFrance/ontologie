@@ -49,7 +49,7 @@ tools/                build_domain_views.py and build_question_workbooks.py
 .claude/skills/       one expert skill per domain, for AI agents
 ```
 
-The registers are the single source of truth, maintained by the Ontology Lead; reviewers do not need to open them. Everything generated is rebuilt by `python3 tools/build_domain_views.py` and `python3 tools/build_question_workbooks.py` (needs openpyxl); `build_domain_views.py --check` fails when a page is stale or a concept has no domain. References such as *LD-C0022* (concepts), *LD-R* (relationships) and *LD-A* (ambiguities) are permanent and never reused; human pages show names first. The agent hub reads `ontology/foundation.md`, `ontology/concept-annotations.md`, `relationships/relationships.md` and `governance/ambiguity-register.md`, so their table layouts must not change without checking it.
+The registers are the single source of truth, maintained by the Ontology Lead; reviewers do not need to open them. Everything generated is rebuilt by `python3 tools/build_domain_views.py` and `python3 tools/build_question_workbooks.py` (needs openpyxl); `build_domain_views.py --check` fails when a page is stale or a concept has no domain. References such as *LD-C0022* (concepts), *LD-R* (relationships) and *LD-A* (ambiguities) are permanent and never reused; human pages show names first. Downstream tools read the tables in `ontology/foundation.md`, `ontology/concept-annotations.md`, `relationships/relationships.md` and `governance/ambiguity-register.md`, so their layouts should stay stable.
 
 ## Rules that always apply
 

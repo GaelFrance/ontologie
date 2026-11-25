@@ -92,7 +92,7 @@ These are logical relation proposals, not database foreign keys. Source/target a
 
 Collateral is linked to margin through Collateral Arrangement (LD-R0068), its asset (LD-R0069), its account (LD-R0070) and the requirement it covers (LD-R0071). The obligations an arrangement secures are stated in the arrangement; a standalone general Obligation concept is still not defined, so no relation targets one. Do not invent an unresolved target concept ID.
 
-Relations added or relabelled by the 2026-11 expert review are listed in the [change log](../CHANGELOG.md). Union targets (`A / B`) are explicit declared ranges, not equivalence assertions. Further columns (source and target types, inverse label, temporal flag, status) are deferred until the hub reader parses tables by header; appending a column today would merge it into the conditions text.
+Relations added or relabelled by the 2026-11 expert review are listed in the [change log](../CHANGELOG.md). Union targets (`A / B`) are explicit declared ranges, not equivalence assertions. Further columns (source and target types, inverse label, temporal flag, status) are deferred until downstream tools parse tables by header; appending a column today would merge it into the conditions text.
 
 ## Level 2 relationships (2026-11 domain review)
 

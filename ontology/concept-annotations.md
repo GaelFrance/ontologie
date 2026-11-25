@@ -2,7 +2,7 @@
 
 Status: Draft. Companion to the [concept catalogue](foundation.md), which stays the single index of IDs and definitions.
 
-This page holds per-concept data that does not fit the catalogue's five-column table: specialisations, aliases, resolution flags, usage notes, required context, priorities and standard alignments. It is kept separate because the agent hub currently parses the catalogue table by cell position. When detailed concept fiches are written (template fields `parents`, `aliases`, `required_context`, `label_fr`, `alignments`, `resolution`), the content below moves into them and this page is retired.
+This page holds per-concept data that does not fit the catalogue's five-column table: specialisations, aliases, resolution flags, usage notes, required context, priorities and standard alignments. It is kept separate because downstream tools currently parse the catalogue table by cell position. When detailed concept fiches are written (template fields `parents`, `aliases`, `required_context`, `label_fr`, `alignments`, `resolution`), the content below moves into them and this page is retired.
 
 Standard alignments are "map, do not import" proposals: none has been checked against the published specification, so all are **to verify**, and no IRI or URL is asserted.
 
@@ -236,7 +236,7 @@ Kinds: **exact** (same meaning everywhere in scope), **contextual** (same meanin
 | DEA agreement | contextual | EU | LD-C0108 |
 | NCM agreement | contextual | listed markets | LD-C0108 |
 | membership application | contextual | Any | LD-C0109 |
-| market onboarding | contextual | UC-002 usage | LD-C0109 |
+| market onboarding | contextual | market-onboarding usage | LD-C0109 |
 | admission criteria | contextual | CCP and venue usage | LD-C0110 |
 | membership requirements | contextual | Any | LD-C0110 |
 | participation requirements | contextual | PFMI | LD-C0110 |
