@@ -332,8 +332,8 @@ Structure links (part of, step in, state of) and plain connections proposed by t
 | LD-R0266 | LD-C0126 | may_be_given_up_through | LD-C0022 | — |
 | LD-R0267 | LD-C0127 | part_of | LD-C0021 | Level-2 structure (2026-11 domain review). |
 | LD-R0268 | LD-C0127 | may_give_rise_to_a_settlement_obligation_settled_by_a_cash_movement | LD-C0028 | — |
-| LD-R0269 | LD-C0128 | is_often_agreed_alongside | LD-C0055 | — |
-| LD-R0270 | LD-C0128 | drives | LD-C0020 | — |
+| LD-R0269 | LD-C0060 | is_often_agreed_alongside | LD-C0055 | When the instruction is standing (moved from LD-C0128, decision 29). |
+| LD-R0270 | LD-C0060 | drives | LD-C0020 | Deprecated 2026-11-26 (decision 29): duplicate of LD-R0043 once LD-C0128 was merged into LD-C0060. |
 | LD-R0271 | LD-C0129 | part_of | LD-C0020 | Level-2 structure (2026-11 domain review). |
 | LD-R0272 | LD-C0129 | targets | LD-C0010 | — |
 | LD-R0273 | LD-C0129 | gives_rise_to_when_routed_to_another_clearing_member | LD-C0131 | — |

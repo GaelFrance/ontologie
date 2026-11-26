@@ -27,7 +27,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Margin required” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Reference Concept · level 1 · Draft · reference LD-C0070 · accountable owner: the Collateral Manager (not yet approved)</sub>
+<sub>Reference Concept · added in review round 1 · Draft · reference LD-C0070 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Margin Parameter Set
 
@@ -53,7 +53,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is published for a clearing service* [Clearing Service](../clearing-services-and-accounts/concepts.md#clearing-service)
 - *is applied in a margin run* [Margin Run](#margin-run)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0160 · accountable owner: the Collateral Manager (not yet approved)</sub>
+<sub>Reference Concept · added in review round 2 · Draft · reference LD-C0160 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Client Margin Uplift
 
@@ -79,7 +79,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is agreed or notified under* [Client Clearing Agreement](../clearing-services-and-accounts/concepts.md#client-clearing-agreement)
 - *applies to* [Client](../parties-and-roles/concepts.md#client)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0163 · accountable owner: the Collateral Manager (not yet approved)</sub>
+<sub>Reference Concept · added in review round 2 · Draft · reference LD-C0163 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Margin Requirement
 
@@ -110,7 +110,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Margin required” (open, answer proposed); “Margin and initial margin” (open, answer proposed); “Exposure” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Measure · level 1 · Draft · reference LD-C0043 · accountable owner: the Collateral Manager (not yet approved)</sub>
+<sub>Measure · added in review round 1 · Draft · reference LD-C0043 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Initial Margin Requirement
 
@@ -132,7 +132,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Margin required” (open, answer proposed); “Margin and initial margin” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Measure · level 1 · Draft · reference LD-C0044 · accountable owner: the Collateral Manager (not yet approved)</sub>
+<sub>Measure · added in review round 1 · Draft · reference LD-C0044 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Variation Margin Requirement
 
@@ -159,7 +159,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Margin required” (open, answer proposed); “Variation margin” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Measure · level 1 · Draft · reference LD-C0045 · accountable owner: the Collateral Manager (not yet approved)</sub>
+<sub>Measure · added in review round 1 · Draft · reference LD-C0045 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Margin Requirement Component
 
@@ -183,7 +183,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 - *breaks down* [Initial Margin Requirement](#initial-margin-requirement)
 
-<sub>Measure · level 2 · Draft · reference LD-C0162 · accountable owner: the Collateral Manager (not yet approved)</sub>
+<sub>Measure · added in review round 2 · Draft · reference LD-C0162 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Margin Excess or Shortfall
 
@@ -212,7 +212,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *may be held at* [CCP Account](../clearing-services-and-accounts/concepts.md#ccp-account)
 - *may be stated against* [Account Equity](#account-equity) — Where the client agreement margins on account equity (mainly US futures), account equity is the held side compared with the requirement.
 
-<sub>Measure · level 2 · Draft · reference LD-C0166 · accountable owner: the Collateral Manager (not yet approved)</sub>
+<sub>Measure · added in review round 2 · Draft · reference LD-C0166 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Margin Call
 
@@ -239,7 +239,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Default” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Instruction · level 1 · Draft · reference LD-C0046 · accountable owner: the Collateral Manager (not yet approved)</sub>
+<sub>Instruction · added in review round 1 · Draft · reference LD-C0046 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Collateral
 
@@ -272,7 +272,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Variation margin” (open, answer proposed); “Margin and initial margin” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>State · level 1 · Draft · reference LD-C0047 · accountable owner: the Collateral Manager (not yet approved)</sub>
+<sub>State · added in review round 1 · Draft · reference LD-C0047 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Collateral Asset
 
@@ -294,7 +294,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Collateral Haircut](#collateral-haircut) *applies to* Collateral Asset
 - [Concentration Limit](#concentration-limit) *applies to* Collateral Asset
 
-<sub>Entity · level 1 · Draft · reference LD-C0048 · accountable owner: the Collateral Manager (not yet approved)</sub>
+<sub>Entity · added in review round 1 · Draft · reference LD-C0048 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Collateral Eligibility Schedule
 
@@ -313,7 +313,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *admits* [Collateral Asset](#collateral-asset) — Per schedule version, with haircut, limits and validity; eligibility is not commitment.
 - [Collateral Arrangement](#collateral-arrangement) *references* Collateral Eligibility Schedule — The eligibility schedule version applicable under the arrangement.
 
-<sub>Reference Concept · level 1 · Draft · reference LD-C0072 · accountable owner: the Collateral Manager (not yet approved)</sub>
+<sub>Reference Concept · added in review round 1 · Draft · reference LD-C0072 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Collateral Haircut
 
@@ -339,7 +339,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *gives the value after haircut of* [Collateral](#collateral)
 - *is changed by* [Rule Change](../regulation-and-rule-changes/concepts.md#rule-change)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0167 · accountable owner: the Collateral Manager (not yet approved)</sub>
+<sub>Reference Concept · added in review round 2 · Draft · reference LD-C0167 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Concentration Limit
 
@@ -367,7 +367,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Limit” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0168 · accountable owner: the Collateral Manager (not yet approved)</sub>
+<sub>Reference Concept · added in review round 2 · Draft · reference LD-C0168 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Collateral Arrangement
 
@@ -392,7 +392,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Variation margin” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Agreement · level 1 · Draft · reference LD-C0071 · accountable owner: the Collateral Manager (not yet approved)</sub>
+<sub>Agreement · added in review round 1 · Draft · reference LD-C0071 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Margin Call Terms
 
@@ -420,7 +420,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *names the deadline as* [Cut-off](../post-trade-operations/concepts.md#cut-off)
 - *governs* [Margin Call](#margin-call)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0165 · accountable owner: the Collateral Manager (not yet approved)</sub>
+<sub>Reference Concept · added in review round 2 · Draft · reference LD-C0165 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Cash Collateral Interest
 
@@ -446,7 +446,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *gives rise to* [Settlement Obligation](../post-trade-operations/concepts.md#settlement-obligation)
 - *feeds* [Collateral Revenue](../fees-revenue-and-contribution/concepts.md#collateral-revenue)
 
-<sub>Obligation · level 2 · Draft · reference LD-C0171 · accountable owner: the Collateral Manager (not yet approved)</sub>
+<sub>Obligation · added in review round 2 · Draft · reference LD-C0171 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Collateral Movement
 
@@ -466,7 +466,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *transfers* [Collateral Asset](#collateral-asset) — Asset quantities moved; a “changes” link records the resulting change in collateral held.
 - [Settlement or Custody Agent](../parties-and-roles/concepts.md#settlement-or-custody-agent) *evidences* Collateral Movement
 
-<sub>Event · level 1 · Draft · reference LD-C0049 · accountable owner: the Collateral Manager (not yet approved)</sub>
+<sub>Event · added in review round 1 · Draft · reference LD-C0049 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Collateral Instruction
 
@@ -492,7 +492,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *may respond to* [Margin Call](#margin-call)
 - [Payment Instruction](../post-trade-operations/concepts.md#payment-instruction) *carries out for cash collateral* Collateral Instruction
 
-<sub>Instruction · level 2 · Draft · reference LD-C0169 · accountable owner: the Collateral Manager (not yet approved)</sub>
+<sub>Instruction · added in review round 2 · Draft · reference LD-C0169 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Portfolio
 
@@ -512,7 +512,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Stress Loss](../risk/concepts.md#stress-loss) *applies to* Portfolio — Or an account, counterparty or clearing service.
 - [Cleared OTC Position](../clearing-services-and-accounts/concepts.md#cleared-otc-position) *may be included in a margin portfolio* Portfolio
 
-<sub>Entity · level 1 · Draft · reference LD-C0027 · accountable owner: the Collateral Manager (not yet approved)</sub>
+<sub>Entity · added in review round 1 · Draft · reference LD-C0027 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Margin Portfolio
 
@@ -539,7 +539,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *contains* [Position](../clearing-services-and-accounts/concepts.md#position)
 - *is the scope of* [Margin Requirement](#margin-requirement)
 
-<sub>Entity · level 2 · Draft · reference LD-C0164 · accountable owner: the Collateral Manager (not yet approved)</sub>
+<sub>Entity · added in review round 2 · Draft · reference LD-C0164 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Margin Run
 
@@ -566,7 +566,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *may lead to* [Margin Call](#margin-call)
 - *is calculated over* [Margin Portfolio](#margin-portfolio)
 
-<sub>Event · level 2 · Draft · reference LD-C0161 · accountable owner: the Collateral Manager (not yet approved)</sub>
+<sub>Event · added in review round 2 · Draft · reference LD-C0161 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Price Alignment Amount
 
@@ -590,7 +590,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *gives rise to* [Settlement Obligation](../post-trade-operations/concepts.md#settlement-obligation)
 - *counts in only if the management reporting basis says so* [Collateral Revenue](../fees-revenue-and-contribution/concepts.md#collateral-revenue)
 
-<sub>Obligation · level 2 · Draft · reference LD-C0170 · accountable owner: the Collateral Manager (not yet approved)</sub>
+<sub>Obligation · added in review round 2 · Draft · reference LD-C0170 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Default Fund Contribution
 
@@ -620,7 +620,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is covered by* [Collateral](#collateral)
 - *gives rise to a funding cost in* [Cost](../fees-revenue-and-contribution/concepts.md#cost)
 
-<sub>Obligation · level 1 · Draft · reference LD-C0172 · accountable owner: the Collateral Manager (not yet approved)</sub>
+<sub>Obligation · added in review round 1 · Draft · reference LD-C0172 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Margin Provider
 
@@ -645,7 +645,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *owes* [Margin Requirement](#margin-requirement)
 - *faces* [Margin Taker](#margin-taker)
 
-<sub>Role · level 2 · Draft · reference LD-C0173 · accountable owner: the Collateral Manager (not yet approved)</sub>
+<sub>Role · added in review round 2 · Draft · reference LD-C0173 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Margin Taker
 
@@ -671,7 +671,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *applies* [Margin Methodology](#margin-methodology)
 - *issues* [Margin Call](#margin-call)
 
-<sub>Role · level 2 · Draft · reference LD-C0174 · accountable owner: the Collateral Manager (not yet approved)</sub>
+<sub>Role · added in review round 2 · Draft · reference LD-C0174 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Account Equity
 
@@ -696,7 +696,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Margin Excess or Shortfall](#margin-excess-or-shortfall) *may be stated against* Account Equity — Where the client agreement margins on account equity (mainly US futures), account equity is the held side compared with the requirement.
 - [Client Statement](../post-trade-operations/concepts.md#client-statement) *states* Account Equity — Also states the cash balance, open trade equity, margin requirement and excess or shortfall.
 
-<sub>Measure · level 2 · Draft · reference LD-C0225 · accountable owner: the Collateral Manager (not yet approved)</sub>
+<sub>Measure · added in review round 2 · Draft · reference LD-C0225 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Open Trade Equity
 
@@ -718,7 +718,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 - *is derived from* [Position Valuation](#position-valuation) — Listed futures and futures-style options.
 
-<sub>Measure · level 2 · Draft · reference LD-C0223 · accountable owner: the Collateral Manager (not yet approved)</sub>
+<sub>Measure · added in review round 2 · Draft · reference LD-C0223 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Account Cash Balance
 
@@ -736,7 +736,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Before using it, know:** Account and maintaining party, currency, as-of time, which amounts the issuer posts to cash.
 
-<sub>Measure · level 2 · Draft · reference LD-C0224 · accountable owner: the Collateral Manager (not yet approved)</sub>
+<sub>Measure · added in review round 2 · Draft · reference LD-C0224 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
 ### Position Valuation
 
@@ -761,4 +761,4 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *uses* [Settlement Price](../instruments-venues-and-calendars/concepts.md#settlement-price) — Listed positions; cleared OTC positions are valued by the CCP's own valuation, not by a settlement price.
 - [Variation Margin Requirement](#variation-margin-requirement) *is based on* Position Valuation
 
-<sub>Measure · level 2 · Draft · reference LD-C0230 · accountable owner: the Collateral Manager (not yet approved)</sub>
+<sub>Measure · added in review round 2 · Draft · reference LD-C0230 · accountable owner: the Collateral Manager (not yet approved)</sub>

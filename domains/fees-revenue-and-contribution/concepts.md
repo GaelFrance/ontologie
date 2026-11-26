@@ -34,7 +34,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Execution fee” (open, answer proposed); “Fee, revenue and cash received” (open, narrowed 2026-09-20, answer proposed); “Brokerage paid” (open, answer proposed); “Fee Charge and Commission types” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Obligation · level 1 · Draft · reference LD-C0031 · accountable owner: the Revenue domain owner (not yet approved)</sub>
+<sub>Obligation · added in review round 1 · Draft · reference LD-C0031 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Client Execution Fee
 
@@ -58,7 +58,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Execution fee” (open, answer proposed); “Commission” (open, deferred by sponsor, answer proposed); “Fee Charge and Commission types” (open, answer proposed); “Volume” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Obligation · level 1 · Draft · reference LD-C0033 · accountable owner: the Revenue domain owner (not yet approved)</sub>
+<sub>Obligation · added in review round 1 · Draft · reference LD-C0033 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### CCP Fee Charge
 
@@ -80,7 +80,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Exchange fees” (open, answer proposed); “Fee Charge and Commission types” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Obligation · level 1 · Draft · reference LD-C0037 · accountable owner: the Revenue domain owner (not yet approved)</sub>
+<sub>Obligation · added in review round 1 · Draft · reference LD-C0037 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Pass-through Charge
 
@@ -108,7 +108,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *may pass on* [Regulatory Transaction Fee](#regulatory-transaction-fee)
 - *is shown gross or net according to* [Management Reporting Basis](#management-reporting-basis)
 
-<sub>Obligation · level 2 · Draft · reference LD-C0179 · accountable owner: the Revenue domain owner (not yet approved)</sub>
+<sub>Obligation · added in review round 2 · Draft · reference LD-C0179 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Bundled Execution and Clearing Fee
 
@@ -132,7 +132,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is a candidate reading of* [Commission](#commission)
 - *is split according to* [Management Reporting Basis](#management-reporting-basis)
 
-<sub>Obligation · level 2 · Draft · reference LD-C0180 · accountable owner: the Revenue domain owner (not yet approved)</sub>
+<sub>Obligation · added in review round 2 · Draft · reference LD-C0180 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Regulatory Transaction Fee
 
@@ -155,7 +155,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Pass-through Charge](#pass-through-charge) *may pass on* Regulatory Transaction Fee
 - *is owed to including a self regulatory organisation* [Regulatory Authority](../regulation-and-rule-changes/concepts.md#regulatory-authority)
 
-<sub>Obligation · level 2 · Draft · reference LD-C0181 · accountable owner: the Revenue domain owner (not yet approved)</sub>
+<sub>Obligation · added in review round 2 · Draft · reference LD-C0181 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Fee Rebate
 
@@ -181,7 +181,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is settled by* [Cash Movement](../post-trade-operations/concepts.md#cash-movement)
 - *is netted or shown gross according to* [Management Reporting Basis](#management-reporting-basis)
 
-<sub>Obligation · level 2 · Draft · reference LD-C0182 · accountable owner: the Revenue domain owner (not yet approved)</sub>
+<sub>Obligation · added in review round 2 · Draft · reference LD-C0182 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Fee Adjustment
 
@@ -206,7 +206,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *may be shown on* [Fee Invoice](#fee-invoice)
 - *may resolve* [Operational Exception](../post-trade-operations/concepts.md#operational-exception)
 
-<sub>Event · level 2 · Draft · reference LD-C0183 · accountable owner: the Revenue domain owner (not yet approved)</sub>
+<sub>Event · added in review round 2 · Draft · reference LD-C0183 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Fee Invoice
 
@@ -234,7 +234,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is settled by* [Cash Movement](../post-trade-operations/concepts.md#cash-movement)
 - *is checked by a fee reconciliation* [Reconciliation](../post-trade-operations/concepts.md#reconciliation)
 
-<sub>Instruction · level 2 · Draft · reference LD-C0184 · accountable owner: the Revenue domain owner (not yet approved)</sub>
+<sub>Instruction · added in review round 2 · Draft · reference LD-C0184 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Fee Schedule
 
@@ -259,7 +259,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Exchange fees” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Reference Concept · level 1 · Draft · reference LD-C0032 · accountable owner: the Revenue domain owner (not yet approved)</sub>
+<sub>Reference Concept · added in review round 1 · Draft · reference LD-C0032 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Published Fee Schedule
 
@@ -288,7 +288,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *applies to* [Contract Specification](../instruments-venues-and-calendars/concepts.md#contract-specification)
 - *is published alongside* [Rule Provision](../regulation-and-rule-changes/concepts.md#rule-provision)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0175 · accountable owner: the Revenue domain owner (not yet approved)</sub>
+<sub>Reference Concept · added in review round 2 · Draft · reference LD-C0175 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Client Pricing Terms
 
@@ -316,7 +316,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *may be agreed at the level of* [Commercial Group](../parties-and-roles/concepts.md#commercial-group)
 - *may set brokerage terms together with* [Give-up Agreement](../clearing-give-up-and-acceptance/concepts.md#give-up-agreement)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0176 · accountable owner: the Revenue domain owner (not yet approved)</sub>
+<sub>Reference Concept · added in review round 2 · Draft · reference LD-C0176 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Fee Rate
 
@@ -343,7 +343,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *may be tiered by* [Activity Volume](#activity-volume)
 - *may be changed by* [Rule Change](../regulation-and-rule-changes/concepts.md#rule-change)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0177 · accountable owner: the Revenue domain owner (not yet approved)</sub>
+<sub>Reference Concept · added in review round 2 · Draft · reference LD-C0177 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Fee Incentive Programme
 
@@ -370,7 +370,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is introduced or changed by* [Rule Change](../regulation-and-rule-changes/concepts.md#rule-change)
 - [Activity Volume](#activity-volume) *may decide eligibility under* Fee Incentive Programme
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0178 · accountable owner: the Revenue domain owner (not yet approved)</sub>
+<sub>Reference Concept · added in review round 2 · Draft · reference LD-C0178 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Client Clearing Fee
 
@@ -384,7 +384,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Commission” (open, deferred by sponsor, answer proposed); “Fee Charge and Commission types” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Obligation · level 1 · Draft · reference LD-C0034 · accountable owner: the Revenue domain owner (not yet approved)</sub>
+<sub>Obligation · added in review round 1 · Draft · reference LD-C0034 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Executing Broker Brokerage Charge
 
@@ -408,7 +408,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Execution fee” (open, answer proposed); “Brokerage paid” (open, answer proposed); “Fee Charge and Commission types” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Obligation · level 1 · Draft · reference LD-C0035 · accountable owner: the Revenue domain owner (not yet approved)</sub>
+<sub>Obligation · added in review round 1 · Draft · reference LD-C0035 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Exchange Fee Charge
 
@@ -432,7 +432,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Execution fee” (open, answer proposed); “Exchange fees” (open, answer proposed); “Fee Charge and Commission types” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Obligation · level 1 · Draft · reference LD-C0036 · accountable owner: the Revenue domain owner (not yet approved)</sub>
+<sub>Obligation · added in review round 1 · Draft · reference LD-C0036 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Commission
 
@@ -452,7 +452,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Commission” (open, deferred by sponsor, answer proposed); “Fee Charge and Commission types” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Reference Concept · level 1 · Draft · reference LD-C0038 · accountable owner: the Revenue domain owner (not yet approved)</sub>
+<sub>Reference Concept · added in review round 1 · Draft · reference LD-C0038 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Revenue
 
@@ -476,7 +476,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Fee, revenue and cash received” (open, narrowed 2026-09-20, answer proposed); “Revenue by client” (open, narrowed 2026-09-20 and 2026-11-01, answer proposed); “Volume” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Measure · level 1 · Draft · reference LD-C0039 · accountable owner: the Revenue domain owner (not yet approved)</sub>
+<sub>Measure · added in review round 1 · Draft · reference LD-C0039 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Execution Revenue
 
@@ -494,7 +494,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Revenue by client” (open, narrowed 2026-09-20 and 2026-11-01, answer proposed) — see the [review sheet](review.md).
 
-<sub>Measure · level 1 · Draft · reference LD-C0041 · accountable owner: the Revenue domain owner (not yet approved)</sub>
+<sub>Measure · added in review round 1 · Draft · reference LD-C0041 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Clearing Revenue
 
@@ -514,7 +514,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Revenue by client” (open, narrowed 2026-09-20 and 2026-11-01, answer proposed) — see the [review sheet](review.md).
 
-<sub>Measure · level 1 · Draft · reference LD-C0042 · accountable owner: the Revenue domain owner (not yet approved)</sub>
+<sub>Measure · added in review round 1 · Draft · reference LD-C0042 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Collateral Revenue
 
@@ -540,7 +540,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is built in part from* [Cash Collateral Interest](../margin-and-collateral/concepts.md#cash-collateral-interest)
 - *is defined by* [Management Reporting Basis](#management-reporting-basis)
 
-<sub>Measure · level 2 · Draft · reference LD-C0187 · accountable owner: the Revenue domain owner (not yet approved)</sub>
+<sub>Measure · added in review round 2 · Draft · reference LD-C0187 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Management Reporting Basis
 
@@ -572,7 +572,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *sets the date role of* [Business Date](../instruments-venues-and-calendars/concepts.md#business-date)
 - [Cost Perimeter](#cost-perimeter) *is versioned with* Management Reporting Basis
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0188 · accountable owner: the Revenue domain owner (not yet approved)</sub>
+<sub>Reference Concept · added in review round 2 · Draft · reference LD-C0188 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Cost
 
@@ -593,7 +593,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is measured under* [Management Reporting Basis](#management-reporting-basis) — Corrected 2026-11-09 (direction was reversed).
 - [Cost Perimeter](#cost-perimeter) *selects categories of* Cost
 
-<sub>Measure · level 1 · Draft · reference LD-C0040 · accountable owner: the Revenue domain owner (not yet approved)</sub>
+<sub>Measure · added in review round 1 · Draft · reference LD-C0040 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Contribution
 
@@ -616,7 +616,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Fee, revenue and cash received” (open, narrowed 2026-09-20, answer proposed); “Revenue by client” (open, narrowed 2026-09-20 and 2026-11-01, answer proposed) — see the [review sheet](review.md).
 
-<sub>Measure · level 1 · Draft · reference LD-C0074 · accountable owner: the Revenue domain owner (not yet approved)</sub>
+<sub>Measure · added in review round 1 · Draft · reference LD-C0074 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Cost Perimeter
 
@@ -641,7 +641,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *selects categories of* [Cost](#cost)
 - *is versioned with* [Management Reporting Basis](#management-reporting-basis)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0189 · accountable owner: the Revenue domain owner (not yet approved)</sub>
+<sub>Reference Concept · added in review round 2 · Draft · reference LD-C0189 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Fee Collector
 
@@ -664,7 +664,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *collects on behalf of the creditor* [Fee Charge](#fee-charge)
 - *may issue* [Fee Invoice](#fee-invoice)
 
-<sub>Role · level 2 · Draft · reference LD-C0185 · accountable owner: the Revenue domain owner (not yet approved)</sub>
+<sub>Role · added in review round 2 · Draft · reference LD-C0185 · accountable owner: the Revenue domain owner (not yet approved)</sub>
 
 ### Activity Volume
 
@@ -689,4 +689,4 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *counts* [Execution](../execution/concepts.md#execution)
 - *counts* [Clearing Acceptance](../clearing-give-up-and-acceptance/concepts.md#clearing-acceptance)
 
-<sub>Measure · level 1 · Draft · reference LD-C0186 · accountable owner: the Revenue domain owner (not yet approved)</sub>
+<sub>Measure · added in review round 1 · Draft · reference LD-C0186 · accountable owner: the Revenue domain owner (not yet approved)</sub>

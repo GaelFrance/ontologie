@@ -86,7 +86,7 @@ Every change: on a branch, edit the hand-written sources only, rebuild, `--check
 | Clarify a definition | Its row in `foundation.md` | Rebuild. Say "clarification" in the change log |
 | Change a meaning | Its row, after the owner (or sponsor across domains) agreed | Rebuild; record the decision in the decision log; say "meaning change" in the change log |
 | Add a concept | New row with the next ID (`next_ids.py`); summary, aliases and context in the annotations; relationships; primary domain in `review-domains.md` | Rebuild; `pr_scope.py` checks the ID is not taken twice |
-| Retire a concept | Keep the row, say "Deprecated, replaced by …" in the definition; move relationships | Never delete or reuse the ID |
+| Retire a concept | Keep the row and its primary domain, start the definition with "Deprecated <date> (decision n), replaced by …"; move relationships, and start the meaning of a relationship that is no longer needed with "Deprecated". The generated pages then list it under "Retired concepts" instead of showing a card | Never delete or reuse the ID |
 | Add an alias | Aliases table in the annotations | Rebuild |
 | Record an ambiguity | New row and proposed-answer paragraph in the ambiguity register | Rebuild; the workbooks show it in sheet 3 after `build_question_workbooks.py` |
 | Add questions for the firm | `domains/<d>/company-questions.md` | `build_question_workbooks.py`, then rebuild |

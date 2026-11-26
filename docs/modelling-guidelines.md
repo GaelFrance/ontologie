@@ -59,6 +59,19 @@ The catalogue deliberately holds short definitions; the other facts about a conc
 
 Keep the registers machine-readable: one row per ID in the catalogue, no `|` inside a table cell, new columns appended only after checking how downstream tools parse that table, and temporary IDs (`NEW-…`) never in a register. Relationship endpoints use concept IDs only; a union of targets is written `LD-Cnnnn / LD-Cnnnn` and is an explicit declared range. Tagging a document with a concept ID is an annotation, not an instance relationship.
 
+## Knowledge layers
+
+The ontology serves AI agents, so a concept earns its place only if it gives a distinct business meaning that an agent task needs. Each concept carries a knowledge layer in the [concept annotations](../ontology/concept-annotations.md#knowledge-layers), confirmed by its domain owner:
+
+| Layer | What it holds | How an agent uses it |
+|---|---|---|
+| 0 Business Core | The few concepts every task relies on (order, execution, trade, allocation, the main roles) | Always loaded |
+| 1 Domain Core | The concepts any task in the domain needs | Loaded for a task in that domain |
+| 2 Specialist | Concepts with their own rules that only some questions need | Retrieved when the question names the topic |
+| 3 Reference | Value lists, venue-specific parameters, alignments, ambiguous words | Looked up, never loaded whole |
+
+Before adding a concept, check whether a value on an existing concept, a usage note or an alias carries the same knowledge; prefer those. Market-specific rules and technical parameters are values or rule provisions, not concepts. The knowledge layer is not the "Level" column of the catalogue, which records the review round that added the concept (1: Phase 1 and the 2026-11 expert review; 2: the 2026-11 domain review).
+
 ## Classification axes
 
 Detailed taxonomies are Phase 3 work. Use several axes rather than one artificial tree; separate is_a specialisations from contextual categories and overlapping facets; assume no disjointness or exhaustiveness without review. Cleared is not exchange-traded, and regulatory "OTC" is not off-venue (LD-A0032). High-touch or low-touch describes a handling channel, not an asset class or venue. A charge's classification does not decide its accounting recognition. Named markets, entities and currencies are instances, not subclasses.

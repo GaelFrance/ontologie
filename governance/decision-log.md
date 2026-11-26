@@ -129,3 +129,13 @@ Evidence: Ontology Lead request in the project conversation, 2026-11-26 ("Full R
 
 This decision opens the domain; it approves none of its definitions, which stay Draft until the risk domain owner approves them.
 
+
+## Ontology Lead decision — 2026-11-26 (execution simplification)
+
+Evidence: Ontology Lead approval in the project conversation, 2026-11-26 ("ok go"), of five changes proposed after an external review of the execution domain, under his principle that the ontology should maximise agent performance, not size.
+
+| Point | Decision | Consequence in the ontology | Affected IDs |
+|---|---|---|---|
+| 29. Execution simplification and knowledge layers | Prefer values on existing concepts to new concepts. Execution method, trading capacity and order state become values on Order and Execution. Transaction is retired, and the word stays ambiguous. Standing Allocation Instruction is merged into Allocation Instruction as its form "standing". Every concept gets a knowledge layer (0 Business Core, 1 Domain Core, 2 Specialist, 3 Reference), starting with the execution domain. | Value rows on LD-C0016, LD-C0017 and LD-C0060. LD-C0019 and LD-C0128 are deprecated in place. LD-R0269 moves to LD-C0060 and LD-R0270 is deprecated. A "Knowledge layers" section is added to the concept annotations. The generated pages show the layer, and say "added in review round" instead of "level". Execution method and trading capacity leave the execution backlog. | LD-C0016, LD-C0017, LD-C0019, LD-C0060, LD-C0128, LD-R0269, LD-R0270 |
+
+This decision approves no definition: the values and layers stay Draft until the Listed Execution product owner confirms them. Merging Executed Trade (LD-C0126) into Trade is not decided; it waits for the clearing owner and the open question on the clearing tier.

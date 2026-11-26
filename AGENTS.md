@@ -25,7 +25,7 @@ Read before your first change: `README.md`, `docs/maintenance-guide.md`, `docs/m
 | Path | What it holds | Edit? |
 |---|---|---|
 | `ontology/foundation.md` | Concept catalogue: one row per concept ID (LD-C) with name, module, type, definition (and level and domain for level-2 rows) | Yes, by hand |
-| `ontology/concept-annotations.md` | Specialisations, resolution flags, aliases, required context, usage notes, priority and alignment, plain-language summaries, values | Yes, by hand |
+| `ontology/concept-annotations.md` | Specialisations, resolution flags, aliases, required context, usage notes, priority and alignment, plain-language summaries, values, knowledge layers | Yes, by hand |
 | `relationships/relationships.md` | Relationships between concepts (LD-R) | Yes, by hand |
 | `governance/ambiguity-register.md` | Ambiguous words and open meaning questions (LD-A) | Yes, by hand |
 | `governance/review-domains.md` | The eleven domains, owners, reviewers, primary and "also shown" concepts, backlog | Yes, by hand |
