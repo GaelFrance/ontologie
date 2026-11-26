@@ -37,7 +37,7 @@
 - **[Cash Collateral Interest](domains/margin-and-collateral/concepts.md#cash-collateral-interest)** — Interest paid or charged on cash given as margin. *(Margin and collateral)*
 - **[Cash Movement](domains/post-trade-operations/concepts.md#cash-movement)** — Money that actually moved from one account to another, with the evidence that says so. *(Post-trade operations)*
 - **[CCP Account](domains/clearing-services-and-accounts/concepts.md#ccp-account)** — An account that a CCP opens in one clearing service, for a member's own business or for its clients, where the CCP records positions and attributes margin and collateral. *(Clearing: services, accounts and client clearing)*
-- **[CCP Dedicated Own Resources](domains/risk/concepts.md#ccp-dedicated-own-resources)** — The CCP's own money placed in its default waterfall. *(Risk: client clearing, execution and CCP risk)*
+- **CCP Dedicated Own Resources** (retired) — Deprecated 2026-11-26 (decision 28), replaced by Default Waterfall: a CCP's dedicated own resources (skin in the game) are now the layer value "CCP dedicated own resources: junior layer; second layer, as the rules or regime place it" of the waterfall.
 - **[CCP Exposure](domains/risk/concepts.md#ccp-exposure)** — What we could lose toward a CCP if it failed or used our resources after another member's default. *(Risk: client clearing, execution and CCP risk)*
 - **[CCP Fee Charge](domains/fees-revenue-and-contribution/concepts.md#ccp-fee-charge)** — A fee charged by a clearing house to its clearing members for clearing and related services. *(Fees, revenue and contribution)*
 - **[CCP Interposition](domains/clearing-give-up-and-acceptance/concepts.md#ccp-interposition)** — The legal moment when the CCP becomes the buyer to every seller and the seller to every buyer for a trade; this is what 'cleared' really means. *(Clearing: give-up and acceptance)*
@@ -71,7 +71,7 @@
 - **[Client Clearing Fee](domains/fees-revenue-and-contribution/concepts.md#client-clearing-fee)** — What a client pays its clearing broker for clearing its trades, listed or OTC. *(Fees, revenue and contribution)*
 - **[Client Credit Assessment](domains/risk/concepts.md#client-credit-assessment)** — The risk team's review that decides whether, and on what terms, we clear for a client. *(Risk: client clearing, execution and CCP risk)*
 - **[Client Default](domains/clearing-services-and-accounts/concepts.md#client-default)** — When a clearing broker declares its own client in default and takes action on that client's positions. *(Clearing: services, accounts and client clearing)*
-- **[Client Default Management](domains/risk/concepts.md#client-default-management)** — What we do after declaring a client in default: close out, hedge or transfer, and use its collateral. *(Risk: client clearing, execution and CCP risk)*
+- **Client Default Management** (retired) — Deprecated 2026-11-26 (decision 28), replaced by Client Default: the steps a clearing broker takes after a client default (stop new business, hedge, close out, terminate, transfer, apply collateral and credit support, set off, return excess, claim shortfall) are now step values of Client Default.
 - **[Client Execution](domains/execution/concepts.md#client-execution)** — A fill as the broker reports it to the client. *(Listed derivatives execution)*
 - **[Client Execution Fee](domains/fees-revenue-and-contribution/concepts.md#client-execution-fee)** — What a client pays its broker for executing its orders. *(Fees, revenue and contribution)*
 - **[Client Margin Uplift](domains/margin-and-collateral/concepts.md#client-margin-uplift)** — The extra margin a clearing broker asks from a client on top of what the CCP requires. *(Margin and collateral)*
@@ -79,7 +79,8 @@
 - **[Client Order](domains/execution/concepts.md#client-order)** — The order as the client gave it to the broker, before the broker splits or routes it. *(Listed derivatives execution)*
 - **[Client Pricing Terms](domains/fees-revenue-and-contribution/concepts.md#client-pricing-terms)** — The prices a broker has agreed with one client for its services. *(Fees, revenue and contribution)*
 - **[Client Regulatory Category](domains/parties-and-roles/concepts.md#client-regulatory-category)** — How a provider has categorised a client under conduct rules, for example professional client or eligible counterparty. *(Parties, roles, clients and accounts)*
-- **[Client Risk Rating](domains/risk/concepts.md#client-risk-rating)** — Our internal grade for how risky a client is. *(Risk: client clearing, execution and CCP risk)*
+- **[Client Risk Group](domains/risk/concepts.md#client-risk-group)** — The clients our risk function treats as one for risk, because their credit is connected. *(Risk: client clearing, execution and CCP risk)*
+- **Client Risk Rating** (retired) — Deprecated 2026-11-26 (decision 28), replaced by Client Credit Assessment: the client risk rating is now the recorded outcome of the assessment, "client risk rating (internal, time-bounded)"; it is never an external credit rating and not a Regulatory Classification.
 - **[Client Statement](domains/post-trade-operations/concepts.md#client-statement)** — The daily or monthly report a broker sends a client on its accounts. *(Post-trade operations)*
 - **[Collateral](domains/margin-and-collateral/concepts.md#collateral)** — Cash or securities actually held by one party from another to cover margin. *(Margin and collateral)*
 - **[Collateral Arrangement](domains/margin-and-collateral/concepts.md#collateral-arrangement)** — The legal terms under which collateral is given, valued, paid interest and returned. *(Margin and collateral)*
@@ -101,14 +102,13 @@
 - **[Cost](domains/fees-revenue-and-contribution/concepts.md#cost)** — What the business spends to deliver its services, measured under stated management rules. *(Fees, revenue and contribution)*
 - **[Cost Perimeter](domains/fees-revenue-and-contribution/concepts.md#cost-perimeter)** — The agreed list of costs that are deducted to get contribution. *(Fees, revenue and contribution)*
 - **[Counterparty Regulatory Status](domains/parties-and-roles/concepts.md#counterparty-regulatory-status)** — The regulatory status a company has in its own right, which decides rules such as whether it must clear. *(Parties, roles, clients and accounts)*
-- **[Credit Support Arrangement](domains/risk/concepts.md#credit-support-arrangement)** — A third party's promise to pay if our client does not. *(Risk: client clearing, execution and CCP risk)*
 - **[Cut-off](domains/post-trade-operations/concepts.md#cut-off)** — The latest time a step can be done, with the calendar it is read against, what happens if it is missed, and who set it. *(Post-trade operations)*
 
 ## D
 
 - **[Default Fund Assessment](domains/risk/concepts.md#default-fund-assessment)** — A further payment a CCP can demand from surviving members after the default fund is used. *(Risk: client clearing, execution and CCP risk)*
 - **[Default Fund Contribution](domains/margin-and-collateral/concepts.md#default-fund-contribution)** — A clearing member's share of the CCP's shared pool for covering another member's default. *(Margin and collateral)*
-- **[Default Management Auction](domains/risk/concepts.md#default-management-auction)** — The auction in which a CCP sells a defaulted member's positions to other members. *(Risk: client clearing, execution and CCP risk)*
+- **Default Management Auction** (retired) — Deprecated 2026-11-26 (decision 28), replaced by Clearing Member Default: the auction is now the step value "auction (with any juniorisation of poor bidders)" of the CCP's handling of a clearing member default; rulebook details (mandatory bidding, client bidding) are in the risk-expert skill.
 - **[Default Waterfall](domains/risk/concepts.md#default-waterfall)** — The order in which a CCP uses its resources to absorb a defaulting member's losses. *(Risk: client clearing, execution and CCP risk)*
 - **[Delivery Notice](domains/post-trade-operations/concepts.md#delivery-notice)** — The notice that starts the physical delivery of a futures contract. *(Post-trade operations)*
 - **[Direct Electronic Access Arrangement](domains/service-offering-and-market-access/concepts.md#direct-electronic-access-arrangement)** — Permission given by a venue member for a client to send its own orders to the venue under the member's identity. *(Service offering and market access)*
@@ -127,7 +127,7 @@
 - **[Execution](domains/execution/concepts.md#execution)** — The moment all or part of an order is filled at a price, by matching on the venue or by the venue registering a privately negotiated trade. *(Listed derivatives execution)*
 - **[Execution Agreement for Cleared Trades](domains/clearing-give-up-and-acceptance/concepts.md#execution-agreement-for-cleared-trades)** — The OTC agreement that says what happens to a swap meant for clearing if the clearing broker or CCP refuses it. *(Clearing: give-up and acceptance)*
 - **[Execution Correction](domains/execution/concepts.md#execution-correction)** — A later fix or cancellation of a fill, recorded as a new event that points back to the original. *(Listed derivatives execution)*
-- **[Execution Error](domains/risk/concepts.md#execution-error)** — A trade done or booked wrongly by the executing side. *(Risk: client clearing, execution and CCP risk)*
+- **Execution Error** (retired) — Deprecated 2026-11-26 (decision 28), replaced by Execution Correction and Error Position: an execution error is now the cause value "execution error, with responsible party" on both.
 - **[Execution Revenue](domains/fees-revenue-and-contribution/concepts.md#execution-revenue)** — What the business earns from executing orders, per client and per handling channel. *(Fees, revenue and contribution)*
 - **[Exercise](domains/post-trade-operations/concepts.md#exercise)** — The option holder using its right to buy or sell, on instruction or automatically at expiry. *(Post-trade operations)*
 - **[Exercise Instruction](domains/post-trade-operations/concepts.md#exercise-instruction)** — The holder's order to exercise an option, or to override what would happen automatically at expiry. *(Post-trade operations)*
@@ -177,7 +177,7 @@
 ## K
 
 - **[Key-Date Rule](domains/instruments-venues-and-calendars/concepts.md#key-date-rule)** — The rule that says, for each series, when it stops trading, when it expires and when it settles, for example 'third Friday of the month, or the day before if that is a holiday'. *(Instruments, venues and calendars)*
-- **[Kill Switch Activation](domains/risk/concepts.md#kill-switch-activation)** — Pulling all of a participant's orders at once and blocking new ones. *(Risk: client clearing, execution and CCP risk)*
+- **Kill Switch Activation** (retired) — Deprecated 2026-11-26 (decision 28), replaced by guidance in the risk-expert skill, with no replacing concept: a kill switch is an emergency mass cancel of a participant's open orders, not a Pre-trade Control Check and not a venue trading halt; the word is a contextual alias.
 
 ## L
 
@@ -240,7 +240,7 @@
 - **[Position Transfer](domains/clearing-services-and-accounts/concepts.md#position-transfer)** — Moving open positions from one CCP account to another on request, for example when a client changes clearing broker. *(Clearing: services, accounts and client clearing)*
 - **[Position Valuation](domains/margin-and-collateral/concepts.md#position-valuation)** — What a position is worth at a point in time, and who valued it with which price. *(Margin and collateral)*
 - **[Pre-trade Control Check](domains/execution/concepts.md#pre-trade-control-check)** — An automatic check that stops an order going to the market if it breaks a limit. *(Listed derivatives execution)*
-- **[Pre-trade Limit](domains/risk/concepts.md#pre-trade-limit)** — A limit checked on each order before it reaches the market. *(Risk: client clearing, execution and CCP risk)*
+- **Pre-trade Limit** (retired) — Deprecated 2026-11-26 (decision 28), replaced by Risk Limit: a pre-trade limit is now the kind value "pre-trade limit" of a risk limit, applied in a Pre-trade Control Check; a parameter a venue publishes for all participants is a Rule Provision applied in the same check.
 - **[Price Alignment Amount](domains/margin-and-collateral/concepts.md#price-alignment-amount)** — A small interest-like payment that goes with variation margin on cleared swaps but is not part of it. *(Margin and collateral)*
 - **[Processing Window](domains/instruments-venues-and-calendars/concepts.md#processing-window)** — A named stretch of a clearing day when a CCP or payment system accepts a given step. *(Instruments, venues and calendars)*
 - **[Product Family](domains/instruments-venues-and-calendars/concepts.md#product-family)** — A family of similar traded products, such as 'equity index futures' or 'fixed-to-floating interest rate swaps', described without reference to any exchange. *(Instruments, venues and calendars)*
@@ -287,13 +287,14 @@
 - **[Sponsoring Clearing Member](domains/clearing-services-and-accounts/concepts.md#sponsoring-clearing-member)** — A clearing member that stands behind a client admitted directly to a CCP under a sponsored model. *(Clearing: services, accounts and client clearing)*
 - **Standing Allocation Instruction** (retired) — Deprecated 2026-11-26 (decision 29), replaced by Allocation Instruction, whose definition already covers standing instructions; the form "standing" is now a value of Allocation Instruction.
 - **[Strategy Leg Execution](domains/execution/concepts.md#strategy-leg-execution)** — The fill in one leg contract that results when a spread or option combination is filled. *(Listed derivatives execution)*
-- **[Stress Loss](domains/risk/concepts.md#stress-loss)** — What a portfolio would lose in a named extreme scenario. *(Risk: client clearing, execution and CCP risk)*
+- **Stress Loss** (retired) — Deprecated 2026-11-26 (decision 28), replaced by Risk Exposure: a stress loss is now the measure basis value "stress loss (named scenario, version)" of a risk exposure; the point that a stress loss is not an initial margin requirement is in the risk-expert skill.
 - **[Submission Acceptance](domains/clearing-give-up-and-acceptance/concepts.md#submission-acceptance)** — The OTC clearing broker's yes or no to clearing a swap that has been sent for clearing. *(Clearing: give-up and acceptance)*
 
 ## T
 
 - **[Take-up](domains/clearing-give-up-and-acceptance/concepts.md#take-up)** — The receiving clearing member saying 'yes, I take this give-up line' (or part of it, or no). *(Clearing: give-up and acceptance)*
 - **[Take-up Deadline](domains/clearing-give-up-and-acceptance/concepts.md#take-up-deadline)** — The CCP's latest time on a clearing date for sending and accepting a give-up, and what happens if it is missed. *(Clearing: give-up and acceptance)*
+- **[Third-party Credit Support](domains/risk/concepts.md#third-party-credit-support)** — A third party's promise to pay if our client does not. *(Risk: client clearing, execution and CCP risk)*
 - **[Third-party Executing Member](domains/execution/concepts.md#third-party-executing-member)** — A venue member that another broker uses to reach a venue where it is not a member. *(Listed derivatives execution)*
 - **[Third-Party Execution Arrangement](domains/service-offering-and-market-access/concepts.md#third-party-execution-arrangement)** — A broker reaches a venue where it is not a member by passing orders to a broker that is. *(Service offering and market access)*
 - **[Trade](domains/execution/concepts.md#trade)** — The agreed deal between two counterparties on a derivative contract, with its terms; later steps such as clearing create new linked trades rather than changing it. *(Listed derivatives execution)*
@@ -307,7 +308,7 @@
 
 ## U
 
-- **[Unaccepted Give-up Exposure](domains/risk/concepts.md#unaccepted-give-up-exposure)** — The risk the executing side keeps on trades the clearing broker has not taken up yet. *(Risk: client clearing, execution and CCP risk)*
+- **[Unaccepted Give-up Exposure](domains/risk/concepts.md#unaccepted-give-up-exposure)** — The risk the giving clearing member, and through it the executing broker, keeps on trades until the CCP registers them to the clearing broker. *(Risk: client clearing, execution and CCP risk)*
 - **[Underlying](domains/instruments-venues-and-calendars/concepts.md#underlying)** — The thing a derivative is 'on': a share, an index, an interest rate, a commodity, or another derivative. *(Instruments, venues and calendars)*
 
 ## V
@@ -336,8 +337,9 @@ Informal words and abbreviations, and the concept they point to.
 - “alpha trade” (OTC clearing usage) → [Executed Trade](domains/execution/concepts.md#executed-trade)
 - “amendment” → [Trade Amendment](domains/post-trade-operations/concepts.md#trade-amendment)
 - “ancillary service” (Any) → [Service Component](domains/service-offering-and-market-access/concepts.md#service-component)
+- “assessment” (after a clearing member default) → [Default Fund Assessment](domains/risk/concepts.md#default-fund-assessment)
+- “assessment” (Any) → [Default Fund Assessment](domains/risk/concepts.md#default-fund-assessment), [CCP Risk Assessment](domains/risk/concepts.md#ccp-risk-assessment), [Client Credit Assessment](domains/risk/concepts.md#client-credit-assessment), [Change Impact Assessment](domains/regulation-and-rule-changes/concepts.md#change-impact-assessment)
 - “assessment fee” (US usage, to verify) → [Regulatory Transaction Fee](domains/fees-revenue-and-contribution/concepts.md#regulatory-transaction-fee)
-- “assessment, cash call” (After a clearing member default) → [Default Fund Assessment](domains/risk/concepts.md#default-fund-assessment), [CCP Loss Allocation](domains/risk/concepts.md#ccp-loss-allocation)
 - “asset manager” (any) → [Investment Manager](domains/parties-and-roles/concepts.md#investment-manager)
 - “assignment notice” → [Assignment](domains/post-trade-operations/concepts.md#assignment)
 - “authorised person” (any) → [Authorised Representative](domains/parties-and-roles/concepts.md#authorised-representative)
@@ -359,6 +361,7 @@ Informal words and abbreviations, and the concept they point to.
 - “cancel and correct” (desk usage) → [Execution Correction](domains/execution/concepts.md#execution-correction)
 - “carrying broker” (US, contextual) → [Receiving Clearing Member](domains/clearing-give-up-and-acceptance/concepts.md#receiving-clearing-member)
 - “case” → [Exception Case](domains/post-trade-operations/concepts.md#exception-case)
+- “cash call” (Any) → [Margin Call](domains/margin-and-collateral/concepts.md#margin-call), [Netted Settlement Obligation](domains/post-trade-operations/concepts.md#netted-settlement-obligation), [Default Fund Assessment](domains/risk/concepts.md#default-fund-assessment), [CCP Loss Allocation](domains/risk/concepts.md#ccp-loss-allocation)
 - “cash collateral remuneration” (contextual) → [Cash Collateral Interest](domains/margin-and-collateral/concepts.md#cash-collateral-interest)
 - “category 1, 2, 3” (contextual, EU clearing obligation) → [Phase-in Step](domains/regulation-and-rule-changes/concepts.md#phase-in-step)
 - “CCP contract” (contextual) → [Clearing Contract](domains/instruments-venues-and-calendars/concepts.md#clearing-contract)
@@ -397,7 +400,7 @@ Informal words and abbreviations, and the concept they point to.
 - “client trade” (OTC client clearing) → [Client Back-to-Back Trade](domains/clearing-services-and-accounts/concepts.md#client-back-to-back-trade)
 - “client-facing order” (execution) → [Client Order](domains/execution/concepts.md#client-order)
 - “close-out” (contextual) → [Position Adjustment](domains/clearing-services-and-accounts/concepts.md#position-adjustment)
-- “close-out of a client, client liquidation” (Clearing broker after a client default) → [Client Default Management](domains/risk/concepts.md#client-default-management)
+- “close-out of a client, client liquidation” (Clearing broker after a client default) → [Client Default](domains/clearing-services-and-accounts/concepts.md#client-default)
 - “CMTA” (US listed options usage, to verify) → [Give-up Designated in Advance](domains/clearing-give-up-and-acceptance/concepts.md#give-up-designated-in-advance)
 - “collateral balance” (Any) → [Collateral](domains/margin-and-collateral/concepts.md#collateral)
 - “collateral income” (any) → [Collateral Revenue](domains/fees-revenue-and-contribution/concepts.md#collateral-revenue)
@@ -411,6 +414,7 @@ Informal words and abbreviations, and the concept they point to.
 - “competent authority” (EU usage, contextual) → [Regulatory Authority](domains/regulation-and-rule-changes/concepts.md#regulatory-authority)
 - “compliance date” (US usage, contextual) → [Phase-in Step](domains/regulation-and-rule-changes/concepts.md#phase-in-step)
 - “concentration cap” (any) → [Concentration Limit](domains/margin-and-collateral/concepts.md#concentration-limit)
+- “concentration limit” (collateral) → [Concentration Limit](domains/margin-and-collateral/concepts.md#concentration-limit), [Risk Limit](domains/risk/concepts.md#risk-limit), [Margin Requirement Component](domains/margin-and-collateral/concepts.md#margin-requirement-component)
 - “confirmation, confirm” (broker to client, listed) → [Trade Confirmation](domains/execution/concepts.md#trade-confirmation)
 - “connectivity” (Any) → [Connectivity Route](domains/service-offering-and-market-access/concepts.md#connectivity-route)
 - “consent” (OTC clearing, contextual) → [Submission Acceptance](domains/clearing-give-up-and-acceptance/concepts.md#submission-acceptance)
@@ -427,6 +431,8 @@ Informal words and abbreviations, and the concept they point to.
 - “credit limit, client credit limit” (clearing broker toward a client) → [Risk Limit](domains/risk/concepts.md#risk-limit), [Clearing Limit](domains/clearing-give-up-and-acceptance/concepts.md#clearing-limit)
 - “credit note” (contextual, the document) → [Fee Adjustment](domains/fees-revenue-and-contribution/concepts.md#fee-adjustment)
 - “credit review, credit approval” (Client onboarding and review) → [Client Credit Assessment](domains/risk/concepts.md#client-credit-assessment)
+- “credit support annex, CSA” (bilateral analogue) → [Collateral Arrangement](domains/margin-and-collateral/concepts.md#collateral-arrangement)
+- “credit support arrangement” (former name, until 2026-11-26) → [Third-party Credit Support](domains/risk/concepts.md#third-party-credit-support)
 - “customer account” (US usage, ambiguous with the US account class) → [Client Account](domains/parties-and-roles/concepts.md#client-account)
 - “customer segregated origin” (US) → [Client Omnibus Account](domains/clearing-services-and-accounts/concepts.md#client-omnibus-account)
 - “daily settlement” (CCP, contextual) → [Netted Settlement Obligation](domains/post-trade-operations/concepts.md#netted-settlement-obligation)
@@ -437,9 +443,9 @@ Informal words and abbreviations, and the concept they point to.
 - “DEA agreement” (EU) → [Access Agreement](domains/service-offering-and-market-access/concepts.md#access-agreement)
 - “deadline” (Process steps) → [Cut-off](domains/post-trade-operations/concepts.md#cut-off)
 - “declaration of default” (CCP rules) → [Clearing Member Default](domains/clearing-services-and-accounts/concepts.md#clearing-member-default)
-- “default” (Any) → [Client Default](domains/clearing-services-and-accounts/concepts.md#client-default), [Clearing Member Default](domains/clearing-services-and-accounts/concepts.md#clearing-member-default), [CCP Loss Allocation](domains/risk/concepts.md#ccp-loss-allocation), [Settlement Fail](domains/post-trade-operations/concepts.md#settlement-fail)
+- “default” (Any) → [Client Default](domains/clearing-services-and-accounts/concepts.md#client-default), [Clearing Member Default](domains/clearing-services-and-accounts/concepts.md#clearing-member-default), [CCP Loss Allocation](domains/risk/concepts.md#ccp-loss-allocation), [Settlement Fail](domains/post-trade-operations/concepts.md#settlement-fail), [Margin Call](domains/margin-and-collateral/concepts.md#margin-call)
 - “default allocation” (any) → [Allocation Instruction](domains/execution/concepts.md#allocation-instruction)
-- “default auction, hedged auction” (CCP default management) → [Default Management Auction](domains/risk/concepts.md#default-management-auction)
+- “default auction, hedged auction” (CCP default management) → [Clearing Member Default](domains/clearing-services-and-accounts/concepts.md#clearing-member-default)
 - “default event” (any, ambiguous) → [Clearing Member Default](domains/clearing-services-and-accounts/concepts.md#clearing-member-default)
 - “deficit” (contextual, US futures) → [Margin Excess or Shortfall](domains/margin-and-collateral/concepts.md#margin-excess-or-shortfall)
 - “delivery” (physical, contextual) → [Final Settlement](domains/post-trade-operations/concepts.md#final-settlement)
@@ -455,8 +461,8 @@ Informal words and abbreviations, and the concept they point to.
 - “EMIR client” (EMIR Art. 2(15)) → [Client](domains/parties-and-roles/concepts.md#client)
 - “end-of-day report” (CCP) → [CCP Report](domains/post-trade-operations/concepts.md#ccp-report)
 - “equivalence” (EU and UK usage) → [Equivalence Decision](domains/regulation-and-rule-changes/concepts.md#equivalence-decision)
-- “error account, error trade” (Execution) → [Error Position](domains/risk/concepts.md#error-position), [Execution Error](domains/risk/concepts.md#execution-error)
-- “error trade” (venue usage) → [Execution Correction](domains/execution/concepts.md#execution-correction)
+- “error account” (Execution) → [Error Position](domains/risk/concepts.md#error-position)
+- “error trade” (Execution) → [Execution Correction](domains/execution/concepts.md#execution-correction), [Error Position](domains/risk/concepts.md#error-position)
 - “establishment” (regulatory usage) → [Branch](domains/parties-and-roles/concepts.md#branch)
 - “excess” (contextual) → [Margin Excess or Shortfall](domains/margin-and-collateral/concepts.md#margin-excess-or-shortfall)
 - “exchange” (Any) → [Trading Venue](domains/instruments-venues-and-calendars/concepts.md#trading-venue), [Legal Entity](domains/parties-and-roles/concepts.md#legal-entity)
@@ -479,7 +485,7 @@ Informal words and abbreviations, and the concept they point to.
 - “fail” → [Settlement Fail](domains/post-trade-operations/concepts.md#settlement-fail)
 - “failed delivery” → [Settlement Fail](domains/post-trade-operations/concepts.md#settlement-fail)
 - “failed payment” → [Settlement Fail](domains/post-trade-operations/concepts.md#settlement-fail)
-- “fat finger” (Execution) → [Execution Error](domains/risk/concepts.md#execution-error)
+- “fat finger” (Execution) → [Execution Correction](domains/execution/concepts.md#execution-correction), [Error Position](domains/risk/concepts.md#error-position)
 - “FCM” (US) → [Clearing Broker](domains/clearing-services-and-accounts/concepts.md#clearing-broker), [Regulatory Classification](domains/regulation-and-rule-changes/concepts.md#regulatory-classification)
 - “FCM” (US, contextual) → [Regulatory Authorisation](domains/regulation-and-rule-changes/concepts.md#regulatory-authorisation)
 - “fee correction” (any) → [Fee Adjustment](domains/fees-revenue-and-contribution/concepts.md#fee-adjustment)
@@ -501,7 +507,8 @@ Informal words and abbreviations, and the concept they point to.
 - “give-up instruction” (listed, giving side) → [Give-up Line](domains/clearing-give-up-and-acceptance/concepts.md#give-up-line)
 - “give-up payment” (contextual, executing brokerage paid on the client's behalf) → [Pass-through Charge](domains/fees-revenue-and-contribution/concepts.md#pass-through-charge)
 - “give-up reference” (listed give-up usage) → [Account Identifier](domains/parties-and-roles/concepts.md#account-identifier)
-- “give-up risk, unallocated risk” (Executing side before take-up) → [Unaccepted Give-up Exposure](domains/risk/concepts.md#unaccepted-give-up-exposure)
+- “give-up risk” (Giving clearing member before registration to the receiving member) → [Unaccepted Give-up Exposure](domains/risk/concepts.md#unaccepted-give-up-exposure)
+- “group of clients defined for risk purposes, risk group, connected clients” (Provider's risk function) → [Client Risk Group](domains/risk/concepts.md#client-risk-group)
 - “guarantee fund contribution” (contextual, some CCPs) → [Default Fund Contribution](domains/margin-and-collateral/concepts.md#default-fund-contribution)
 - “haircut” (any) → [Collateral Haircut](domains/margin-and-collateral/concepts.md#collateral-haircut)
 - “house margin” (ambiguous with margin on the house account; avoid) → [Client Margin Uplift](domains/margin-and-collateral/concepts.md#client-margin-uplift)
@@ -520,17 +527,17 @@ Informal words and abbreviations, and the concept they point to.
 - “internal client” (ambiguous: may mean another desk of the same entity) → [Intra-group Client](domains/parties-and-roles/concepts.md#intra-group-client)
 - “internal client account” (clearing usage) → [Client Account](domains/parties-and-roles/concepts.md#client-account)
 - “internal deadline” → [Firm Cut-off](domains/post-trade-operations/concepts.md#firm-cut-off)
-- “internal rating, client rating” (Provider's risk function) → [Client Risk Rating](domains/risk/concepts.md#client-risk-rating)
+- “internal rating, client rating” (Provider's risk function) → [Client Credit Assessment](domains/risk/concepts.md#client-credit-assessment)
 - “international branch” (LEI usage) → [Branch](domains/parties-and-roles/concepts.md#branch)
 - “ISA” (EU usage) → [Individually Segregated Client Account](domains/clearing-services-and-accounts/concepts.md#individually-segregated-client-account)
-- “kill switch, panic button” (Execution) → [Kill Switch Activation](domains/risk/concepts.md#kill-switch-activation)
+- “kill switch, panic button” (Execution) → no concept: an emergency mass cancel of a participant's open orders; not a Pre-trade Control Check, not a trading halt; see the risk-expert skill
 - “last trading day rule” → [Key-Date Rule](domains/instruments-venues-and-calendars/concepts.md#key-date-rule)
 - “late payment” (contextual) → [Settlement Fail](domains/post-trade-operations/concepts.md#settlement-fail)
 - “ledger balance, cash balance” (account statements) → [Account Cash Balance](domains/margin-and-collateral/concepts.md#account-cash-balance)
 - “leg fill” (desk usage) → [Strategy Leg Execution](domains/execution/concepts.md#strategy-leg-execution)
 - “legal view” (contextual) → [Regulatory Interpretation](domains/regulation-and-rule-changes/concepts.md#regulatory-interpretation)
 - “licence” → [Regulatory Authorisation](domains/regulation-and-rule-changes/concepts.md#regulatory-authorisation)
-- “limit” (Any) → [Risk Limit](domains/risk/concepts.md#risk-limit), [Clearing Limit](domains/clearing-give-up-and-acceptance/concepts.md#clearing-limit), [Pre-trade Limit](domains/risk/concepts.md#pre-trade-limit), [Position Limit](domains/regulation-and-rule-changes/concepts.md#position-limit), [Concentration Limit](domains/margin-and-collateral/concepts.md#concentration-limit)
+- “limit” (Any) → [Risk Limit](domains/risk/concepts.md#risk-limit), [Clearing Limit](domains/clearing-give-up-and-acceptance/concepts.md#clearing-limit), [Rule Provision](domains/regulation-and-rule-changes/concepts.md#rule-provision), [Position Limit](domains/regulation-and-rule-changes/concepts.md#position-limit), [Concentration Limit](domains/margin-and-collateral/concepts.md#concentration-limit)
 - “limit check or credit check” (OTC, contextual) → [Submission Acceptance](domains/clearing-give-up-and-acceptance/concepts.md#submission-acceptance)
 - “limit excess, limit breach” (Firm risk limits) → [Limit Breach](domains/risk/concepts.md#limit-breach)
 - “limit usage, headroom” (Any risk limit) → [Limit Utilisation](domains/risk/concepts.md#limit-utilisation)
@@ -604,7 +611,7 @@ Informal words and abbreviations, and the concept they point to.
 - “ownership group” (any, for the set of entities under one ultimate parent) → [Parent Entity](domains/parties-and-roles/concepts.md#parent-entity)
 - “PAA” (OTC clearing) → [Price Alignment Amount](domains/margin-and-collateral/concepts.md#price-alignment-amount)
 - “PAI” (OTC clearing) → [Price Alignment Amount](domains/margin-and-collateral/concepts.md#price-alignment-amount)
-- “parent guarantee, letter of credit” (Client credit support) → [Credit Support Arrangement](domains/risk/concepts.md#credit-support-arrangement)
+- “parent guarantee, letter of credit” (Client credit support, not accepted as collateral) → [Third-party Credit Support](domains/risk/concepts.md#third-party-credit-support)
 - “parent order” (desk and algorithm usage) → [Client Order](domains/execution/concepts.md#client-order)
 - “participation requirements” (PFMI) → [Access Requirement](domains/service-offering-and-market-access/concepts.md#access-requirement)
 - “payment deadline” → [Settlement Deadline](domains/post-trade-operations/concepts.md#settlement-deadline)
@@ -612,12 +619,13 @@ Informal words and abbreviations, and the concept they point to.
 - “phase-in” → [Phase-in Step](domains/regulation-and-rule-changes/concepts.md#phase-in-step)
 - “portability” (regulatory, the property of being portable) → [Porting](domains/clearing-services-and-accounts/concepts.md#porting)
 - “position change” → [Position Adjustment](domains/clearing-services-and-accounts/concepts.md#position-adjustment)
+- “position limit breach, position limit excess” (regulator or venue limits) → [Position Limit](domains/regulation-and-rule-changes/concepts.md#position-limit)
 - “position maintenance” → [Position Adjustment](domains/clearing-services-and-accounts/concepts.md#position-adjustment)
 - “position move” (any) → [Position Transfer](domains/clearing-services-and-accounts/concepts.md#position-transfer)
 - “position rec” → [Position Reconciliation](domains/post-trade-operations/concepts.md#position-reconciliation)
 - “position-keeping account” (any) → [CCP Position Account](domains/clearing-services-and-accounts/concepts.md#ccp-position-account)
 - “pre-clearing trade” (any) → [Executed Trade](domains/execution/concepts.md#executed-trade)
-- “pre-trade risk check, pre-trade risk limit” (Execution) → [Pre-trade Limit](domains/risk/concepts.md#pre-trade-limit), [Pre-trade Control Check](domains/execution/concepts.md#pre-trade-control-check)
+- “pre-trade risk check, pre-trade risk limit” (Execution) → [Risk Limit](domains/risk/concepts.md#risk-limit), [Pre-trade Control Check](domains/execution/concepts.md#pre-trade-control-check)
 - “premium” (options) → [Option Premium](domains/post-trade-operations/concepts.md#option-premium)
 - “price list” (venue and CCP usage) → [Published Fee Schedule](domains/fees-revenue-and-contribution/concepts.md#published-fee-schedule)
 - “price point” (any) → [Fee Rate](domains/fees-revenue-and-contribution/concepts.md#fee-rate)
@@ -664,7 +672,7 @@ Informal words and abbreviations, and the concept they point to.
 - “session, gateway” (venue usage, contextual) → [Connectivity Route](domains/service-offering-and-market-access/concepts.md#connectivity-route)
 - “settlement bank account” → [Settlement Account](domains/post-trade-operations/concepts.md#settlement-account)
 - “settlement cut-off” → [Settlement Deadline](domains/post-trade-operations/concepts.md#settlement-deadline)
-- “skin in the game, SITG” (CCP default resources) → [CCP Dedicated Own Resources](domains/risk/concepts.md#ccp-dedicated-own-resources)
+- “skin in the game, SITG” (CCP default resources) → [Default Waterfall](domains/risk/concepts.md#default-waterfall)
 - “slice” (algorithm usage) → [Child Order](domains/execution/concepts.md#child-order)
 - “special executive report” (one exchange group's usage) → [Change Notice](domains/regulation-and-rule-changes/concepts.md#change-notice)
 - “sponsor” → [Sponsoring Clearing Member](domains/clearing-services-and-accounts/concepts.md#sponsoring-clearing-member)
@@ -678,7 +686,7 @@ Informal words and abbreviations, and the concept they point to.
 - “standing instruction, SSI-style allocation” (desk usage, ambiguous with settlement instructions) → [Allocation Instruction](domains/execution/concepts.md#allocation-instruction)
 - “statement” (broker, bank or CCP) → [Source Record](domains/post-trade-operations/concepts.md#source-record)
 - “street-side order” (US usage) → [Child Order](domains/execution/concepts.md#child-order)
-- “stress test result, stress exposure” (Any) → [Stress Loss](domains/risk/concepts.md#stress-loss)
+- “stress test result, stress exposure” (Any) → [Risk Exposure](domains/risk/concepts.md#risk-exposure)
 - “sub-account” (CCP usage, ambiguous) → [CCP Position Account](domains/clearing-services-and-accounts/concepts.md#ccp-position-account)
 - “sub-broker” (any, ambiguous) → [Third-party Executing Member](domains/execution/concepts.md#third-party-executing-member)
 - “sub-fund” (umbrella structures) → [Investment Fund](domains/parties-and-roles/concepts.md#investment-fund)
@@ -709,6 +717,7 @@ Informal words and abbreviations, and the concept they point to.
 - “transfer” (listed, ambiguous with give-up) → [Position Transfer](domains/clearing-services-and-accounts/concepts.md#position-transfer)
 - “transfer of client positions on default” (EMIR) → [Porting](domains/clearing-services-and-accounts/concepts.md#porting)
 - “transferee clearing member” (CCP rules) → [Back-up Clearing Member](domains/clearing-services-and-accounts/concepts.md#back-up-clearing-member)
+- “unallocated risk” (Execution) → pending: quantity executed for a client and not yet allocated is not covered by Unaccepted Give-up Exposure (decision 28); ask
 - “underlier” → [Underlying](domains/instruments-venues-and-calendars/concepts.md#underlying)
 - “underlying client” (omnibus usage) → [Economic Beneficiary](domains/parties-and-roles/concepts.md#economic-beneficiary)
 - “unmatched item” (contextual) → [Reconciliation Break](domains/post-trade-operations/concepts.md#reconciliation-break)

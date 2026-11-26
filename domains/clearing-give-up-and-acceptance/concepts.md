@@ -86,7 +86,6 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 - *decided by* [Clearing Member](../clearing-services-and-accounts/concepts.md#clearing-member) — Record outcome (accepted, partially accepted, rejected), quantity and time.
 - *concerns* [Trade](../execution/concepts.md#trade) — Or an allocated quantity of it; designation of a member is not its acceptance.
-- [Unaccepted Give-up Exposure](../risk/concepts.md#unaccepted-give-up-exposure) *ends at* Clearing Member Acceptance — For the quantity accepted, once the CCP records it in the receiving member's account (decision 5).
 - [Give-up Line](#give-up-line) *is answered by* Clearing Member Acceptance
 - [Receiving Clearing Member](#receiving-clearing-member) *decides* Clearing Member Acceptance
 
@@ -187,6 +186,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Connected to:**
 
+- [Unaccepted Give-up Exposure](../risk/concepts.md#unaccepted-give-up-exposure) *arises in* Give-up after First Registration — Or where a give-up designated in advance is not accepted.
 - *is carried meanwhile by* [Giving Clearing Member](#giving-clearing-member)
 - *must finish before* [Take-up Deadline](#take-up-deadline)
 - *ends with* [Give-up Registration](#give-up-registration)
@@ -241,6 +241,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Connected to:**
 
+- [Unaccepted Give-up Exposure](../risk/concepts.md#unaccepted-give-up-exposure) *ends with* Give-up Registration — For each quantity registered to the receiving member's CCP account, per the CCP record (decision 5). Corrected 2026-11 (was Clearing Member Acceptance).
 - [Give-up Line](#give-up-line) *is completed by* Give-up Registration
 - [Give-up after First Registration](#give-up-after-first-registration) *ends with* Give-up Registration
 - *records the quantity in* [CCP Account](../clearing-services-and-accounts/concepts.md#ccp-account)
@@ -345,7 +346,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Connected to:**
 
-- [Unaccepted Give-up Exposure](../risk/concepts.md#unaccepted-give-up-exposure) *observed by* Giving Clearing Member — With the executing broker that gave up the trade.
+- [Unaccepted Give-up Exposure](../risk/concepts.md#unaccepted-give-up-exposure) *observed by* Giving Clearing Member — The giving clearing member, which carries the quantities at the CCP; where the executing broker is not that member, it bears them under the give-up agreement (see the observed_by Executing Broker row).
 - [Give-up after First Registration](#give-up-after-first-registration) *is carried meanwhile by* Giving Clearing Member
 - *clears for* [Executing Broker](../execution/concepts.md#executing-broker)
 - *gives up in* [Give-up / Take-up Process](#give-up--take-up-process)
@@ -382,7 +383,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 *The pre-agreed ceiling up to which a clearing broker accepts a client's trades without a manual check.*
 
-**Definition.** Limit set by a clearing member or clearing broker, usually by its risk function, for an identified client, account, executing broker or product scope, with an owner, a basis (for example quantity, notional or risk), a version and an effective period. The same limit can screen orders before execution (in a pre-trade control check) and decide automatic acceptance after execution (at take-up or submission acceptance); beyond it trades are referred or rejected. A give-up agreement or client clearing agreement may refer to it or allow it; it does not usually contain its value. It is not a rule provision, and a change to a limit is not a rule change. New concept without a level-1 parent.
+**Definition.** Kind of Risk Limit set by a clearing member or clearing broker, usually by its risk function, for an identified client, account, executing broker or product scope, with an owner, a basis (for example quantity, notional or risk), a version and an effective period. The same limit can screen orders before execution (in a pre-trade control check) and decide automatic acceptance after execution (at take-up or submission acceptance); beyond it trades are referred or rejected. A give-up agreement or client clearing agreement may refer to it or allow it; it does not usually contain its value. It is not a rule provision, and a change to a limit is not a rule change.
 
 **Example.** Clearing Broker Y lets Executing Broker X give up Client A's trades in one futures contract up to a set number of lots per day.
 
@@ -399,7 +400,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Give-up Designated in Advance](#give-up-designated-in-advance) *usually relies on* Clearing Limit
 - *may be referred to in* [Give-up Agreement](#give-up-agreement)
 - *may be allowed by* [Client Clearing Agreement](../clearing-services-and-accounts/concepts.md#client-clearing-agreement)
-- *may be applied by* [Pre-trade Control Check](../execution/concepts.md#pre-trade-control-check)
+- *may be applied by* [Pre-trade Control Check](../execution/concepts.md#pre-trade-control-check) — Inverse of a “may apply” link.
 - *is applied in* [Take-up](#take-up)
 - *is applied in* [Submission Acceptance](#submission-acceptance)
 - [Position Limit](../regulation-and-rule-changes/concepts.md#position-limit) *is distinct from* Clearing Limit

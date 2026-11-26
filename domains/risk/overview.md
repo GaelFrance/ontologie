@@ -5,14 +5,14 @@
 A broker that executes and clears derivatives for clients can lose money in three different places, and this domain keeps them apart:
 
 1. **Risk we take on the clients we clear.** As clearing broker we guarantee our clients' trades to the CCP. If a client cannot pay a margin call, we still pay the CCP, and we may have to close out the client's positions at a loss.
-2. **Execution risk.** Orders we send to venues can be wrong or too large, and trades we execute can stay with us if the clearing broker does not take them up.
+2. **Execution risk.** Orders we send to venues can be wrong or too large, and trades we execute can stay with us if the clearing broker does not take them up. This unaccepted give-up risk belongs to execution because it arises from executing for a client who is cleared elsewhere.
 3. **CCP risk.** As a clearing member we have money at each CCP (margin and default fund contributions) and we have promised more if another member defaults. If a member fails, or the CCP itself is in trouble, we can lose part of it.
 
 The domain describes these risks in words: who could lose, toward whom, what limits apply and what happens when something goes wrong. It sets no risk model, scenario or limit value.
 
 ## Who is involved
 
-- The **risk function** of the clearing broker or executing broker, which assesses clients and CCPs, sets limits and follows breaches. It is an internal team, not a party.
+- The **risk function** (the domain owner is the head of clearing risk or a delegate) of the clearing broker or executing broker, which assesses clients and CCPs, sets limits and follows breaches. It is an internal team, not a party.
 - The **client**, and the third parties that may guarantee it.
 - The **executing broker** and the **trading venue member**, which control orders before they reach the venue.
 - The **clearing member** and the **central counterparty**, with the CCP's default rules and resources.
@@ -21,13 +21,13 @@ The domain describes these risks in words: who could lose, toward whom, what lim
 
 **The clients we clear.** Before we clear for a client, the risk function reviews it, gives it an internal rating and sets limits: how much it may trade or how much exposure it may represent. Every day, and often during the day, we measure our exposure to the client after the collateral it gave us, and compare it with the limit. If the limit is exceeded, we warn, refer, ask for more margin or block new trades. If the client cannot pay, we declare it in default and close out, hedge or transfer its positions, using its collateral and any guarantee.
 
-**Execution.** Each order is checked before it reaches the venue against limits such as a maximum size or a price collar. If something goes badly wrong, a kill switch cancels all of a participant's orders at once. When an order is executed wrongly by the executing side, the wrong part goes to an error account at the broker's own risk. And until the clearing broker takes up a given-up trade, the executing side keeps the trade and its risk.
+**Execution.** Each order is checked before it reaches the venue against limits such as a maximum size or a price collar. If something goes badly wrong, a kill switch cancels all of a participant's orders at once. When an order is executed wrongly, the venue may cancel or correct it under its error-trade rules; what cannot be corrected goes to an error account at the responsible party's own risk. Until the CCP registers a given-up trade to the clearing broker, the giving clearing member keeps the trade and its risk. If the give-up is rejected or lapses, the trade stays there, still cleared, until it is given up late, transferred or closed out.
 
-**The CCPs.** Before joining a CCP and every year after, the risk function reviews it: its resources, its default rules and what it can ask from members. If a member defaults, the CCP uses resources in a fixed order, called the default waterfall: the defaulter's margin and default fund contribution, then its own capital, then the other members' contributions, then further calls on the surviving members. It auctions the defaulter's positions to the members. If all prefunded resources are used, it can pass losses on to members by other tools set in its rules.
+**The CCPs.** Before joining a CCP and periodically, the risk function reviews it: its resources, its default rules and what it can ask from members. If a member defaults, the CCP uses resources in an order set in its rules, called the default waterfall: for example under EU EMIR, the defaulter's house margin and default fund contribution, then the CCP's own dedicated capital, then the other members' contributions, then further calls (to verify). It auctions the defaulter's positions to the members. If all prefunded resources are used, it can pass losses on to members by other tools set in its rules.
 
 ## Ideas to hold apart
 
-1. **Who could lose, toward whom.** Our exposure to a client, our exposure on trades not yet taken up, and our exposure to a CCP are three different measures; the CCP's exposure to us is what our margin covers.
+1. **Who could lose, toward whom.** Our exposure to a client, our exposure on trades not yet taken up, and our exposure to a CCP are three different measures; the CCP's exposure to us is what the CCP covers with the collateral we post.
 2. **Exposure versus margin.** What we could lose is not the margin that must be posted.
 3. **A firm limit versus a rule.** A limit our risk function sets is a decision; a position limit set by a regulator or venue is a rule; a concentration limit caps collateral.
 4. **A check versus a breach.** A pre-trade check stops an order before a limit is exceeded; a breach is a limit already exceeded.

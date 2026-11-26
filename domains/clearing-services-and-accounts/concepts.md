@@ -16,7 +16,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Not to be confused with.** Service Offering: the clearing service a broker sells to its clients, not the CCP's.
 
-**Breaks down into:** [Default Fund Contribution](../margin-and-collateral/concepts.md#default-fund-contribution) (part of), [Clearing Contract](../instruments-venues-and-calendars/concepts.md#clearing-contract) (part of), [Clearing Eligibility Schedule](../instruments-venues-and-calendars/concepts.md#clearing-eligibility-schedule) (part of)
+**Breaks down into:** [Clearing Contract](../instruments-venues-and-calendars/concepts.md#clearing-contract) (part of), [Clearing Eligibility Schedule](../instruments-venues-and-calendars/concepts.md#clearing-eligibility-schedule) (part of), [Default Fund Contribution](../margin-and-collateral/concepts.md#default-fund-contribution) (part of)
 
 **Words people use:** “service” (Any)
 
@@ -76,7 +76,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Clearing Broker](#clearing-broker) *clears through* Clearing Member — When the clearing broker is not itself a member of the clearing service; at most one per service and period.
 - [CCP Account](#ccp-account) *held in name of* Clearing Member — The clearing member in whose name the CCP opens the account.
 - [CCP Exposure](../risk/concepts.md#ccp-exposure) *observed by* Clearing Member — Per clearing service.
-- [Default Fund Assessment](../risk/concepts.md#default-fund-assessment) *is owed by* Clearing Member — A non-defaulting clearing member of the clearing service.
+- [Default Fund Assessment](../risk/concepts.md#default-fund-assessment) *is owed by the holder of* Clearing Member — A non-defaulting clearing member of the clearing service. Corrected 2026-11 (was is_owed_by), aligned with a “is owed by the holder of” link.
 - [Non-Clearing Member](../parties-and-roles/concepts.md#non-clearing-member) *clears through a general* Clearing Member
 - [Non-Clearing Member Arrangement](../service-offering-and-market-access/concepts.md#non-clearing-member-arrangement) *is intermediated by the general clearing member role of* Clearing Member
 - [Sponsored Clearing Arrangement](../service-offering-and-market-access/concepts.md#sponsored-clearing-arrangement) *is intermediated by the sponsoring* Clearing Member
@@ -359,7 +359,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 *The contract between a client and its clearing broker that sets how the client is cleared: legal model, segregation, margin, collateral, limits, fees and what happens on default.*
 
-**Definition.** Agreement, made of one or more documents, under which a clearing broker clears an identified client's trades in one or more clearing services, setting the client clearing legal model (principal-to-principal or agency), the segregation election per clearing service, margin and collateral terms, the basis on which the clearing broker may set clearing limits, charges, whether the client may itself clear for indirect clients, and what happens on the default of either party, including porting and close-out. It also documents the non-clearing member model, where a general clearing member clears for a venue member.
+**Definition.** Agreement, made of one or more documents, under which a clearing broker clears an identified client's trades in one or more clearing services, setting the client clearing legal model (principal-to-principal or agency), the segregation election per clearing service, margin and collateral terms, the basis on which the clearing broker may set clearing limits, charges, whether the client may itself clear for indirect clients, and what happens on the default of either party, including porting and close-out, any third-party credit support given for the client, and how CCP loss allocation is passed on to the client. It also documents the non-clearing member model, where a general clearing member clears for a venue member.
 
 **Example.** Client A signs a client clearing agreement with Clearing Broker Y covering listed derivatives at CCP Z and interest rate swaps at CCP W, electing omnibus segregation at both.
 
@@ -372,8 +372,8 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 **Connected to:**
 
 - *elects* [Segregation Model](#segregation-model) — Per clearing service and time-bounded; legal protection is a Legal conclusion, never inferred from the model name.
-- [Credit Support Arrangement](../risk/concepts.md#credit-support-arrangement) *supports* Client Clearing Agreement — Or the agreement under which the client owes the broker.
-- [Client Default Management](../risk/concepts.md#client-default-management) *is governed by* Client Clearing Agreement
+- [Third-party Credit Support](../risk/concepts.md#third-party-credit-support) *supports* Client Clearing Agreement — Or the agreement under which the client owes the broker.
+- Client Default Management (retired) *is governed by* Client Clearing Agreement — Kept for ID stability: Client Default Management is deprecated (decision 28); a “arises under” link links Client Default to Client Clearing Agreement.
 - [Access Agreement](../service-offering-and-market-access/concepts.md#access-agreement) *is distinct from* Client Clearing Agreement
 - [Indirect Clearing Arrangement](../service-offering-and-market-access/concepts.md#indirect-clearing-arrangement) *is documented at each link by a* Client Clearing Agreement
 - [Clearing Limit](../clearing-give-up-and-acceptance/concepts.md#clearing-limit) *may be allowed by* Client Clearing Agreement
@@ -588,13 +588,15 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *may give rise to a transfer fee* [Fee Charge](../fees-revenue-and-contribution/concepts.md#fee-charge)
 - *is not* [Give-up / Take-up Process](../clearing-give-up-and-acceptance/concepts.md#give-up--take-up-process)
 
+**Open questions on its meaning:** “Give-up, transfer, porting” (open, answer proposed) — see the [review sheet](review.md).
+
 <sub>Event · added in review round 2 · Draft · reference LD-C0153 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
 
 ### Clearing Member Default
 
 *The CCP formally declares that a member has failed, which starts the default procedures.*
 
-**Definition.** Declaration by a central counterparty, under a clearing service's default rules, that a clearing member is in default, which starts the CCP's default management of that member's house and client accounts in each service concerned (for example porting, close-out, auctions and use of default resources). Distinct from a client defaulting toward its clearing broker, which the client clearing agreement governs.
+**Definition.** Declaration by a central counterparty, under a clearing service's default rules, that a clearing member is in default, which starts the CCP's default management of that member's house and client accounts in each service concerned (for example Porting of client positions and collateral, hedging and close-out, an auction, and use of the Default Waterfall). Distinct from a client defaulting toward its clearing broker, which the client clearing agreement governs.
 
 **Example.** CCP Z declares Clearing Member P in default; Client A's positions held through P become eligible for porting.
 
@@ -602,14 +604,15 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Kind of:** [Lifecycle Event](../post-trade-operations/concepts.md#lifecycle-event)
 
-**Breaks down into:** [Default Management Auction](../risk/concepts.md#default-management-auction) (step in), [Porting](#porting) (step in)
+**Values (draft list):** step: hedge; port; close out; auction (with any juniorisation of poor bidders); apply waterfall; return balance
 
-**Words people use:** “default event” (any, ambiguous); “declaration of default” (CCP rules); “default” (Any)
+**Words people use:** “default event” (any, ambiguous); “declaration of default” (CCP rules); “default auction, hedged auction” (CCP default management); “default” (Any)
 
 **Before using it, know:** Clearing service, declaring CCP, date and time of declaration under its rules.
 
 **Connected to:**
 
+- Default Management Auction (retired) *follows* Clearing Member Default — The CCP's default management of the defaulter's house and client accounts not ported. Corrected 2026-11 (was step_in). Kept for ID stability: Default Management Auction is deprecated (decision 28); the auction is now a step value of Clearing Member Default.
 - *may use* [Default Fund Contribution](../margin-and-collateral/concepts.md#default-fund-contribution)
 - *may start* [Porting](#porting)
 
@@ -627,8 +630,6 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Not to be confused with.** Position Transfer: a voluntary move requested by the member or client.
 
-**Step in:** [Clearing Member Default](#clearing-member-default)
-
 **Values (draft list):** outcome: ported, closed out, partly ported; leg: positions, collateral
 
 **Words people use:** “portability” (regulatory, the property of being portable); “transfer of client positions on default” (EMIR)
@@ -637,12 +638,14 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Connected to:**
 
-- [Default Management Auction](../risk/concepts.md#default-management-auction) *is distinct from* Porting
-- [Clearing Member Default](#clearing-member-default) *may start* Porting
+- Default Management Auction (retired) *is distinct from* Porting — Kept for ID stability: Default Management Auction is deprecated (decision 28); auction and porting are now separate step values of Clearing Member Default.
+- *follows* [Clearing Member Default](#clearing-member-default) — Level-2 structure (2026-11 domain review). Corrected 2026-11 (was step_in).
 - *transfers to* [Back-up Clearing Member](#back-up-clearing-member)
 - *moves the content of* [CCP Account](#ccp-account)
 - *moves as a separate leg* [Collateral](../margin-and-collateral/concepts.md#collateral)
 - *depends on the segregation applied to* [Segregation Model](#segregation-model)
+
+**Open questions on its meaning:** “Give-up, transfer, porting” (open, answer proposed); “Default” (open, answer proposed) — see the [review sheet](review.md).
 
 <sub>Process · added in review round 2 · Draft · reference LD-C0155 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
 
@@ -726,7 +729,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 *When a clearing broker declares its own client in default and takes action on that client's positions.*
 
-**Definition.** Declaration by a clearing broker, under a client clearing agreement, that its client is in default, which allows the broker to close out, transfer or hedge the client's positions and use its collateral. It sits at the member-to-client tier and, under the principal-to-principal model, ends the client back-to-back trades. It is distinct from a Clearing Member Default declared by a CCP, and from a settlement fail or an unmet margin call, which may lead to it but are not it.
+**Definition.** Declaration by a clearing broker, under a client clearing agreement, that its client is in default, which allows the broker to close out, transfer or hedge the client's positions and use its collateral. It sits at the member-to-client tier and, under the principal-to-principal model, ends the client back-to-back trades. Where the defaulting client clears for indirect clients, the steps that follow it include handling their positions and collateral as the indirect clearing arrangement and the applicable rules require (to verify). It is distinct from a Clearing Member Default declared by a CCP, and from a settlement fail or an unmet margin call, which may lead to it but are not it.
 
 **Example.** Client A misses several margin calls; Clearing Broker Y declares an event of default under their agreement and closes out Client A's futures.
 
@@ -734,15 +737,15 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Kind of:** [Lifecycle Event](../post-trade-operations/concepts.md#lifecycle-event)
 
-**Values (draft list):** outcome: close-out; transfer; hedge
+**Values (draft list):** outcome: close-out; transfer; hedge · steps: stop new business; hedge; close out; terminate; transfer by Position Transfer; apply collateral and credit support; set off; return excess; claim shortfall
 
-**Words people use:** “default” (Any)
+**Words people use:** “close-out of a client, client liquidation” (Clearing broker after a client default); “default” (Any)
 
 **Before using it, know:** Client clearing agreement and legal model, regime, date of declaration.
 
 **Connected to:**
 
-- [Client Default Management](../risk/concepts.md#client-default-management) *follows* Client Default
+- Client Default Management (retired) *follows* Client Default — Kept for ID stability: Client Default Management is deprecated (decision 28); its steps are now step values of Client Default.
 - *arises under* [Client Clearing Agreement](#client-clearing-agreement)
 - *ends* [Client Back-to-Back Trade](#client-back-to-back-trade)
 - *may use* [Collateral](../margin-and-collateral/concepts.md#collateral)

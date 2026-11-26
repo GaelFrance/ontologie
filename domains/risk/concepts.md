@@ -4,46 +4,51 @@
 
 Concepts are grouped by family: a broad concept first, then the kinds or parts it breaks down into.
 
-**Contents:** [Risk Exposure](#risk-exposure) · [Client Clearing Exposure](#client-clearing-exposure) · [Unaccepted Give-up Exposure](#unaccepted-give-up-exposure) · [CCP Exposure](#ccp-exposure) · [Stress Loss](#stress-loss) · [Risk Limit](#risk-limit) · [Pre-trade Limit](#pre-trade-limit) · [Limit Utilisation](#limit-utilisation) · [Limit Breach](#limit-breach) · [Client Credit Assessment](#client-credit-assessment) · [Client Risk Rating](#client-risk-rating) · [Credit Support Arrangement](#credit-support-arrangement) · [Client Default Management](#client-default-management) · [Kill Switch Activation](#kill-switch-activation) · [Execution Error](#execution-error) · [Error Position](#error-position) · [CCP Risk Assessment](#ccp-risk-assessment) · [Default Waterfall](#default-waterfall) · [Default Fund Assessment](#default-fund-assessment) · [CCP Dedicated Own Resources](#ccp-dedicated-own-resources) · [Default Management Auction](#default-management-auction) · [CCP Loss Allocation](#ccp-loss-allocation)
+**Contents:** [Risk Exposure](#risk-exposure) · [Client Clearing Exposure](#client-clearing-exposure) · [Unaccepted Give-up Exposure](#unaccepted-give-up-exposure) · [CCP Exposure](#ccp-exposure) · [Risk Limit](#risk-limit) · [Limit Utilisation](#limit-utilisation) · [Limit Breach](#limit-breach) · [Client Risk Group](#client-risk-group) · [Client Credit Assessment](#client-credit-assessment) · [Third-party Credit Support](#third-party-credit-support) · [Error Position](#error-position) · [CCP Risk Assessment](#ccp-risk-assessment) · [Default Waterfall](#default-waterfall) · [Default Fund Assessment](#default-fund-assessment) · [CCP Loss Allocation](#ccp-loss-allocation)
 
 ### Risk Exposure
 
 *What we could lose toward someone if they fail, measured at a point in time.*
 
-**Definition.** Amount that an observing entity stands to lose toward an identified counterparty, account or scope (a client, a group of clients defined for risk purposes, an executing broker, a central counterparty or a clearing service) if that counterparty fails to perform, or if positions the observing entity carries for it must be closed out, at an as-of time and in a currency basis. It states its risk area (client clearing, execution or CCP), its measure basis (current exposure, potential future exposure, stress loss or contingent obligation) and whether collateral and credit support held are taken into account. How it is calculated is set by the observing entity's risk methodology and is not part of this definition. Distinct from Margin Requirement, which is an amount a margin provider must provide, and from Position, which is an open quantity.
+**Definition.** Amount that an observing entity stands to lose toward an identified counterparty, account or scope (a client, a group of clients defined for risk purposes, an executing broker, a central counterparty or a clearing service) if that counterparty fails to perform, or if positions the observing entity carries for it must be closed out, at an as-of time and in a currency basis. It states its risk area (client clearing, execution or CCP), its measure basis (current exposure, potential future exposure, stress loss under a named scenario, or contingent obligation), whether it is stated before or after collateral and credit support held and, if after, at which collateral valuation. How it is calculated is set by the observing entity's risk methodology and is not part of this definition. Distinct from Margin Requirement, which is an amount a margin provider must provide, and from Position, which is an open quantity.
 
 **Example.** Clearing Broker Y measures how much it could lose on Client A tonight, after the collateral it holds.
 
 **Not to be confused with.** Margin Requirement: what must be posted; an exposure is what could be lost.
 
-**Breaks down into:** [Client Clearing Exposure](#client-clearing-exposure) (kind of), [Unaccepted Give-up Exposure](#unaccepted-give-up-exposure) (kind of), [CCP Exposure](#ccp-exposure) (kind of), [Stress Loss](#stress-loss) (kind of)
+**Breaks down into:** [Client Clearing Exposure](#client-clearing-exposure) (kind of), [Unaccepted Give-up Exposure](#unaccepted-give-up-exposure) (kind of), [CCP Exposure](#ccp-exposure) (kind of), Stress Loss (retired) (kind of)
 
-**Values (draft list):** risk area: client clearing; execution; CCP · basis: current exposure; potential future exposure; stress loss; contingent obligation
+**Values (draft list):** area: shared · risk area: client clearing; execution; CCP · basis: current exposure; potential future exposure; stress loss (named scenario, version); contingent obligation
 
-**Before using it, know:** Observing entity, counterparty or scope, risk area, measure basis, as-of time, currency, whether collateral and credit support are counted.
+**Words people use:** “stress test result, stress exposure” (Any)
+
+**Before using it, know:** Observing entity, counterparty or scope, risk area, measure basis, as-of time, currency, whether collateral and credit support are counted, valuation basis of collateral counted.
 
 **Connected to:**
 
 - *measured for* [Party Role](../parties-and-roles/concepts.md#party-role) — The counterparty in its role (client, executing broker, central counterparty), or an account or clearing service; never an internal team.
-- *takes into account* [Collateral](../margin-and-collateral/concepts.md#collateral) — Only where the exposure states it is net of collateral.
+- *takes into account* [Collateral](../margin-and-collateral/concepts.md#collateral) — Only where the exposure is stated after collateral, at the valuation the observing entity's risk methodology states.
 - *is distinct from* [Margin Requirement](../margin-and-collateral/concepts.md#margin-requirement)
 - [Risk Limit](#risk-limit) *caps* Risk Exposure — Or a quantity or activity, on the limit's stated basis.
+- *applies to* [Portfolio](../margin-and-collateral/concepts.md#portfolio) — For the stress loss basis: a portfolio, or an account, counterparty or clearing service. Moved 2026-11 from Stress Loss.
 
 **Open questions on its meaning:** “Risk” (open, answer proposed); “Exposure” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Measure · added in review round 1 · Draft · reference LD-C0231 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Measure · added in review round 1 · Draft · reference LD-C0231 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Client Clearing Exposure
 
 *What we could lose on a client we clear if it stopped paying.*
 
-**Definition.** Kind of risk exposure of a clearing broker toward a client it clears, or toward a group of clients defined for risk purposes: what the broker could lose if the client failed to meet a margin call or another obligation and the broker had to close out, hedge or transfer the client's positions, after the collateral and credit support it holds from the client, at an as-of time. It includes amounts the broker has paid or committed to the CCP for the client before receiving them from the client (for example a CCP intraday call funded before the client pays). Distinct from the CCP's exposure to the clearing member, from CCP Exposure (the member's exposure to the CCP) and from the margin requirement on the client's account.
+**Definition.** Kind of risk exposure of a clearing broker toward a client it clears, or toward a group of clients defined for risk purposes, at the member-to-client tier, whatever the client clearing legal model: what the broker could lose if the client failed to meet a margin call or another obligation and the broker had to close out, hedge or transfer its positions, stated before or after the collateral and credit support held from the client, as declared, at an as-of time. Where the client clears for Indirect Clients, it includes what the client owes for them. It is stated per client even where positions sit in an omnibus CCP account. It includes amounts the broker has paid or committed to the CCP for the client before receiving them. For a give-in it starts for each quantity at its registration to the broker's account. Distinct from the CCP's exposure to the clearing member, from CCP Exposure (the member's exposure to the CCP) and from the margin requirement on the client's account.
 
 **Example.** Client A misses a margin call; Clearing Broker Y has already paid the CCP and holds the loss risk.
 
 **Not to be confused with.** CCP Exposure: what we could lose toward the CCP, not toward the client.
 
 **Kind of:** [Risk Exposure](#risk-exposure)
+
+**Values (draft list):** area: clients we clear
 
 **Words people use:** “exposure” (Any); “credit exposure, counterparty exposure” (clearing broker toward a client)
 
@@ -53,49 +58,55 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 - *observed by* [Clearing Broker](../clearing-services-and-accounts/concepts.md#clearing-broker) — The clearing broker toward its client.
 - *concerns* [Client](../parties-and-roles/concepts.md#client) — Or a group of clients defined for risk purposes, which need not be the Commercial Group.
-- *is reduced by* [Credit Support Arrangement](#credit-support-arrangement) — Where the arrangement covers the client's clearing obligations.
+- *is reduced by* [Third-party Credit Support](#third-party-credit-support) — Where the arrangement covers the client's clearing obligations and the risk methodology counts it; a guarantee accepted as collateral counts as collateral instead.
 - *is distinct from* [CCP Exposure](#ccp-exposure)
 
 **Open questions on its meaning:** “Exposure” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Measure · added in review round 2 · Draft · reference LD-C0236 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Measure · added in review round 2 · Draft · reference LD-C0236 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Unaccepted Give-up Exposure
 
-*The risk the executing side keeps on trades the clearing broker has not taken up yet.*
+*The risk the giving clearing member, and through it the executing broker, keeps on trades until the CCP registers them to the clearing broker.*
 
-**Definition.** Kind of risk exposure that the giving side (the executing broker and its giving clearing member) carries on trades or allocated quantities executed for a client and not yet accepted by the receiving clearing member, whether pending take-up, rejected or lapsed, so that they stay with the giving member with their margin and default risk. It ends for a quantity when the receiving member's CCP account records it (decision 5).
+**Definition.** Kind of risk exposure carried on quantities of trades executed for a client in a listed clearing service that are registered to the giving clearing member and not yet registered to the receiving clearing member's CCP account, whether pending take-up, accepted but not yet registered, rejected or lapsed. Each figure states its observing party: the giving clearing member, which keeps those quantities at the CCP with their margin, fees and default risk, or the executing broker, where it is not itself that member, which bears them toward its clearing member under the give-up agreement. It ends for each quantity at its Give-up Registration to the receiving member's account, or when the quantity is transferred or closed out under the CCP's rules and the give-up agreement. An OTC trade submitted for clearing and not accepted is not covered. Distinct from Client Clearing Exposure, which the receiving clearing broker carries once the quantity is registered to it, and from an Error Position.
 
 **Example.** Executing Broker X's clearing member keeps Client A's trades after Clearing Broker Y rejects the give-up.
 
-**Not to be confused with.** Client Clearing Exposure: the clearing broker's risk after it accepted the trades.
+**Not to be confused with.** Client Clearing Exposure: the clearing broker's risk once the trades are registered to it.
 
 **Kind of:** [Risk Exposure](#risk-exposure)
 
-**Words people use:** “exposure” (Any); “give-up risk, unallocated risk” (Executing side before take-up)
+**Values (draft list):** area: execution
 
-**Before using it, know:** Giving side, client, receiving member, trades or quantities pending, rejected or lapsed, as-of time.
+**Words people use:** “exposure” (Any); “give-up risk” (Giving clearing member before registration to the receiving member)
+
+**Before using it, know:** Observing party (giving clearing member or executing broker), client, receiving member, trades or quantities pending, rejected or lapsed, as-of time.
 
 **Connected to:**
 
-- *observed by* [Giving Clearing Member](../clearing-give-up-and-acceptance/concepts.md#giving-clearing-member) — With the executing broker that gave up the trade.
-- *ends at* [Clearing Member Acceptance](../clearing-give-up-and-acceptance/concepts.md#clearing-member-acceptance) — For the quantity accepted, once the CCP records it in the receiving member's account (decision 5).
+- *observed by* [Giving Clearing Member](../clearing-give-up-and-acceptance/concepts.md#giving-clearing-member) — The giving clearing member, which carries the quantities at the CCP; where the executing broker is not that member, it bears them under the give-up agreement (see the observed_by Executing Broker row).
+- *ends with* [Give-up Registration](../clearing-give-up-and-acceptance/concepts.md#give-up-registration) — For each quantity registered to the receiving member's CCP account, per the CCP record (decision 5). Corrected 2026-11 (was Clearing Member Acceptance).
+- *observed by* [Executing Broker](../execution/concepts.md#executing-broker) — Where it is not the giving clearing member.
+- *arises in* [Give-up after First Registration](../clearing-give-up-and-acceptance/concepts.md#give-up-after-first-registration) — Or where a give-up designated in advance is not accepted.
 
 **Open questions on its meaning:** “Exposure” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Measure · added in review round 2 · Draft · reference LD-C0245 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Measure · added in review round 2 · Draft · reference LD-C0245 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### CCP Exposure
 
 *What we could lose toward a CCP if it failed or used our resources after another member's default.*
 
-**Definition.** Kind of risk exposure of a clearing member toward a central counterparty, per clearing service: what the member could lose if the CCP failed, or used the member's resources after another member's default or in a recovery, covering margin and default fund contribution posted that are not protected from the CCP's insolvency, committed further contributions (assessments) and, where the member guarantees the CCP's performance to its clients, client positions. Distinct from the CCP's exposure to the member, which the CCP covers with margin and the default fund, and from Client Clearing Exposure.
+**Definition.** Kind of risk exposure of a clearing member toward a central counterparty, per clearing service, stated separately for the house account and the client accounts: what the member could lose if the CCP failed, or used the member's resources after another member's default or in a recovery or resolution. It covers the replacement of the member's house positions; amounts due from the CCP and not yet received; collateral it has posted for margin requirements, including any excess and, under collateralised-to-market treatment, variation margin collateral, to the extent that the collateral arrangement does not protect it from the CCP's insolvency, as the member's legal assessment states; its Default Fund Contribution in all cases; committed further contributions (assessments) up to their cap; and, where the member stays liable to its clients if the CCP fails (as counterparty to the client back-to-back trades under the principal-to-principal model, or under a guarantee it has given), the client trades and client collateral concerned. Distinct from the CCP's exposure to the member and from Client Clearing Exposure.
 
-**Example.** Clearing Broker Y's default fund contribution and assessment commitment at CCP Z.
+**Example.** Clearing Broker Y, as clearing member of CCP Z: its default fund contribution and assessment commitment.
 
-**Not to be confused with.** The CCP's exposure to us, which our margin covers.
+**Not to be confused with.** The CCP's exposure to us, which the CCP covers with the collateral we post for our margin requirement.
 
 **Kind of:** [Risk Exposure](#risk-exposure)
+
+**Values (draft list):** area: CCPs
 
 **Words people use:** “exposure” (Any); “exposure to the CCP, CCP counterparty risk” (Clearing member toward a CCP)
 
@@ -106,54 +117,29 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Client Clearing Exposure](#client-clearing-exposure) *is distinct from* CCP Exposure
 - *observed by* [Clearing Member](../clearing-services-and-accounts/concepts.md#clearing-member) — Per clearing service.
 - *concerns* [Central Counterparty](../clearing-services-and-accounts/concepts.md#central-counterparty)
-- *includes* [Default Fund Contribution](../margin-and-collateral/concepts.md#default-fund-contribution) — Where the contribution is not protected from the CCP's insolvency.
+- *includes* [Default Fund Contribution](../margin-and-collateral/concepts.md#default-fund-contribution) — In all cases, since it can be used for another member's default.
 - *includes* [Default Fund Assessment](#default-fund-assessment) — As a committed further contribution, up to its cap.
+- *includes* [Collateral](../margin-and-collateral/concepts.md#collateral) — Posted to the CCP, as far as the collateral arrangement does not protect it from the CCP's insolvency.
 
 **Open questions on its meaning:** “Exposure” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Measure · added in review round 2 · Draft · reference LD-C0246 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
-
-### Stress Loss
-
-*What a portfolio would lose in a named extreme scenario.*
-
-**Definition.** Loss that an observing entity estimates for an identified portfolio, account, counterparty or clearing service under a named stress scenario (historical or hypothetical, with its version and as-of date), stated before or after the collateral held, as declared. It is used to size and monitor risk limits, client margin uplifts and the sizing of CCP default resources. Scenario design and calculation are not part of this definition.
-
-**Example.** Under a scenario of a sharp fall in equity indices, Client A's futures would lose a stated amount.
-
-**Not to be confused with.** Initial Margin Requirement: what must be posted, from the margin model, not from a stress scenario.
-
-**Kind of:** [Risk Exposure](#risk-exposure)
-
-**Values (draft list):** scenario kind: historical; hypothetical
-
-**Words people use:** “stress test result, stress exposure” (Any)
-
-**Before using it, know:** Scenario and version, portfolio or counterparty, as-of date, before or after collateral.
-
-**Connected to:**
-
-- *applies to* [Portfolio](../margin-and-collateral/concepts.md#portfolio) — Or an account, counterparty or clearing service.
-
-**Open questions on its meaning:** “Risk” (open, answer proposed) — see the [review sheet](review.md).
-
-<sub>Measure · added in review round 2 · Draft · reference LD-C0235 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Measure · added in review round 2 · Draft · reference LD-C0246 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Risk Limit
 
 *A cap our risk function sets on how much risk or activity a client, trader or CCP may represent.*
 
-**Definition.** Cap that an identified party, usually through its risk function, sets on a risk exposure, a quantity or an activity of an identified counterparty, account, trader, access or product scope, with an owner, a basis (for example quantity, notional, margin, credit exposure or stress loss), a version, an effective period, any warning level, and the action expected when it is reached (warn, refer, block, reduce). Kinds include the clearing limit, the pre-trade limit, the client credit limit and the CCP exposure limit. It is a decision of the party that sets it, not a rule provision, and a change to it is not a rule change. A cap set by a regulator or a venue on positions is a Position Limit; a cap on collateral is a Concentration Limit.
+**Definition.** Cap or permitted range that an identified party, usually through its risk function, sets on a risk exposure, a quantity or an activity of an identified counterparty (for example a client or an executing broker), account, trader, access or product scope, with an owner, a basis (for example quantity, notional, margin, credit exposure or stress loss), a version, an effective period, any warning level, and the action expected when it is reached (warn, refer, reject the trade or order, block new orders or trades, reduce). Kinds include the clearing limit, the pre-trade limit, the client credit limit and the CCP exposure limit. It is a decision of the party that sets it for that counterparty or scope, not a rule provision, and a change to it is not a rule change, even where a rule requires such limits (the requirement is a Regulatory Obligation). A parameter that a venue publishes in its rules or contract specifications for all participants (for example a price band or a maximum order quantity) is a Rule Provision applied in the same check, and a change to it is a Rule Change; a limit a venue sets for one participant, or that a participant sets in the venue's risk tools, is a Risk Limit. A limit a CCP sets on its own members is the CCP's control, recorded under its rules, not a Risk Limit of the firm. A cap set by a regulator or a venue on positions is a Position Limit; a cap on collateral is a Concentration Limit.
 
 **Example.** Clearing Broker Y caps Client A at a set exposure; above it new trades are referred.
 
 **Not to be confused with.** Position Limit: set by a regulator or a venue, not by the firm.
 
-**Breaks down into:** [Pre-trade Limit](#pre-trade-limit) (kind of), [Clearing Limit](../clearing-give-up-and-acceptance/concepts.md#clearing-limit) (kind of)
+**Breaks down into:** Pre-trade Limit (retired) (kind of), [Clearing Limit](../clearing-give-up-and-acceptance/concepts.md#clearing-limit) (kind of)
 
-**Values (draft list):** kind: clearing limit; pre-trade limit; client credit limit; CCP exposure limit; intraday limit · action: warn; refer; block; reduce
+**Values (draft list):** area: shared · kind: clearing limit; pre-trade limit; client credit limit; CCP exposure limit · monitoring time: intraday; end of day · action: warn; refer; reject; block; reduce · access: direct electronic access; sponsored access
 
-**Words people use:** “limit” (Any); “credit limit, client credit limit” (clearing broker toward a client)
+**Words people use:** “limit” (Any); “credit limit, client credit limit” (clearing broker toward a client); “pre-trade risk check, pre-trade risk limit” (Execution); “concentration limit” (collateral)
 
 **Before using it, know:** Party that set it, kind, scope, basis, version in force, warning level and action.
 
@@ -165,48 +151,25 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Limit Utilisation](#limit-utilisation) *measures use of* Risk Limit — On the limit's own basis and version.
 - [Limit Breach](#limit-breach) *concerns* Risk Limit — The version in force at the time of the breach.
 - [Client Credit Assessment](#client-credit-assessment) *sets* Risk Limit — Including the Clearing Limit.
+- *is applied in* [Pre-trade Control Check](../execution/concepts.md#pre-trade-control-check) — Kind pre-trade limit. Moved 2026-11 from Pre-trade Limit.
+- *applies to* [Order](../execution/concepts.md#order) — Kind pre-trade limit: before the order reaches the venue, or on entry at the venue. Moved 2026-11 from Pre-trade Limit.
 - [CCP Risk Assessment](#ccp-risk-assessment) *sets* Risk Limit — The CCP exposure limit and conditions.
 
 **Open questions on its meaning:** “Risk” (open, answer proposed); “Limit” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Reference Concept · added in review round 1 · Draft · reference LD-C0232 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
-
-### Pre-trade Limit
-
-*A limit checked on each order before it reaches the market.*
-
-**Definition.** Kind of risk limit applied in a pre-trade control check to an order before it reaches the venue, or by the venue on entry, set by the executing broker, the trading venue member, the clearing member or the venue for an identified client, trader, access or session and instrument scope: for example maximum order size or value, price collar, credit or exposure cap, position cap, or order and message rate. A clearing limit can be applied as a pre-trade limit. Distinct from a Position Limit, which a regulator or venue rule sets on positions held.
-
-**Example.** Orders from Client A above a maximum size are rejected before reaching Venue V.
-
-**Not to be confused with.** Position Limit: a rule on positions held, set by a regulator or venue.
-
-**Kind of:** [Risk Limit](#risk-limit)
-
-**Values (draft list):** maximum order size or value; price collar; credit or exposure cap; position cap; order or message rate
-
-**Words people use:** “limit” (Any); “pre-trade risk check, pre-trade risk limit” (Execution)
-
-**Before using it, know:** Party that set it, scope (client, trader, access, venue, instrument), basis, version in force.
-
-**Connected to:**
-
-- *is applied in* [Pre-trade Control Check](../execution/concepts.md#pre-trade-control-check)
-- *applies to* [Order](../execution/concepts.md#order) — Before the order reaches the venue, or on entry at the venue.
-
-**Open questions on its meaning:** “Limit” (open, answer proposed) — see the [review sheet](review.md).
-
-<sub>Reference Concept · added in review round 2 · Draft · reference LD-C0241 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Reference Concept · added in review round 1 · Draft · reference LD-C0232 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Limit Utilisation
 
 *How much of a limit is used right now.*
 
-**Definition.** Part of a risk limit used by an identified counterparty, account or scope at an as-of time, stated on the limit's own basis and version, as an amount or a share of the limit, with whether pending orders and trades not yet accepted are counted, as the limit states. No formula is set at this phase.
+**Definition.** Part of a risk limit used by an identified counterparty, account or scope at an as-of time, stated on the limit's own basis and version and any temporary increase in force, as an amount or a share of the limit, with whether pending orders and trades not yet accepted are counted, as the limit states. Its complement, the unused part of the limit, is called headroom. No formula is set at this phase.
 
 **Example.** Client A uses most of its limit at noon, so the desk is warned.
 
 **Not to be confused with.** Risk Exposure: the amount at risk; utilisation compares it with the limit.
+
+**Values (draft list):** area: shared
 
 **Words people use:** “limit usage, headroom” (Any risk limit)
 
@@ -216,19 +179,19 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 - *measures use of* [Risk Limit](#risk-limit) — On the limit's own basis and version.
 
-<sub>Measure · added in review round 2 · Draft · reference LD-C0233 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Measure · added in review round 2 · Draft · reference LD-C0233 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Limit Breach
 
 *The moment a limit is exceeded, and what was done about it.*
 
-**Definition.** Event in which the utilisation of a risk limit exceeds the limit, or reaches a warning level the limit defines, at an identified time, recording the limit version in force, the excess, who was told and the action taken (warning, referral, temporary increase, block of new orders or trades, reduction of positions). A breach of a limit the firm set is not a regulatory breach; exceeding a Position Limit is. Distinct from a rejected Pre-trade Control Check, which prevents an order from causing a breach.
+**Definition.** Event in which the utilisation of a risk limit exceeds the limit at an identified time, recording the limit version and any temporary increase in force, the excess, whether the breach is active (new business) or passive, who was told and the action taken. Reaching a warning level is recorded as a warning, not as a breach. A breach of a limit the firm set is not in itself a breach of a rule; exceeding a Position Limit is not a Limit Breach (see Position Limit). Distinct from a rejected Pre-trade Control Check and from a take-up or submission acceptance refused on a clearing limit, which stop one order or trade whether or not a breach has occurred.
 
 **Example.** Client A's exposure goes above its limit; Clearing Broker Y blocks new trades until margin arrives.
 
 **Not to be confused with.** Rejected pre-trade check: stops the order before any breach.
 
-**Values (draft list):** action: warning; referral; temporary increase; block of new orders or trades; reduction of positions
+**Values (draft list):** area: shared · action: referral; temporary increase; margin call through an ad hoc run or raised uplift; block of new orders or trades; reduction
 
 **Words people use:** “limit excess, limit breach” (Firm risk limits)
 
@@ -237,151 +200,87 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 **Connected to:**
 
 - *concerns* [Risk Limit](#risk-limit) — The version in force at the time of the breach.
-- *may lead to* [Margin Call](../margin-and-collateral/concepts.md#margin-call) — For example an ad hoc margin call to the client.
+- *may lead to* [Margin Call](../margin-and-collateral/concepts.md#margin-call) — Through an ad hoc margin run or a raised client margin uplift whose resulting shortfall is called.
 
-<sub>Event · added in review round 2 · Draft · reference LD-C0234 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Event · added in review round 2 · Draft · reference LD-C0234 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
+
+### Client Risk Group
+
+*The clients our risk function treats as one for risk, because their credit is connected.*
+
+**Definition.** Group of clients that a provider's risk function treats as one for risk purposes over a stated period, because their credit is connected (for example a legal group, or a fund manager and the funds it manages); the risk function sets its membership, which need not follow the Commercial Group or the legal group.
+
+**Example.** Clearing Broker Y's risk function treats Client A and Client B, two funds run by the same fund manager, as one group under one limit.
+
+**Not to be confused with.** Commercial Group: the provider's grouping for sales, pricing and revenue, which need not match.
+
+**Values (draft list):** area: clients we clear
+
+**Words people use:** “group of clients defined for risk purposes, risk group, connected clients” (Provider's risk function)
+
+**Before using it, know:** Risk function that set it, member clients, reason the credit is connected, validity period.
+
+**Connected to:**
+
+- *groups* [Client](../parties-and-roles/concepts.md#client) — The clients the risk function treats as one, over a stated period.
+- *is distinct from* [Commercial Group](../parties-and-roles/concepts.md#commercial-group) — A risk grouping set by the risk function versus a commercial grouping.
+
+<sub>Entity · added in review round 2 · Draft · reference LD-C0253 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Client Credit Assessment
 
 *The risk team's review that decides whether, and on what terms, we clear for a client.*
 
-**Definition.** Process by which a clearing broker's or executing broker's risk function reviews a client, or a group of clients defined for risk purposes, before onboarding, periodically and on a trigger event, to decide whether to clear for it or extend credit to it, under which risk limits, margin uplift and conditions, and with which client risk rating. Outcome values: approved, approved with conditions, declined, under review. Distinct from know-your-client checks, which are a compliance process, and from an Offering Eligibility Criterion, which states who may receive a service.
+**Definition.** Process by which a clearing broker's or executing broker's risk function reviews a client, or a group of clients defined for risk purposes, before onboarding, periodically and on a trigger event (for example a rating downgrade, a limit breach, a missed margin call, adverse news, a material change in activity), to decide whether to clear for it or extend credit to it, under which risk limits, margin uplift and conditions, and with which client risk rating, the internal, time-bounded grade it records as part of its outcome. Outcome values: approved, approved with conditions, declined; while it runs, the assessment is under review. Distinct from know-your-client checks, which are a compliance process, and from an Offering Eligibility Criterion, which states who may receive a service.
 
 **Example.** Before onboarding Fund F, the risk function approves it with a limit and a margin uplift.
 
 **Not to be confused with.** Know-your-client checks: compliance, not credit.
 
-**Values (draft list):** approved; approved with conditions; declined; under review
+**Values (draft list):** area: clients we clear · outcome: approved; approved with conditions; declined · while it runs: under review · recorded outcome: client risk rating (internal, time-bounded)
 
-**Words people use:** “credit review, credit approval” (Client onboarding and review)
+**Words people use:** “credit review, credit approval” (Client onboarding and review); “internal rating, client rating” (Provider's risk function); “assessment” (Any)
 
 **Before using it, know:** Assessing entity, client or group, date, outcome, conditions.
 
 **Connected to:**
 
-- *assigns* [Client Risk Rating](#client-risk-rating)
+- *assigns* Client Risk Rating (retired) — Kept for ID stability: Client Risk Rating is deprecated (decision 28); the client risk rating is now the recorded outcome of Client Credit Assessment (its values).
 - *sets* [Risk Limit](#risk-limit) — Including the Clearing Limit.
 - *may set* [Client Margin Uplift](../margin-and-collateral/concepts.md#client-margin-uplift) — The client margin uplift.
+- *is distinct from* [Regulatory Classification](../regulation-and-rule-changes/concepts.md#regulatory-classification) — The client risk rating it records is an internal grade, not a regulatory status. Moved 2026-11 from Client Risk Rating.
 
-<sub>Process · added in review round 2 · Draft · reference LD-C0237 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Process · added in review round 2 · Draft · reference LD-C0237 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
-### Client Risk Rating
-
-*Our internal grade for how risky a client is.*
-
-**Definition.** Time-bounded internal grade that a provider's risk function gives to a client, or to a group of clients defined for risk purposes, on the provider's own scale, as the result of a client credit assessment; it drives risk limits, client margin uplifts and how often the client is reviewed. It is not an external credit rating and not a Regulatory Classification.
-
-**Example.** Client A is graded on the firm's internal scale, which sets its review cycle.
-
-**Not to be confused with.** External credit rating from an agency.
-
-**Words people use:** “internal rating, client rating” (Provider's risk function)
-
-**Before using it, know:** Rating entity and scale, client or group, validity period.
-
-**Connected to:**
-
-- [Client Credit Assessment](#client-credit-assessment) *assigns* Client Risk Rating
-- *is distinct from* [Regulatory Classification](../regulation-and-rule-changes/concepts.md#regulatory-classification) — An internal grade versus a regulatory status.
-
-<sub>State · added in review round 2 · Draft · reference LD-C0238 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
-
-### Credit Support Arrangement
+### Third-party Credit Support
 
 *A third party's promise to pay if our client does not.*
 
-**Definition.** Agreement by which a third party (for example a parent company giving a guarantee, or a bank issuing a letter of credit) undertakes to meet a client's obligations toward its clearing broker or executing broker, in full or up to an amount, if the client does not. It is credit support beyond the collateral the client provides. Distinct from a Collateral Arrangement, under which assets are transferred or pledged.
+**Definition.** Agreement by which a third party (for example a parent company giving a guarantee, or a bank issuing a standby letter of credit) undertakes to meet a client's obligations toward its clearing broker or executing broker, in full or up to an amount, for a validity period, if the client does not; it is enforceable against the third party, and a comfort letter is not. It does not count as cover for a margin requirement: a guarantee or letter of credit accepted as an eligible collateral asset, or assets a third party delivers or pledges for the client, are collateral under a Collateral Arrangement. Distinct from a Collateral Arrangement, including an ISDA Credit Support Annex.
 
 **Example.** Client A's parent company guarantees its obligations to Clearing Broker Y.
 
-**Not to be confused with.** Collateral Arrangement: assets are delivered; here only a promise is given.
+**Not to be confused with.** Collateral Arrangement: the terms for collateral that counts as margin cover, including a guarantee accepted as eligible collateral.
 
-**Values (draft list):** guarantee; letter of credit; other undertaking
+**Values (draft list):** area: clients we clear · guarantee; letter of credit; other undertaking
 
-**Words people use:** “parent guarantee, letter of credit” (Client credit support)
+**Words people use:** “parent guarantee, letter of credit” (Client credit support, not accepted as collateral); “credit support arrangement” (former name, until 2026-11-26)
 
 **Before using it, know:** Support provider, supported client, beneficiary, amount or cap, validity period.
 
 **Connected to:**
 
-- [Client Clearing Exposure](#client-clearing-exposure) *is reduced by* Credit Support Arrangement — Where the arrangement covers the client's clearing obligations.
+- [Client Clearing Exposure](#client-clearing-exposure) *is reduced by* Third-party Credit Support — Where the arrangement covers the client's clearing obligations and the risk methodology counts it; a guarantee accepted as collateral counts as collateral instead.
 - *supports* [Client Clearing Agreement](../clearing-services-and-accounts/concepts.md#client-clearing-agreement) — Or the agreement under which the client owes the broker.
 - *is distinct from* [Collateral Arrangement](../margin-and-collateral/concepts.md#collateral-arrangement)
 
-<sub>Agreement · added in review round 2 · Draft · reference LD-C0239 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
-
-### Client Default Management
-
-*What we do after declaring a client in default: close out, hedge or transfer, and use its collateral.*
-
-**Definition.** Process run by a clearing broker after a Client Default under the client clearing agreement: stopping new business, hedging, closing out or transferring the client's positions, applying the client's collateral and any credit support, and claiming any remaining shortfall from the client, with its steps, dates and outcome per account. Distinct from a CCP's default management after a Clearing Member Default, which may include Porting and a Default Management Auction.
-
-**Example.** After declaring Client A in default, Clearing Broker Y closes out its futures and applies its collateral.
-
-**Not to be confused with.** CCP default management after a clearing member default.
-
-**Values (draft list):** step: stop new business; hedge; close out; transfer; apply collateral; claim shortfall
-
-**Words people use:** “close-out of a client, client liquidation” (Clearing broker after a client default)
-
-**Before using it, know:** Clearing broker, client, client clearing agreement, default date, accounts concerned.
-
-**Connected to:**
-
-- *follows* [Client Default](../clearing-services-and-accounts/concepts.md#client-default)
-- *is governed by* [Client Clearing Agreement](../clearing-services-and-accounts/concepts.md#client-clearing-agreement)
-
-<sub>Process · added in review round 2 · Draft · reference LD-C0240 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
-
-### Kill Switch Activation
-
-*Pulling all of a participant's orders at once and blocking new ones.*
-
-**Definition.** Event in which an authorised party (the executing broker, the trading venue member, the clearing member or the venue) cancels all, or a defined set, of a participant's open orders and blocks new ones for a stated scope (client, trader, access session, venue or segment) at an identified time, until it is lifted. Distinct from the rejection of a single order by a pre-trade control check and from a venue trading halt, which stops trading in an instrument for everyone.
-
-**Example.** Clearing Broker Y cancels all of Client A's open orders on Venue V after an abnormal flow.
-
-**Not to be confused with.** Venue trading halt: stops the instrument for everyone.
-
-**Words people use:** “kill switch, panic button” (Execution)
-
-**Before using it, know:** Party that activated it, scope, time activated and lifted.
-
-**Connected to:**
-
-- *cancels* [Order](../execution/concepts.md#order) — All or a defined set of open orders in the stated scope.
-
-<sub>Event · added in review round 2 · Draft · reference LD-C0242 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
-
-### Execution Error
-
-*A trade done or booked wrongly by the executing side.*
-
-**Definition.** Event in which an execution, or its booking or allocation, departs from the client's instruction or from the intended order through an error on the executing side: wrong instrument, side, quantity, price or account, a duplicate order, or an order entered outside its limits. It records who caused it and how it was resolved: correction, cancellation or price adjustment by the venue under its error trade rules, or transfer to an error position. Distinct from an Operational Exception, which is any situation needing handling, and from a Trade Amendment agreed between counterparties.
-
-**Example.** A trader buys 1,000 lots instead of 100 for Client A.
-
-**Not to be confused with.** Trade Amendment: an agreed change, not an error.
-
-**Values (draft list):** wrong instrument; wrong side; wrong quantity; wrong price; wrong account; duplicate order; order outside limits
-
-**Words people use:** “fat finger” (Execution); “error account, error trade” (Execution)
-
-**Before using it, know:** Execution or order concerned, error kind, responsible party, resolution.
-
-**Connected to:**
-
-- *concerns* [Execution](../execution/concepts.md#execution) — Or the order, booking or allocation in error.
-- *may give rise to* [Error Position](#error-position) — When the erroneous quantity is moved to the broker's error account.
-- *may raise* [Operational Exception](../post-trade-operations/concepts.md#operational-exception)
-
-<sub>Event · added in review round 2 · Draft · reference LD-C0243 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Agreement · added in review round 2 · Draft · reference LD-C0239 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Error Position
 
 *The position the broker keeps at its own risk after an execution error.*
 
-**Definition.** Position held in an account that the executing broker keeps for the purpose, arising from an execution error, carried at the broker's own risk until it is closed out or hedged. It is not client business: its gain or loss is not client revenue.
+**Definition.** Position held in an error account in the name of the party responsible for an execution error (the executing broker or a third-party executing member), carried through its clearing member or at the CCP, at that party's own risk until it is closed out or hedged. It is not client business: its gain or loss is not client revenue. A quantity rejected at take-up that stays with the giving clearing member is an error position only once moved to the error account.
 
 **Example.** The 900 extra lots go to Executing Broker X's error account until closed out.
 
@@ -389,28 +288,34 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Kind of:** [Position](../clearing-services-and-accounts/concepts.md#position)
 
-**Words people use:** “error account, error trade” (Execution)
+**Values (draft list):** area: execution · cause: execution error, with responsible party (executing broker; third-party executing member; client on direct electronic access; venue)
 
-**Before using it, know:** Executing broker, error account, instrument, originating execution error.
+**Words people use:** “error trade” (Execution); “fat finger” (Execution); “error account” (Execution)
+
+**Note.** Closing out an error position is dealing on own account, which matters for regulatory trade reporting of the close-out (to verify per regime).
+
+**Before using it, know:** Responsible party (executing broker or third-party executing member), error account, instrument, originating execution error.
 
 **Connected to:**
 
-- [Execution Error](#execution-error) *may give rise to* Error Position — When the erroneous quantity is moved to the broker's error account.
-- *is held by* [Executing Broker](../execution/concepts.md#executing-broker) — In an account it keeps for errors; not a client account.
+- Execution Error (retired) *may give rise to* Error Position — Kept for ID stability: Execution Error is deprecated (decision 28); the cause is now a value on Error Position.
+- *is held by* [Executing Broker](../execution/concepts.md#executing-broker) — Or by the third-party executing member responsible; not a client account.
 
-<sub>State · added in review round 2 · Draft · reference LD-C0244 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>State · added in review round 2 · Draft · reference LD-C0244 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### CCP Risk Assessment
 
 *Our review of a CCP before and while we are a member.*
 
-**Definition.** Process by which a clearing member's risk function reviews a central counterparty and its clearing services, before membership and periodically: financial resources, default waterfall, rules on assessments and loss allocation, margin methodology, governance, regulatory status (for example qualifying CCP) and published stress results. Its outcome sets the member's CCP exposure limits and conditions. Distinct from the CCP's own review of the member against its Access Requirements.
+**Definition.** Process by which a clearing member's risk function reviews a central counterparty and its clearing services, before membership, periodically and on trigger events: financial resources, default waterfall, rules on assessments and loss allocation, margin methodology, governance, regulatory standing (authorisations and recognitions, qualifying CCP status for capital purposes, any equivalence relied on), as recorded from public sources; the assessment reads these statuses and does not determine them; and published stress results. Its outcome sets the member's CCP exposure limits and conditions. Distinct from the CCP's own review of the member against its Access Requirements.
 
 **Example.** The risk function reviews CCP Z's waterfall and assessment caps each year.
 
 **Not to be confused with.** The CCP's admission review of us as a member.
 
-**Words people use:** “CCP due diligence, CCP credit review” (Clearing member)
+**Values (draft list):** area: CCPs
+
+**Words people use:** “CCP due diligence, CCP credit review” (Clearing member); “assessment” (Any)
 
 **Before using it, know:** Assessing member, CCP and clearing services, date, outcome.
 
@@ -419,23 +324,21 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *concerns* [Clearing Service](../clearing-services-and-accounts/concepts.md#clearing-service) — Each clearing service the member uses or plans to use.
 - *sets* [Risk Limit](#risk-limit) — The CCP exposure limit and conditions.
 
-<sub>Process · added in review round 2 · Draft · reference LD-C0247 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Process · added in review round 2 · Draft · reference LD-C0247 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Default Waterfall
 
 *The order in which a CCP uses its resources to absorb a defaulting member's losses.*
 
-**Definition.** Versioned order, set in a clearing service's rules, in which a central counterparty uses its financial resources to cover losses from a clearing member default: the defaulter's margin and default fund contribution, the CCP's dedicated own resources, the non-defaulting members' default fund contributions, assessments, any further own resources and then recovery tools, with the size or cap of each layer where the rules state it. Changing it is a rule change.
+**Definition.** Versioned order, set in a clearing service's rules and constrained by any regime that applies, in which a central counterparty uses its financial resources to cover losses from a clearing member default, with the size or cap of each layer where the rules state it. Under EU EMIR, for example, the order is the collateral the defaulter provided for its own house margin requirements, the defaulter's default fund contribution, the CCP's dedicated own resources, the non-defaulting members' default fund contributions, then other resources such as assessments (to verify); the order is always read from the clearing service's rules. Collateral recorded for client accounts is not a layer: it covers only losses on those clients' positions, as the segregation applied allows. Tools beyond the waterfall belong to CCP Loss Allocation; losses not caused by a member default do not run through it. A change to its order, layers, caps or tools is a Rule Change; a periodic recalculation of a layer's amount under unchanged rules is not.
 
-**Example.** CCP Z uses the defaulter's margin, then its own capital, then the default fund.
+**Example.** CCP Z uses the defaulter's house margin and default fund contribution, then its own dedicated resources, then the other members' contributions.
 
 **Not to be confused with.** Default Fund Contribution: one layer, not the order.
 
-**Breaks down into:** [Default Fund Assessment](#default-fund-assessment) (part of), [CCP Dedicated Own Resources](#ccp-dedicated-own-resources) (part of), [Default Fund Contribution](../margin-and-collateral/concepts.md#default-fund-contribution) (part of)
+**Values (draft list):** area: CCPs · layer: defaulter's house margin collateral; defaulter's default fund contribution; CCP dedicated own resources (skin in the game: junior layer; second layer, as the rules or regime place it); non-defaulters' default fund contributions; assessments (where the rules place them here); further CCP resources
 
-**Values (draft list):** defaulter's margin; defaulter's default fund contribution; CCP dedicated own resources; non-defaulters' default fund contributions; assessments; further CCP resources; recovery tools
-
-**Words people use:** “waterfall, default waterfall” (CCP default resources)
+**Words people use:** “waterfall, default waterfall” (CCP default resources); “skin in the game, SITG” (CCP default resources)
 
 **Before using it, know:** Clearing service, rule version, effective date.
 
@@ -443,97 +346,61 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 - *is defined by* [Rulebook](../regulation-and-rule-changes/concepts.md#rulebook) — The clearing service's rulebook; a change is a Rule Change.
 - *applies to* [Clearing Service](../clearing-services-and-accounts/concepts.md#clearing-service)
-- [CCP Loss Allocation](#ccp-loss-allocation) *follows* Default Waterfall — Once the prefunded layers are used, or after a non-default loss.
+- CCP Dedicated Own Resources (retired) *is used in* Default Waterfall — A stated layer. Corrected 2026-11 (was part_of). Kept for ID stability: CCP Dedicated Own Resources is deprecated (decision 28); the layer is now a value of Default Waterfall.
+- [Default Fund Contribution](../margin-and-collateral/concepts.md#default-fund-contribution) *is used in* Default Waterfall — The defaulter's own contribution, then the non-defaulters' mutualised layer. Corrected 2026-11 (was part_of).
+- [Default Fund Assessment](#default-fund-assessment) *is used in* Default Waterfall — After the prefunded default fund, where the clearing service's rules place it. Corrected 2026-11 (was part_of).
+- [CCP Loss Allocation](#ccp-loss-allocation) *follows* Default Waterfall — For losses from a member default only; non-default losses are allocated under the rules directly.
+- *is changed by* [Rule Change](../regulation-and-rule-changes/concepts.md#rule-change) — A change to its order, layers, caps or tools; not a periodic recalculation of a layer's amount under unchanged rules.
 
-<sub>Reference Concept · added in review round 2 · Draft · reference LD-C0248 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Reference Concept · added in review round 2 · Draft · reference LD-C0248 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Default Fund Assessment
 
 *A further payment a CCP can demand from surviving members after the default fund is used.*
 
-**Definition.** Obligation of a non-defaulting clearing member, under a clearing service's rules, to pay a further contribution to a central counterparty when its prefunded default fund has been used or is insufficient, up to the cap and within the period the rules set (assessment powers). Distinct from the prefunded Default Fund Contribution and from margin.
+**Definition.** Committed obligation of a non-defaulting clearing member (or, where the rules say so, of a sponsoring clearing member for a sponsored participant), under a clearing service's rules, to pay a further contribution to a central counterparty beyond its prefunded default fund contribution when the default fund has been used or is insufficient after a clearing member default, up to the cap and within the period the rules set (including any cooling-off period). A call of it gives rise to a Settlement Obligation; the commitment itself is not one. Distinct from the prefunded Default Fund Contribution and its replenishment after use, from margin, and from a Regulatory Obligation.
 
 **Example.** After a large default, CCP Z calls Clearing Broker Y up to its assessment cap.
 
 **Not to be confused with.** Default Fund Contribution: paid in advance.
 
-**Kind of:** [Settlement Obligation](../post-trade-operations/concepts.md#settlement-obligation) · **Part of:** [Default Waterfall](#default-waterfall)
+**Values (draft list):** area: CCPs
 
-**Words people use:** “assessment, cash call” (After a clearing member default)
+**Words people use:** “assessment” (after a clearing member default); “cash call” (Any); “assessment” (Any)
 
 **Before using it, know:** Clearing service, triggering default, cap, payment period.
 
 **Connected to:**
 
 - [CCP Exposure](#ccp-exposure) *includes* Default Fund Assessment — As a committed further contribution, up to its cap.
-- *is owed by* [Clearing Member](../clearing-services-and-accounts/concepts.md#clearing-member) — A non-defaulting clearing member of the clearing service.
-- [CCP Loss Allocation](#ccp-loss-allocation) *uses* Default Fund Assessment — Assessment is one loss allocation tool.
+- *is used in* [Default Waterfall](#default-waterfall) — After the prefunded default fund, where the clearing service's rules place it. Corrected 2026-11 (was part_of).
+- *is owed by the holder of* [Clearing Member](../clearing-services-and-accounts/concepts.md#clearing-member) — A non-defaulting clearing member of the clearing service. Corrected 2026-11 (was is_owed_by), aligned with a “is owed by the holder of” link.
+- [CCP Loss Allocation](#ccp-loss-allocation) *uses* Default Fund Assessment — Assessment is one loss allocation tool, where the clearing service's rules place it.
+- *gives rise to* [Settlement Obligation](../post-trade-operations/concepts.md#settlement-obligation) — When the CCP calls the assessment; the commitment itself is not a settlement obligation.
 
-<sub>Obligation · added in review round 2 · Draft · reference LD-C0250 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
-
-### CCP Dedicated Own Resources
-
-*The CCP's own money placed in its default waterfall.*
-
-**Definition.** Amount of its own capital that a central counterparty commits, under its rules or a regime's requirement, to a stated layer of its default waterfall for a clearing service, usually before the non-defaulting members' default fund contributions are used (often called skin in the game). Distinct from the CCP's other capital, which does not stand in the waterfall.
-
-**Example.** CCP Z puts a stated amount of its own capital ahead of members' default fund contributions.
-
-**Not to be confused with.** The CCP's total capital.
-
-**Part of:** [Default Waterfall](#default-waterfall)
-
-**Values (draft list):** first-loss layer (before mutualised resources); second layer (after members' contributions); other
-
-**Words people use:** “skin in the game, SITG” (CCP default resources)
-
-**Before using it, know:** CCP, clearing service, layer, amount, effective date.
-
-<sub>Reference Concept · added in review round 2 · Draft · reference LD-C0249 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
-
-### Default Management Auction
-
-*The auction in which a CCP sells a defaulted member's positions to other members.*
-
-**Definition.** Event, run by a central counterparty after a Clearing Member Default under its default management procedures, in which the defaulter's positions, usually hedged and grouped in portfolios, are offered to clearing members, some of which may be required to bid; it records the auction date, portfolio, participants, result and any effect on members' default fund contributions (for example juniorisation of poor bidders). Distinct from a close-out in the market and from Porting.
-
-**Example.** CCP Z auctions Member D's hedged swap portfolio to its members.
-
-**Not to be confused with.** Porting: client positions moved to another member, not sold.
-
-**Step in:** [Clearing Member Default](../clearing-services-and-accounts/concepts.md#clearing-member-default)
-
-**Words people use:** “default auction, hedged auction” (CCP default management)
-
-**Before using it, know:** CCP, clearing service, defaulting member, portfolio, auction date.
-
-**Connected to:**
-
-- *is distinct from* [Porting](../clearing-services-and-accounts/concepts.md#porting)
-
-<sub>Event · added in review round 2 · Draft · reference LD-C0251 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Obligation · added in review round 2 · Draft · reference LD-C0250 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### CCP Loss Allocation
 
 *How a CCP passes on losses once its prefunded resources are used.*
 
-**Definition.** Event by which a central counterparty, once the prefunded layers of its default waterfall are used, or after a loss not caused by a member default, passes remaining losses to clearing members and, through them, possibly to their clients, with tools its rules or a recovery and resolution regime provide: assessments, variation margin gains haircutting, partial or full tear-up of contracts, or cash calls. It records the tool, the clearing service, the date and the amounts allocated per member.
+**Definition.** Event by which, after the resources of its default waterfall are used for a member default, or after a loss not caused by a member default, remaining losses of a central counterparty are passed to clearing members and, through them, possibly to their clients, by the CCP under its rules and recovery plan or by a resolution authority under a recovery and resolution regime. Variation margin gains haircutting reduces the variation margin payments the CCP makes, not the requirement as determined. Whether a loss reaches a client depends on the clearing service's rules for client accounts and on the client clearing agreement. It records the acting party, the tool, the clearing service, the triggering event, the date and the amounts per member.
 
 **Example.** CCP Z haircuts variation margin gains owed to members for a period.
 
 **Not to be confused with.** Default Waterfall: the ordered resources, not the allocation event.
 
-**Values (draft list):** assessment; variation margin gains haircutting; partial tear-up; full tear-up; cash call
+**Values (draft list):** area: CCPs · tool: assessment or cash call; variation margin gains haircutting; partial tear-up; full tear-up; resolution tool · trigger: member default; non-default loss
 
-**Words people use:** “assessment, cash call” (After a clearing member default); “VMGH, variation margin gains haircutting, tear-up” (CCP recovery); “default” (Any)
+**Words people use:** “cash call” (Any); “VMGH, variation margin gains haircutting, tear-up” (CCP recovery); “default” (Any)
 
 **Before using it, know:** CCP, clearing service, tool, triggering event, date.
 
 **Connected to:**
 
-- *uses* [Default Fund Assessment](#default-fund-assessment) — Assessment is one loss allocation tool.
-- *follows* [Default Waterfall](#default-waterfall) — Once the prefunded layers are used, or after a non-default loss.
+- *uses* [Default Fund Assessment](#default-fund-assessment) — Assessment is one loss allocation tool, where the clearing service's rules place it.
+- *follows* [Default Waterfall](#default-waterfall) — For losses from a member default only; non-default losses are allocated under the rules directly.
 
 **Open questions on its meaning:** “Default” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Event · added in review round 2 · Draft · reference LD-C0252 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Event · added in review round 2 · Draft · reference LD-C0252 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>

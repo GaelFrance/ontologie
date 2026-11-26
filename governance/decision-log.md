@@ -125,10 +125,47 @@ Evidence: Ontology Lead request in the project conversation, 2026-11-26 ("Full R
 
 | Point | Decision | Consequence in the ontology | Affected IDs |
 |---|---|---|---|
-| 25. Risk domain | An eleventh domain, Risk, is opened with three areas kept apart: the risk we take on the clients we clear, execution risk, and CCP risk. | New domain page `risk` with 22 Draft concepts, four ambiguity entries (LD-A0036 to LD-A0039) and questions for our firm; existing limit, default and default-resource concepts keep their primary domain and are shown on the risk page. Owner role to be named (open question 26). | LD-C0231 to LD-C0252 |
+| 25. Risk domain | An eleventh domain, Risk, is opened with three areas kept apart: the risk we take on the clients we clear, execution risk, and CCP risk. | New domain page `risk` with 22 Draft concepts, four ambiguity entries (LD-A0036 to LD-A0039) and questions for our firm; existing limit, default and default-resource concepts keep their primary domain and are shown on the risk page. Owner and classification settled by decisions 26 and 27. | LD-C0231 to LD-C0252 |
 
 This decision opens the domain; it approves none of its definitions, which stay Draft until the risk domain owner approves them.
 
+## Ontology Lead decision — 2026-11-26 (risk domain owner and limits)
+
+Evidence: Ontology Lead answer in the project conversation, 2026-11-26 ("Yes to both"), to open questions 26 and 27 as proposed.
+
+| Point | Decision | Consequence in the ontology | Affected IDs |
+|---|---|---|---|
+| 26. Risk domain owner | The risk domain is owned by a role in the risk function: the head of clearing risk or a delegate. Existing concepts on limits, defaults and default resources keep their primary domain and are shown on the risk page. | Owner role set in the review domains; no concept moves. | LD-C0231 to LD-C0252, LD-C0138, LD-C0119, LD-C0159, LD-C0154, LD-C0155, LD-C0172, LD-C0163 |
+| 27. Clearing Limit | Clearing Limit is a kind of Risk Limit. | Specialisation kept; the Clearing Limit definition says so instead of "without a level-1 parent" (clarification). | LD-C0138, LD-C0232 |
+
+
+## Ontology Lead decision — 2026-11-26 (risk domain peer review)
+
+Evidence: Ontology Lead answer in the project conversation, 2026-11-26 ('apply everything'), on the decision list of the risk domain peer review. The Ontology Lead decided as arbiter while the domain owners are not named, and accepted the preconditions of clarification items 2 (registration as the boundary of Unaccepted Give-up Exposure), 5 (house margin only in the Default Waterfall) and 6 (a guarantee accepted as collateral is not Third-party Credit Support). Every recommended option was taken; the proposals the review dropped were not applied.
+
+| Point | Decision | Consequence in the ontology | Affected IDs |
+|---|---|---|---|
+| 28. Risk domain peer review | All recommendations of the review are applied: eight concepts retired into values of the concepts they belong to, sixteen meaning changes with the recommended option, one new concept, clarifications, aliases, relationship corrections and questions for our firm. | The risk domain keeps 15 active concepts (14 kept, 1 new) and 8 deprecated rows whose IDs stay. Relationship corrections and new rows LD-R0658 to LD-R0665; LD-R0641 now ends with Give-up Registration. | LD-C0231 to LD-C0253, LD-C0119, LD-C0125, LD-C0138, LD-C0154, LD-C0159, LD-C0172, LD-C0203, LD-C0229, LD-C0064, LD-C0056, LD-C0010, LD-C0046, LD-C0071, LD-C0162 |
+| 28. Retirements | Stress Loss retired into Risk Exposure (measure basis value); Client Risk Rating into Client Credit Assessment (recorded outcome); Client Default Management into Client Default (step values); Pre-trade Limit into Risk Limit (kind value); Kill Switch Activation into the risk-expert skill and a contextual alias; Execution Error into cause values on Execution Correction and Error Position; CCP Dedicated Own Resources into Default Waterfall (layer value); Default Management Auction into Clearing Member Default (step value). | Rows and IDs kept, definitions marked Deprecated with the replacing concept; relationships moved where the move gives a true statement, otherwise kept with a note. | LD-C0235, LD-C0238, LD-C0240, LD-C0241, LD-C0242, LD-C0243, LD-C0249, LD-C0251 |
+| 28. M1 Firm limit versus venue rule | Option A: a parameter a venue publishes for all participants is a Rule Provision; a limit set for one participant is a Risk Limit. | Risk Limit and Pre-trade Control Check reworded; value "control checked"; new row Pre-trade Control Check may apply Rule Provision. | LD-C0232, LD-C0119, LD-C0063 |
+| 28. M2 Limits a CCP sets on its members | Option A: out of scope of Risk Limit. | One sentence added to Risk Limit. | LD-C0232 |
+| 28. M3 Limit Breach | Option A: warnings are not breaches; active or passive is recorded; exceeding a Position Limit is not a Limit Breach. | Definition and action values replaced. | LD-C0234 |
+| 28. M4 Client Clearing Exposure | Option A: stated before or after collateral as declared; member-to-client tier; indirect clients, omnibus accounts, prefunding and give-in covered. Decided now, before the answer to q03. | Definition replaced; the collateral methodology point is in the risk-expert skill. | LD-C0236 |
+| 28. M5 Unallocated quantities | Option A: kept out of Unaccepted Give-up Exposure; no sibling concept. | Alias "unallocated risk" pending; firm question q24 informs a later review. | LD-C0245 |
+| 28. M6 CCP Exposure | Option A: house and client accounts, house positions, amounts due, collateral not protected, default fund contribution in all cases, assessments, client trades where the member stays liable. | Definition replaced; new row CCP Exposure includes Collateral; LD-R0644 note corrected. | LD-C0246, LD-C0047, LD-C0172 |
+| 28. M7 Default Fund Assessment | Option A: a commitment; only its call gives rise to a Settlement Obligation. | Definition replaced; specialisation to Settlement Obligation removed; new row gives rise to Settlement Obligation. | LD-C0250, LD-C0028 |
+| 28. M8 Waterfall layer links | Option A: layers are linked by is_used_in instead of part_of. | LD-R0650, LD-R0651 and LD-R0652 corrected in place. | LD-C0248, LD-C0172, LD-C0250 |
+| 28. M9 CCP Loss Allocation | Option A: the CCP or a resolution authority acts; non-default losses included. | Definition and values replaced; Regulatory Authority gains recovery and resolution powers and the value "resolution authority". | LD-C0252, LD-C0203 |
+| 28. M10 Error Position holder | Option A: the executing broker or a third-party executing member responsible. | Definition replaced; LD-R0639 note corrected. | LD-C0244 |
+| 28. M11 Client default and indirect clients | Option A: the steps after a client default include handling the indirect clients' positions and collateral (to verify). | Sentence added to Client Default. | LD-C0159 |
+| 28. M12 Sponsored participant default | Option A: no change now; a candidate is added to the default ambiguity. | LD-A0039 extended. | LD-A0039 |
+| 28. M13 Rule Change affects | Option A: the union of LD-R0053 is not widened; Default Waterfall is changed by Rule Change instead. | New row LD-R0660. | LD-C0064, LD-C0248 |
+| 28. M14 Risk Exposure scope | Option A: no change. | — | LD-C0231 |
+| 28. M15 Kill switch authorised parties | Not applicable: Kill Switch Activation is retired (L12). | Who may activate it is described in the risk-expert skill. | LD-C0242 |
+| 28. M16 CCP default management process | Option A: no new concept; the steps are values of Clearing Member Default. | LD-R0654 and LD-R0362 corrected to follows. | LD-C0154, LD-C0155 |
+| 28. N1 Client Risk Group | A new concept for the group of clients a risk function treats as one. | New concept, primary in risk and shown on parties-and-roles. | LD-C0253 |
+
+These decisions approve no definition: every definition, including the new and changed ones, remains Draft until the domain owner approves it.
 
 ## Ontology Lead decision — 2026-11-26 (execution simplification)
 

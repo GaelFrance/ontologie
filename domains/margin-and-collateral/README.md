@@ -9,7 +9,7 @@ When a derivatives trade is cleared, the central counterparty (CCP) guarantees i
 | [Overview](overview.md) | The domain in plain words: what it covers, how it works, what to keep apart |
 | [Concepts](concepts.md) | 30 concepts, each with a definition, an example and what not to confuse it with |
 | [Review sheet](review.md) | What each reviewer is asked, open questions on meaning, decisions already taken |
-| [Questions for our firm](company-questions.md) | 25 questions that capture how our firm works in this domain |
+| [Questions for our firm](company-questions.md) | 26 questions that capture how our firm works in this domain |
 | [Questions for the experts (Excel)](questions-for-experts.xlsx) | The same questions as an interview workbook; answers are recorded in this file |
 
 **Owner:** Collateral Manager  
@@ -55,4 +55,4 @@ When a derivatives trade is cleared, the central counterparty (CCP) guarantees i
   - **[Account Cash Balance](concepts.md#account-cash-balance)** — The cash recorded in an account: deposits, withdrawals, realised results, premiums, fees and interest.
 - **[Position Valuation](concepts.md#position-valuation)** — What a position is worth at a point in time, and who valued it with which price.
 
-Also relevant here, owned by another domain: [Clearing Service](../clearing-services-and-accounts/concepts.md#clearing-service), [CCP Account](../clearing-services-and-accounts/concepts.md#ccp-account), [Segregation Model](../clearing-services-and-accounts/concepts.md#segregation-model), [Client Clearing Agreement](../clearing-services-and-accounts/concepts.md#client-clearing-agreement), [Position](../clearing-services-and-accounts/concepts.md#position), [Account](../parties-and-roles/concepts.md#account), [Settlement Obligation](../post-trade-operations/concepts.md#settlement-obligation), [Cash Movement](../post-trade-operations/concepts.md#cash-movement).
+Also relevant here, owned by another domain: [Clearing Service](../clearing-services-and-accounts/concepts.md#clearing-service), [CCP Account](../clearing-services-and-accounts/concepts.md#ccp-account), [Segregation Model](../clearing-services-and-accounts/concepts.md#segregation-model), [Client Clearing Agreement](../clearing-services-and-accounts/concepts.md#client-clearing-agreement), [Position](../clearing-services-and-accounts/concepts.md#position), [Account](../parties-and-roles/concepts.md#account), [Settlement Obligation](../post-trade-operations/concepts.md#settlement-obligation), [Cash Movement](../post-trade-operations/concepts.md#cash-movement), [Client Clearing Exposure](../risk/concepts.md#client-clearing-exposure), [CCP Exposure](../risk/concepts.md#ccp-exposure), [Default Waterfall](../risk/concepts.md#default-waterfall), [Default Fund Assessment](../risk/concepts.md#default-fund-assessment).

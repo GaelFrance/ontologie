@@ -85,9 +85,17 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Regulatory Affairs with Legal
 <sub>question q12</sub>
 
+### 11. Who owns the change impact assessment for CCP rule changes to the default waterfall, assessments and loss allocation, and who signs off a response to a CCP consultation on them? Who determines and records each CCP's qualifying CCP status, from which public source?
+
+- **Why it matters:** Gives the change-impact agent the owner of Rule Changes to the Default Waterfall and the source of a CCP's qualifying status.
+- **How to answer:** Owning role for the assessment; sign-off role for consultation responses; role and public source for qualifying CCP status.
+- **Concepts affected:** Rule Change, Change Impact Assessment, Default Waterfall, Regulatory Classification
+- **Who answers:** Regulatory Affairs with Risk
+<sub>question q29</sub>
+
 ## Priority 2: needed before go-live
 
-### 11. Which Asia-Pacific jurisdictions should be prepared after the EU, UK and US, in which order, and for each: which venues and calendars, which CCPs and account structures or legal models, whether give-ups follow a different practice, and which regulatory frameworks apply? (Answered by the product development lead with Regulatory Affairs.)
+### 12. Which Asia-Pacific jurisdictions should be prepared after the EU, UK and US, in which order, and for each: which venues and calendars, which CCPs and account structures or legal models, whether give-ups follow a different practice, and which regulatory frameworks apply? (Answered by the product development lead with Regulatory Affairs.)
 
 - **Why it matters:** Seeds priority-2 Regulatory Regime instances (sponsor decision 8 left them to be scoped).
 - **How to answer:** Ordered list of jurisdictions with the activity (execution, clearing) concerned.
@@ -96,7 +104,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Joint question:** also covers what Clearing: give-up and acceptance, Clearing: services, accounts and client clearing, Instruments, venues and calendars needed to ask.
 <sub>question q11</sub>
 
-### 12. Does the business rely on any regulatory relief (no-action relief, exemptions, transitional measures, forbearance), and is each tracked with its conditions and expiry?
+### 13. Does the business rely on any regulatory relief (no-action relief, exemptions, transitional measures, forbearance), and is each tracked with its conditions and expiry?
 
 - **Why it matters:** Relief changes who must comply and when; its expiry is itself a change to watch.
 - **How to answer:** Yes or no per relief type; tracking practice in words.
@@ -104,7 +112,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Compliance with Legal
 <sub>question q13</sub>
 
-### 13. Who signs off a reading marked 'interpretation required' in practice, beyond Regulatory Affairs and business management with Legal and Compliance as already decided; what turnaround is expected, what is recorded, and when is external counsel used?
+### 14. Who signs off a reading marked 'interpretation required' in practice, beyond Regulatory Affairs and business management with Legal and Compliance as already decided; what turnaround is expected, what is recorded, and when is external counsel used?
 
 - **Why it matters:** Sets the status, author kinds and sign-off record of a Regulatory Interpretation.
 - **How to answer:** Process description in a few lines.
@@ -112,7 +120,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Regulatory Affairs with Legal and Compliance
 <sub>question q14</sub>
 
-### 14. Does the firm respond to consultations directly, through industry associations, or both, and is the decision to respond tracked against the consultation?
+### 15. Does the firm respond to consultations directly, through industry associations, or both, and is the decision to respond tracked against the consultation?
 
 - **Why it matters:** Decides whether a Consultation needs a response status and owner.
 - **How to answer:** One of: direct, associations, both, none; tracking yes or no.
@@ -120,7 +128,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Regulatory Affairs
 <sub>question q15</sub>
 
-### 15. To which internal objects must every assessed change be traceable: service offerings, client agreements and templates, procedures, controls, systems (by role), client communications?
+### 16. To which internal objects must every assessed change be traceable: service offerings, client agreements and templates, procedures, controls, systems (by role), client communications?
 
 - **Why it matters:** Defines the internal-layer targets of the 'affects' link beyond the public concepts.
 - **How to answer:** Tick list.
@@ -128,7 +136,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Regulatory Affairs with business management
 <sub>question q16</sub>
 
-### 16. Which of the firm's own procedures and policies should be recorded as rule provisions in the internal layer (cut-off policies, client limits, onboarding criteria, give-up acceptance rules), and who owns them?
+### 17. Which of the firm's own procedures and policies should be recorded as rule provisions in the internal layer (cut-off policies, client limits, onboarding criteria, give-up acceptance rules), and who owns them?
 
 - **Why it matters:** Rule Provision includes firm procedures; their kinds and owners must be known before the internal layer is built.
 - **How to answer:** List of procedure kinds with owner roles.
@@ -136,7 +144,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Compliance with product owners
 <sub>question q17</sub>
 
-### 17. For audits, supervisory requests and client disputes, which objects need 'as known at' history (rule changes, classifications, reference data and contract versions, statuses and reports, cut-offs), and how far back? (Answered by Compliance.)
+### 18. For audits, supervisory requests and client disputes, which objects need 'as known at' history (rule changes, classifications, reference data and contract versions, statuses and reports, cut-offs), and how far back? (Answered by Compliance.)
 
 - **Why it matters:** Decides whether record time must be kept and queried (open firm decision in the time convention).
 - **How to answer:** Yes or no; retention period.
@@ -145,7 +153,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Joint question:** also covers what Instruments, venues and calendars, Post-trade operations needed to ask.
 <sub>question q18</sub>
 
-### 18. For OTC clearing, which clearing obligation classes, counterparty categories and transitional points matter most to the business, and are any clients relying on intragroup or other exemptions?
+### 19. For OTC clearing, which clearing obligation classes, counterparty categories and transitional points matter most to the business, and are any clients relying on intragroup or other exemptions?
 
 - **Why it matters:** Prioritises Clearing Obligation and Regulated Product Class content and the exemptions the agent must ask about.
 - **How to answer:** Ranked list of classes and categories; yes or no on exemptions (no client names).
@@ -153,7 +161,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** OTC Clearing product owner with Compliance
 <sub>question q19</sub>
 
-### 19. Which client-facing duties tied to regulation does the firm perform as clearing or execution provider (informing clients of new obligations, segregation and cost disclosures, publishing fair commercial terms), and who owns each?
+### 20. Which client-facing duties tied to regulation does the firm perform as clearing or execution provider (informing clients of new obligations, segregation and cost disclosures, publishing fair commercial terms), and who owns each?
 
 - **Why it matters:** Identifies provider-side Regulatory Obligations that a rule change can trigger on the firm itself.
 - **How to answer:** List of duties with owner role.
@@ -161,7 +169,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Compliance with Legal
 <sub>question q20</sub>
 
-### 20. Do any of the firm's entities operate through branches in the EU, UK or US, and which regimes attach duties or authorisations to those branches? (Ask in the same session as the access-route table.)
+### 21. Do any of the firm's entities operate through branches in the EU, UK or US, and which regimes attach duties or authorisations to those branches? (Ask in the same session as the access-route table.)
 
 - **Why it matters:** Decides whether Regulatory Authorisation and Classification attach to branches as well as legal entities.
 - **How to answer:** Yes or no; regime list (no entity names).
@@ -169,11 +177,11 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Legal
 <sub>question q21</sub>
 
-### 21. For each region where clients are located, on what regulatory basis do you serve them (local licence, branch, cross-border exemption or relief, client-initiated business), and who tracks its conditions?
+### 22. For each region where clients are located, on what regulatory basis do you serve them (local licence, branch, cross-border exemption or relief, client-initiated business), and who tracks its conditions?
 
 <sub>question q25</sub>
 
-### 22. Which position limit, accountability and position reporting regimes do you monitor, for clients and for the house (EU, UK, US regulators and venues), and who monitors them?
+### 23. Which position limit, accountability and position reporting regimes do you monitor, for clients and for the house (EU, UK, US regulators and venues), and who monitors them?
 
 - **Why it matters:** Scopes the position limits an agent may be asked about and the owner of the monitoring.
 - **How to answer:** List of regimes and venues; client or house; monitoring function.
@@ -181,7 +189,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Compliance with Regulatory Affairs
 <sub>question q26</sub>
 
-### 23. Which exemptions, no-action letters or transitional reliefs does your firm currently rely on, and for each, is its effect an exemption, a deferral or only a non-enforcement position?
+### 24. Which exemptions, no-action letters or transitional reliefs does your firm currently rely on, and for each, is its effect an exemption, a deferral or only a non-enforcement position?
 
 - **Why it matters:** A no-action letter does not remove the obligation; agents must state the legal effect of each relief before concluding that a duty does not apply.
 - **How to answer:** List kept internally: relief, regime, effect, expiry date; no client names.
@@ -189,7 +197,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Regulatory Affairs with Legal
 <sub>question q27</sub>
 
-### 24. For which contracts does your firm monitor client positions against position limits, accountability levels and reportable levels, and what action follows when each kind of level is crossed?
+### 25. For which contracts does your firm monitor client positions against position limits, accountability levels and reportable levels, and what action follows when each kind of level is crossed?
 
 - **Why it matters:** The consequence of crossing a level depends on its kind (breach, scrutiny or reporting), never on the amount alone.
 - **How to answer:** Per regime or venue: levels monitored and the action for each kind.
@@ -197,9 +205,17 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Compliance
 <sub>question q28</sub>
 
+### 26. Must a kill switch activation, a limit breach or an execution error be notified to a venue or an authority, and who decides and records that?
+
+- **Why it matters:** Tells whether these events carry a notification duty, which is recorded as a Regulatory Obligation, not in the risk definitions.
+- **How to answer:** Per event and regime: notification required yes or no, recipient, deciding and recording role.
+- **Concepts affected:** Regulatory Obligation, Limit Breach
+- **Who answers:** Compliance
+<sub>question q30</sub>
+
 ## Priority 3: later
 
-### 25. Should prudential consequences of a change (qualifying CCP status, default fund and CCP exposure treatment, leverage) be part of change impact, and who owns that view?
+### 27. Should prudential consequences of a change (qualifying CCP status, default fund and CCP exposure treatment, leverage) be part of change impact, and who owns that view?
 
 - **Why it matters:** Decides whether capital impact is an impact type and whether qualifying status must be tracked here.
 - **How to answer:** Yes or no; owner role.
@@ -207,7 +223,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Business management with Finance
 <sub>question q22</sub>
 
-### 26. Under which reporting regimes does the firm report listed and OTC derivatives activity, and does it offer delegated reporting to clients?
+### 28. Under which reporting regimes does the firm report listed and OTC derivatives activity, and does it offer delegated reporting to clients?
 
 - **Why it matters:** Decides when Regulatory Report should leave the backlog and which reporting obligations to seed.
 - **How to answer:** Tick list of regimes; yes or no on delegated reporting.
@@ -215,7 +231,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Who answers:** Compliance (regulatory reporting)
 <sub>question q23</sub>
 
-### 27. Must the team handle official publications in languages other than English, and which version is authoritative for the firm?
+### 29. Must the team handle official publications in languages other than English, and which version is authoritative for the firm?
 
 - **Why it matters:** Affects Change Notice language and the evidence an agent cites.
 - **How to answer:** List of languages; authoritative-language rule.

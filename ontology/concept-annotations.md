@@ -118,11 +118,10 @@ Standard alignments are "map, do not import" proposals: none has been checked ag
 | LD-C0236 Client Clearing Exposure | LD-C0231 | 2026-11 risk domain draft |
 | LD-C0245 Unaccepted Give-up Exposure | LD-C0231 | 2026-11 risk domain draft |
 | LD-C0246 CCP Exposure | LD-C0231 | 2026-11 risk domain draft |
-| LD-C0235 Stress Loss | LD-C0231 | 2026-11 risk domain draft |
-| LD-C0241 Pre-trade Limit | LD-C0232 | 2026-11 risk domain draft |
-| LD-C0138 Clearing Limit | LD-C0232 | 2026-11 risk domain draft |
+| LD-C0235 Stress Loss | LD-C0231 | 2026-11 risk domain draft; deprecated 2026-11-26, now a measure basis value of LD-C0231 (decision 28) |
+| LD-C0241 Pre-trade Limit | LD-C0232 | 2026-11 risk domain draft; deprecated 2026-11-26, now a kind value of LD-C0232 (decision 28) |
+| LD-C0138 Clearing Limit | LD-C0232 | Decision 27, 2026-11-26 |
 | LD-C0244 Error Position | LD-C0026 | 2026-11 risk domain draft |
-| LD-C0250 Default Fund Assessment | LD-C0028 | 2026-11 risk domain draft |
 
 Not asserted: a common "Service" parent for LD-C0051 and LD-C0052 (see LD-A0020); a parent for LD-C0038 Commission (deferred by the sponsor).
 
@@ -280,7 +279,7 @@ Kinds: **exact** (same meaning everywhere in scope), **contextual** (same meanin
 | basis trade | contextual | desk usage, ambiguous | LD-C0123 |
 | leg fill | contextual | desk usage | LD-C0124 |
 | trade bust, busted trade | contextual | venue usage | LD-C0125 |
-| error trade | contextual | venue usage | LD-C0125 |
+| error trade | ambiguous | Execution | LD-C0125 (the venue's or broker's cancellation or adjustment) or LD-C0244 (the position kept); ask |
 | cancel and correct | contextual | desk usage | LD-C0125 |
 | pre-clearing trade | contextual | any | LD-C0126 |
 | alpha trade | contextual | OTC clearing usage | LD-C0126 |
@@ -521,29 +520,37 @@ Kinds: **exact** (same meaning everywhere in scope), **contextual** (same meanin
 | NPV | contextual | cleared OTC | LD-C0230 |
 | exposure | ambiguous | Any | LD-C0236, LD-C0245 or LD-C0246; ask which risk area and observing party (see LD-A0038) |
 | credit exposure, counterparty exposure | contextual | clearing broker toward a client | LD-C0236 |
-| limit | ambiguous | Any | LD-C0232, LD-C0138, LD-C0241, LD-C0229 or LD-C0168; ask who set it and on what (see LD-A0037) |
+| limit | ambiguous | Any | LD-C0232 (including its pre-trade limit kind), LD-C0138, LD-C0063 (a venue's order control published for all participants), LD-C0229 or LD-C0168; ask who set it and on what (see LD-A0037) |
 | credit limit, client credit limit | contextual | clearing broker toward a client | LD-C0232 (kind client credit limit); LD-C0138 where it governs acceptance for clearing |
-| limit usage, headroom | contextual | Any risk limit | LD-C0233 (headroom is the unused part) |
+| limit usage, headroom | contextual | Any risk limit | LD-C0233 (headroom is related, not the same: it is the unused part of the limit) |
 | limit excess, limit breach | exact | Firm risk limits | LD-C0234 |
-| stress test result, stress exposure | contextual | Any | LD-C0235 |
+| stress test result, stress exposure | contextual | Any | LD-C0231 (measure basis stress loss) |
 | credit review, credit approval | contextual | Client onboarding and review | LD-C0237 |
-| internal rating, client rating | contextual | Provider's risk function | LD-C0238 |
-| parent guarantee, letter of credit | contextual | Client credit support | LD-C0239 |
-| close-out of a client, client liquidation | contextual | Clearing broker after a client default | LD-C0240 |
-| pre-trade risk check, pre-trade risk limit | contextual | Execution | LD-C0241 (the limit) or LD-C0119 (the check) |
-| fat finger | contextual | Execution | LD-C0243 |
-| kill switch, panic button | exact | Execution | LD-C0242 |
-| error account, error trade | contextual | Execution | LD-C0244 (the position) or LD-C0243 (the event) |
-| give-up risk, unallocated risk | contextual | Executing side before take-up | LD-C0245 |
+| internal rating, client rating | contextual | Provider's risk function | LD-C0237 (the client risk rating it records); never an external credit rating |
+| parent guarantee, letter of credit | contextual | Client credit support, not accepted as collateral | LD-C0239 |
+| close-out of a client, client liquidation | contextual | Clearing broker after a client default | LD-C0159 (its steps) |
+| pre-trade risk check, pre-trade risk limit | contextual | Execution | LD-C0232 (kind pre-trade limit) or LD-C0119 (the check) |
+| fat finger | ambiguous | Execution | an execution error: the cause value on LD-C0125 (if the execution is corrected) or LD-C0244 (if the quantity is kept); ask |
+| kill switch, panic button | contextual | Execution | no concept: an emergency mass cancel of a participant's open orders; not a Pre-trade Control Check, not a trading halt; see the risk-expert skill |
+| error account | contextual | Execution | LD-C0244 |
+| give-up risk | contextual | Giving clearing member before registration to the receiving member | LD-C0245 |
+| unallocated risk | ambiguous | Execution | pending: quantity executed for a client and not yet allocated is not covered by Unaccepted Give-up Exposure (decision 28); ask |
 | exposure to the CCP, CCP counterparty risk | contextual | Clearing member toward a CCP | LD-C0246 |
 | CCP due diligence, CCP credit review | contextual | Clearing member | LD-C0247 |
 | waterfall, default waterfall | exact | CCP default resources | LD-C0248 |
-| skin in the game, SITG | exact | CCP default resources | LD-C0249 |
-| assessment, cash call | contextual | After a clearing member default | LD-C0250; a cash call under recovery is LD-C0252 |
-| default auction, hedged auction | exact | CCP default management | LD-C0251 |
+| skin in the game, SITG | contextual | CCP default resources | LD-C0248 (layer CCP dedicated own resources) |
+| assessment | contextual | after a clearing member default | LD-C0250 |
+| cash call | ambiguous | Any | LD-C0046, LD-C0211, LD-C0250 or LD-C0252; ask whether it follows a margin run or a default |
+| assessment | ambiguous | Any | LD-C0250, LD-C0247, LD-C0237 or LD-C0200; ask who assesses what |
+| default auction, hedged auction | contextual | CCP default management | LD-C0154 (step auction) |
 | VMGH, variation margin gains haircutting, tear-up | contextual | CCP recovery | LD-C0252 |
-| default | ambiguous | Any | LD-C0159, LD-C0154, LD-C0252 or LD-C0210; ask who defaults toward whom (see LD-A0039) |
+| default | ambiguous | Any | LD-C0159, LD-C0154, LD-C0252, LD-C0210 or LD-C0046; ask who defaults toward whom (see LD-A0039) |
 | risk | ambiguous | Any | Ask which risk area (client clearing, execution, CCP) and which measure (see LD-A0036) |
+| position limit breach, position limit excess | contextual | regulator or venue limits | LD-C0229 (a Position Limit exceeded); never a Limit Breach |
+| concentration limit | contextual | collateral | LD-C0168; a firm cap on position concentration is LD-C0232; a CCP concentration add-on is LD-C0162 |
+| credit support annex, CSA | contextual | bilateral analogue | LD-C0071; never Third-party Credit Support |
+| credit support arrangement | exact | former name, until 2026-11-26 | LD-C0239 |
+| group of clients defined for risk purposes, risk group, connected clients | contextual | Provider's risk function | LD-C0253 |
 
 ## Required context
 
@@ -601,7 +608,7 @@ Agents must obtain or state these before answering; a missing item leads to a cl
 | LD-C0116 Indirect Clearing Arrangement | Regime, clearing service, each link in the chain, account option, status and effective period. |
 | LD-C0117 Client Order | Who gave the order (client or authorised representative) and to which executing broker; the handling channel and its time; under direct market access the client order and the venue order may be the same order. |
 | LD-C0118 Child Order | The parent order and the handling party; whether it went to a venue or to another broker; channel changes over time. |
-| LD-C0119 Pre-trade Control Check | Who set the limit (executing broker, venue member, clearing member, venue), the limit kind and the regime that requires it. |
+| LD-C0119 Pre-trade Control Check | Who applied the check and, for each limit or control, who set it (executing broker, venue member, clearing member, venue), the limit kind and the regime that requires it. |
 | LD-C0120 Venue Execution | Venue, entering member, venue identifiers (unique only per venue and session), execution timestamp and the trade date assigned by the venue calendar. |
 | LD-C0121 Client Execution | Client order; underlying venue executions; the order handling channel of the client order at the time of each underlying venue execution; the broker's trading capacity. |
 | LD-C0122 Block Trade | Venue, contract and the venue's block rules in force at the trade date; trading capacity of the arranging broker. |
@@ -713,7 +720,7 @@ Agents must obtain or state these before answering; a missing item leads to a cl
 | LD-C0228 Trade Confirmation | Issuer, client, execution or allocation confirmed, regime. |
 | LD-C0229 Position Limit | Regime or venue, contract, limit kind (limit, accountability or reportable level), period, aggregation basis, exemptions. |
 | LD-C0230 Position Valuation | Account, as-of time, currency, valuation party, price source and method. |
-| LD-C0231 Risk Exposure | Observing entity, counterparty or scope, risk area, measure basis, as-of time, currency, whether collateral and credit support are counted. |
+| LD-C0231 Risk Exposure | Observing entity, counterparty or scope, risk area, measure basis, as-of time, currency, whether collateral and credit support are counted, valuation basis of collateral counted. |
 | LD-C0232 Risk Limit | Party that set it, kind, scope, basis, version in force, warning level and action. |
 | LD-C0233 Limit Utilisation | Limit and version, as-of time, whether pending orders and unaccepted trades are counted. |
 | LD-C0234 Limit Breach | Limit and version, time, excess, action taken. |
@@ -721,13 +728,13 @@ Agents must obtain or state these before answering; a missing item leads to a cl
 | LD-C0236 Client Clearing Exposure | Clearing broker, client or group of clients defined for risk purposes, clearing service or all, as-of time, currency. |
 | LD-C0237 Client Credit Assessment | Assessing entity, client or group, date, outcome, conditions. |
 | LD-C0238 Client Risk Rating | Rating entity and scale, client or group, validity period. |
-| LD-C0239 Credit Support Arrangement | Support provider, supported client, beneficiary, amount or cap, validity period. |
+| LD-C0239 Third-party Credit Support | Support provider, supported client, beneficiary, amount or cap, validity period. |
 | LD-C0240 Client Default Management | Clearing broker, client, client clearing agreement, default date, accounts concerned. |
 | LD-C0241 Pre-trade Limit | Party that set it, scope (client, trader, access, venue, instrument), basis, version in force. |
 | LD-C0242 Kill Switch Activation | Party that activated it, scope, time activated and lifted. |
 | LD-C0243 Execution Error | Execution or order concerned, error kind, responsible party, resolution. |
-| LD-C0244 Error Position | Executing broker, error account, instrument, originating execution error. |
-| LD-C0245 Unaccepted Give-up Exposure | Giving side, client, receiving member, trades or quantities pending, rejected or lapsed, as-of time. |
+| LD-C0244 Error Position | Responsible party (executing broker or third-party executing member), error account, instrument, originating execution error. |
+| LD-C0245 Unaccepted Give-up Exposure | Observing party (giving clearing member or executing broker), client, receiving member, trades or quantities pending, rejected or lapsed, as-of time. |
 | LD-C0246 CCP Exposure | Clearing member, CCP and clearing service, as-of time, components counted. |
 | LD-C0247 CCP Risk Assessment | Assessing member, CCP and clearing services, date, outcome. |
 | LD-C0248 Default Waterfall | Clearing service, rule version, effective date. |
@@ -735,6 +742,7 @@ Agents must obtain or state these before answering; a missing item leads to a cl
 | LD-C0250 Default Fund Assessment | Clearing service, triggering default, cap, payment period. |
 | LD-C0251 Default Management Auction | CCP, clearing service, defaulting member, portfolio, auction date. |
 | LD-C0252 CCP Loss Allocation | CCP, clearing service, tool, triggering event, date. |
+| LD-C0253 Client Risk Group | Risk function that set it, member clients, reason the credit is connected, validity period. |
 
 ## Usage notes on existing concepts
 
@@ -779,6 +787,7 @@ Notes clarify use; they do not change the meanings in the catalogue. Review numb
 | LD-C0048 Collateral Asset | Cash in a given currency is a collateral asset. Eligibility holds only against a version of a Collateral Eligibility Schedule (LD-R0072). [04] |
 | LD-C0166 Margin Excess or Shortfall | On US futures statements it is called margin excess or deficit (MED); where the agreement margins on account equity, the held side is Account Equity (LD-C0225). |
 | LD-C0165 Margin Call Terms | 'Maintenance margin' is the lower of two call trigger levels in these terms (mainly US futures), not a separate requirement (LD-A0027). |
+| LD-C0244 Error Position | Closing out an error position is dealing on own account, which matters for regulatory trade reporting of the close-out (to verify per regime). |
 
 ## Priority and alignment
 
@@ -973,28 +982,29 @@ English names are the only labels (French labels removed by sponsor decision, 20
 | LD-C0228 Trade Confirmation | — | 2026-11 gap review | CFTC Rule 1.33; MiFID II confirmation of execution (Delegated Regulation (EU) 2017/565); to verify. |
 | LD-C0229 Position Limit | — | 2026-11 gap review | MiFID II Art. 57; CFTC Part 150; exchange accountability levels; to verify. |
 | LD-C0230 Position Valuation | — | 2026-11 gap review | EMIR valuation reporting; to verify. |
-| LD-C0231 Risk Exposure | — | 2026-11 risk domain draft | CPMI-IOSCO PFMI principle 4 (credit risk); to verify. |
-| LD-C0232 Risk Limit | — | 2026-11 risk domain draft | MiFID II RTS 6, Delegated Regulation (EU) 2017/589, and CFTC Rule 1.73 (risk-based limits); to verify. |
+| LD-C0231 Risk Exposure | — | 2026-11 risk domain draft | CPMI-IOSCO PFMI principle 4 (an FMI's credit risk toward its participants); CRR Part Three Title II for a bank's exposures; stress loss basis: CPMI-IOSCO PFMI principles 4 and 7 (stress testing); to verify. |
+| LD-C0232 Risk Limit | — | 2026-11 risk domain draft | MiFID II RTS 6, Delegated Regulation (EU) 2017/589, Art. 15 (pre-trade controls); MiFID II RTS 7 for venue controls; CFTC 17 CFR 1.73 (risk-based limits); to verify. |
 | LD-C0233 Limit Utilisation | — | 2026-11 risk domain draft | — |
 | LD-C0234 Limit Breach | — | 2026-11 risk domain draft | — |
-| LD-C0235 Stress Loss | — | 2026-11 risk domain draft | CPMI-IOSCO PFMI principles 4 and 6 (stress testing); EMIR CCP stress testing; to verify. |
-| LD-C0236 Client Clearing Exposure | — | 2026-11 risk domain draft | CFTC Rule 1.73; FIA guidance on clearing member risk management; to verify. |
+| LD-C0235 Stress Loss | — | 2026-11 risk domain draft; deprecated (decision 28) | CPMI-IOSCO PFMI principles 4 and 7 (stress testing); EMIR CCP stress testing; to verify. |
+| LD-C0236 Client Clearing Exposure | — | 2026-11 risk domain draft | CFTC Rule 1.73; FIA guidance on clearing member risk management (industry guidance, not a rule); to verify. |
 | LD-C0237 Client Credit Assessment | — | 2026-11 risk domain draft | CFTC Rule 1.73; to verify. |
 | LD-C0238 Client Risk Rating | — | 2026-11 risk domain draft | — |
-| LD-C0239 Credit Support Arrangement | — | 2026-11 risk domain draft | — |
+| LD-C0239 Third-party Credit Support | — | 2026-11 risk domain draft | — |
 | LD-C0240 Client Default Management | — | 2026-11 risk domain draft | ISDA and FIA client clearing documentation (close-out provisions); to verify. |
-| LD-C0241 Pre-trade Limit | — | 2026-11 risk domain draft | MiFID II RTS 6, Delegated Regulation (EU) 2017/589, Art. 15 to 17; CFTC Rule 1.73; FIA best practices for pre-trade controls; to verify. |
+| LD-C0241 Pre-trade Limit | — | 2026-11 risk domain draft; deprecated (decision 28) | MiFID II RTS 6, Delegated Regulation (EU) 2017/589, Art. 15; MiFID II RTS 7 for venue controls; CFTC 17 CFR 1.73; FIA best practices for pre-trade controls; to verify. |
 | LD-C0242 Kill Switch Activation | — | 2026-11 risk domain draft | MiFID II RTS 6, Delegated Regulation (EU) 2017/589, Art. 12; to verify. |
 | LD-C0243 Execution Error | — | 2026-11 risk domain draft | Venue error trade policies (instances); to verify. |
 | LD-C0244 Error Position | — | 2026-11 risk domain draft | — |
 | LD-C0245 Unaccepted Give-up Exposure | — | 2026-11 risk domain draft | FIA give-up guidance; to verify. |
 | LD-C0246 CCP Exposure | — | 2026-11 risk domain draft | Regulation (EU) No 575/2013 (CRR) Part Three Title II Chapter 6 Section 9 and Basel framework CRE54 (exposures to CCPs); to verify. |
-| LD-C0247 CCP Risk Assessment | — | 2026-11 risk domain draft | CRR Art. 300 to 311 (to verify); CPMI-IOSCO PFMI disclosure framework. |
-| LD-C0248 Default Waterfall | — | 2026-11 risk domain draft | EMIR Art. 45 (default waterfall); CFTC Part 39; to verify. |
+| LD-C0247 CCP Risk Assessment | — | 2026-11 risk domain draft | CRR Art. 300 to 311 (to verify); CPMI-IOSCO PFMI disclosure framework (to verify). |
+| LD-C0248 Default Waterfall | — | 2026-11 risk domain draft | EMIR Art. 45 (default waterfall); UK EMIR; CFTC 17 CFR 39.11 and 39.16; to verify. |
 | LD-C0249 CCP Dedicated Own Resources | — | 2026-11 risk domain draft | EMIR Art. 45(4) and Delegated Regulation (EU) No 153/2013 Art. 35; CCPRRR second skin in the game; to verify. |
-| LD-C0250 Default Fund Assessment | — | 2026-11 risk domain draft | CCP rulebooks (instances); CPMI-IOSCO recovery guidance; to verify. |
+| LD-C0250 Default Fund Assessment | — | 2026-11 risk domain draft | EMIR Art. 43; CFTC 17 CFR 39.11; CCP rulebooks (instances); CPMI-IOSCO recovery guidance; to verify. |
 | LD-C0251 Default Management Auction | — | 2026-11 risk domain draft | CPMI-IOSCO PFMI principle 13; FIA and CCP12 default management auction papers; to verify. |
-| LD-C0252 CCP Loss Allocation | — | 2026-11 risk domain draft | Regulation (EU) 2021/23 (CCP recovery and resolution); CPMI-IOSCO recovery of financial market infrastructures; to verify. |
+| LD-C0252 CCP Loss Allocation | — | 2026-11 risk domain draft | Regulation (EU) 2021/23 (CCP recovery and resolution); UK CCP resolution regime; CFTC 17 CFR 39.39; CPMI-IOSCO recovery of financial market infrastructures; to verify. |
+| LD-C0253 Client Risk Group | — | 2026-11-26 risk domain peer review (decision 28) | — |
 
 ## Plain-language summaries
 
@@ -1235,24 +1245,25 @@ One sentence for a newcomer, a synthetic example and the nearest concept people 
 | LD-C0232 Risk Limit | A cap our risk function sets on how much risk or activity a client, trader or CCP may represent. | Clearing Broker Y caps Client A at a set exposure; above it new trades are referred. | Position Limit: set by a regulator or a venue, not by the firm. |
 | LD-C0233 Limit Utilisation | How much of a limit is used right now. | Client A uses most of its limit at noon, so the desk is warned. | Risk Exposure: the amount at risk; utilisation compares it with the limit. |
 | LD-C0234 Limit Breach | The moment a limit is exceeded, and what was done about it. | Client A's exposure goes above its limit; Clearing Broker Y blocks new trades until margin arrives. | Rejected pre-trade check: stops the order before any breach. |
-| LD-C0235 Stress Loss | What a portfolio would lose in a named extreme scenario. | Under a scenario of a sharp fall in equity indices, Client A's futures would lose a stated amount. | Initial Margin Requirement: what must be posted, from the margin model, not from a stress scenario. |
+| LD-C0235 Stress Loss | Deprecated (decision 28): now the stress loss basis of a Risk Exposure. | Under a scenario of a sharp fall in equity indices, Client A's futures would lose a stated amount. | Initial Margin Requirement: what must be posted, from the margin model, not from a stress scenario. |
 | LD-C0236 Client Clearing Exposure | What we could lose on a client we clear if it stopped paying. | Client A misses a margin call; Clearing Broker Y has already paid the CCP and holds the loss risk. | CCP Exposure: what we could lose toward the CCP, not toward the client. |
 | LD-C0237 Client Credit Assessment | The risk team's review that decides whether, and on what terms, we clear for a client. | Before onboarding Fund F, the risk function approves it with a limit and a margin uplift. | Know-your-client checks: compliance, not credit. |
-| LD-C0238 Client Risk Rating | Our internal grade for how risky a client is. | Client A is graded on the firm's internal scale, which sets its review cycle. | External credit rating from an agency. |
-| LD-C0239 Credit Support Arrangement | A third party's promise to pay if our client does not. | Client A's parent company guarantees its obligations to Clearing Broker Y. | Collateral Arrangement: assets are delivered; here only a promise is given. |
-| LD-C0240 Client Default Management | What we do after declaring a client in default: close out, hedge or transfer, and use its collateral. | After declaring Client A in default, Clearing Broker Y closes out its futures and applies its collateral. | CCP default management after a clearing member default. |
-| LD-C0241 Pre-trade Limit | A limit checked on each order before it reaches the market. | Orders from Client A above a maximum size are rejected before reaching Venue V. | Position Limit: a rule on positions held, set by a regulator or venue. |
-| LD-C0242 Kill Switch Activation | Pulling all of a participant's orders at once and blocking new ones. | Clearing Broker Y cancels all of Client A's open orders on Venue V after an abnormal flow. | Venue trading halt: stops the instrument for everyone. |
-| LD-C0243 Execution Error | A trade done or booked wrongly by the executing side. | A trader buys 1,000 lots instead of 100 for Client A. | Trade Amendment: an agreed change, not an error. |
+| LD-C0238 Client Risk Rating | Deprecated (decision 28): now the rating a Client Credit Assessment records. | Client A is graded on the firm's internal scale, which sets its review cycle. | External credit rating from an agency. |
+| LD-C0239 Third-party Credit Support | A third party's promise to pay if our client does not. | Client A's parent company guarantees its obligations to Clearing Broker Y. | Collateral Arrangement: the terms for collateral that counts as margin cover, including a guarantee accepted as eligible collateral. |
+| LD-C0240 Client Default Management | Deprecated (decision 28): now the steps listed on Client Default. | After declaring Client A in default, Clearing Broker Y closes out its futures and applies its collateral. | CCP default management after a clearing member default. |
+| LD-C0241 Pre-trade Limit | Deprecated (decision 28): now the pre-trade limit kind of Risk Limit. | Orders from Client A above a maximum size are rejected before reaching Venue V. | Position Limit: a rule on positions held, set by a regulator or venue. |
+| LD-C0242 Kill Switch Activation | Deprecated (decision 28): described in the risk-expert skill, with no concept. | Clearing Broker Y cancels all of Client A's open orders on Venue V after an abnormal flow. | Venue trading halt: stops the instrument for everyone. |
+| LD-C0243 Execution Error | Deprecated (decision 28): now a cause value on Execution Correction and Error Position. | A trader buys 1,000 lots instead of 100 for Client A. | Trade Amendment: an agreed change, not an error. |
 | LD-C0244 Error Position | The position the broker keeps at its own risk after an execution error. | The 900 extra lots go to Executing Broker X's error account until closed out. | A client position: error positions are not client business. |
-| LD-C0245 Unaccepted Give-up Exposure | The risk the executing side keeps on trades the clearing broker has not taken up yet. | Executing Broker X's clearing member keeps Client A's trades after Clearing Broker Y rejects the give-up. | Client Clearing Exposure: the clearing broker's risk after it accepted the trades. |
-| LD-C0246 CCP Exposure | What we could lose toward a CCP if it failed or used our resources after another member's default. | Clearing Broker Y's default fund contribution and assessment commitment at CCP Z. | The CCP's exposure to us, which our margin covers. |
+| LD-C0245 Unaccepted Give-up Exposure | The risk the giving clearing member, and through it the executing broker, keeps on trades until the CCP registers them to the clearing broker. | Executing Broker X's clearing member keeps Client A's trades after Clearing Broker Y rejects the give-up. | Client Clearing Exposure: the clearing broker's risk once the trades are registered to it. |
+| LD-C0246 CCP Exposure | What we could lose toward a CCP if it failed or used our resources after another member's default. | Clearing Broker Y, as clearing member of CCP Z: its default fund contribution and assessment commitment. | The CCP's exposure to us, which the CCP covers with the collateral we post for our margin requirement. |
 | LD-C0247 CCP Risk Assessment | Our review of a CCP before and while we are a member. | The risk function reviews CCP Z's waterfall and assessment caps each year. | The CCP's admission review of us as a member. |
-| LD-C0248 Default Waterfall | The order in which a CCP uses its resources to absorb a defaulting member's losses. | CCP Z uses the defaulter's margin, then its own capital, then the default fund. | Default Fund Contribution: one layer, not the order. |
-| LD-C0249 CCP Dedicated Own Resources | The CCP's own money placed in its default waterfall. | CCP Z puts a stated amount of its own capital ahead of members' default fund contributions. | The CCP's total capital. |
+| LD-C0248 Default Waterfall | The order in which a CCP uses its resources to absorb a defaulting member's losses. | CCP Z uses the defaulter's house margin and default fund contribution, then its own dedicated resources, then the other members' contributions. | Default Fund Contribution: one layer, not the order. |
+| LD-C0249 CCP Dedicated Own Resources | Deprecated (decision 28): now a layer value of the Default Waterfall. | CCP Z puts a stated amount of its own capital ahead of members' default fund contributions. | The CCP's total capital. |
 | LD-C0250 Default Fund Assessment | A further payment a CCP can demand from surviving members after the default fund is used. | After a large default, CCP Z calls Clearing Broker Y up to its assessment cap. | Default Fund Contribution: paid in advance. |
-| LD-C0251 Default Management Auction | The auction in which a CCP sells a defaulted member's positions to other members. | CCP Z auctions Member D's hedged swap portfolio to its members. | Porting: client positions moved to another member, not sold. |
+| LD-C0251 Default Management Auction | Deprecated (decision 28): now the auction step of a Clearing Member Default. | CCP Z auctions a defaulted member's hedged swap portfolio to its members. | Porting: client positions moved to another member, not sold. |
 | LD-C0252 CCP Loss Allocation | How a CCP passes on losses once its prefunded resources are used. | CCP Z haircuts variation margin gains owed to members for a period. | Default Waterfall: the ordered resources, not the allocation event. |
+| LD-C0253 Client Risk Group | The clients our risk function treats as one for risk, because their credit is connected. | Clearing Broker Y's risk function treats Client A and Client B, two funds run by the same fund manager, as one group under one limit. | Commercial Group: the provider's grouping for sales, pricing and revenue, which need not match. |
 
 ## Values
 
@@ -1260,6 +1271,9 @@ Draft value lists carried by a concept (detailed taxonomies remain Phase 3 work)
 
 | Concept | Values (draft) |
 |---|---|
+| LD-C0010 Account | function (example value): error account |
+| LD-C0046 Margin Call | status: met; partly met; not met |
+| LD-C0071 Collateral Arrangement | protection from the collateral taker's insolvency: protected; not protected; as assessed (to verify) |
 | LD-C0016 Order | order state: received; rejected; working; partly filled; filled; cancelled; expired (a cancel request is not a cancellation until the venue confirms it; when our record and the venue's differ, the venue's record prevails, see Source Record LD-C0205); trading capacity: agency; principal; riskless principal (vocabulary in the modelling guidelines) |
 | LD-C0017 Execution | execution method: matching on a venue (order book or request for quote); registration on a venue of a privately negotiated trade (block trade, exchange for related position, other venue-defined types); bilateral off-venue; trading capacity: agency; principal; riskless principal |
 | LD-C0060 Allocation Instruction | form: standing (agreed in advance for a defined scope of activity and effective period, applied to every matching execution unless replaced); with the order before execution (clearing designation); after execution |
@@ -1286,9 +1300,9 @@ Draft value lists carried by a concept (detailed taxonomies remain Phase 3 work)
 | LD-C0111 Connectivity Route | direct, co-located; direct, remote; through an independent software vendor or service bureau; through another member's infrastructure; order-routing network |
 | LD-C0112 Direct Electronic Access Arrangement | direct market access; sponsored access |
 | LD-C0115 Sponsored Clearing Arrangement | intermediary form: sponsoring clearing member; clearing agent (where the rulebook provides, to verify) |
-| LD-C0119 Pre-trade Control Check | pass; reject; hold for manual review |
+| LD-C0119 Pre-trade Control Check | outcome: pass; reject; hold for manual review · control checked: pre-trade limit; venue rule provision |
 | LD-C0123 Exchange for Related Position | exchange for physical; exchange for swap; exchange of options for options; other venue-defined related-position types |
-| LD-C0125 Execution Correction | cancellation (bust); price adjustment; quantity correction; correction of non-economic details |
+| LD-C0125 Execution Correction | cancellation (bust); price adjustment; quantity correction; correction of non-economic details · cause: execution error, with responsible party (executing broker; third-party executing member; client on direct electronic access; venue) |
 | LD-C0129 Allocation Line | route: internal; give-up; allocation status: pending; booked; amended; cancelled |
 | LD-C0131 Give-up Line | receiver decision: pending; accepted in full; accepted in part; rejected; lapsed (not taken up by the deadline; the quantity stays with the giving member); unknown (no record, which is not pending) · registration status (CCP record): not registered; registered in part; registered in full (complete); reversed; unknown · line event: cancelled (withdrawn by the giving side before registration) · remaining quantity disposition: stays with the giving member; new give-up line; under investigation as a break |
 | LD-C0136 Take-up | outcome: accepted in full; accepted in part; rejected; non-acceptance reason (seed values for Phase 3): unknown account or give-up reference; no give-up agreement; clearing limit exceeded; product not covered; price or quantity mismatch; submitted after the deadline (only when actively rejected for lateness) |
@@ -1302,10 +1316,11 @@ Draft value lists carried by a concept (detailed taxonomies remain Phase 3 work)
 | LD-C0155 Porting | outcome: ported, closed out, partly ported; leg: positions, collateral |
 | LD-C0156 Back-up Clearing Member | named in advance with pre-agreement; named in advance without pre-agreement; agreed at default |
 | LD-C0158 Position Adjustment | long-short close-out; open-close correction; other rule-defined adjustment |
-| LD-C0159 Client Default | outcome: close-out; transfer; hedge |
+| LD-C0159 Client Default | outcome: close-out; transfer; hedge · steps: stop new business; hedge; close out; terminate; transfer by Position Transfer; apply collateral and credit support; set off; return excess; claim shortfall |
+| LD-C0154 Clearing Member Default | step: hedge; port; close out; auction (with any juniorisation of poor bidders); apply waterfall; return balance |
 | LD-C0160 Margin Parameter Set | margin rates per contract; risk parameter file (SPAN-type); scenario set (VaR-type); liquidity or concentration factors; intraday call thresholds |
 | LD-C0161 Margin Run | scheduled end-of-day; scheduled intraday; ad hoc |
-| LD-C0162 Margin Requirement Component | component type: base initial margin; add-on (for example concentration, liquidity, wrong-way risk); premium or net liquidation value margin; delivery margin; variation margin is a separate kind of requirement, not a component, even when CCP statements show it on a line next to the components |
+| LD-C0162 Margin Requirement Component | component type: base initial margin; add-on (for example concentration, liquidity, wrong-way risk, stress); premium or net liquidation value margin; delivery margin; variation margin is a separate kind of requirement, not a component, even when CCP statements show it on a line next to the components |
 | LD-C0163 Client Margin Uplift | basis: mandated minimum (regime or CCP rule); discretionary (broker policy or client terms); form: multiplier; fixed add-on; own model; none (pure replication, only where no mandated minimum applies) |
 | LD-C0164 Margin Portfolio | within an account; liquidation group; per client in a gross account; cross-product or cross-service; cross-CCP under an agreement |
 | LD-C0165 Margin Call Terms | call frequency and run types; deadline: a Settlement Deadline (a kind of Cut-off) with calendar, time zone and consequence; threshold; minimum transfer amount; rounding; dispute process |
@@ -1341,7 +1356,7 @@ Draft value lists carried by a concept (detailed taxonomies remain Phase 3 work)
 | LD-C0200 Change Impact Assessment | impact type: scope, timing, data, legal effect, cost, process, documentation, client communication; decision: act, plan, monitor, ignore; status: draft, under review, signed off, closed; confidence: high, medium, low |
 | LD-C0201 Regulatory Interpretation | author kind: authority statement, industry association, external counsel, firm; status: draft, signed off, superseded |
 | LD-C0202 Regulatory Authorisation | CCP authorisation; third-country CCP recognition (with tier where applicable); derivatives clearing organisation registration or exemption; futures commission merchant registration; swap dealer registration; designated contract market or swap execution facility designation; regulated market, MTF or OTF authorisation; investment firm or bank authorisation |
-| LD-C0203 Regulatory Authority | legislator; supervisory authority; central bank acting as supervisor; supranational authority; self-regulatory organisation (can issue rule provisions and levy fees) |
+| LD-C0203 Regulatory Authority | legislator; supervisory authority; central bank acting as supervisor; supranational authority; self-regulatory organisation (can issue rule provisions and levy fees); resolution authority |
 | LD-C0204 Regulatory Reporting Role | executing entity in a transaction report; reporting counterparty; entity responsible for reporting |
 | LD-C0205 Source Record | firm books (by function: front office, middle office, clearing back office); CCP report; venue report; executing broker statement; clearing broker statement; settlement bank or payment system statement; client record or instruction |
 | LD-C0206 CCP Report | trade register; give-up and take-up report; position report; exercise and assignment report; delivery report; margin report; collateral report; cash settlement statement |
@@ -1364,18 +1379,26 @@ Draft value lists carried by a concept (detailed taxonomies remain Phase 3 work)
 | LD-C0228 Trade Confirmation | per execution; per allocation; end-of-day summary |
 | LD-C0229 Position Limit | level kind: limit; accountability level; reportable level · period: spot month; single month; all months combined |
 | LD-C0230 Position Valuation | settlement price; CCP net present value; other stated valuation |
-| LD-C0231 Risk Exposure | risk area: client clearing; execution; CCP · basis: current exposure; potential future exposure; stress loss; contingent obligation |
-| LD-C0232 Risk Limit | kind: clearing limit; pre-trade limit; client credit limit; CCP exposure limit; intraday limit · action: warn; refer; block; reduce |
-| LD-C0234 Limit Breach | action: warning; referral; temporary increase; block of new orders or trades; reduction of positions |
+| LD-C0231 Risk Exposure | area: shared · risk area: client clearing; execution; CCP · basis: current exposure; potential future exposure; stress loss (named scenario, version); contingent obligation |
+| LD-C0232 Risk Limit | area: shared · kind: clearing limit; pre-trade limit; client credit limit; CCP exposure limit · monitoring time: intraday; end of day · action: warn; refer; reject; block; reduce · access: direct electronic access; sponsored access |
+| LD-C0233 Limit Utilisation | area: shared |
+| LD-C0234 Limit Breach | area: shared · action: referral; temporary increase; margin call through an ad hoc run or raised uplift; block of new orders or trades; reduction |
 | LD-C0235 Stress Loss | scenario kind: historical; hypothetical |
-| LD-C0237 Client Credit Assessment | approved; approved with conditions; declined; under review |
-| LD-C0239 Credit Support Arrangement | guarantee; letter of credit; other undertaking |
+| LD-C0236 Client Clearing Exposure | area: clients we clear |
+| LD-C0237 Client Credit Assessment | area: clients we clear · outcome: approved; approved with conditions; declined · while it runs: under review · recorded outcome: client risk rating (internal, time-bounded) |
+| LD-C0239 Third-party Credit Support | area: clients we clear · guarantee; letter of credit; other undertaking |
 | LD-C0240 Client Default Management | step: stop new business; hedge; close out; transfer; apply collateral; claim shortfall |
 | LD-C0241 Pre-trade Limit | maximum order size or value; price collar; credit or exposure cap; position cap; order or message rate |
 | LD-C0243 Execution Error | wrong instrument; wrong side; wrong quantity; wrong price; wrong account; duplicate order; order outside limits |
-| LD-C0248 Default Waterfall | defaulter's margin; defaulter's default fund contribution; CCP dedicated own resources; non-defaulters' default fund contributions; assessments; further CCP resources; recovery tools |
+| LD-C0244 Error Position | area: execution · cause: execution error, with responsible party (executing broker; third-party executing member; client on direct electronic access; venue) |
+| LD-C0245 Unaccepted Give-up Exposure | area: execution |
+| LD-C0246 CCP Exposure | area: CCPs |
+| LD-C0247 CCP Risk Assessment | area: CCPs |
+| LD-C0248 Default Waterfall | area: CCPs · layer: defaulter's house margin collateral; defaulter's default fund contribution; CCP dedicated own resources (skin in the game: junior layer; second layer, as the rules or regime place it); non-defaulters' default fund contributions; assessments (where the rules place them here); further CCP resources |
 | LD-C0249 CCP Dedicated Own Resources | first-loss layer (before mutualised resources); second layer (after members' contributions); other |
-| LD-C0252 CCP Loss Allocation | assessment; variation margin gains haircutting; partial tear-up; full tear-up; cash call |
+| LD-C0250 Default Fund Assessment | area: CCPs |
+| LD-C0252 CCP Loss Allocation | area: CCPs · tool: assessment or cash call; variation margin gains haircutting; partial tear-up; full tear-up; resolution tool · trigger: member default; non-default loss |
+| LD-C0253 Client Risk Group | area: clients we clear |
 
 ## Knowledge layers
 

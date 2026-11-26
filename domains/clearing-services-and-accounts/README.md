@@ -9,7 +9,7 @@ Once a derivative trade is executed, a central counterparty (CCP) steps in betwe
 | [Overview](overview.md) | The domain in plain words: what it covers, how it works, what to keep apart |
 | [Concepts](concepts.md) | 26 concepts, each with a definition, an example and what not to confuse it with |
 | [Review sheet](review.md) | What each reviewer is asked, open questions on meaning, decisions already taken |
-| [Questions for our firm](company-questions.md) | 16 questions that capture how our firm works in this domain |
+| [Questions for our firm](company-questions.md) | 17 questions that capture how our firm works in this domain |
 | [Questions for the experts (Excel)](questions-for-experts.xlsx) | The same questions as an interview workbook; answers are recorded in this file |
 
 **Owner:** ETD Clearing product owner (OTC Clearing product owner once the OTC module opens)  
@@ -45,10 +45,10 @@ Once a derivative trade is executed, a central counterparty (CCP) steps in betwe
 - **[Client Back-to-Back Trade](concepts.md#client-back-to-back-trade)** — The matching trade between the clearing broker and its client that exists when the broker clears as principal.
 - **[Position Transfer](concepts.md#position-transfer)** — Moving open positions from one CCP account to another on request, for example when a client changes clearing broker.
 - **[Clearing Member Default](concepts.md#clearing-member-default)** — The CCP formally declares that a member has failed, which starts the default procedures.
-  - **[Porting](concepts.md#porting)** — Moving clients' positions and collateral from a failed clearing member to a back-up member, or closing them out if that fails.
+- **[Porting](concepts.md#porting)** — Moving clients' positions and collateral from a failed clearing member to a back-up member, or closing them out if that fails.
 - **[Back-up Clearing Member](concepts.md#back-up-clearing-member)** — A clearing member a client names in advance, or that agrees at the time of a default, to receive the client's positions if its usual clearing member fails; being named does not by itself commit it.
 - **[Sponsoring Clearing Member](concepts.md#sponsoring-clearing-member)** — A clearing member that stands behind a client admitted directly to a CCP under a sponsored model.
 - **[Position Adjustment](concepts.md#position-adjustment)** — A permitted correction or close-out of a position at the CCP that does not involve a new trade.
 - **[Client Default](concepts.md#client-default)** — When a clearing broker declares its own client in default and takes action on that client's positions.
 
-Also relevant here, owned by another domain: [Account](../parties-and-roles/concepts.md#account), [Market Access Arrangement](../service-offering-and-market-access/concepts.md#market-access-arrangement), [CCP Interposition](../clearing-give-up-and-acceptance/concepts.md#ccp-interposition), [Regulatory Classification](../regulation-and-rule-changes/concepts.md#regulatory-classification), [Portfolio](../margin-and-collateral/concepts.md#portfolio), [Margin Methodology](../margin-and-collateral/concepts.md#margin-methodology), [Collateral](../margin-and-collateral/concepts.md#collateral).
+Also relevant here, owned by another domain: [Account](../parties-and-roles/concepts.md#account), [Market Access Arrangement](../service-offering-and-market-access/concepts.md#market-access-arrangement), [CCP Interposition](../clearing-give-up-and-acceptance/concepts.md#ccp-interposition), [Regulatory Classification](../regulation-and-rule-changes/concepts.md#regulatory-classification), [Portfolio](../margin-and-collateral/concepts.md#portfolio), [Margin Methodology](../margin-and-collateral/concepts.md#margin-methodology), [Collateral](../margin-and-collateral/concepts.md#collateral), [Client Clearing Exposure](../risk/concepts.md#client-clearing-exposure), [CCP Exposure](../risk/concepts.md#ccp-exposure), [Default Waterfall](../risk/concepts.md#default-waterfall), [CCP Loss Allocation](../risk/concepts.md#ccp-loss-allocation).

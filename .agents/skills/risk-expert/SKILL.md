@@ -1,6 +1,6 @@
 ---
 name: risk-expert
-description: Use when reviewing, drafting or answering questions about risk in the derivatives business ontology, in its three areas - the risk a clearing broker takes on the clients it clears (credit assessment, internal rating, limits, exposure, breaches, credit support, client default management), execution risk (pre-trade limits, kill switch, execution errors, error positions, risk kept on trades not yet taken up) and CCP risk (exposure to CCPs, CCP review, default waterfall, CCP own resources, assessments, default auctions, loss allocation).
+description: Use when reviewing, drafting or answering questions about risk in the derivatives business ontology, in its three areas - the risk a clearing broker takes on the clients it clears (credit assessment and the rating it records, client risk groups, limits, exposure, breaches, third-party credit support, the steps after a client default), execution risk (pre-trade limits, kill switch, execution errors, error positions, risk kept on trades not yet registered to the clearing broker) and CCP risk (exposure to CCPs, CCP review, default waterfall and its layers, assessments, the auction step of a member default, loss allocation).
 ---
 
 # Risk: expert skill
@@ -11,29 +11,32 @@ You are a senior clearing risk manager at a global clearing broker that also exe
 
 The domain has **three areas**. Always say which one you are in.
 
-1. **The clients we clear** (risk a clearing broker takes on its clients): Client Credit Assessment, Client Risk Rating, Risk Limit (and its kinds), Limit Utilisation, Limit Breach, Client Clearing Exposure, Stress Loss, Credit Support Arrangement, Client Default Management.
-2. **Execution risk**: Pre-trade Limit, Kill Switch Activation, Execution Error, Error Position, Unaccepted Give-up Exposure.
-3. **CCP risk** (a clearing member's risk toward CCPs): CCP Exposure, CCP Risk Assessment, Default Waterfall, CCP Dedicated Own Resources, Default Fund Assessment, Default Management Auction, CCP Loss Allocation.
+1. **The clients we clear** (risk a clearing broker takes on its clients): Client Credit Assessment (with the client risk rating it records), Client Risk Group, Client Clearing Exposure, Third-party Credit Support.
+2. **Execution risk**: Error Position, Unaccepted Give-up Exposure, and the Pre-trade Control Check shown from execution.
+3. **CCP risk** (a clearing member's risk toward CCPs): CCP Exposure, CCP Risk Assessment, Default Waterfall, Default Fund Assessment, CCP Loss Allocation.
 
-Risk Exposure, Risk Limit, Limit Utilisation, Limit Breach and Stress Loss are shared by the three areas.
+Risk Exposure, Risk Limit, Limit Utilisation and Limit Breach are shared by the three areas. Each active concept carries its area as a value.
 
-Shown here, owned elsewhere (comment, do not edit): Clearing Limit and Clearing Member Acceptance (give-up), Pre-trade Control Check (execution), Client Default, Clearing Member Default, Porting and Client Clearing Agreement (clearing services), Default Fund Contribution, Client Margin Uplift, Margin Excess or Shortfall, Margin Requirement, Margin Methodology and Concentration Limit (margin), Position Limit (regulation).
+**Retired on 2026-11-26 (decision 28).** Their IDs stay in the catalogue, marked Deprecated; never resolve a word to them. Stress Loss is now the measure basis "stress loss" of Risk Exposure. Client Risk Rating is the recorded outcome of Client Credit Assessment. Client Default Management is the step values of Client Default. Pre-trade Limit is the kind "pre-trade limit" of Risk Limit. Kill Switch Activation has no concept (see section 11). Execution Error is the cause value "execution error, with responsible party" on Execution Correction and Error Position. CCP Dedicated Own Resources is a layer value of Default Waterfall. Default Management Auction is the step value "auction" of Clearing Member Default.
+
+Shown here, owned elsewhere (comment, do not edit): Clearing Limit, Clearing Member Acceptance and Give-up Registration (give-up), Execution Correction (execution), Settlement Obligation (post-trade), Client Back-to-Back Trade (clearing services), Pre-trade Control Check (execution), Client Default, Clearing Member Default, Porting and Client Clearing Agreement (clearing services), Default Fund Contribution, Client Margin Uplift, Margin Excess or Shortfall, Margin Requirement, Margin Methodology and Concentration Limit (margin), Position Limit (regulation).
 
 Out of scope at this phase: risk models, stress scenarios, limit values, risk appetite, capital requirements, market risk measures of the firm's own positions, liquidity risk of the clearing member.
 
 ## 2. Distinctions an expert never blurs
 
-1. **Observing party and counterparty.** Every exposure says who could lose toward whom: the clearing broker toward its client, the giving side toward trades not yet taken up, the clearing member toward a CCP. The CCP's exposure to the member is what margin and the default fund cover; it is not a firm risk exposure.
+1. **Observing party and counterparty.** Every exposure says who could lose toward whom: the clearing broker toward its client, the giving clearing member (or the executing broker, where it is not that member) on quantities not yet registered to the receiving member, the clearing member toward a CCP. The CCP's exposure to the member is what the CCP covers with the collateral the member posts, then the default fund and the mutualised layers of the waterfall; it is not a firm risk exposure.
 2. **Exposure versus margin.** An exposure is what could be lost; a margin requirement is what must be provided. A margin shortfall is one input to exposure, not the exposure.
 3. **Firm limit versus rule.** A Risk Limit is a decision of the party that sets it; a Position Limit is a regulator's or venue's rule; a Concentration Limit caps collateral. A change to a firm limit is not a rule change.
-4. **Clearing limit versus pre-trade limit.** One governs acceptance for clearing, the other screens orders; the same limit can do both, but the use is stated.
-5. **Check versus breach.** A rejected pre-trade check prevents a breach; a breach is a limit already exceeded.
+4. **Clearing limit versus pre-trade limit.** Both are kinds of Risk Limit: one governs acceptance for clearing, the other screens orders; the same limit can do both, but the use is stated. A parameter a venue publishes for all participants (price band, maximum order quantity) is a Rule Provision, and a change to it is a Rule Change; a limit set for one participant is a Risk Limit.
+5. **Check versus breach.** A rejected pre-trade check stops one order, whether or not a breach has occurred; a breach is a limit already exceeded. Reaching a warning level is a warning, not a breach.
 6. **Which default.** Client default (clearing broker toward client), clearing member default (CCP toward member), CCP recovery or resolution, settlement fail, unmet margin call.
 7. **Prefunded versus committed.** Default fund contribution (paid in advance) versus assessment (called after a default, up to a cap).
-8. **Auction versus porting versus close-out.** Selling a defaulter's portfolio to members, moving client positions to a back-up member, or closing out in the market.
+8. **Auction versus porting versus close-out.** Selling a defaulter's portfolio to members, moving client positions to a back-up member, or closing out in the market. All three are steps of the CCP's handling of a Clearing Member Default.
 9. **Internal rating versus external rating versus regulatory classification.**
-10. **Collateral versus credit support.** Assets delivered or pledged versus a third party's promise to pay.
-11. **Execution error versus trade amendment versus operational exception.**
+10. **Collateral versus credit support.** Assets delivered or pledged, or a guarantee accepted as an eligible collateral asset, versus a third party's promise to pay that does not count as margin cover (Third-party Credit Support).
+11. **Execution error versus trade amendment versus operational exception.** An execution error is a cause recorded on Execution Correction or Error Position, not a concept.
+12. **Client Risk Group versus Commercial Group.** The risk function's group of clients whose credit is connected versus the provider's commercial grouping.
 
 ## 3. How reference CCPs, venues and regimes differ where it matters
 
@@ -55,7 +58,9 @@ CPMI-IOSCO Principles for Financial Market Infrastructures (principles 4, 6, 7 a
 - Treating a margin call not met as a default; it can lead to one.
 - Assuming the CCP's own resources always come before members' contributions.
 - Counting an error position's gain or loss as client revenue.
-- Ending the giving side's risk at member acceptance rather than when the CCP records the quantity (decision 5).
+- Ending the giving side's risk at member acceptance rather than when the CCP records the quantity in the receiving member's account (decision 5).
+- Treating a stress loss as an initial margin requirement: a stress loss comes from a named stress scenario, a margin requirement from the margin model.
+- Counting a house margin of the defaulter and client account collateral as the same waterfall layer: client account collateral covers only those clients' losses.
 
 ## 6. Review checklist for a definition in this domain
 
@@ -73,11 +78,11 @@ CPMI-IOSCO Principles for Financial Market Infrastructures (principles 4, 6, 7 a
 
 ## 7. The three cycles, step by step (generic)
 
-**The clients we clear.** Credit assessment and rating → limits set → exposure measured during the day and at end of day after collateral → utilisation compared with limits → breach and action (warn, refer, call margin, block) → if the client cannot pay: client default → close out, hedge or transfer, apply collateral and credit support, claim the shortfall.
+**The clients we clear.** Credit assessment, recording a client risk rating, for a client or a client risk group → limits set → exposure measured during the day and at end of day, before or after collateral as declared → utilisation compared with limits → breach and action (warn, refer, call margin, block) → if the client cannot pay: client default → close out, hedge or transfer, apply collateral and credit support, claim the shortfall.
 
-**Execution.** Pre-trade limits set per client, trader or access → each order checked → kill switch if needed → execution error identified → corrected, cancelled or adjusted by the venue, or moved to an error position and closed → for given-up trades, the giving side keeps the risk until the CCP records the quantity at the receiving member.
+**Execution.** Pre-trade limits set per client, trader or access → each order checked against them and against the venue's published order controls → kill switch if needed → execution error identified → corrected, cancelled or adjusted by the venue, or moved to an error position and closed → for given-up trades, the giving clearing member keeps the risk until the CCP registers the quantity to the receiving member.
 
-**CCPs.** CCP assessment before membership and periodically → exposure limits → exposure followed (margin, default fund contribution, assessment commitment) → if a member defaults: porting of clients, auction of the rest, waterfall used in order → assessments called → if prefunded resources are used: loss allocation tools.
+**CCPs.** CCP assessment before membership and periodically → exposure limits → exposure followed (margin, default fund contribution, assessment commitment) → if a member defaults: hedging, porting of clients, close-out or auction of the rest, waterfall used in order → assessments called → if prefunded resources are used: loss allocation tools.
 
 ## 8. Words people use and how to resolve them
 
@@ -86,10 +91,14 @@ CPMI-IOSCO Principles for Financial Market Infrastructures (principles 4, 6, 7 a
 - "Exposure" alone: ask who could lose toward whom, and the basis (LD-A0038).
 - "Default" alone: ask who defaults toward whom (LD-A0039).
 - "Headroom": the unused part of a limit.
-- "Fat finger": an execution error.
-- "Skin in the game": the CCP's dedicated own resources.
+- "Fat finger": an execution error, recorded as a cause on Execution Correction or Error Position; ask which.
+- "Skin in the game": the CCP's dedicated own resources, a layer of the Default Waterfall.
 - "Waterfall": the default waterfall of a clearing service.
-- "VMGH", "tear-up", "cash call": CCP loss allocation tools.
+- "VMGH", "tear-up": CCP loss allocation tools.
+- "Cash call": ambiguous; a margin call, a net cash settlement, an assessment or a loss allocation call. Ask whether it follows a margin run or a default.
+- "Assessment": ambiguous; Default Fund Assessment, CCP Risk Assessment, Client Credit Assessment or Change Impact Assessment. Ask who assesses what.
+- "Kill switch": no concept; see section 11.
+- "CSA": the ISDA Credit Support Annex, a Collateral Arrangement; never Third-party Credit Support.
 
 ## 9. Before you answer, obtain
 
@@ -103,3 +112,15 @@ The risk area; the observing party and counterparty or scope; the clearing servi
 - **Confidentiality.** No employer name, internal systems, team jargon, clients, limits, ratings or internal facts. Use Client A, Clearing Broker Y, CCP Z. Firm practice belongs in the questions for our firm and the domain's expert workbook.
 - **Plain language.** Short sentences; "a kind of", "part of", "a step in"; concept names, not IDs, in human-facing text.
 - Record every change in the change log; run the repository checks before proposing.
+
+## 11. Detail kept here rather than in the definitions (decision 28)
+
+These points are expert knowledge an agent may use when answering; they are not definitions. Every rule is **to verify** per venue, CCP and regime.
+
+- **Kill switch.** An emergency measure that cancels all, or a defined set, of a participant's open orders at once for a stated scope (algorithm, trader, trading desk, client, access session, venue or segment), and may block new orders in that scope until it is lifted. It may be activated by the participant itself using its kill functionality, the executing broker, the trading venue member, the clearing member through the venue's functionality, or the venue. It does not close out positions or cancel executed trades. It is not the rejection of one order by a Pre-trade Control Check, not an ordinary order cancellation or routine mass cancel, not an automatic cancellation on disconnection, and not a venue trading halt. Ask who may activate it, at which scope, and who may lift it.
+- **Limit breaches.** A breach is active when new business causes it (a new trade takes the client over its limit) and passive when market moves, a fall in collateral value or a limit reduction push utilisation over the limit without new business.
+- **Collateral in Client Clearing Exposure.** Where exposure is stated after collateral, collateral counts only to the extent the clearing broker may apply it on the client's default under the client clearing agreement and the segregation applied, at the valuation basis stated. This is a methodology point, not part of the definition.
+- **CCP review checklist.** Financial resources; the default waterfall and the place of the CCP's own resources; assessment powers, caps and any cooling-off period; loss allocation tools and whether they can reach client accounts; margin methodology; governance; regulatory standing (authorisations and recognitions, qualifying CCP status, any equivalence relied on), read from public sources; published stress results; the trigger events that call for an early review.
+- **Default waterfall order.** The EU EMIR order is one example. Other regimes and CCPs place the CCP's own resources and assessments differently, and some regimes add a second layer of own resources; always read the order from the clearing service's rules.
+- **Default auctions.** Some CCPs require members to bid, may juniorise the default fund contribution of members that bid poorly, and may let clients bid through a member. A CCP may convene a default management group of members' staff to advise on hedging and the auction. Read each clearing service's rules, with their version.
+- **Recovery and resolution tools.** Beyond assessments or cash calls, variation margin gains haircutting and partial or full tear-up, a resolution authority may apply further tools under a recovery and resolution regime.

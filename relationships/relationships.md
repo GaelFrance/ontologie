@@ -90,52 +90,60 @@ These are logical relation proposals, not database foreign keys. Source/target a
 | LD-R0082 | LD-C0052 | relies_on | LD-C0051 / LD-C0009 | Through a market access arrangement; instances are internal-overlay facts. |
 | LD-R0083 | LD-C0032 | applies_to | LD-C0052 / LD-C0051 / LD-C0009 / LD-C0062 | Versioned; issuer and effective period required; public tariffs and negotiated client terms are distinguished by issuer and scope. |
 | LD-R0611 | LD-C0231 | measured_for | LD-C0003 | The counterparty in its role (client, executing broker, central counterparty), or an account or clearing service; never an internal team. |
-| LD-R0612 | LD-C0231 | takes_into_account | LD-C0047 | Only where the exposure states it is net of collateral. |
+| LD-R0612 | LD-C0231 | takes_into_account | LD-C0047 | Only where the exposure is stated after collateral, at the valuation the observing entity's risk methodology states. |
 | LD-R0613 | LD-C0231 | is_distinct_from | LD-C0043 | — |
 | LD-R0614 | LD-C0232 | caps | LD-C0231 | Or a quantity or activity, on the limit's stated basis. |
 | LD-R0615 | LD-C0232 | is_distinct_from | LD-C0229 | A firm decision versus a regulator's or venue's rule. |
 | LD-R0616 | LD-C0232 | is_distinct_from | LD-C0168 | A cap on risk versus a cap on collateral that counts. |
 | LD-R0617 | LD-C0233 | measures_use_of | LD-C0232 | On the limit's own basis and version. |
 | LD-R0618 | LD-C0234 | concerns | LD-C0232 | The version in force at the time of the breach. |
-| LD-R0619 | LD-C0234 | may_lead_to | LD-C0046 | For example an ad hoc margin call to the client. |
-| LD-R0620 | LD-C0235 | applies_to | LD-C0027 | Or an account, counterparty or clearing service. |
+| LD-R0619 | LD-C0234 | may_lead_to | LD-C0046 | Through an ad hoc margin run or a raised client margin uplift whose resulting shortfall is called. |
+| LD-R0620 | LD-C0231 | applies_to | LD-C0027 | For the stress loss basis: a portfolio, or an account, counterparty or clearing service. Moved 2026-11 from LD-C0235. |
 | LD-R0621 | LD-C0236 | observed_by | LD-C0057 | The clearing broker toward its client. |
 | LD-R0622 | LD-C0236 | concerns | LD-C0004 | Or a group of clients defined for risk purposes, which need not be the Commercial Group (LD-C0073). |
-| LD-R0623 | LD-C0236 | is_reduced_by | LD-C0239 | Where the arrangement covers the client's clearing obligations. |
+| LD-R0623 | LD-C0236 | is_reduced_by | LD-C0239 | Where the arrangement covers the client's clearing obligations and the risk methodology counts it; a guarantee accepted as collateral counts as collateral instead. |
 | LD-R0624 | LD-C0236 | is_distinct_from | LD-C0246 | — |
-| LD-R0625 | LD-C0237 | assigns | LD-C0238 | — |
+| LD-R0625 | LD-C0237 | assigns | LD-C0238 | Kept for ID stability: LD-C0238 is deprecated (decision 28); the client risk rating is now the recorded outcome of LD-C0237 (its values). |
 | LD-R0626 | LD-C0237 | sets | LD-C0232 | Including the clearing limit (LD-C0138). |
 | LD-R0627 | LD-C0237 | may_set | LD-C0163 | The client margin uplift. |
-| LD-R0628 | LD-C0238 | is_distinct_from | LD-C0068 | An internal grade versus a regulatory status. |
+| LD-R0628 | LD-C0237 | is_distinct_from | LD-C0068 | The client risk rating it records is an internal grade, not a regulatory status. Moved 2026-11 from LD-C0238. |
 | LD-R0629 | LD-C0239 | supports | LD-C0056 | Or the agreement under which the client owes the broker. |
 | LD-R0630 | LD-C0239 | is_distinct_from | LD-C0071 | — |
-| LD-R0631 | LD-C0240 | follows | LD-C0159 | — |
-| LD-R0632 | LD-C0240 | is_governed_by | LD-C0056 | — |
-| LD-R0633 | LD-C0241 | is_applied_in | LD-C0119 | — |
-| LD-R0634 | LD-C0241 | applies_to | LD-C0016 | Before the order reaches the venue, or on entry at the venue. |
-| LD-R0635 | LD-C0242 | cancels | LD-C0016 | All or a defined set of open orders in the stated scope. |
-| LD-R0636 | LD-C0243 | concerns | LD-C0017 | Or the order, booking or allocation in error. |
-| LD-R0637 | LD-C0243 | may_give_rise_to | LD-C0244 | When the erroneous quantity is moved to the broker's error account. |
-| LD-R0638 | LD-C0243 | may_raise | LD-C0030 | — |
-| LD-R0639 | LD-C0244 | is_held_by | LD-C0006 | In an account it keeps for errors; not a client account. |
-| LD-R0640 | LD-C0245 | observed_by | LD-C0134 | With the executing broker that gave up the trade. |
-| LD-R0641 | LD-C0245 | ends_at | LD-C0053 | For the quantity accepted, once the CCP records it in the receiving member's account (decision 5). |
+| LD-R0631 | LD-C0240 | follows | LD-C0159 | Kept for ID stability: LD-C0240 is deprecated (decision 28); its steps are now step values of LD-C0159. |
+| LD-R0632 | LD-C0240 | is_governed_by | LD-C0056 | Kept for ID stability: LD-C0240 is deprecated (decision 28); LD-R0376 links LD-C0159 to LD-C0056. |
+| LD-R0633 | LD-C0232 | is_applied_in | LD-C0119 | Kind pre-trade limit. Moved 2026-11 from LD-C0241. |
+| LD-R0634 | LD-C0232 | applies_to | LD-C0016 | Kind pre-trade limit: before the order reaches the venue, or on entry at the venue. Moved 2026-11 from LD-C0241. |
+| LD-R0635 | LD-C0242 | cancels | LD-C0016 | Kept for ID stability: LD-C0242 is deprecated (decision 28); kill switch practice is described in the risk-expert skill. |
+| LD-R0636 | LD-C0243 | concerns | LD-C0017 | Kept for ID stability: LD-C0243 is deprecated (decision 28); LD-R0260 links Execution Correction to the original execution. |
+| LD-R0637 | LD-C0243 | may_give_rise_to | LD-C0244 | Kept for ID stability: LD-C0243 is deprecated (decision 28); the cause is now a value on LD-C0244. |
+| LD-R0638 | LD-C0243 | may_raise | LD-C0030 | Kept for ID stability: LD-C0243 is deprecated (decision 28); LD-R0262 links Execution Correction to Operational Exception. |
+| LD-R0639 | LD-C0244 | is_held_by | LD-C0006 | Or by the third-party executing member responsible; not a client account. |
+| LD-R0640 | LD-C0245 | observed_by | LD-C0134 | The giving clearing member, which carries the quantities at the CCP; where the executing broker is not that member, it bears them under the give-up agreement (see the observed_by Executing Broker row). |
+| LD-R0641 | LD-C0245 | ends_with | LD-C0139 | For each quantity registered to the receiving member's CCP account, per the CCP record (decision 5). Corrected 2026-11 (was LD-C0053). |
 | LD-R0642 | LD-C0246 | observed_by | LD-C0007 | Per clearing service. |
 | LD-R0643 | LD-C0246 | concerns | LD-C0008 | — |
-| LD-R0644 | LD-C0246 | includes | LD-C0172 | Where the contribution is not protected from the CCP's insolvency. |
+| LD-R0644 | LD-C0246 | includes | LD-C0172 | In all cases, since it can be used for another member's default. |
 | LD-R0645 | LD-C0246 | includes | LD-C0250 | As a committed further contribution, up to its cap. |
 | LD-R0646 | LD-C0247 | concerns | LD-C0051 | Each clearing service the member uses or plans to use. |
 | LD-R0647 | LD-C0247 | sets | LD-C0232 | The CCP exposure limit and conditions. |
 | LD-R0648 | LD-C0248 | is_defined_by | LD-C0194 | The clearing service's rulebook; a change is a Rule Change (LD-C0064). |
 | LD-R0649 | LD-C0248 | applies_to | LD-C0051 | — |
-| LD-R0650 | LD-C0249 | part_of | LD-C0248 | A stated layer. |
-| LD-R0651 | LD-C0172 | part_of | LD-C0248 | The defaulter's own contribution, then the non-defaulters' mutualised layer. |
-| LD-R0652 | LD-C0250 | part_of | LD-C0248 | After the prefunded default fund. |
-| LD-R0653 | LD-C0250 | is_owed_by | LD-C0007 | A non-defaulting clearing member of the clearing service. |
-| LD-R0654 | LD-C0251 | step_in | LD-C0154 | The CCP's default management of the defaulter's house and client accounts not ported. |
-| LD-R0655 | LD-C0251 | is_distinct_from | LD-C0155 | — |
-| LD-R0656 | LD-C0252 | uses | LD-C0250 | Assessment is one loss allocation tool. |
-| LD-R0657 | LD-C0252 | follows | LD-C0248 | Once the prefunded layers are used, or after a non-default loss. |
+| LD-R0650 | LD-C0249 | is_used_in | LD-C0248 | A stated layer. Corrected 2026-11 (was part_of). Kept for ID stability: LD-C0249 is deprecated (decision 28); the layer is now a value of LD-C0248. |
+| LD-R0651 | LD-C0172 | is_used_in | LD-C0248 | The defaulter's own contribution, then the non-defaulters' mutualised layer. Corrected 2026-11 (was part_of). |
+| LD-R0652 | LD-C0250 | is_used_in | LD-C0248 | After the prefunded default fund, where the clearing service's rules place it. Corrected 2026-11 (was part_of). |
+| LD-R0653 | LD-C0250 | is_owed_by_the_holder_of | LD-C0007 | A non-defaulting clearing member of the clearing service. Corrected 2026-11 (was is_owed_by), aligned with LD-R0422. |
+| LD-R0654 | LD-C0251 | follows | LD-C0154 | The CCP's default management of the defaulter's house and client accounts not ported. Corrected 2026-11 (was step_in). Kept for ID stability: LD-C0251 is deprecated (decision 28); the auction is now a step value of LD-C0154. |
+| LD-R0655 | LD-C0251 | is_distinct_from | LD-C0155 | Kept for ID stability: LD-C0251 is deprecated (decision 28); auction and porting are now separate step values of LD-C0154. |
+| LD-R0656 | LD-C0252 | uses | LD-C0250 | Assessment is one loss allocation tool, where the clearing service's rules place it. |
+| LD-R0657 | LD-C0252 | follows | LD-C0248 | For losses from a member default only; non-default losses are allocated under the rules directly. |
+| LD-R0658 | LD-C0245 | observed_by | LD-C0006 | Where it is not the giving clearing member. |
+| LD-R0659 | LD-C0245 | arises_in | LD-C0133 | Or where a give-up designated in advance is not accepted. |
+| LD-R0660 | LD-C0248 | is_changed_by | LD-C0064 | A change to its order, layers, caps or tools; not a periodic recalculation of a layer's amount under unchanged rules. |
+| LD-R0661 | LD-C0119 | may_apply | LD-C0063 | A venue's order controls published for all participants (for example a price band or a maximum order quantity). |
+| LD-R0662 | LD-C0250 | gives_rise_to | LD-C0028 | When the CCP calls the assessment; the commitment itself is not a settlement obligation. |
+| LD-R0663 | LD-C0246 | includes | LD-C0047 | Posted to the CCP, as far as the collateral arrangement does not protect it from the CCP's insolvency. |
+| LD-R0664 | LD-C0253 | groups | LD-C0004 | The clients the risk function treats as one, over a stated period. |
+| LD-R0665 | LD-C0253 | is_distinct_from | LD-C0073 | A risk grouping set by the risk function versus a commercial grouping. |
 
 Collateral is linked to margin through Collateral Arrangement (LD-R0068), its asset (LD-R0069), its account (LD-R0070) and the requirement it covers (LD-R0071). The obligations an arrangement secures are stated in the arrangement; a standalone general Obligation concept is still not defined, so no relation targets one. Do not invent an unresolved target concept ID.
 
@@ -368,7 +376,7 @@ Structure links (part of, step in, state of) and plain connections proposed by t
 | LD-R0302 | LD-C0137 | precedes | LD-C0023 | — |
 | LD-R0303 | LD-C0138 | may_be_referred_to_in | LD-C0055 | — |
 | LD-R0304 | LD-C0138 | may_be_allowed_by | LD-C0056 | — |
-| LD-R0305 | LD-C0138 | may_be_applied_by | LD-C0119 | — |
+| LD-R0305 | LD-C0138 | may_be_applied_by | LD-C0119 | Inverse of LD-R0239. |
 | LD-R0306 | LD-C0138 | is_applied_in | LD-C0136 | — |
 | LD-R0307 | LD-C0138 | is_applied_in | LD-C0137 | — |
 | LD-R0308 | LD-C0139 | step_in | LD-C0022 | Level-2 structure (2026-11 domain review). |
@@ -425,7 +433,7 @@ Structure links (part of, step in, state of) and plain connections proposed by t
 | LD-R0359 | LD-C0153 | is_not | LD-C0022 | — |
 | LD-R0360 | LD-C0154 | may_use | LD-C0172 | — |
 | LD-R0361 | LD-C0154 | may_start | LD-C0155 | — |
-| LD-R0362 | LD-C0155 | step_in | LD-C0154 | Level-2 structure (2026-11 domain review). |
+| LD-R0362 | LD-C0155 | follows | LD-C0154 | Level-2 structure (2026-11 domain review). Corrected 2026-11 (was step_in). |
 | LD-R0363 | LD-C0155 | transfers_to | LD-C0156 | — |
 | LD-R0364 | LD-C0155 | moves_the_content_of | LD-C0069 | — |
 | LD-R0365 | LD-C0155 | moves_as_a_separate_leg | LD-C0047 | — |

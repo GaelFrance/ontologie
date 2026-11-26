@@ -303,7 +303,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Not to be confused with.** Cash Movement: the obligation is what is owed; the cash movement is what was actually paid.
 
-**Breaks down into:** [Netted Settlement Obligation](#netted-settlement-obligation) (kind of), [Default Fund Assessment](../risk/concepts.md#default-fund-assessment) (kind of), [Settlement Fail](#settlement-fail) (state of), [Payment Instruction](#payment-instruction) (step in)
+**Breaks down into:** [Netted Settlement Obligation](#netted-settlement-obligation) (kind of), [Settlement Fail](#settlement-fail) (state of), [Payment Instruction](#payment-instruction) (step in)
 
 **Note.** Purpose facet includes price alignment (never part of VM) and cash or physical settlement. [04, 02]
 
@@ -311,6 +311,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 - [Cash Movement](#cash-movement) *settles* Settlement Obligation — May be partial; net payment may cover several obligations.
 - [Variation Margin Requirement](../margin-and-collateral/concepts.md#variation-margin-requirement) *gives rise to* Settlement Obligation — Under settled-to-market treatment; under collateralised-to-market treatment VM is demanded by a margin call and met with collateral. Treatment is a versioned fact per clearing service and account type (the open question “Variation margin”).
+- [Default Fund Assessment](../risk/concepts.md#default-fund-assessment) *gives rise to* Settlement Obligation — When the CCP calls the assessment; the commitment itself is not a settlement obligation.
 - [Average Price Residual](../execution/concepts.md#average-price-residual) *may give rise to a settlement obligation settled by a cash movement* Settlement Obligation
 - [Price Alignment Amount](../margin-and-collateral/concepts.md#price-alignment-amount) *gives rise to* Settlement Obligation
 - [Cash Collateral Interest](../margin-and-collateral/concepts.md#cash-collateral-interest) *gives rise to* Settlement Obligation
@@ -336,7 +337,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Kind of:** [Settlement Obligation](#settlement-obligation)
 
-**Words people use:** “net cash call”; “net settlement amount”; “daily settlement” (CCP, contextual)
+**Words people use:** “net cash call”; “net settlement amount”; “daily settlement” (CCP, contextual); “cash call” (Any)
 
 **Before using it, know:** Parties and tier, currency, cycle, settlement route, list of underlying obligations.
 
@@ -437,7 +438,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 **Connected to:**
 
 - [Reconciliation](#reconciliation) *identifies* Operational Exception — A reconciliation identifies discrepancies (breaks); only some are handled as operational exceptions, and a break does not prove underlying trade failure.
-- [Execution Error](../risk/concepts.md#execution-error) *may raise* Operational Exception
+- Execution Error (retired) *may raise* Operational Exception — Kept for ID stability: Execution Error is deprecated (decision 28); a “may raise” link links Execution Correction to Operational Exception.
 - [Execution Correction](../execution/concepts.md#execution-correction) *may raise* Operational Exception
 - [Fee Adjustment](../fees-revenue-and-contribution/concepts.md#fee-adjustment) *may resolve* Operational Exception
 - [Reconciliation Break](#reconciliation-break) *may raise* Operational Exception

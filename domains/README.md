@@ -16,6 +16,6 @@ The ontology is organised in eleven business domains. Each domain has a folder w
 | [Fees, revenue and contribution](fees-revenue-and-contribution/README.md) | Revenue domain owner | 2 | 28 |
 | [Regulation and rule changes](regulation-and-rule-changes/README.md) | Regulatory Affairs | 1 | 20 |
 | [Post-trade operations](post-trade-operations/README.md) | ETD post-trade operations lead | 1 | 26 |
-| [Risk: client clearing, execution and CCP risk](risk/README.md) | Risk domain owner (risk function; to be named) | 2 | 22 |
+| [Risk: client clearing, execution and CCP risk](risk/README.md) | Head of clearing risk (risk function) or delegate | 2 | 15 |
 
-Each of the 250 concepts in use belongs to exactly one domain, whose owner approves it. A concept can also appear on other domains' review sheets for comment. The [glossary](../glossary.md) lists every concept A to Z, with the 2 retired ones marked as such. Each concept card names its knowledge layer where one is set: 0 business core, 1 domain core, 2 specialist, 3 reference.
+Each of the 243 concepts in use belongs to exactly one domain, whose owner approves it. A concept can also appear on other domains' review sheets for comment. The [glossary](../glossary.md) lists every concept A to Z, with the 10 retired ones marked as such. Each concept card names its knowledge layer where one is set: 0 business core, 1 domain core, 2 specialist, 3 reference.
