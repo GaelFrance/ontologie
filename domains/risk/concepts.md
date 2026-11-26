@@ -31,7 +31,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Risk” (open, answer proposed); “Exposure” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Measure · level 1 · Draft · reference LD-C0231 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Measure · level 1 · Draft · reference LD-C0231 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Client Clearing Exposure
 
@@ -58,7 +58,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Exposure” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Measure · level 2 · Draft · reference LD-C0236 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Measure · level 2 · Draft · reference LD-C0236 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Unaccepted Give-up Exposure
 
@@ -83,7 +83,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Exposure” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Measure · level 2 · Draft · reference LD-C0245 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Measure · level 2 · Draft · reference LD-C0245 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### CCP Exposure
 
@@ -111,7 +111,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Exposure” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Measure · level 2 · Draft · reference LD-C0246 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Measure · level 2 · Draft · reference LD-C0246 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Stress Loss
 
@@ -137,7 +137,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Risk” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Measure · level 2 · Draft · reference LD-C0235 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Measure · level 2 · Draft · reference LD-C0235 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Risk Limit
 
@@ -169,7 +169,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Risk” (open, answer proposed); “Limit” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Reference Concept · level 1 · Draft · reference LD-C0232 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Reference Concept · level 1 · Draft · reference LD-C0232 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Pre-trade Limit
 
@@ -196,7 +196,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Limit” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0241 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0241 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Limit Utilisation
 
@@ -216,7 +216,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 - *measures use of* [Risk Limit](#risk-limit) — On the limit's own basis and version.
 
-<sub>Measure · level 2 · Draft · reference LD-C0233 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Measure · level 2 · Draft · reference LD-C0233 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Limit Breach
 
@@ -239,7 +239,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *concerns* [Risk Limit](#risk-limit) — The version in force at the time of the breach.
 - *may lead to* [Margin Call](../margin-and-collateral/concepts.md#margin-call) — For example an ad hoc margin call to the client.
 
-<sub>Event · level 2 · Draft · reference LD-C0234 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Event · level 2 · Draft · reference LD-C0234 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Client Credit Assessment
 
@@ -263,7 +263,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *sets* [Risk Limit](#risk-limit) — Including the Clearing Limit.
 - *may set* [Client Margin Uplift](../margin-and-collateral/concepts.md#client-margin-uplift) — The client margin uplift.
 
-<sub>Process · level 2 · Draft · reference LD-C0237 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Process · level 2 · Draft · reference LD-C0237 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Client Risk Rating
 
@@ -284,7 +284,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Client Credit Assessment](#client-credit-assessment) *assigns* Client Risk Rating
 - *is distinct from* [Regulatory Classification](../regulation-and-rule-changes/concepts.md#regulatory-classification) — An internal grade versus a regulatory status.
 
-<sub>State · level 2 · Draft · reference LD-C0238 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>State · level 2 · Draft · reference LD-C0238 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Credit Support Arrangement
 
@@ -308,7 +308,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *supports* [Client Clearing Agreement](../clearing-services-and-accounts/concepts.md#client-clearing-agreement) — Or the agreement under which the client owes the broker.
 - *is distinct from* [Collateral Arrangement](../margin-and-collateral/concepts.md#collateral-arrangement)
 
-<sub>Agreement · level 2 · Draft · reference LD-C0239 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Agreement · level 2 · Draft · reference LD-C0239 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Client Default Management
 
@@ -331,7 +331,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *follows* [Client Default](../clearing-services-and-accounts/concepts.md#client-default)
 - *is governed by* [Client Clearing Agreement](../clearing-services-and-accounts/concepts.md#client-clearing-agreement)
 
-<sub>Process · level 2 · Draft · reference LD-C0240 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Process · level 2 · Draft · reference LD-C0240 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Kill Switch Activation
 
@@ -351,7 +351,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 - *cancels* [Order](../execution/concepts.md#order) — All or a defined set of open orders in the stated scope.
 
-<sub>Event · level 2 · Draft · reference LD-C0242 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Event · level 2 · Draft · reference LD-C0242 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Execution Error
 
@@ -375,7 +375,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *may give rise to* [Error Position](#error-position) — When the erroneous quantity is moved to the broker's error account.
 - *may raise* [Operational Exception](../post-trade-operations/concepts.md#operational-exception)
 
-<sub>Event · level 2 · Draft · reference LD-C0243 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Event · level 2 · Draft · reference LD-C0243 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Error Position
 
@@ -398,7 +398,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Execution Error](#execution-error) *may give rise to* Error Position — When the erroneous quantity is moved to the broker's error account.
 - *is held by* [Executing Broker](../execution/concepts.md#executing-broker) — In an account it keeps for errors; not a client account.
 
-<sub>State · level 2 · Draft · reference LD-C0244 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>State · level 2 · Draft · reference LD-C0244 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### CCP Risk Assessment
 
@@ -419,7 +419,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *concerns* [Clearing Service](../clearing-services-and-accounts/concepts.md#clearing-service) — Each clearing service the member uses or plans to use.
 - *sets* [Risk Limit](#risk-limit) — The CCP exposure limit and conditions.
 
-<sub>Process · level 2 · Draft · reference LD-C0247 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Process · level 2 · Draft · reference LD-C0247 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Default Waterfall
 
@@ -445,7 +445,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *applies to* [Clearing Service](../clearing-services-and-accounts/concepts.md#clearing-service)
 - [CCP Loss Allocation](#ccp-loss-allocation) *follows* Default Waterfall — Once the prefunded layers are used, or after a non-default loss.
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0248 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0248 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Default Fund Assessment
 
@@ -469,7 +469,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is owed by* [Clearing Member](../clearing-services-and-accounts/concepts.md#clearing-member) — A non-defaulting clearing member of the clearing service.
 - [CCP Loss Allocation](#ccp-loss-allocation) *uses* Default Fund Assessment — Assessment is one loss allocation tool.
 
-<sub>Obligation · level 2 · Draft · reference LD-C0250 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Obligation · level 2 · Draft · reference LD-C0250 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### CCP Dedicated Own Resources
 
@@ -489,7 +489,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Before using it, know:** CCP, clearing service, layer, amount, effective date.
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0249 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Reference Concept · level 2 · Draft · reference LD-C0249 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Default Management Auction
 
@@ -511,7 +511,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 - *is distinct from* [Porting](../clearing-services-and-accounts/concepts.md#porting)
 
-<sub>Event · level 2 · Draft · reference LD-C0251 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Event · level 2 · Draft · reference LD-C0251 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### CCP Loss Allocation
 
@@ -536,4 +536,4 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Default” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Event · level 2 · Draft · reference LD-C0252 · accountable owner: the Risk domain owner (risk function; to be named) (not yet approved)</sub>
+<sub>Event · level 2 · Draft · reference LD-C0252 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>

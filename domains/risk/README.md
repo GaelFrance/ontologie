@@ -12,7 +12,7 @@ A broker that executes and clears derivatives for clients can lose money in thre
 | [Questions for our firm](company-questions.md) | 12 questions that capture how our firm works in this domain |
 | [Questions for the experts (Excel)](questions-for-experts.xlsx) | The same questions as an interview workbook; answers are recorded in this file |
 
-**Owner:** Risk domain owner (risk function; to be named)  
+**Owner:** Head of clearing risk (risk function) or delegate  
 **Reviewers:** ETD Clearing product owner; OTC Clearing product owner; Listed Execution product owner; Collateral Manager; Legal; Compliance  
 **Review wave:** 2
 
