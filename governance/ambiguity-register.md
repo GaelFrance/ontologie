@@ -41,6 +41,10 @@ The 2026-11 expert review added affected concept IDs, new entries LD-A0019 to LD
 | LD-A0033 | Volume | Per side versus round turn versus trades versus notional; single- or double-counted; executed versus cleared; published versus firm data. | Product / Finance | LD-C0017, LD-C0033, LD-C0039 | Open, answer proposed |
 | LD-A0034 | Break, exception, reject, fail | Reconciliation break versus operational exception versus rejected or lapsed give-up versus settlement fail versus technology incident. | Operations | LD-C0030, LD-C0050, LD-C0053, LD-C0028 | Open, answer proposed |
 | LD-A0035 | Executing broker, firm, entity | Client-facing executing broker versus trading venue member entering the order versus regulatory executing entity in transaction reports versus giving clearing member. | Execution / ETD Operations / Compliance | LD-C0006, LD-C0058, LD-C0007 | Open, answer proposed |
+| LD-A0036 | Risk | Risk area (client clearing, execution, CCP) versus risk type (credit, market, liquidity, operational, legal) versus risk measure (exposure, stress loss, limit utilisation) versus the risk function, which is an internal team and not a party. | Risk | LD-C0231, LD-C0232, LD-C0235 | Open, answer proposed |
+| LD-A0037 | Limit | Firm risk limit (clearing limit, pre-trade limit, client credit limit, CCP exposure limit) versus position limit set by a regulator or venue versus concentration limit on collateral. | Risk / Compliance / Collateral | LD-C0232, LD-C0138, LD-C0241, LD-C0229, LD-C0168 | Open, answer proposed |
+| LD-A0038 | Exposure | Clearing broker's exposure to a client versus the executing side's exposure on trades not yet taken up versus a clearing member's exposure to a CCP versus the CCP's exposure to the member; gross or net of collateral; current or stressed. | Risk | LD-C0231, LD-C0236, LD-C0245, LD-C0246, LD-C0043 | Open, answer proposed |
+| LD-A0039 | Default | Client default toward its clearing broker versus clearing member default declared by a CCP versus CCP failure, recovery or resolution versus a settlement fail or an unmet margin call versus a default value or setting. | Risk / Legal | LD-C0159, LD-C0154, LD-C0252, LD-C0210, LD-C0046 | Open, answer proposed |
 
 On resolution, retain the original issue and add decision, affected concept IDs, rationale, evidence, reviewer and date. Do not replace uncertainty with an unrecorded default.
 
@@ -152,3 +156,15 @@ A reconciliation break says records disagree, not which is wrong; an operational
 
 ### LD-A0035 Executing broker, firm, entity
 LD-C0006 is the client-facing service role; the Trading Venue Member (LD-C0058) enters the order in its own name; the executing entity of a transaction report is a regulatory reporting role; the giving clearing member is the clearing member that holds the trade before the give-up (LD-R0035). One party may hold several of these roles; never infer one from another. Confidence high. [01]
+
+### LD-A0036 Risk
+Never answer a question about "risk" without fixing three things: the risk area (the client we clear, execution, or the CCP), the observing party (who could lose) and the measure (exposure, stress loss, limit utilisation, breach). The risk function sets limits and assessments but is not a party and holds no role. Risk types (credit, market, liquidity) describe the cause and are values, not concepts, at this phase. Confidence medium.
+
+### LD-A0037 Limit
+A Risk Limit (LD-C0232) is a decision of the party that sets it; its kinds are the Clearing Limit (LD-C0138), which governs acceptance for clearing, and the Pre-trade Limit (LD-C0241), which screens orders; one limit can serve both. A Position Limit (LD-C0229) is a regulator's or venue's rule on positions held. A Concentration Limit (LD-C0168) caps how much of an asset counts as collateral. Ask who set the limit and on what. Confidence high.
+
+### LD-A0038 Exposure
+An exposure always has an observing party and a counterparty: the clearing broker toward its client (LD-C0236), the giving side toward trades not yet taken up (LD-C0245), the clearing member toward a CCP (LD-C0246). The CCP's exposure to the member is what margin (LD-C0043) and the default fund cover; it is not one of these. State the basis (current, potential, stress) and whether collateral is counted. Confidence high.
+
+### LD-A0039 Default
+Ask who defaults toward whom. A client default (LD-C0159) is declared by the clearing broker under the client clearing agreement and leads to Client Default Management (LD-C0240). A clearing member default (LD-C0154) is declared by the CCP and leads to porting, auctions and use of the Default Waterfall (LD-C0248). A CCP in recovery allocates losses (LD-C0252). A settlement fail or an unmet margin call can lead to a default but is not one. Confidence high.

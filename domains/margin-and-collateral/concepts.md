@@ -75,6 +75,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Connected to:**
 
+- [Client Credit Assessment](../risk/concepts.md#client-credit-assessment) *may set* Client Margin Uplift — The client margin uplift.
 - *is agreed or notified under* [Client Clearing Agreement](../clearing-services-and-accounts/concepts.md#client-clearing-agreement)
 - *applies to* [Client](../parties-and-roles/concepts.md#client)
 
@@ -102,11 +103,12 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Margin Call](#margin-call) *requests satisfaction of* Margin Requirement — Requirement, demand and remaining shortfall are different objects; the called amount derives from the requirement less collateral already held after haircut, adjusted for minimum transfer amount and rounding.
 - *determined under* [Margin Methodology](#margin-methodology) — One methodology version per calculation run; a member-client methodology may replicate the CCP's.
 - [Collateral](#collateral) *covers* Margin Requirement — Same provider-taker pair, account, as-of time and currency basis; the difference is the excess or shortfall.
+- [Risk Exposure](../risk/concepts.md#risk-exposure) *is distinct from* Margin Requirement
 - [Margin Run](#margin-run) *determines* Margin Requirement — A margin run states margin requirements as of its run time. Corrected 2026-11-09 (was step_in: a run is not a step of a measure).
 - [Margin Portfolio](#margin-portfolio) *is the scope of* Margin Requirement
 - [Margin Provider](#margin-provider) *owes* Margin Requirement
 
-**Open questions on its meaning:** “Margin required” (open, answer proposed); “Margin and initial margin” (open, answer proposed) — see the [review sheet](review.md).
+**Open questions on its meaning:** “Margin required” (open, answer proposed); “Margin and initial margin” (open, answer proposed); “Exposure” (open, answer proposed) — see the [review sheet](review.md).
 
 <sub>Measure · level 1 · Draft · reference LD-C0043 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
@@ -227,12 +229,15 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 **Connected to:**
 
 - *requests satisfaction of* [Margin Requirement](#margin-requirement) — Requirement, demand and remaining shortfall are different objects; the called amount derives from the requirement less collateral already held after haircut, adjusted for minimum transfer amount and rounding.
+- [Limit Breach](../risk/concepts.md#limit-breach) *may lead to* Margin Call — For example an ad hoc margin call to the client.
 - [Margin Run](#margin-run) *may lead to* Margin Call
 - [Margin Call Terms](#margin-call-terms) *governs* Margin Call
 - [Margin Excess or Shortfall](#margin-excess-or-shortfall) *may give rise to* Margin Call
 - [Collateral Instruction](#collateral-instruction) *may respond to* Margin Call
 - [Margin Taker](#margin-taker) *issues* Margin Call
 - [Settlement Deadline](../post-trade-operations/concepts.md#settlement-deadline) *is set for the obligation created by* Margin Call
+
+**Open questions on its meaning:** “Default” (open, answer proposed) — see the [review sheet](review.md).
 
 <sub>Instruction · level 1 · Draft · reference LD-C0046 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
@@ -255,6 +260,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *of asset* [Collateral Asset](#collateral-asset) — Quantity of the asset, with market value and value after haircut as of a time.
 - *held for* [Account](../parties-and-roles/concepts.md#account) — Account or segregation unit for which the collateral is held.
 - *covers* [Margin Requirement](#margin-requirement) — Same provider-taker pair, account, as-of time and currency basis; the difference is the excess or shortfall.
+- [Risk Exposure](../risk/concepts.md#risk-exposure) *takes into account* Collateral — Only where the exposure states it is net of collateral.
 - [Individually Segregated Client Account](../clearing-services-and-accounts/concepts.md#individually-segregated-client-account) *holds collateral attributed to one client* Collateral
 - [Porting](../clearing-services-and-accounts/concepts.md#porting) *moves as a separate leg* Collateral
 - [Client Default](../clearing-services-and-accounts/concepts.md#client-default) *may use* Collateral
@@ -349,14 +355,17 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Values (draft list):** per issuer; per asset class; per currency; per security issue; absolute cap; share of requirement
 
-**Words people use:** “concentration cap” (any)
+**Words people use:** “concentration cap” (any); “limit” (Any)
 
 **Before using it, know:** Schedule version, tier, account, limit basis.
 
 **Connected to:**
 
+- [Risk Limit](../risk/concepts.md#risk-limit) *is distinct from* Concentration Limit — A cap on risk versus a cap on collateral that counts.
 - *applies to* [Collateral Asset](#collateral-asset)
 - *limits the value of* [Collateral](#collateral)
+
+**Open questions on its meaning:** “Limit” (open, answer proposed) — see the [review sheet](review.md).
 
 <sub>Reference Concept · level 2 · Draft · reference LD-C0168 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
@@ -378,6 +387,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 - [Collateral](#collateral) *provided under* Collateral Arrangement — Legal form (title transfer or security interest) comes from the arrangement.
 - *references* [Collateral Eligibility Schedule](#collateral-eligibility-schedule) — The eligibility schedule version applicable under the arrangement.
+- [Credit Support Arrangement](../risk/concepts.md#credit-support-arrangement) *is distinct from* Collateral Arrangement
 - [Collateral Instruction](#collateral-instruction) *is made under* Collateral Arrangement
 
 **Open questions on its meaning:** “Variation margin” (open, answer proposed) — see the [review sheet](review.md).
@@ -499,6 +509,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 **Connected to:**
 
 - [Position](../clearing-services-and-accounts/concepts.md#position) *included in* Portfolio — Membership is purpose-specific and time-bound.
+- [Stress Loss](../risk/concepts.md#stress-loss) *applies to* Portfolio — Or an account, counterparty or clearing service.
 - [Cleared OTC Position](../clearing-services-and-accounts/concepts.md#cleared-otc-position) *may be included in a margin portfolio* Portfolio
 
 <sub>Entity · level 1 · Draft · reference LD-C0027 · accountable owner: the Collateral Manager (not yet approved)</sub>
@@ -591,7 +602,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Not to be confused with.** Initial Margin Requirement: margin covers the member's own positions; the default fund is shared among members.
 
-**Part of:** [Clearing Service](../clearing-services-and-accounts/concepts.md#clearing-service)
+**Part of:** [Default Waterfall](../risk/concepts.md#default-waterfall), [Clearing Service](../clearing-services-and-accounts/concepts.md#clearing-service)
 
 **Values (draft list):** required contribution; contribution held; replenishment after use
 
@@ -601,6 +612,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Connected to:**
 
+- [CCP Exposure](../risk/concepts.md#ccp-exposure) *includes* Default Fund Contribution — Where the contribution is not protected from the CCP's insolvency.
 - [Clearing Member Default](../clearing-services-and-accounts/concepts.md#clearing-member-default) *may use* Default Fund Contribution
 - *is owed by the holder of* [Clearing Member](../clearing-services-and-accounts/concepts.md#clearing-member)
 - *may be paid by* [Sponsoring Clearing Member](../clearing-services-and-accounts/concepts.md#sponsoring-clearing-member)

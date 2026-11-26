@@ -115,6 +115,14 @@ A proposed answer comes from the expert review; it is **not a decision** until t
 
 <sub>reference LD-A0034</sub>
 
+### Limit (Open, answer proposed)
+
+**To decide:** Firm risk limit (clearing limit, pre-trade limit, client credit limit, CCP exposure limit) versus position limit set by a regulator or venue versus concentration limit on collateral.
+
+**Proposed answer:** A Risk Limit is a decision of the party that sets it; its kinds are the Clearing Limit, which governs acceptance for clearing, and the Pre-trade Limit, which screens orders; one limit can serve both. A Position Limit is a regulator's or venue's rule on positions held. A Concentration Limit caps how much of an asset counts as collateral. Ask who set the limit and on what. Confidence high.
+
+<sub>reference LD-A0037</sub>
+
 Also touching this domain, answered elsewhere:
 
 - “Brokerage paid” (open, answer proposed): see [Clearing: services, accounts and client clearing](../clearing-services-and-accounts/review.md), [Fees, revenue and contribution](../fees-revenue-and-contribution/review.md)

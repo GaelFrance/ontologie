@@ -25,6 +25,8 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Client](../parties-and-roles/concepts.md#client) *submits* Order — Distinguish contractual client, representative and technical sender.
 - *fulfilled by* [Execution](#execution) — An order can have zero or multiple fills, directly or through derived child orders; cancellations and partial execution matter.
 - *has handling channel* [Order Handling Channel](#order-handling-channel) — Time-stamped; may change (a care order passed to an algorithm); child orders inherit it unless re-routed.
+- [Pre-trade Limit](../risk/concepts.md#pre-trade-limit) *applies to* Order — Before the order reaches the venue, or on entry at the venue.
+- [Kill Switch Activation](../risk/concepts.md#kill-switch-activation) *cancels* Order — All or a defined set of open orders in the stated scope.
 - [Authorised Representative](../parties-and-roles/concepts.md#authorised-representative) *sends* Order
 
 **Open questions on its meaning:** “Fill” (open, answer proposed) — see the [review sheet](review.md).
@@ -97,12 +99,13 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Values (draft list):** pass; reject; hold for manual review
 
-**Words people use:** “clearing member pre-execution credit control” (contextual)
+**Words people use:** “clearing member pre-execution credit control” (contextual); “pre-trade risk check, pre-trade risk limit” (Execution)
 
 **Before using it, know:** Who set the limit (executing broker, venue member, clearing member, venue), the limit kind and the regime that requires it.
 
 **Connected to:**
 
+- [Pre-trade Limit](../risk/concepts.md#pre-trade-limit) *is applied in* Pre-trade Control Check
 - *may apply* [Clearing Limit](../clearing-give-up-and-acceptance/concepts.md#clearing-limit)
 - *requires for direct market access or sponsored access orders a live* [Direct Electronic Access Arrangement](../service-offering-and-market-access/concepts.md#direct-electronic-access-arrangement)
 
@@ -150,6 +153,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Order](#order) *fulfilled by* Execution — An order can have zero or multiple fills, directly or through derived child orders; cancellations and partial execution matter.
 - *contributes to* [Trade](#trade) — Do not assume a universal one-to-one fill/trade representation.
 - *occurs on* [Trading Venue](../instruments-venues-and-calendars/concepts.md#trading-venue) — When applicable; qualify by execution method: for privately negotiated trades (block, exchange for related position) the venue registers rather than matches; distinguish execution from reporting.
+- [Execution Error](../risk/concepts.md#execution-error) *concerns* Execution — Or the order, booking or allocation in error.
 - [Listed Strategy](../instruments-venues-and-calendars/concepts.md#listed-strategy) *is executed as one execution per leg* Execution
 - [Execution Correction](#execution-correction) *refers to the original* Execution
 - [Activity Volume](../fees-revenue-and-contribution/concepts.md#activity-volume) *counts* Execution
@@ -532,6 +536,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Connected to:**
 
+- [Error Position](../risk/concepts.md#error-position) *is held by* Executing Broker — In an account it keeps for errors; not a client account.
 - [Third-Party Execution Arrangement](../service-offering-and-market-access/concepts.md#third-party-execution-arrangement) *lets the firm act as the client s executing broker while another party is the venue member so it never implies* Executing Broker
 - [Client Order](#client-order) *is received by* Executing Broker
 - [Third-party Executing Member](#third-party-executing-member) *acts for* Executing Broker

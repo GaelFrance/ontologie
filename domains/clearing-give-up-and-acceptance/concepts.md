@@ -86,6 +86,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 - *decided by* [Clearing Member](../clearing-services-and-accounts/concepts.md#clearing-member) — Record outcome (accepted, partially accepted, rejected), quantity and time.
 - *concerns* [Trade](../execution/concepts.md#trade) — Or an allocated quantity of it; designation of a member is not its acceptance.
+- [Unaccepted Give-up Exposure](../risk/concepts.md#unaccepted-give-up-exposure) *ends at* Clearing Member Acceptance — For the quantity accepted, once the CCP records it in the receiving member's account (decision 5).
 - [Give-up Line](#give-up-line) *is answered by* Clearing Member Acceptance
 - [Receiving Clearing Member](#receiving-clearing-member) *decides* Clearing Member Acceptance
 
@@ -344,6 +345,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Connected to:**
 
+- [Unaccepted Give-up Exposure](../risk/concepts.md#unaccepted-give-up-exposure) *observed by* Giving Clearing Member — With the executing broker that gave up the trade.
 - [Give-up after First Registration](#give-up-after-first-registration) *is carried meanwhile by* Giving Clearing Member
 - *clears for* [Executing Broker](../execution/concepts.md#executing-broker)
 - *gives up in* [Give-up / Take-up Process](#give-up--take-up-process)
@@ -386,7 +388,9 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Not to be confused with.** Margin Requirement: the amount of margin owed on positions already held; a clearing limit caps what is accepted for clearing.
 
-**Words people use:** “clearing member credit limit” (contextual)
+**Kind of:** [Risk Limit](../risk/concepts.md#risk-limit)
+
+**Words people use:** “clearing member credit limit” (contextual); “limit” (Any); “credit limit, client credit limit” (clearing broker toward a client)
 
 **Before using it, know:** Who set the limit, for which scope and basis, version in force at the time of the trade.
 
@@ -399,6 +403,8 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is applied in* [Take-up](#take-up)
 - *is applied in* [Submission Acceptance](#submission-acceptance)
 - [Position Limit](../regulation-and-rule-changes/concepts.md#position-limit) *is distinct from* Clearing Limit
+
+**Open questions on its meaning:** “Limit” (open, answer proposed) — see the [review sheet](review.md).
 
 <sub>Reference Concept · level 2 · Draft · reference LD-C0138 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 

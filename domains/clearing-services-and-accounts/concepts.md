@@ -16,7 +16,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Not to be confused with.** Service Offering: the clearing service a broker sells to its clients, not the CCP's.
 
-**Breaks down into:** [Clearing Contract](../instruments-venues-and-calendars/concepts.md#clearing-contract) (part of), [Clearing Eligibility Schedule](../instruments-venues-and-calendars/concepts.md#clearing-eligibility-schedule) (part of), [Default Fund Contribution](../margin-and-collateral/concepts.md#default-fund-contribution) (part of)
+**Breaks down into:** [Default Fund Contribution](../margin-and-collateral/concepts.md#default-fund-contribution) (part of), [Clearing Contract](../instruments-venues-and-calendars/concepts.md#clearing-contract) (part of), [Clearing Eligibility Schedule](../instruments-venues-and-calendars/concepts.md#clearing-eligibility-schedule) (part of)
 
 **Words people use:** “service” (Any)
 
@@ -27,6 +27,8 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [CCP Interposition](../clearing-give-up-and-acceptance/concepts.md#ccp-interposition) *within* Clearing Service — Mechanism and legal moment are rulebook facts per clearing service and date.
 - [Contract Specification](../instruments-venues-and-calendars/concepts.md#contract-specification), [Product Family](../instruments-venues-and-calendars/concepts.md#product-family) *eligible in* Clearing Service — Effective-dated; OTC eligibility is bounded by trade-term ranges. Eligibility is not a clearing obligation and not the firm's offering (the open question “Eligible, mandatory, offered, covered”).
 - [CCP Account](#ccp-account) *within* Clearing Service — Account types and their margining basis are defined per clearing service.
+- [CCP Risk Assessment](../risk/concepts.md#ccp-risk-assessment) *concerns* Clearing Service — Each clearing service the member uses or plans to use.
+- [Default Waterfall](../risk/concepts.md#default-waterfall) *applies to* Clearing Service
 - [Indirect Client](../parties-and-roles/concepts.md#indirect-client) *is cleared within* Clearing Service
 - [Flexible Series](../instruments-venues-and-calendars/concepts.md#flexible-series) *may have its own eligibility in* Clearing Service
 - [Offering Coverage Line](../service-offering-and-market-access/concepts.md#offering-coverage-line) *covers clearing in* Clearing Service
@@ -73,6 +75,8 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Give-up / Take-up Process](../clearing-give-up-and-acceptance/concepts.md#give-up--take-up-process) *has giving member* Clearing Member — The clearing member holding the trade before give-up, normally the executing side's clearing member.
 - [Clearing Broker](#clearing-broker) *clears through* Clearing Member — When the clearing broker is not itself a member of the clearing service; at most one per service and period.
 - [CCP Account](#ccp-account) *held in name of* Clearing Member — The clearing member in whose name the CCP opens the account.
+- [CCP Exposure](../risk/concepts.md#ccp-exposure) *observed by* Clearing Member — Per clearing service.
+- [Default Fund Assessment](../risk/concepts.md#default-fund-assessment) *is owed by* Clearing Member — A non-defaulting clearing member of the clearing service.
 - [Non-Clearing Member](../parties-and-roles/concepts.md#non-clearing-member) *clears through a general* Clearing Member
 - [Non-Clearing Member Arrangement](../service-offering-and-market-access/concepts.md#non-clearing-member-arrangement) *is intermediated by the general clearing member role of* Clearing Member
 - [Sponsored Clearing Arrangement](../service-offering-and-market-access/concepts.md#sponsored-clearing-arrangement) *is intermediated by the sponsoring* Clearing Member
@@ -103,6 +107,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 **Connected to:**
 
 - *clears through* [Clearing Member](#clearing-member) — When the clearing broker is not itself a member of the clearing service; at most one per service and period.
+- [Client Clearing Exposure](../risk/concepts.md#client-clearing-exposure) *observed by* Clearing Broker — The clearing broker toward its client.
 - [Receiving Clearing Member](../clearing-give-up-and-acceptance/concepts.md#receiving-clearing-member) *acts for* Clearing Broker
 - [Client Back-to-Back Trade](#client-back-to-back-trade) *has as one party* Clearing Broker
 
@@ -130,6 +135,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 - [Clearing Acceptance](../clearing-give-up-and-acceptance/concepts.md#clearing-acceptance) *accepted by* Central Counterparty — Within an identified Clearing Service and for an identified member account; acceptance is evidence of, not identical to, CCP Interposition.
 - [Clearing Service](#clearing-service) *operated by* Central Counterparty — Exactly one CCP per clearing service (definitional); a CCP operates one or more services.
+- [CCP Exposure](../risk/concepts.md#ccp-exposure) *concerns* Central Counterparty
 
 <sub>Role · level 1 · Draft · reference LD-C0008 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
 
@@ -366,6 +372,8 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 **Connected to:**
 
 - *elects* [Segregation Model](#segregation-model) — Per clearing service and time-bounded; legal protection is a Legal conclusion, never inferred from the model name.
+- [Credit Support Arrangement](../risk/concepts.md#credit-support-arrangement) *supports* Client Clearing Agreement — Or the agreement under which the client owes the broker.
+- [Client Default Management](../risk/concepts.md#client-default-management) *is governed by* Client Clearing Agreement
 - [Access Agreement](../service-offering-and-market-access/concepts.md#access-agreement) *is distinct from* Client Clearing Agreement
 - [Indirect Clearing Arrangement](../service-offering-and-market-access/concepts.md#indirect-clearing-arrangement) *is documented at each link by a* Client Clearing Agreement
 - [Clearing Limit](../clearing-give-up-and-acceptance/concepts.md#clearing-limit) *may be allowed by* Client Clearing Agreement
@@ -418,7 +426,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Not to be confused with.** Exposure or margin: risk figures calculated from a position, not the position itself.
 
-**Breaks down into:** [Listed Position](#listed-position) (kind of), [Cleared OTC Position](#cleared-otc-position) (kind of)
+**Breaks down into:** [Listed Position](#listed-position) (kind of), [Cleared OTC Position](#cleared-otc-position) (kind of), [Error Position](../risk/concepts.md#error-position) (kind of)
 
 **Before using it, know:** Account (CCP or internal), instrument, clearing service, gross or net basis, quantity kind, as-of business date and cycle, asserting source
 
@@ -594,9 +602,9 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Kind of:** [Lifecycle Event](../post-trade-operations/concepts.md#lifecycle-event)
 
-**Breaks down into:** [Porting](#porting) (step in)
+**Breaks down into:** [Default Management Auction](../risk/concepts.md#default-management-auction) (step in), [Porting](#porting) (step in)
 
-**Words people use:** “default event” (any, ambiguous); “declaration of default” (CCP rules)
+**Words people use:** “default event” (any, ambiguous); “declaration of default” (CCP rules); “default” (Any)
 
 **Before using it, know:** Clearing service, declaring CCP, date and time of declaration under its rules.
 
@@ -604,6 +612,8 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 - *may use* [Default Fund Contribution](../margin-and-collateral/concepts.md#default-fund-contribution)
 - *may start* [Porting](#porting)
+
+**Open questions on its meaning:** “Default” (open, answer proposed) — see the [review sheet](review.md).
 
 <sub>Event · level 2 · Draft · reference LD-C0154 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
 
@@ -627,6 +637,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Connected to:**
 
+- [Default Management Auction](../risk/concepts.md#default-management-auction) *is distinct from* Porting
 - [Clearing Member Default](#clearing-member-default) *may start* Porting
 - *transfers to* [Back-up Clearing Member](#back-up-clearing-member)
 - *moves the content of* [CCP Account](#ccp-account)
@@ -725,12 +736,17 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Values (draft list):** outcome: close-out; transfer; hedge
 
+**Words people use:** “default” (Any)
+
 **Before using it, know:** Client clearing agreement and legal model, regime, date of declaration.
 
 **Connected to:**
 
+- [Client Default Management](../risk/concepts.md#client-default-management) *follows* Client Default
 - *arises under* [Client Clearing Agreement](#client-clearing-agreement)
 - *ends* [Client Back-to-Back Trade](#client-back-to-back-trade)
 - *may use* [Collateral](../margin-and-collateral/concepts.md#collateral)
+
+**Open questions on its meaning:** “Default” (open, answer proposed) — see the [review sheet](review.md).
 
 <sub>Event · level 2 · Draft · reference LD-C0159 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>

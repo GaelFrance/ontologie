@@ -118,3 +118,14 @@ Evidence: sponsor answer in the project conversation, 2026-11-09, approving the 
 |---|---|---|---|
 | 23. Statement measures | "Margin excess or deficit" (MED) is an alias of Margin Excess or Shortfall; Open Trade Equity, Account Cash Balance, Account Equity and Position Valuation are added to the margin domain. | Concepts added as Draft with summaries, required context and links; firm questions added on how equity is built and which valuation clients see. | LD-C0166, LD-C0223, LD-C0224, LD-C0225, LD-C0230 |
 | 24. Other missing concepts | Option Premium and Client Statement (post-trade), Trade Confirmation (execution) and Position Limit (regulation) are added. "Maintenance margin" stays a call trigger level in Margin Call Terms, as proposed for LD-A0027; a client funds requirement stays in the backlog. | Concepts added as Draft; alias rows for maintenance margin and monthly statement; backlog item and firm question on client funds. | LD-C0165, LD-C0226, LD-C0227, LD-C0228, LD-C0229 |
+
+## Ontology Lead decision — 2026-11-26 (risk domain)
+
+Evidence: Ontology Lead request in the project conversation, 2026-11-26 ("Full Risk Domain but clearly identify the 3 areas: risk we take with the client we clear, execution risk, CCP Risk side").
+
+| Point | Decision | Consequence in the ontology | Affected IDs |
+|---|---|---|---|
+| 25. Risk domain | An eleventh domain, Risk, is opened with three areas kept apart: the risk we take on the clients we clear, execution risk, and CCP risk. | New domain page `risk` with 22 Draft concepts, four ambiguity entries (LD-A0036 to LD-A0039) and questions for our firm; existing limit, default and default-resource concepts keep their primary domain and are shown on the risk page. Owner role to be named (open question 26). | LD-C0231 to LD-C0252 |
+
+This decision opens the domain; it approves none of its definitions, which stay Draft until the risk domain owner approves them.
+
