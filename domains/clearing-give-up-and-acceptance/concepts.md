@@ -22,13 +22,13 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 - [Give-up / Take-up Process](#give-up--take-up-process) *governed by* Give-up Agreement — Where one exists; a missing or inapplicable agreement is a common rejection cause.
 - [Access Agreement](../service-offering-and-market-access/concepts.md#access-agreement) *is distinct from* Give-up Agreement
-- [Standing Allocation Instruction](../execution/concepts.md#standing-allocation-instruction) *is often agreed alongside* Give-up Agreement
+- [Allocation Instruction](../execution/concepts.md#allocation-instruction) *is often agreed alongside* Give-up Agreement — When the instruction is standing (moved from Standing Allocation Instruction, decision 29).
 - [Take-up](#take-up) *is checked against* Give-up Agreement
 - [Clearing Limit](#clearing-limit) *may be referred to in* Give-up Agreement
 - [Execution Agreement for Cleared Trades](#execution-agreement-for-cleared-trades) *is the otc counterpart of* Give-up Agreement
 - [Client Pricing Terms](../fees-revenue-and-contribution/concepts.md#client-pricing-terms) *may set brokerage terms together with* Give-up Agreement
 
-<sub>Agreement · level 1 · Draft · reference LD-C0055 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
+<sub>Agreement · added in review round 1 · Draft · reference LD-C0055 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 
 ### Give-up / Take-up Process
 
@@ -64,7 +64,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Successful give-up” (decided 2026-11-01 (sponsor; see decision log)); “Give-up, transfer, porting” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Process · level 1 · Draft · reference LD-C0022 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
+<sub>Process · added in review round 1 · Draft · reference LD-C0022 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 
 ### Clearing Member Acceptance
 
@@ -91,7 +91,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Cleared” (open, answer proposed); “Successful give-up” (decided 2026-11-01 (sponsor; see decision log)); “Novation and acceptance” (open, answer proposed); “Break, exception, reject, fail” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Event · level 1 · Draft · reference LD-C0053 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
+<sub>Event · added in review round 1 · Draft · reference LD-C0053 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 
 ### Take-up
 
@@ -117,7 +117,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *may be applied automatically within* [Clearing Limit](#clearing-limit)
 - *is checked against* [Give-up Agreement](#give-up-agreement)
 
-<sub>Event · level 2 · Draft · reference LD-C0136 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
+<sub>Event · added in review round 2 · Draft · reference LD-C0136 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 
 ### Submission Acceptance
 
@@ -143,7 +143,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *applies* [Clearing Limit](#clearing-limit)
 - *precedes* [Clearing Acceptance](#clearing-acceptance)
 
-<sub>Event · level 2 · Draft · reference LD-C0137 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
+<sub>Event · added in review round 2 · Draft · reference LD-C0137 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 
 ### Give-up Designated in Advance
 
@@ -166,7 +166,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *usually relies on* [Clearing Limit](#clearing-limit)
 - *coincides with* [Clearing Acceptance](#clearing-acceptance)
 
-<sub>Process · level 2 · Draft · reference LD-C0132 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
+<sub>Process · added in review round 2 · Draft · reference LD-C0132 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 
 ### Give-up after First Registration
 
@@ -191,7 +191,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *must finish before* [Take-up Deadline](#take-up-deadline)
 - *ends with* [Give-up Registration](#give-up-registration)
 
-<sub>Process · level 2 · Draft · reference LD-C0133 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
+<sub>Process · added in review round 2 · Draft · reference LD-C0133 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 
 ### Give-up Line
 
@@ -221,7 +221,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is completed by* [Give-up Registration](#give-up-registration)
 - [Take-up](#take-up) *answers* Give-up Line
 
-<sub>Instruction · level 2 · Draft · reference LD-C0131 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
+<sub>Instruction · added in review round 2 · Draft · reference LD-C0131 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 
 ### Give-up Registration
 
@@ -247,7 +247,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *records the quantity in* [CCP Account](../clearing-services-and-accounts/concepts.md#ccp-account)
 - *changes* [Position](../clearing-services-and-accounts/concepts.md#position)
 
-<sub>Event · level 2 · Draft · reference LD-C0139 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
+<sub>Event · added in review round 2 · Draft · reference LD-C0139 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 
 ### Clearing Acceptance
 
@@ -277,7 +277,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Cleared” (open, answer proposed); “Successful give-up” (decided 2026-11-01 (sponsor; see decision log)); “Novation and acceptance” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Event · level 1 · Draft · reference LD-C0023 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
+<sub>Event · added in review round 1 · Draft · reference LD-C0023 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 
 ### CCP Interposition
 
@@ -303,7 +303,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Cleared” (open, answer proposed); “Novation and acceptance” (open, answer proposed); “The trade (clearing tier)” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Event · level 1 · Draft · reference LD-C0054 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
+<sub>Event · added in review round 1 · Draft · reference LD-C0054 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 
 ### Novation
 
@@ -326,7 +326,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Cleared” (open, answer proposed); “Novation and acceptance” (open, answer proposed); “Give-up, transfer, porting” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Event · level 1 · Draft · reference LD-C0024 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
+<sub>Event · added in review round 1 · Draft · reference LD-C0024 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 
 ### Giving Clearing Member
 
@@ -352,7 +352,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *gives up in* [Give-up / Take-up Process](#give-up--take-up-process)
 - *holds the trade in until registration to the receiving member* [CCP Account](../clearing-services-and-accounts/concepts.md#ccp-account) — Per quantity: the giving member keeps each quantity in its CCP account until the CCP records it in the receiving member's account; a take-up decision alone does not move it. Corrected 2026-11-09 (was until take-up).
 
-<sub>Role · level 2 · Draft · reference LD-C0134 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
+<sub>Role · added in review round 2 · Draft · reference LD-C0134 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 
 ### Receiving Clearing Member
 
@@ -377,7 +377,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *decides* [Clearing Member Acceptance](#clearing-member-acceptance)
 - *receives the trade in* [CCP Account](../clearing-services-and-accounts/concepts.md#ccp-account)
 
-<sub>Role · level 2 · Draft · reference LD-C0135 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
+<sub>Role · added in review round 2 · Draft · reference LD-C0135 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 
 ### Clearing Limit
 
@@ -407,7 +407,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Limit” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0138 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
+<sub>Reference Concept · added in review round 2 · Draft · reference LD-C0138 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 
 ### Take-up Deadline
 
@@ -431,7 +431,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *applies to* [Give-up / Take-up Process](#give-up--take-up-process)
 - *is set against* [Business Calendar](../instruments-venues-and-calendars/concepts.md#business-calendar)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0140 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
+<sub>Reference Concept · added in review round 2 · Draft · reference LD-C0140 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 
 ### Clearing Submission
 
@@ -457,7 +457,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *leads to* [Clearing Acceptance](#clearing-acceptance)
 - [Execution Agreement for Cleared Trades](#execution-agreement-for-cleared-trades) *governs* Clearing Submission
 
-<sub>Instruction · level 1 · Draft · reference LD-C0141 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
+<sub>Instruction · added in review round 1 · Draft · reference LD-C0141 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
 
 ### Execution Agreement for Cleared Trades
 
@@ -481,4 +481,4 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is the otc counterpart of* [Give-up Agreement](#give-up-agreement)
 - *works alongside* [Client Clearing Agreement](../clearing-services-and-accounts/concepts.md#client-clearing-agreement)
 
-<sub>Agreement · level 2 · Draft · reference LD-C0142 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>
+<sub>Agreement · added in review round 2 · Draft · reference LD-C0142 · accountable owner: the ETD Clearing product owner (not yet approved)</sub>

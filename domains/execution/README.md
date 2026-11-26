@@ -7,7 +7,7 @@ This domain describes how a client's order to buy or sell listed futures and opt
 | Read | What you will find |
 |---|---|
 | [Overview](overview.md) | The domain in plain words: what it covers, how it works, what to keep apart |
-| [Concepts](concepts.md) | 25 concepts, each with a definition, an example and what not to confuse it with |
+| [Concepts](concepts.md) | 23 concepts, each with a definition, an example and what not to confuse it with |
 | [Review sheet](review.md) | What each reviewer is asked, open questions on meaning, decisions already taken |
 | [Questions for our firm](company-questions.md) | 16 questions that capture how our firm works in this domain |
 | [Questions for the experts (Excel)](questions-for-experts.xlsx) | The same questions as an interview workbook; answers are recorded in this file |
@@ -37,11 +37,9 @@ This domain describes how a client's order to buy or sell listed futures and opt
   - **[Strategy Leg Execution](concepts.md#strategy-leg-execution)** — The fill in one leg contract that results when a spread or option combination is filled.
 - **[Trade](concepts.md#trade)** — The agreed deal between two counterparties on a derivative contract, with its terms; later steps such as clearing create new linked trades rather than changing it.
   - **[Executed Trade](concepts.md#executed-trade)** — The trade as it exists right after execution, before the CCP steps in.
-- **[Transaction](concepts.md#transaction)** — An ambiguous word that is not used as a concept for now: ask whether the speaker means an execution, a trade, a lifecycle event, a cash movement or a regulatory transaction report.
 - **[Average Price Group](concepts.md#average-price-group)** — A set of fills combined so that the client gets one average price, calculated either by a venue or CCP facility or by the broker.
   - **[Average Price Residual](concepts.md#average-price-residual)** — The small leftover amount created when an average price is rounded.
 - **[Allocation Instruction](concepts.md#allocation-instruction)** — The client's instruction saying which accounts, and which clearing brokers, should receive which part of the executed quantity.
-  - **[Standing Allocation Instruction](concepts.md#standing-allocation-instruction)** — A split rule the client sets once, which the broker applies to every matching trade.
 - **[Allocation](concepts.md#allocation)** — The actual split of executed quantity across the target accounts, one line per account.
   - **[Allocation Line](concepts.md#allocation-line)** — One row of a split: so many lots, at this price, to this account.
 - **[Executing Broker](concepts.md#executing-broker)** — The firm that provides execution to the client and answers to the client for it, whether or not it is itself a member of the venue.
@@ -51,3 +49,8 @@ This domain describes how a client's order to buy or sell listed futures and opt
 - **[Trade Confirmation](concepts.md#trade-confirmation)** — The message that confirms to a client what was executed for it, at what price and cost.
 
 Also relevant here, owned by another domain: [Client](../parties-and-roles/concepts.md#client), [Trading Venue](../instruments-venues-and-calendars/concepts.md#trading-venue), [Instrument](../instruments-venues-and-calendars/concepts.md#instrument), [Contract Specification](../instruments-venues-and-calendars/concepts.md#contract-specification), [Market Access Arrangement](../service-offering-and-market-access/concepts.md#market-access-arrangement), [Service Offering](../service-offering-and-market-access/concepts.md#service-offering), [Cut-off](../post-trade-operations/concepts.md#cut-off), [Give-up / Take-up Process](../clearing-give-up-and-acceptance/concepts.md#give-up--take-up-process), [Give-up Agreement](../clearing-give-up-and-acceptance/concepts.md#give-up-agreement), [Client Execution Fee](../fees-revenue-and-contribution/concepts.md#client-execution-fee), [Executing Broker Brokerage Charge](../fees-revenue-and-contribution/concepts.md#executing-broker-brokerage-charge), [Exchange Fee Charge](../fees-revenue-and-contribution/concepts.md#exchange-fee-charge), [Execution Revenue](../fees-revenue-and-contribution/concepts.md#execution-revenue), [Error Position](../risk/concepts.md#error-position), [Unaccepted Give-up Exposure](../risk/concepts.md#unaccepted-give-up-exposure).
+
+Retired concepts (kept for their reference, no longer used):
+
+- **Transaction** — Deprecated 2026-11-26 (decision 29), replaced by no single concept: "transaction" is an ambiguous word handled in the ambiguity register; depending on the speaker it means an Execution, a Trade, a Lifecycle Event, a Cash Movement or a regulatory transaction report.
+- **Standing Allocation Instruction** — Deprecated 2026-11-26 (decision 29), replaced by Allocation Instruction, whose definition already covers standing instructions; the form "standing" is now a value of Allocation Instruction.

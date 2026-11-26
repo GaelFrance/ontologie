@@ -14,16 +14,18 @@ In scope (the Listed Execution product owner approves these):
 - **Order Handling Channel**: how a given order was worked and routed: care, broker algorithm, direct market access, sponsored access.
 - **Execution**: the event that fills all or part of one order, by matching on a venue or by the venue registering a negotiated trade.
 - **Trade**: the agreement between one pair of counterparties; this page reviews the pre-clearing (executed) tier only.
-- **Transaction**: deferred and blocked; never resolve the word "transaction" to it.
+- **Transaction**: retired (decision 29). The word stays ambiguous: never resolve it to one concept; list the candidates and ask.
 - **Average Price Group**, **Allocation Instruction**, **Allocation**.
 - **Executing Broker** (client-facing service role) and **Trading Venue Member** (admitted to enter orders on the venue).
-- The level-2 layer: client order, child order, order status, pre-trade control check, venue execution, client execution, execution method, block trade, exchange for related position, strategy leg execution, execution correction, executed trade, average pricing method, average price residual, standing allocation instruction, clearing designation, allocation line, third-party executing member.
+- The concepts added in the 2026-11 domain review: client order, child order, pre-trade control check, venue execution, client execution, block trade, exchange for related position, strategy leg execution, execution correction, executed trade, average price residual, allocation line, third-party executing member, trade confirmation.
+- Values carried by these concepts (not concepts themselves): order state and trading capacity on Order; execution method and trading capacity on Execution; the form of an Allocation Instruction (standing, with the order as a clearing designation, after execution). Standing Allocation Instruction is retired into that form (decision 29).
+- Knowledge layers: load layer 0 and 1 concepts for any execution question; open layer 2 cards (block trade, EFRP, strategy legs, average price residual, third-party executing member, trade confirmation) only when the question names them. See the "Knowledge layers" section of the concept annotations.
 
 Neighbouring domains (comment, do not approve):
 - **Clearing: give-up and acceptance** takes over at the receiving member's take-up. This page reviews only the giving side of a give-up and the give-up agreement terms that bind the executing broker.
 - **Clearing: services and accounts** owns CCP-facing and member-client trades, CCP accounts and the client clearing legal model.
 - **Service offering and market access** owns the permission to use direct electronic access (an access model), third-party membership as an access model, and the service offering (execution-only, execute-and-clear).
-- **Parties and roles** owns Client, Broker, Account and Trading Capacity (agency, principal, riskless principal).
+- **Parties and roles** owns Client, Broker and Account. Trading capacity (agency, principal, riskless principal) is a value on Order and Execution.
 - **Instruments, venues and calendars** owns Trading Venue, Contract Specification, Instrument, listed strategies and their legs, trading sessions and trade-date assignment.
 - **Fees, revenue and contribution** owns client execution fees, executing brokerage, exchange fees and execution revenue; this page supplies the channel and execution facts they need.
 - **Regulation** owns transaction reporting, best execution and algorithmic-trading obligations; **Post-trade operations** owns cut-offs, reconciliations, breaks and identifier schemes.

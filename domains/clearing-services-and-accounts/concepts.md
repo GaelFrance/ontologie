@@ -49,7 +49,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Service” (open, answer proposed); “Eligible, mandatory, offered, covered” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Entity · level 1 · Draft · reference LD-C0051 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
+<sub>Entity · added in review round 1 · Draft · reference LD-C0051 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
 
 ### Clearing Member
 
@@ -88,7 +88,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Clearing broker, clearing member, FCM” (open, answer proposed); “Executing broker, firm, entity” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Role · level 1 · Draft · reference LD-C0007 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
+<sub>Role · added in review round 1 · Draft · reference LD-C0007 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
 
 ### Clearing Broker
 
@@ -113,7 +113,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Brokerage paid” (open, answer proposed); “Clearing broker, clearing member, FCM” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Role · level 1 · Draft · reference LD-C0057 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
+<sub>Role · added in review round 1 · Draft · reference LD-C0057 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
 
 ### Central Counterparty
 
@@ -137,7 +137,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Clearing Service](#clearing-service) *operated by* Central Counterparty — Exactly one CCP per clearing service (definitional); a CCP operates one or more services.
 - [CCP Exposure](../risk/concepts.md#ccp-exposure) *concerns* Central Counterparty
 
-<sub>Role · level 1 · Draft · reference LD-C0008 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
+<sub>Role · added in review round 1 · Draft · reference LD-C0008 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
 
 ### CCP Account
 
@@ -179,7 +179,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Account” (open, answer proposed); “Margin required” (open, answer proposed); “Position” (open, answer proposed); “Omnibus, house and client” (open, answer proposed); “Client clearing model” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Entity · level 1 · Draft · reference LD-C0069 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
+<sub>Entity · added in review round 1 · Draft · reference LD-C0069 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
 
 ### House Account
 
@@ -203,7 +203,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is opened within* [Clearing Service](#clearing-service)
 - *may contain* [CCP Position Account](#ccp-position-account)
 
-<sub>Entity · level 2 · Draft · reference LD-C0145 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
+<sub>Entity · added in review round 2 · Draft · reference LD-C0145 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
 
 ### Client Omnibus Account
 
@@ -230,7 +230,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *contains when gross* [CCP Position Account](#ccp-position-account)
 - *is mapped from the clients internal accounts* [Account](../parties-and-roles/concepts.md#account)
 
-<sub>Entity · level 2 · Draft · reference LD-C0146 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
+<sub>Entity · added in review round 2 · Draft · reference LD-C0146 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
 
 ### Individually Segregated Client Account
 
@@ -254,7 +254,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is opened following* [Segregation Election](#segregation-election)
 - *holds collateral attributed to one client* [Collateral](../margin-and-collateral/concepts.md#collateral)
 
-<sub>Entity · level 2 · Draft · reference LD-C0147 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
+<sub>Entity · added in review round 2 · Draft · reference LD-C0147 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
 
 ### Indirect Client Account
 
@@ -279,7 +279,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is held in the name of* [Clearing Member](#clearing-member)
 - *results from an indirect clearing access arrangement* [Market Access Arrangement](../service-offering-and-market-access/concepts.md#market-access-arrangement)
 
-<sub>Entity · level 2 · Draft · reference LD-C0148 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
+<sub>Entity · added in review round 2 · Draft · reference LD-C0148 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
 
 ### CCP Position Account
 
@@ -306,7 +306,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *receives given up trades designated by a give up reference* [Give-up / Take-up Process](../clearing-give-up-and-acceptance/concepts.md#give-up--take-up-process)
 - [Listed Position](#listed-position) *is recorded in* CCP Position Account
 
-<sub>Entity · level 2 · Draft · reference LD-C0149 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
+<sub>Entity · added in review round 2 · Draft · reference LD-C0149 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
 
 ### Segregation Model
 
@@ -331,7 +331,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Account” (open, answer proposed); “Omnibus, house and client” (open, answer proposed); “Client clearing model” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Reference Concept · level 1 · Draft · reference LD-C0011 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
+<sub>Reference Concept · added in review round 1 · Draft · reference LD-C0011 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
 
 ### Agreement
 
@@ -353,7 +353,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Contracting Entity](../parties-and-roles/concepts.md#contracting-entity) *is party to* Agreement
 - [Client Pricing Terms](../fees-revenue-and-contribution/concepts.md#client-pricing-terms) *is documented in or under* Agreement
 
-<sub>Agreement · level 1 · Draft · reference LD-C0012 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
+<sub>Agreement · added in review round 1 · Draft · reference LD-C0012 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
 
 ### Client Clearing Agreement
 
@@ -373,7 +373,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 - *elects* [Segregation Model](#segregation-model) — Per clearing service and time-bounded; legal protection is a Legal conclusion, never inferred from the model name.
 - [Third-party Credit Support](../risk/concepts.md#third-party-credit-support) *supports* Client Clearing Agreement — Or the agreement under which the client owes the broker.
-- [Client Default Management](../risk/concepts.md#client-default-management) *is governed by* Client Clearing Agreement — Kept for ID stability: Client Default Management is deprecated (decision 28); a “arises under” link links Client Default to Client Clearing Agreement.
+- Client Default Management (retired) *is governed by* Client Clearing Agreement — Kept for ID stability: Client Default Management is deprecated (decision 28); a “arises under” link links Client Default to Client Clearing Agreement.
 - [Access Agreement](../service-offering-and-market-access/concepts.md#access-agreement) *is distinct from* Client Clearing Agreement
 - [Indirect Clearing Arrangement](../service-offering-and-market-access/concepts.md#indirect-clearing-arrangement) *is documented at each link by a* Client Clearing Agreement
 - [Clearing Limit](../clearing-give-up-and-acceptance/concepts.md#clearing-limit) *may be allowed by* Client Clearing Agreement
@@ -386,7 +386,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Client clearing model” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Agreement · level 1 · Draft · reference LD-C0056 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
+<sub>Agreement · added in review round 1 · Draft · reference LD-C0056 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
 
 ### Segregation Election
 
@@ -414,7 +414,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is made per* [Clearing Service](#clearing-service)
 - *is made by* [Client](../parties-and-roles/concepts.md#client)
 
-<sub>State · level 2 · Draft · reference LD-C0150 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
+<sub>State · added in review round 2 · Draft · reference LD-C0150 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
 
 ### Position
 
@@ -456,7 +456,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Position” (open, answer proposed); “Current, as of, as known at” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>State · level 1 · Draft · reference LD-C0026 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
+<sub>State · added in review round 1 · Draft · reference LD-C0026 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
 
 ### Listed Position
 
@@ -482,7 +482,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is recorded in* [CCP Position Account](#ccp-position-account)
 - *is compared in position reconciliation* [Reconciliation](../post-trade-operations/concepts.md#reconciliation)
 
-<sub>State · level 2 · Draft · reference LD-C0151 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
+<sub>State · added in review round 2 · Draft · reference LD-C0151 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
 
 ### Cleared OTC Position
 
@@ -506,7 +506,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is recorded in* [CCP Account](#ccp-account)
 - *may be included in a margin portfolio* [Portfolio](../margin-and-collateral/concepts.md#portfolio)
 
-<sub>State · level 2 · Draft · reference LD-C0152 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
+<sub>State · added in review round 2 · Draft · reference LD-C0152 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
 
 ### CCP-facing Trade
 
@@ -534,7 +534,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *makes up* [Position](#position)
 - [Cleared OTC Position](#cleared-otc-position) *is made of* CCP-facing Trade
 
-<sub>Agreement · level 2 · Draft · reference LD-C0143 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
+<sub>Agreement · added in review round 2 · Draft · reference LD-C0143 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
 
 ### Client Back-to-Back Trade
 
@@ -561,7 +561,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *has as the other party* [Client](../parties-and-roles/concepts.md#client)
 - [Client Default](#client-default) *ends* Client Back-to-Back Trade
 
-<sub>Agreement · level 2 · Draft · reference LD-C0144 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
+<sub>Agreement · added in review round 2 · Draft · reference LD-C0144 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
 
 ### Position Transfer
 
@@ -590,7 +590,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Give-up, transfer, porting” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Event · level 2 · Draft · reference LD-C0153 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
+<sub>Event · added in review round 2 · Draft · reference LD-C0153 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
 
 ### Clearing Member Default
 
@@ -612,13 +612,13 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Connected to:**
 
-- [Default Management Auction](../risk/concepts.md#default-management-auction) *follows* Clearing Member Default — The CCP's default management of the defaulter's house and client accounts not ported. Corrected 2026-11 (was step_in). Kept for ID stability: Default Management Auction is deprecated (decision 28); the auction is now a step value of Clearing Member Default.
+- Default Management Auction (retired) *follows* Clearing Member Default — The CCP's default management of the defaulter's house and client accounts not ported. Corrected 2026-11 (was step_in). Kept for ID stability: Default Management Auction is deprecated (decision 28); the auction is now a step value of Clearing Member Default.
 - *may use* [Default Fund Contribution](../margin-and-collateral/concepts.md#default-fund-contribution)
 - *may start* [Porting](#porting)
 
 **Open questions on its meaning:** “Default” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Event · level 2 · Draft · reference LD-C0154 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
+<sub>Event · added in review round 2 · Draft · reference LD-C0154 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
 
 ### Porting
 
@@ -638,7 +638,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Connected to:**
 
-- [Default Management Auction](../risk/concepts.md#default-management-auction) *is distinct from* Porting — Kept for ID stability: Default Management Auction is deprecated (decision 28); auction and porting are now separate step values of Clearing Member Default.
+- Default Management Auction (retired) *is distinct from* Porting — Kept for ID stability: Default Management Auction is deprecated (decision 28); auction and porting are now separate step values of Clearing Member Default.
 - *follows* [Clearing Member Default](#clearing-member-default) — Level-2 structure (2026-11 domain review). Corrected 2026-11 (was step_in).
 - *transfers to* [Back-up Clearing Member](#back-up-clearing-member)
 - *moves the content of* [CCP Account](#ccp-account)
@@ -647,7 +647,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Give-up, transfer, porting” (open, answer proposed); “Default” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Process · level 2 · Draft · reference LD-C0155 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
+<sub>Process · added in review round 2 · Draft · reference LD-C0155 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
 
 ### Back-up Clearing Member
 
@@ -673,7 +673,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is named by* [Client](../parties-and-roles/concepts.md#client)
 - *is held per* [Clearing Service](#clearing-service)
 
-<sub>Role · level 2 · Draft · reference LD-C0156 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
+<sub>Role · added in review round 2 · Draft · reference LD-C0156 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
 
 ### Sponsoring Clearing Member
 
@@ -697,7 +697,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *acts under* [Sponsored Clearing Arrangement](../service-offering-and-market-access/concepts.md#sponsored-clearing-arrangement)
 - *may pay for the participant* [Default Fund Contribution](../margin-and-collateral/concepts.md#default-fund-contribution)
 
-<sub>Role · level 2 · Draft · reference LD-C0157 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
+<sub>Role · added in review round 2 · Draft · reference LD-C0157 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
 
 ### Position Adjustment
 
@@ -723,7 +723,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *applies within* [CCP Account](#ccp-account)
 - *must be done before* [Cut-off](../post-trade-operations/concepts.md#cut-off)
 
-<sub>Event · level 2 · Draft · reference LD-C0158 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
+<sub>Event · added in review round 2 · Draft · reference LD-C0158 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
 
 ### Client Default
 
@@ -745,11 +745,11 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Connected to:**
 
-- [Client Default Management](../risk/concepts.md#client-default-management) *follows* Client Default — Kept for ID stability: Client Default Management is deprecated (decision 28); its steps are now step values of Client Default.
+- Client Default Management (retired) *follows* Client Default — Kept for ID stability: Client Default Management is deprecated (decision 28); its steps are now step values of Client Default.
 - *arises under* [Client Clearing Agreement](#client-clearing-agreement)
 - *ends* [Client Back-to-Back Trade](#client-back-to-back-trade)
 - *may use* [Collateral](../margin-and-collateral/concepts.md#collateral)
 
 **Open questions on its meaning:** “Default” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Event · level 2 · Draft · reference LD-C0159 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>
+<sub>Event · added in review round 2 · Draft · reference LD-C0159 · accountable owner: the ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) (not yet approved)</sub>

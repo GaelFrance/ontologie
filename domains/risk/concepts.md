@@ -4,7 +4,7 @@
 
 Concepts are grouped by family: a broad concept first, then the kinds or parts it breaks down into.
 
-**Contents:** [Risk Exposure](#risk-exposure) · [Client Clearing Exposure](#client-clearing-exposure) · [Unaccepted Give-up Exposure](#unaccepted-give-up-exposure) · [CCP Exposure](#ccp-exposure) · [Stress Loss](#stress-loss) · [Risk Limit](#risk-limit) · [Pre-trade Limit](#pre-trade-limit) · [Limit Utilisation](#limit-utilisation) · [Limit Breach](#limit-breach) · [Client Risk Group](#client-risk-group) · [Client Credit Assessment](#client-credit-assessment) · [Client Risk Rating](#client-risk-rating) · [Third-party Credit Support](#third-party-credit-support) · [Client Default Management](#client-default-management) · [Kill Switch Activation](#kill-switch-activation) · [Execution Error](#execution-error) · [Error Position](#error-position) · [CCP Risk Assessment](#ccp-risk-assessment) · [Default Waterfall](#default-waterfall) · [CCP Dedicated Own Resources](#ccp-dedicated-own-resources) · [Default Fund Assessment](#default-fund-assessment) · [Default Management Auction](#default-management-auction) · [CCP Loss Allocation](#ccp-loss-allocation)
+**Contents:** [Risk Exposure](#risk-exposure) · [Client Clearing Exposure](#client-clearing-exposure) · [Unaccepted Give-up Exposure](#unaccepted-give-up-exposure) · [CCP Exposure](#ccp-exposure) · [Risk Limit](#risk-limit) · [Limit Utilisation](#limit-utilisation) · [Limit Breach](#limit-breach) · [Client Risk Group](#client-risk-group) · [Client Credit Assessment](#client-credit-assessment) · [Third-party Credit Support](#third-party-credit-support) · [Error Position](#error-position) · [CCP Risk Assessment](#ccp-risk-assessment) · [Default Waterfall](#default-waterfall) · [Default Fund Assessment](#default-fund-assessment) · [CCP Loss Allocation](#ccp-loss-allocation)
 
 ### Risk Exposure
 
@@ -16,7 +16,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Not to be confused with.** Margin Requirement: what must be posted; an exposure is what could be lost.
 
-**Breaks down into:** [Client Clearing Exposure](#client-clearing-exposure) (kind of), [Unaccepted Give-up Exposure](#unaccepted-give-up-exposure) (kind of), [CCP Exposure](#ccp-exposure) (kind of), [Stress Loss](#stress-loss) (kind of)
+**Breaks down into:** [Client Clearing Exposure](#client-clearing-exposure) (kind of), [Unaccepted Give-up Exposure](#unaccepted-give-up-exposure) (kind of), [CCP Exposure](#ccp-exposure) (kind of), Stress Loss (retired) (kind of)
 
 **Values (draft list):** area: shared · risk area: client clearing; execution; CCP · basis: current exposure; potential future exposure; stress loss (named scenario, version); contingent obligation
 
@@ -34,7 +34,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Risk” (open, answer proposed); “Exposure” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Measure · level 1 · Draft · reference LD-C0231 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
+<sub>Measure · added in review round 1 · Draft · reference LD-C0231 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Client Clearing Exposure
 
@@ -63,7 +63,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Exposure” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Measure · level 2 · Draft · reference LD-C0236 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
+<sub>Measure · added in review round 2 · Draft · reference LD-C0236 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Unaccepted Give-up Exposure
 
@@ -92,7 +92,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Exposure” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Measure · level 2 · Draft · reference LD-C0245 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
+<sub>Measure · added in review round 2 · Draft · reference LD-C0245 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### CCP Exposure
 
@@ -123,27 +123,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Exposure” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Measure · level 2 · Draft · reference LD-C0246 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
-
-### Stress Loss
-
-*Deprecated (decision 28): now the stress loss basis of a Risk Exposure.*
-
-**Definition.** Deprecated 2026-11-26 (decision 28), replaced by [Risk Exposure](#risk-exposure): a stress loss is now the measure basis value "stress loss (named scenario, version)" of a risk exposure; the point that a stress loss is not an initial margin requirement is in the risk-expert skill.
-
-**Example.** Under a scenario of a sharp fall in equity indices, Client A's futures would lose a stated amount.
-
-**Not to be confused with.** Initial Margin Requirement: what must be posted, from the margin model, not from a stress scenario.
-
-**Kind of:** [Risk Exposure](#risk-exposure)
-
-**Values (draft list):** scenario kind: historical; hypothetical
-
-**Before using it, know:** Scenario and version, portfolio or counterparty, as-of date, before or after collateral.
-
-**Open questions on its meaning:** “Risk” (open, answer proposed) — see the [review sheet](review.md).
-
-<sub>Measure · level 2 · Draft · reference LD-C0235 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
+<sub>Measure · added in review round 2 · Draft · reference LD-C0246 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Risk Limit
 
@@ -155,7 +135,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Not to be confused with.** Position Limit: set by a regulator or a venue, not by the firm.
 
-**Breaks down into:** [Pre-trade Limit](#pre-trade-limit) (kind of), [Clearing Limit](../clearing-give-up-and-acceptance/concepts.md#clearing-limit) (kind of)
+**Breaks down into:** Pre-trade Limit (retired) (kind of), [Clearing Limit](../clearing-give-up-and-acceptance/concepts.md#clearing-limit) (kind of)
 
 **Values (draft list):** area: shared · kind: clearing limit; pre-trade limit; client credit limit; CCP exposure limit · monitoring time: intraday; end of day · action: warn; refer; reject; block; reduce · access: direct electronic access; sponsored access
 
@@ -177,27 +157,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Risk” (open, answer proposed); “Limit” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Reference Concept · level 1 · Draft · reference LD-C0232 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
-
-### Pre-trade Limit
-
-*Deprecated (decision 28): now the pre-trade limit kind of Risk Limit.*
-
-**Definition.** Deprecated 2026-11-26 (decision 28), replaced by [Risk Limit](#risk-limit): a pre-trade limit is now the kind value "pre-trade limit" of a risk limit, applied in a [Pre-trade Control Check](../execution/concepts.md#pre-trade-control-check); a parameter a venue publishes for all participants is a Rule Provision applied in the same check.
-
-**Example.** Orders from Client A above a maximum size are rejected before reaching Venue V.
-
-**Not to be confused with.** Position Limit: a rule on positions held, set by a regulator or venue.
-
-**Kind of:** [Risk Limit](#risk-limit)
-
-**Values (draft list):** maximum order size or value; price collar; credit or exposure cap; position cap; order or message rate
-
-**Before using it, know:** Party that set it, scope (client, trader, access, venue, instrument), basis, version in force.
-
-**Open questions on its meaning:** “Limit” (open, answer proposed) — see the [review sheet](review.md).
-
-<sub>Reference Concept · level 2 · Draft · reference LD-C0241 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
+<sub>Reference Concept · added in review round 1 · Draft · reference LD-C0232 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Limit Utilisation
 
@@ -219,7 +179,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 - *measures use of* [Risk Limit](#risk-limit) — On the limit's own basis and version.
 
-<sub>Measure · level 2 · Draft · reference LD-C0233 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
+<sub>Measure · added in review round 2 · Draft · reference LD-C0233 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Limit Breach
 
@@ -242,7 +202,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *concerns* [Risk Limit](#risk-limit) — The version in force at the time of the breach.
 - *may lead to* [Margin Call](../margin-and-collateral/concepts.md#margin-call) — Through an ad hoc margin run or a raised client margin uplift whose resulting shortfall is called.
 
-<sub>Event · level 2 · Draft · reference LD-C0234 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
+<sub>Event · added in review round 2 · Draft · reference LD-C0234 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Client Risk Group
 
@@ -265,7 +225,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *groups* [Client](../parties-and-roles/concepts.md#client) — The clients the risk function treats as one, over a stated period.
 - *is distinct from* [Commercial Group](../parties-and-roles/concepts.md#commercial-group) — A risk grouping set by the risk function versus a commercial grouping.
 
-<sub>Entity · level 2 · Draft · reference LD-C0253 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
+<sub>Entity · added in review round 2 · Draft · reference LD-C0253 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Client Credit Assessment
 
@@ -285,30 +245,12 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Connected to:**
 
-- *assigns* [Client Risk Rating](#client-risk-rating) — Kept for ID stability: Client Risk Rating is deprecated (decision 28); the client risk rating is now the recorded outcome of Client Credit Assessment (its values).
+- *assigns* Client Risk Rating (retired) — Kept for ID stability: Client Risk Rating is deprecated (decision 28); the client risk rating is now the recorded outcome of Client Credit Assessment (its values).
 - *sets* [Risk Limit](#risk-limit) — Including the Clearing Limit.
 - *may set* [Client Margin Uplift](../margin-and-collateral/concepts.md#client-margin-uplift) — The client margin uplift.
 - *is distinct from* [Regulatory Classification](../regulation-and-rule-changes/concepts.md#regulatory-classification) — The client risk rating it records is an internal grade, not a regulatory status. Moved 2026-11 from Client Risk Rating.
 
-<sub>Process · level 2 · Draft · reference LD-C0237 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
-
-### Client Risk Rating
-
-*Deprecated (decision 28): now the rating a Client Credit Assessment records.*
-
-**Definition.** Deprecated 2026-11-26 (decision 28), replaced by [Client Credit Assessment](#client-credit-assessment): the client risk rating is now the recorded outcome of the assessment, "client risk rating (internal, time-bounded)"; it is never an external credit rating and not a Regulatory Classification.
-
-**Example.** Client A is graded on the firm's internal scale, which sets its review cycle.
-
-**Not to be confused with.** External credit rating from an agency.
-
-**Before using it, know:** Rating entity and scale, client or group, validity period.
-
-**Connected to:**
-
-- [Client Credit Assessment](#client-credit-assessment) *assigns* Client Risk Rating — Kept for ID stability: Client Risk Rating is deprecated (decision 28); the client risk rating is now the recorded outcome of Client Credit Assessment (its values).
-
-<sub>State · level 2 · Draft · reference LD-C0238 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
+<sub>Process · added in review round 2 · Draft · reference LD-C0237 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Third-party Credit Support
 
@@ -332,68 +274,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *supports* [Client Clearing Agreement](../clearing-services-and-accounts/concepts.md#client-clearing-agreement) — Or the agreement under which the client owes the broker.
 - *is distinct from* [Collateral Arrangement](../margin-and-collateral/concepts.md#collateral-arrangement)
 
-<sub>Agreement · level 2 · Draft · reference LD-C0239 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
-
-### Client Default Management
-
-*Deprecated (decision 28): now the steps listed on Client Default.*
-
-**Definition.** Deprecated 2026-11-26 (decision 28), replaced by [Client Default](../clearing-services-and-accounts/concepts.md#client-default): the steps a clearing broker takes after a client default (stop new business, hedge, close out, terminate, transfer, apply collateral and credit support, set off, return excess, claim shortfall) are now step values of Client Default.
-
-**Example.** After declaring Client A in default, Clearing Broker Y closes out its futures and applies its collateral.
-
-**Not to be confused with.** CCP default management after a clearing member default.
-
-**Values (draft list):** step: stop new business; hedge; close out; transfer; apply collateral; claim shortfall
-
-**Before using it, know:** Clearing broker, client, client clearing agreement, default date, accounts concerned.
-
-**Connected to:**
-
-- *follows* [Client Default](../clearing-services-and-accounts/concepts.md#client-default) — Kept for ID stability: Client Default Management is deprecated (decision 28); its steps are now step values of Client Default.
-- *is governed by* [Client Clearing Agreement](../clearing-services-and-accounts/concepts.md#client-clearing-agreement) — Kept for ID stability: Client Default Management is deprecated (decision 28); a “arises under” link links Client Default to Client Clearing Agreement.
-
-<sub>Process · level 2 · Draft · reference LD-C0240 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
-
-### Kill Switch Activation
-
-*Deprecated (decision 28): described in the risk-expert skill, with no concept.*
-
-**Definition.** Deprecated 2026-11-26 (decision 28), replaced by guidance in the risk-expert skill, with no replacing concept: a kill switch is an emergency mass cancel of a participant's open orders, not a [Pre-trade Control Check](../execution/concepts.md#pre-trade-control-check) and not a venue trading halt; the word is a contextual alias.
-
-**Example.** Clearing Broker Y cancels all of Client A's open orders on Venue V after an abnormal flow.
-
-**Not to be confused with.** Venue trading halt: stops the instrument for everyone.
-
-**Before using it, know:** Party that activated it, scope, time activated and lifted.
-
-**Connected to:**
-
-- *cancels* [Order](../execution/concepts.md#order) — Kept for ID stability: Kill Switch Activation is deprecated (decision 28); kill switch practice is described in the risk-expert skill.
-
-<sub>Event · level 2 · Draft · reference LD-C0242 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
-
-### Execution Error
-
-*Deprecated (decision 28): now a cause value on Execution Correction and Error Position.*
-
-**Definition.** Deprecated 2026-11-26 (decision 28), replaced by [Execution Correction](../execution/concepts.md#execution-correction) and [Error Position](#error-position): an execution error is now the cause value "execution error, with responsible party" on both.
-
-**Example.** A trader buys 1,000 lots instead of 100 for Client A.
-
-**Not to be confused with.** Trade Amendment: an agreed change, not an error.
-
-**Values (draft list):** wrong instrument; wrong side; wrong quantity; wrong price; wrong account; duplicate order; order outside limits
-
-**Before using it, know:** Execution or order concerned, error kind, responsible party, resolution.
-
-**Connected to:**
-
-- *concerns* [Execution](../execution/concepts.md#execution) — Kept for ID stability: Execution Error is deprecated (decision 28); a “refers to the original” link links Execution Correction to the original execution.
-- *may give rise to* [Error Position](#error-position) — Kept for ID stability: Execution Error is deprecated (decision 28); the cause is now a value on Error Position.
-- *may raise* [Operational Exception](../post-trade-operations/concepts.md#operational-exception) — Kept for ID stability: Execution Error is deprecated (decision 28); a “may raise” link links Execution Correction to Operational Exception.
-
-<sub>Event · level 2 · Draft · reference LD-C0243 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
+<sub>Agreement · added in review round 2 · Draft · reference LD-C0239 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Error Position
 
@@ -417,10 +298,10 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Connected to:**
 
-- [Execution Error](#execution-error) *may give rise to* Error Position — Kept for ID stability: Execution Error is deprecated (decision 28); the cause is now a value on Error Position.
+- Execution Error (retired) *may give rise to* Error Position — Kept for ID stability: Execution Error is deprecated (decision 28); the cause is now a value on Error Position.
 - *is held by* [Executing Broker](../execution/concepts.md#executing-broker) — Or by the third-party executing member responsible; not a client account.
 
-<sub>State · level 2 · Draft · reference LD-C0244 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
+<sub>State · added in review round 2 · Draft · reference LD-C0244 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### CCP Risk Assessment
 
@@ -443,7 +324,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *concerns* [Clearing Service](../clearing-services-and-accounts/concepts.md#clearing-service) — Each clearing service the member uses or plans to use.
 - *sets* [Risk Limit](#risk-limit) — The CCP exposure limit and conditions.
 
-<sub>Process · level 2 · Draft · reference LD-C0247 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
+<sub>Process · added in review round 2 · Draft · reference LD-C0247 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Default Waterfall
 
@@ -465,33 +346,13 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 - *is defined by* [Rulebook](../regulation-and-rule-changes/concepts.md#rulebook) — The clearing service's rulebook; a change is a Rule Change.
 - *applies to* [Clearing Service](../clearing-services-and-accounts/concepts.md#clearing-service)
-- [CCP Dedicated Own Resources](#ccp-dedicated-own-resources) *is used in* Default Waterfall — A stated layer. Corrected 2026-11 (was part_of). Kept for ID stability: CCP Dedicated Own Resources is deprecated (decision 28); the layer is now a value of Default Waterfall.
+- CCP Dedicated Own Resources (retired) *is used in* Default Waterfall — A stated layer. Corrected 2026-11 (was part_of). Kept for ID stability: CCP Dedicated Own Resources is deprecated (decision 28); the layer is now a value of Default Waterfall.
 - [Default Fund Contribution](../margin-and-collateral/concepts.md#default-fund-contribution) *is used in* Default Waterfall — The defaulter's own contribution, then the non-defaulters' mutualised layer. Corrected 2026-11 (was part_of).
 - [Default Fund Assessment](#default-fund-assessment) *is used in* Default Waterfall — After the prefunded default fund, where the clearing service's rules place it. Corrected 2026-11 (was part_of).
 - [CCP Loss Allocation](#ccp-loss-allocation) *follows* Default Waterfall — For losses from a member default only; non-default losses are allocated under the rules directly.
 - *is changed by* [Rule Change](../regulation-and-rule-changes/concepts.md#rule-change) — A change to its order, layers, caps or tools; not a periodic recalculation of a layer's amount under unchanged rules.
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0248 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
-
-### CCP Dedicated Own Resources
-
-*Deprecated (decision 28): now a layer value of the Default Waterfall.*
-
-**Definition.** Deprecated 2026-11-26 (decision 28), replaced by [Default Waterfall](#default-waterfall): a CCP's dedicated own resources (skin in the game) are now the layer value "CCP dedicated own resources: junior layer; second layer, as the rules or regime place it" of the waterfall.
-
-**Example.** CCP Z puts a stated amount of its own capital ahead of members' default fund contributions.
-
-**Not to be confused with.** The CCP's total capital.
-
-**Values (draft list):** first-loss layer (before mutualised resources); second layer (after members' contributions); other
-
-**Before using it, know:** CCP, clearing service, layer, amount, effective date.
-
-**Connected to:**
-
-- *is used in* [Default Waterfall](#default-waterfall) — A stated layer. Corrected 2026-11 (was part_of). Kept for ID stability: CCP Dedicated Own Resources is deprecated (decision 28); the layer is now a value of Default Waterfall.
-
-<sub>Reference Concept · level 2 · Draft · reference LD-C0249 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
+<sub>Reference Concept · added in review round 2 · Draft · reference LD-C0248 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### Default Fund Assessment
 
@@ -517,26 +378,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [CCP Loss Allocation](#ccp-loss-allocation) *uses* Default Fund Assessment — Assessment is one loss allocation tool, where the clearing service's rules place it.
 - *gives rise to* [Settlement Obligation](../post-trade-operations/concepts.md#settlement-obligation) — When the CCP calls the assessment; the commitment itself is not a settlement obligation.
 
-<sub>Obligation · level 2 · Draft · reference LD-C0250 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
-
-### Default Management Auction
-
-*Deprecated (decision 28): now the auction step of a Clearing Member Default.*
-
-**Definition.** Deprecated 2026-11-26 (decision 28), replaced by [Clearing Member Default](../clearing-services-and-accounts/concepts.md#clearing-member-default): the auction is now the step value "auction (with any juniorisation of poor bidders)" of the CCP's handling of a clearing member default; rulebook details (mandatory bidding, client bidding) are in the risk-expert skill.
-
-**Example.** CCP Z auctions a defaulted member's hedged swap portfolio to its members.
-
-**Not to be confused with.** Porting: client positions moved to another member, not sold.
-
-**Before using it, know:** CCP, clearing service, defaulting member, portfolio, auction date.
-
-**Connected to:**
-
-- *follows* [Clearing Member Default](../clearing-services-and-accounts/concepts.md#clearing-member-default) — The CCP's default management of the defaulter's house and client accounts not ported. Corrected 2026-11 (was step_in). Kept for ID stability: Default Management Auction is deprecated (decision 28); the auction is now a step value of Clearing Member Default.
-- *is distinct from* [Porting](../clearing-services-and-accounts/concepts.md#porting) — Kept for ID stability: Default Management Auction is deprecated (decision 28); auction and porting are now separate step values of Clearing Member Default.
-
-<sub>Event · level 2 · Draft · reference LD-C0251 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
+<sub>Obligation · added in review round 2 · Draft · reference LD-C0250 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
 
 ### CCP Loss Allocation
 
@@ -561,4 +403,4 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Default” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Event · level 2 · Draft · reference LD-C0252 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>
+<sub>Event · added in review round 2 · Draft · reference LD-C0252 · accountable owner: the Head of clearing risk (risk function) or delegate (not yet approved)</sub>

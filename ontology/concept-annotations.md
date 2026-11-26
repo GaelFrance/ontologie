@@ -62,7 +62,6 @@ Standard alignments are "map, do not import" proposals: none has been checked ag
 | LD-C0124 Strategy Leg Execution | LD-C0017 | 2026-11 domain review |
 | LD-C0125 Execution Correction | LD-C0025 | 2026-11 domain review |
 | LD-C0126 Executed Trade | LD-C0018 | 2026-11 domain review |
-| LD-C0128 Standing Allocation Instruction | LD-C0060 | 2026-11 domain review |
 | LD-C0130 Third-party Executing Member | LD-C0058 | 2026-11 domain review |
 | LD-C0132 Give-up Designated in Advance | LD-C0022 | 2026-11 domain review |
 | LD-C0133 Give-up after First Registration | LD-C0022 | 2026-11 domain review |
@@ -287,8 +286,8 @@ Kinds: **exact** (same meaning everywhere in scope), **contextual** (same meanin
 | matched trade | contextual | venue usage | LD-C0126 |
 | rounding residual | contextual | any | LD-C0127 |
 | average price cash adjustment | contextual | some venues, to verify | LD-C0127 |
-| standing instruction, SSI-style allocation | contextual | desk usage, ambiguous with settlement instructions | LD-C0128 |
-| default allocation | contextual | any | LD-C0128 |
+| standing instruction, SSI-style allocation | contextual | desk usage, ambiguous with settlement instructions | LD-C0060 (form: standing) |
+| default allocation | contextual | any | LD-C0060 (form: standing) |
 | allocation, alloc | contextual | desk usage | LD-C0129 |
 | booking line | contextual | middle office usage | LD-C0129 |
 | third-party broker, executing agent | contextual | desk usage | LD-C0130 |
@@ -618,7 +617,7 @@ Agents must obtain or state these before answering; a missing item leads to a cl
 | LD-C0125 Execution Correction | Who initiated it (venue, member, broker), on which side (venue-facing or client-facing), and its effect on allocations and give-ups already made. |
 | LD-C0126 Executed Trade | Counterparty view (member side or client side) and the trading capacity of the broker; on listed markets the pre-clearing tier is often very short-lived. |
 | LD-C0127 Average Price Residual | Average price group, averaging performer, currency and who bears it; no treatment is approved. |
-| LD-C0128 Standing Allocation Instruction | Scope, effective period and who may override it; the version in force at the execution time. |
+| LD-C0060 Allocation Instruction | Its form (standing, with the order, after execution); for a standing instruction, its scope, effective period and who may override it; the version in force at the execution time. |
 | LD-C0129 Allocation Line | Source execution or average price group, target account and its clearing member, route and status, and the version of the instruction applied. |
 | LD-C0130 Third-party Executing Member | Venue, membership category and effective period; never inferred from execution activity. |
 | LD-C0131 Give-up Line | Clearing service and clearing date; which side the firm is on (giving or receiving); for each status, whether it comes from the CCP record or an internal record; line, registered and remaining quantities at the as-of time. |
@@ -1140,7 +1139,6 @@ One sentence for a newcomer, a synthetic example and the nearest concept people 
 | LD-C0125 Execution Correction | A later fix or cancellation of a fill, recorded as a new event that points back to the original. | Venue V cancels a trade executed outside its price limits ten minutes after the match; Executing Broker X then corrects Client A's fill. | Trade Amendment: a change made to a registered trade under the clearing service's rules or by agreement of the parties; an execution correction comes from the venue's error-trade rules or the broker's client-facing correction, even after registration. |
 | LD-C0126 Executed Trade | The trade as it exists right after execution, before the CCP steps in. | Client A's buy order is matched on Venue V against Member Q; at a CCP that novates at registration, the executed trade between Executing Broker X and Member Q exists until CCP Z registers it. | CCP-facing trade: after interposition each side faces the CCP in a new trade; the executed trade is the one before. |
 | LD-C0127 Average Price Residual | The small leftover amount created when an average price is rounded. | Client A's seven fills average to a price that has to be rounded to the price increment; the leftover is recorded against that average price group. | Fee Charge: a residual is not a fee for a service; it arises from rounding a price. |
-| LD-C0128 Standing Allocation Instruction | A split rule the client sets once, which the broker applies to every matching trade. | Fund F tells Executing Broker X that all its bond futures trades go to its account at Clearing Broker Y until further notice. | Clearing Designation on an order: a standing instruction covers many orders over a period; a designation is given on one order. |
 | LD-C0129 Allocation Line | One row of a split: so many lots, at this price, to this account. | Executing Broker X's allocation of Client A's 300 lots has two lines: 100 lots to Fund F1 internally and 200 lots to Fund F2 at Clearing Broker Y. | Fill: an allocation line splits quantity already filled; it is never a fill. |
 | LD-C0130 Third-party Executing Member | A venue member that another broker uses to reach a venue where it is not a member. | Executing Broker X is not a member of Venue T, so it routes Client A's child orders to Member W, which enters them on Venue T. | Executing Broker: the executing broker serves the client; the third-party executing member serves the executing broker on the venue. |
 | LD-C0131 Give-up Line | One request to hand a stated quantity of a trade to one other clearing member's account; give-up progress is tracked line by line. | Client A's 100 lots are allocated 60 to Clearing Broker Y and 40 to Clearing Broker W: the giving member sends two give-up lines. | Allocation Line: the allocation line is the client's split of the quantity; a give-up line exists only for the part routed to another clearing member. |
@@ -1276,6 +1274,9 @@ Draft value lists carried by a concept (detailed taxonomies remain Phase 3 work)
 | LD-C0010 Account | function (example value): error account |
 | LD-C0046 Margin Call | status: met; partly met; not met |
 | LD-C0071 Collateral Arrangement | protection from the collateral taker's insolvency: protected; not protected; as assessed (to verify) |
+| LD-C0016 Order | order state: received; rejected; working; partly filled; filled; cancelled; expired (a cancel request is not a cancellation until the venue confirms it; when our record and the venue's differ, the venue's record prevails, see Source Record LD-C0205); trading capacity: agency; principal; riskless principal (vocabulary in the modelling guidelines) |
+| LD-C0017 Execution | execution method: matching on a venue (order book or request for quote); registration on a venue of a privately negotiated trade (block trade, exchange for related position, other venue-defined types); bilateral off-venue; trading capacity: agency; principal; riskless principal |
+| LD-C0060 Allocation Instruction | form: standing (agreed in advance for a defined scope of activity and effective period, applied to every matching execution unless replaced); with the order before execution (clearing designation); after execution |
 | LD-C0077 Investment Fund | umbrella fund; sub-fund or compartment; standalone fund |
 | LD-C0078 Authorised Representative | investment manager; authorised trader; introducing broker or introducer (transmits orders); other agent under power of attorney |
 | LD-C0082 Account Identifier | CCP account number; provider's internal account number; give-up reference or mnemonic; venue trading account code; client's own account reference |
@@ -1398,3 +1399,33 @@ Draft value lists carried by a concept (detailed taxonomies remain Phase 3 work)
 | LD-C0250 Default Fund Assessment | area: CCPs |
 | LD-C0252 CCP Loss Allocation | area: CCPs · tool: assessment or cash call; variation margin gains haircutting; partial tear-up; full tear-up; resolution tool · trigger: member default; non-default loss |
 | LD-C0253 Client Risk Group | area: clients we clear |
+
+## Knowledge layers
+
+Draft, proposed 2026-11-26 (decision 29); each domain owner confirms the layers of their concepts. The layer says when an agent needs the concept: 0 Business Core (loaded for every task), 1 Domain Core (any task in the domain), 2 Specialist (only when the question names the topic), 3 Reference (looked up, never loaded whole). Layers are set for the execution domain first; concepts without a row have no layer yet.
+
+| Concept | Knowledge layer | Why |
+|---|---|---|
+| LD-C0016 Order | 0 | Every agent reasons from orders. |
+| LD-C0017 Execution | 0 | Every fee, revenue and give-up starts from an execution. |
+| LD-C0018 Trade | 0 | Shared by execution and clearing. |
+| LD-C0020 Allocation | 0 | Decides internal clearing or give-up. |
+| LD-C0006 Executing Broker | 0 | The role answerable to the client for execution. |
+| LD-C0117 Client Order | 1 | Needed to count orders and fills correctly. |
+| LD-C0118 Child Order | 1 | Needed to count orders and fills correctly. |
+| LD-C0120 Venue Execution | 1 | The venue's record of a fill. |
+| LD-C0121 Client Execution | 1 | The fill as reported to the client. |
+| LD-C0061 Order Handling Channel | 1 | Required for revenue by channel. |
+| LD-C0021 Average Price Group | 1 | Changes which records carry the price. |
+| LD-C0060 Allocation Instruction | 1 | Drives every allocation and give-up. |
+| LD-C0129 Allocation Line | 1 | The unit handed to clearing. |
+| LD-C0058 Trading Venue Member | 1 | Kept apart from the executing broker. |
+| LD-C0125 Execution Correction | 1 | Changes executions after the event. |
+| LD-C0119 Pre-trade Control Check | 1 | Explains rejected orders. |
+| LD-C0126 Executed Trade | 1 | Pre-clearing tier of a trade; merge into Trade still open. |
+| LD-C0122 Block Trade | 2 | Venue-specific negotiated trades. |
+| LD-C0123 Exchange for Related Position | 2 | Venue-specific negotiated trades. |
+| LD-C0124 Strategy Leg Execution | 2 | Only for spreads and combinations. |
+| LD-C0127 Average Price Residual | 2 | Treatment still unknown (decision 4). |
+| LD-C0130 Third-party Executing Member | 2 | Only for third-party execution. |
+| LD-C0228 Trade Confirmation | 2 | Client communication detail. |

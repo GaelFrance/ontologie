@@ -3,7 +3,7 @@
 
 Canonical sources (never edited by this script):
   ontology/foundation.md            concept catalogue (all levels)
-  ontology/concept-annotations.md   kinds, summaries, examples, aliases, notes, values
+  ontology/concept-annotations.md   kinds, summaries, examples, aliases, notes, values, layers
   relationships/relationships.md    connections between concepts
   governance/ambiguity-register.md  open questions on meaning, with proposed answers
   governance/decision-log.md        decisions taken
@@ -35,6 +35,12 @@ CANONICAL_IN_DOMAIN = {"overview.md", "company-questions.md"}
 GENERATED_IN_DOMAIN = {"README.md", "concepts.md", "review.md"}
 EMPTY = (None, "", "—", "-")
 STRUCTURE = {"part_of", "step_in", "state_of"}
+LAYERS = {"0": "business core", "1": "domain core", "2": "specialist", "3": "reference"}
+
+
+def retired(concept):
+    """A retired concept keeps its row; its definition starts with "Deprecated"."""
+    return concept.get("Working business definition", "").startswith("Deprecated")
 
 
 # --------------------------------------------------------------------------- reading
@@ -110,7 +116,7 @@ def first_id(text):
 def load():
     d = {"concepts": {}, "rels": [], "amb": [], "answers": {}, "notes": {}, "context": {}, "aliases": [],
          "decisions": [], "domains": [], "content": {}, "questions": {}, "parents": {}, "summary": {},
-         "values": {}, "flags": {}}
+         "values": {}, "flags": {}, "layers": {}}
     for head, rows in tables(read("ontology/foundation.md")):
         if "Working business definition" in head:
             for r in rows:
@@ -147,6 +153,9 @@ def load():
         elif head[:2] == ["Concept", "Values (draft)"]:
             for r in rows:
                 d["values"][first_id(r["Concept"])] = r["Values (draft)"]
+        elif "Knowledge layer" in head:
+            for r in rows:
+                d["layers"][first_id(r["Concept"])] = r["Knowledge layer"]
         elif "Flag" in head:
             for r in rows:
                 d["flags"][first_id(r["Concept"])] = r
@@ -161,8 +170,10 @@ def load():
     for head, rows in tables(read("governance/review-domains.md")):
         if "Primary concepts" in head:
             for r in rows:
-                r["primary"] = expand(r["Primary concepts"])
-                r["shown"] = expand(r.get("Also shown", ""))
+                ids = expand(r["Primary concepts"])
+                r["retired"] = [i for i in ids if retired(d["concepts"].get(i, {}))]
+                r["primary"] = [i for i in ids if i not in r["retired"]]
+                r["shown"] = [i for i in expand(r.get("Also shown", "")) if not retired(d["concepts"].get(i, {}))]
                 d["domains"].append(r)
         elif "Sequence" in head:
             for r in rows:
@@ -203,6 +214,8 @@ class Ctx:
         """Markdown link to a concept card, relative to domains/<here>/."""
         if i not in self.c:
             return i
+        if retired(self.c[i]):
+            return f"{self.name(i)} (retired)"
         dom = self.owner.get(i)
         if not dom:
             return self.name(i)
@@ -287,6 +300,7 @@ def concept_card(ctx, i, page):
         out += [f"**Caution.** {ctx.human(ctx.d['flags'][i].get('Behaviour expected from agents', ''))}", ""]
     rl = [r for r in ctx.d["rels"] if r.get("Source concept") == i or r.get("Target concept") == i]
     rl = [r for r in rl if r.get("Relation") not in {"is_a"} | STRUCTURE]
+    rl = [r for r in rl if not r.get("Meaning and conditions", "").startswith("Deprecated")]
     if rl:
         out += ["**Connected to:**", ""]
         outgoing = {o for r in rl if r.get("Source concept") == i for o in re.findall(CID, r.get("Target concept", ""))}
@@ -307,7 +321,9 @@ def concept_card(ctx, i, page):
             f"“{a['Term / issue']}” ({a['Status'].lower()})" for a in am) + " — see the [review sheet](review.md).", ""]
     owner = ctx.owner.get(i)
     level = c.get("Level", "1")
-    out += [f"<sub>{c['Proposed type']} · level {level} · Draft · reference {i}"
+    layer = ctx.d["layers"].get(i)
+    layer = f" · layer {layer} ({LAYERS.get(layer, '?')})" if layer else ""
+    out += [f"<sub>{c['Proposed type']}{layer} · added in review round {level} · Draft · reference {i}"
             + (f" · accountable owner: the {owner['Owner role']} (not yet approved)" if owner else "") + "</sub>", ""]
     return out
 
@@ -364,6 +380,10 @@ def render_readme(ctx, dom):
     if dom["shown"]:
         out += ["", "Also relevant here, owned by another domain: "
                 + ", ".join(ctx.link(i, page) for i in dom["shown"] if i in ctx.c) + "."]
+    if dom["retired"]:
+        out += ["", "Retired concepts (kept for their reference, no longer used):", ""]
+        out += [f"- **{ctx.name(i)}** — {ctx.human(ctx.c[i]['Working business definition'])}"
+                for i in dom["retired"] if i in ctx.c]
     out.append("")
     return "\n".join(out)
 
@@ -420,7 +440,9 @@ def render_review(ctx, dom):
     for i in primary:
         c = ctx.c[i]
         flag = " ⚠️ *meaning changed 2026-11*" if i in MEANING_CHANGED else ""
-        lvl = " *(level 2)*" if c.get("Level", "1") == "2" else ""
+        tags = (["added in round 2"] if c.get("Level", "1") == "2" else []) + \
+            ([f"layer {ctx.d['layers'][i]}"] if i in ctx.d["layers"] else [])
+        lvl = f" *({' · '.join(tags)})*" if tags else ""
         out.append(f"| **{ctx.link(i, page).replace('](#', '](concepts.md#')}**{lvl} | {ctx.human(c['Working business definition'])}{flag} | |")
     if shown:
         out += ["", "## 2. Concepts owned elsewhere: check them from your angle", "",
@@ -476,6 +498,9 @@ def render_glossary(ctx):
             letter = n[0].upper()
             out += ["", f"## {letter}", ""]
         o = ctx.owner.get(i)
+        if retired(ctx.c[i]):
+            out.append(f"- **{ctx.name(i)}** (retired) — {ctx.human(ctx.c[i]['Working business definition'])}")
+            continue
         short = ctx.summary(i, "In short") or ctx.human(ctx.c[i]["Working business definition"])
         out.append(f"- **{ctx.link(i)}** — {ctx.human(short)}" + (f" *({o['Domain']})*" if o else ""))
     al = sorted(ctx.d["aliases"], key=lambda a: a["Alias"].lower())
@@ -502,9 +527,13 @@ def render_index(ctx):
            "| Domain | Owner | Review wave | Concepts |", "|---|---|---|---|"]
     for dom in ctx.d["domains"]:
         out.append(f"| [{dom['Domain']}]({dom['Page']}/README.md) | {dom['Owner role']} | {dom['Wave']} | {len(dom['primary'])} |")
-    out += ["", f"Each of the {len(ctx.c)} concepts belongs to exactly one domain, whose owner approves it. "
+    n_retired = sum(1 for c in ctx.c.values() if retired(c))
+    out += ["", f"Each of the {len(ctx.c) - n_retired} concepts in use belongs to exactly one domain, whose owner approves it. "
             "A concept can also appear on other domains' review sheets for comment. "
-            "The [glossary](../glossary.md) lists every concept A to Z.", ""]
+            "The [glossary](../glossary.md) lists every concept A to Z"
+            + (f", with the {n_retired} retired ones marked as such." if n_retired else ".")
+            + " Each concept card names its knowledge layer where one is set: 0 business core, 1 domain core, "
+            "2 specialist, 3 reference.", ""]
     return "\n".join(out)
 
 
@@ -515,7 +544,7 @@ def build():
     ctx = Ctx(data)
     errors, count = [], {}
     for dom in data["domains"]:
-        for i in dom["primary"]:
+        for i in dom["primary"] + dom["retired"]:
             count[i] = count.get(i, 0) + 1
         both = set(dom["primary"]) & set(dom["shown"])
         if both:

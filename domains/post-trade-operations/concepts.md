@@ -22,7 +22,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Trade, transaction and execution” (open, answer proposed); “Current, as of, as known at” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Event · level 1 · Draft · reference LD-C0025 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
+<sub>Event · added in review round 1 · Draft · reference LD-C0025 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
 
 ### Expiry
 
@@ -49,7 +49,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *leads to* [Final Settlement](#final-settlement)
 - *may lead to* [Exercise](#exercise)
 
-<sub>Event · level 2 · Draft · reference LD-C0216 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
+<sub>Event · added in review round 2 · Draft · reference LD-C0216 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
 
 ### Exercise
 
@@ -79,7 +79,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is requested by* [Exercise Instruction](#exercise-instruction)
 - *creates* [Settlement Obligation](#settlement-obligation)
 
-<sub>Event · level 2 · Draft · reference LD-C0217 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
+<sub>Event · added in review round 2 · Draft · reference LD-C0217 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
 
 ### Exercise Instruction
 
@@ -105,7 +105,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *must arrive before* [Cut-off](#cut-off)
 - *may be subject to* [Firm Cut-off](#firm-cut-off)
 
-<sub>Instruction · level 2 · Draft · reference LD-C0218 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
+<sub>Instruction · added in review round 2 · Draft · reference LD-C0218 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
 
 ### Assignment
 
@@ -131,7 +131,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *reduces the short* [Position](../clearing-services-and-accounts/concepts.md#position)
 - *creates* [Settlement Obligation](#settlement-obligation)
 
-<sub>Event · level 2 · Draft · reference LD-C0219 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
+<sub>Event · added in review round 2 · Draft · reference LD-C0219 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
 
 ### Final Settlement
 
@@ -158,7 +158,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Expiry](#expiry) *leads to* Final Settlement
 - *uses the final kind of* [Settlement Price](../instruments-venues-and-calendars/concepts.md#settlement-price)
 
-<sub>Event · level 2 · Draft · reference LD-C0220 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
+<sub>Event · added in review round 2 · Draft · reference LD-C0220 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
 
 ### Delivery Notice
 
@@ -183,7 +183,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *must arrive before* [Cut-off](#cut-off)
 - *is governed by* [Contract Specification](../instruments-venues-and-calendars/concepts.md#contract-specification)
 
-<sub>Instruction · level 2 · Draft · reference LD-C0221 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
+<sub>Instruction · added in review round 2 · Draft · reference LD-C0221 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
 
 ### Trade Amendment
 
@@ -209,7 +209,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *may change* [Position](../clearing-services-and-accounts/concepts.md#position)
 - *may raise* [Operational Exception](#operational-exception)
 
-<sub>Event · level 2 · Draft · reference LD-C0222 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
+<sub>Event · added in review round 2 · Draft · reference LD-C0222 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
 
 ### Cut-off
 
@@ -240,7 +240,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Business date” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Reference Concept · level 1 · Draft · reference LD-C0065 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
+<sub>Reference Concept · added in review round 1 · Draft · reference LD-C0065 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
 
 ### Settlement Deadline
 
@@ -267,7 +267,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is set for the obligation created by* [Margin Call](../margin-and-collateral/concepts.md#margin-call)
 - *is read against* [Business Calendar](../instruments-venues-and-calendars/concepts.md#business-calendar)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0214 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
+<sub>Reference Concept · added in review round 2 · Draft · reference LD-C0214 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
 
 ### Firm Cut-off
 
@@ -291,7 +291,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *may apply to* [Allocation Instruction](../execution/concepts.md#allocation-instruction)
 - *may apply to* [Exercise Instruction](#exercise-instruction)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0215 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
+<sub>Reference Concept · added in review round 2 · Draft · reference LD-C0215 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
 
 ### Settlement Obligation
 
@@ -323,7 +323,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Fee, revenue and cash received” (open, narrowed 2026-09-20, answer proposed); “Variation margin” (open, answer proposed); “Break, exception, reject, fail” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Obligation · level 1 · Draft · reference LD-C0028 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
+<sub>Obligation · added in review round 1 · Draft · reference LD-C0028 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
 
 ### Netted Settlement Obligation
 
@@ -346,7 +346,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is settled by* [Cash Movement](#cash-movement)
 - *is stated in* [CCP Report](#ccp-report)
 
-<sub>Obligation · level 2 · Draft · reference LD-C0211 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
+<sub>Obligation · added in review round 2 · Draft · reference LD-C0211 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
 
 ### Settlement Fail
 
@@ -373,7 +373,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Default” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>State · level 2 · Draft · reference LD-C0210 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
+<sub>State · added in review round 2 · Draft · reference LD-C0210 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
 
 ### Payment Instruction
 
@@ -398,7 +398,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *carries out for cash collateral* [Collateral Instruction](../margin-and-collateral/concepts.md#collateral-instruction)
 - [Settlement Account](#settlement-account) *is named in* Payment Instruction
 
-<sub>Instruction · level 2 · Draft · reference LD-C0212 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
+<sub>Instruction · added in review round 2 · Draft · reference LD-C0212 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
 
 ### Cash Movement
 
@@ -421,7 +421,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Fee, revenue and cash received” (open, narrowed 2026-09-20, answer proposed) — see the [review sheet](review.md).
 
-<sub>Event · level 1 · Draft · reference LD-C0029 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
+<sub>Event · added in review round 1 · Draft · reference LD-C0029 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
 
 ### Operational Exception
 
@@ -438,7 +438,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 **Connected to:**
 
 - [Reconciliation](#reconciliation) *identifies* Operational Exception — A reconciliation identifies discrepancies (breaks); only some are handled as operational exceptions, and a break does not prove underlying trade failure.
-- [Execution Error](../risk/concepts.md#execution-error) *may raise* Operational Exception — Kept for ID stability: Execution Error is deprecated (decision 28); a “may raise” link links Execution Correction to Operational Exception.
+- Execution Error (retired) *may raise* Operational Exception — Kept for ID stability: Execution Error is deprecated (decision 28); a “may raise” link links Execution Correction to Operational Exception.
 - [Execution Correction](../execution/concepts.md#execution-correction) *may raise* Operational Exception
 - [Fee Adjustment](../fees-revenue-and-contribution/concepts.md#fee-adjustment) *may resolve* Operational Exception
 - [Reconciliation Break](#reconciliation-break) *may raise* Operational Exception
@@ -448,7 +448,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Break, exception, reject, fail” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>State · level 1 · Draft · reference LD-C0030 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
+<sub>State · added in review round 1 · Draft · reference LD-C0030 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
 
 ### Reconciliation
 
@@ -472,7 +472,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Break, exception, reject, fail” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Process · level 1 · Draft · reference LD-C0050 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
+<sub>Process · added in review round 1 · Draft · reference LD-C0050 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
 
 ### Position Reconciliation
 
@@ -497,7 +497,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is keyed by* [CCP Account](../clearing-services-and-accounts/concepts.md#ccp-account)
 - *produces* [Reconciliation Break](#reconciliation-break)
 
-<sub>Process · level 2 · Draft · reference LD-C0208 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
+<sub>Process · added in review round 2 · Draft · reference LD-C0208 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
 
 ### Reconciliation Break
 
@@ -524,7 +524,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *may be handled in* [Exception Case](#exception-case)
 - [Position Reconciliation](#position-reconciliation) *produces* Reconciliation Break
 
-<sub>State · level 2 · Draft · reference LD-C0207 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
+<sub>State · added in review round 2 · Draft · reference LD-C0207 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
 
 ### Source Record
 
@@ -554,7 +554,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Reconciliation Break](#reconciliation-break) *concerns two or more* Source Record
 - *has as a kind* [Client Statement](#client-statement)
 
-<sub>Entity · level 1 · Draft · reference LD-C0205 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
+<sub>Entity · added in review round 1 · Draft · reference LD-C0205 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
 
 ### CCP Report
 
@@ -584,7 +584,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is compared in* [Position Reconciliation](#position-reconciliation)
 - [Netted Settlement Obligation](#netted-settlement-obligation) *is stated in* CCP Report
 
-<sub>Entity · level 2 · Draft · reference LD-C0206 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
+<sub>Entity · added in review round 2 · Draft · reference LD-C0206 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
 
 ### Client Statement
 
@@ -610,7 +610,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is issued by* [Broker](../parties-and-roles/concepts.md#broker) — Clearing or executing broker, to its client.
 - *states* [Account Equity](../margin-and-collateral/concepts.md#account-equity) — Also states the cash balance, open trade equity, margin requirement and excess or shortfall.
 
-<sub>Entity · level 2 · Draft · reference LD-C0227 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
+<sub>Entity · added in review round 2 · Draft · reference LD-C0227 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
 
 ### Exception Case
 
@@ -634,7 +634,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *may concern* [Reconciliation Break](#reconciliation-break)
 - *may concern* [Give-up / Take-up Process](../clearing-give-up-and-acceptance/concepts.md#give-up--take-up-process)
 
-<sub>Process · level 2 · Draft · reference LD-C0209 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
+<sub>Process · added in review round 2 · Draft · reference LD-C0209 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
 
 ### Settlement Account
 
@@ -661,7 +661,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *settles obligations of* [CCP Account](../clearing-services-and-accounts/concepts.md#ccp-account)
 - *is named in* [Payment Instruction](#payment-instruction)
 
-<sub>Entity · level 2 · Draft · reference LD-C0213 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
+<sub>Entity · added in review round 2 · Draft · reference LD-C0213 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
 
 ### Option Premium
 
@@ -684,4 +684,4 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *gives rise to* [Settlement Obligation](#settlement-obligation) — Premium-style options; futures-style options carry no upfront premium.
 - *is owed on* [Trade](../execution/concepts.md#trade) — The option trade.
 
-<sub>Obligation · level 2 · Draft · reference LD-C0226 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
+<sub>Obligation · added in review round 2 · Draft · reference LD-C0226 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>

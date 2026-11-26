@@ -9,13 +9,13 @@ The ontology is organised in eleven business domains. Each domain has a folder w
 | [Parties, roles, clients and accounts](parties-and-roles/README.md) | Reference & Client Data | 3 | 25 |
 | [Instruments, venues and calendars](instruments-venues-and-calendars/README.md) | Reference & Client Data | 3 | 18 |
 | [Service offering and market access](service-offering-and-market-access/README.md) | Product development lead (sponsor or delegate) | 2 | 14 |
-| [Listed derivatives execution](execution/README.md) | Listed Execution product owner | 2 | 25 |
+| [Listed derivatives execution](execution/README.md) | Listed Execution product owner | 2 | 23 |
 | [Clearing: give-up and acceptance](clearing-give-up-and-acceptance/README.md) | ETD Clearing product owner | 1 | 18 |
 | [Clearing: services, accounts and client clearing](clearing-services-and-accounts/README.md) | ETD Clearing product owner (OTC Clearing product owner once the OTC module opens) | 1 | 26 |
 | [Margin and collateral](margin-and-collateral/README.md) | Collateral Manager | 2 | 30 |
 | [Fees, revenue and contribution](fees-revenue-and-contribution/README.md) | Revenue domain owner | 2 | 28 |
 | [Regulation and rule changes](regulation-and-rule-changes/README.md) | Regulatory Affairs | 1 | 20 |
 | [Post-trade operations](post-trade-operations/README.md) | ETD post-trade operations lead | 1 | 26 |
-| [Risk: client clearing, execution and CCP risk](risk/README.md) | Head of clearing risk (risk function) or delegate | 2 | 23 |
+| [Risk: client clearing, execution and CCP risk](risk/README.md) | Head of clearing risk (risk function) or delegate | 2 | 15 |
 
-Each of the 253 concepts belongs to exactly one domain, whose owner approves it. A concept can also appear on other domains' review sheets for comment. The [glossary](../glossary.md) lists every concept A to Z.
+Each of the 243 concepts in use belongs to exactly one domain, whose owner approves it. A concept can also appear on other domains' review sheets for comment. The [glossary](../glossary.md) lists every concept A to Z, with the 10 retired ones marked as such. Each concept card names its knowledge layer where one is set: 0 business core, 1 domain core, 2 specialist, 3 reference.

@@ -59,7 +59,7 @@ def domain_maps(data):
     primary, shown, owner = {}, {}, {}
     for dom in data["domains"]:
         owner[dom["Page"]] = dom["Owner role"]
-        for c in dom["primary"]:
+        for c in dom["primary"] + dom.get("retired", []):
             primary[c] = dom["Page"]
         for c in dom["shown"]:
             shown.setdefault(c, set()).add(dom["Page"])

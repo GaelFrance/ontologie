@@ -8,7 +8,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 
 - **Why it matters:** Gives the kinds of Risk Limit in use and tells the give-up agent which limit decides automatic acceptance.
 - **How to answer:** Table: limit kind, level, basis, checked pre-trade yes or no, checked at take-up yes or no, owner.
-- **Concepts affected:** Risk Limit, Clearing Limit, Pre-trade Limit, Clearing Member Acceptance
+- **Concepts affected:** Risk Limit, Clearing Limit, Clearing Member Acceptance
 - **Who answers:** Risk with ETD Clearing product owner
 <sub>question q01</sub>
 
@@ -24,7 +24,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 
 - **Why it matters:** Sets the default an agent may assume for Client Clearing Exposure, or confirms that it must always ask.
 - **How to answer:** Default per team, or "no default, always ask".
-- **Concepts affected:** Client Clearing Exposure, Stress Loss, Risk Exposure
+- **Concepts affected:** Client Clearing Exposure, Risk Exposure
 - **Who answers:** Risk with Collateral Manager
 <sub>question q03</sub>
 
@@ -32,7 +32,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 
 - **Why it matters:** Gives the values of Pre-trade Limit per channel and the parties allowed to trigger a Kill Switch Activation.
 - **How to answer:** Table: channel, limit kind, setting role, kill switch authority.
-- **Concepts affected:** Pre-trade Limit, Pre-trade Control Check, Kill Switch Activation
+- **Concepts affected:** Risk Limit, Pre-trade Control Check
 - **Who answers:** Listed Execution product owner with Risk and Compliance
 <sub>question q04</sub>
 
@@ -106,7 +106,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 
 - **Why it matters:** Gives the steps and outcomes of Client Credit Assessment and the use of Client Risk Rating.
 - **How to answer:** Steps, approving roles, review frequency by rating, trigger events.
-- **Concepts affected:** Client Credit Assessment, Client Risk Rating
+- **Concepts affected:** Client Credit Assessment, Client Risk Group
 - **Who answers:** Risk
 <sub>question q06</sub>
 
@@ -114,7 +114,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 
 - **Why it matters:** Confirms Credit Support Arrangement and its effect on Client Clearing Exposure.
 - **How to answer:** List of forms accepted, effect on limit or margin, approving role.
-- **Concepts affected:** Credit Support Arrangement, Client Clearing Exposure
+- **Concepts affected:** Third-party Credit Support, Client Clearing Exposure
 - **Who answers:** Risk with Legal
 <sub>question q07</sub>
 
@@ -122,7 +122,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 
 - **Why it matters:** Gives the steps of Client Default Management.
 - **How to answer:** Ordered steps per clearing type, deciding role, usual time frame.
-- **Concepts affected:** Client Default Management, Client Default
+- **Concepts affected:** Client Default
 - **Who answers:** Risk with Legal and ETD Clearing product owner
 <sub>question q08</sub>
 
@@ -130,7 +130,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 
 - **Why it matters:** Gives the resolutions of Execution Error and how Error Position is kept apart from client business and revenue.
 - **How to answer:** Steps, deciding roles, account used, time allowed to close the position.
-- **Concepts affected:** Execution Error, Error Position
+- **Concepts affected:** Execution Correction, Error Position
 - **Who answers:** Listed Execution product owner with ETD post-trade operations lead
 <sub>question q09</sub>
 

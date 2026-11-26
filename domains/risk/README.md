@@ -7,7 +7,7 @@ A broker that executes and clears derivatives for clients can lose money in thre
 | Read | What you will find |
 |---|---|
 | [Overview](overview.md) | The domain in plain words: what it covers, how it works, what to keep apart |
-| [Concepts](concepts.md) | 23 concepts, each with a definition, an example and what not to confuse it with |
+| [Concepts](concepts.md) | 15 concepts, each with a definition, an example and what not to confuse it with |
 | [Review sheet](review.md) | What each reviewer is asked, open questions on meaning, decisions already taken |
 | [Questions for our firm](company-questions.md) | 29 questions that capture how our firm works in this domain |
 | [Questions for the experts (Excel)](questions-for-experts.xlsx) | The same questions as an interview workbook; answers are recorded in this file |
@@ -28,24 +28,27 @@ Three areas, read separately. Risk we take on the clients we clear: [Client Cred
   - **[Client Clearing Exposure](concepts.md#client-clearing-exposure)** — What we could lose on a client we clear if it stopped paying.
   - **[Unaccepted Give-up Exposure](concepts.md#unaccepted-give-up-exposure)** — The risk the giving clearing member, and through it the executing broker, keeps on trades until the CCP registers them to the clearing broker.
   - **[CCP Exposure](concepts.md#ccp-exposure)** — What we could lose toward a CCP if it failed or used our resources after another member's default.
-  - **[Stress Loss](concepts.md#stress-loss)** — Deprecated (decision 28): now the stress loss basis of a Risk Exposure.
 - **[Risk Limit](concepts.md#risk-limit)** — A cap our risk function sets on how much risk or activity a client, trader or CCP may represent.
-  - **[Pre-trade Limit](concepts.md#pre-trade-limit)** — Deprecated (decision 28): now the pre-trade limit kind of Risk Limit.
 - **[Limit Utilisation](concepts.md#limit-utilisation)** — How much of a limit is used right now.
 - **[Limit Breach](concepts.md#limit-breach)** — The moment a limit is exceeded, and what was done about it.
 - **[Client Risk Group](concepts.md#client-risk-group)** — The clients our risk function treats as one for risk, because their credit is connected.
 - **[Client Credit Assessment](concepts.md#client-credit-assessment)** — The risk team's review that decides whether, and on what terms, we clear for a client.
-- **[Client Risk Rating](concepts.md#client-risk-rating)** — Deprecated (decision 28): now the rating a Client Credit Assessment records.
 - **[Third-party Credit Support](concepts.md#third-party-credit-support)** — A third party's promise to pay if our client does not.
-- **[Client Default Management](concepts.md#client-default-management)** — Deprecated (decision 28): now the steps listed on Client Default.
-- **[Kill Switch Activation](concepts.md#kill-switch-activation)** — Deprecated (decision 28): described in the risk-expert skill, with no concept.
-- **[Execution Error](concepts.md#execution-error)** — Deprecated (decision 28): now a cause value on Execution Correction and Error Position.
 - **[Error Position](concepts.md#error-position)** — The position the broker keeps at its own risk after an execution error.
 - **[CCP Risk Assessment](concepts.md#ccp-risk-assessment)** — Our review of a CCP before and while we are a member.
 - **[Default Waterfall](concepts.md#default-waterfall)** — The order in which a CCP uses its resources to absorb a defaulting member's losses.
-- **[CCP Dedicated Own Resources](concepts.md#ccp-dedicated-own-resources)** — Deprecated (decision 28): now a layer value of the Default Waterfall.
 - **[Default Fund Assessment](concepts.md#default-fund-assessment)** — A further payment a CCP can demand from surviving members after the default fund is used.
-- **[Default Management Auction](concepts.md#default-management-auction)** — Deprecated (decision 28): now the auction step of a Clearing Member Default.
 - **[CCP Loss Allocation](concepts.md#ccp-loss-allocation)** — How a CCP passes on losses once its prefunded resources are used.
 
 Also relevant here, owned by another domain: [Clearing Limit](../clearing-give-up-and-acceptance/concepts.md#clearing-limit), [Client Margin Uplift](../margin-and-collateral/concepts.md#client-margin-uplift), [Margin Excess or Shortfall](../margin-and-collateral/concepts.md#margin-excess-or-shortfall), [Client Default](../clearing-services-and-accounts/concepts.md#client-default), [Client Clearing Agreement](../clearing-services-and-accounts/concepts.md#client-clearing-agreement), [Pre-trade Control Check](../execution/concepts.md#pre-trade-control-check), [Clearing Member Acceptance](../clearing-give-up-and-acceptance/concepts.md#clearing-member-acceptance), [Give-up after First Registration](../clearing-give-up-and-acceptance/concepts.md#give-up-after-first-registration), [Clearing Member Default](../clearing-services-and-accounts/concepts.md#clearing-member-default), [Porting](../clearing-services-and-accounts/concepts.md#porting), [Default Fund Contribution](../margin-and-collateral/concepts.md#default-fund-contribution), [Margin Methodology](../margin-and-collateral/concepts.md#margin-methodology), [Margin Requirement](../margin-and-collateral/concepts.md#margin-requirement), [Position Limit](../regulation-and-rule-changes/concepts.md#position-limit), [Concentration Limit](../margin-and-collateral/concepts.md#concentration-limit), [Give-up Registration](../clearing-give-up-and-acceptance/concepts.md#give-up-registration), [Execution Correction](../execution/concepts.md#execution-correction), [Settlement Obligation](../post-trade-operations/concepts.md#settlement-obligation), [Client Back-to-Back Trade](../clearing-services-and-accounts/concepts.md#client-back-to-back-trade).
+
+Retired concepts (kept for their reference, no longer used):
+
+- **Stress Loss** — Deprecated 2026-11-26 (decision 28), replaced by Risk Exposure: a stress loss is now the measure basis value "stress loss (named scenario, version)" of a risk exposure; the point that a stress loss is not an initial margin requirement is in the risk-expert skill.
+- **Client Risk Rating** — Deprecated 2026-11-26 (decision 28), replaced by Client Credit Assessment: the client risk rating is now the recorded outcome of the assessment, "client risk rating (internal, time-bounded)"; it is never an external credit rating and not a Regulatory Classification.
+- **Client Default Management** — Deprecated 2026-11-26 (decision 28), replaced by Client Default: the steps a clearing broker takes after a client default (stop new business, hedge, close out, terminate, transfer, apply collateral and credit support, set off, return excess, claim shortfall) are now step values of Client Default.
+- **Pre-trade Limit** — Deprecated 2026-11-26 (decision 28), replaced by Risk Limit: a pre-trade limit is now the kind value "pre-trade limit" of a risk limit, applied in a Pre-trade Control Check; a parameter a venue publishes for all participants is a Rule Provision applied in the same check.
+- **Kill Switch Activation** — Deprecated 2026-11-26 (decision 28), replaced by guidance in the risk-expert skill, with no replacing concept: a kill switch is an emergency mass cancel of a participant's open orders, not a Pre-trade Control Check and not a venue trading halt; the word is a contextual alias.
+- **Execution Error** — Deprecated 2026-11-26 (decision 28), replaced by Execution Correction and Error Position: an execution error is now the cause value "execution error, with responsible party" on both.
+- **CCP Dedicated Own Resources** — Deprecated 2026-11-26 (decision 28), replaced by Default Waterfall: a CCP's dedicated own resources (skin in the game) are now the layer value "CCP dedicated own resources: junior layer; second layer, as the rules or regime place it" of the waterfall.
+- **Default Management Auction** — Deprecated 2026-11-26 (decision 28), replaced by Clearing Member Default: the auction is now the step value "auction (with any juniorisation of poor bidders)" of the CCP's handling of a clearing member default; rulebook details (mandatory bidding, client bidding) are in the risk-expert skill.
