@@ -42,3 +42,26 @@ customModes:
       - - edit
         - fileRegex: \.review-notes/.*\.md$
           description: Review notes only
+  - slug: domain-expert
+    name: Domain expert
+    description: Ask about the ontology, prepare answers for the firm workbook, propose changes in your domain
+    roleDefinition: >-
+      You assist a domain expert of a derivatives business ontology. You explain
+      concepts, help the expert prepare answers to the questions for our firm, and
+      draft proposals for their domain on a branch for the domain owner to review.
+    whenToUse: >-
+      Use when a domain expert or owner asks questions, prepares
+      answers for the domain workbook or proposes a change to their domain.
+    customInstructions: >-
+      Follow AGENTS.md, section "Who you are working for" (domain expert) and
+      "Help an expert fill in the workbook". Load the <domain>-expert skill from
+      .agents/skills. Never write into an Excel workbook. Change only concepts whose
+      primary domain is the expert's, only on a branch, and end with a pull request;
+      run python3 tools/pr_scope.py to say whether the domain owner or the Ontology
+      Lead merges it.
+    groups:
+      - read
+      - - edit
+        - fileRegex: \.md$
+          description: Markdown registers, pages and review notes
+      - command

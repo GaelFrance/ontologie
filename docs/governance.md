@@ -6,6 +6,20 @@ Status: Draft
 
 Domain owners approve meanings in their domain; the sponsor arbitrates across domains; the Ontology Lead maintains IDs, consistency, traceability and releases. Owners and reviewers per domain are in [review domains](../governance/review-domains.md); the full operating model (bodies, reviewer list, RACI, workflow) is in the [governance model proposal](../governance/governance-model-proposal.md), pending sponsor decision. Decisions are recorded with date and evidence in the [decision log](../governance/decision-log.md); questions only the business can answer are in [open questions](../governance/open-questions-for-owner.md). An ambiguity entry may carry a proposed answer but stays Open until a recorded decision resolves it.
 
+## Who merges
+
+The repository has one main branch; every change reaches it through a pull request, after `python3 tools/build_domain_views.py --check` passes. `python3 tools/pr_scope.py` says who may merge a branch:
+
+**Domain owners merge; the Ontology Lead does not need to approve.**
+
+- **Within one domain** (its workbook, its hand-written pages, concepts whose primary domain it is, their relationships and annotations): the **domain owner** approves and merges. If a concept changed is also shown in other domains, their owners comment first.
+- **Across domains**: each owner concerned approves, then any of them merges.
+- **Shared files** (tools, agent setup in `AGENTS.md`, `.agents/`, `.opencode/` and `.roo*`, documentation, the domain classification in `governance/review-domains.md`, the decision log, the list of owners and experts): an owner may merge, and says so in the pull request. These changes are listed for the Ontology Lead in the weekly report.
+
+Every week, `python3 tools/weekly_report.py` writes `reports/weekly/<date>.md`: the changes merged, concepts added or changed by domain, the progress of the questions for our firm and the shared files changed. The Ontology Lead, or a person they name, runs it and shares it with the owners.
+
+Merging a pull request accepts a Draft proposal into the ontology; it does not approve a meaning. Approval is recorded separately, as described below. If two branches took the same new ID, the branch merged second renumbers its own new IDs.
+
 ## Review status
 
 - **Draft:** proposal, including unresolved issues. Every concept is Draft today.

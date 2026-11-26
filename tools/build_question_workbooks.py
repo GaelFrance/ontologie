@@ -12,6 +12,12 @@ when a question has no reference. If an entered answer no longer matches any
 question, the script stops and writes nothing, so no answer is lost; move that
 answer by hand, or pass --force to drop it.
 
+Several experts share one workbook per domain and write their initials in the
+"Answered by" and "Expert" columns. Git cannot merge Excel files, so
+tools/merge_answers.py merges two versions answer by answer (see
+docs/contributor-guide.md), and tools/read_answers.py turns a workbook into a page
+that AI agents can read.
+
 Usage: python3 tools/build_question_workbooks.py [--force]   (needs openpyxl)
 """
 import datetime
@@ -96,10 +102,11 @@ def dropdown(ws, options, col, first, last, prompt):
 
 # Sheet title -> (columns forming the key, input columns carried over), 1-based.
 CARRY = {
-    "1 Questions for our firm": ((12, 3), (9, 10, 11)),
+    "1 Questions for our firm": ((12, 3), (9, 10, 11, 13)),
     "2 Questions by role": ((2, 3), (4,)),
-    "3 Meaning to confirm": ((7,), (5, 6)),
+    "3 Meaning to confirm": ((7,), (5, 6, 8)),
 }
+START_INPUTS = ("Interviewer", "Expert (name and role)", "Date of the session")
 
 
 def row_key(sheet, vals):
@@ -112,16 +119,22 @@ def row_key(sheet, vals):
 
 
 def previous_entries(path):
-    """Values experts entered in an existing workbook: {sheet: {key: {col: value}}}."""
+    """Values experts entered in an existing workbook: {sheet: {key: {col: value}}}.
+
+    The cover sheet's inputs come back under "Start here", keyed by label."""
     found = {}
     if not os.path.exists(path):
         return found
     wb = load_workbook(path)
+    if "Start here" in wb.sheetnames:
+        for label, value in wb["Start here"].iter_rows(min_col=1, max_col=2, values_only=True):
+            if label in START_INPUTS and value not in (None, ""):
+                found.setdefault("Start here", {})[label] = value
     for sheet, (_, inputs) in CARRY.items():
         if sheet not in wb.sheetnames:
             continue
         for row in wb[sheet].iter_rows(min_row=5, values_only=True):
-            vals = list(row) + [None] * 12
+            vals = list(row) + [None] * 14
             entered = {c: vals[c - 1] for c in inputs if vals[c - 1] not in (None, "")}
             if entered:
                 found.setdefault(sheet, {})[row_key(sheet, vals)] = entered
@@ -152,7 +165,7 @@ def firm_questions(page):
         out.append([int(m.group(1)), prio, plain(m.group(2)), plain(f.get("Why it matters")),
                     plain(f.get("How to answer")), plain(f.get("Concepts affected")),
                     plain(f.get("Who answers")), plain(f.get("Joint question")),
-                    None, None, None, ref.group(1) if ref else ""])
+                    None, None, None, ref.group(1) if ref else "", None])
     return out
 
 
@@ -160,6 +173,7 @@ def build(ctx, dom, force=False):
     page = dom["Page"]
     path = os.path.join(ROOT, "domains", page, FILE)
     old = previous_entries(path)
+    cover = old.pop("Start here", {})
     pset = {i for i in dom["primary"] if i in ctx.c}
     wb = Workbook()
     wb.properties.creator = "tools/build_question_workbooks.py"
@@ -195,37 +209,42 @@ def build(ctx, dom, force=False):
     line("Domain owner", dom["Owner role"])
     line("Reviewers", dom["Reviewer roles"])
     line("Review wave", dom["Wave"])
-    for label in ("Interviewer", "Expert (name and role)", "Date of the session"):
-        line(label, None, fill=True)
+    for label in START_INPUTS:
+        line(label, cover.get(label), fill=True)
     section("How to use this workbook")
     line("Purpose", "Ask the domain's experts how our firm works, so the ontology can be tailored to it. "
          "Start with priority 1: those answers are needed for the pilot agents.")
     line("Where answers go", "Answers are recorded in this file, in the repository. The Ontology Lead turns them "
          "into changes; definitions stay generic.")
     line("Yellow cells", "Only the yellow cells are filled in. Everything else comes from the ontology.")
-    line("Sheet 1", "Questions for our firm: answer, set a status, note any follow-up.")
+    line("Several experts", "The two or three experts of the domain share this file. Write your initials in "
+         "'Answered by' (sheet 1) or 'Expert' (sheet 3). If you disagree with an answer already there, add yours "
+         "after it, starting with your initials, rather than replacing it. Get the latest version just before "
+         "you start and send yours back as soon as you finish (see the contributor guide).")
+    line("Sheet 1", "Questions for our firm: answer, set a status, note any follow-up, add your initials.")
     line("Sheet 2", "Questions put to each role during the review: notes from the session.")
-    line("Sheet 3", "Words with several meanings: does the expert agree with the proposed answer? If not, what is the rule in practice?")
+    line("Sheet 3", "Words with several meanings: does the expert agree with the proposed answer? If not, what is the rule in practice? Add your initials.")
     line("Summary", "Counts what has been asked and answered.")
     section("Example of a filled row (sheet 1, invented)")
     line("Question", "Which give-up statuses do your teams use day to day?")
     line("Answer", "Pending, claimed, rejected, lapsed; 'claimed' means accepted in full.", bold=False)
     line("Status", "Answered", bold=False)
     line("Follow-up", "Check whether partial claims are used at any CCP.", bold=False)
+    line("Answered by", "AB", bold=False)
 
     # 1 Questions for our firm
     ws1 = wb.create_sheet("1 Questions for our firm")
     title(ws1, "1. Questions for our firm", "Answers are recorded in this file.")
     header(ws1, 4, [("#", 5), ("Priority", 8), ("Question", 55), ("Why it matters", 40), ("How to answer", 35),
                     ("Concepts affected", 25), ("Who answers", 22), ("Shared with other domains", 25),
-                    ("Answer", 50), ("Status", 13), ("Follow-up", 30), ("Ref", 8)])
+                    ("Answer", 50), ("Status", 13), ("Follow-up", 30), ("Ref", 8), ("Answered by", 12)])
     fq = firm_questions(page)
     carry_over("1 Questions for our firm", fq, old)
-    last1 = max(5, table(ws1, 5, fq, {9, 10, 11}, ref_col=12))
+    last1 = max(5, table(ws1, 5, fq, {9, 10, 11, 13}, ref_col=12))
     dropdown(ws1, ["Not asked", "Answered", "Partly answered", "Follow-up needed", "Not applicable"], "J", 5, last1,
              "Where this question stands.")
     ws1.freeze_panes = "D5"
-    ws1.auto_filter.ref = f"A4:L{last1}"
+    ws1.auto_filter.ref = f"A4:M{last1}"
 
     # 2 Questions by role
     ws2 = wb.create_sheet("2 Questions by role")
@@ -241,11 +260,11 @@ def build(ctx, dom, force=False):
     ws3 = wb.create_sheet("3 Meaning to confirm")
     title(ws3, "3. Words with several meanings", "A proposed answer is not a decision until the domain owner confirms it.")
     header(ws3, 4, [("#", 5), ("Word or issue", 22), ("To decide", 40), ("Proposed answer", 70),
-                    ("Expert's view", 13), ("Rule in practice, or comment", 45), ("Ref", 10)])
+                    ("Expert's view", 13), ("Rule in practice, or comment", 45), ("Ref", 10), ("Expert", 12)])
     open_q = [a for a in ctx.d["amb"] if not a["Status"].startswith("Decided")
               and set(re.findall(bdv.CID, a.get("Affected IDs", ""))) & pset]
     mq = [[n, a["Term / issue"], plain(ctx.human(a["Required distinction or decision"])),
-           plain(ctx.human(ctx.d["answers"].get(a["ID"], ""))), None, None, a["ID"]]
+           plain(ctx.human(ctx.d["answers"].get(a["ID"], ""))), None, None, a["ID"], None]
           for n, a in enumerate(open_q, 1)]
     carry_over("3 Meaning to confirm", mq, old)
     lost = [(sheet, key) for sheet, rows in old.items() for key in rows]
@@ -254,7 +273,7 @@ def build(ctx, dom, force=False):
             print(f"domains/{page}/{FILE}: answer in '{sheet}' for {' / '.join(key)} matches no current question",
                   file=sys.stderr)
         raise SystemExit(f"Stopped: domains/{page}/{FILE} not rewritten (see above; --force drops these answers).")
-    last3 = max(5, table(ws3, 5, mq, {5, 6}, ref_col=7))
+    last3 = max(5, table(ws3, 5, mq, {5, 6, 8}, ref_col=7))
     dropdown(ws3, ["Agree", "Disagree", "Unsure"], "E", 5, last3, "Does the expert agree with the proposed answer?")
     ws3.freeze_panes = "C5"
 
