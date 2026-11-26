@@ -151,6 +151,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Market Access Arrangement](../service-offering-and-market-access/concepts.md#market-access-arrangement) *confers* Party Role — For example a Trading Venue Member, Clearing Member or Client role assignment; the arrangement and the resulting role are distinct.
 - [Market Access Arrangement](../service-offering-and-market-access/concepts.md#market-access-arrangement) *intermediated by* Party Role — The intermediary's role assignment (venue member, clearing member or clearing broker); zero or one.
 - *within service* [Clearing Service](../clearing-services-and-accounts/concepts.md#clearing-service), [Service Offering](../service-offering-and-market-access/concepts.md#service-offering) — Zero or one; for example a Client role assignment within a Service Offering, a Clearing Member role within a Clearing Service.
+- [Risk Exposure](../risk/concepts.md#risk-exposure) *measured for* Party Role — The counterparty in its role (client, executing broker, central counterparty), or an account or clearing service; never an internal team.
 - [Regulatory Obligation](../regulation-and-rule-changes/concepts.md#regulatory-obligation) *is held by parties in* Party Role
 
 **Open questions on its meaning:** “Client” (open, narrowed 2026-09-20, answer proposed) — see the [review sheet](review.md).
@@ -178,6 +179,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 **Connected to:**
 
 - *submits* [Order](../execution/concepts.md#order) — Distinguish contractual client, representative and technical sender.
+- [Client Clearing Exposure](../risk/concepts.md#client-clearing-exposure) *concerns* Client — Or a group of clients defined for risk purposes, which need not be the Commercial Group.
 - [Natural Person](#natural-person) *can hold the role of* Client
 - [Investment Fund](#investment-fund) *usually holds the role of* Client
 - [Authorised Representative](#authorised-representative) *acts for* Client

@@ -82,6 +82,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Connected to:**
 
+- [Default Waterfall](../risk/concepts.md#default-waterfall) *is defined by* Rulebook — The clearing service's rulebook; a change is a Rule Change.
 - [Market Operator](../parties-and-roles/concepts.md#market-operator) *issues* Rulebook
 - *is issued by* [Party](../parties-and-roles/concepts.md#party)
 - *governs* [Clearing Service](../clearing-services-and-accounts/concepts.md#clearing-service)
@@ -407,6 +408,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 - *classifies* [Legal Entity](../parties-and-roles/concepts.md#legal-entity), [Party Role](../parties-and-roles/concepts.md#party-role), [Account](../parties-and-roles/concepts.md#account), [Trading Venue](../instruments-venues-and-calendars/concepts.md#trading-venue), [Central Counterparty](../clearing-services-and-accounts/concepts.md#central-counterparty), [Clearing Service](../clearing-services-and-accounts/concepts.md#clearing-service), [Instrument](../instruments-venues-and-calendars/concepts.md#instrument), [Contract Specification](../instruments-venues-and-calendars/concepts.md#contract-specification), [Product Family](../instruments-venues-and-calendars/concepts.md#product-family), [Trade](../execution/concepts.md#trade) — Entity-level statuses attach to the legal entity, relationship-level statuses to the role assignment; never to the Client role generically or to a commercial group. A status the regime gives to a pair of counterparties (for example an intragroup exemption) attaches to both legal entities together, for the regime, product class and period, and is never read as a status of either one alone. Targets aligned with the definition 2026-11-09.
 - *under* [Regulatory Regime](#regulatory-regime) — Record regime, asset class where relevant, basis, effective period and evidence; valid time and record time both kept.
+- [Client Risk Rating](../risk/concepts.md#client-risk-rating) *is distinct from* Regulatory Classification — An internal grade versus a regulatory status.
 - [Trading Venue Segment](../instruments-venues-and-calendars/concepts.md#trading-venue-segment) *can carry its own regulatory classification* Regulatory Classification
 - [Offering Eligibility Criterion](../service-offering-and-market-access/concepts.md#offering-eligibility-criterion) *may require a stated value of* Regulatory Classification
 - [Regulatory Obligation](#regulatory-obligation) *applies to holders of* Regulatory Classification
@@ -536,14 +538,17 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Values (draft list):** level kind: limit; accountability level; reportable level · period: spot month; single month; all months combined
 
-**Words people use:** “accountability level, reportable level” (US exchanges and regulators)
+**Words people use:** “accountability level, reportable level” (US exchanges and regulators); “limit” (Any)
 
 **Before using it, know:** Regime or venue, contract, limit kind (limit, accountability or reportable level), period, aggregation basis, exemptions.
 
 **Connected to:**
 
+- [Risk Limit](../risk/concepts.md#risk-limit) *is distinct from* Position Limit — A firm decision versus a regulator's or venue's rule.
 - *set by* [Rule Provision](#rule-provision) — A regulator's or a venue's rule.
 - *applies to* [Position](../clearing-services-and-accounts/concepts.md#position) — Positions aggregated by holder or controller across accounts and firms, as the rule states.
 - *is distinct from* [Clearing Limit](../clearing-give-up-and-acceptance/concepts.md#clearing-limit)
+
+**Open questions on its meaning:** “Limit” (open, answer proposed) — see the [review sheet](review.md).
 
 <sub>Reference Concept · level 2 · Draft · reference LD-C0229 · accountable owner: the Regulatory Affairs (not yet approved)</sub>

@@ -119,6 +119,14 @@ A proposed answer comes from the expert review; it is **not a decision** until t
 
 <sub>reference LD-A0034</sub>
 
+### Default (Open, answer proposed)
+
+**To decide:** Client default toward its clearing broker versus clearing member default declared by a CCP versus CCP failure, recovery or resolution versus a settlement fail or an unmet margin call versus a default value or setting.
+
+**Proposed answer:** Ask who defaults toward whom. A Client Default is declared by the clearing broker under the client clearing agreement and leads to Client Default Management. A Clearing Member Default is declared by the CCP and leads to porting, auctions and use of the Default Waterfall. A CCP in recovery allocates losses (CCP Loss Allocation). A settlement fail or an unmet margin call can lead to a default but is not one. Confidence high.
+
+<sub>reference LD-A0039</sub>
+
 Also touching this domain, answered elsewhere:
 
 - “Account” (open, answer proposed): see [Clearing: services, accounts and client clearing](../clearing-services-and-accounts/review.md), [Parties, roles, clients and accounts](../parties-and-roles/review.md)

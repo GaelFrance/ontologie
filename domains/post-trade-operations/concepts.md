@@ -303,7 +303,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Not to be confused with.** Cash Movement: the obligation is what is owed; the cash movement is what was actually paid.
 
-**Breaks down into:** [Netted Settlement Obligation](#netted-settlement-obligation) (kind of), [Settlement Fail](#settlement-fail) (state of), [Payment Instruction](#payment-instruction) (step in)
+**Breaks down into:** [Netted Settlement Obligation](#netted-settlement-obligation) (kind of), [Default Fund Assessment](../risk/concepts.md#default-fund-assessment) (kind of), [Settlement Fail](#settlement-fail) (state of), [Payment Instruction](#payment-instruction) (step in)
 
 **Note.** Purpose facet includes price alignment (never part of VM) and cash or physical settlement. [04, 02]
 
@@ -361,7 +361,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Values (draft list):** end: settled late; cancelled; replaced by close-out or default procedure; still open
 
-**Words people use:** “fail”; “failed payment”; “failed delivery”; “late payment” (contextual)
+**Words people use:** “fail”; “failed payment”; “failed delivery”; “late payment” (contextual); “default” (Any)
 
 **Before using it, know:** Obligation, its settlement deadline and calendar, the source asserting non-settlement, tier.
 
@@ -369,6 +369,8 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 - *is assessed against* [Settlement Deadline](#settlement-deadline)
 - *may raise* [Operational Exception](#operational-exception)
+
+**Open questions on its meaning:** “Default” (open, answer proposed) — see the [review sheet](review.md).
 
 <sub>State · level 2 · Draft · reference LD-C0210 · accountable owner: the ETD post-trade operations lead (not yet approved)</sub>
 
@@ -435,6 +437,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 **Connected to:**
 
 - [Reconciliation](#reconciliation) *identifies* Operational Exception — A reconciliation identifies discrepancies (breaks); only some are handled as operational exceptions, and a break does not prove underlying trade failure.
+- [Execution Error](../risk/concepts.md#execution-error) *may raise* Operational Exception
 - [Execution Correction](../execution/concepts.md#execution-correction) *may raise* Operational Exception
 - [Fee Adjustment](../fees-revenue-and-contribution/concepts.md#fee-adjustment) *may resolve* Operational Exception
 - [Reconciliation Break](#reconciliation-break) *may raise* Operational Exception

@@ -2,7 +2,7 @@
 
 The shared business vocabulary for **listed derivatives execution, ETD clearing and OTC client clearing**: what each business word means, how the ideas connect, and which questions are still open. People use it to agree on meanings; AI agents use it to answer questions without guessing.
 
-**Stage:** Phase 2 in progress. 230 concepts in ten business domains (74 foundation concepts and 156 more detailed ones added in the November 2026 domain review). Every definition is **Draft** until its domain owner approves it.
+**Stage:** Phase 2 in progress. 252 concepts in eleven business domains (74 foundation concepts, 156 more detailed ones added in the November 2026 domain review and 22 in the risk domain opened on 2026-11-26). Every definition is **Draft** until its domain owner approves it.
 
 ## Start here
 
@@ -16,7 +16,7 @@ The shared business vocabulary for **listed derivatives execution, ETD clearing 
 | Contribute as an owner or expert | **[Contributor guide](docs/contributor-guide.md)**: what each role does, in OpenCode or VS Code with Roo Code |
 | Maintain the repository | [Architecture and maintenance guide](docs/maintenance-guide.md) and the [weekly reports](reports/weekly/) |
 
-## The ten domains
+## The eleven domains
 
 | Domain | In one line |
 |---|---|
@@ -30,6 +30,7 @@ The shared business vocabulary for **listed derivatives execution, ETD clearing 
 | [Fees, revenue and contribution](domains/fees-revenue-and-contribution/README.md) | What we charge, what we pay away and what a client brings in |
 | [Regulation and rule changes](domains/regulation-and-rule-changes/README.md) | Rules, regimes and the changes announced by regulators, venues and clearing houses |
 | [Post-trade operations](domains/post-trade-operations/README.md) | Lifecycle events, settlement, deadlines, reconciliations and breaks |
+| [Risk: client clearing, execution and CCP risk](domains/risk/README.md) | What we could lose on the clients we clear, in execution and at the clearing houses, and the limits and default rules that apply |
 
 Each domain folder holds the same four pages: **overview** (plain words), **concepts** (one card per concept with a definition, an example and what not to confuse it with), **review sheet** (what each reviewer is asked) and **questions for our firm**.
 

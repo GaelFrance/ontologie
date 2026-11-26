@@ -13,7 +13,7 @@ How the repository is built, how the pieces depend on each other, and how to kee
  │ ontology/concept-annotations.md aliases, summaries, context ...  │
  │ relationships/relationships.md  relationships (LD-R)             │
  │ governance/ambiguity-register.md ambiguous words (LD-A)          │
- │ governance/review-domains.md    10 domains, owners, questions    │
+ │ governance/review-domains.md    11 domains, owners, questions    │
  │ governance/decision-log.md      decisions                         │
  │ domains/<d>/overview.md, company-questions.md                    │
  └──────────────────────────────────────────────────────────────────┘
@@ -47,7 +47,7 @@ IDs are permanent and never reused, even when a concept is retired. `python3 too
 - **Annotations** (`ontology/concept-annotations.md`): tables keyed by concept, each with fixed headers that the generator recognises: Specialisations (child, parent, link), Resolution flags, Aliases (word, resolves to, scope), Required context, Usage notes, Priority and alignment, Plain-language summaries (in short, example, not to be confused with), Values.
 - **Relationships** (`relationships/relationships.md`): source concept, relation (such as `is_a`, `part_of`, `fulfilled_by`), target concept, meaning and conditions. Endpoints are concept IDs only.
 - **Ambiguities** (`governance/ambiguity-register.md`): the word, the distinction to make, the reviewer, affected IDs, status; the proposed answer is a `### LD-Annnn` paragraph after the table. A proposed answer is not a decision.
-- **Domains** (`governance/review-domains.md`): for each of the ten domains its page name, wave, owner role, reviewer roles, **primary concepts** (exactly one domain per concept) and concepts **also shown**; the page content (why it matters, generic sequence, backlog); the questions put to each reviewer role.
+- **Domains** (`governance/review-domains.md`): for each of the eleven domains its page name, wave, owner role, reviewer roles, **primary concepts** (exactly one domain per concept) and concepts **also shown**; the page content (why it matters, generic sequence, backlog); the questions put to each reviewer role.
 - **Decisions and questions** (`governance/decision-log.md`, `governance/open-questions-for-owner.md`): what the sponsor and owners decided, and what is still open.
 
 ### Generated pages and workbooks

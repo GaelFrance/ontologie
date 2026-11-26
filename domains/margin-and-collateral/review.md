@@ -97,6 +97,30 @@ A proposed answer comes from the expert review; it is **not a decision** until t
 
 <sub>reference LD-A0027</sub>
 
+### Limit (Open, answer proposed)
+
+**To decide:** Firm risk limit (clearing limit, pre-trade limit, client credit limit, CCP exposure limit) versus position limit set by a regulator or venue versus concentration limit on collateral.
+
+**Proposed answer:** A Risk Limit is a decision of the party that sets it; its kinds are the Clearing Limit, which governs acceptance for clearing, and the Pre-trade Limit, which screens orders; one limit can serve both. A Position Limit is a regulator's or venue's rule on positions held. A Concentration Limit caps how much of an asset counts as collateral. Ask who set the limit and on what. Confidence high.
+
+<sub>reference LD-A0037</sub>
+
+### Exposure (Open, answer proposed)
+
+**To decide:** Clearing broker's exposure to a client versus the executing side's exposure on trades not yet taken up versus a clearing member's exposure to a CCP versus the CCP's exposure to the member; gross or net of collateral; current or stressed.
+
+**Proposed answer:** An exposure always has an observing party and a counterparty: the clearing broker toward its client (Client Clearing Exposure), the giving side toward trades not yet taken up (Unaccepted Give-up Exposure), the clearing member toward a CCP (CCP Exposure). The CCP's exposure to the member is what margin (Margin Requirement) and the default fund cover; it is not one of these. State the basis (current, potential, stress) and whether collateral is counted. Confidence high.
+
+<sub>reference LD-A0038</sub>
+
+### Default (Open, answer proposed)
+
+**To decide:** Client default toward its clearing broker versus clearing member default declared by a CCP versus CCP failure, recovery or resolution versus a settlement fail or an unmet margin call versus a default value or setting.
+
+**Proposed answer:** Ask who defaults toward whom. A Client Default is declared by the clearing broker under the client clearing agreement and leads to Client Default Management. A Clearing Member Default is declared by the CCP and leads to porting, auctions and use of the Default Waterfall. A CCP in recovery allocates losses (CCP Loss Allocation). A settlement fail or an unmet margin call can lead to a default but is not one. Confidence high.
+
+<sub>reference LD-A0039</sub>
+
 Also touching this domain, answered elsewhere:
 
 - “Fee, revenue and cash received” (open, narrowed 2026-09-20, answer proposed): see [Fees, revenue and contribution](../fees-revenue-and-contribution/review.md), [Post-trade operations](../post-trade-operations/review.md)

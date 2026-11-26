@@ -2,7 +2,7 @@
 description: Cross-review several domains (expert per domain, cross-check, supervisor). Give domain folder names, or "all".
 ---
 
-Run a cross-review of these domains: $ARGUMENTS ("all" means the ten domains listed in `AGENTS.md`).
+Run a cross-review of these domains: $ARGUMENTS ("all" means the eleven domains listed in `AGENTS.md`).
 
 1. For each domain, use the domain-reviewer subagent with that domain name. Run them one at a time if the model's context is small; each writes its own notes file in `.review-notes/`.
 2. Then use the cross-checker subagent on today's notes.

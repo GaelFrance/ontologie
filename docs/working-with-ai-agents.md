@@ -44,7 +44,7 @@ Review notes are written to `.review-notes/`, which is not committed. Decisions 
 ```
 
    Replace the URL and the model name with the ones you were given; set the key in the environment variable `FIRM_LLM_API_KEY`. With an older OpenCode (version 1) the same block is written `"provider"` (singular), `"npm": "@ai-sdk/openai-compatible"` and `"options": { "baseURL": "…", "apiKey": "{env:FIRM_LLM_API_KEY}" }`. Check the provider page of the documentation for the version you have.
-4. Open a terminal in the repository folder and run `opencode`. Ask "Which skills and agents do you see?": it should list the ten `*-expert` skills and the three reviewers.
+4. Open a terminal in the repository folder and run `opencode`. Ask "Which skills and agents do you see?": it should list the eleven `*-expert` skills and the three reviewers.
 
 ## Set up Roo Code with Qwen
 
