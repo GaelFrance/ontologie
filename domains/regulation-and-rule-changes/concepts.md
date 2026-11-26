@@ -28,7 +28,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Regulatory Authorisation](#regulatory-authorisation) *is granted under* Regulatory Regime
 - [Regulatory Authority](#regulatory-authority) *adopts or supervises* Regulatory Regime
 
-<sub>Reference Concept · level 1 · Draft · reference LD-C0067 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
+<sub>Reference Concept · added in review round 1 · Draft · reference LD-C0067 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Rule Provision
 
@@ -60,7 +60,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Dates of a rule change” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Reference Concept · level 1 · Draft · reference LD-C0063 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
+<sub>Reference Concept · added in review round 1 · Draft · reference LD-C0063 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Rulebook
 
@@ -89,7 +89,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *governs* [Trading Venue](../instruments-venues-and-calendars/concepts.md#trading-venue)
 - *is changed after* [Rule Change Approval](#rule-change-approval)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0194 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
+<sub>Reference Concept · added in review round 2 · Draft · reference LD-C0194 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Regulatory Relief
 
@@ -115,7 +115,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is issued by* [Regulatory Authority](#regulatory-authority)
 - *can depend on* [Regulatory Classification](#regulatory-classification)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0195 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
+<sub>Reference Concept · added in review round 2 · Draft · reference LD-C0195 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Equivalence Decision
 
@@ -141,7 +141,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is a condition of* [Regulatory Authorisation](#regulatory-authorisation)
 - *can change the treatment of trades on* [Trading Venue](../instruments-venues-and-calendars/concepts.md#trading-venue)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0196 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
+<sub>Reference Concept · added in review round 2 · Draft · reference LD-C0196 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Regulatory Obligation
 
@@ -174,7 +174,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *can be relieved by* [Regulatory Relief](#regulatory-relief)
 - [Regulatory Reporting Role](#regulatory-reporting-role) *is defined by* Regulatory Obligation
 
-<sub>Reference Concept · level 1 · Draft · reference LD-C0190 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
+<sub>Reference Concept · added in review round 1 · Draft · reference LD-C0190 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Clearing Obligation
 
@@ -200,7 +200,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *applies to* [Trade](../execution/concepts.md#trade)
 - *applies through* [Phase-in Step](#phase-in-step)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0191 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
+<sub>Reference Concept · added in review round 2 · Draft · reference LD-C0191 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Phase-in Step
 
@@ -224,7 +224,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Clearing Obligation](#clearing-obligation) *applies through* Phase-in Step
 - *can also stage* [Rule Change](#rule-change)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0193 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
+<sub>Reference Concept · added in review round 2 · Draft · reference LD-C0193 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Regulated Product Class
 
@@ -252,7 +252,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is the value of product level* [Regulatory Classification](#regulatory-classification)
 - *sets the product scope of* [Regulatory Obligation](#regulatory-obligation)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0192 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
+<sub>Reference Concept · added in review round 2 · Draft · reference LD-C0192 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Rule Change
 
@@ -285,7 +285,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Dates of a rule change” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Event · level 1 · Draft · reference LD-C0064 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
+<sub>Event · added in review round 1 · Draft · reference LD-C0064 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Consultation
 
@@ -310,7 +310,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is opened by* [Change Notice](#change-notice)
 - *closes on a* [Business Date](../instruments-venues-and-calendars/concepts.md#business-date)
 
-<sub>Process · level 2 · Draft · reference LD-C0198 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
+<sub>Process · added in review round 2 · Draft · reference LD-C0198 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Rule Change Approval
 
@@ -335,7 +335,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is decided by* [Regulatory Authority](#regulatory-authority)
 - *concerns a change to* [Rulebook](#rulebook)
 
-<sub>Event · level 2 · Draft · reference LD-C0199 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
+<sub>Event · added in review round 2 · Draft · reference LD-C0199 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Change Impact Assessment
 
@@ -361,7 +361,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 - *uses* [Regulatory Interpretation](#regulatory-interpretation)
 
-<sub>Process · level 2 · Draft · reference LD-C0200 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
+<sub>Process · added in review round 2 · Draft · reference LD-C0200 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Regulatory Interpretation
 
@@ -386,7 +386,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Change Impact Assessment](#change-impact-assessment) *uses* Regulatory Interpretation
 - *is a reading of* [Rule Provision](#rule-provision)
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0201 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
+<sub>Reference Concept · added in review round 2 · Draft · reference LD-C0201 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Regulatory Classification
 
@@ -418,7 +418,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Clearing broker, clearing member, FCM” (open, answer proposed); “Current, as of, as known at” (open, answer proposed); “Group” (open, answer proposed); “OTC and listed” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>State · level 1 · Draft · reference LD-C0068 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
+<sub>State · added in review round 1 · Draft · reference LD-C0068 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Regulatory Authorisation
 
@@ -447,7 +447,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *can be limited to* [Clearing Service](../clearing-services-and-accounts/concepts.md#clearing-service)
 - *can depend on* [Equivalence Decision](#equivalence-decision)
 
-<sub>State · level 2 · Draft · reference LD-C0202 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
+<sub>State · added in review round 2 · Draft · reference LD-C0202 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Change Notice
 
@@ -471,7 +471,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *announces* [Rule Change](#rule-change) — One notice can announce several rule changes and one change several notices. Corrected 2026-11-09 (was part_of).
 - [Consultation](#consultation) *is opened by* Change Notice
 
-<sub>Entity · level 1 · Draft · reference LD-C0197 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
+<sub>Entity · added in review round 1 · Draft · reference LD-C0197 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Regulatory Authority
 
@@ -500,7 +500,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *grants* [Regulatory Authorisation](#regulatory-authorisation)
 - *decides* [Rule Change Approval](#rule-change-approval)
 
-<sub>Role · level 2 · Draft · reference LD-C0203 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
+<sub>Role · added in review round 2 · Draft · reference LD-C0203 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Regulatory Reporting Role
 
@@ -524,7 +524,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *is held on* [Execution](../execution/concepts.md#execution)
 - *is relied on by delegated reporting* [Service Component](../service-offering-and-market-access/concepts.md#service-component)
 
-<sub>Role · level 2 · Draft · reference LD-C0204 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
+<sub>Role · added in review round 2 · Draft · reference LD-C0204 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
 ### Position Limit
 
@@ -551,4 +551,4 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Open questions on its meaning:** “Limit” (open, answer proposed) — see the [review sheet](review.md).
 
-<sub>Reference Concept · level 2 · Draft · reference LD-C0229 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
+<sub>Reference Concept · added in review round 2 · Draft · reference LD-C0229 · accountable owner: the Regulatory Affairs (not yet approved)</sub>

@@ -285,7 +285,7 @@
 - **[Sponsored Clearing Arrangement](domains/service-offering-and-market-access/concepts.md#sponsored-clearing-arrangement)** — A client is admitted directly to a clearing house, with a clearing member standing behind it under the clearing house's rules. *(Service offering and market access)*
 - **[Sponsored Clearing Participant](domains/parties-and-roles/concepts.md#sponsored-clearing-participant)** — A client that becomes a direct participant at a CCP with a clearing member as its sponsor. *(Parties, roles, clients and accounts)*
 - **[Sponsoring Clearing Member](domains/clearing-services-and-accounts/concepts.md#sponsoring-clearing-member)** — A clearing member that stands behind a client admitted directly to a CCP under a sponsored model. *(Clearing: services, accounts and client clearing)*
-- **[Standing Allocation Instruction](domains/execution/concepts.md#standing-allocation-instruction)** — A split rule the client sets once, which the broker applies to every matching trade. *(Listed derivatives execution)*
+- **Standing Allocation Instruction** (retired) — Deprecated 2026-11-26 (decision 29), replaced by Allocation Instruction, whose definition already covers standing instructions; the form "standing" is now a value of Allocation Instruction.
 - **[Strategy Leg Execution](domains/execution/concepts.md#strategy-leg-execution)** — The fill in one leg contract that results when a spread or option combination is filled. *(Listed derivatives execution)*
 - **[Stress Loss](domains/risk/concepts.md#stress-loss)** — What a portfolio would lose in a named extreme scenario. *(Risk: client clearing, execution and CCP risk)*
 - **[Submission Acceptance](domains/clearing-give-up-and-acceptance/concepts.md#submission-acceptance)** — The OTC clearing broker's yes or no to clearing a swap that has been sent for clearing. *(Clearing: give-up and acceptance)*
@@ -303,7 +303,7 @@
 - **[Trading Venue](domains/instruments-venues-and-calendars/concepts.md#trading-venue)** — An organised marketplace, such as an exchange or a multilateral trading facility, where many participants' buying and selling interests meet under the venue's rules. *(Instruments, venues and calendars)*
 - **[Trading Venue Member](domains/execution/concepts.md#trading-venue-member)** — A firm admitted under a venue's rules to enter orders and register trades there in its own name. *(Listed derivatives execution)*
 - **[Trading Venue Segment](domains/instruments-venues-and-calendars/concepts.md#trading-venue-segment)** — A section of an exchange, such as its equity derivatives market or its commodity market, that can have its own rules, hours and fees. *(Instruments, venues and calendars)*
-- **[Transaction](domains/execution/concepts.md#transaction)** — An ambiguous word that is not used as a concept for now: ask whether the speaker means an execution, a trade, a lifecycle event, a cash movement or a regulatory transaction report. *(Listed derivatives execution)*
+- **Transaction** (retired) — Deprecated 2026-11-26 (decision 29), replaced by no single concept: "transaction" is an ambiguous word handled in the ambiguity register; depending on the speaker it means an Execution, a Trade, a Lifecycle Event, a Cash Movement or a regulatory transaction report.
 
 ## U
 
@@ -438,7 +438,7 @@ Informal words and abbreviations, and the concept they point to.
 - “deadline” (Process steps) → [Cut-off](domains/post-trade-operations/concepts.md#cut-off)
 - “declaration of default” (CCP rules) → [Clearing Member Default](domains/clearing-services-and-accounts/concepts.md#clearing-member-default)
 - “default” (Any) → [Client Default](domains/clearing-services-and-accounts/concepts.md#client-default), [Clearing Member Default](domains/clearing-services-and-accounts/concepts.md#clearing-member-default), [CCP Loss Allocation](domains/risk/concepts.md#ccp-loss-allocation), [Settlement Fail](domains/post-trade-operations/concepts.md#settlement-fail)
-- “default allocation” (any) → [Standing Allocation Instruction](domains/execution/concepts.md#standing-allocation-instruction)
+- “default allocation” (any) → [Allocation Instruction](domains/execution/concepts.md#allocation-instruction)
 - “default auction, hedged auction” (CCP default management) → [Default Management Auction](domains/risk/concepts.md#default-management-auction)
 - “default event” (any, ambiguous) → [Clearing Member Default](domains/clearing-services-and-accounts/concepts.md#clearing-member-default)
 - “deficit” (contextual, US futures) → [Margin Excess or Shortfall](domains/margin-and-collateral/concepts.md#margin-excess-or-shortfall)
@@ -675,7 +675,7 @@ Informal words and abbreviations, and the concept they point to.
 - “spread, combo, complex instrument” (venue usage) → [Listed Strategy](domains/instruments-venues-and-calendars/concepts.md#listed-strategy)
 - “SSI” (standing settlement instructions, contextual: the standing details, not the instruction) → [Payment Instruction](domains/post-trade-operations/concepts.md#payment-instruction)
 - “SSI account” → [Settlement Account](domains/post-trade-operations/concepts.md#settlement-account)
-- “standing instruction, SSI-style allocation” (desk usage, ambiguous with settlement instructions) → [Standing Allocation Instruction](domains/execution/concepts.md#standing-allocation-instruction)
+- “standing instruction, SSI-style allocation” (desk usage, ambiguous with settlement instructions) → [Allocation Instruction](domains/execution/concepts.md#allocation-instruction)
 - “statement” (broker, bank or CCP) → [Source Record](domains/post-trade-operations/concepts.md#source-record)
 - “street-side order” (US usage) → [Child Order](domains/execution/concepts.md#child-order)
 - “stress test result, stress exposure” (Any) → [Stress Loss](domains/risk/concepts.md#stress-loss)

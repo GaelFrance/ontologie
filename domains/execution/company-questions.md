@@ -42,7 +42,7 @@ These questions capture how **our firm** works in this domain, so the ontology c
 
 - **Why it matters:** Confirms the proposed meaning change to include standing instructions and sets which kinds of allocation instruction are needed.
 - **How to answer:** Checklist of forms accepted, with the means used for each.
-- **Concepts affected:** Allocation Instruction, Standing Allocation Instruction, Clearing Designation
+- **Concepts affected:** Allocation Instruction (its form: standing, with the order, after execution), Clearing Designation
 - **Who answers:** ETD post-trade operations lead
 <sub>question q11</sub>
 
