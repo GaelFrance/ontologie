@@ -12,7 +12,7 @@ The domain describes these risks in words: who could lose, toward whom, what lim
 
 ## Who is involved
 
-- The **risk function** of the clearing broker or executing broker, which assesses clients and CCPs, sets limits and follows breaches. It is an internal team, not a party.
+- The **risk function** (the domain owner is the head of clearing risk or a delegate) of the clearing broker or executing broker, which assesses clients and CCPs, sets limits and follows breaches. It is an internal team, not a party.
 - The **client**, and the third parties that may guarantee it.
 - The **executing broker** and the **trading venue member**, which control orders before they reach the venue.
 - The **clearing member** and the **central counterparty**, with the CCP's default rules and resources.

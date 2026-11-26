@@ -125,7 +125,16 @@ Evidence: Ontology Lead request in the project conversation, 2026-11-26 ("Full R
 
 | Point | Decision | Consequence in the ontology | Affected IDs |
 |---|---|---|---|
-| 25. Risk domain | An eleventh domain, Risk, is opened with three areas kept apart: the risk we take on the clients we clear, execution risk, and CCP risk. | New domain page `risk` with 22 Draft concepts, four ambiguity entries (LD-A0036 to LD-A0039) and questions for our firm; existing limit, default and default-resource concepts keep their primary domain and are shown on the risk page. Owner role to be named (open question 26). | LD-C0231 to LD-C0252 |
+| 25. Risk domain | An eleventh domain, Risk, is opened with three areas kept apart: the risk we take on the clients we clear, execution risk, and CCP risk. | New domain page `risk` with 22 Draft concepts, four ambiguity entries (LD-A0036 to LD-A0039) and questions for our firm; existing limit, default and default-resource concepts keep their primary domain and are shown on the risk page. Owner and classification settled by decisions 26 and 27. | LD-C0231 to LD-C0252 |
 
 This decision opens the domain; it approves none of its definitions, which stay Draft until the risk domain owner approves them.
+
+## Ontology Lead decision — 2026-11-26 (risk domain owner and limits)
+
+Evidence: Ontology Lead answer in the project conversation, 2026-11-26 ("Yes to both"), to open questions 26 and 27 as proposed.
+
+| Point | Decision | Consequence in the ontology | Affected IDs |
+|---|---|---|---|
+| 26. Risk domain owner | The risk domain is owned by a role in the risk function: the head of clearing risk or a delegate. Existing concepts on limits, defaults and default resources keep their primary domain and are shown on the risk page. | Owner role set in the review domains; no concept moves. | LD-C0231 to LD-C0252, LD-C0138, LD-C0119, LD-C0159, LD-C0154, LD-C0155, LD-C0172, LD-C0163 |
+| 27. Clearing Limit | Clearing Limit is a kind of Risk Limit. | Specialisation kept; the Clearing Limit definition says so instead of "without a level-1 parent" (clarification). | LD-C0138, LD-C0232 |
 

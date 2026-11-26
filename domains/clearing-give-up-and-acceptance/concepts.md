@@ -382,7 +382,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 *The pre-agreed ceiling up to which a clearing broker accepts a client's trades without a manual check.*
 
-**Definition.** Limit set by a clearing member or clearing broker, usually by its risk function, for an identified client, account, executing broker or product scope, with an owner, a basis (for example quantity, notional or risk), a version and an effective period. The same limit can screen orders before execution (in a pre-trade control check) and decide automatic acceptance after execution (at take-up or submission acceptance); beyond it trades are referred or rejected. A give-up agreement or client clearing agreement may refer to it or allow it; it does not usually contain its value. It is not a rule provision, and a change to a limit is not a rule change. New concept without a level-1 parent.
+**Definition.** Limit set by a clearing member or clearing broker, usually by its risk function, for an identified client, account, executing broker or product scope, with an owner, a basis (for example quantity, notional or risk), a version and an effective period. The same limit can screen orders before execution (in a pre-trade control check) and decide automatic acceptance after execution (at take-up or submission acceptance); beyond it trades are referred or rejected. A give-up agreement or client clearing agreement may refer to it or allow it; it does not usually contain its value. It is not a rule provision, and a change to a limit is not a rule change. A kind of Risk Limit (decision 27).
 
 **Example.** Clearing Broker Y lets Executing Broker X give up Client A's trades in one futures contract up to a set number of lots per day.
 

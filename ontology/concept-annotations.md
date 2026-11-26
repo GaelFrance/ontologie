@@ -121,7 +121,7 @@ Standard alignments are "map, do not import" proposals: none has been checked ag
 | LD-C0246 CCP Exposure | LD-C0231 | 2026-11 risk domain draft |
 | LD-C0235 Stress Loss | LD-C0231 | 2026-11 risk domain draft |
 | LD-C0241 Pre-trade Limit | LD-C0232 | 2026-11 risk domain draft |
-| LD-C0138 Clearing Limit | LD-C0232 | 2026-11 risk domain draft |
+| LD-C0138 Clearing Limit | LD-C0232 | Decision 27, 2026-11-26 |
 | LD-C0244 Error Position | LD-C0026 | 2026-11 risk domain draft |
 | LD-C0250 Default Fund Assessment | LD-C0028 | 2026-11 risk domain draft |
 
