@@ -180,6 +180,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 - *submits* [Order](../execution/concepts.md#order) — Distinguish contractual client, representative and technical sender.
 - [Client Clearing Exposure](../risk/concepts.md#client-clearing-exposure) *concerns* Client — Or a group of clients defined for risk purposes, which need not be the Commercial Group.
+- [Client Risk Group](../risk/concepts.md#client-risk-group) *groups* Client — The clients the risk function treats as one, over a stated period.
 - [Natural Person](#natural-person) *can hold the role of* Client
 - [Investment Fund](#investment-fund) *usually holds the role of* Client
 - [Authorised Representative](#authorised-representative) *acts for* Client
@@ -508,6 +509,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 **Connected to:**
 
 - [Party](#party) *member of* Commercial Group — Time-bound commercial grouping; never used for regulatory threshold or consolidation calculations (the open question “Group”).
+- [Client Risk Group](../risk/concepts.md#client-risk-group) *is distinct from* Commercial Group — A risk grouping set by the risk function versus a commercial grouping.
 - [Investment Manager](#investment-manager) *often anchors* Commercial Group
 - [Parent Entity](#parent-entity) *may inform but never defines* Commercial Group
 - [Client Pricing Terms](../fees-revenue-and-contribution/concepts.md#client-pricing-terms) *may be agreed at the level of* Commercial Group
@@ -528,6 +530,8 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 **Not to be confused with.** Account identifier: the code (such as a give-up reference) points to an account; it is not the account.
 
 **Breaks down into:** [CCP Account](../clearing-services-and-accounts/concepts.md#ccp-account) (kind of), [Client Account](#client-account) (kind of), [Settlement Account](../post-trade-operations/concepts.md#settlement-account) (kind of), [Account Identifier](#account-identifier) (part of)
+
+**Values (draft list):** function (example value): error account
 
 **Note.** Has identifiers per maintaining party, a lifecycle status and an effective period. A give-up reference is an identifier pointing to the receiving member's account, not an account. Regulatory qualifications (for example active-account status) are time-bounded classifications. [07, 06]
 

@@ -121,9 +121,9 @@ A proposed answer comes from the expert review; it is **not a decision** until t
 
 ### Default (Open, answer proposed)
 
-**To decide:** Client default toward its clearing broker versus clearing member default declared by a CCP versus CCP failure, recovery or resolution versus a settlement fail or an unmet margin call versus a default value or setting.
+**To decide:** Client default toward its clearing broker versus a client that clears for indirect clients, seen from each tier, versus a clearing broker defaulting toward its client versus clearing member default declared by a CCP versus a sponsored clearing participant declared in default by the CCP versus CCP failure, recovery or resolution versus a settlement fail or an unmet margin call versus a default value or setting.
 
-**Proposed answer:** Ask who defaults toward whom. A Client Default is declared by the clearing broker under the client clearing agreement and leads to Client Default Management. A Clearing Member Default is declared by the CCP and leads to porting, auctions and use of the Default Waterfall. A CCP in recovery allocates losses (CCP Loss Allocation). A settlement fail or an unmet margin call can lead to a default but is not one. Confidence high.
+**Proposed answer:** Ask who defaults toward whom. A Client Default is declared by the clearing broker under the client clearing agreement and is followed by the steps listed on it (close-out, hedging, transfer, use of collateral and credit support). Where the client clears for indirect clients, say from which tier the default is seen; a clearing broker can also default toward its client. A Clearing Member Default is declared by the CCP and may lead to Porting of client positions and collateral, close-out or an auction of house positions and non-ported client positions, and use of the Default Waterfall. A sponsored clearing participant can be declared in default by the CCP; how that is modelled is pending a question for our firm. A CCP in recovery allocates losses (CCP Loss Allocation). A settlement fail or an unmet margin call can lead to a default but is not one. "Default" can also mean a default value or setting, which is not an event. Confidence high.
 
 <sub>reference LD-A0039</sub>
 
@@ -139,7 +139,7 @@ Also touching this domain, answered elsewhere:
 - “Dates of a rule change” (open, answer proposed): see [Instruments, venues and calendars](../instruments-venues-and-calendars/review.md), [Regulation and rule changes](../regulation-and-rule-changes/review.md)
 - “Fill” (open, answer proposed): see [Listed derivatives execution](../execution/review.md)
 - “The trade (clearing tier)” (open, answer proposed): see [Clearing: give-up and acceptance](../clearing-give-up-and-acceptance/review.md), [Listed derivatives execution](../execution/review.md)
-- “Give-up, transfer, porting” (open, answer proposed): see [Clearing: give-up and acceptance](../clearing-give-up-and-acceptance/review.md)
+- “Give-up, transfer, porting” (open, answer proposed): see [Clearing: give-up and acceptance](../clearing-give-up-and-acceptance/review.md), [Clearing: services, accounts and client clearing](../clearing-services-and-accounts/review.md)
 - “Omnibus, house and client” (open, answer proposed): see [Clearing: services, accounts and client clearing](../clearing-services-and-accounts/review.md), [Parties, roles, clients and accounts](../parties-and-roles/review.md)
 - “Client clearing model” (open, answer proposed): see [Clearing: services, accounts and client clearing](../clearing-services-and-accounts/review.md), [Service offering and market access](../service-offering-and-market-access/review.md)
 - “OTC and listed” (open, answer proposed): see [Listed derivatives execution](../execution/review.md), [Instruments, venues and calendars](../instruments-venues-and-calendars/review.md), [Regulation and rule changes](../regulation-and-rule-changes/review.md)
@@ -155,6 +155,8 @@ Also touching this domain, answered elsewhere:
 | **16. Meaning changes** — The 13 proposed meaning changes are accepted as Draft: Party, Broker, Trading Venue, Allocation, Position, Commission, Variation Margin Requirement, Market Access Arrangement, Allocation Instruction, Rule Change, Cut-off, Regulatory Classification, CCP Account. | Definitions replaced in the catalogue; Commission keeps its resolution flag. Settlement Deadline, Firm Cut-off, Take-up Deadline and Standing Allocation Instruction no longer depend on a pending decision. |
 | **17. Cut-off** — A cut-off is set by a rule provision or by a term of an agreement; it is no longer a kind of Rule Provision. Only rule-set cut-offs follow the rule change lifecycle. | Specialisation removed; new relationship "set by". |
 | **24. Other missing concepts** — Option Premium and Client Statement (post-trade), Trade Confirmation (execution) and Position Limit (regulation) are added. "Maintenance margin" stays a call trigger level in Margin Call Terms, as proposed for the open question “Margin and initial margin”; a client funds requirement stays in the backlog. | Concepts added as Draft; alias rows for maintenance margin and monthly statement; backlog item and firm question on client funds. |
+| **28. M7 Default Fund Assessment** — Option A: a commitment; only its call gives rise to a Settlement Obligation. | Definition replaced; specialisation to Settlement Obligation removed; new row gives rise to Settlement Obligation. |
+| **28. M12 Sponsored participant default** — Option A: no change now; a candidate is added to the default ambiguity. | the open question “Default” extended. |
 
 ## 5. Not yet in the catalogue
 

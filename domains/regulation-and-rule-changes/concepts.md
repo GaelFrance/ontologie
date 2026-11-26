@@ -44,10 +44,13 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Breaks down into:** [Offering Eligibility Criterion](../service-offering-and-market-access/concepts.md#offering-eligibility-criterion) (kind of), [Access Requirement](../service-offering-and-market-access/concepts.md#access-requirement) (kind of), [Rulebook](#rulebook) (kind of), [Regulatory Relief](#regulatory-relief) (kind of), [Equivalence Decision](#equivalence-decision) (kind of)
 
+**Words people use:** “limit” (Any)
+
 **Connected to:**
 
 - *supersedes* [Rule Provision](#rule-provision) — Temporal succession of versions; answers what changed and from which effective date.
 - *issued by* [Party](../parties-and-roles/concepts.md#party) — Regulator, CCP, venue operator or the firm.
+- [Pre-trade Control Check](../execution/concepts.md#pre-trade-control-check) *may apply* Rule Provision — A venue's order controls published for all participants (for example a price band or a maximum order quantity).
 - [Block Trade](../execution/concepts.md#block-trade) *is governed by* Rule Provision
 - [Exchange for Related Position](../execution/concepts.md#exchange-for-related-position) *is governed by* Rule Provision
 - [Execution Correction](../execution/concepts.md#execution-correction) *is governed by the venue s error trade rules in* Rule Provision
@@ -58,7 +61,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - [Regulatory Authority](#regulatory-authority) *issues* Rule Provision
 - [Position Limit](#position-limit) *set by* Rule Provision — A regulator's or a venue's rule.
 
-**Open questions on its meaning:** “Dates of a rule change” (open, answer proposed) — see the [review sheet](review.md).
+**Open questions on its meaning:** “Dates of a rule change” (open, answer proposed); “Limit” (open, answer proposed) — see the [review sheet](review.md).
 
 <sub>Reference Concept · level 1 · Draft · reference LD-C0063 · accountable owner: the Regulatory Affairs (not yet approved)</sub>
 
@@ -258,7 +261,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 *A change to a rule or to a published specification, followed from proposal or consultation until it applies, with its status and its dates.*
 
-**Definition.** Proposed or adopted change to one rule provision, or to another published, versioned specification (fee schedule, contract specification, business calendar, cut-off set by a rule, margin methodology, margin parameter set announced by notice, collateral eligibility schedule, clearing eligibility schedule, access requirement), by which it is created, amended, replaced or withdrawn. It is followed from proposal to application, with a lifecycle status (proposed or in consultation, adopted, approved or self-certified where the issuer's supervisor must act, in force, applicable, superseded, withdrawn) and dates qualified by their role (publication, consultation close, adoption, entry into force, application, phase-in, end of transition, and the date the firm recorded it). Contract terms agreed with a client, routine parameter publications under an unchanged method, and new series listed under an unchanged contract specification are not rule changes; nor is a change of one party's regulatory classification. One published notice can announce several rule changes, and one rule change can be announced in several notices. — *meaning changed in 2026-11, accepted as Draft*
+**Definition.** Proposed or adopted change to one rule provision, or to another published, versioned specification (fee schedule, contract specification, business calendar, cut-off set by a rule, margin methodology, margin parameter set announced by notice, collateral eligibility schedule, clearing eligibility schedule, access requirement), by which it is created, amended, replaced or withdrawn. It is followed from proposal to application, with a lifecycle status (proposed or in consultation, adopted, approved or self-certified where the issuer's supervisor must act, in force, applicable, superseded, withdrawn) and dates qualified by their role (publication, consultation close, adoption, entry into force, application, phase-in, end of transition, and the date the firm recorded it). Contract terms agreed with a client, routine parameter publications under an unchanged method (including a periodic recalculation of default fund size or of a CCP's dedicated own resources), changes to limits a firm sets, and new series listed under an unchanged contract specification are not rule changes; nor is a change of one party's regulatory classification. One published notice can announce several rule changes, and one rule change can be announced in several notices. — *meaning changed in 2026-11, accepted as Draft*
 
 **Example.** CCP Z proposes to move its give-up take-up deadline thirty minutes earlier; the change is adopted, approved by its supervisor and applies from a stated clearing date.
 
@@ -272,6 +275,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 - *changes* [Rule Provision](#rule-provision), [Fee Schedule](../fees-revenue-and-contribution/concepts.md#fee-schedule), [Contract Specification](../instruments-venues-and-calendars/concepts.md#contract-specification), [Business Calendar](../instruments-venues-and-calendars/concepts.md#business-calendar), [Margin Methodology](../margin-and-collateral/concepts.md#margin-methodology), [Collateral Eligibility Schedule](../margin-and-collateral/concepts.md#collateral-eligibility-schedule) — Change type new, amend, withdraw or propose; dates qualified by date role (the open question “Dates of a rule change”).
 - *affects* [Clearing Service](../clearing-services-and-accounts/concepts.md#clearing-service), [Trading Venue](../instruments-venues-and-calendars/concepts.md#trading-venue), [CCP Account](../clearing-services-and-accounts/concepts.md#ccp-account), [Segregation Model](../clearing-services-and-accounts/concepts.md#segregation-model), [Give-up / Take-up Process](../clearing-give-up-and-acceptance/concepts.md#give-up--take-up-process), [Clearing Acceptance](../clearing-give-up-and-acceptance/concepts.md#clearing-acceptance), [Margin Requirement](../margin-and-collateral/concepts.md#margin-requirement), [Collateral](../margin-and-collateral/concepts.md#collateral) — Instance-level impact target, declared as this explicit union; n-ary qualifiers: impact type, affected role, confidence, interpretation required. Tagging a notice with a concept ID is an annotation, not this relation.
+- [Default Waterfall](../risk/concepts.md#default-waterfall) *is changed by* Rule Change — A change to its order, layers, caps or tools; not a periodic recalculation of a layer's amount under unchanged rules.
 - [Key-Date Rule](../instruments-venues-and-calendars/concepts.md#key-date-rule) *is changed by and a calendar change can move its results* Rule Change
 - [Clearing Eligibility Schedule](../instruments-venues-and-calendars/concepts.md#clearing-eligibility-schedule) *is changed by* Rule Change
 - [Trading Session](../instruments-venues-and-calendars/concepts.md#trading-session) *is changed by hours extensions* Rule Change
@@ -353,7 +357,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Values (draft list):** impact type: scope, timing, data, legal effect, cost, process, documentation, client communication; decision: act, plan, monitor, ignore; status: draft, under review, signed off, closed; confidence: high, medium, low
 
-**Words people use:** “impact analysis”; “regulatory change assessment”
+**Words people use:** “impact analysis”; “regulatory change assessment”; “assessment” (Any)
 
 **Before using it, know:** The rule change and its status, as-of date, assessing and signing-off roles, the 'public-layer reading, not legal advice' label for agent drafts.
 
@@ -408,7 +412,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 - *classifies* [Legal Entity](../parties-and-roles/concepts.md#legal-entity), [Party Role](../parties-and-roles/concepts.md#party-role), [Account](../parties-and-roles/concepts.md#account), [Trading Venue](../instruments-venues-and-calendars/concepts.md#trading-venue), [Central Counterparty](../clearing-services-and-accounts/concepts.md#central-counterparty), [Clearing Service](../clearing-services-and-accounts/concepts.md#clearing-service), [Instrument](../instruments-venues-and-calendars/concepts.md#instrument), [Contract Specification](../instruments-venues-and-calendars/concepts.md#contract-specification), [Product Family](../instruments-venues-and-calendars/concepts.md#product-family), [Trade](../execution/concepts.md#trade) — Entity-level statuses attach to the legal entity, relationship-level statuses to the role assignment; never to the Client role generically or to a commercial group. A status the regime gives to a pair of counterparties (for example an intragroup exemption) attaches to both legal entities together, for the regime, product class and period, and is never read as a status of either one alone. Targets aligned with the definition 2026-11-09.
 - *under* [Regulatory Regime](#regulatory-regime) — Record regime, asset class where relevant, basis, effective period and evidence; valid time and record time both kept.
-- [Client Risk Rating](../risk/concepts.md#client-risk-rating) *is distinct from* Regulatory Classification — An internal grade versus a regulatory status.
+- [Client Credit Assessment](../risk/concepts.md#client-credit-assessment) *is distinct from* Regulatory Classification — The client risk rating it records is an internal grade, not a regulatory status. Moved 2026-11 from Client Risk Rating.
 - [Trading Venue Segment](../instruments-venues-and-calendars/concepts.md#trading-venue-segment) *can carry its own regulatory classification* Regulatory Classification
 - [Offering Eligibility Criterion](../service-offering-and-market-access/concepts.md#offering-eligibility-criterion) *may require a stated value of* Regulatory Classification
 - [Regulatory Obligation](#regulatory-obligation) *applies to holders of* Regulatory Classification
@@ -477,7 +481,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 *A public body that makes or enforces financial rules, such as a market supervisor or a central bank.*
 
-**Definition.** Role of a public body, or of a self-regulatory organisation exercising powers that a regime delegates to it, that, under a regime, adopts rules, supervises, authorises or registers parties, grants relief or decides equivalence, within a stated remit (jurisdiction, sector, type of entity); includes legislators, supervisory authorities, central banks acting as supervisors and supranational authorities. Standard setters whose principles are not binding are recorded as issuers of guidance only.
+**Definition.** Role of a public body, or of a self-regulatory organisation exercising powers that a regime delegates to it, that, under a regime, adopts rules, supervises, authorises or registers parties, grants relief, decides equivalence or exercises recovery and resolution powers, within a stated remit (jurisdiction, sector, type of entity); includes legislators, supervisory authorities, central banks acting as supervisors and supranational authorities. Standard setters whose principles are not binding are recorded as issuers of guidance only.
 
 **Example.** Regulator R supervises CCP Z, approves its rule changes and publishes guidance on the clearing obligation.
 
@@ -485,7 +489,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Kind of:** [Party Role](../parties-and-roles/concepts.md#party-role)
 
-**Values (draft list):** legislator; supervisory authority; central bank acting as supervisor; supranational authority; self-regulatory organisation (can issue rule provisions and levy fees)
+**Values (draft list):** legislator; supervisory authority; central bank acting as supervisor; supranational authority; self-regulatory organisation (can issue rule provisions and levy fees); resolution authority
 
 **Words people use:** “regulator”; “competent authority” (EU usage, contextual); “supervisor”
 
@@ -530,7 +534,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 *A cap, set by a regulator or a venue, on how many contracts one holder may hold, or a level above which it is watched or reported.*
 
-**Definition.** Maximum position, or a position level that triggers scrutiny (accountability level) or reporting (reportable level), in a commodity derivative or other listed contract, set by a regulator or by a trading venue under its rules for the positions held or controlled by one person or group, aggregated across accounts and firms as the rule states, for a stated period (spot month, single month or all months) and net or by side, with the exemptions the rule allows (for example bona fide hedging). Each level states its kind: a limit (exceeding it is a breach), an accountability level (exceeding it lets the venue ask for information or require action, but is not in itself a breach) or a reportable level (reaching it triggers reporting); the consequence follows the kind and the rule, never the amount alone. It applies to the holder of the positions; monitoring it for clients is a firm duty recorded in the internal layer. Distinct from a Clearing Limit, which a clearing member sets for its own credit and risk control.
+**Definition.** Maximum position, or a position level that triggers scrutiny (accountability level) or reporting (reportable level), in a commodity derivative or other listed contract, set by a regulator or by a trading venue under its rules for the positions held or controlled by one person or group, aggregated across accounts and firms as the rule states, for a stated period (spot month, single month or all months) and net or by side, with the exemptions the rule allows (for example bona fide hedging). Each level states its kind: a limit (exceeding it is a breach), an accountability level (exceeding it lets the venue ask for information or require action, but is not in itself a breach) or a reportable level (reaching it triggers reporting); the consequence follows the kind and the rule, never the amount alone. It applies to the holder of the positions; monitoring it for clients is a firm duty recorded in the internal layer. Distinct from a Risk Limit (for example a Clearing Limit or a pre-trade position cap), which a firm sets for its own risk control, even when it is set to keep a holder within a Position Limit.
 
 **Example.** Fund F approaches the spot-month limit on a commodity future at Exchange X and must reduce its position before expiry.
 
@@ -538,7 +542,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Values (draft list):** level kind: limit; accountability level; reportable level · period: spot month; single month; all months combined
 
-**Words people use:** “accountability level, reportable level” (US exchanges and regulators); “limit” (Any)
+**Words people use:** “accountability level, reportable level” (US exchanges and regulators); “limit” (Any); “position limit breach, position limit excess” (regulator or venue limits)
 
 **Before using it, know:** Regime or venue, contract, limit kind (limit, accountability or reportable level), period, aggregation basis, exemptions.
 

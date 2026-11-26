@@ -130,3 +130,11 @@ These questions capture how **our firm** works in this domain, so the ontology c
 - **Concepts affected:** Back-up Clearing Member, Porting
 - **Who answers:** Clearing product owner with Legal
 <sub>question q25</sub>
+
+### 17. Is a client "in default" when an event of default occurs, or only once the firm declares it or designates early termination?
+
+- **Why it matters:** Sets the date of Client Default. Extends question 13.
+- **How to answer:** Per client clearing agreement form and regime: the moment the client is in default.
+- **Concepts affected:** Client Default
+- **Who answers:** Legal
+<sub>question q26</sub>

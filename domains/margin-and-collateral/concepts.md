@@ -173,15 +173,17 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Part of:** [Margin Requirement](#margin-requirement)
 
-**Values (draft list):** component type: base initial margin; add-on (for example concentration, liquidity, wrong-way risk); premium or net liquidation value margin; delivery margin; variation margin is a separate kind of requirement, not a component, even when CCP statements show it on a line next to the components
+**Values (draft list):** component type: base initial margin; add-on (for example concentration, liquidity, wrong-way risk, stress); premium or net liquidation value margin; delivery margin; variation margin is a separate kind of requirement, not a component, even when CCP statements show it on a line next to the components
 
-**Words people use:** “margin component” (any); “margin breakdown” (contextual, statements)
+**Words people use:** “margin component” (any); “margin breakdown” (contextual, statements); “concentration limit” (collateral)
 
 **Before using it, know:** Tier, account, run, currency basis, and the CCP's native component name.
 
 **Connected to:**
 
 - *breaks down* [Initial Margin Requirement](#initial-margin-requirement)
+
+**Open questions on its meaning:** “Limit” (open, answer proposed) — see the [review sheet](review.md).
 
 <sub>Measure · level 2 · Draft · reference LD-C0162 · accountable owner: the Collateral Manager (not yet approved)</sub>
 
@@ -224,12 +226,16 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Not to be confused with.** Margin Requirement: the call is only the uncovered part of the requirement, after collateral held.
 
+**Values (draft list):** status: met; partly met; not met
+
+**Words people use:** “cash call” (Any); “default” (Any)
+
 **Note.** A return of excess on request is a Collateral Movement, not a negative call; VM paid out by a CCP is a payment, not a call. [04]
 
 **Connected to:**
 
 - *requests satisfaction of* [Margin Requirement](#margin-requirement) — Requirement, demand and remaining shortfall are different objects; the called amount derives from the requirement less collateral already held after haircut, adjusted for minimum transfer amount and rounding.
-- [Limit Breach](../risk/concepts.md#limit-breach) *may lead to* Margin Call — For example an ad hoc margin call to the client.
+- [Limit Breach](../risk/concepts.md#limit-breach) *may lead to* Margin Call — Through an ad hoc margin run or a raised client margin uplift whose resulting shortfall is called.
 - [Margin Run](#margin-run) *may lead to* Margin Call
 - [Margin Call Terms](#margin-call-terms) *governs* Margin Call
 - [Margin Excess or Shortfall](#margin-excess-or-shortfall) *may give rise to* Margin Call
@@ -260,7 +266,8 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 - *of asset* [Collateral Asset](#collateral-asset) — Quantity of the asset, with market value and value after haircut as of a time.
 - *held for* [Account](../parties-and-roles/concepts.md#account) — Account or segregation unit for which the collateral is held.
 - *covers* [Margin Requirement](#margin-requirement) — Same provider-taker pair, account, as-of time and currency basis; the difference is the excess or shortfall.
-- [Risk Exposure](../risk/concepts.md#risk-exposure) *takes into account* Collateral — Only where the exposure states it is net of collateral.
+- [Risk Exposure](../risk/concepts.md#risk-exposure) *takes into account* Collateral — Only where the exposure is stated after collateral, at the valuation the observing entity's risk methodology states.
+- [CCP Exposure](../risk/concepts.md#ccp-exposure) *includes* Collateral — Posted to the CCP, as far as the collateral arrangement does not protect it from the CCP's insolvency.
 - [Individually Segregated Client Account](../clearing-services-and-accounts/concepts.md#individually-segregated-client-account) *holds collateral attributed to one client* Collateral
 - [Porting](../clearing-services-and-accounts/concepts.md#porting) *moves as a separate leg* Collateral
 - [Client Default](../clearing-services-and-accounts/concepts.md#client-default) *may use* Collateral
@@ -355,7 +362,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Values (draft list):** per issuer; per asset class; per currency; per security issue; absolute cap; share of requirement
 
-**Words people use:** “concentration cap” (any); “limit” (Any)
+**Words people use:** “concentration cap” (any); “limit” (Any); “concentration limit” (collateral)
 
 **Before using it, know:** Schedule version, tier, account, limit basis.
 
@@ -383,11 +390,15 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Breaks down into:** [Margin Call Terms](#margin-call-terms) (part of), [Cash Collateral Interest](#cash-collateral-interest) (part of)
 
+**Values (draft list):** protection from the collateral taker's insolvency: protected; not protected; as assessed (to verify)
+
+**Words people use:** “credit support annex, CSA” (bilateral analogue)
+
 **Connected to:**
 
 - [Collateral](#collateral) *provided under* Collateral Arrangement — Legal form (title transfer or security interest) comes from the arrangement.
 - *references* [Collateral Eligibility Schedule](#collateral-eligibility-schedule) — The eligibility schedule version applicable under the arrangement.
-- [Credit Support Arrangement](../risk/concepts.md#credit-support-arrangement) *is distinct from* Collateral Arrangement
+- [Third-party Credit Support](../risk/concepts.md#third-party-credit-support) *is distinct from* Collateral Arrangement
 - [Collateral Instruction](#collateral-instruction) *is made under* Collateral Arrangement
 
 **Open questions on its meaning:** “Variation margin” (open, answer proposed) — see the [review sheet](review.md).
@@ -509,7 +520,7 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 **Connected to:**
 
 - [Position](../clearing-services-and-accounts/concepts.md#position) *included in* Portfolio — Membership is purpose-specific and time-bound.
-- [Stress Loss](../risk/concepts.md#stress-loss) *applies to* Portfolio — Or an account, counterparty or clearing service.
+- [Risk Exposure](../risk/concepts.md#risk-exposure) *applies to* Portfolio — For the stress loss basis: a portfolio, or an account, counterparty or clearing service. Moved 2026-11 from Stress Loss.
 - [Cleared OTC Position](../clearing-services-and-accounts/concepts.md#cleared-otc-position) *may be included in a margin portfolio* Portfolio
 
 <sub>Entity · level 1 · Draft · reference LD-C0027 · accountable owner: the Collateral Manager (not yet approved)</sub>
@@ -596,13 +607,13 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 *A clearing member's share of the CCP's shared pool for covering another member's default.*
 
-**Definition.** Contribution that the holder of a Clearing Member role must make, under the rules of a clearing service, to the mutualised default fund that covers losses beyond a defaulter's own margin and contribution; sized and recalibrated by the CCP and covered by eligible collateral. It may be paid by a sponsoring clearing member for a sponsored participant. Distinct from margin, from CCP fees and from assessments a CCP may call after a default.
+**Definition.** Contribution that the holder of a Clearing Member role must make, under the rules of a clearing service, to the mutualised default fund that covers losses beyond the defaulter's own collateral and contribution and any CCP dedicated own resources ranked before it; sized and recalibrated by the CCP and covered by eligible collateral. It may be paid by a sponsoring clearing member for a sponsored participant. Distinct from margin, from CCP fees and from a Default Fund Assessment, the further contribution a CCP may call after its prefunded default fund is used.
 
 **Example.** CCP Z recalibrates Clearing Broker Y's contribution to its listed derivatives default fund each month.
 
 **Not to be confused with.** Initial Margin Requirement: margin covers the member's own positions; the default fund is shared among members.
 
-**Part of:** [Default Waterfall](../risk/concepts.md#default-waterfall), [Clearing Service](../clearing-services-and-accounts/concepts.md#clearing-service)
+**Part of:** [Clearing Service](../clearing-services-and-accounts/concepts.md#clearing-service)
 
 **Values (draft list):** required contribution; contribution held; replenishment after use
 
@@ -612,7 +623,8 @@ Concepts are grouped by family: a broad concept first, then the kinds or parts i
 
 **Connected to:**
 
-- [CCP Exposure](../risk/concepts.md#ccp-exposure) *includes* Default Fund Contribution — Where the contribution is not protected from the CCP's insolvency.
+- [CCP Exposure](../risk/concepts.md#ccp-exposure) *includes* Default Fund Contribution — In all cases, since it can be used for another member's default.
+- *is used in* [Default Waterfall](../risk/concepts.md#default-waterfall) — The defaulter's own contribution, then the non-defaulters' mutualised layer. Corrected 2026-11 (was part_of).
 - [Clearing Member Default](../clearing-services-and-accounts/concepts.md#clearing-member-default) *may use* Default Fund Contribution
 - *is owed by the holder of* [Clearing Member](../clearing-services-and-accounts/concepts.md#clearing-member)
 - *may be paid by* [Sponsoring Clearing Member](../clearing-services-and-accounts/concepts.md#sponsoring-clearing-member)
